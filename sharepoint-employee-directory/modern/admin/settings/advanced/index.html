@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee Directory 365 | Admin Guide | Settings | Advanced</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Hugo 0.92.2">
+  <meta name="description"
+    content="Advanced settings configuration and management in Employee Directory - HR365 Admin Guide. Explore custom settings, integration options, and more.">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+  <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="shadow-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+          <img class=img-fluid src="../../../../../../images/logo_.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="single section-sm pb-0">
+    <div class="container container-padding">
+      <div class=row>
+        <div class=col-lg-3>
+          <div class=sidebar>
+            <h5 class="mbHeading" style="color:SlateBlue"> <a
+                href="../../../../../sharepoint-employee-directory/">Employee Directory 365</a></h5>
+            <a class=back-btn href="../../../../../sharepoint-employee-directory/" aria-label=back></a>
+            <ul class=list-styled>
+              <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Admin-Guide class="sidelist
+  active">
+                <a href="../../../admin/">
+                  Admin Guide
+                </a>
+                <div id="edmfullyadminguide" class="sidenavbarscrollstyle">
+                </div>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class=col-lg-9>
+          <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+            <div class="bg-light p-4 remove-padding">
+              <ul class=page-list>
+                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Advanced
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                </h2>
+                From here you can <b>Configure SharePoint API permissions</b>,<b>Sync unlicensed users</b>, <b>Show
+                  external users</b> etc.
+                <div><img src="1.png" onclick="openModal('1.png')" alt="Advanced" width="100%" height="auto">
+                </div>
+                <br>
+                </li>
+                </ol>
+              </ul>
+            </div>
+            <ol>
+              <li id="Additionalmanager">
+                <b> Additional manager</b>
+              </li> <br>
+              <p>
+                This feature enables users to add or remove additional managers, as well as assign additional properties
+                based on the manager's preferences.</p>
+              <p>Currently, Adele's manager is the same.</p>
+              <div>
+                <img src="oneManager.png" onclick="openModal('oneManager.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div>
+              <br>
+              <p>Now, add an additional manager here.</p>
+              <div>
+                <img src="Additionalamanager.png" onclick="openModal('Additionalamanager.png')" alt="Advanced"
+                  width="100%" height="auto">
+              </div>
+              <br>
+              <p>After adding, Adele will have two managers.</p>
+              <div>
+                <img src="TwoManager.png" onclick="openModal('TwoManager.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div>
+              <br>
+
+              <li id="Autoloadinsteadloadmorebutton"><b>
+                  Auto load instead load more button</b>: <br>
+                Automatically load additional records either by scrolling or by clicking the "Load More" button.
+              </li>
+
+              <div>
+                <img src="3.png" onclick="openModal('3.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+              <p>If the 'Auto Load' toggle is turned off instead of the 'Load More' button.</p>
+              <div>
+                <img src="LoadMore.png" onclick="openModal('LoadMore.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+              <p>If this toggle is on, the 'Load More' button will not be shown, and the records will automatically
+                load.</p>
+              <div>
+                <img src="OntoogleAuto.png" onclick="openModal('OntoogleAuto.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div>
+
+
+              <br>
+              <li id="Autofetchoffice365jobtitlelocationanddepartment"><b>
+                  Auto fetch office 365 job title, location and department</b>: <br>
+                This feature can automatically retrieve job titles, locations, and departments from Office 365.
+              </li>
+              <div><img src="4.png" onclick="openModal('4.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <li id="Filterupcomingbirthdaysworkanniversaries"><b>
+                  Filter upcoming birthdays & work anniversaries
+                </b>:
+                <p>This feature allows you to filter upcoming birthdays and work anniversaries by the current day,
+                  current week, or current month.</p>
+              </li>
+              <div><img src="bandA.png" onclick="openModal('bandA.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <p>If the 'Upcoming Birthdays and Work Anniversaries' toggle is turned on.</p>
+              <div><img src="bdayanniver.png" onclick="openModal('bdayanniver.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, a cake icon will be displayed on the home page screen.</p>
+              <div><img src="Cakeicon.png" onclick="openModal('Cakeicon.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>If the 'Show Joyful Animations' toggle is turned on.</p>
+              <div><img src="JoyToogle.png" onclick="openModal('JoyToogle.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, you will see joyful animations on the birthday user's card.</p>
+              <div><img src="JoyAnnimation.png" onclick="openModal('JoyAnnimation.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>If you select the M365 option, all users' birthday and work anniversary details will sync from M365.
+                Otherwise, if you select Non-M365, the details will sync from there.</p>
+              <div><img src="M365nonm365.png" onclick="openModal('M365nonm365.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, you will see the birthday and anniversary data in both sections.</p>
+              <div><img src="deatils.png" onclick="openModal('details.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <p>Here, you can select birthdays and work anniversaries to display data for a specific month, the current
+                day, the current week, or upcoming dates.</p>
+              <div><img src="bymonthly.png" onclick="openModal('bymonthly.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, you will see the birthday and anniversary data in both sections.</p>
+              <div><img src="deatils.png" onclick="openModal('details.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <p>The user can also add an image.</p>
+              <div><img src="UploadImage.png" onclick="openModal('UploadImage.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then that image will be displayed at the top-right corner of the Birthday and Work Anniversary section.
+              </p>
+              <div><img src="displayedimage.png" onclick="openModal('displayedimage.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <li>
+                <p>If the 'Show new hires' toggle is turned on.</p>
+              </li>
+              <div><img src="NewHireToogle.png" onclick="openModal('NewHireToogle.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Here, you can select <b>New Hire</b> to display data for a specific month, the current day, the current
+                week, or upcoming dates.
+
+              </p>
+
+              <div><img src="SearchAcc.png" onclick="openModal('SearchAcc.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, you will see the <b>New Hire</b> data in New Hires sections.</p>
+
+              <div><img src="./../../NewHire.png" onclick="openModal('./../../NewHire.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+
+
+              <p>The application now includes a Calendar Icon option that is always visible to the user. By clicking on
+                this icon, users can access a calendar view displaying data organized date-wise. This feature allows
+                users to conveniently track and manage information based on specific dates.</p>
+
+              <div><img src="Calender.png" onclick="openModal('Calender.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <div><img src="Chart.png" onclick="openModal('Chart.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+          
+
+          
+
+              <li id="ConfigureSharePointAPIpermissions"><b>Configure SharePoint API permissions</b>: <br>
+                For instructions on how to enable SharePoint API permissions, please visit this link.</li>
+              <br>
+              <div><img src="5.png" onclick="openModal('5.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+
+              <li id="Customfields"><b>Custom fields</b></li>
+              <p>When selecting properties such as 'EmployeeHireDate' and saving their values in attributes, individuals
+                associated with those values will have them displayed on their profile cards, in list views, and
+                elsewhere.</p>
+              <div><img src="6.png" onclick="openModal('6.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+              <p>Now, the user can create their own custom field.</p>
+              <div><img src="Fields.png" onclick="openModal('fields.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <p>In the list view, you can see the custom field and its data.</p>
+              <div><img src="JobTitile.png" onclick="openModal('JobTitile.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div>
+              <br>
+              <p><b>AD Properties:</b>Custom attributes and extension attributes of employees can be fetched and viewed
+                across all views. You can also filter by these attributes by adding filters. Currently, custom
+                attributes are not included in the "free search" feature.</p>
+              <br>
+              <div><img src="23.png" onclick="openModal('23.png')" alt="Advanced" width="100%" height="auto">
+              </div> <br>
+              <li id="Customfunction"><b>Custom function</b>: <br>
+                You can develop a custom function enabling users to select specific Active Directory (AD) properties and
+                retrieve their respective values.
+                <!-- For instance, if a user selects "DateOfJoining" as the property and
+                inputs the value "2022-03-12", the function will showcase users whose DateOfJoining corresponds to
+                "2022-03-12" within the application. -->
+              </li> <br>
+              <div><img src="7.png" onclick="openModal('7.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+              <p>In the custom function, the user can add custom fields, such as selecting the 'Department' field. For
+                example, the user can choose 'IT' as the department.</p>
+              <div><img src="CustomFun.png" onclick="openModal('CustomFun.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, only the user details whose department is 'IT' will be displayed.</p>
+              <div><img src="ITusers.png" onclick="openModal('ITusers.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <p>If the user wants to delete a custom function, and they had added 'IT' as a department, they should
+                select the custom function they want to delete, then click the delete button.</p>
+              <div><img src="DeleteDepartment.png" onclick="openModal('DeleteDepartment.png')" alt="Advanced"
+                  width="100%" height="auto">
+              </div><br>
+              <!-- <li id="Defaultviewoftopbarfilters"><b>Default view of topbar filters</b>
+              </li>
+              <p>
+                This setting allows users to select which property values they want to display as filters on the
+                homepage. The department and location are the only two properties available for this purpose.
+              </p>
+              <div><img src="8.png" onclick="openModal('8.png')" alt="Advanced" width="100%" height="auto">
+              </div> -->
+              <br>
+              <li id="ExecutiveAssistantrelationship"><b>Executive Assistant relationship:</b> <br>
+                To establish the association between executives and their assistants, a custom column can be utilized to
+                include the assistant's email ID. After defining the custom column, access each executive's mailbox via
+                <a href=" https://admin.exchange.microsoft.com/#/mailboxes">
+                  https://admin.exchange.microsoft.com/#/mailboxes</a> and employ the same custom column to input the
+                assistant's email ID.
+              </li>
+              <div><img src="9.png" onclick="openModal('9.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <p>The Assistant Manager user can be added from here.</p>
+              <div><img src="Assistant.png" onclick="openModal('Assistant.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <p>Then, the Assistant Manager will be displayed in the top-right corner of the manager's card.</p>
+              <div><img src="OncardAssistant.png" onclick="openModal('OncardAssistant.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <li id="Extendcustomfieldssearchcapability"><b>Extend custom fields search capability:</b> <br>If you want
+                to utilize the 'starts with', 'ends
+                with', or 'contains' search functionalities, please enable this feature. Additionally, limit its use to
+                cases where the number of employees is under 3000.</li>
+              <div><img src="10.png" onclick="openModal('10.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <!-- <li id="Filterupcomingbirthdaysworkanniversaries"><b>Filter upcoming birthdays & work anniversaries</b>:
+                <br> This feature allows you to filter upcoming
+                birthdays and work anniversaries by the current day, current week, or current month.
+              </li> -->
+              <!-- <div><img src="11.png" onclick="openModal('11.png')" alt="Advanced" width="100%" height="auto">
+              </div><br> -->
+              <li id="ImportnonM365users"><b>Import non M365 users</b>: <br>
+                This feature allows you to import non-Microsoft 365 users.
+                Before importing non-Office 365 users, please ensure to read the instructions provided below.
+              </li>
+              <div><img src="12.png" onclick="openModal('12.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <li id="ExtendMobileNumberandPhonenumbersearchcapability"><b>Extend Mobile Number and Phone number search
+                  capability</b>: <br>
+                Please activate this feature if you want to search by 'starts with', 'ends with', or 'contains', but
+                only if the number of employees is under 3000.</li>
+              <div><img src="13.png" onclick="openModal('13.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <!-- <li id="Selecttopbarfilters"><b>Select topbar filters</b>: <br>
+                Users have the option to filter results by choosing either department or location.</li>
+              <div><img src="14.png" onclick="openModal('14.png')" alt="Advanced" width="100%" height="auto">
+              </div><br> -->
+              <!-- <li id="ShowGroups"><b>Show Groups</b>: <br>This feature showcases all the Microsoft groups.</li>
+              <div><img src="15.png" onclick="openModal('15.png')" alt="Advanced" width="100%" height="auto">
+              </div><br> -->
+              <li id="RestrictedAccess"><b>Restricted Access List</b>: <br>This feature limits access
+                to certain modules or data based on user roles and permissions. Only authorized users will be able to
+                view or modify the restricted content, ensuring data privacy and security
+              </li>
+              <div><img src="restricted.png" onclick="openModal('restricted.png')" alt="Advanced" width="100%"
+                  height="auto">
+              </div><br>
+              <li id="Syncanddisplaymobilenumberfromazure"><b>Sync and display mobile number from azure</b>: <br> This
+                setting will be functional when the
+                SharePoint API is activated. For instructions on enabling it, please refer to this link.
+              </li>
+              <div><img src="17.png" onclick="openModal('17.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <li id="Syncemployeeprofileinformationfrom"><b>Sync employee profile information from</b> :
+              </li>
+              <ol>
+                <p>
+                  <li><b>Graph API :</b>
+                    The recommended configuration for the Employee Directory app is to utilize the Microsoft 365 Graph
+                    API as the primary data source to fetch all information. It is advisable to use Microsoft 365 as the
+                    data source for the majority of attributes.
+                  </li>
+                  <li>
+                    <b>Sharepoint Online and Graph API</b>:
+                    The Employee Directory app utilizes SharePoint Online and the Microsoft 365 Graph API as data
+                    sources to retrieve all information. It is recommended to enable this setting only if advised by the
+                    support or consulting team, particularly if there is a specific need such as sorting results by last
+                    name or other requirements that cannot be fulfilled using the Graph data source alone.
+                  </li>
+                </p>
+              </ol>
+
+              <br>
+              <div><img src="18.png" onclick="openModal('18.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <!-- <li id="Syncunlicensedusers"><b>Sync unlicensed users</b></li>
+              <p>In this functionality, you have the capability to fetch users from Azure Active Directory who are
+                currently without an assigned license.</p> <br>
+              <div><img src="19.png" onclick="openModal('19.png')" alt="Advanced" width="100%" height="auto">
+              </div> -->
+              <br>
+              <li id="Syncuserinformationfrom"><b>Sync user information from</b></li>
+              <p>
+
+                In this feature, users have the option to synchronize user information from two different sources: M365
+                and non-M365. Alternatively, they can choose to synchronize only user information from non-M365
+                accounts.
+              </p> <br>
+              <div><img src="20.png" onclick="openModal('20.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+              <li id="topbarfilters"><b>Topbar Filter</b></li>
+              <p><b>Select Topbar filter:</b>Users have the option to filter results by choosing either department or
+                location.</p>
+              </p>
+              <p><b>Default view of topbar filters:</b>
+                This setting allows users to select which property values they want to display as filters on the
+                homepage. The department and location are the only two properties available for this purpose.
+              </p>
+              <div><img src="011.png" onclick="openModal('011.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <!-- <p><b>Filter</b>
+                
+              </p>
+              <div><img src="Attribute.png" onclick="openModal('Attribute.png')" alt="Advanced" width="100%" height="auto">
+              </div>
+              <br>
+             <p><b>Attribute</b>
+                
+              </p>
+              <div><img src="HomeAttribute.png" onclick="openModal('HomeAttribute.png')" alt="Advanced" width="100%" height="auto">
+              </div> -->
+              <br>
+              <li id="workemail"><b>Validate work email with SharePoint account name</b>: <br>
+                Enable this setting to validate the work email with the SharePoint account name. Note that enabling this
+                setting may increase the page load time of the application, so use it judiciously.
+              </li>
+              <div><img src="22.png" onclick="openModal('22.png')" alt="Advanced" width="100%" height="auto">
+              </div><br>
+            </ol>
+            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+            <nav class="pagination mt-3">
+              <a class="nav nav-prev" href="../exclude-options/" aria-label="Previous page"><i
+                  class="ti-arrow-left mr-2"></i>
+                <span class="d-none d-md-block">Exclude Options</span></a>
+              <a class="nav nav-next" href="../../help/" aria-label="Previous page"> <span
+                  class="d-none d-md-block">Help</span><i class="ti-arrow-right ml-2"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+      <div class="mySlides">
+        <img src="" id="imageId" style="width:100%">
+      </div>
+    </div>
+  </div>
+  <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+              href="https://www.hr365.us/sla/">SLA.</a>
+            <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+              href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../../../js/script.min.js"></script>
+  <script src="../../../../../js/showhidefunction.js"></script>
+  <script src="../../../../../js/edm-admin-advanced.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/edm-adminguide-mainsetting.js"></script>
+  <script src="../../../../../js/edm-modern-fulladminguide.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/header-footer.js"></script>
+  <script>
+    function openModal(src) {
+      document.getElementById("imageId").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    date = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = date;
+  </script>
+</body>
+
+</html>

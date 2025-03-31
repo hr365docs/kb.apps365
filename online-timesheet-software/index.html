@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TimeSheet 365</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="description" content="Comprehensive guide for TimeSheet 365, a complete time tracking and management solution." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css" />
+  <link rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+
+  <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen" />
+
+  <!-- External Scripts -->
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="banner overlay bg-cover" data-background="https://hr365docs.github.io/docs/images/banner.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+
+
+
+
+          <img style="margin-top:5px ;" class="img-fluid" src="../images/HRlogo.png" alt="HR365">
+
+
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  common-header" id="navigation">
+
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white mb-3 supportHeading">
+            Support Center &amp; Knowledge base
+          </h1>
+          <p class="text-white mb-4 findadviceheading">
+            Find advice and answers from our support team fast or get in touch
+          </p>
+          <div class="position-relative">
+            <form class="banner_form" action="">
+
+              <input id="search" class="form-control" placeholder="Have a question? Just ask here or enter terms" />
+              <i class="ti-search search-icon"></i>
+            </form>
+
+
+            <script>
+              $(function () {
+                var projects = [
+
+                  {
+                    value: "Installation",
+                    label: "<p>Installation.\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/getting-started/installation/"
+                  },
+
+                  {
+                    value: "Installation of applications from app catalog",
+                    label: "<p>Installation of applications from app catalog.\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/getting-started/installation/using-app-file/"
+                  },
+
+                  {
+                    value: "Installation of applications from SharePoint Store",
+                    label: "<p>Installation of applications from SharePoint Store\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/getting-started/installation/sharepoint-store/"
+                  },
+
+                  {
+                    value: "Upgrading",
+                    label: "<p>Upgrading\n</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/getting-started/upgrading/"
+                  },
+
+                  {
+                    value: "User Guide",
+                    label: "<p>User Guide\n </p><p>induct</p><p>instate</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/"
+                  },
+
+                  {
+                    value: "Introduction(classic-User)",
+                    label: "<p>Introduction(classic-User).\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/intoduction/"
+                  },
+
+                  {
+                    value: "Getting started(classic-User)",
+                    label: "<p>Getting started(classic-User)\n</p><p>handle</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/getting-started/"
+                  },
+
+                  {
+                    value: "Home Page(classic-User)",
+                    label: "<p>Home Page(classic-User) </p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/home-page/"
+                  },
+
+                  {
+                    value: "User Interface(classic-User)",
+                    label: "<p>User Interface(classic-User)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/user-interface/"
+                  },
+
+                  {
+                    value: "Help(classic-User)",
+                    label: "<p>Help(classic-User)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/user/help/"
+                  },
+                  {
+                    value: "Help(classic-Admin)",
+                    label: "<p>Help(classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/help/"
+                  },
+                  {
+                    value: "Admin Guide",
+                    label: "<p>Admin Guide.\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/"
+                  },
+
+                  {
+                    value: "Introduction(Classic-Admin)",
+                    label: "<p>Introduction(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/introduction/"
+                  },
+
+                  {
+                    value: "Home Page(Classic-Admin)",
+                    label: "<p>Home Page(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/home-page/"
+                  },
+
+                  {
+                    value: "Timesheet(Classic-Admin)",
+                    label: "<p>Timesheet(Classic-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/timesheet/"
+                  },
+
+                  {
+                    value: "Reports(Classic-Admin)",
+                    label: "<p>Reports(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/"
+                  },
+
+                  {
+                    value: "Daily reports(Classic-Admin)",
+                    label: "<p>Daily report(Classic-Admin).\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#daily-report"
+                  },
+
+                  {
+                    value: "Weekly reports(Classic-Admin)",
+                    label: "<p>Weekly reports(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#weekly-report"
+                  },
+
+                  {
+                    value: "Monthly reports(Classic-Admin)",
+                    label: "<p>Monthly reports(Classic-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#monthly-report"
+                  },
+
+                  {
+                    value: "Status reports(Classic-Admin)",
+                    label: "<p>Status reports(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#status-report"
+                  },
+
+                  {
+                    value: "My teams(Classic-Admin)",
+                    label: "<p>My teams(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#my-teams"
+                  },
+
+                  {
+                    value: "Project details(Classic-Admin)",
+                    label: "<p>Project details(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/reports/#project-detail"
+                  },
+
+                  {
+                    value: "Administration(Classic-Admin)",
+                    label: "<p>Administration(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/administrator/"
+                  },
+
+                  {
+                    value: "Clients(Classic-Admin)",
+                    label: "<p>Clients(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/administrator/#clients"
+                  },
+
+                  {
+                    value: "Projects(Classic-Admin)",
+                    label: "<p>Projects(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/administrator/#projects"
+                  },
+
+                  {
+                    value: "Tasks(Classic-Admin)",
+                    label: "<p>Tasks(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/administrator/#tasks"
+                  },
+
+                  {
+                    value: "Activities(Classic-Admin)",
+                    label: "<p>Activities(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/administrator/#activities"
+                  },
+
+                  {
+                    value: "Settings(Classic-Admin)",
+                    label: "<p>Settings(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/"
+                  },
+
+                  {
+                    value: "Users(Classic-Admin)",
+                    label: "<p>Users(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/#users"
+                  },
+
+                  {
+                    value: "Add custom fields(Classic-Admin)",
+                    label: "<p>Add custom fields(Classic-Admin) </p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/#add-custom-field"
+                  },
+
+                  {
+                    value: "Email notification(Classic-Admin)",
+                    label: "<p>Email notification(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/#email-notification"
+                  },
+
+                  {
+                    value: "Organization(Classic-Admin)",
+                    label: "<p>Organization<(Classic-Admin)/p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/#organization"
+                  },
+
+                  {
+                    value: "Departments(Classic-Admin)",
+                    label: "<p>Departments(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/#departments"
+                  },
+                  {
+                    value: "General Setting(Classic-Admin)",
+                    label: "<p>General Setting(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/setting/#general"
+                  },
+                  {
+                    value: "Notification Setting(Classic-Admin)",
+                    label: "<p>Notification Setting(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/setting/#notification"
+                  },
+                  {
+                    value: "Features Setting(Classic-Admin)",
+                    label: "<p>Features Setting(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/setting/#features"
+                  },
+
+                  {
+                    value: "Advance Setting(Classic-Admin)",
+                    label: "<p>Advance Setting(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/admin/settings/setting/#advance"
+                  },
+                  {
+                    value: "FAQs(Classic)",
+                    label: "<p>FAQs(Classic)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/faq/"
+                  },
+                  {
+                    value: "Release Notes(Classic)",
+                    label: "<p>Release Notes(Classic)</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/classic/release-note/"
+                  },
+
+
+
+                ];
+                $("#search").autocomplete({
+                  source: projects
+                })
+                  .data("ui-autocomplete")._renderItem = function (ul, item) {
+
+
+
+                    var input = document.querySelector('.banner_form input');
+
+                    input.onkeyup = function (e) {
+                      input_val = this.value;
+
+                      let autocompleteitems = document.querySelectorAll(".autocomplete_items a");
+                      for (let i = 0; i < autocompleteitems.length; i++) {
+                        if (input_val == autocompleteitems[i].innerText) {
+                          let geturl = document.querySelector('.banner_form');
+                          geturl.action = autocompleteitems[i].href
+                          document.querySelector('#search').click();
+                        }
+                      }
+                    }
+
+
+
+                    // variables
+
+
+                    // events
+
+
+                    return $("<li class='autocomplete_items'>")
+                      .append("<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label)
+                      .appendTo(ul);
+                  };
+
+              });
+
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <section class="ptb-20 section">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center logodisplay tspmainlogo" style="display: flex;
+          /* gap: 10px; */ 
+          align-items: center; 
+          ">
+          <div class="logoIcon_asset"><img src="./timesheet.png" class="asset-img" height="auto" style="
+               /* margin-top: -40px; */
+              height: 65px;
+              width: 65px;" />
+          </div>
+          <div>
+            <h2 class="logotitle  mobfontsize">Timesheet 365</h2>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-panel icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Getting Started</h3>
+            <ul>
+              <li><a href="./modern/getting-started/installation/">Installing</a></li>
+              <li><a href="./modern/getting-started/upgrading/">Upgrading</a></li>
+              <li><a href="./modern/faq/">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-folder icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Guides</h3>
+            <ul>
+              <li><a href="./modern/user/">User Guide</a></li>
+              <li><a href="./modern/admin/">Admin Guide</a></li>
+              <li><a href="./modern/faq/">FAQ</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-cloud icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Contribute!</h3>
+            <ul>
+              <li><a href="../contribute/">Contribute</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="./modern/release-note/">Release Notes</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="ptb-20 section" id="timesheetclassic">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center logodisplay tspmainlogo" style="display: flex;
+        /* gap: 10px; */
+        align-items: center; 
+        ">
+          <div class="logoIcon_asset"><img src="./timesheet.png" class="asset-img" height="auto" style="
+             /* margin-top: -40px; */
+            height: 65px;
+            width: 65px;" />
+          </div>
+          <div>
+            <h2 class="logotitle  mobfontsize">Timesheet Classic</h2>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-panel icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Getting Started</h3>
+            <ul>
+              <li><a href="./classic/getting-started/installation/">Installing</a></li>
+              <li><a href="./classic/getting-started/upgrading/">Upgrading</a></li>
+              <li><a href="./classic/faq/">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-folder icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Guides</h3>
+            <ul>
+              <li><a href="./classic/user/">User Guide</a></li>
+              <li><a href="./classic/admin/">Admin Guide</a></li>
+              <li><a href="./classic/faq/">FAQ</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-cloud icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Contribute!</h3>
+            <ul>
+              <li><a href="../contribute/">Contribute!</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="./classic/release-note/">Release Notes</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="ptb-20 section over-hidd">
+    <div class="container">
+
+
+      <div class="home-recent">
+        <div class="home-blog-latest">
+          <h2>Latest Posts</h2>
+          <h4 class="hd">From Our Technical Blog</h4>
+
+          <div class="blog_wrap">
+
+
+            <h3><a href="./classic/getting-started/upgrading/" class="highlight">Preparing for a Larger Upgrade</a></h3>
+            <div class="tags">
+
+              <a class="tag-link highlight" href="./classic/getting-started/upgrading/">Upgrading</a>
+
+            </div>
+
+
+            <!-- <p class="author">
+          By pgorod | July 15, 2019
+        </p> -->
+            <div class="paragraph">
+              <p>Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible.
+                But we know that if you’re many versions behind the latest, and dealing with a large instance full
+                of customisations, or having inherited the instance from a predecessor, perhaps with little
+                documentation, can make the prospect of upgrading a bit more daunting.</p>
+            </div>
+
+            <p>
+              <a class="more highlight" href="./classic/getting-started/upgrading/">Read More &gt;</a>
+            </p>
+
+
+
+            <h3><a href="./classic/admin/" class="highlight">Admin Guide</a></h3>
+            <div class="tags">
+
+              <a class="tag-link highlight" href="./classic/admin/">Admin</a>
+
+            </div>
+
+
+
+            <div class="paragraph">
+              <p>This admin guide provides an overview features and functionality about the Timesheet Management Classic
+                application to administrator. Admin can do customisations as per their requirements.</p>
+            </div>
+
+            <p>
+              <a class="more highlight" href="./classic/admin/">Read More &gt;</a>
+            </p>
+
+            <h3><a href="./classic/user/" class="highlight">User Guide</a></h3>
+            <div class="tags">
+
+              <a class="tag-link highlight" href="./classic/user/">User</a>
+
+            </div>
+
+
+
+            <div class="paragraph">
+              <p>This admin guide provides an overview features and functionality about the Timesheet Management Classic
+                application to administrator. Admin can do customisations as per their requirements.</p>
+            </div>
+
+            <p>
+              <a class="more highlight" href="./classic/user/">Read More &gt;</a>
+            </p>
+            <h3><a href="/GuestuserED/" class="highlight">How to Add Guest Users in Microsoft 365 and Grant Access to
+                the Application</a></h3>
+
+
+            <p>
+              <a class="more highlight" href="/GuestuserED/">Read More &gt;</a>
+            </p>
+            <h3><a href="/online-timesheet-software/Installation-of-Timesheet-365-from-Microsoft-Teams/"
+                class="highlight">Installation-of Timesheet 365 from Microsoft Teams(old)</a></h3>
+
+
+            <p>
+              <a class="more highlight"
+                href="/online-timesheet-software/Installation-of-Timesheet-365-from-Microsoft-Teams/">Read More &gt;</a>
+            </p>
+
+          </div>
+
+
+        </div>
+        <div class="home-recently-edited">
+          <h2>Recently Edited</h2>
+          <h4 class="hd">Documentation Pages</h4>
+          <div class="edit_wrap">
+
+
+            <ul>
+
+              <li>
+                <h4 class="">
+                  <a href="/online-timesheet-software/classic/user/reports/" class="highlight">Daily Report</a>
+
+                </h4>
+                <p class="">
+                  Edited on the 18 January in commit <b>"User can view their daily report".</b>
+                  <a href="" target="_blank" title="Commit Diff" class="highlight"><i
+                      class="fas fa-sm fa-indent"></i></a>
+                </p>
+              </li>
+              <li>
+                <h4 class="">
+                  <a href="/online-timesheet-software/classic/admin/timesheet/#weekly-timesheets"
+                    class="highlight">Clone Weekly Timesheet</a>
+
+                </h4>
+                <p class="">
+                  Edited on the 2 September in commit <b>"The cloned timesheet can be edited and submitted".</b>
+                  <a href="" target="_blank" title="Commit Diff" class="highlight"><i
+                      class="fas fa-sm fa-indent"></i></a>
+                </p>
+              </li>
+
+
+
+            </ul>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section px-3 bg-white shadow text-center">
+            <h2 class="mb-4 fontweight questionHeading">Didn&rsquo;t find an answer to your question?</h2>
+            <!-- <p class="mb-4">Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam.</p>
+                 -->
+
+            <a href="https://www.apps365.com/support/" class="btn btn-primary contactbtn">Contact Support</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="section pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href="https://www.hr365.us/">HR365.</a> <a
+              href="https://www.hr365.us/sla/">SLA.</a> <a
+              href="https://www.hr365.us/terms-and-conditions/">T&amp;C.</a> <a
+              href="https://www.hr365.us/end-user-license-agreement-eula/">EULA.</a> <a
+              href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy/">Privacy
+              Policy.</a> <a href="https://www.cubiclogics.com/">Cubic Logics.</a></p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class="list-inline">
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/"
+                aria-label="Facebook"><i class="ti-facebook"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS" aria-label="Twitter"><i
+                  class="ti-twitter-alt"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i
+                  class="ti-linkedin"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="../js/script.min.js"></script>
+  <script src="../js/header-footer.js"></script>
+
+
+</body>
+
+</html>

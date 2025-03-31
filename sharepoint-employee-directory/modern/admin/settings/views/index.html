@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee Directory 365 | Admin Guide | Settings | Views</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Hugo 0.92.2">
+  <meta name="description" content="Employee Directory - HR365. Learn how to configure and manage views in the Employee Directory settings.">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+  <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="shadow-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+          <img class=img-fluid src="../../../../../../images/logo_.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="single section-sm pb-0">
+    <div class="container container-padding">
+      <div class=row>
+        <div class=col-lg-3>
+          <div class=sidebar>
+            <h5 class="mbHeading" style="color:SlateBlue"> <a
+                href="../../../../../sharepoint-employee-directory/">Employee Directory 365</a></h5>
+            <a class=back-btn href="../../../../../sharepoint-employee-directory/" aria-label=back></a>
+            <ul class=list-styled>
+              <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Admin-Guide class="sidelist
+    active">
+                <a href="../../../admin/">
+                  Admin Guide
+                </a>
+                <div id="edmfullyadminguide" class="sidenavbarscrollstyle">
+                </div>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class=col-lg-9>
+          <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+            <div class="bg-light p-4 remove-padding">
+              <ul class=page-list>
+                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Views
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                </h2>
+                <p> In Employee Directory 365 you will be presented with various views. These views are structured to
+                  present
+                  you with key information.
+                <div><img src="view_setting.png" onclick="openModal('view_setting.png')" alt="Views" width="100%"
+                    height="auto"></div>
+                </p>
+                <br>
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Alignemployeebasicinformation">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Align employee basic information
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    In this, you have the option to align basic
+                    information to the left, right, or center. <br> <br>
+                    <p>If the user has selected left alignment</p>
+                    <div><img src="1.png" onclick="openModal('1.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>Then the user details will be displayed on the left side.</p>
+                    <div><img src="alignmentleft.png" onclick="openModal('alignmentleft.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the user has selected center alignment</p>
+                    <div><img src="selectCenter.png" onclick="openModal('selectCenter.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the user details will be displayed on the Center.</p>
+                    <div><img src="alignmentCenter.png" onclick="openModal('alignmentCenter.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>If the user has selected right alignment</p>
+                    <div><img src="selectRight.png" onclick="openModal('selectRight.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+                    <p>Then the user details will be displayed on the right side.</p>
+                    <div><img src="alignmentright.png" onclick="openModal('alignmentright.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+                <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Birthday">
+                <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                      Birthdays and work anniversaries images
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    Within this feature, you can upload images for birthdays and anniversaries. <br> <br>
+                    <div><img src="2.png" onclick="openModal('2.png')" alt="Update users role"
+                            width="100%" height="auto"></div><br>
+
+                </ul>
+
+            </div> -->
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Clearalpha">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Clear alphabet selection with reset filter
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    This configuration will reset any alphabet selection to 'All' when you click on the reset filter
+                    icon on the home page.<br> <br>
+                    <div><img src="3.png" onclick="openModal('3.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Dashboardfeature">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Dashboard feature
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2>
+                    <ol>
+                      <p>There are two features in the dashboard:</p>
+                      <li><b>Available for All Users</b>: This indicates that the dashboard is accessible to all users
+                      </li>
+                      <li><b>Available for Selected Users</b>: This means the dashboard will only be accessible to
+                        specific users who are added to the include user list.</li> <br>
+                    </ol>
+                    <div><img src="4.png" onclick="openModal('4.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <div><img src="Dashboard.png" onclick="openModal('4.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+                <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Desktopdefaultview">
+          <ul class=page-list>
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                Desktop default view
+                      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+              </h2><br>
+              In the default desktop view of this feature, you have the ability to
+              select different viewing options, such as grid, list, tile, org chart, and Non M365 365.<br> <br>
+              <div><img src="5.png" onclick="openModal('5.png')" alt="Update users role"
+                      width="100%" height="auto"></div><br>
+
+          </ul>
+
+      </div> -->
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="GridWidth">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Grid Width
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    In this location, you can expand or reduce the grid width in the grid view.
+                    Furthermore, you'll find two buttons: "Reset to Default" and "Save." Selecting the "Reset to
+                    Default" button will revert the width to its initial default setting.<br> <br>
+                    <div><img src="6.png" onclick="openModal('6.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>If the user has added a 300px width and then clicked Save, the width will be set to 300px.</p>
+                    <div><img src="gridStyles.png" onclick="openModal('gridStyles.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>And then, the card will be displayed with a width of 300px, according to the specified size.</p>
+                    <div><img src="Cards.png" onclick="openModal('Cards.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Hidemanagerofspecificuser">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Hide manager of specific user
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    In this location, you can expand or reduce the grid width in the grid view.
+                    Furthermore, you'll find two buttons: "Reset to Default" and "Save." Selecting the "Reset to
+                    Default" button will revert the width to its initial default setting.<br> <br>
+
+                    <div><img src="beforeManager.png" onclick="openModal('beforeManager.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If you want to hide a user's manager, enter their name.</p>
+                    <div><img src="AddManager.png" onclick="openModal('AddManager.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>So, then the manager will not be visible in the user's profile card.</p>
+                    <div><img src="ShowHideManager.png" onclick="openModal('ShowHideManager.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>And if you want to revert to the previous view, select the user in the delete section and delete
+                      it. Then, it will show as it was before.</p>
+                    <div><img src="delete.png" onclick="openModal('delete.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <div><img src="beforeManager.png" onclick="openModal('beforeManager.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+
+                  </ul>
+
+                </div>
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Hidemobilenumberofspecificuser">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Hide mobile number of specific user
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    Utilize this configuration to conceal the mobile
+                    number of specific users within the application. Simply add the manager and click the "Add"
+                    button.
+                    <div><img src="inCardMobile.png" onclick="openModal('inCardMobile.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If you want to hide a user's mobile number, enter their name.</p>
+                    <div><img src="hidetheMobile.png" onclick="openModal('hidetheMobile.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>So, then the mobile number will not be visible in the user's profile card.</p>
+                    <div><img src="notMobileNumber.png" onclick="openModal('notMobileNumber.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>And if you want to revert to the previous view, select the user in the delete section and delete
+                      it. Then, it will show as it was before.</p>
+                    <div><img src="deletemobUser.png" onclick="openModal('deletemobUser.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+
+                  </ul>
+
+                </div>
+
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="SharepointConfiguration">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Hide Sharepoint Page's Default Components
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    <p>
+                      From here you can hide sharepoint page default <Components class="br"></Components>
+                      <b>Hide side navigation panel in SharePoint page</b>: To Enable this toggle you can
+                      hide the navigation. <br><br>
+                      <b>Hide topbar in SharePoint page</b>: To Enable this toggle you can hide the topbar
+                      in Sharepoint Page. <br><br>
+                      <b>Hide command bar in SharePoint page</b>: To Enable this toggle you can hide
+                      Command bar from sharepoint page. <br><br>
+                      <b>Hide sharepoint comments wrapper</b>: Enable this toggle will hide comments
+                      wrapper in sharepoint page where app is running. <br><br>
+                      <b>Hide webpart title in SharePoint page</b>: Enable this toggle will remove the
+                      Webpart title. <br><br>
+                      <b>Custom css for webpart to remove spaces</b>: Enable this toggle will remove space
+                      outside of Webpart. <br><br>
+                      <b>Make SharePoint page layout in full width</b>: Make your SharePoint page width in
+                      full screen for larger resolution where app is running. <br><br>
+                    <div><img src="sharepoints.png" onclick="openModal('sharepoint.png')" alt="Update users role"
+                        width="100%" height="auto"></div>
+                    <br>
+                    <br>
+                    </p>
+
+                  </ul>
+
+                </div>
+                <div class="bg-light p-4 remove-padding common-scroll" id="Imageprofiletag">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Image profile tag
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    The image profile tag is utilized to showcase user properties on the profile card and offers two
+                    features:
+                    <ol>
+                      <li>Customizing the background color of the tag.</li>
+                      <li>Modifying the font color of the tag.</li>
+                    </ol><br> <br>
+                    <p>If the user wants to add a tag to the image inside the user card, they should select the name to
+                      display in the tag from 'Extension Attribute,' choose the background color and font color for the
+                      tag, and then click Submit.</p>
+                    <div><img src="imageTag.png" onclick="openModal('imageTag.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>And then the user will be able to see the name along with the image tag, including the tag's
+                      background color and font color.</p>
+                    <div><img src="Tagshowed.png" onclick="openModal('Tagshowed.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>And it can also be removed if needed.</p>
+                    <div><img src="Remove.png" onclick="openModal('Remove.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Labels">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Labels
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    Within this option, you can update the label "Executive" to "Executive(s)" and "Non M365" to
+                    "Non-M365 users."<br> <br>
+                    <div><img src="10.png" onclick="openModal('10.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>If you want to change a label, such as changing 'About Me' to 'About For Me,' type 'About For Me'
+                      in the field under 'About Me' and then click Save.</p>
+                    <div><img src="Aboutme.png" onclick="openModal('Aboutme.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>And then you will see that the 'About Me' label in the Profile Card has now been changed to
+                      'About For Me'.</p>
+                    <p>You can do the same for 'Non M365' and 'Executive' as well.</p>
+                    <div><img src="INCardAbout.png" onclick="openModal('INCardAbout.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+
+
+                <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Mobiledefaultview">
+  <ul class=page-list>
+      <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+        Mobile default view
+              <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+      </h2><br>
+      You can choose the mobile view based on the options: grid, list, tile, and Non-M365.<br> <br>
+      <div><img src="11.png" onclick="openModal('11.png')" alt="Update users role"
+              width="100%" height="auto"></div><br>
+
+  </ul>
+
+</div> -->
+
+
+
+
+                <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Removeextracharacterfromaccountname">
+  <ul class=page-list>
+      <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+        Remove extra character from account name
+              <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+      </h2><br>
+      Enabling this option will remove any extra numeric digits added by Active Directory.<br> <br>
+      <div><img src="12.png" onclick="openModal('12.png')" alt="Update users role"
+              width="100%" height="auto"></div><br>
+
+  </ul>
+
+</div> -->
+
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="ShoworHidemodules">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Show or Hide modules
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    <p>
+                      Within this panel, there are many features, each accessible via a toggle switch:
+                    </p>
+                    <div><img src="13.png" onclick="openModal('13.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                    <p>
+
+                      In ED365, users can come from Azure, categorized as external, internal, or unlicensed. When the
+                      external toggle is turned on, only external users will be synced.
+                    </p>
+                    <div><img src="external.png" onclick="openModal('external.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      You can view the total users, which will include all external users.
+                    </p>
+                    <div><img src="ExternalUSer.png" onclick="openModal('ExternalUSer.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+
+                      In the Guest and External users differentiation, you get an option to add a border to the user's
+                      profile image for identification.
+                    </p>
+                    <div><img src="Guest.png" onclick="openModal('Guest.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      The first option is the default mode, where the border color will appear in the default orange
+                      shade.
+                    </p>
+                    <div><img src="customDP.png" onclick="openModal('customDP.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+
+                      The second option is the theme mode; selecting this will apply the border color based on the
+                      selected theme.
+                    </p>
+                    <div><img src="siteTheme.png" onclick="openModal('siteTheme.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      The profile image border will display something like this, highlighting the user based on the
+                      selected theme mode.
+                    </p>
+                    <div><img src="siteDpborder.png" onclick="openModal('siteDpborder.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>The last option is Custom Mode, where you can set a custom color for the profile image border
+                      according to your preference. Once saved, the border will display in your selected color.</p>
+                    <div><img src="CustomTheme.png" onclick="openModal('CustomTheme.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Same as the tree shown in the image below.</p>
+                    <div><img src="BlueDpBorder.png" onclick="openModal('BlueDpBorder.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      When the Sync unlicensed users toggle is turned on.
+                    </p>
+                    <div><img src="unlicensed.png" onclick="openModal('unlicensed.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      All users without a license will then be displayed on your site.
+                    <div><img src="unlicenseUser.png" onclick="openModal('unlicenseUser.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      When the "Free/Busy Information" toggle is on,
+                    </p>
+                    <div><img src="Busyinfo.png" onclick="openModal('Busyinfo.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      The profile information card will display the user's status along with their image, indicating
+                      whether the user is busy or free.
+                    </p>
+                    <div><img src="Away.png" onclick="openModal('Away.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      When the "Use 24H Format" toggle is turned on, you will see the 24-hour format in the user's
+                      profile details.
+                    </p>
+                    <div><img src="24H.png" onclick="openModal('24H.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      When the "Show Member Of" toggle is turned on.
+                    </p>
+                    <div><img src="Showmember.png" onclick="openModal('Showmember.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      After that, you will be able to see which group the user is a member of.
+                    </p>
+                    <div><img src="DisplayedMember.png" onclick="openModal('DisplayedMember.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>
+                      If the Organizational Chart toggle is on.
+                    </p>
+                    <div><img src="OrgChart.png" onclick="openModal('OrgChart.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      This icon will appear within the home tab. </p>
+                    <div><img src="OrgChartHome.png" onclick="openModal('OrgChartHome.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      If you click on it, a chart will open in front of you. </p>
+                    <div><img src="Chart.png" onclick="openModal('Chart.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      If the User presence toggle is on.</p>
+                    <div><img src="UserPresence.png" onclick="openModal('UserPresence.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      Then, you can see the user's status as Active or Inactive. </p>
+                    <div><img src="ActiveStauts.png" onclick="openModal('ActiveStauts.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      If the Show dashboard toggle is on.</p>
+                    <div><img src="ShowDashBoard.png" onclick="openModal('ShowDashBoard.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      This icon will appear within the home tab.</p>
+                    <div><img src="ShowDashBoardHome.png" onclick="openModal('ShowDashBoardHome.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>
+
+                      And you can view the dashboard data by clicking on the icon at the top.</p>
+                    <div><img src="Dashboard.png" onclick="openModal('Dashboard.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      If the "Enable MS Teams live chat integration" toggle is on.</p>
+                    <div><img src="teamsChat.png" onclick="openModal('teamsChat.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      You will be able to chat live on MS Teams, allowing real-time communication with your team members
+                      directly through the platform.</p>
+                    <div><img src="Teams.png" onclick="openModal('Teams.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      If the "Enable WFH" toggle is turned on.
+                    </p>
+                    <div><img src="enableWFH.png" onclick="openModal('enableWFH.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      After that, an edit icon will appear next to the user's name on the profile card.
+                    </p>
+                    <div><img src="WFHicon.png" onclick="openModal('WFHicon.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      Click on the icon, and a popup will appear where you will need to input the WFH (Work From Home)
+                      details.
+                    </p>
+                    <div><img src="WFHicon1.png" onclick="openModal('WFHicon1.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      And then, the Profile card with the WFH icon will be displayed on the home page.
+                    </p>
+                    <div><img src="InCardHomeicon.png" onclick="openModal('InCardHomeicon.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      When the "Display Weekly Work Status on Profile Card" toggle is on. </p>
+                    <div><img src="weeklywork.png" onclick="openModal('weeklywork.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      Then the weekly work status will appear on the profile card, showing the user's WFO or WFH details
+                      along with the date and day for the entire week.</p>
+                    <div><img src="weeklyworkCard.png" onclick="openModal('weeklyworkCard.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      If you want to edit, click on the edit icon.</p>
+                    <div><img src="weeklyworkEdit.png" onclick="openModal('weeklyworkEdit.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+                    Select "Default Always Work From Home." If you choose this option, then click on save.</p>
+                    <div><img src="weeklyworkWFH.png" onclick="openModal('weeklyworkWFH.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      Select "Default Always Work From Offer." If you choose this option, then click on save.</p>
+                    <div><img src="WeekworkWFO.png" onclick="openModal('WeekworkWFO.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      If you want to change the status for the current week, you can do so. After making the changes,
+                      click on the save button to save them.</p>
+                    <div><img src="CurrentWeek.png" onclick="openModal('CurrentWeek.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      Similarly, if you want to make changes for the next week, you can do so as well.</p>
+                    <div><img src="NextWeek.png" onclick="openModal('NextWeek.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      A "Next" icon is provided; clicking on it will display the weekly report for the next week.</p>
+                    <div><img src="Forword.png" onclick="openModal('Forword.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>
+                      Enable the "Allow users to update their pronouns" option.</p>
+                    <div><img src="updatePronouns.png" onclick="openModal('updatePronouns.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+
+                      Then the current user can update their pronouns (they/them, she/her, he/him) and save the changes.
+                    </p>
+                    <div><img src="Pronouns.png" onclick="openModal('Pronouns.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+
+                      When the "Allow users to export directory" toggle is on.</p>
+                    <div><img src="Userexportdirectory.png" onclick="openModal('Userexportdirectory.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>
+                      Click on the CSV file icon on the home page.</p>
+                    <div><img src="exportIconHome.png" onclick="openModal('exportIconHome.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>
+                      Then, a popup will appear, and in the popup, you will have the option to download. If you want to
+                      download the displayed records, click on the download button to save them.</p>
+                    <div><img src="Record.png" onclick="openModal('Record.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p> When the "Allow users to print pdf" toggle is on.</p>
+                    <div><img src="Printpdf.png" onclick="openModal('Printpdf.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p> Click on the Print file icon on the home page.</p>
+                    <div><img src="pdfIcon.png" onclick="openModal('pdfIcon.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p> After that, a popup will appear with two buttons: "Portrait" and "Landscape." You can choose
+                      either option based on the type of file you wish to download.</p>
+                    <div><img src="PrintIcon.png" onclick="openModal('PrintIcon.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p> When the "Report incorrect info" toggle is on.</p>
+                    <div><img src="Reportincorrectinfo.png" onclick="openModal('Reportincorrectinfo.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>
+                      In the "Report Incorrect Info" section, if there is incorrect information or details you need to
+                      add, you must provide the required field values. After entering the information, click "Submit."
+                      This request will then be sent to the Admin for review. This option is only available to the
+                      current user.</p>
+                    <div><img src="RemarksData.png" onclick="openModal('RemarksData.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p> When the "Show extended fields in list view" toggle is on.</p>
+                    <div><img src="Showextendedfields.png" onclick="openModal('Showextendedfields.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p> In this, you will only see a vertical scroll (up and down) within the list, and the horizontal
+                      scroll on the side will not be visible.</p>
+                    <div><img src="ListViewScroll.png" onclick="openModal('ListViewScroll.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the "Show filters as dropdown" toggle is on.</p>
+                    <div><img src="FilterAsDropdown.png" onclick="openModal('FilterAsDropdown.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>Then, the dropdown will be displayed at the top of the home page, allowing users to select
+                      filters easily from the dropdown menu.</p>
+                    <div><img src="DropDownHome.png" onclick="openModal('DropDownHome.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the favicon toggle is off.</p>
+                    <div><img src="FaviconToogleoff.png" onclick="openModal('FaviconToogleoff.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>If the favicon toggle is off, the default favicon for SharePoint will be displayed. </p>
+                    <div><img src="faviconDefault.png" onclick="openModal('faviconDefault.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the favicon toggle is on, you will see an option to update the favicon at the bottom, allowing
+                      you to set your custom favicon. </p>
+                    <div><img src="toogleOn.png" onclick="openModal('toogleOn.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>After cropping the favicon, click on the "Save" button to apply your custom favicon.</p>
+                    <div><img src="saveIcon.png" onclick="openModal('saveIcon.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then, your custom favicon will be displayed.</p>
+                    <div><img src="FaviconHome.png" onclick="openModal('FaviconHome.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the "Show Groups" toggle is on, then you can select the group you need.</p>
+                    <div><img src="ShowGroup.png" onclick="openModal('ShowGroup.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>And then, a dropdown will appear with the group dropdown. You can search for the group that was
+                      selected after turning on the toggle.</p>
+                    <div><img src="showGroupOnHome.png" onclick="openModal('showGroupOnHome.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Sortby">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Sort by
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    To overcome the Microsoft Graph API search query limitations, the option for sorting by last name
+                    is exclusively accessible when SharePoint Online and Graph API integration is chosen within the
+                    Advanced settings. You have the choice between two sorting options: UPN and display name.<br> <br>
+                    <div><img src="14.png" onclick="openModal('14.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>If the user selects 'Sync Employee Profile Information from Graph API.</p>
+                    <div><img src="SyncEMP.png" onclick="openModal('SyncEMP.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                    <p>And then, two options will be shown: first, 'Sorted by UPN' and second, 'Sorted by Display Name.'
+                      The user can select the first option Sorted by UPN.</p>
+                    <div><img src="TwoOptions.png" onclick="openModal('TwoOptions.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the cards will be sorted by UPN.</p>
+                    <div><img src="UPN.png" onclick="openModal('UPN.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p> The user can select the second option Sorted by Display Name</p>
+                    <div><img src="DisplayOption.png" onclick="openModal('DisplayOption.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the cards will be sorted by Display Name.</p>
+                    <div><img src="DisplayNames.png" onclick="openModal('DisplayNames.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If the user selects 'Sync Employee Profile Information from SharePoint Online and Graph API.</p>
+                    <div><img src="SharepointAPI.png" onclick="openModal('SharepointAPI.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>The user can select the first option Sorted by First Name.</p>
+                    <div><img src="FirstNameSelect.png" onclick="openModal('FirstNameSelect.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>Then the cards will be sorted by First Name.</p>
+                    <div><img src="FisrtNameSort.png" onclick="openModal('FisrtNameSort.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>The user can select the second option Sorted by Last Name.</p>
+                    <div><img src="LastNameSelect.png" onclick="openModal('LastNameSelect.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the cards will be sorted by Last Name.</p>
+                    <div><img src="sortedBylastName.png" onclick="openModal('sortedBylastName.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>If the user wants to sort by last name but display the first name, they should select 'Last Name'
+                      for sorting and toggle on the 'Display Label as First Name' option.</p>
+                    <div><img src="LastNameSortedFisrtName.png" onclick="openModal('LastNameSortedFisrtName.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>Then, at the bottom, you will see the cards sorted by last name, with the display showing the
+                      first name.</p>
+                    <div><img src="afterSortedLastName.png" onclick="openModal('afterSortedLastName.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                    <p>If you select the 'Display Name' option</p>
+                    <div><img src="displayselect.png" onclick="openModal('displayselect.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>And then, the cards will be displayed sorted by display name..</p>
+                    <div><img src="displaynameSorted.png" onclick="openModal('displaynameSorted.png')"
+                        alt="Update users role" width="100%" height="auto"></div><br>
+                  </ul>
+                </div>
+                <div class="bg-light p-4 remove-padding common-scroll" id="theme">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Theme
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    From here you can select the theme for the application. There are three themes namely dark mode,
+                    light mode, and site theme color.
+                    <br> <br>
+                    <div><img src="theme.png" onclick="openModal('theme.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>If you have selected the Dark Theme option. </p>
+                    <div><img src="SelectDark.png" onclick="openModal('SelectDark.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the theme of your application will change to dark.</p>
+                    <div><img src="darktheme.png" onclick="openModal('darktheme.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>If you have selected the Light Theme option.</p>
+                    <div><img src="selectlight.png" onclick="openModal('selectlight.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>Then the theme of your application will change to Light color.</p>
+                    <div><img src="Lighttheme.png" onclick="openModal('Lighttheme.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+
+                  </ul>
+
+                </div>
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Useworkemailidinsteadaccountloginid">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        Work email ID/UPN ID
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    The default setting for pulling user details based on their UPN or work email ID is currently
+                    disabled. If you wish to enable pulling records based on work email, you can do so here.
+                    <br>
+                    <div><img src="18.png" onclick="openModal('18.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="view">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        View
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+                    <br>
+                    <div><img src="19.png" onclick="openModal('19.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>In the View section, these options will be displayed. You can select the options you want, and
+                      then click Save.</p>
+                    <div><img src="ViewAll.png" onclick="openModal('ViewAll.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>According to these icons, you can view the options as List, Grid, Non M365, Tile, and Org Chart.
+                    </p>
+                    <div><img src="icons.png" onclick="openModal('icons.png')" alt="Update users role" width="100%"
+                        height="auto"></div><br>
+                    <p>By default, the desktop view will be in Grid format.You will also have the options for List,
+                      Tile, Org Chart, and Non M365 views.</p>
+                    <div><img src="desktopDefault.png" onclick="openModal('desktopDefault.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>List View</p>
+                    <div><img src="ListViews.png" onclick="openModal('ListViews.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p> By default, the Mobile view will be in List format.</p>
+                    <div><img src="MobileView.png" onclick="openModal('MobileView.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <div class="bg-light p-4 remove-padding common-scroll" id="Userpropertiesingridview">
+                      <ul class=page-list>
+                        <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                            User properties in grid view
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                        </h2><br>
+                        <!-- <div><img src="gridviewforuser.png" onclick="openModal('gridviewforuser.png')"
+                                alt="Update users role" width="100%" height="auto"></div><br> -->
+                        <!-- <div><img src="grid1.png" onclick="openModal('grid1.png')" alt="Update users role" width="100%"
+                                height="auto"></div><br> -->
+                        <p>User properties in grid view. </p>
+                        <div><img src="UserProperties.png" onclick="openModal('UserProperties.png')"
+                            alt="Update users role" width="100%" height="auto"></div><br>
+                        <p>You can update the user's properties.</p>
+                        <div><img src="UserPropertiesGrid.png" onclick="openModal('UserPropertiesGrid.png')"
+                            alt="Update users role" width="100%" height="auto"></div><br>
+                        <p>The user's details will be displayed according to the options you selected.</p>
+                        <div><img src="UserDetails.png" onclick="openModal('UserDetails.png')" alt="Update users role"
+                            width="100%" height="auto"></div><br>
+                      </ul>
+
+                    </div>
+                    <div class="bg-light p-4 remove-padding common-scroll" id="Userpropertiesinlistview">
+                      <ul class=page-list>
+                        <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                            User properties in list view
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                        </h2><br>
+
+                        <!-- <div><img src="kkk.png" onclick="openModal('kkk.png')" alt="Update users role" width="100%"
+                                height="auto"></div><br>
+                            <div><img src="oo.png" onclick="openModal('oo.png')" alt="Update users role" width="100%"
+                                height="auto"></div><br> -->
+                        <p>You can update the user's properties.</p>
+                        <div><img src="LIstViewProperties.png" onclick="openModal('LIstViewProperties.png')"
+                            alt="Update users role" width="100%" height="auto"></div><br>
+                        <p>The user's details will be displayed according to the options you selected.</p>
+                        <div><img src="UserPropertiesList.png" onclick="openModal('UserPropertiesList.png')"
+                            alt="Update users role" width="100%" height="auto"></div><br>
+
+                      </ul>
+
+                    </div>
+
+
+                  </ul>
+
+                </div>
+
+
+
+
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="UserpropertiesinProfileCard">
+                  <ul class=page-list>
+                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                        User properties in Profile Card
+                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                    </h2><br>
+
+                    <p>User properties in profile card</p>
+                    <div><img src="ProfileCard1.png" onclick="openModal('ProfileCard1.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+                    <p>You can update the user's properties in profile card.</p>
+                    <div><img src="ProfileCard.png" onclick="openModal('ProfileCard.png')" alt="Update users role"
+                        width="100%" height="auto"></div><br>
+
+                  </ul>
+
+                </div>
+
+            </div>
+            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+            <nav class="pagination mt-3">
+              <a class="nav nav-prev" href="../general/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>
+                <span class="d-none d-md-block">General</span></a>
+              <a class="nav nav-next" href="../exclude-options/" aria-label="Previous page"> <span
+                  class="d-none d-md-block">Exclude Options</span><i class="ti-arrow-right ml-2"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+      <div class="mySlides">
+        <img src="" id="imageId" style="width:100%">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+              href="https://www.hr365.us/sla/">SLA.</a>
+            <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+              href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../../../js/script.min.js"></script>
+  <script src="../../../../../js/showhidefunction.js"></script>
+  <script src="../../../../../js/edm-admin-advanced.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/edm-adminguide-mainsetting.js"></script>
+  <script src="../../../../../js/edm-modern-fulladminguide.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/header-footer.js"></script>
+  <script>
+    function openModal(src) {
+
+      document.getElementById("imageId").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+
+    }
+
+    date = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = date;
+  </script>
+</body>
+
+</html>

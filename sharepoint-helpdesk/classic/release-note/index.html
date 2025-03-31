@@ -1,0 +1,1456 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Helpdesk Classic | Release-Note</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="HR365 Helpdesk">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../sharepoint-helpdesk/">Helpdesk
+                                Classic</a></h5>
+                        <a class=back-btn href="../../../sharepoint-helpdesk/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Release Notes" class="sidelist">
+                                <a href="../release-note/">
+                                    Release Notes
+                                </a>
+                                <ul>
+
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.25.0204.1146 class="sidelist versiononclick">
+
+                                        <a href="#releasenote22">
+                                            Version 11.25.0204.1146
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.24.628.1349 class="sidelist versiononclick">
+
+                                        <a href="#releasenote21">
+                                            Version 11.24.628.1349
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.24.312.1449 class="sidelist versiononclick">
+
+                                        <a href="#releasenote20">
+                                            Version 11.24.312.1449
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.24.227.1830 class="sidelist versiononclick">
+
+                                        <a href="#releasenote19">
+                                            Version 11.24.227.1830
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.713.1400 class="sidelist versiononclick">
+
+                                        <a href="#releasenote18">
+                                            Version 11.23.713.1400
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.628.1800 class="sidelist versiononclick">
+
+                                        <a href="#releasenote17">
+                                            Version 11.23.628.1800
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.525.1030 class="sidelist versiononclick">
+
+                                        <a href="#releasenote16">
+                                            Version 11.23.525.1030
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.523.1900 class="sidelist versiononclick">
+
+                                        <a href="#releasenote15">
+                                            Version 11.23.523.1900
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=12.23.328.2200 class="sidelist versiononclick">
+
+                                        <a href="#releasenote14">
+                                            Version 12.23.328.2200
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.802.1600 class="sidelist versiononclick">
+
+                                        <a href="#releasenote19">
+                                            Version: 11.23.802.1600
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.228.1500 class="sidelist versiononclick">
+
+                                        <a href="#releasenote13">
+                                            Version 11.23.228.1500
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.202.2300 class="sidelist versiononclick">
+
+                                        <a href="#releasenote12">
+                                            Version 11.23.202.2300
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.119.2330 class="sidelist versiononclick">
+
+                                        <a href="#releasenote11">
+                                            Version 11.23.119.2330
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.23.111.100 class="sidelist versiononclick">
+
+                                        <a href="#releasenote10">
+                                            Version 11.23.111.100
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1227.300 class="sidelist versiononclick">
+
+                                        <a href="#releasenote9">
+                                            Version 11.22.1227.300
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1129.1800 class="sidelist versiononclick">
+
+                                        <a href="#releasenote8">
+                                            Version 11.22.1129.1800
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1117.2330 class="sidelist versiononclick">
+
+                                        <a href="#releasenote7">
+                                            Version 11.22.1117.2330
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1110.1600 class="sidelist versiononclick">
+
+                                        <a href="#releasenote6">
+                                            Version 11.22.1110.1600
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1030.2200 class="sidelist versiononclick">
+
+                                        <a href="#releasenote5">
+                                            Version 11.22.1030.2200
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.1011.2300 class="sidelist versiononclick">
+
+                                        <a href="#releasenote4">
+                                            Version 11.22.1011.2300
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.913.1800 class="sidelist versiononclick">
+
+                                        <a href="#releasenote3">
+                                            Version 11.22.913.1800
+                                        </a>
+                                    </li>
+
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.906.200 class="sidelist versiononclick">
+
+                                        <a href="#releasenote2">
+                                            Version 11.22.906.200
+                                        </a>
+                                    </li>
+
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=11.22.808.1700 class="sidelist versiononclick">
+
+                                        <a href="#releasenote1">
+                                            Version 11.22.808.1700
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- dont use 19 no id -->
+                    </div>
+                </div>
+                <div class="mar-0px-auto col-lg-9" style="margin: 0px auto">
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote22">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.25.0204.1146 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 4-Feb-2025</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>Email notifications that were not working upon replying to the tickets have now
+                                        been fixed.</li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote21">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.24.628.1349 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-June-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🚀 What's New </span></span></h3>
+
+                                <ol>
+                                    <li>Apps 365 description has been added in the app source overview.</li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote20">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.24.312.1449 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-Mar-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li> Previously, the entries in the team's report was set for 100, but now we may
+                                        see all of them.</li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote19">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.24.227.1830 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 27-Feb-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>The issue with tabs on the home page has been resolved.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote18">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.713.1400 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 14-July-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        The users couldn't change the ticket properties.
+                                    </li>
+                                    <li>
+                                        Issue with the reports page's date format.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote17">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.628.1800 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-June-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        The report page's filters weren't functional.
+                                    </li>
+                                    <li>
+                                        After raising the new ticket, the new ticket panel became stuck for a few users.
+                                    </li>
+                                    <li>
+                                        The home page's priority-based ticket colors were broken.
+                                    </li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote16">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.525.1030 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 25-May-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        Supervisor doesn't get an email when the teams option on the new ticket panel is
+                                        dropdown.
+                                    </li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote15">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.523.1900 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 23-May-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        Requester does not get an email when their ticket is merged into a different
+                                        ticket.
+                                    </li>
+                                    <li>
+                                        Requester gets no notification when another ticket is merged with theirs.
+                                    </li>
+                                    <li>
+                                        Assigned agent on a ticket that gets merged gets no notification.
+                                    </li>
+                                    <li>
+                                        Master ticket shows no history of tickets merged into it.
+                                    </li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote14">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 12.23.328.2200 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 29-Mar-2024</p>
+
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4 " class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span>
+                                    </h3>
+                                </div>
+                                <br>
+
+                                <h4>New Feature :</h4>
+
+                                <ol>
+                                    <li>
+                                        Email notifications for the CC users in the new ticket panel.
+                                    </li>
+                                    <li>
+                                        Column configuration for My Tickets tab under column settings.
+                                    </li>
+
+                                </ol>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        Added SLA columns on the reports page.
+                                    </li>
+                                    <li>
+                                        Knowledgebase article editing was not working.
+                                    </li>
+                                    <li>
+                                        Knowledgebase tags were not getting saved.
+                                    </li>
+                                    <li>
+                                        The comments were not loading automatically.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote19">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.802.1600 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 8-Mar-2024</p>
+
+
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        The cc users were unable to receive notifications of ticket comments.
+                                    </li>
+                                    <li> Admins were unable to reply to the tickets that were created by users.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote13">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.228.1500 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 1-Mar-2024</p>
+
+
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        Guest user can now reply to the tickets.
+                                    </li>
+                                    <li>Comment notifications for users.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote12">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.202.2300 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 2-Feb-2024</p>
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+
+                                <ol>
+                                    <li>
+                                        "Reopen the ticket on reply" in ticket customization settings (Closed tickets
+                                        will open if there is any comment from the requester/assignee on the following
+                                        ticket.)
+                                    </li>
+
+                                </ol>
+
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        The ticket comment page is breaking if there is any SharePoint user properties
+                                        are disabled in SharePoint admin center settings is fixed.
+                                    </li>
+                                    <li>In exported report file (of report page) days column values coming with decimal
+                                        are fixed.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote11">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.119.2330 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 20-Jan-2024</p>
+
+
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+
+                                <ol>
+                                    <li>
+                                        Days column in the reports page was showing empty.
+                                    </li>
+                                    <li>Comments page is fixed when the app is opened for the first time from outlook
+                                    </li>
+                                    <li>KB hide function in the settings page</li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote10">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.23.111.100 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 11-Jan-2024</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+
+                                <ol>
+                                    <li>
+                                        Added a days column on the reports page.
+                                    </li>
+
+                                </ol>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Editing the SLA policy.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote9">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1227.300 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 27-Dec-2022</p>
+
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+
+                                <ol>
+                                    <li>
+                                        Can copy-paste screenshots in the ticket description.
+                                    </li>
+                                    <li>Can sort tickets based on ticket Id, ticket modified date, and ticket created
+                                        date as per general settings.</li>
+                                    <li>Allow All to Comment on Tickets from general settings (In case it is turned on,
+                                        team members, CCs, consulted individuals, and reviewers are allowed to
+                                        comment/reply to the tickets).</li>
+                                    <li>Validate Duplicate Tickets Through Email from the advance setting (This setting
+                                        will avoid duplicate ticket creation through email when any user replies to the
+                                        first email or any thread which doesn't have the ticket number in the subject).
+                                    </li>
+                                </ol>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Mac/Ios Capatiable issue is fixed.
+                                    </li>
+                                    <li>Now the ticket requested from email id shows under the "requested by me" table.
+                                    </li>
+                                    <li>Selecting Days issue on the SLA Policy page is fixed.</li>
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote8">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1129.1800 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 29-Nov-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+
+                                <ol>
+                                    <li>
+                                        Can set SLA policy for custom priority.
+                                    </li>
+                                    <li>Can sort tickets based on ticket Id, ticket modified date, and ticket created
+                                        date as per general settings.</li>
+                                </ol>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Agent duplication issue on agent reports.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote7">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1117.2330 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 18-Nov-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+
+                                <ol>
+                                    <li>
+                                        Added a new theme Pantone 1585 C.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote6">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1110.1600 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 11-Nov-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+                                <ol>
+                                    <li>
+                                        Email id is not editable in the requester contact details panel of the comment
+                                        page.
+                                    </li>
+
+                                    <li>
+                                        Added an unlicensed user validation in team creation.
+                                    </li>
+
+
+                                </ol>
+
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Unable to hide subservice on the user ticket form from the ticket field settings
+                                        issue is fixed.
+                                    </li>
+                                    <li>
+                                        Unable to update the ticket status in Firefox browser if the language is changed
+                                        issue is fixed.
+                                    </li>
+                                    <li>
+                                        Ticket transfer is not working when we track the time feature is enabled.
+                                    </li>
+                                    <li> The table shows the entries issue fixed.
+                                    </li>
+                                    <li>
+                                        The issue with renamed services and subservice not updating on the ticket form
+                                        has been resolved.
+                                    </li>
+
+                                </ol>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote5">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1030.2200 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 30-Oct-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+                                <b>New features/Improvements:</b>
+                                <ol>
+                                    <li>
+                                        Language - Can change the language of the helpdesk application from general
+                                        settings.
+                                    </li>
+
+                                    <li>
+                                        Added Validation so that ticket mailbox account can't be a ticket requester.
+                                    </li>
+
+
+                                </ol>
+
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Home page keeps loading continuously issue fixed.
+                                    </li>
+                                    <li>
+                                        Ticket submition issue with guest or external user.
+                                    </li>
+                                    <li>
+                                        Users duplicating on the user page.
+                                    </li>
+                                    <li> The blank user page issue is fixed.
+                                    </li>
+                                    <li>
+                                        Agent duplicating issue in agent reports page in case if agent belongs to
+                                        multiple teams.
+                                    </li>
+
+                                </ol>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote4">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.1011.2300 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-Oct-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+
+                                <ol>
+                                    <li>
+                                        Column settings for report page.
+                                    </li>
+
+                                    <li>
+                                        Change teams/groups to buttons or dropdown lists of ticket form from the general
+                                        settings.
+                                    </li>
+
+                                    <li>
+                                        Custom redirect SharePoint Site URL settings in general settings.
+                                    </li>
+
+                                    <li>
+                                        Send all email notifications from the Helpdesk mailbox settings.
+                                    </li>
+                                </ol>
+
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Ticket scope permission issue.
+                                    </li>
+
+                                </ol>
+
+                                </ul>
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote3">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.913.1800 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 14-Sep-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+
+
+
+                                <ol>
+                                    <li>
+                                        Ticket Aging report.
+                                    </li>
+
+                                    <li>
+                                        Admin can edit or change the ticket requester name on the comment page.
+                                    </li>
+                                    <li>
+                                        Setting page layout has been modified.
+                                    </li>
+
+                                </ol>
+
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Exclude users for ticket auto-assign on the setting page.
+                                    </li>
+
+                                    <li>
+                                        Unavailable ticket auto-assign control missing on agent setting page.
+                                    </li>
+
+                                    <li>
+                                        Delete the ticket icon missing on the home page.
+                                    </li>
+                                </ol>
+
+
+
+                                </ul>
+
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote2">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Release Note<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 11.22.906.200 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 06-Sep-2022</p>
+
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                </div>
+
+
+
+                                <ol>
+                                    <li>
+                                        Added Column settings in feature settings.
+                                    </li>
+
+                                    <li>
+                                        Performance improvement.
+                                    </li>
+
+                                    <li>
+                                        SLA improvements.
+                                    </li>
+
+                                    <li>
+                                        Display custom ticket status in the dashboard.
+                                    </li>
+                                </ol>
+
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <!-- <b> Updated team icon for EDM application</b> -->
+                                <ol>
+                                    <li>
+                                        Mail thread issue fixes in the comments page.
+                                    </li>
+
+                                </ol>
+
+
+
+                                </ul>
+
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding releasenotepadding" id="releasenote1">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title="Release Note "
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight " href="">Release Note<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <p>Version 11.22.808.1700 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 08-Aug-2022</p>
+                                <div>
+                                    <div contenteditable="false " class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx " style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span>
+                                                </span><span class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx "
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4 " class="sc-jtiXyc YVppW"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span>
+                                    </h3>
+                                </div>
+                                <br>
+
+                                <h4>New Feature 1</h4>
+
+                                <ol>
+                                    <li>
+                                        Display team's name in ticket from general settings.
+                                    </li>
+                                    <li>
+                                        Hide/show title and description fields in ticket from ticket fields settings.
+                                    </li>
+                                    <li>
+                                        Data table Sorting remains sorted even we refresh the page.
+                                    </li>
+                                    <li>
+                                        CC users auto pickup in the ticket properties panel.
+                                    </li>
+                                    <li>
+                                        External users can receive the survey link and can submit feedback.
+                                    </li>
+                                </ol>
+                                <h3 id="0e8056ca " class="sc-jtiXyc YVppW"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span>
+                                </h3>
+                                <ol>
+                                    <li>
+                                        Attachment issue in the ticket form.
+                                    </li>
+                                </ol>
+
+                                </ul>
+
+
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal " class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src=" " id="imageId " style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+</body>
+<script src="../../../js/header-footer.js"></script>
+<script src="../../../js/releasenote.js"></script>
+
+</html>

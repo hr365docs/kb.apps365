@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Civic 365 | Admin Guide | Settings | Ticket-customization</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Admin guide for customizing tickets in Civic 365 for efficient management and handling.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+    
+      <!-- Google Tag Manager --> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+    })(window,document,'script','dataLayer','GTM-TX9SKDMB');</script> 
+    <!-- End Google Tag Manager --> 
+</head>
+
+<body>
+     <!-- Google Tag Manager (noscript) --> 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" 
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+    <!-- End Google Tag Manager (noscript) --> 
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../Civic365/">Civic 365</a>
+                        </h5>
+                     <a class=back-btn href="../../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>General Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Customization
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <p>
+                                    From here, you can customize the tickets.
+                                </p>
+
+                                <div><img src="ticket_customize.png" onclick="openModal('ticket_customize.png')"
+                                        alt="customize the tickets" width="100%" height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="priority-type">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                                        Priority Type
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    From here you can add, edit or delete the priority types. These priorities are
+                                    displayed in the new request panel from where the requester can select the
+                                    priorities for their ticket.
+                                </p>
+
+
+                                <p>
+                                    To create priority type, follow the below steps:
+                                </p>
+
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Click on <b>+Add</b>, this displays <b>Priority Type</b> page.
+                                        </p>
+
+                                        <div><img src="new_priority.png" onclick="openModal('new_priority.png')"
+                                                alt="Add Priority" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>
+                                            Enter <b>Add New Priority</b> and click on <b>Save</b> button.
+                                        </p>
+
+                                        <div><img src="add_priority.png" onclick="openModal('add_priority.png')"
+                                                alt="Add New Priority" width="100%" height="auto"></div>
+                                    </li>
+                                </ol>
+
+                                <br>
+                                <p>
+                                    <b>Delete:</b> Click the delete icon, this displays a dialog box. Click <b>Yes</b>
+                                    button.
+                                </p>
+
+                                <p>
+                                    <b>Edit:</b> You can edit the <b>Edit Request Type</b>. Click the edit icon, this
+                                    displays <b>Edit Request Type</b>. Update the <b>Edit Request Type</b> and click on
+                                    <b>Submit</b> button.
+                                </p>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="request-type">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Request Type
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    Admin can add request types from settings such request type will display in new
+                                    ticket panel.
+                                </p>
+
+
+                                <p>
+                                    To create request type, follow the below steps:
+                                </p>
+
+                                <ol>
+
+                                    <li>
+                                        <p>
+                                            Click on <b>+Add</b>, this displays <b>Add Request Type</b> page.
+                                        </p>
+
+                                        <div><img src="request_type.png" onclick="openModal('request_type.png')"
+                                                alt="Add Request Type" width="100%" height="auto"></div>
+                                        <br>
+
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            Enter <b>Add Request Type</b> and click on <b>Submit</b> button.
+                                        </p>
+
+                                        <div><img src="add_request.png" onclick="openModal('add_request.png')"
+                                                alt="Enter request" width="100%" height="auto"></div>
+                                    </li>
+                                </ol>
+                                <br>
+
+
+                                <p>
+                                    <b>Delete:</b> Click the delete icon, this displays a dialog box. Click <b>Yes</b>
+                                    button.
+                                </p>
+
+                                <p>
+                                    <b>Edit:</b> You can edit <b>Edit Request Type</b>. Click the edit icon, this
+                                    displays <b>Edit Request Type</b>. Update the <b>Edit Request Type</b> and click on
+                                    <b>Submit</b> button.
+                                </p>
+
+
+                                <div><img src="edit_request.png" onclick="openModal('edit_request.png')"
+                                        alt="Edit request" width="100%" height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="status">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Status
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    From here admin could add, edit, or delete the status. All these status are
+                                    displayed on the home page of the requester and they would be able to check the
+                                    status for their ticket.
+                                </p>
+
+                                <p>
+                                    To create status, follow the below steps:
+                                </p>
+
+                                <ol>
+                                    <div><img src="new_status.png" onclick="openModal('new_status.png')"
+                                            alt="New status" width="100%" height="auto"></div>
+                                    <br>
+                                    <li>
+                                        <p>
+                                            Click on <b>+Add</b>, this displays <b>Add Status</b> page.
+                                        </p>
+
+
+                                    </li>
+                                    <!-- 
+                                    <li>
+                                        <p>
+                                            For adding multiple statuses, enter the status title and click on the
+                                            <b>Save and Add</b> button.
+                                        </p>
+                                    </li> -->
+
+                                    <li>
+                                        <p>
+                                            Enter <b>Status Title</b> and click on <b>Submit</b> button.
+                                        </p>
+
+                                    </li>
+
+                                </ol>
+
+                                <p>
+                                    <b>Delete:</b> Click the delete icon, this displays a dialog box. Click <b>Yes</b>
+                                    button.
+                                </p>
+
+                                <p>
+                                    <b>Edit:</b> You can edit <b>Edit Status</b>. Click the edit icon, this displays
+                                    <b>Edit Status</b>. Update the <b>Edit Status Title</b> and click on <b>Submit</b>
+                                    button.
+                                </p>
+
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="ticket-field">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Ticket Field
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    The new Ticket panel (ticket form) can be controlled from here.
+                                </p>
+
+                                <p>
+                                    To order the fields click on <b>Toggle</b>. To hide the fields, disable the toggles
+                                    and to show the fields, enable the toggles and click on <b>Submit</b> button to save
+                                    changes.
+                                </p>
+
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Ticket field settings reflect in ticket form only for the user role person.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div><img src="ticket_sq.png" onclick="openModal('ticket_sq.png')" alt="Ticket sequence"
+                                        width="100%" height="auto"></div>
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id=ticket-sequence>
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Sequence
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    <b>Ticket Name</b> and <b>Ticket Prefix</b> could be added.
+                                </p>
+
+                                <div><img src="ticket_sequence.png" onclick="openModal('ticket_sequence.png')"
+                                        alt="Ticket Prefix" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    If ticket name is SR and ticket prefix is 1, the ticket ID would be SR#100XXXX.
+                                </p>
+
+
+
+                                <div><img src="Ticket_sq_id.png" onclick="openModal('Ticket_sq_id.png')"
+                                        alt="Ticket seq ID" width="100%" height="auto"></div>
+
+
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Note: You may also use teams code as ticket’s suffix, you need to enable the
+                                            toggle switch form custom settings. </p>
+                                    </div>
+                                </div>
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id=custom-form>
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Custom Forms
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    <b>Custom Forms</b> could be added.
+                                </p>
+
+                                <div><img src="custom_form.png" onclick="openModal('custom_form.png')" alt="Custom Form"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    On the ticket customization settings panel, click the <b>Configure</b> button.
+                                </p>
+
+
+
+                                <div><img src="configure_form.png" onclick="openModal('configure_form.png')"
+                                        alt="configure form" width="100%" height="auto"></div><br>
+
+                                <p>When a panel with custom forms opens, click on the <b>Add</b> button in the panel.
+                                </p>
+                                <div><img src="form_add.png" onclick="openModal('form_add.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    Fill out the required data and choose the checkbox to include the field in the form
+                                    to build a custom form. Click the <b>Save</b> button now.
+                                </p>
+                                <div><img src="save_form.png" onclick="openModal('save_form.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Note: To make field mandatory, please check the check box & selected field
+                                            will be denoted by asterisk for your reference. </p>
+                                    </div>
+                                </div>
+
+                                <p><b>Delete</b>: Click on the delete icon to delete a field.</p>
+                                <p><b>Add</b>: Drag the fields to add in the ticket form.</p>
+
+                                <div><img src="delete_field.png" onclick="openModal('delete_field.png')"
+                                        alt="Delete field" width="100%" height="auto"></div><br>
+                                <p>The form will be added to the panel after saving, where you may edit or delete it.
+
+                                </p>
+                                <div><img src="added_in_panel.png" onclick="openModal('added_in_panel.png')"
+                                        alt="Added form" width="100%" height="auto"></div><br>
+                                <p>Click on the gear icon to <b>Configure Custom Form</b>.</p>
+                                <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"
+                                        width="100%" height="auto"></div><br>
+                                <p>Select the check box <b>Make this Form as Default Form</b> to make the form as a
+                                    default form. A pop up will appear , click on the <b>OK</b> button.</p>
+                                <div><img src="default_form.png" onclick="openModal('default_form.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                        <p>The custom form will be displayed on the <b>New Ticket</b> panel.</p>
+                                        <div><img src="select_form.png" onclick="openModal('select_form.png')" alt="Select form"
+                                            width="100%" height="auto"></div><br>
+                                            <p>Click on the requester configure button from the <b>Notifications.</b></p>
+                                            <div><img src="requester.png" onclick="openModal('requester.png')" alt="requester configure"
+                                                width="100%" height="auto"></div><br>
+                                                <p>Now click on the edit icon from the <b>Requester</b> panel.</p>
+                                                <div><img src="edit_requesters.png" onclick="openModal('edit_requesters.png')" alt="edit requester"
+                                                    width="100%" height="auto"></div><br>
+<p>From the edit email body panel you could the custom templates from the <b>Custom Template</b> dropdown.</p>
+<div><img src="custom_body.png" onclick="openModal('custom_body.png')" alt="edit email body"
+    width="100%" height="auto"></div><br>
+
+<div><img src="save_body.png" onclick="openModal('save_body.png')" alt="save email body"
+    width="100%" height="auto"></div><br>
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="merge-tickets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Merge Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Once the admin enables the merge ticket option from the settings, it displays on the
+                                    ticket comment page, where the admin or ticket assignee could merge the ticket with
+                                    another ticket using the ticket ID.
+
+                                </p>
+                                <p>Once the tickets are merge (other tickets), the old ticket ID’s would get closed and
+                                    a new ticket ID would be generated, followed by a notification for ticket merge is
+                                    sent to ticket requester. </p>
+                                <div><img src="merge_ticket.png" onclick="openModal('merge_ticket.png')"
+                                        alt="Merge tickets" width="100%" height="auto"></div>
+                                <br>
+
+                                <p>To merge the tickets, follow the steps:</p>
+                                <ol>
+                                    <li>
+                                        <p>Go to home page and click the <b>Ticket ID</b> to open the comment page.</p>
+                                    </li>
+
+                                    <li>
+                                        <p>On the comment page, click the <b>Merge</b> button, which displays a pop-up.
+                                        </p>
+                                        <div><img src="merge.png" onclick="openModal('merge.png')" alt="Merge"
+                                                width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>Click the <b>Yes</b> button, which displays merge to pop-up.</p>
+                                        <div><img src="merge_yes.png" onclick="openModal('merge_yes.png')"
+                                                alt="Merge yes" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>Enter the <b>Ticket ID</b> to merge into.</p>
+
+                                    </li>
+
+                                    <li>
+                                        <p> Click the <b>Merge</b> button.</p>
+                                        <div><img src="merged.png" onclick="openModal('merged.png')" alt="Merged"
+                                                width="100%" height="auto"></div>
+                                    </li>
+                                </ol>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="split-tickets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Split Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Admin can enable the toggle switch for split tickets.
+                                </p>
+                                <div><img src="split_ticket.png" onclick="openModal('split_ticket.png')"
+                                        alt="Split ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>To split the ticket, follow the steps:</p>
+                                <ol>
+                                    <li>
+                                        <p>Go to home page and click the <b>Ticket ID</b> to open the comment page.</p>
+                                    </li>
+
+                                    <li>
+                                        <p>On the comment page, click the <b>Split</b> button, which displays a pop-up.
+                                        </p>
+                                        <div><img src="split_icon.png" onclick="openModal('split_icon.png')"
+                                                alt="Split icon" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>Click the <b>Yes</b> button, which displays <b>Ticket Split</b> to pop-up.
+                                        </p>
+                                        <div><img src="split_yes.png" onclick="openModal('split_yes.png')"
+                                                alt="Split yes" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>Enter <b>New Ticket Title</b> and comments, select <b>Teams</b> and
+                                            <b>Services</b> to merge into.
+                                        </p>
+                                        <div><img src="split_title.png" onclick="openModal('split_title.png')"
+                                                alt="Split title" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p> Click the <b>Split</b> button.</p>
+
+                                    </li>
+                                </ol>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="review-tickets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Review Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Admin can enable the toggle switch for review ticket.
+                                </p>
+                                <div><img src="review_ticket.png" onclick="openModal('review_ticket.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>To review the tickets, follow the steps:</p>
+                                <ol>
+                                    <li>
+                                        <p>Go to home page and click the <b>Ticket ID</b> to open the comment page.
+                                        <div><img src="review_tick.png" onclick="openModal('review_tick.png')"
+                                                alt="Click ticket id" width="100%" height="auto"></div>
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p> On comment page, click the <b>Review</b> button, this displays comment box
+                                            to
+                                            write the comments.</p>
+
+
+                                        <br>
+                                        <div><img src="review_btn.png" onclick="openModal('review_btn.png')"
+                                                alt="Review button" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p> Select Teams Members with whom you want to share the review.</p>
+                                    </li>
+
+                                    <li>
+                                        <p> Click the <b>Review</b> button.</p>
+
+                                    </li>
+
+                                </ol>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Enable-ticket-closed-justification">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable ticket closed justification
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    The 'Enable ticket closed justification' setting allows users to require justification when closing a ticket. This can be toggled on or off as needed for additional accountability in ticket management.
+                                </p>
+                                <div><img src="enableTicketJustifaction.png" onclick="openModal('enableTicketJustifaction.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    If you enable Enable ticket closed justification you will need to provide a justification every time you close a ticket.
+                                </p>
+                                <div><img src="TicketJusti.png" onclick="openModal('TicketJusti.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    And if the user has enabled the 'Enable ticket closed justification' setting, then the second option, 'Make Ticket Closure Justification Mandatory,' will be shown. In this case, the user will not be able to close the ticket without providing justification—it will be mandatory.
+                                </p>
+                                <div><img src="mondatory.png" onclick="openModal('mondatory.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                          
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="escalate-tickets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Escalate Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    Escalate any issue if the ticket is not resolved within a specific time interval.
+                                </p>
+
+                                <p>
+                                    To esalate the issue, follow the steps:
+                                </p>
+
+                                <ol>
+                                    <li>
+                                        <p>Go to home page and click the <b>Ticket ID</b> to open the comment page.</p>
+                                    </li>
+
+                                    <li>
+                                        <p> On comment page, click the <b>Escalate</b> button, this displays comment box
+                                            to
+                                            write the comments.</p>
+
+
+                                        <br>
+                                        <div><img src="new_esc_team.png" onclick="openModal('new_esc_team.png')"
+                                                alt="New esc team" width="100%" height="auto"></div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p> Select <b>Escalation Teams</b> and <b> Escalation Teams Members</b>.</p>
+                                        <div><img src="add_esc_team.png" onclick="openModal('add_esc_team.png')"
+                                                alt="Add esc team" width="100%" height="auto"></div>
+                                    </li>
+
+                                    <li>
+                                        <p> Click the <b>Escalate</b> button.
+                                        <div><img src="esc_submit.png" onclick="openModal('esc_submit.png')"
+                                                alt="Esc submit" width="100%" height="auto"></div>
+                                        </p>
+
+                                    </li>
+                                </ol>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="create-ticket">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Automatic Ticket Creation
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    Once the create ticket is enabled the request sent by users from the Civic email
+                                    ID would be directly considered as a ticket and would display in the unassigned tab
+                                    of the home page. Now ifs create ticket is disabled, the raised request from the
+                                    Civic email ID would be displayed under Ticket Mailbox, Now either the ticket
+                                    could be created or deleted.
+                                </p>
+
+                                <div><img src="ticket_automatic.png" onclick="openModal('ticket_automatic.png')"
+                                        alt="Ticket automatic" width="100%" height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Enable-ticket-closed-justification">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable ticket closed justification
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    The 'Enable ticket closed justification' setting allows users to require justification when closing a ticket. This can be toggled on or off as needed for additional accountability in ticket management.
+                                </p>
+                                <div><img src="TicketJustifaction.png" onclick="openModal('TicketJustifaction.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    If you enable Enable ticket closed justification you will need to provide a justification every time you close a ticket.
+                                </p>
+                                <div><img src="Justifaction.png" onclick="openModal('Justifaction.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    And if the user has enabled the 'Enable ticket closed justification' setting, then the second option, 'Make Ticket Closure Justification Mandatory,' will be shown. In this case, the user will not be able to close the ticket without providing justification—it will be mandatory.
+                                </p>
+                                <div><img src="mondatoryTicket.png" onclick="openModal('mondatoryTicket.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                          
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="auto-close">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Auto Close Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p> If the auto close is enabled, resolved tickets would be closed automatically at a
+                                    specified time frame (ticket status changes from resolved to closed). If the ticket
+                                    is resolved or there is no action on the ticket (no comments or modification) within
+                                    the specified time frame, this ticket would be closed automatically or would remain
+                                    resolved. This feature could be achieved by power automate, for more information
+                                    please contact HR365 to configure.</p>
+                                <div><img src="auto_close_ticket.png" onclick="openModal('auto_close_ticket.png')"
+                                        alt="Auto close ticket" width="100%" height="auto"></div>
+
+
+                        </div>
+                        
+                        <div class="bg-light p-4 remove-padding common-scroll" id="auto-assign">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Auto Assign Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <br>
+
+                                <b>Auto Assign Tickets</b>: If this feature is enabled, the ticket gets assigned to the
+                                agents automatically.
+                                <br>
+                                <br>
+                                <b>Allow agents to set their availability</b>: Once this tab is enabled (this is visible
+                                in the settings to the agents from which they could enable or disable). Tickets would
+                                not get assigned to the agent until they enable this feature.
+                                <br><br> There are two types of auto assign tickets method, you can select either one.
+                                <br><br>
+                                <b> Round Robin</b>: Assign tickets to the agent in a circular fashion.
+                                <br><br>
+                                <b>Weighted Round Robin</b>: Assign the tickets to the agents who have the least
+                                tickets. Further, select the next agent with the least ticket, moreover it would not
+                                assign simultaneously two tickets to the same person.
+
+                                <br><br>
+                                <div><img src="auto_assign_ticket.png" onclick="openModal('auto_assign_ticket.png')"
+                                        alt="Auto assign ticket" width="100%" height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="sub-tickets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Sub Tickets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    A sub ticket could be created from a ticket. Sub tickets are disabled (on default
+                                    setting
+                                    ), you can enable it by clicking Enable sub ticket toggle switch.You
+                                    can <b>Assign Sub Ticket</b> by checking the <b>Teams</b> and/or <b>Teams
+                                        Members</b> check box and clicking on the <b>Save</b> button as shown below.
+
+                                </p>
+
+                                <div><img src="enable_sub_tic.png" onclick="openModal('enable_sub_tic.png')"
+                                        alt="Enable sub ticket" width="100%" height="auto"></div>
+
+                                <p>
+                                    The <b>Sub Ticket</b> option will be displayed on the comment page as shown below.
+                                </p>
+
+                                <div><img src="sub_ticket_icon.png" onclick="openModal('sub_ticket_icon.png')"
+                                        alt="Sub ticket icon" width="100%" height="auto"></div>
+
+                                <p>
+                                    To create sub tickets, follow the below steps:
+                                </p>
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>You can create multiple sub tickets from a main ticket.</p>
+                                    </div>
+                                </div>
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Go to the comment page, click the <b>Sub Ticket</b> option.
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            Select <b>Yes</b> in a dialog box, this displays the <b>Sub Ticket</b> page.
+                                        </p>
+
+                                        <div><img src="sub_ticket_yes.png" onclick="openModal('sub_ticket_yes.png')"
+                                                alt="Sub ticket yes" width="100%" height="auto"></div>
+
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            Enter <b>Sub Ticket Title</b> and <b>Comments</b>.
+                                        </p>
+
+                                        <div><img src="sub_ticket_dialog.png"
+                                                onclick="openModal('sub_ticket_dialog.png')" alt="Sub ticket dialog"
+                                                width="100%" height="auto"></div>
+
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            Sub ticket created and displayed on home page.
+                                        </p>
+
+                                        <!-- <div><img src="sub_tick_home.png" onclick="openModal('sub_tick_home.png')"
+                                                alt="Sub ticket home" width="100%" height="auto"></div> -->
+
+                                    </li>
+                                </ol>
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="ticket-aging-reports">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Aging Reports
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <ol>
+                                    <li>
+                                        <p>Click on Ticket Aging Reports from <b>Ticket Customizaton setting</b>.
+                                        <div><img src="ticket_aging.png" onclick="openModal('ticket_aging.png')"
+                                                alt="Ticket aging" width="100%" height="auto"></div>
+                                        </p>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <p>
+                                            From here, you can enable it by clicking <b>Enable Ticket Aging Reports
+                                            </b> toggle switch.
+                                        <div><img src="ticket_age.png" onclick="openModal('ticket_age.png')"
+                                                alt="Ticket age" width="100%" height="auto"></div>
+                                        </p>
+                                    </li>
+
+                                    <br>
+                                    <li>
+                                        <p>
+                                            When the <b>Ticket Aging Reports</b> are enabled . You can choose
+                                            how many days older emails should be sent for open tickets from the options
+                                            below.
+                                        </p>
+
+                                        <div><img src="email_days.png" onclick="openModal('email_days.png')"
+                                                alt="Email days" width="100%" height="auto"></div>
+                                    </li><br>
+                                    <li>
+                                        <p>
+                                            Choose the number of tickets you want to display in the email body, when
+                                            mail is send to <b>Agent</b>, <b>Supervisors</b>, <b>Admin</b>. You can
+                                            enable or disable these mail with the toggle switch.
+                                        </p>
+
+                                        <div><img src="no_of_tickets.png" onclick="openModal('no_of_tickets.png')"
+                                                alt="No of tickets" width="100%" height="auto"></div><br>
+
+                                        <div><img src="supervisors.png" onclick="openModal('supervisors.png')"
+                                                alt="Supervisors" width="100%" height="auto"></div><br>
+                                        <div><img src="admin.png" onclick="openModal('admin.png')" alt="Admin"
+                                                width="100%" height="auto"></div><br>
+                                    </li>
+                                    <!-- <li><p>
+                                        In the body of the email in the SharePoint inbox, the open ticket older mail will appear like this.
+                                    </p>
+                                        <div><img src="mail_agents.png" onclick="openModal('mail_agents.png')" alt="Mail agents"
+                                            width="100%" height="auto"></div><br>
+                                    </li> -->
+                                </ol>
+                            </ul>
+                        </div>
+                        </ul>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="/Civic365/modern/admin/settings/general/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">General</span></a>
+                        <a class="nav nav-next" href="/Civic365/modern/admin/settings/role/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Users Roles Permissions</span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2"  aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+
+</body>
+<script src="../../../../../js/header-footer.js"></script>
+<script src="../../hdm-admin-aside-js/hdm-admin-aside.js"></script>
+<script src="../../../../../js/showhidefunction.js"></script>
+
+</html>

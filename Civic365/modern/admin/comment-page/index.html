@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Civic 365 | Admin Guide | Comment-page</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Admin Guide for the Comment page in Civic 365, explaining how to manage and track comments for effective collaboration and support.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+   
+      <!-- Google Tag Manager --> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+    })(window,document,'script','dataLayer','GTM-TX9SKDMB');</script> 
+    <!-- End Google Tag Manager --> 
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) --> 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" 
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+    <!-- End Google Tag Manager (noscript) --> 
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                     <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+          <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"><a
+                                href="../../../../Civic365/">Civic 365</a>
+                        </h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white " id=content>
+                        <!-- <h2 class=mb-5 id=title></h2> -->
+                        <div class="bg-light p-4 remove-padding ">
+                            <ul class="page-list list-align">
+                                <h2 id="_dashboards "><a class="header-icon-link highlight " href="">Comment Page
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray; "></i></a>
+                                </h2>
+                                <ol type="I" >
+                                    <p><b>Some "ticket actions" are shown below on the comment page</b> :</p>
+                                    
+                                    <li>Reply</li>
+                                    <li>Consult</li>
+                                    <li>Private Notes</li>
+                                    <li>Transfer</li>
+                                    <li>Merge</li>
+                                    <li>Split</li>
+                                    <li>Escalate</li>
+                                    <li>Review</li>
+                                    <li>Sub Tickets</li>
+
+
+
+
+                                </ol>
+                                <br>
+                                <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                    <ul class=page-list>
+                                <h6> 
+                                    You would be redirected to the comments page of ticket once you click on <b>Ticket
+                                        ID</b> or <b>Title</b> from home page.</h6>
+
+
+                                <ul class="ul_li_styles ">
+                                    <li>
+                                        From this page you can assign and update the status of the tickets.
+                                        <div><br><img src="new_comment.png" onclick="openModal('new_comment.png') "
+                                                alt="New comment" width="100% " height="auto "></div>
+                                        
+                                    </li>
+</ul></div>
+                                    <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                        <ul class=page-list>
+                                            <h2 id="_dashboards "><a class="header-icon-link highlight " href="">Reply
+                                                    <i class="fas fa-link "
+                                                        style="font-size:12px; color:lightgray; "></i></a>
+                                            </h2>
+                                            <ol type="1">
+                                                <li>
+                                                    You can <b>Reply</b> to the tickets.
+
+                                                    <div><br><img src="reply_.png" onclick="openModal('reply_.png') "
+                                                            alt="Reply" width="100% " height="auto "></div>
+                                                    <br>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        	The user's message would be answered by an agent in a message box.
+                                                    </p>
+                                                    <div><img src="reply_update.png"
+                                                            onclick="openModal('reply_update.png') " alt="Reply update"
+                                                            width="100% " height="auto "></div><br>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Message from the agent will be delivered to the user.
+                                                    </p>
+                                                    <div><img src="user_receive.png"
+                                                            onclick="openModal('user_receive.png') " alt="User receive"
+                                                            width="100% " height="auto "></div><br>
+                                                </li>
+                                            </ol>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                        <ul class=page-list>
+                                            <h2 id="_dashboards "><a class="header-icon-link highlight " href="">Consult
+                                                    <i class="fas fa-link "
+                                                        style="font-size:12px; color:lightgray; "></i></a>
+                                            </h2>
+                                            <ol type="1">
+                                                <li>
+                                                    You can <b>Consult</b> to team member before transferring the
+                                                    Tickets.<br>
+                                                    <div><br><img src="consult_icon.png"
+                                                            onclick="openModal('consult_icon.png') " alt="Consult icon"
+                                                            width="100% " height="auto "></div><br>
+                                                </li>
+                                                <li>
+                                                    	You could talk to the team members about allocating tickets based on their performance.<br>
+                                                    To inform the team members, a e-mail would be sent via click on
+                                                    <b>Consult</b> button.
+                                                    <div><br><img src="consult_msg.png"
+                                                            onclick="openModal('consult_msg.png') " alt="Consult msg"
+                                                            width="100% " height="auto "></div><br>
+
+                                                </li>
+                                            </ol>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                        <ul class=page-list>
+                                            <h2 id="_dashboards "><a class="header-icon-link highlight "
+                                                    href="">Transfer
+                                                    <i class="fas fa-link "
+                                                        style="font-size:12px; color:lightgray; "></i></a>
+                                            </h2>
+                                            <ol type="1">
+                                                <li>
+                                                    You can <b>Transfer</b> the ticket from one department to
+                                                    another.You can decide to assign the ticket to a specific team
+                                                    member and/or department.
+                                                    <div><br><img src="transfer.png"
+                                                            onclick="openModal('transfer.png') " alt="Transfer" width="100% "
+                                                            height="auto "></div><br>
+                                                </li>
+                                                <li>
+                                                    	The ticket could be assigned or transferred to the other team member.
+                                                    <div><br><img src="transfer_mail.png"
+                                                            onclick="openModal('transfer_mail.png') " alt="Transfer mail"
+                                                            width="100% " height="auto "></div><br>
+                                                </li>
+                                            </ol>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                        <ul class=page-list>
+                                            <h2 id="_dashboards "><a class="header-icon-link highlight " href="">Private
+                                                    Notes
+                                                    <i class="fas fa-link "
+                                                        style="font-size:12px; color:lightgray; "></i></a>
+                                            </h2>
+                                            <ol type="1">
+                                                <li>
+                                                    You can add <b>Private Notes</b> for the agent's reference.
+                                                    <div><br><img src="private_note.png"
+                                                            onclick="openModal('private_note.png') " alt="Private note"
+                                                            width="100% " height="auto "></div><br>
+                                                </li>
+                                                <li>
+                                                    	Users would not be able to see the private notes that agents share with one another. The other team member would receive an email (click the "Add Private Note" button).
+                                                    <div><br><img src="add_note.png"
+                                                            onclick="openModal('add_note.png') " alt="Add note" width="100% "
+                                                            height="auto "></div><br>
+                                                </li>
+                                                <li>
+                                                    The message between the agents are private in above instance.
+                                                    <div><br><img src="private.png" onclick="openModal('private.png') "
+                                                            alt="Private agent" width="100% " height="auto "></div><br>
+                                                </li>
+                                                <li>A ticket assignee would receive notifications, while a team member (agents and supervisor) adds a private comments.
+                                                    <div><br><img src="private_comment.png"
+                                                            onclick="openModal('private_comment.png') " alt="Private comment"
+                                                            width="100% " height="auto "></div>
+                                                </li>
+
+
+                                            </ol>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-light p-4 remove-padding common-scroll" id="merge-tickets">
+                                        <ul class=page-list>
+                                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Merge
+                                                    Tickets
+                                                    <i class="fas fa-link"
+                                                        style="font-size:12px; color:lightgray;"></i></a>
+                                            </h2>
+                                            <p>
+                                                Once the admin enables the merge ticket option from the settings, it displays on the ticket comment page, where the admin or ticket assignee could merge the ticket with another ticket using the ticket ID.
+
+                                            </p>
+                                            <p>Once the tickets are merge (other tickets), the old ticket ID’s would get closed and a new ticket ID would be generated, followed by a notification for ticket merge is sent to ticket requester. </p>
+                                            <div><img src="merge_ticket.png"
+                                                    onclick="openModal('merge_ticket.png')" alt="Merge ticket" width="100%"
+                                                    height="auto"></div>
+                                            <br>
+
+                                            <p>To merge the tickets, follow the steps:</p>
+                                            <ol>
+                                                <li>
+                                                    <p>Go to home page and click the <b>Ticket ID</b> to open the
+                                                        comment page.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p>On the comment page, click the <b>Merge</b> button, which
+                                                        displays a pop-up.
+                                                    </p>
+                                                    <div><img src="merge.png"
+                                                            onclick="openModal('merge.png')" alt="Merge button" width="100%"
+                                                            height="auto"></div>
+                                                </li>
+                                                <br>
+                                                <li>
+                                                    <p>Click the <b>Yes</b> button, which displays merge to pop-up.</p>
+                                                    <div><img src="merge_yes.png"
+                                                            onclick="openModal('merge_yes.png')" alt="Pop up" width="100%"
+                                                            height="auto"></div>
+                                                </li>
+                                                <br>
+                                                <li>
+                                                    <p>Enter the <b>Ticket ID</b> to merge into.</p>
+                                                    <div><img src="merged.png"
+                                                            onclick="openModal('merged.png')" alt="Ticket ID" width="100%"
+                                                            height="auto"></div>
+                                                </li>
+                                                <br>
+                                                <li>
+                                                    <p> Click the <b>Merge</b> button.</p>
+                                                    <!-- <div><img src="click_merge.png"
+                                                            onclick="openModal('click_merge.png')" alt="Click merge" width="100%"
+                                                            height="auto"></div> -->
+                                                </li>
+                                            </ol>
+                                            <div class="bg-light p-4 remove-padding common-scroll" id="split-tickets">
+                                                <ul class=page-list>
+                                                    <h2 id="_dashboards"><a class="header-icon-link highlight"
+                                                            href=#>Split Tickets
+                                                            <i class="fas fa-link"
+                                                                style="font-size:12px; color:lightgray;"></i></a>
+                                                    </h2>
+
+                                                    <p>
+                                                        A single ticket with multiple departments involved to resolve could be split as per the requirement. Admin can enable the toggle switch for split tickets.
+                                                    </p>
+                                                    <div><img src="split_ticket.png"
+                                                            onclick="openModal('split_ticket.png')" alt="Split ticket" width="100%"
+                                                            height="auto"></div>
+                                                    <br>
+                                                    <p>To split the ticket, follow the steps:</p>
+                                                    <ol>
+                                                        <li>
+                                                            <p>Go to home page and click the <b>Ticket ID</b> to open
+                                                                the comment page.</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <p>On the comment page, click the <b>Split</b> button, which
+                                                                displays a pop-up.
+                                                            </p>
+                                                            <div><img
+                                                                    src="split_icon.png"
+                                                                    onclick="openModal('split_icon.png')" alt="Split button"
+                                                                    width="100%" height="auto"></div>
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            <p>Click the <b>Yes</b> button, which displays <b>Ticket
+                                                                    Split</b> to pop-up.
+                                                            </p>
+                                                            <div><img
+                                                                    src="split_yes.png"
+                                                                    onclick="openModal('split_yes.png')" alt="Pop up"
+                                                                    width="100%" height="auto"></div>
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            <p>Enter <b>New Ticket Title</b> and comments, select
+                                                                <b>Teams</b> and
+                                                                <b>Services</b> to merge into.
+                                                            </p>
+                                                            <div><img
+                                                                    src="split_title.png"
+                                                                    onclick="openModal('split_title.png')" alt="Teams and services"
+                                                                    width="100%" height="auto"></div>
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            <p> Click the <b>Split</b> button.</p>
+
+                                                        </li>
+                                                    </ol>
+
+                                            </div>
+                                            <div class="bg-light p-4 remove-padding common-scroll" id="escalate-tickets">
+                                                <ul class=page-list>
+                                                    <h2 id="_dashboards"><a class="header-icon-link highlight"
+                                                            href=#>Escalate Tickets
+                                                            <i class="fas fa-link"
+                                                                style="font-size:12px; color:lightgray;"></i></a>
+                                                    </h2>
+
+                                                    <p>
+                                                        Escalate any issue if the ticket is not resolved within a specific time interval.   
+                                                    </p>
+
+                                                    <p>
+                                                        To esalate the issue, follow the steps:
+                                                    </p>
+
+                                                    <ol>
+                                                        <li>
+                                                            <p>Go to home page and click the <b>Ticket ID</b> to open
+                                                                the comment page.</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <p> On comment page, click the <b>Escalate</b> button, this
+                                                                displays comment box to
+                                                                write the comments.</p>
+
+
+                                                            <br>
+                                                            <div><img
+                                                                    src="new_esc_team.png"
+                                                                    onclick="openModal('new_esc_team.png')" alt="New esc team"
+                                                                    width="100%" height="auto"></div>
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            <p> Select <b>Escalation Teams</b> and <b> Escalation Teams
+                                                                    Members</b>.</p>
+                                                            <div><img
+                                                                    src="add_esc_team.png"
+                                                                    onclick="openModal('add_esc_team.png')" alt="Escalation Teams"
+                                                                    width="100%" height="auto"></div>
+                                                        </li>
+
+                                                        <li>
+                                                            <p> Click the <b>Escalate</b> button.
+                                                            <div><img
+                                                                    src="esc_submit.png"
+                                                                    onclick="openModal('esc_submit.png')" alt="Escalate"
+                                                                    width="100%" height="auto"></div>
+                                                            </p>
+
+                                                        </li>
+                                                    </ol>
+                                            </div>
+                                            <div class="bg-light p-4 remove-padding common-scroll" id="review-tickets">
+                                                <ul class=page-list>
+                                                    <h2 id="_dashboards"><a class="header-icon-link highlight"
+                                                            href=#>Review Tickets
+                                                            <i class="fas fa-link"
+                                                                style="font-size:12px; color:lightgray;"></i></a>
+                                                    </h2>
+                                                    <p>
+                                                        Admin can enable the toggle switch for review ticket.
+                                                    </p>
+                                                    <div><img src="review_ticket.png"
+                                                            onclick="openModal('review_ticket.png')" alt="review ticket" width="100%"
+                                                            height="auto"></div>
+                                                    <br>
+                                                    <p>To review the tickets, follow the steps:</p>
+                                                    <ol>
+                                                        <li>
+                                                            <p>Go to home page and click the <b>Ticket ID</b> to open
+                                                                the comment page.
+                                                            <div><img
+                                                                    src="review_tick.png"
+                                                                    onclick="openModal('review_tick.png')" alt="Open comment page"
+                                                                    width="100%" height="auto"></div>
+                                                            </p>
+                                                        </li>
+
+    <li>                                                        
+                                                            <p> On comment page, click the <b>Review</b> button, this
+                                                                displays comment box to
+                                                                write the comments.</p>
+                                                            </li>
+
+                                                                <li>
+                                                                    <p> Select Teams Members with whom you want the share the
+                                                                        review.</p>
+                                                                </li>
+        
+                                                               
+                                                            <br>
+                                                            <div><img
+                                                                    src="review_btn.png"
+                                                                    onclick="openModal('review_btn.png')" alt="Review button"
+                                                                    width="100%" height="auto"></div>
+                                                        
+                                                        <br>
+                                                        
+
+                                                    </ol>
+
+                                            </div>
+                                            <div class="bg-light p-4 remove-padding common-scroll" id="sub-tickets">
+                                                <ul class=page-list>
+                                                    <h2 id="_dashboards"><a class="header-icon-link highlight"
+                                                            href=#>Sub Tickets
+                                                            <i class="fas fa-link"
+                                                                style="font-size:12px; color:lightgray;"></i></a>
+                                                    </h2>
+                                                    <p>
+                                                        A sub ticket could be created from a ticket. Sub tickets are disabled (on default setting
+), you can enable it by clicking  <b>Enable sub ticket</b>
+                                                        toggle switch. You
+                                                        can <b>Assign Sub Ticket</b> by checking the <b>Teams</b> and/or
+                                                        <b>Teams
+                                                            Members</b> check box and clicking on the <b>Save</b> button
+                                                        as shown below.
+
+                                                    </p>
+
+                                                    <div><img src="enable_sub_tic.png"
+                                                            onclick="openModal('enable_sub_tic.png')" alt="Enable sub ticket"
+                                                            width="100%" height="auto"></div>
+
+                                                    <p>
+                                                        The <b>Sub Ticket</b> option will be displayed on the comment
+                                                        page as shown below.
+                                                    </p>
+
+                                                    <div><img src="sub_ticket_icon.png"
+                                                            onclick="openModal('sub_ticket_icon.png')" alt="Sub ticket icon"
+                                                            width="100%" height="auto"></div>
+
+                                                    <p>
+                                                        To create sub tickets, follow the below steps:
+                                                    </p>
+                                                    <div class="notices note">
+                                                        <div class="paragraph">
+                                                            <p>You can create multiple sub tickets from a main ticket.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <ol>
+                                                        <li>
+                                                            <p>
+                                                                Go to the comment page, click the <b>Sub Ticket</b>
+                                                                option.
+                                                            </p>
+                                                        </li>
+
+                                                        <li>
+                                                            <p>
+                                                                Select <b>Yes</b> in a dialog box, this displays the
+                                                                <b>Sub Ticket</b> page.
+                                                            </p>
+
+                                                            <div><img
+                                                                    src="sub_ticket_yes.png"
+                                                                    onclick="openModal('sub_ticket_yes.png')" alt="Select yes"
+                                                                    width="100%" height="auto"></div>
+
+                                                        </li>
+
+                                                        <li>
+                                                            <p>
+                                                                Enter <b>Sub Ticket Title</b> and <b>Comments</b>.
+                                                            </p>
+
+                                                            <div><img
+                                                                    src="sub_ticket_dialog.png"
+                                                                    onclick="openModal('sub_ticket_dialog.png')" alt="Sub ticket title"
+                                                                    width="100%" height="auto"></div>
+
+                                                        </li>
+
+                                                        <li>
+                                                            <p>
+                                                                Sub ticket created and displayed on home page.
+                                                            </p>
+
+                                                            <!-- <div><img
+                                                                    src="sub_tick_home.png"
+                                                                    onclick="openModal('sub_tick_home.png')" alt="Ticket created"
+                                                                    width="100%" height="auto"></div> -->
+                                                           
+
+                                                        </li>
+                                                    </ol>
+
+
+
+
+                                            </div>
+
+                                            <div class="bg-light p-4 remove-padding common-scroll" id="">
+                                                <ul class=page-list>
+                                            <h2 id="_dashboards "><a class="header-icon-link highlight " href="">Requester
+                                                Details
+                                                <i class="fas fa-link " style="font-size:12px; color:lightgray; "></i></a>
+                                        </h2>
+                                        <ol type="1">
+
+                                            <li>
+                                                <p>
+                                                    Click on MS teams call and MS teams chat icon  to redirect the requester in the contact info panel of the comment page.
+                                                    <br>
+                                                <div><img src="callsandChat.png"
+                                                        onclick="openModal( 'callsandChat.png') " alt="call requester" width="100% "
+                                                        height="auto "></div>
+                                                </p>
+                                            </li><br>
+                                            <li>
+                                                <p>
+                                                    Admin can edit or change the ticket requester name on the comment page.
+                                                    <br>
+                                                <div><img src="edit_requester.png"
+                                                        onclick="openModal( 'edit_requester.png') " alt="Edit requester" width="100% "
+                                                        height="auto "></div>
+                                                </p>
+                                            </li><br>
+                                            <!-- <li>
+                                                <p>
+                                                    CC users auto pickup in the ticket properties panel.
+                                                    <br>
+                                                <div><img src="cc_save.png" onclick="openModal( 'cc_save.png') " alt="Auto pickup"
+                                                        width="100% " height="auto "></div>
+                                                </p>
+                                            </li> -->
+                                        </ol></ul></div>
+                                    </div>
+
+                              
+                                </ul>
+
+
+
+                        </div>
+                        </ul>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date ">
+
+                    <nav class="pagination mt-3 ">
+                        <a class="nav nav-prev " href="../reports/ " aria-label="Previous page "><i
+                                class="ti-arrow-left mr-2 "></i> <span class="d-none d-md-block ">Reports</span></a>
+                        <a class="nav nav-next " href="../settings/ " aria-label="Previous page "> <span
+                                class="d-none d-md-block ">Settings</span><i class="ti-arrow-right ml-2 "></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal " class="modal ">
+
+        <div class="modal-content ">
+            <span class="close_bt cursor_bt " onclick="closeModal() ">&times;</span>
+            <div class="mySlides ">
+                <img src=" " id="imageId " style="width:100% ">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4 ">
+        <div class=container>
+            <div class="row align-items-center ">
+                <div class="col-md-8 text-md-left text-center ">
+                    <p class="mb-md-0 mb-4 ">© 2025-<a href=https://www.hr365.us />HR365.</a><a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center ">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+</body>
+<script src="../../../../js/header-footer.js "></script>
+<script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js "></script>
+<script src="../../../../js/showhidefunction.js"></script>
+
+</html>

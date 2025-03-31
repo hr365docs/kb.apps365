@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Helpdesk 365 | Admin Guide | Settings | Role</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="The HR365 Helpdesk Admin Guide - Role Settings explains how administrators can manage roles and permissions for different users within the helpdesk system. This section provides instructions on assigning roles such as Administrator, Agent, and User, along with defining their specific access levels and privileges.">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../sharepoint-helpdesk/">Helpdesk 365</a></h5>
+                        <a class=back-btn href="../../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../../admin/">
+                                    Admin-Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>General Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Roles <i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>From here, admin can assign roles to users and teams.</p>
+
+                                <div><img src="user_role.png" onclick="openModal('user_role.png')" alt="User role"
+                                        width="100%" height="auto"></div>
+
+                                <br> Importance of Roles:
+                                <br><br>
+                                <b>Admin:</b>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Admin has full control.
+                                    </li>
+                                    <li>
+                                        Able to perform all settings.
+                                    </li>
+                                    <li>
+                                        Able to raise tickets on behalf of another person.
+                                    </li>
+                                    <li>
+                                        Generate reports of all teams.
+                                    </li>
+                                    <li>
+                                        View dashboard.
+                                    </li>
+                                    <li>
+                                        Able to assign the tickets of all teams.
+                                    </li>
+                                    <li>
+                                        View all the teams in side navigation.
+                                    </li>
+                                </ul>
+                                <br>
+                                <br>
+                                <b>Supervisor:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Able to raise tickets on behalf of another person.
+                                    </li>
+                                    <li>
+                                        Receives only raised tickets to their department.
+                                    </li>
+                                    <li>
+                                        Able to assign the tickets based on ticket scopes.
+                                    </li>
+                                    <li>
+                                        Generate reports of their teams.
+                                    </li>
+                                    <li>
+                                        View dashboard.
+                                    </li>
+                                    <li>
+                                        View only those teams inside navigation, if they are supervisors the assigned
+                                        teams (teams specific).
+                                    </li>
+                                </ul>
+                                <br><br>
+                                <b>Agents:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Able to raise tickets on behalf of another person.
+                                    </li>
+                                    <li>
+                                        They would be able to change the status of their assigned tickets and would be
+                                        able to re-assign to others.
+                                    </li>
+                                    <li>
+                                        Able to assign the tickets based on ticket scopes.
+                                    </li>
+                                </ul> <br> <br>
+                                <b>User</b>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Users have the ability to raise a ticket and view tickets requested by them.
+                                    </li>
+                                </ul>
+                                <b>Power Users</b>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Power users have the privilege to view tickets created by themselves and those
+                                        that are unassigned.
+                                    </li>
+                                </ul>
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Based on custom settings, the admin, supervisor, and agents can delete the
+                                            tickets.</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="users">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Roles and scopes
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Admin can assign roles to O365 users with ticket scope as per requirement in the
+                                    Helpdesk application. You can select both supervisor and agents for multiple teams,
+                                    however, ticket scope will remain the same along with roles.
+                                </p>
+
+
+
+                                <b>Different types of tickets scope</b>
+                                <br><br>
+                                <b>Global access:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets in the Helpdesk.
+                                    </li>
+                                    <li>
+                                        Can assign tickets for all teams.
+                                    </li>
+                                    <li>
+                                        Can edit or update a ticket of all teams from the comment page only.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Team access I:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets in the Helpdesk.
+                                    </li>
+                                    <li>
+                                        Can assign tickets for all teams.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Team access II:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets.
+                                    </li>
+                                    <li>
+                                        Can assign tickets for their teams.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Restricted access:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can only view their team's assigned tickets.
+                                    </li>
+                                    <li>
+                                        Team tickets detailed view will not be available.
+                                    </li>
+                                    <li>
+                                        Can update only tickets assigned to him/her.
+                                    </li>
+                                </ul>
+
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="endUsers">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add/Edit Users
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                To add the users, follow the below steps:
+                                <br>
+                                <ol>
+                                    <li>
+                                        Click on <b>Configure</b>, this displays <b>Users</b> page.
+                                    </li> <br>
+                                    <div><img src="1.png" onclick="openModal('1.png')" alt="Add users" width="100%"
+                                            height="auto"></div> <br>
+                                    <li>
+                                        The <b>Active Users </b> tab displays all users who are currently active and
+                                        participating in the system. These users have access to all their assigned roles
+                                        and responsibilities.
+                                    </li> <br>
+                                    <div><img src="active.png" onclick="openModal('active.png')" alt="Add users"
+                                            width="100%" height="auto"></div> <br>
+
+                                    <li>
+                                        The <b>Inactive Users </b> tab shows users who have been deactivated or are no
+                                        longer actively using the system. These users do not have access until
+                                        reactivated.
+                                    </li> <br>
+                                    <div><img src="inactive.png" onclick="openModal('inactive.png')" alt="Add users"
+                                            width="100%" height="auto"></div> <br>
+                                    <li>
+                                        Click on <b>+Add</b> button, this displays <b>Add Users</b> page.
+                                    </li> <br>
+                                    <div><img src="2.png" onclick="openModal('2.png')" alt="Add users" width="100%"
+                                            height="auto"></div> <br>
+                                    <li>
+                                        Enter the <b>Users</b>, <b>Job Title</b>, add <b>Manager Email</b> and add
+                                        select the <b>Roles</b> and the <b>Ticket scope</b>.
+                                    </li>
+
+                                    <li>
+                                        Finally click the <b>Submit</b> button.
+                                    </li> <br>
+                                    <div><img src="3.png" onclick="openModal('3.png')" alt="Add users" width="100%"
+                                            height="auto"></div>
+                                </ol>
+                                <br>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="endUsers">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add/Edit End Users
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>Click on "Configure" to proceed further.</p> <br>
+
+                                <div><img src="toggleEndUser.png" onclick="openModal('toggleEndUser.png')"
+                                        alt="Add teams" width="100%" height="auto"></div> <br>
+                                <p>Click on <b>+ Add</b>button to display Add user Page.</p>
+
+                                <div><img src="AddeditEndUser.png" onclick="openModal('AddeditEndUser.png')"
+                                        alt="Add End User" width="100%" height="auto"></div>
+                                <br>
+                                <p> Enter the <b>Name</b>, <b>Email</b>, <b>organization </b>
+                                    , <b>Services</b>,<b>Sub Services</b>, <b>Start Date </b>and <b>End Date</b>.</p>
+                                <br>
+                                <p>Click on <b>Submit</b> Button.</p>
+                                <div><img src="AddEndUser.png" onclick="openModal('AddEndUser.png')" alt="Add End User"
+                                        width="100%" height="auto"></div>
+                                <p>You can modify and remove the user by clicking on these icons.</p> <br>
+                                <div><img src="4.png" onclick="openModal('4.png')" alt="Add users" width="100%"
+                                        height="auto"></div>
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="teams">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add/Edit Teams
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Admin can create multiple teams as per your requirement. Admin and supervisor can
+                                    view all the teams in the side navigation panel.
+                                </p>
+
+                                <p>
+                                    Admin can create teams from the settings. To create follow the below steps:
+                                </p>
+
+
+                                <ol>
+                                    <li>
+                                        Click on teams, this displays <b>Add/Edit Teams</b> page.
+                                    </li>
+
+                                    <li>
+                                        Click on <b>+New Team</b> button, this displays <b>New</b> page.
+                                    </li>
+                                    <br>
+                                    <div><img src="add_teams.png" onclick="openModal('add_teams.png')" alt="Add teams"
+                                            width="100%" height="auto"></div>
+                                    <br>
+
+
+                                    <li>
+                                        Enter the <b>Name</b>, give <b>Code</b>, add <b>Supervisor</b> and add the
+                                        <b>Team Members</b>.
+
+                                    </li>
+                                    <li>Multiple ticket mailboxes : Can add the department or team's email address to
+                                        teams and a ticket mailbox can be configured for it.</li>
+                                    <br>
+                                    <div><img src="fillTeamsReq.png" onclick="openModal('fillTeamsReq.png')"
+                                            alt="Add teams" width="100%" height="auto"></div>
+                                    <br>
+
+                                    <li>
+                                        Finally click the <b>Save</b> button.
+                                    </li><br>
+                                    <!-- <div><img src="side_nav_team.png" onclick="openModal('side_nav_team.png')" alt="Side nav team" width="100%" height="auto"></div>
+                                    <br> -->
+
+
+                                </ol>
+
+
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Escalation Teams
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+                                <p>
+                                    Admin can create multiple escalation teams as per your requirement. You can view
+                                    escalation teams on comment page.
+                                </p>
+                                <p>
+                                    Admin can create escalation teams from the settings. To create follow the below
+                                    steps:
+                                </p>
+
+                                <ol>
+                                    <li>
+                                        Click on teams, this displays <b>Add/Edit Teams</b> page.
+                                    </li>
+                                    <li>
+                                        Click on <b>+New Esc Team</b> button, this displays <b>New Esc Team</b> page.
+
+                                    </li>
+                                    <br>
+                                    <div><img src="team_esc.png" onclick="openModal('team_esc.png')" alt="Team esc"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <li>
+                                        Select the team from the dropdown, and select the check box to define the level
+                                        of SLA Escalation.
+                                        <div class="notices note">
+                                            <div class="paragraph">
+                                                <p>The code is predefined for SLA Escalation. For first-level, code is
+                                                    XX L1 And for Second-level, the code is XX L2.(XX is based on code
+                                                    added )
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        Enter the <b>Supervisor</b> and add the <b>Team Members</b>.
+                                    </li>
+                                    <br>
+                                    <div><img src="supervisor_team.png" onclick="openModal('supervisor_team.png')"
+                                            alt="Add supervisor" width="100%" height="auto"></div>
+                                    <br>
+
+                                    <li>
+                                        Finally click the <b>Save</b> button.
+                                    </li>
+
+                                </ol>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="service">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Services
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    Once you create teams, admin can add various services for individual department from
+                                    settings as shown in below.
+                                </p>
+
+                                <div><img src="add_service.png" onclick="openModal('add_service.png')" alt="Add service"
+                                        width="100%" height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="sub-service">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Sub Service
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    The administrator has the ability to add sub-services. <br>
+                                    Click on Configure to process Continue.
+
+                                </p>
+
+
+                                <div><img src="sub_service.png" onclick="openModal('sub_service.png')" alt="Sub service"
+                                        width="100%" height="auto"></div>
+                                <p>To create a sub-service, simply click on Configure.</p> <br>
+                                <div><img src="sub_service1.png" onclick="openModal('sub_service1.png')"
+                                        alt="Sub service" width="100%" height="auto"></div>
+                                <p>
+                                    Add sub-services as depicted in the image.</p> <br>
+                                <div><img src="sub_service2.png" onclick="openModal('sub_service2.png')"
+                                        alt="Sub service" width="100%" height="auto"></div>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="advance">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Advance Permissions
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    Various permissions could be provided to admin, supervisor, agent. It would allow
+                                    users to edit priority, request type and close ticket.
+                                </p>
+
+
+
+                                <div><img src="advance_permissions.png" onclick="openModal('advance_permissions.png')"
+                                        alt="Advace permissions" width="100%" height="auto"></div>
+                                <br>
+                                <p>Admins, Supervisors, and Agents can edit requester details based on their
+                                    permissions, while Users have limited or no access. This ensures controlled and
+                                    secure data management.</p>
+
+
+
+                                <div><img src="EditDetails.png" onclick="openModal('EditDetails.png')"
+                                        alt="Advace permissions" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="EditRequester.png" onclick="openModal('EditRequester.png')"
+                                        alt="Advace permissions" width="100%" height="auto"></div>
+                                <br>
+
+                                <!-- <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Validate Duplicate Tickets Through Email
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                                            </h2>
+                                                            <p>
+                                                                This setting will avoid duplicate ticket creation through email when any user replies to the first email or any thread which doesn't have the ticket number in the subject.
+                                                            </p>
+                                                            <div><img src="validate_prop.png" onclick="openModal('validate_prop.png')" alt="Validate prop" width="100%" height="auto"></div>
+                                                            <br>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Survey Link Validation
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    From here you can add the number of the days to the survey link expire.
+                                </p>
+                                <div><img src="survey_validate.png" onclick="openModal('survey_validate.png')" alt="Survey validate" width="100%" height="auto"></div>
+                                <br>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable Ticket Mailbox 
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    From here you can raise the tickets through mail with the help of power automate.
+                                </p>
+                                <div><img src="enable.png" onclick="openModal('enable.png')" alt="Enable" width="100%" height="auto"></div> -->
+                                <br>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable Agent to View
+                                        Own Private Notes
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    This toggle option allows agents to view their own private notes within a ticket.
+                                    When enabled (On), agents can access and review any private notes they have added to
+                                    a ticket. When disabled (Off), agents will not be able to view their private notes
+                                    after submission.
+                                </p>
+                                <div><img src="EnableAgent.png" onclick="openModal('EnableAgent.png')"
+                                        alt="ticket property" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    Inside the comment page, the user can view their private notes.
+                                </p>
+                                <div><img src="PrivateNotes.png" onclick="openModal('PrivateNotes.png')"
+                                        alt="ticket property" width="100%" height="auto"></div>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Properties
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Using ticket properties feature, it would be able to hide or show the ticket fields
+                                    in ticket form.
+                                </p>
+
+                                <div><img src="ticket_propeties.png" onclick="openModal('ticket_propeties.png')"
+                                        alt="Ticket properties" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="ticket_pro.png" onclick="openModal('ticket_pro.png')"
+                                        alt="ticket property" width="100%" height="auto"></div>
+
+
+
+                        </div>
+                        </ul>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">Ticket Customization</span></a>
+                        <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/settings/integration/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Integrations</span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+
+</body>
+<script src="../../../../../js/header-footer.js"></script>
+<script src="../../hdm-admin-aside-js/hdm-admin-aside.js"></script>
+<script src="../../../../../js/showhidefunction.js"></script>
+
+</html>

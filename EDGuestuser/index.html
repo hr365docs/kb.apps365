@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Guest user</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Guest users">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+           <!-- Google Tag Manager -->
+           <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+                <!-- Google Tag Manager (noscript) -->
+                <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+
+            </div>
+            <div class="mar-0px-auto d-lg-flex blog_docs" style="margin: 0px auto">
+                <div class="p-lg-3 p-4 remove-padding bg-white" style="width: 100%" id=content>
+                    <!-- <h2 class=mb-5 id=title>Installation Guide</h2> -->
+                    <div class="bg-light p-4 remove-padding">
+                        <li data-nav-id=../Getting-started/installation/using-app-file title=Installation
+                            class="sidelist">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#"> How to Add Guest Users
+                                    in Microsoft 365 and Grant Access to the Application<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <h5 id="_dashboards"><a class="header-icon-link highlight" href="#"> Prerequisites <i
+                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                            <ol>
+                                <li>Global admin or user admin can add guest users. </li>
+                                <li>Global admin or SharePoint admin can execute the PowerShell script.</li>
+                            </ol>
+                            <br>
+                            <h5 id="_dashboards"><a class="header-icon-link highlight" href="#"> Step 1 - Add guest
+                                    users in Microsoft 365 <i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h5>
+                            <ol>
+                                <li>Please navigate to the "Invite external user" page in Azure by logging in with your
+                                    credentials via the following URL <a
+                                        href="https://portal.azure.com/#view/Microsoft_AAD_UsersAndTenants/InviteUser.ReactView"
+                                        style="color: blue;"> Invite external user - Microsoft Azure.</a>
+
+                                </li>
+                                <br>
+                                <div><img src="Screenshot_8.png" onclick="openModal( 'Screenshot_8.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <li>Enter the external user details. If you prefer not to send an invitation message,
+                                    you can uncheck the "send invite message" checkbox.</li>
+                                <br>
+                               
+                                <li>After entering the required details, please click the 'Invite' button to add users
+                                    to your Microsoft 365</li>
+                                <br>
+                                <div><img src="Screenshot_9.png" onclick="openModal( 'Screenshot_9.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                            </ol>
+                            <h5 id="_dashboards"><a class="header-icon-link highlight" href="#">Step2- Enable guest user
+                                    access for the SharePoint site <i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h5>
+                            <ol>
+                                <li>Navigate to the SharePoint admin center, activate sites, and select the site where
+                                    the application is installed (e.g., HR365 App site).</li>
+                                <br>
+                                <div><img src="Screenshot_12.png" onclick="openModal( 'Screenshot_12.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <li>Afterward, navigate to the settings and choose 'New and existing guest' from the
+                                    dropdown menu, then save the changes</li>
+                                <br>
+                                <div><img src="Screenshot_13.png" onclick="openModal( 'Screenshot_13.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <li>Clicking on the site name will open the site. Grant site member permission to guest
+                                    users by entering their email addresses.</li>
+                                <br>
+                                <div><img src="Screenshot_22.png" onclick="openModal( 'Screenshot_22.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <br>
+                                <div><img src="Screenshot_23.png" onclick="openModal( 'Screenshot_23.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+
+                            </ol>
+                            <h5 id="_dashboards"><a class="header-icon-link highlight" href="#">Step3: Providing appcatalog site access:<i
+                                    class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                    <ol>
+                                        <li>Go to the SharePoint admin center.</li> <br>
+                                        <li>
+                                            Search for "appcatalog" and navigate to the website.</li> <br>
+                                            <div><img src="01.png" onclick="openModal( '01.png') " alt="Helpdesk" width="100% "
+                                                height="auto "></div><br>
+                                            <li>Click "Settings" followed by "Site settings."</li> <br>
+                                            <div><img src="02.png" onclick="openModal( '02.png') " alt="Helpdesk" width="100% "
+                                                height="auto "></div><br>
+                                            <li>Select "Site permissions."</li> <br>
+                                            <div><img src="03.png" onclick="openModal( '03.png') " alt="Helpdesk" width="100% "
+                                                height="auto "></div><br>
+                                            <li>Provide permissions to the external user by entering their email.</li>
+                                            <br>  <div><img src="04.png" onclick="openModal( '04.png') " alt="Helpdesk" width="100% "
+                                                height="auto "></div><br>
+                                            
+                                            <li>Make sure to grant read access to the user.</li>
+                                    </ol>
+                            <h5 id="_dashboards"><a class="header-icon-link highlight" href="#">Step4- Execute the
+                                    PowerShell script to enable external users to operate within HR365 applications<i
+                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                            <ol>
+                                <li>Open the SharePoint Online Management Shell by running it as an administrator. If
+                                    you don't have it, download it from the following link <a
+                                        href="https://www.microsoft.com/en-in/download/details.aspx?id=35588"
+                                        style="color: blue;">Download SharePoint Online Management Shell from Official
+                                        Microsoft Download Center</a></li>
+                                <br>
+                                <div><img src="Screenshot_14.png" onclick="openModal( 'Screenshot_14.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                              
+                                <p><b>For example</b>, if your tenant's name is 'Bright' and your email address is
+                                    john_Taylor@bright.onmicrosoft.com, the line should be <br>
+                                    Connect-SPOService https://Bright-admin.sharepoint.com/ -credential
+                                    john_Taylor@bright.onmicrosoft.com
+                                </p><br>
+                                <p><b>The  script:
+                                    </b><br>
+                                    Install-Module -Name Microsoft.Online.SharePoint.PowerShell -RequiredVersion
+                                    16.0.8029.0 
+                                    <br>
+                                    Connect-SPOService https://Bright-admin.sharepoint.com/ -credential
+                                    john_Taylor@bright.onmicrosoft.com<br>
+                                    Set-SPOTenant -ShowAllUsersClaim $true
+                                </p>
+                                <li>Copy and paste the script into PowerShell, press Enter, and a credential box will
+                                    pop up. Enter your password and click 'OK.'</li>
+                                    <br>
+                                   <b> Note</b>: Please make sure to disable MFA before running the PowerShell command.
+
+                                <br>
+                                <div><img src="Screenshot_20.png" onclick="openModal( 'Screenshot_20.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <br>
+                                <div><img src="Screenshot_21.png" onclick="openModal( 'Screenshot_21.png') " alt="Helpdesk" width="100% "
+                                        height="auto "></div><br>
+                                <p>
+                                    After running the script, it takes 4 to 8 hours to set up. Afterward, you can share
+                                    the application URL with guest users, allowing them to access the application.
+                                    Run the script only once.
+
+                                </p>
+                                <br>
+                                <p>First, the user should go to <b>portal.azure.com</b>, then on the homepage, type External Identities in the search box and search for it.</p>
+                                <div><img src="External.png" onclick="openModal( 'image.png') " alt="Helpdesk" width="100% "
+                                    height="auto "></div><br>
+                                    <p>Next, navigate to <b>External Collaboration Settings</b>. Under <b>Guest User Access</b>, select the first option and click <b>Save</b>.</p>
+                                <div><img src="Collaboration.png" onclick="openModal( 'Collaboration.png') " alt="Helpdesk" width="100% "
+                                    height="auto "></div><br>
+                            </ol>
+                        </li>
+
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2" href=https://www.facebook.com/hr365apps/
+                                aria-label=Facebook><i class=ti-facebook></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2" href=https://twitter.com/HR365_HRMS
+                                aria-label=Twitter><i class=ti-twitter-alt></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2"
+                                href=https://www.linkedin.com/company/cubic-logics-india-pvt-ltd aria-label=Linkedin><i
+                                    class=ti-linkedin></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.min.js"></script>
+    <script src="../js/header-footer.js"></script>
+    <script>
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+
+
+
+    </script>
+    <!-- <script src="../sharepoint-employee-directory/js/blog.js"></script> -->
+
+</body>
+
+</html>

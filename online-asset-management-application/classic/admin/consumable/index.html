@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Asset Management Classic | Admin | Consumable</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Asset Management">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+         :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+           <!-- Google Tag Manager -->
+           <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+                <!-- Google Tag Manager (noscript) -->
+                <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img src='../../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                     <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+          <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../online-asset-management-application/">Asset Management Classic</a></h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title='Admin guide' class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="asidebar" class="sidenavbarscrollstyle">
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title>Add Asset</h2> -->
+                        <div class="bg-light p-4 remove-padding" id="consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file title="Consumable" class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=# >Consumable <i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+                                    <p>
+                                        Consumables (also known as consumable goods, non-durable goods, or soft goods) are goods that are intended to be consumed.
+                                        <br> Consumables are products that consumers use recurrently, i.e., items which "get used up" or discarded.
+                                    </p>
+
+                                    <p>
+                                        By default, the consumable feature is disabled, admin can enable it from <a href="../../../classic/admin/settings/#general-setting">General Settings</a>.  Once it is enabled, four consumable tabs will display on the home page as shown below. 
+                                        <div><img src="consumable_item.png" onclick="openModal('consumable_item.png')" alt="consumable feature" width="100%" height="auto"></div>
+
+                                    </p>
+                                    <br>
+                                    <p>If you want to rename the module title, you can do it from <a href="../../../classic/admin/settings/#general-setting">General Settings</a>.
+                                    </p>
+
+                                    <p>
+                                        The first tab is used to add consumable items in bulk. Refer to <a href="../consumable/#bulk-consumable">Bulk Consumable</a>.
+                                    </p>
+                                    <p>
+                                        The second tab is used to add consumable items in bulk. Refer to <a href="../consumable/#add-consumable-item">Add Consumable</a>.
+                                    </p>
+                                    <p>
+                                        The third tab is used to place an order, and edit or delete consumable items in bulk. Refer to <a href="../consumable/#consumable-items"> Consumable Item</a>.
+
+                                    </p>
+                                    <p>
+                                        The fourth tab is used to request orders of consumable items. Refer to <a href="../consumable/#request-consumable">Request Consumable Item</a>.
+                                    </p>
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="add-consumable-item">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=# >Add Consumable Item<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p> From here you can able to add consumable item.
+                                        <div><img src="consumable_item.png" onclick="openModal('consumable_item.png')" alt="consumable item" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        To add the consumable item, follow the below steps:
+                                        <ol>
+                                            <li>
+                                                <p>Click on the <b>+Consumable Item</b>, this displays the <b>Consumable</b> page.</p>
+                                                <div><img src="consumablepanel.png" onclick="openModal('consumablepanel.png')" alt="consumable page" width="100%" height="auto"></div>
+                                        
+                                                <br>
+                                             </li>
+                                            <br>
+                                            <li>
+                                                Enter all the mandatory fields like <b>Product Id</b>, <b>SKU ID</b>, <b>Item Name</b>, <b>Status</b>, <b>Item Description</b>, <b>Category</b>, <b>Sub Category</b>, <b>Quantity</b> and <b>Total Price</b>.
+                                                You can add multiple rows for category and delete the row by clicking on the delete icon.
+
+
+                                            </li>
+
+                                            <li>
+                                                Finally, click on the <b>Save</b> button.
+                                            </li>
+
+                                            <li>
+                                                <p>
+                                                    The added consumable item will be displayed on the <b>Consumable Item</b> page.
+                                                </p>
+                                                <div><img src="displaybutton.png" onclick="openModal('displaybutton.png')" alt="Added consumable" width="100%" height="auto"></div>
+
+                                            </li>
+                                            <br>
+                                            <br>
+
+                                            <li>
+                                               
+                                                <p>Click on the <b>Export Barcode</b> button, You can generate the barcode from here and print the barcodes as shown in the below image.</p>
+                                                
+                                                <div><img src="exportbutton.png" onclick="openModal('exportbutton.png')" alt="Export button" width="100%" height="auto"></div>
+                                                <br>
+                                                <br>
+
+                                               
+                                            </li>
+
+                                            <li>
+                                               
+                                                <p>Click on the <b>Barcode</b>, You can see this barcode from here click on the Export button as shown in the below image.</p>
+                                        
+                                                <div><img src="onclickbarcode.png" onclick="openModal('onclickbarcode.png')" alt="On click barcode" width="100%" height="auto"></div>
+                                                <br>
+                                                <br>
+                                                <p>After clicking on the <b>Export</b> button, You can generate the barcode from here and print the barcodes as shown in the below image.</p>
+                                               
+                                               <div><img src="barcodeprint.png" onclick="openModal('barcodeprint.png')" alt="Barcode print" width="100%" height="auto"></div>
+                                            </li>
+
+                                        </ol>
+                                    </p>
+
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="bulk-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Bulk Consumable<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p>You can add 1000 consumables in one go using CSV file. Download the sample file and add data in the specified format.</p>
+                                    <div><img src="bulk_consumable.png" onclick="openModal('bulk_consumable.png')" alt="Bulk consumable" width="100%" height="auto"></div>
+                                    <br>
+
+
+                                    <p>Follow the below instructions before adding bulk consumable items:</p>
+
+                                    <ol>
+                                        <li>Add product ID in the specified column and is mandatory.</li>
+                                        <li>Remove separators from the cost / value.</li>
+                                        <li>Use date format should be MM/DD/YYYY, this is uploading the data, while displaying it will follow as per your choice in settings.</li>
+                                        <li>Please do not change the order of the columns or add new columns, this may lead into feeding values in incorrect columns.</li>
+                                        <li>Mandatory fields like Asset Name, Asset Id, Asset Type and Category should not be empty.</li>
+
+                                        <li>Please do not change order of the columns or add new columns, this may lead into feeding values in incorrect columns.</li>
+                                        <li>Barcode should not be more than 8 digits.</li>
+                                    </ol>
+                                    <br>
+                                    <p>To add the bulk consumable follow the below steps:
+                                        <ol>
+                                            <li>
+                                                Click on the <b>+Bulk Consumable</b> tab, this displays <b>Add Multiple Consumable Items</b>.
+                                            </li>
+                                            <li>
+                                                Choose the data loaded CSV file from the system and upload the file.
+                                            </li>
+                                            <li>
+                                                Finally click on <b>Save</b> button.
+                                            </li>
+                                        </ol>
+                                    </p>
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="consumable-items">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Consumable Item<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p> From here you can able to edit, delete, and place order of the consumable item.
+                                        <div><img src="consumable_item_.png" onclick="openModal('consumable_item_.png')" alt="Consumable item" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        To place an order of a consumable item, follow the below steps:
+                                        <ol>
+                                            <li>
+                                                <p>Click on the link of <b>SKU ID</b>, this displays a popup.</p>
+                                                <div><img src="link.png" onclick="openModal('link.png')" alt="Link" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>Select the category, sub category and pickup/ship. </p>
+                                                <div><img src="pickup.png" onclick="openModal('pickup.png')" alt="Pickup" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p> Finally, click on the <b>Place Order</b> button.</p>
+                                                <div><img src="placeorder.png" onclick="openModal('placeorder.png')" alt="Place order" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    The added consumable item will be displayed on the <b>Approve/Reject Consumable</b> page.
+                                                </p>
+                                                <div><img src="approve.png" onclick="openModal('approve.png')" alt="Approve" width="100%" height="auto"></div>
+
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <b>Edit:</b> You can edit the details of consumable item by clicking on edit icon under <b>Action</b>. Update the fileds and click on <b>Update</b> button.
+                                        <div><img src="../assets/update__.png" onclick="openModal('update__.png')" alt="Update" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        <b>Delete:</b> You can delete the details of consumable item by clicking on delete icon under <b>Action</b>.
+                                    </p>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="request-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=# >Request Consumable<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p> From here you can able to place an order for the consumable item.
+                                        <div><img src="request.png" onclick="openModal('request.png')" alt="Request consumable" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        To request consumables, follow the below steps:
+                                        <ol>
+                                            <li>
+                                                <p>Click on the <b>Request</b> under <b>Action</b>, this displays the place order popup.</p>
+                                                <div><img src="request_con.png" onclick="openModal('request_con.png')" alt="Request consumables" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>Select the category, sub category and pickup/ship. </p>
+
+                                            </li>
+
+                                            <li>
+                                                <p> Finally, click on the <b>Place Order</b> button.</p>
+                                                <div><img src="place_order.png" onclick="openModal('place_order.png')" alt="Place order" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    The added consumable item will be displayed on the <b>Approve/Reject Consumable</b> page.
+                                                </p>
+                                                <div><img src="approve.png" onclick="openModal('approve.png')" alt="Approve" width="100%" height="auto"></div>
+
+                                            </li>
+                                        </ol>
+                                    </p>
+
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="approve-reject-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file  class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=# >Approve/Reject Consumable<i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p>
+                                        By default, Approve/Reject Asset feature is not enabled, admin can enable it from <b>Users</b> from side panel under settings.
+                                        <div><img src="user.png" onclick="openModal('user.png')" alt="User" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p> From here you can able to Aprrove/Reject asset. Select the checkbox under <b>Action</b> for booked asset and select <b>Approve</b> or <b>Reject</b> button.
+                                        <div><img src="approve.png" onclick="openModal('approve.png')" alt="Approve action" width="100%" height="auto"></div>
+                                        <br>
+                                        <div><img src="reject.png" onclick="openModal('reject.png')" alt="Reject action" width="100%" height="auto"></div>
+                                    </p>
+
+
+
+
+
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                            <nav class="pagination mt-3">
+                                <a class="nav nav-prev" href="../assets/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                    class="d-none d-md-block">Assets</span></a>
+                                <a class="nav nav-next" href="../software/" aria-label="Previous page">
+                                    <span class="d-none d-md-block">Software</span><i class="ti-arrow-right ml-2"></i></a>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy
+                        />Privacy Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                    
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../aside-assets/aside-assets.js"></script>
+</body>
+
+</html>

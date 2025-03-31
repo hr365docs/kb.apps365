@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Asset Management 365 | Admin Guide | Settings | Views</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Learn how to configure and manage views within Asset Management 365 to customize your asset management experience.">
+
+
+    <!-- External Styles and Scripts -->
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager for tracking -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../online-asset-management-application/">Asset Management 365</a>
+                        </h5>
+                        <a class=back-btn href="../../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="asset-asidebar" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>General Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Views
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <p>
+                                    From here, you can change the theme, column views, brand logo.
+                                </p>
+
+                                <div><img src="view.png" onclick="openModal('view.png')" alt="Views" width="100%"
+                                        height="auto"></div>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="theme">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                                        Theme
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    You can select color as per your requirement and click on Save button.
+                                </p>
+
+
+                                <div><img src="theme.png" onclick="openModal('theme')" alt="Theme" width="100%"
+                                        height="auto"></div>
+
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="projects-while-assigning-assets">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Projects While
+                                        Assigning Assets
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    If this is enabled, project option would display while assigning assets in pop,
+                                    assets could be assigned to the users along with project.
+                                </p>
+                                <div><img src="show_projects.png" onclick="openModal('show_projects.png')"
+                                        alt="show projects" width="100%" height="auto"></div>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Hide-Asset-ID-Prefix">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide Asset ID Prefix
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>We Can Hide the prefix of Asset.</p>
+                                <div><img src="hide.png" onclick="openModal('hide.png')" alt="show projects"
+                                        width="100%" height="auto"></div>
+                            </ul>
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Language">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    This feature allows users to designate their preferred language for web content by
+                                    setting it as the default language within their browser settings.
+                                </p>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language Selection as
+                                        Browser Default Language
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <div><img src="10.png" onclick="openModal('10.png')" alt="show projects" width="100%"
+                                        height="auto"></div>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language Selection in
+                                        Case Browser Default Language is Not Detected
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <div><img src="11.png" onclick="openModal('11.png')" alt="show projects" width="100%"
+                                        height="auto"></div>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll"
+                            id="assign-assets-and-return-assets-options">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Assign Assets and
+                                        Return Assets Options
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    You can hide assigned and return assets in navigation panel just by disabling it.
+                                </p>
+                                <div><img src="show_assign_assets.png" onclick="openModal('show_assign_assets.png')"
+                                        alt="show assign asset" width="100%" height="auto"></div>
+                                <br>
+
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Sample">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Show Sample Data in Dashboard
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>This Toggle Enable to Show Sample Data in Dashboard. </p>
+                                <div><img src="18.png" onclick="openModal('18.png')"
+                                    alt="show assign asset" width="100%" height="auto"></div>
+
+
+                        </div>
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="column-views">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Column Views
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Columns could be added or arranged in the table of order from Home, Assign Assets,
+                                    Return Assets, Add Assets and Asset Reports.
+                                </p>
+                                <div><img src="column_view.png" onclick="openModal('column_view.png')" alt="column view"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <ol>
+                                    <li>Displaying Column to the Table - select the check boxes of fields based on your
+                                        requirement and click on save icon as shown in the below image.</li><br>
+                                    <div><img src="select_checkbox.png" onclick="openModal('select_checkbox.png')"
+                                            alt="select checkbox" width="100%" height="auto"></div>
+                                    <br>
+                                    <li>Arrangement of Column Orders - Drag the single field and drop it to arrange the
+                                        order of columns as per your requirement, do the same for other fields and
+                                        finally click on save icon as shown below.</li><br>
+                                    <div><img src="order.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can easily add assets by simply selecting the checkboxes
+                                        next to each asset. </li><br>
+                                    <div><img src="01.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can easily Assign assets by simply selecting the
+                                        checkboxes next to each asset. </li><br>
+                                    <div><img src="02.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can Reports the Assets by simply selecting the checkboxes
+                                        next to each asset. </li><br>
+                                    <div><img src="04.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can Add Software by simply selecting the checkboxes next
+                                        to each Software. </li><br>
+                                    <div><img src="05.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can Add Software by simply selecting the checkboxes next
+                                        to each Software. </li><br>
+                                    <div><img src="06.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can Report Inventory items by simply selecting the
+                                        checkboxes next to each Inventory. </li><br>
+                                    <div><img src="07.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+                                    <li>"In this section, you can Add Inventory items by simply selecting the checkboxes
+                                        next to each Inventory. </li><br>
+                                    <div><img src="08.png" onclick="openModal('order.png')" alt="order" width="100%"
+                                            height="auto"></div>
+                                    <br>
+
+                                </ol>
+
+
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Sharepoint-Page-Views">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Sharepoint Page Views
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>Select Configure to continue processing.</p>
+                                <div><img src="12.png" onclick="openModal('12.png')" alt="column view" width="100%"
+                                        height="auto"></div>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide Side Navigation
+                                        Panel
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h2>
+                                <p>Hide Side Navigation Panel In Sharepoint Page Where App Is Running</p>
+                                <div><img src="13.png" onclick="openModal('13.png')" alt="column view" width="100%"
+                                        height="auto"></div>
+                                        <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide Top Command Bar
+                                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                        </h2>
+                                    <p>Hide Top Command Bar In Sharepoint Page Where App Is Running</p>
+                                    <div><img src="13.png" onclick="openModal('13.png')" alt="column view" width="100%"
+                                            height="auto"></div>
+    
+
+                                            
+                                            
+                                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide Top Site Header
+
+
+                                                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                            </h2>
+                                        <p>Hide Top Site Header In Sharepoint Page Where App Is Running</p>
+                                        <div><img src="14.png" onclick="openModal('14.png')" alt="column view" width="100%"
+                                                height="auto"></div>
+
+
+                                                
+                                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide Comments Wrapper
+
+
+                                                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                            </h2>
+                                        <p>Hide Comments Wrapper In Sharepoint Page Where App Is Running</p>
+                                        <div><img src="15.png" onclick="openModal('15.png')" alt="column view" width="100%"
+                                                height="auto"></div>
+
+
+                                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Hide WebPart Title
+
+
+
+
+                                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                                </h2>
+                                            <p>Hide WebPart Title In Sharepoint Page Where App Is Running</p>
+                                            <div><img src="16.png" onclick="openModal('16.png')" alt="column view" width="100%"
+                                                    height="auto"></div>
+
+                                                    
+                                                    <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Remove Custom Webpart CSS
+
+
+                                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                                    </h2>
+                                                <p>Activating this toggle option within the settings will result in the automatic removal of empty space surrounding the designated webpart.</p>
+                                                <div><img src="17.png" onclick="openModal('17.png')" alt="column view" width="100%"
+                                                        height="auto"></div>
+        
+
+                        </div>
+
+
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="dashboard-views">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Dashboard Views
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    Here you can display or hide fields of the dashboard for rows. Click on Dashboard
+                                    views under views Settings from side panel dashboard settings page would open.
+                                </p>
+                                <div><img src="dashboard_views.png" onclick="openModal('dashboard_views.png')"
+                                        alt="dashboard views" width="100%" height="auto"></div><br>
+                                <p>Select the checkboxes of fields that should display in the row of the dashboard and
+                                    uncheck which are not required and click on save icon as shown below.</p>
+                                <div><img src="dashboard_setting.png" onclick="openModal('dashboard_setting.png')"
+                                        alt="dashboard setting" width="100%" height="auto"></div><br>
+
+                        </div>
+
+                        <div class="bg-light p-4 remove-padding common-scroll" id="brand-logo">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Brand Logo
+
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+
+                                <p>
+                                    You can upload logo by clicking on Upload logo. You can crop the logo and finally
+                                    click on Save Logo button.
+                                </p>
+
+                                <div><img src="brand_logo.png" onclick="openModal('brand_logo.png')" alt="brand logo"
+                                        width="100%" height="auto"></div><br><br>
+
+                                <p>
+                                    From here, you can remove the Logo.
+                                </p>
+
+                                <div><img src="09.png" onclick="openModal('brand_logo.png')" alt="brand logo"
+                                        width="100%" height="auto"></div>
+
+                        </div>
+
+                        </ul>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev"
+                            href="/online-asset-management-application/modern/admin/settings/general/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">General</span></a>
+                        <a class="nav nav-next" href="/online-asset-management-application/modern/admin/settings/role/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Users Roles Permissions</span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2"  aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+
+</body>
+<script src="../../../../../js/header-footer.js"></script>
+<script src="../../aside-assets/aside-assets.js"></script>
+<script src="../../../../../js/showhidefunction.js"></script>
+
+</html>

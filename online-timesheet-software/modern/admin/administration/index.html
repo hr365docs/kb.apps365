@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Timesheet365 | Admin Guide | Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Asset Management for Timesheet 365">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+
+    <!-- External Scripts -->
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../online-timesheet-software/">Timesheet365</a></h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title='Admin Guide' class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>Administration</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Administration<i
+                                        class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <p>Under the administration, there are three or four options namely clients, projects,
+                                tasks, and activities (optional). </p>
+
+                            <ul class=page-list>
+                                <li data-nav-id="./Reports/ " title=Reports class="sidelist active">
+
+
+                                    <ul>
+                                        <li data-nav-id="./User/ " title="Clients" class="sidelist"><a
+                                                href="../administration/#clients">Clients</a></li>
+
+                                        <li data-nav-id="./Email-Notification/ " title="Projects" class="sidelist"><a
+                                                href="../administration/#projects">
+                                                Projects </a>
+                                        </li>
+                                        <li data-nav-id="./Custom-Emails/ " title="Tasks" class="sidelist"><a
+                                                href="../administration/#tasks">Tasks</a></li>
+                                        <li data-nav-id="./Custom-Emails/ " title="Activities" class="sidelist"><a
+                                                href="../administration/#activities">Activities</a></li>
+                                        <li data-nav-id="./Custom-Emails/ " title="Approval Workflow" class="sidelist">
+                                            <a href="../administration/#approvalworkflow">Approval Workflow</a>
+                                        </li>
+                                        <!-- <li data-nav-id="./Column-Setting/ " title="Activities" class="sidelist"><a href="../administration/#activities">Activities</a></li> -->
+                                    </ul>
+
+                            </ul>
+                            </li>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Clients">
+
+                            <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>Clients<i
+                                        class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <br>
+                            <ul class=page-list>
+
+
+
+                                <ul>
+                                    <li>
+
+
+                                        <p>Admin can add client’s information over here. You can add the information
+                                            through the add button. Use the Add Bulk option to add multiple clients’
+                                            information through the download sample file.</p>
+
+
+                                        <div><img src="clients.png" onclick="openModal( 'clients.png') " alt="clients"
+                                                width="100% " height="auto"></div><br>
+                                        <p>You can edit, delete and disable the client information through the edit
+                                            icon, delete icon, and achieve icon respectively located on the right side
+                                            in the action column.</p>
+                                        <p>To delete multiple items, select your desired item and click on the bulk
+                                            delete tab.</p>
+                                        <div><img src="addClient.png " onclick="openModal( 'addClient.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>In the Client section, you first need to click on the <b>Add Client</b>
+                                            button. After that, you need to fill in the General Details, as shown below.
+                                        </p>
+                                        <div><img src="C.png" onclick="openModal( 'C.png') " alt="Add custom"
+                                                width="100% " height="auto"></div>
+                                        <br>
+                                        <p>After filling in the details, you will need to click on the <b>Save and
+                                                Continue</b> button.</p>
+                                        <div><img src="SaveClient.png" onclick="openModal( 'SaveClient.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>After that, you will need to fill in the details in the fields under the
+                                            <b>Contact</b> section and then click on the <b>Save and Continue</b>
+                                            button.
+                                        </p>
+                                        <div><img src="Contact.png" onclick="openModal( 'Contact.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>Finally, there is a Document section where you have the option to add
+                                            attachments and download them. You can also view the name of the attached
+                                            file. After completing everything, you can click on the Add Client button,
+                                            and your client will be displayed.</p>
+                                        <div><img src="Document.png" onclick="openModal( 'Document.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>After clicking the Add Bulk button, a panel will open where you will find
+                                            options to add bulk attachments, upload files, and download files.
+
+                                            Instruction: You must follow the Bulk Add Client instructions; otherwise,
+                                            you won't be able to fill in the data.</p>
+                                        <div><img src="AddBulk.png" onclick="openModal( 'AddBulk.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>When updating a client’s data, you must ensure that the name, email, and some
+                                            other details remain the same. The Instruction rules must be followed during
+                                            the update process.</p>
+                                        <div><img src="UpdateBulk.png" onclick="openModal( 'UpdateBulk.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <br>
+                                        <p>If you don't have the same data, you won't be able to update, and an error
+                                            will be displayed:
+                                            <br>
+                                            <br>
+                                            <b>Status</b>: 0 of 1 records are updated.
+                                            <br>
+                                            <br>
+                                            <b>Message</b>: "Below records are not completed, Please check, validate,
+                                            and try to import again."
+
+                                            The issue will be mentioned under the <b>Status</b> section.
+                                        </p>
+                                        <div><img src="Updaterror.png" onclick="openModal( 'Updaterror.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>To delete multiple items, select your desired item and click on the bulk
+                                            delete tab.</p>
+                                        <div><img src="addClient.png " onclick="openModal( 'addClient.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+
+
+
+                                    </li>
+
+
+                                </ul>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Projects">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>Projects<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <ol>
+                                        <p>Admin can add or create projects and add team members over here. Can add a
+                                            project through the add button. Use the Bulk project option to add multiple
+                                            project information through the download sample file.</p>
+                                        <p>You can edit, delete and disable the client information through the edit
+                                            icon, delete icon, and achieve icon respectively located on the right side
+                                            in the action column. </p>
+                                        <p>In order to delete the multiple items. Select your desired items and click on
+                                            the bulk delete tab.</p>
+
+                                        <div><img src="projects.png " onclick="openModal( 'projects.png') "
+                                                alt="projects" width="100% " height="auto"></div>
+
+                                        <p>In the Project section, you will see the <b>Add Project</b> option. Click on
+                                            it, and as the data fields are displayed, fill them in accordingly.
+                                        </p>
+
+
+
+                                        <p>First, you will need to fill in the data in the General section, such as
+                                            <b>Client Name</b>, <b>Project Name</b>, <b>Project Start Date</b>, and End
+                                            Date. You can also provide attachments if needed.
+                                        </p>
+                                        <div><img src="ProjectAdd.png" onclick="openModal( 'ProjectAdd.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>
+                                            In the Project People section, you will need to fill in details such as
+                                            Project Manager, Project Observers, Approvers, and Project Team Members. To
+                                            add members, click on the Add Member button.
+                                        </p>
+                                        <div><img src="People.png" onclick="openModal( 'People.png') " alt="Add custom"
+                                                width="100% " height="auto"></div>
+                                        <br>
+                                        <p>In the Task section, you can add tasks as needed.
+                                        </p>
+                                        <div><img src="Task.png" onclick="openModal( 'Task.png') " alt="Add custom"
+                                                width="100% " height="auto"></div>
+                                        <br>
+                                        <p>In the Project Bulk section, you will find the option to Bulk Add projects.
+                                            You can add projects by following the Instruction rules provided.
+                                        </p>
+                                        <div><img src="ProjectBukl.png" onclick="openModal( 'ProjectBukl.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>You also have the option to Update Bulk Data. By following the Instruction
+                                            rules, you can update the data. Additionally, you can download the data as
+                                            well.
+                                        </p>
+                                        <div><img src="UpdateBulkProject.png"
+                                                onclick="openModal( 'UpdateBulkProject.png') " alt="Add custom"
+                                                width="100% " height="auto"></div>
+                                        <br>
+                                        <br>
+                                        <p>If you don't have the same data, you won't be able to update, and an error
+                                            will be displayed:
+                                            <br>
+                                            <br>
+                                            <b>Status</b>: 0 of 1 records are updated.
+                                            <br>
+                                            <br>
+                                            <b>Message</b>: "Below records are not completed, Please check, validate,
+                                            and try to import again."
+
+                                            The issue will be mentioned under the <b>Status</b> section.
+                                        </p>
+                                        <div><img src="UpdateProjectError.png"
+                                                onclick="openModal( 'UpdateProjectError.png') " alt="Add custom"
+                                                width="100% " height="auto"></div>
+                                        <br>
+
+                                        <!-- <p>You also have the option to Update Bulk Data. By following the Instruction
+                                            rules, you can update the data. Additionally, you can download the data as
+                                            well.
+                                        </p>
+                                        <div><img src="UpdateBulkProject.png"
+                                                onclick="openModal( 'UpdateBulkProject.png') " alt="Add custom"
+                                                width="100% " height="auto"></div> -->
+
+
+                                    </ol>
+                            </li>
+                            </ol>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Tasks<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a></h3>
+                                <ul class=page-list>
+                                    <p> Over here, the admin, program manager, and project manager can add tasks for the
+                                        projects and assign them to the users. Use <b>Add</b> button to add a single
+                                        task and use <b>Add Bulk</b> button to add multiple tasks. Can add global tasks
+                                        through the global tasks button.</p>
+                                    <div class="notices note">
+                                        <div class="paragraph">
+                                            <p>Global tasks are available to all the users and can use to track the
+                                                hours in the weekly timesheet.</p>
+                                        </div>
+                                    </div>
+                                    <p>In case the task is closed, such tasks are not available to track the time in the
+                                        weekly timesheet. To reopen the task, select the task and click on <b>Reopen</b>
+                                        button.</p>
+                                    <div><img src="tasks.png " onclick="openModal( 'tasks.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p>
+                                        In the <b>Task</b> section, you will see an <b>Add Task</b> option. Click on
+                                        it and fill in the details as prompted step by step.
+                                    </p>
+                                    <div><img src="AddTask.png" onclick="openModal( 'AddTask.png') " alt="Add custom"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p>
+                                        Then, you can click on the <b>Save and More</b> button to save the task.
+                                    </p>
+                                    <div><img src="SaveAndMore.png" onclick="openModal( 'SaveAndMore.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>
+                                        In the <b>Task Bulk</b> section, you will find the option to Bulk Add tasks.
+                                        Follow
+                                        the Instruction rules to add tasks successfully.
+                                    </p>
+                                    <div><img src="BulkAddTask.png" onclick="openModal( 'BulkAddTask.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>You also have the option to Update Bulk Data. By following the Instruction
+                                        rules, you can update the data. Additionally, you can download the data as
+                                        well.
+                                    </p>
+                                    <div><img src="UpdateTaskBulk.png" onclick="openModal( 'UpdateTaskBulk.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>If you don't have the same data, you won't be able to update, and an error
+                                        will be displayed:
+                                        <br>
+                                        <br>
+                                        <b>Status</b>: 0 of 1 records are updated.
+                                        <br>
+                                        <br>
+                                        <b>Message</b>: "Below records are not completed, Please check, validate,
+                                        and try to import again."
+
+                                        The issue will be mentioned under the <b>Status</b> section.
+                                    </p>
+                                    <div><img src="TaskUpadateError.png" onclick="openModal( 'TaskUpadateError.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>
+
+                                        In the Task section, there is another subsection called Global Task, where you
+                                        can add any global tasks.
+                                    </p>
+                                    <div><img src="GlobalTask.png" onclick="openModal( 'GlobalTask.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>
+                                        You can also add global tasks in bulk using the Add Bulk Task option. However,
+                                        you need to follow the instruction rules. There is a Download button provided,
+                                        allowing you to download the file.
+                                    </p>
+                                    <div><img src="GlobalBulkTask.png" onclick="openModal( 'GlobalBulkTask.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+                                    <p>A new option, <b>Billable</b>, has been added to the Global Task Table.</p>
+                                    <div><img src="Billable.png" onclick="openModal( 'TaskUpadateError.png') "
+                                            alt="Add custom" width="100% " height="auto"></div>
+                                    <br>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Activities<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <ul class=page-list>
+                                    <p>We can view all activities except for task-specific activities and
+                                        project-specific activities.</p>
+                                    <div><img src="global.png" onclick="openModal( 'global.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p><b>Global Activity Add:</b> This allows users to add individual global activities
+                                        that
+                                        are applicable across multiple projects or departments. It helps in creating and
+                                        managing activities that are not limited to a specific task or project.</p>
+                                    <div><img src="globalC.png" onclick="openModal( 'globalC.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p><b>Global Activity Bulk Add:</b> This feature enables the bulk addition of
+                                        multiple
+                                        global activities at once, streamlining the process when dealing with a large
+                                        number of global activities that need to be applied across various projects or
+                                        tasks.</p>
+                                    <div><img src="bulkGlobal.png" onclick="openModal( 'bulkGlobal.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p>We can view all activities except for global activities and task-specific
+                                        activities.</p>
+                                    <div><img src="projectspecific.png" onclick="openModal( 'projectspecific.png') "
+                                            alt="tasks" width="100% " height="auto"></div>
+                                    <br>
+                                    <p><b>Project Activities Add:</b> This function lets users add specific activities
+                                        that are
+                                        directly related to a particular project. It allows for precise tracking and
+                                        management of activities within the project scope.</p>
+                                    <div><img src="projectActivityAdd.png"
+                                            onclick="openModal( 'projectActivityAdd.png') " alt="tasks" width="100% "
+                                            height="auto"></div>
+                                    <br>
+                                    <p><b>Project Activities Bulk Add:</b> This feature allows users to add multiple
+                                        project-specific activities in bulk, improving efficiency when handling numerous
+                                        activities within a single project.</p>
+                                    <div><img src="ProjectBukl.png" onclick="openModal( 'ProjectBukl.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p>We can view all task-specific activities except global and project-specific
+                                        activities.</p>
+                                    <div><img src="taskspecifc.png" onclick="openModal( 'taskspecifc.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                    <p><b>Task Activities Add:</b> This enables users to add activities directly
+                                        associated
+                                        with a specific task, ensuring detailed tracking and management at the task
+                                        level.</p>
+                                    <div><img src="taskactivityAdd.png" onclick="openModal( 'taskactivityAdd.png') "
+                                            alt="tasks" width="100% " height="auto"></div>
+                                    <br>
+                                    <p><b>Task Activities Bulk Add:</b> This function allows the bulk addition of
+                                        task-specific
+                                        activities, making it easier to manage multiple activities related to specific
+                                        tasks all at once. </p>
+                                    <div><img src="taskBulkAdd.png" onclick="openModal( 'taskBulkAdd.png') " alt="tasks"
+                                            width="100% " height="auto"></div>
+                                    <br>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval Workflow<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <ul class=page-list>
+                                    <p>The process defines the structured steps through which employee-submitted
+                                        timesheets are reviewed and approved. The workflow typically involves several
+                                        key stages:</p>
+                                    <div><img src="approvalWorkflow.png" onclick="openModal( 'approvalWorkflow.png') "
+                                            alt="tasks" width="100% " height="auto"></div>
+                                    <br>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
+                            <p><b>Employee Submission:</b> Employees submit their completed timesheets for a given
+                                period, detailing hours worked, tasks completed, and other relevant data.
+                            </p>
+                            <p><b>Manager Review:</b> The timesheet is forwarded to the employee's manager or supervisor
+                                for initial review. The manager checks for accuracy, verifies the recorded hours, and
+                                ensures alignment with project or task requirements.
+                            </p>
+                            <p><b>Approval or Rejection:</b> Based on the review, the manager either approves the
+                                timesheet or rejects it with comments requesting revisions or clarifications.</p>
+                            <p><b>Escalation (if needed):</b> If the timesheet involves special approvals (e.g.,
+                                overtime, special projects), it may be escalated to higher management or specific
+                                department heads for final approval.</p>
+                            <p><b>Final Approval:</b> Once all required approvals are completed, the timesheet is
+                                officially marked as approved and ready for payroll processing or integration into the
+                                billing system.</p>
+                            <p><b>Notifications:</b> Both the employee and relevant stakeholders are notified of the
+                                timesheet's status, whether approved or needing revisions.</p>
+                            <div><img src="addapprovers.png" onclick="openModal( 'addapprovers.png') " alt="tasks"
+                                    width="100% " height="auto"></div>
+                            <br>
+                            <p>This workflow ensures accountability, accuracy, and proper tracking of work hours,
+                                leading to smoother payroll processing and compliance with company policies.</p>
+                            <!-- <p>Submit Approval Workflow</p>
+                            <div><img src="submit.png" onclick="openModal( 'submit.png') " alt="tasks" width="100% "
+                                    height="auto"></div>
+                            <br> -->
+                        </div>
+                    </div>
+                    <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Activities">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight " href=# >Activities<i
+                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p>Over here admin, program manager, and project manager can add activities and also they can global activities (available for all projects), specific to projects and specific to tasks.
+                                    </p>
+                                    <p>Activities are used as sub-tasks and timesheets can be submitted along with tasks and activities. This is an optional feature where the admin can turn On or Off from the timesheet field settings. Once turned on, the activities option will be displayed on the left navigation panel under administration and on the weekly timesheet.</p>
+                                    <div><img src="activities.png " onclick="openModal( 'activities.png') " alt="activities" width="100% " height="auto"></div>
+                                    <br>
+                                   
+                        </div> -->
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="../reports/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Reports</span></a>
+                        <a class="nav nav-next" href="../settings/" aria-label="Previous page"> <span
+                                class="d-none d-md-block">Settings</span><i class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal " class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src=" " id="imageId " style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+
+</body>
+
+</html>

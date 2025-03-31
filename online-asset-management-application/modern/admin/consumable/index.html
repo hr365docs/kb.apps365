@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Asset Management 365 | Admin Guide | Inventory</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Manage and track inventory assets efficiently in Asset Management 365. Learn how to utilize the inventory management features for better asset tracking.">
+
+    <!-- External Styles and Scripts -->
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img src='../../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../online-asset-management-application/">Asset Management 365</a></h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title='Admin guide' class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="asset-asidebar" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>Add Asset</h2> -->
+                        <div class="bg-light p-4 remove-padding" id="consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file title="Inventory"
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Inventory <i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+                                    <p>
+                                        Inventory (also known as Inventory goods, non-durable goods, or soft goods) are
+                                        goods that are intended to be consumed.
+                                        Inventory are products that consumers use recurrently, i.e., items which "get
+                                        used up" or discarded.
+
+                                    </p>
+
+                                    <p>
+                                        By default, the Inventory feature is disabled, admin can enable it from <a
+                                            href="../../../modern/admin/settings/features/#consumable-module">Features
+                                            Settings</a>.
+                                    </p>
+                                    <br>
+                                    <p>The renaming of the module title, could be done from <a
+                                            href="../../../modern/admin/settings/features/#consumable-module">Features
+                                            Settings</a>.
+                                    </p>
+
+                                    </p>
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="add-consumable-item">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Add Inventory Item<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p> From here you can able to add Inventory item.
+                                    <div><img src="consumable_item.png" onclick="openModal('consumable_item.png')"
+                                            alt="consumable item" width="100%" height="auto"></div>
+                                    </p>
+                                    <br>
+                                    <p>
+                                        To add the Inventory item, follow the below steps:
+                                    <ol>
+                                        <li>
+                                            <p>Click on the <b>+ Inventory </b>, this displays the <b>Inventory</b>
+                                                page.</p>
+                                            <div><img src="consumablepanel.png"
+                                                    onclick="openModal('consumablepanel.png')" alt="consumable page"
+                                                    width="100%" height="auto"></div>
+
+                                            <br>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Enter all the mandatory fields like <b>Product Id</b>, <b>SKU ID</b>,
+                                            <b>Item Name</b>, <b>Status</b>, <b>Item Description</b>, <b>Category</b>,
+                                            <b>Sub Category</b>, <b>Quantity</b> and <b>Total Price</b>.
+                                            You can add multiple rows for category and delete the row by clicking on the
+                                            delete icon.
+
+
+                                        </li>
+
+                                        <li>
+                                            Finally, click on the <b>Save</b> button.
+                                        </li>
+
+                                        <li>
+                                            <p>
+                                                The added Inventory item will be displayed on the <b>Inventory Items</b>
+                                                page.
+                                            </p>
+                                            <div><img src="displaybutton.png" onclick="openModal('displaybutton.png')"
+                                                    alt="Added consumable" width="100%" height="auto"></div>
+
+                                        </li>
+                                        <br>
+                                        <br>
+
+                                        <!-- <li>
+                                               
+                                                <p>Click on the <b>Export Barcode</b> button, You can generate the barcode from here and print the barcodes as shown in the below image.</p>
+                                                
+                                                <div><img src="exportbutton.png" onclick="openModal('exportbutton.png')" alt="Export button" width="100%" height="auto"></div>
+                                                <br>
+                                                <br>
+
+                                               
+                                            </li>
+
+                                            <li>
+                                               
+                                                <p>Click on the <b>Barcode</b>, You can see this barcode from here click on the Export button as shown in the below image.</p>
+                                        
+                                                <div><img src="onclickbarcode.png" onclick="openModal('onclickbarcode.png')" alt="On click barcode" width="100%" height="auto"></div>
+                                                <br>
+                                                <br>
+                                                <p>After clicking on the <b>Export</b> button, You can generate the barcode from here and print the barcodes as shown in the below image.</p>
+                                               
+                                               <div><img src="barcodeprint.png" onclick="openModal('barcodeprint.png')" alt="Barcode print" width="100%" height="auto"></div>
+                                            </li> -->
+
+                                    </ol>
+                                    </p>
+
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="bulk-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Bulk Inventory<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <ul class=page-list>
+
+                                    <p>You can add 1000 Inventory in one go using CSV file. Download the sample file and
+                                        add data in the specified format.</p>
+                                    <div><img src="1.png" onclick="openModal('1.png')" alt="Add Bulk consumable"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <div><img src="bulk_consumable.png" onclick="openModal('add_bulk_consumable.png')"
+                                            alt="Bulk consumable" width="100%" height="auto"></div>
+                                    <br>
+
+
+                                    <p>Follow the below instructions before adding bulk Inventory items:</p>
+
+                                    <ol>
+                                        <li> Please download the above sample file and fill the Inventory details as per
+                                            below instructions, save the file and upload it</li>
+                                        <li> Please add variants and subvariants through administration before uploading
+                                            the bulk Inventory file.</li>
+                                        <li> Please remove the separators, and currency symbol from the cost column.
+                                        </li>
+                                        <li> Please don't add commas in any columns of the file.</li>
+                                        <li> The date format should be MM/DD/YYYY for data upload, while its display
+                                            format can be adjusted in your date settings.</li>
+                                        <li> Please ensure the mandatory columns such as SKU ID, Item Name, Status,
+                                            Location and Product ID are filled out without any emptiness.</li>
+                                        <li> Do not alter the column order or add new columns, as this may cause data to
+                                            be entered incorrectly.</li>
+                                        <li> You can add 1000 items in a single upload.</li>
+
+                                    </ol>
+                                    <br>
+                                    <p>To add or upload bulk Inventory follow the below steps:
+                                    <ol>
+                                        <li>
+                                            Click on the <b>+Bulk Inventory</b> tab, this displays <b>Add Multiple
+                                                Inventory Items</b>.
+                                        </li>
+                                        <li>
+                                            Choose the data loaded CSV file from the system and upload the file.
+                                        </li>
+                                        <li>
+                                            Finally click on <b>Save</b> button.
+                                        </li>
+                                    </ol>
+                                    </p>
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="consumable-items">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Assign Inventory<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <div class=page-list>
+                                  <p>Form here, You can Assign Inventory</p>
+                                  <div><img src="2.png" onclick="openModal('2.png')"
+                                    alt="Bulk consumable" width="100%" height="auto"></div><br>
+                                    
+                                    <div><img src="3.png" onclick="openModal('3.png')"
+                                        alt="Bulk consumable" width="100%" height="auto"></div>
+
+                                </div>
+                               
+
+                            </li>
+                     
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="request-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#> Bulk Assign Inventory<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <div class=page-list>
+                                  <p>Form here, You can Add Bulk Assign Inventory</p>
+                                  <div><img src="4.png" onclick="openModal('4.png')"
+                                    alt="Bulk consumable" width="100%" height="auto"></div><br>
+                                   <p> Download the Sample file and then Import the File According to Instruction Given Below.</p> 
+                                    <div><img src="5.png" onclick="openModal('5.png')"
+                                        alt="Bulk consumable" width="100%" height="auto"></div><br>
+                                        <ol>
+                                            <li>Please ensure the mandatory columns such as SKU ID, Assign To, Email Address, Address, Country, State, City, Zip Code, and Location are filled out without any emptiness</li>
+                                            <li>Don't rearrange the columns or add new ones; this would result in values being sent into the wrong columns in the application</li>
+                                            <li> The date format should be MM/DD/YYYY for data upload, while its display format can be adjusted in your date settings.</li>
+                                            <li>Do not alter the column order or add new columns, as this may cause data to be entered incorrectly</li>
+                                            <li>You can add 1000 items in a single upload.</li>
+                                        </ol>
+                                </div>
+                               
+
+                            </li>
+
+
+
+                        </div>
+                      
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Assigned">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Assigned<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <div class=page-list>
+                                  <p>Form here, You can Check Assigned Inventory.</p>
+                                  <div><img src="7.png" onclick="openModal('7.png')"
+                                    alt="Bulk consumable" width="100%" height="auto"></div><br>
+                                    
+                                    <div><img src="8.png" onclick="openModal('8.png')"
+                                        alt="Bulk consumable" width="100%" height="auto"></div>
+
+                                </div>
+                               
+
+                            </li>
+
+
+
+                        </div> -->
+                        <div class="bg-light p-4 remove-padding common-scroll" id="approve-reject-consumable">
+                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approve Reject Consumable<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                <div class=page-list>
+                                  <p>Form here, Approver can Approve or Reject the Inventory.</p>
+                                  <div><img src="6.png" onclick="openModal('6.png')"
+                                    alt="Bulk consumable" width="100%" height="auto"></div><br>
+                                  
+
+                                </div>
+                               
+
+                            </li>
+
+
+
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../assets/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Assets</span></a>
+                            <a class="nav nav-next" href="../software/" aria-label="Previous page">
+                                <span class="d-none d-md-block">Software</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../aside-assets/aside-assets.js"></script>
+</body>
+
+</html>

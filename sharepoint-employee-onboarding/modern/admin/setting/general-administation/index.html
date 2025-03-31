@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Employee Onboarding 365 | Admin Guide | Settings | General Administration</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Admin guide for General Administration settings in Employee Onboarding 365, enabling the configuration of system-wide preferences, roles, and user access controls.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+               <!-- Google Tag Manager -->
+               <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+        <!-- End Google Tag Manager -->
+</head>
+
+<body>
+                    <!-- Google Tag Manager (noscript) -->
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                            style="display:none;visibility:hidden">
+                        </iframe>
+                    </noscript>
+                    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/product/">
+                    <img src="../../logo_.png" width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"><a
+                                href="../../../../sharepoint-employee-onboarding/">Employee Onboarding 365</a></h5>
+                        <a class=back-btn href="../../../../sharepoint-employee-onboarding/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title=" Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="obm-modern-admin">
+                                </ul>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <!-- enter your data here  -->
+
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>General Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <div class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General Administration
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <p>
+                                    Here, you can synchronize Office 365 users, manage positions, departments,
+                                    locations, add devices, and more.
+                                </p>
+
+                                <div><img src="gen01.png" onclick="openModal('gen01.png')" alt="intregation"
+                                        width="100%" height="auto"></div>
+                            </div>
+                            <!-- <li title="System Setting">
+                               
+                                <ul class="sidenavSub-topics">
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Onboarded-Users">
+                                            On-boarded Users
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='position' class=sidelist>
+                                        <a href="./#Position">
+                                            Position
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Department">
+                                            Department
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Locations">
+                                            Locations
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Software">
+                                            Software
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Devices">
+                                            Devices
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Employee-Type">
+                                            Employee-Type
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Users' class=sidelist>
+                                        <a href="./#Reason-for-Offboard">
+                                            Reason-for-Offboard
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Notice-Period' class=sidelist>
+                                        <a href="./#Notice-Period">
+                                            Notice-Period
+                                        </a>
+                                    </li>
+                                    <li data-nav-id="../General" title='Document_Settings' class=sidelist>
+                                        <a href="./#Document_Settings">
+                                            Document Settings
+                                        </a>
+                                    </li><li data-nav-id="../General" title='Notice-Period' class=sidelist>
+                                        <a href="./#Audit-Logs">
+                                            Audit-Logs
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </li> -->
+                            <!-- DATA  -->
+                            <!-- onboard user start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Onboarded-Users">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Onboarded Users<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <br>
+                                <ul class=page-list>
+                                    Through this, we can add a <b>User </b> from M365 to the application, and that user
+                                    will be directly
+                                    onboarded.
+                                    <br><br>
+
+
+                                    Select <b>configure </b> to continue processing.
+                                    <br><br>
+
+                                    <div><img src="configure.png" onclick="openModal('configure.png')" alt="Add users"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            By Selecting the<b> +User</b> Button, you can add users.
+                                            <br>
+                                            <br>
+                                            <div><img src="02.png" onclick="openModal('02.png')" alt="Select role"
+                                                    width="100%" height="auto"></div>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Fill the user's information Accurately.
+                                        </li>
+                                        <li>
+                                            Click on Save Button.
+                                            <br>
+                                            <br>
+                                            <div><img src="saved.png" onclick="openModal('saved.png')" alt="Save"
+                                                    width="100%" height="auto">
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <br>
+
+                                    <h4><u> Full Sync from M365</u></h4>
+                                    <br><br>
+                                    <li>
+                                        Only use this option if you desire to sync every user; for user updates, use
+                                        Delta sync.
+                                    </li><br>
+                                    <div><img src="Screenshot_1.png" onclick="openModal('Screenshot_1.png')"
+                                            alt="Sync from M365" width="100%" height="auto"></div>
+                                    <br>
+                                    <br>
+                                    <h4><u> Delta Sync from M365</u></h4>
+                                    <br><br>
+                                    <li>
+                                        You may access users' most recent updated information as well as those who have
+                                        joined within the last
+                                        seven days.
+                                    </li><br>
+                                    <div><img src="delta.png" onclick="openModal('delta.png')" alt="Sync from M365"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <br>
+
+                                    <h4><u> Delete</u></h4>
+                                    <br><br>
+                                    <li>
+                                        Using this button, eliminate the numerous users
+                                    </li><br>
+                                    <div><img src="03.png" onclick="openModal('03.png')" alt="Sync from M365"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+                                    <br>
+
+
+
+                            </div>
+                            <!-- onboard user end -->
+                            <!-- position start  -->
+
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Position">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Position<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <br>
+                                <ul class=page-list>
+                                    Here you can add the<b> Positions</b> , which will get reflected in the
+                                    <b>PreOnboarding </b> ,<b>
+                                        Onboarding</b> and <b> Offboarding sections </b>And the positions produced here
+                                    reflect/act as
+                                    dropdowns/suggestions that aid in the creation of positions for employee hiring.
+                                    <br><br>
+                                    <li>
+                                        Select <b>Configure </b> to continue processing. <br>
+                                        <br>
+                                        <img src="position.png" onclick="openModal('position.png')" alt="Sync from M365"
+                                            width="100%" height="auto">
+
+                                        <br><br>
+                                    </li>
+                                    <li><br>
+                                        You may enter your position after clicking on position.
+                                        <br>
+                                        <br>
+                                        <img src="04.png" onclick="openModal('04.png')" alt="Sync from M365"
+                                            width="100%" height="auto"><br>
+                                    <li><br>
+                                        With this function app will pull the position names present in
+                                        office 365 user's profile.
+                                        <br>
+                                        <br>
+                                        <img src="05.png" onclick="openModal('05.png')" alt="Sync from M365"
+                                            width="100%" height="auto"><br>
+                                    <li><br>
+                                        Click on <b>Delete</b> Button to delete Multiple Positions.
+                                        <br>
+                                        <br>
+                                        <img src="06.png" onclick="openModal('06.png')" alt="Sync from M365"
+                                            width="100%" height="auto"><br>
+                            </div>
+                            <!-- position end  -->
+                            <!-- Department start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Department">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Department<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <br>
+                                <ul class=page-list>
+                                    Here you can add the<b> Department</b> , which will get reflected in the
+                                    <b>PreOnboarding </b> ,<b>
+                                        Onboarding</b> and <b> Offboarding sections. </b>
+                                    <br><br>
+                                    <li>
+                                        Select <b>Configure </b> to continue processing. <br>
+                                        <br>
+                                        <img src="department.png" onclick="openModal('department.png')"
+                                            alt="Sync from M365" width="100%" height="auto">
+                            </div>
+                            <br><br>
+                            <!-- </li> -->
+                            <div>
+                                You may enter your <b> Department </b> after clicking on <b> +Departments </b>.
+                            </div>
+                            <br>
+                            <div>
+                                Click on save Button.
+                                <br>
+                                <br>
+                                <img src="07.png" onclick="openModal('07.png')" alt="Sync from M365" width="100%"
+                                    height="auto">
+                                <br>
+                            </div>
+                            <div><br>
+                                <br> With this function app will pull the Department names present in office 365 user's
+                                profile. <br>
+                                <br>
+                                <img src="08.png" onclick="openModal('08.png')" alt="Sync from M365" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+                            <!-- </li> -->
+                            <div>
+                                Use this button to remove multiple users.
+                                <br>
+                                <br>
+                                <img src="09.png" onclick="openModal('09.png')" alt="Sync from M365" width="100%"
+                                    height="auto">
+                            </div> <br>
+                            <!-- </li> -->
+
+
+
+
+                            <!-- Department end -->
+                            <!-- Locations start -->
+
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Locations">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Locations<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+
+
+
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="10.png" onclick="openModal('10.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div><br>
+                                    </li>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            After clicking on location, you can enter your location. <br></li>
+                                        <br>
+                                        <li>
+                                            Click on Save Button. <br>
+                                            <div><img src="location3.png" onclick="openModal('location3.png')"
+                                                    alt="Select role" width="100%" height="auto"></div><br>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            With this function app pull the Location names Present in the office 365
+                                            user's Profile. <br></li>
+                                        <br>
+                                        <li>
+                                            <!-- Import.................</li><br> -->
+                                        <li>
+                                            To remove numerous <b> locations</b>, use the delete option.
+
+                                            <div><img src="11.png" onclick="openModal('11.png')" alt="Select role"
+                                                    width="100%" height="auto"></div>
+                                        </li>
+                                    </ul>
+                            </div>
+
+                            <!-- Locations end -->
+                            <!-- Software start -->
+
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Software">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Software<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="software.png" onclick="openModal('software.png')" alt="Add users"
+                                            width="100%" height="auto"><br>
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            After clicking on <b>+Software</b> Dynamic Software can add. <br></li>
+                                        <br>
+                                        <div><img src="soft.png" onclick="openModal('soft.png')" alt="Select role"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <li>
+                                            Click on Save Button. <br><br>
+                                            <div><img src="savesoftware.png" onclick="openModal('savesoftware.png')"
+                                                    alt="Select role" width="100%" height="auto"></div><br>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <b>Import</b>
+                                    </li><br>
+                                    <div><img src="importsoftware.png" onclick="openModal('importsoftware.png')"
+                                            alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b>Software</b>, use the Delete option.</li><br>
+                                    <div><img src="delsoftware.png" onclick="openModal('delsoftware.png')"
+                                            alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+
+                            </div>
+
+                            <!-- Software end -->
+                            <!-- office start  -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Office">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Office<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+                                    <p>In this section, you have the option to add multiple offices or office branches.
+                                    </p>
+
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="office.png" onclick="openModal('office.png')" alt="Add users"
+                                            width="100%" height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            After clicking on <b>+Office</b> Dynamic office can add. <br></li>
+                                        <li>Click on save button.</li><br>
+                                        <div><img src="14.png" onclick="openModal('14.png')" alt="Select role"
+                                                width="100%" height="auto">
+                                        </div><br>
+
+                                    </ul>
+                                    <li>
+                                        <b>Sync from M356</b>
+                                        This function allows the app to retrieve the department names from the user's
+                                        profile in Office 365.
+                                    </li><br>
+                                    <div><img src="15.png" onclick="openModal('15.png')" alt="Select role" width="100%"
+                                            height="auto"></div><br>
+                                    </li>
+                                    <li>Click on Confirm.</li> <br>
+                                    <div><img src="16.png" onclick="openModal('16.png')" alt="Select role" width="100%"
+                                            height="auto"></div><br>
+                                    <li>
+                                        To remove numerous <b>Office</b>, use the Delete option.</li><br>
+                                    <div><img src="17.png" onclick="openModal('17.png')" alt="Select role" width="100%"
+                                            height="auto"></div><br>
+                                    </li>
+
+                            </div>
+
+                            <!-- office end  -->
+
+                            <!-- Devices start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Devices">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Devices<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="device.png" onclick="openModal('device.png')" alt="Add users"
+                                            width="100%" height="auto">
+                                    </div><br>
+                                    </li>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            After clicking on <b>+Device</b> Dynamic Devices can add. <br></li>
+                                        <br>
+                                        <div><img src="adddevice.png" onclick="openModal('adddevice.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                        <li>
+                                            Click on Save Button. <br><br>
+                                            <div><img src="savedevice.png" onclick="openModal('savedevice.png')"
+                                                    alt="Select role" width="100%" height="auto"></div><br>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        For this tab, you have the option to import a bulk sample file.
+                                        <div><img src="importdevice.png" onclick="openModal('importdevice.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Device</b>, use the Delete option.</li><br>
+                                    <div><img src="deletedevice.png" onclick="openModal('deletedevice.png')"
+                                            alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+
+                            </div>
+
+                            <!-- Devices end -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Status">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Status<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="18.png" onclick="openModal('18.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div><br>
+                                    </li>
+                                    <br>
+                                    <ul>
+                                        <li>
+                                            After clicking on <b>+Status</b> Dynamic status can add. <br></li>
+                                        <br>
+                                        <div><img src="19.png" onclick="openModal('19.png')" alt="Select role"
+                                                width="100%" height="auto"></div><br>
+                                        <li>
+                                            Complete the tab by entering the status and then click on the save
+                                            button.<br><br>
+                                            <div><img src="20.png" onclick="openModal('20.png')" alt="Select role"
+                                                    width="100%" height="auto"></div><br>
+                                        </li>
+                                    </ul>
+
+                                    <li>
+                                        To remove numerous <b> Status</b>, use the Delete option.</li><br>
+                                    <div><img src="21.png" onclick="openModal('21.png')" alt="Select role" width="100%"
+                                            height="auto"></div><br>
+                                    </li>
+
+                            </div>
+                            <!-- Employee Type start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Employee-Type">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Employee-Type<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="Employee-Type.png" onclick="openModal('Employee-Type.png')"
+                                            alt="Add users" width="100%" height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Type</b> Dynamic Employee-Type can add. <br></li>
+                                    <br>
+                                    <div><img src="Type.png" onclick="openModal('Type.png')" alt="Select role"
+                                            width="100%" height="auto">
+                                    </div><br>
+                                    <li>
+                                        Click on Save Button. <br><br>
+                                        <div><img src="savetype.png" onclick="openModal('savetype.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Device</b>, use the Delete option.</li><br>
+                                    <div><img src="deletetype.png" onclick="openModal('deletetype.png')"
+                                            alt="Select role" width="100%" height="auto"></div>
+                                    </li>
+
+                            </div>
+                            <!-- Employee Type end -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="AdditionalFields">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Additional Fields<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="22.png" onclick="openModal('22.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Additional Fields</b> Dynamic Additional Fields can add.
+                                        <br></li>
+                                    <br>
+                                    <div><img src="23.png" onclick="openModal('23.png')" alt="Select role" width="100%"
+                                            height="auto">
+                                    </div><br>
+                                    <li>
+                                        Click on Save Button. <br><br>
+                                        <div><img src="24.png" onclick="openModal('24.png')" alt="Select role"
+                                                width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Device</b>, use the Delete option.</li><br>
+                                    <div><img src="25.png" onclick="openModal('25.png')" alt="Select role" width="100%"
+                                            height="auto"></div>
+                                    </li>
+
+                            </div>
+                            <!-- Reason for Offboard start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Reason-for-Offboard">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Reason-for-Offboard<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="Reason-for-Offboard.png"
+                                            onclick="openModal('Reason-for-Offboard.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Add</b> You Can Enter Dynamic Reason for Offboarding. <br>
+                                    </li>
+                                    <br>
+                                    <div><img src="addres.png" onclick="openModal('addres.png')" alt="Select role"
+                                            width="100%" height="auto">
+                                    </div><br>
+                                    <li>
+                                        Click on Save Button. <br>
+                                        <div><img src="savereas.png" onclick="openModal('savereas.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Reason </b>, use the Delete option.</li><br>
+                                    <div><img src="12.png" onclick="openModal('12.png')" alt="Select role" width="100%"
+                                            height="auto"></div>
+                                    </li>
+
+                            </div>
+
+
+                            <!-- Reason for Offboard end -->
+                            <!-- Notice Period start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Notice-Period">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Notice-Period<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="notice.png" onclick="openModal('notice.png')" alt="Add users"
+                                            width="100%" height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Add</b> You Can Enter Dynamic Notice Period Days . <br>
+                                    </li>
+                                    <br>
+                                    <div><img src="addnotice.png" onclick="openModal('addnotice.png')" alt="Select role"
+                                            width="100%" height="auto"></div><br>
+                                    <li>
+                                        Click on Save Button. <br><br>
+                                        <div><img src="savenotice.png" onclick="openModal('savenotice.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Notice Period </b>, use the Delete option.</li><br>
+                                    <div><img src="deletenotice.png" onclick="openModal('deletenotice.png')"
+                                            alt="Select role" width="100%" height="auto"></div>
+                                    </li>
+
+                            </div>
+
+
+
+                            <!-- Notice Period end -->
+                            <!-- Document Settings start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Document_Settings">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Document Setting<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="documentSetting.png" onclick="openModal('documentSetting.png')"
+                                            alt="Add users" width="100%" height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Add</b> You Can Enter Dynamic Document Name . <br></li>
+                                    <br>
+                                    <div><img src="documentAdd.png" onclick="openModal('documentAdd.png')"
+                                            alt="Select role" width="100%" height="auto"></div><br>
+                                    <li>
+                                        Click on Save Button. <br>
+                                        <div><img src="saveDocument.png" onclick="openModal('saveDocument.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Documents </b>, use the Delete option.</li><br>
+                                    <div><img src="deletedocument.png" onclick="openModal('deletedocument.png')"
+                                            alt="Select role" width="100%" height="auto"></div>
+                                    </li>
+
+                            </div>
+
+                            <!-- Document Settings end -->
+                            <!-- Audit Logs start -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Audit-Logs">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Audit Logs<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="13.png" onclick="openModal('13.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Add</b> You Can Enter Dynamic Document Name . <br></li>
+                                    <br>
+                                    <div><img src="documentAdd.png" onclick="openModal('documentAdd.png')"
+                                            alt="Select role" width="100%" height="auto"></div><br>
+                                    <li>
+                                        Click on Save Button. <br> <br>
+                                        <div><img src="saveDocument.png" onclick="openModal('saveDocument.png')"
+                                                alt="Select role" width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> Documents </b>, use the Delete option.</li><br>
+                                    <div><img src="deletedocument.png" onclick="openModal('deletedocument.png')"
+                                            alt="Select role" width="100%" height="auto"></div>
+                                    </li>
+
+                            </div>
+
+
+                            <!-- Audit Logs end -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Groups">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Groups<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+
+                                    <div><img src="26.png" onclick="openModal('26.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>We have the option to include or exclude groups that are already part of a flow.
+                                        Only the groups that are included will be visible in the application.</li> <br>
+                                    <div><img src="27.png" onclick="openModal('27.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+
+                            </div> <br>
+
+
+                            <div class="bg-light p-4 remove-padding common-scroll" id="CustomForms">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Custom Forms<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <ul class=page-list>
+                                    <li>Select <b>Configure </b> to continue processing. <br></li><br>
+                                    <div><img src="28.png" onclick="openModal('28.png')" alt="Add users" width="100%"
+                                            height="auto">
+                                    </div>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        After clicking on <b>+Add</b> You Can Create Dynamic Custom Forms. <br></li>
+                                    <br>
+                                    <div><img src="29.png" onclick="openModal('29.png')" alt="Select role" width="100%"
+                                            height="auto"></div><br>
+                                    <li>
+
+                                        To add a custom form, fill in the required fields and then click on the save
+                                        icon. <br> <br>
+                                        <div><img src="30.png" onclick="openModal('30.png')" alt="Select role"
+                                                width="100%" height="auto"></div><br>
+                                    </li>
+                                    <li>
+                                        To remove numerous <b> formr </b>, use the Delete option.</li><br>
+                                    <div><img src="31.png" onclick="openModal('31.png')"
+                                            alt="Select role" width="100%" height="auto"></div>
+                                    </li>
+
+                            </div>
+
+
+                            <!-- upr s -->
+
+                        </div>
+
+
+
+
+                        <!-- data end  -->
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../../setting/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Setting</span></a>
+                            <a class="nav nav-next" href="../task-administation/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Task-Administration </span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script src="../../js-modern-admin/obm-modern-admin.js"></script>
+</body>
+
+</html>

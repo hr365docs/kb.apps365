@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang=en-us>
+    <head>
+        <meta charset="utf-8">
+        <title>Helpdesk 365 | Configure-Azure-AI</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="generator" content="Hugo 0.92.2">
+        <meta name="description" content="Learn how to integrate and configure Azure AI with Helpdesk 365 to enhance automation and improve service delivery in HR management.">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    
+        <!-- Scripts for PDF and HTML to PDF conversion -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    
+        <style>
+            :root {
+                --primary-color: #5637da;
+                --body-color: #f9f9f9;
+                --text-color: #636363;
+                --text-color-dark: #242738;
+                --white-color: #ffffff;
+                --light-color: #f8f9fa;
+                --font-family: Lato;
+            }
+        </style>
+    
+        <!-- Main CSS -->
+        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    
+        <!-- jQuery and Bootstrap Scripts -->
+        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+        <!-- Specific Page Meta Data -->
+        <meta name="title" content="Helpdesk 365 | Configure Azure AI">
+        <meta name="description" content="Learn how to integrate and configure Azure AI with Helpdesk 365 to enhance automation and improve service delivery in HR management.">
+    
+        <!-- Description for SharePoint -->
+        <meta name="description" content="Configure Azure AI with Helpdesk 365 for better automation and smarter service management in HR processes.">
+    
+        <!-- Description for HR365 Directory -->
+        <meta name="description" content="Optimize HR processes with Azure AI integration for streamlined HR service management.">
+        
+        <!-- Additional Social Sharing Meta Tags -->
+        <meta property="og:title" content="Helpdesk 365 | Configure Azure AI">
+        <meta property="og:description" content="Optimize HR processes by integrating Azure AI with Helpdesk 365 to improve efficiency and automation.">
+        
+        
+    </head>
+    
+<body>
+                    <!-- Google Tag Manager (noscript) -->
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                            style="display:none;visibility:hidden">
+                        </iframe>
+                    </noscript>
+                    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+
+            </div>
+            <div class="mar-0px-auto d-lg-flex blog_docs" style="margin: 0px auto">
+                <div class="p-lg-3 p-4 remove-padding bg-white" style="width: 100%" id=content>
+                    <!-- <h2 class=mb-5 id=title>Installation Guide</h2> -->
+                    <div class="bg-light p-4 remove-padding"  style="width: 100%;">
+                        <li data-nav-id=../Getting-started/installation/using-app-file title=Installation
+                            class="sidelist">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">Configure-Azure-AI<i
+                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                         <ol >
+                            <li>Go to portal.azure.com </li> <br>
+                            <div style="display: flex;
+                            align-items: center;
+                            justify-content: center;"><img src="1.png" onclick="openModal('1.png')" alt="My flows" width="100%"
+                                height="auto"></div><br>
+                                <li>Access Azure's OpenAI service by clicking. </li><br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="2.png" onclick="openModal('2.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                <li>Click on Create button . </li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="3.png" onclick="openModal('3.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                <li>Configure Azure's OpenAI service by filling out all the necessary fields, then proceed by clicking on the "Next" button.</li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="4.png" onclick="openModal('4.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                
+                                
+                                <li>Once you've reached the "Review + Submit" window, proceed by clicking on the "Create" button. </li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="5.png" onclick="openModal('5.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                <li>Go to Azure OpenAi Studio.</li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="6.png" onclick="openModal('6.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                <li>Select "Create New Deployment" to proceed. </li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="7.png" onclick="openModal('7.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    justify-content: center;"><img src="8.png" onclick="openModal('8.png')" alt="My flows" width="100%"
+                                        height="auto"></div><br>
+                                <li>First, opt for the "Helpdesk365" model, pick the desired model version, specify the deployment type, and enter a name for the deployment. Afterward, copy the deployment name, and finally, click on the "Create" button. </li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="9.png" onclick="openModal('9.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br>
+                                <li>Access the Resource Management dropdown menu.</li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="10.png" onclick="openModal('10.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                <li>Select the key and endpoints. Duplicate the key and opt for the location. </li> <br>
+                                <div style="display: flex;
+                                align-items: center;
+                                justify-content: center;"><img src="11.png" onclick="openModal('11.png')" alt="My flows" width="100%"
+                                    height="auto"></div><br> 
+                                    <li>Please navigate to the Helpdesk365 application and access the settings menu.</li> <br>
+                                    <div style="display: flex;
+                                    align-items: center;
+                                    justify-content: center;"><img src="12.png" onclick="openModal('12.png')" alt="My flows" width="100%"
+                                        height="auto"></div><br>
+                                        <li>Please paste the AI endpoint, API key, and deployment name into the designated fields, then click on the "Save" button.</li><br>
+                                        <div style="display: flex;
+                                        align-items: center;
+                                        justify-content: center;"><img src="13.png" onclick="openModal('13.png')" alt="My flows" width="100%"
+                                            height="auto"></div><br>
+
+                         </ol>
+
+
+
+
+
+                        </li>
+                        
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../js/header-footer.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <!-- <script src="../../js/blog.js"></script> -->
+</body>
+
+</html>

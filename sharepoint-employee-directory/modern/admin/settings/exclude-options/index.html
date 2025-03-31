@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee Directory 365 | Admin Guide | Settings | Exclude-options</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Hugo 0.92.2">
+  <meta name="description" content="Manage exclusion options in Employee Directory - HR365 Admin Guide. Learn how to configure which elements to exclude from the directory and customize your settings.">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+  <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start': new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+                  <!-- Google Tag Manager (noscript) -->
+                  <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+  <header class="shadow-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+          <img class=img-fluid src="../../../../../../images/logo_.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="single section-sm pb-0">
+    <div class="container container-padding">
+      <div class=row>
+        <div class=col-lg-3>
+          <div class=sidebar>
+            <h5 class="mbHeading" style="color:SlateBlue"> <a
+                href="../../../../../sharepoint-employee-directory/">Employee Directory 365 </a></h5>
+            <a class=back-btn href="../../../../../sharepoint-employee-directory/" aria-label=back></a>
+            <ul class=list-styled>
+              <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Admin-Guide class="sidelist
+    active">
+                <a href="../../../admin/">
+                  Admin Guide
+                </a>
+                <div id="edmfullyadminguide" class="sidenavbarscrollstyle">
+                </div>
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class=col-lg-9>
+          <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+            <!-- <h2 class=mb-5 id=title>Exclude Options</h2> -->
+            <div class="bg-light p-4 remove-padding">
+              <ul class=page-list>
+                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Exclude Options
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                </h2>
+
+
+                <p>Here you can exclude individual users based on selection or group of users. You can also customize
+                  the exclude option field from the advanced setting. Refer <a href="../advanced/">Advance Settings</a>.
+                </p>
+
+                <div><img src="01.png" onclick="openModal('01.png')" alt="Exclude" width="100%" height="auto">
+                </div>
+
+                <br>
+
+                <ul class="ul_li_styles">
+                  <li>For individual users, use exclude users by <b>name</b>.</li>
+
+                  <li>For group of users you can use exclude user by <b>domains</b>, exclude user by <b>department</b>,
+                    exclude
+                    users
+                    by <b>job title</b>.</li>
+
+                  <li>You can exclude block sign-in, and users hidden in GAL of your O365.</li>
+
+                  <li>You can exclude users based on their name contains (minimum 3 letters should be used to exclude
+                    user by contains).</li>
+
+                  <li>You can also exclude shared mailbox users from <b>Exclude shared mailbox users</b> options.</li>
+                </ul>
+
+                <div class="notices note">
+                  <div class="paragraph">
+                    <p>Exclude users blocked sign-in, exclude users hidden in address list and exclude shared
+                      mailbox user work on API, please enable it from advanced in settings.</p>
+                  </div>
+                </div>
+              </ul>
+              <p> To exclude, click on the link or dropdown as shown below. If you click on the dropdown, select the
+                data. If you click on the link, the excluded list will display. Enter the field.
+              <div><img src="02.png" onclick="openModal('02.png')" alt="excluded list" width="100%" height="auto"></div>
+              <br>
+              </p>
+              <br>
+             
+              <div id="ExcludeO365sign-inblockedusers">
+                   <h6>Exclude O365 sign-in blocked users</h6>
+                  To enable this setting, please visit this <a
+                  href="https://bitzap-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/webApiPermissionManagement">Link</a>
+                to learn how to activate the SharePoint API.
+                </p>
+                <br><br>
+                <div><img src="04.png" onclick="openModal('04.png')" alt="excluded user by UPN" width="100%"
+                    height="auto"></div>
+
+              </div>
+
+            </div>
+            <div id="Excludeuserbydepartment"></div>
+              <br>
+              <p>
+              <h6>Exclude user by department</h6>
+
+              You can exclude users by department by selecting the department from the dropdown menu.
+              </p>
+              <br><br>
+              <div><img src="05.png" onclick="openModal('05.png')" alt="excluded user by UPN" width="100%"
+                  height="auto">
+              </div>
+            </div>
+            <div id="Excludeusersbyjobtitle">
+              <p>
+              <h6>Exclude users by job title</h6>
+              You can exclude users by Job title by selecting the job title from the dropdown menu.
+              </p>
+              <br><br>
+              <div><img src="jobtitle.png" onclick="openModal('jobtitle.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+              <br>
+            </div>
+    
+    
+    <div id="ExcludeusersbyName">
+              <p>
+              <h6>Exclude users by Name</h6>
+              To maintain the query length restriction imposed by Microsoft for excluding users by username, limit the user
+              list to 50 and utilize other exclusion queries such as department, title, location, or user contains for the
+              remaining users.
+              </p>
+              <br><br>
+              <div><img src="userlist.png" onclick="openModal('userlist.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    
+     </div>
+    
+     <div id="Excludeuserbyofficelocation">
+              <br>
+              <p>
+              <h6>Exclude user by office location</h6>
+              You can exclude users by office location by selecting the office location from the dropdown menu.
+              </p>
+              <br><br>
+              <div><img src="officeLocation.png" onclick="openModal('officeLocation.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    </div>
+    
+    <div id="Excludeuserbyusingcsvfile">
+              <br>
+              <p>
+              <h6>Exclude user by using csv file</h6>
+              You can exclude users by uploading a CSV file. Simply click on the "Upload" button to select and upload the
+              CSV file.
+              </p>
+              <br><br>
+              <div><img src="csv.png" onclick="openModal('csv.png')" alt="excluded user by UPN" width="100%" height="auto">
+                <br>
+                <br>
+              <div><img src="csvfile.png" onclick="openModal('csvfile.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    
+    </div>         
+    
+    <div id="ExcludeUsersByUPN">
+              <br>
+              <p>
+              <h6>Exclude Users By UPN</h6> Users can be exclude with the UPN (User Principal Name) to exclude only
+              selected user
+              </p>
+              <br><br>
+              <div><img src="upn.png" onclick="openModal('upn.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    
+    </div>  
+    
+    <div id="Excludeuserbycontain">
+    
+              <br>
+              <p>
+              <h6>Exclude user by contain</h6>
+              You can exclude users by name, entering up to 3 characters.
+              </p>
+              <br><br>
+              <div><img src="uuu.png" onclick="openModal('uuu.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    </div>
+    
+    
+    <div id="Excludeusershiddeninaddresslist">
+              <br>
+              <p>
+              <h6>Exclude users hidden in address list</h6>
+    
+              To exclude hidden users from the address list, ensure that the SharePoint API is enabled. Please visit <a
+                href="https://bitzap-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/webApiPermissionManagement">here</a>
+              to
+              learn how to enable this feature.
+              </p>
+              <br><br>
+              <div><img src="09.png" onclick="openModal('09.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    
+    </div>         
+    
+    
+    <div id="Removesharedmailboxes">
+              <br>
+              <p>
+              <h6>Remove shared mailboxes</h6>
+    
+    
+              Click this <a href="https://employeedirectory.hr365online.com/">Link</a> to access Cubic Logics's tool for
+              removing shared mailbox users.
+              </p>
+              <br><br>
+              <div><img src="10.png" onclick="openModal('10.png')" alt="excluded user by UPN" width="100%" height="auto">
+              </div>
+    
+    
+            </div>
+            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+              <nav class="pagination mt-3">
+                <a class="nav nav-prev" href="../views/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>
+                  <span class="d-none d-md-block">View</span></a>
+                <a class="nav nav-next" href="../advanced/" aria-label="Previous page"> <span
+                    class="d-none d-md-block">Advanced</span><i class="ti-arrow-right ml-2"></i></a>
+              </nav>
+     </div>     
+    
+    
+    
+    
+
+
+
+            
+           
+            <br>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
+          <br>
+
+      
+   
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+      <div class="mySlides">
+        <img src="" id="imageId" style="width:100%">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+              href="https://www.hr365.us/sla/">SLA.</a>
+            <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+              href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../../../js/script.min.js"></script>
+  <script src="../../../../../js/showhidefunction.js"></script>
+  <script src="../../../../../js/edm-admin-advanced.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/edm-adminguide-mainsetting.js"></script>
+  <script src="../../../../../js/edm-modern-fulladminguide.js"></script>
+  <script src="../../../../../js/edm-adminguide-general.js"></script>
+  <script src="../../../../../js/header-footer.js"></script>
+  <script>
+    function openModal(src) {
+
+      document.getElementById("imageId").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+
+    }
+
+    date = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = date;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Helpdesk 365 | Admin Guide</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="HR365 Helpdesk">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+                    <!-- Google Tag Manager (noscript) -->
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                            style="display:none;visibility:hidden">
+                        </iframe>
+                    </noscript>
+                    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+          <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="/sharepoint-helpdesk/">Helpdesk 365</a>
+                        </h5>
+                        <a class=back-btn href="../../../sharepoint-helpdesk/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://hr365docs.github.io/HR365_Product/helpdesk/ title="Admin Guide"
+                                class=sidelist>
+                                <a href="../../../sharepoint-helpdesk/modern/admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle" class="sidenavbarscrollstyle">
+
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white " id=content>
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+
+                                <h2 id="_dashboards"><a class="header-icon-link highlight mbHeading" href=#>Helpdesk
+                                        365<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <br>
+                                <h3 class="tablecontentfont">Table of content</h3>
+
+                                <br>
+
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title=Installation class="sidelist active">
+                                    <!-- <a href=https://github.com/hr365docs/My-project.git/installation />
+            Table of content
+            </a> -->
+
+                                    <ul id="hdp-admin-aside" class="sidenavbarscrollstyle">
+                                        <ul class="list-styled-content">
+                                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/requirments/
+                                                title=Introduction class=sidelist>
+                                                <a href="./introduction/">
+                                                    Introduction
+                                                </a>
+
+
+                                            <li data-nav-id="./installation/requirments/" title="Architecture Diagram"
+                                                class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/architecture-diagram/">
+                                                    Architecture Diagram
+                                                </a>
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Home-Page class="sidelist">
+
+                                                <a href="/sharepoint-helpdesk/modern/admin/home-page/">Home Page</a>
+                                             
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Dashboard class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/dashboard/">Dashboard</a>
+
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Knowledgebase class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/incident/">Incident</a>
+
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Knowledgebase class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/knowledgebase/">knowledgebase</a>
+
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Reports class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/reports/">Reports</a>
+
+                                            </li>
+
+
+                                            <li data-nav-id="./Settings/" title=Comment Page class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/comment-page/">Comment
+                                                    Page</a>
+
+                                            </li>
+                                            <li data-nav-id="./Settings/" title=Settings class="sidelist">
+                                                <ul class="sidenavSub-topics">
+                                                    <a href="/sharepoint-helpdesk/modern/admin/settings/">
+                                                        Settings
+                                                    </a>
+                                                    <ul>
+                                                        <li data-nav-id="./User/" title=General class="sidelist"><a
+                                                                href="./settings/general/">General</a>
+                                                            <ul class="sidenavSub-topics">
+                                                                <li data-nav-id="./General-Settings/"
+                                                                    title='Date Format ' class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#date-format">Date
+                                                                        Format
+                                                                    </a>
+                                                                </li>
+                                                                <li data-nav-id="./Email-Notification/" title=Theme
+                                                                    class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#theme">Theme</a>
+                                                                </li>
+                                                                <!-- <li data-nav-id="./Email-Notification/"
+                                                                    title="Teams Option" class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#teams-option">Teams
+                                                                        Option on New Ticket Form</a>
+                                                                </li> -->
+                                                                <li data-nav-id="./Column-Setting/"
+                                                                    title='Display Resolved' class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#display-resolved">
+                                                                        Display Resolved Tab on Home Page</a></li>
+                                                                <li data-nav-id="./Dashboard-Settings/"
+                                                                    title='Display Help Page' class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#display-help">
+                                                                        Display Help Page
+                                                                    </a>
+                                                                </li>
+                                                                <!-- <li data-nav-id="./Dashboard-Settings/"
+                                                                    title='SharePoint Site Collection Home Link'
+                                                                    class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#sharepoint-site-link">SharePoint
+                                                                        Site Collection Home Link
+                                                                    </a>
+                                                                </li> -->
+                                                                <!-- <li data-nav-id="./Add Assets/ "
+                                                                    title=' Open Tickets in New Tab' class="sidelist">
+                                                                    <ul class="sidenavSub-topics"></ul>
+                                                                    <a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#open-tickets">
+                                                                        Open Tickets in New Tab</a>
+
+                                                                </li> -->
+                                                                <li data-nav-id="./Custom-Emails/"
+                                                                    title='Naming Convention' class="sidelist">
+                                                                    <a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#naming-convention">Naming
+                                                                        Convention</a>
+                                                                </li>
+                                                                <li data-nav-id="./Assign-Assets/" title='Recycle Bin'
+                                                                    class="sidelist">
+                                                                    <a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#recycle-bin">
+                                                                        Recycle Bin
+                                                                    </a>
+                                                                </li>
+                                                                <li data-nav-id="./Dashboard-Settings/"
+                                                                    title='Brand Logo ' class="sidelist"><a
+                                                                        href="/sharepoint-helpdesk/modern/admin/settings/general/#brand-logo">Brand
+                                                                        Logo
+                                                                    </a>
+                                                                </li>
+                                                        </li>
+
+
+
+                                                    </ul>
+                                                </ul>
+                                            <li data-nav-id="../Admin-Guide/Administration/"
+                                                title='Ticket Customization' class="sidelist">
+                                                <ul class="sidenavSub-topics"></ul>
+                                                <a
+                                                    href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/">
+                                                    Ticket Customization
+                                                </a>
+                                                <ul>
+                                                    <li data-nav-id="./Assign-Assets/" title='Priority Type'
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#priority-type">
+                                                            Priority Type
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/" title='Request Type'
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#request-type">
+                                                            Request Type
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/" title=Status class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#status">
+                                                            Status
+                                                        </a>
+                                                    </li>
+
+                                                    <li data-nav-id="./Assign-Assets/" title='Ticket Field'
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-field">
+                                                            Ticket Field
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/" title='Ticket Sequenc' e
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-sequence">
+                                                            Ticket Sequence
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Merge Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#merge-tickets">
+                                                            Merge Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Split Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#split-tickets">
+                                                            Split Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='R eview Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#review-tickets">
+                                                            Review Tickets
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li data-nav-id="./Add Assets/ " title='Escalate Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#escalate-tickets">
+                                                            Escalate Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Create ticket automatically'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#create-ticket">
+                                                            Create ticket automatically
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title=' Auto close Tickets' e
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#auto-close">
+                                                            Auto close Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Auto Assign Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#auto-assign">
+                                                            Auto Assign Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Sub Tickets'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#sub-tickets">
+                                                            Sub Tickets
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Ticket Aging reports'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-aging-reports">
+                                                            Ticket Aging Reports
+                                                        </a>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li data-nav-id="./Add Assets/" title="Users/Roles/Permissions"
+                                                class=" sidelist">
+                                                <ul class="sidenavSub-topics"></ul>
+                                                <a href="/sharepoint-helpdesk/modern/admin/settings/role/">
+                                                    Users, Roles, Permissions
+                                                </a>
+                                                <ul>
+                                                    <li data-nav-id="./Assign-Assets/ " title=Add/Edit class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/role/#users">
+                                                            Add/Edit Users
+                                                        </a>
+                                                        <li data-nav-id="./Assign-Assets/ " title=Teams class="sidelist">
+                                                            <a
+                                                                href="/sharepoint-helpdesk/modern/admin/settings/role/#endUsers">
+                                                                Add/Edit End Users
+                                                            </a>
+                                                        </li>
+                                                    <li data-nav-id="./Assign-Assets/ " title=Teams class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/role/#teams">
+                                                            Add/Edit Teams
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/" title=Service class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/role/#service">
+                                                            Service
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/" title='Sub Service'
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/role/#sub-service">
+                                                            Sub-Service
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Assign-Assets/ " title='Advance Permissions'
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/role/#advance">
+                                                            Advance Permissions
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li data-nav-id="./Add Assets/ " title=Integrations class="sidelist">
+                                                <ul class="sidenavSub-topics"></ul>
+                                                <a href="/sharepoint-helpdesk/modern/admin/settings/integration/">
+                                                    Integrations
+                                                </a>
+                                                <ul>
+                                                    <li data-nav-id="./Assign-Assets/ " title=Phone class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/integration/#phone">
+                                                            Phone
+                                                        </a>
+                                                    <li data-nav-id="./Add Assets/ " title='Helpdesk Mailbox'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/integration/#helpdesk-mailbox">
+                                                            Helpdesk Mailbox
+                                                        </a>
+
+                                                    </li>
+
+                                                    <!-- <li data-nav-id="./Add Assets/ " title=' Microsoft Graph API'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/integration/#graph-api">
+                                                            Microsoft Graph API
+                                                        </a>
+
+                                                    </li> -->
+                                                    <li data-nav-id="./Add Assets/ "
+                                                        title='Integrate with HR365 Asset Management' class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/integration/#integrate">
+                                                            Integrate with HR365 Asset Management
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ "
+                                                    title='Integrate Microsoft Form with Helpdesk' class="sidelist">
+                                                    <ul class="sidenavSub-topics"></ul>
+                                                    <a
+                                                        href="/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft">
+                                                        Integrate Microsoft Form with Helpdesk
+                                                    </a>
+
+                                                </li>
+                                                </ul>
+
+                                            </li>
+                                            <li data-nav-id="./Add Assets/ " title=Notification class="sidelist">
+                                                <ul class="sidenavSub-topics"></ul>
+                                                <a href="/sharepoint-helpdesk/modern/admin/settings/notification/">
+                                                    Notification
+                                                </a>
+                                                <ul>
+                                                    <li data-nav-id="./Assign-Assets/ " title=Requester
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/notification/#requester">
+                                                            Requester
+                                                        </a>
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title=Assignee class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/notification/#assignee">
+                                                            Assignee
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li data-nav-id="./Add Assets/ " title=Supervisor class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/notification/#supervisor">
+                                                            Supervisor
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title=Admin class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/notification/#admin">
+                                                            Admin
+                                                        </a>
+
+                                                    </li>
+                                                </ul>
+                                            <li data-nav-id="./Add Assets/ " title=Features class="sidelist">
+                                                <ul class="sidenavSub-topics"></ul>
+                                                <a href="/sharepoint-helpdesk/modern/admin/settings/features/">
+                                                    Features
+                                                </a>
+                                                <ul>
+                                                    <li data-nav-id="./Assign-Assets/ " title=C anned-Responses
+                                                        class="sidelist">
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#canned-responses">
+                                                            Canned Responses
+                                                        </a>
+                                                    <li data-nav-id="./Add Assets/ " title=Customer-Satisfaction
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#customer-satisfaction">
+                                                            Customer Satisfaction
+                                                        </a>
+
+                                                    </li>
+
+                                                    <li data-nav-id="./Add Assets/ " title='Custom Columns'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#custom-column">
+                                                            Custom Columns
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Business Hours'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#business-hours">
+                                                            Business Hours
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Column Settings'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#column-setting">
+                                                            Column Settings
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='SLA Polices'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#sla-policies">
+                                                            Define SLA Polices
+                                                        </a>
+
+                                                    </li>
+                                                    <li data-nav-id="./Add Assets/ " title='Apply SLA Polices'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#apply-sla-policies">
+                                                            Apply SLA Polices
+                                                        </a>
+
+                                                    </li>
+
+
+
+                                                    <!-- <li data-nav-id="./Add Assets/ " title='team code' class="sidelist">
+                                                                                    <ul class="sidenavSub-topics"></ul>
+                                                                                    <a href="/sharepoint-helpdesk/modern/admin/settings/features/#ticket-suffix">
+                        Use team code as ticket suffix
+                        </a>
+
+                                                                                </li> -->
+
+                                                    <li data-nav-id="./Add Assets/ " title='Time-Tracking'
+                                                        class="sidelist">
+                                                        <ul class="sidenavSub-topics"></ul>
+                                                        <a
+                                                            href="/sharepoint-helpdesk/modern/admin/settings/features/#time-tracking">
+                                                            Time Tracking
+                                                        </a>
+
+                                                    </li>
+
+                                                </ul>
+                                                
+                                            <li data-nav-id="./Settings/ " title=Help class="sidelist">
+                                                <a href="/sharepoint-helpdesk/modern/admin/help/">Help</a>
+
+                                            </li>
+                                            
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev " href="../user/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i>
+                            <span class="d-none d-md-block">User Guide</span></a>
+                        <a class="nav nav-next " href="./introduction/ " aria-label="Previous page">
+                            <span class="d-none d-md-block">Introduction</span><i class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a>
+                        <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2 " href=https://www.facebook.com/hr365apps/
+                                aria-label=Facebook><i class=ti-facebook></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2 " href=https://twitter.com/HR365_HRMS
+                                aria-label=Twitter><i class=ti-twitter-alt></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2 "
+                                href=https://www.linkedin.com/company/cubic-logics-india-pvt-ltd aria-label=Linkedin><i
+                                    class=ti-linkedin></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/script.min.js"></script>
+    <script>
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+</body>
+<script src="../../../js/showhidefunction.js"></script>
+<script src="../../../js/header-footer.js"></script>
+<script src="../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>
+
+</html>

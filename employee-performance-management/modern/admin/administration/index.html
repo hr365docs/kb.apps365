@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Performance Management 365 | Admin Guide | Administration</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="Admin Guide for Performance Management 365 - Administration for managing and configuring performance app on Microsoft Teams.">
+
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../employee-performance-management/">Performance Management 365</a></h5>
+                        <a class=back-btn href="../../../../employee-performance-management/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=../Time-off-manager/index.html title="Admin Guide" class="sidelist active">
+
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="epmmodernadmin">
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title> Introduction</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Administration
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>This option is available for HR Manager, HR Head, Admin, HR Manager Admin, and HR Head
+                                Admin. All the above roles could add users to the application, and categories, add KRAs
+                                (Key result areas), and create a KRA template</p>
+
+                            <ul type="">
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#users">Users</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#Department">Department</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#Location">Location</a>
+                                </li>
+                                <li>
+                                    <a href="/employee-performance-management/modern/admin/administration/#job-title">Job
+                                        title</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#categories">Categories</a>
+                                </li>
+
+                                <li>
+                                    <a href="/employee-performance-management/modern/admin/administration/#kra">KRA</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#Goals">Goals</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#Competency&Skills">Competency
+                                        & Skills</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#Badges">Badges</a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#role-template">
+                                        Template</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#1:1-template">
+                                        1:1 Template</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/employee-performance-management/modern/admin/administration/#FeedbackTemp">
+                                        Feedback template</a>
+                                </li>
+
+                            </ul>
+
+
+
+                        </div>
+
+                        <div class="bg-light p-4 common-scroll remove-padding" id="users">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Users
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>
+                                <b>Add users</b>:
+                                Add users feature could be used to add single users. Clients/ Admin can use the primary
+                                key like email id and insert the user from the autosuggestion. The profile of the
+                                individual is auto-populated from M365, if the profile exists on M365, admin can select
+                                the role and add or update the user’s details, and save the file using the save button.
+                            </p>
+
+                            <img src="user_panel.png" onclick="openModal('user_panel.png')" alt="User panel"
+                                width="100%">
+                            <br><br>
+                            <img src="add_user.png" onclick="openModal('add_user.png')" alt="Add user" width="100%">
+
+                            <br>
+                            <br>
+                            <p>
+                                <b> Bulk Add</b>:Using Bulk add option-Multiple users can be uploaded to the platform
+                                using CSV files. To add users in bulk users, download the sample file and update the
+                                details as per the specified format, finally, the file could be uploaded.
+                            </p>
+                            <br>
+                            <br>
+                            <img src="bulk_add.png" onclick="openModal('bulk_add.png')" alt="Bulk add" width="100%">
+                            <br>
+                            <br>
+                            <p><b>Full Sync from M365</b>: The O365 users can be synced or integrated into the
+                                application by clicking on the FULL SYNC button.</p>
+                            <div>
+                                <img src="user_setting.png" onclick="openModal('user_setting.png')"
+                                    alt="Full sync from M365" width="100%">
+                            </div><br>
+                            <div> <img src="setting_save.png" onclick="openModal('setting_save.png')" alt="Save"
+                                    width="100%"></div><br>
+                            <p>
+                                <b> Delta sync from M365</b>: Changes made in O365 can be synced or updated in the
+                                application by clicking on Delta sync button.
+                            </p>
+                        </div>
+
+                        <div class="bg-light p-4 common-scroll remove-padding" id="Department">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Department
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p> This is an option for a department within Administration. By clicking on it, you will be
+                                redirected to the department page.
+                            </p>
+                            <div> <img src="departmentOptions.png" onclick="openModal('departmentOptions.png')"
+                                    alt="Categories" width="100%"></div><br>
+
+                            <p> By clicking the <b>Add Department</b> button at the top, you can create a new
+                                department. Enter the department name in the designated field, and then click Save. Your
+                                department will be saved and will appear in the list.
+                            </p>
+                            <div> <img src="adddepartment.png" onclick="openModal('adddepartment.png')" alt="Categories"
+                                    width="100%">
+                            </div>
+                            <br>
+                            <p> With this function app will pull the Department names present in office 365 user's
+                                profile.
+                            </p>
+                            <div> <img src="syncFromM365.png" onclick="openModal('syncFromM365.png')" alt="Categories"
+                                    width="100%">
+                            </div>
+                            <br>
+                            <p> Use this button to remove multiple departments.
+                            </p>
+                            <div> <img src="multipledeteleDepartments.png"
+                                    onclick="openModal('multipledeteleDepartments.png')" alt="Categories" width="100%">
+                            </div>
+                            <br>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="Location">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Location
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p> This is an option for a location within Administration. By clicking on it, you will be
+                                redirected to the Location page.
+                            </p>
+                            <div> <img src="locations.png" onclick="openModal('locations.png')" alt="Categories"
+                                    width="100%"></div><br>
+
+                            <p> By clicking the <b>Add Location</b> button at the top, you can create a new location.
+                                Enter the location name in the designated field, and then click Save. Your location will
+                                be saved and will appear in the list.
+                            </p>
+                            <div> <img src="addloc.png" onclick="openModal('addloc.png')" alt="location" width="100%">
+                            </div>
+                            <br>
+                            <p> With this function app will pull the Locations names present in office 365 user's
+                                profile.
+                            </p>
+                            <div> <img src="syncloc.png" onclick="openModal('syncloc.png')" alt="location" width="100%">
+                            </div>
+                            <br>
+                            <p> Use this button to remove multiple locations.
+                            </p>
+                            <div> <img src="multipledeleteloc.png" onclick="openModal('multipledeleteloc.png')"
+                                    alt="Categories" width="100%">
+                            </div>
+                            <br>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="job-title">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Job Title</h2>
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p> This is an option for a job title within Administration. By clicking on it, you will be
+                                redirected to the job title page.
+                            </p>
+                            <div> <img src="JT.png" onclick="openModal('JT.png')" alt="job title" width="100%"></div>
+                            <br>
+
+                            <p> By clicking the <b>+ Job title</b> button at the top, you can create a new job title.
+                                Enter the job title name in the designated field, and then click Save. Your job title
+                                will be saved and will appear in the list.
+                            </p>
+                            <div> <img src="JTAdd.png" onclick="openModal('JTAdd.png')" alt="job title" width="100%">
+                            </div>
+                            <br>
+                            <p> With this function app will pull the Job titles names present in office 365 user's
+                                profile.
+                            </p>
+                            <div> <img src="syncJT.png" onclick="openModal('syncJT.png')" alt="job title" width="100%">
+                            </div>
+                            <br>
+                            <p> Use this button to remove multiple job titles.
+                            </p>
+                            <div> <img src="multipledeleteJT.png" onclick="openModal('multipledeleteJT.png')"
+                                    alt="Categories" width="100%">
+                            </div>
+                            <br>
+
+
+
+
+
+                        </div>
+
+                        <div class="bg-light p-4 common-scroll remove-padding" id="categories">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Categories
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>
+                                Different categories which help to categorize KRAs can be created.
+                            </p>
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p>
+                                        Add categories whose sum of weightage should be equal to 100 (total weightage).
+
+                                    </p>
+                                    <div> <img src="categories.png" onclick="openModal('categories.png')"
+                                            alt="Categories" width="100%"></div><br>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="bg-light p-4 common-scroll remove-padding" id="kra">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">KRA (Key result area)
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>
+                                KRAs can be added as mentioned above based on categories.
+                            </p>
+                            <p><b>Add KRA</b>:Single KRA could be added.</p>
+                            <p>
+                                <b>Bulk KRA</b> :Using Bulk add option-Multiple KRA can be uploaded to the platform
+                                using CSV files. To add users in bulk users, download the sample file and update the
+                                details as per the specified format, finally, the file could be uploaded.
+                            </p>
+                            <p><b>Export</b> You can export the KRAs into an excel sheet by clicking on the export
+                                button.</p>
+                            <div><img src="kra.png" onclick="openModal('kra.png')" alt="KRA" width="100%"></div><br>
+                            <div> <img src="add_kra.png" onclick="openModal('add_kra.png')" alt="Add KRA" width="100%">
+                            </div>
+
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="Goals">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Goals-test</h2>
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p> This is an option for a Goals-test within Administration. By clicking on it, you will be
+                                redirected to the Goals-test page.
+                            </p>
+                            <div> <img src="Goals.png" onclick="openModal('Goals.png')" alt="Goals-test" width="100%">
+                            </div><br>
+
+                            <p> By clicking the <b>+ Goals-test</b> button at the top, you can create a new . Enter the
+                                Goals-test name in the designated field, and then click Save. Your Goals-test will be
+                                saved and will appear in the list.
+                            </p>
+                            <div> <img src="addgoal.png" onclick="openModal('JTAdd.png')" alt="Goals-test" width="100%">
+                            </div>
+                            <br>
+                            <div> <img src="addgoal2.png" onclick="openModal('JTAdd.png')" alt="addgoal2" width="100%">
+                            </div>
+                            <br>
+                            <p> The Goals Questionnaire lets you define and create specific objectives tailored to your
+                                team's needs. With this customizable template, you can set clear, measurable goals that
+                                drive performance and align with organizational priorities, enhancing accountability and
+                                motivation for shared success. Transform your aspirations into actionable steps with our
+                                intuitive goal-setting tool!
+                            </p>
+                            <div> <img src="goalpage.png" onclick="openModal('goalpage.png')" alt="Goals-test"
+                                    width="100%">
+                            </div>
+                            <br>
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="Competency&Skills">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Competency & Skills</h2>
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p> This is an option for a Competency & Skills within Administration. By clicking on it,
+                                you will be
+                                redirected to the Competency & Skills page.
+                            </p>
+                            <div> <img src="Competency.png" onclick="openModal('Competency.png')"
+                                    alt="Competency & Skills" width="100%">
+                            </div><br>
+
+                            <p> By clicking the <b>+ Competency & Skills</b> button at the top, you can create a new .
+                                Enter the
+                                Competency & Skills name in the designated field, and then click Save. Your Competency &
+                                Skills will be
+                                saved and will appear in the list.
+                            </p>
+                            <div> <img src="addCompetency.png" onclick="openModal('addCompetency.png')"
+                                    alt="Competency & Skills" width="100%">
+                            </div>
+                            <br>
+                            <div> <img src="addCompetency2.png" onclick="openModal('addCompetency2.png')" alt="addgoal2"
+                                    width="100%">
+                            </div>
+                            <br>
+                            <p> The Competency & Skills feature enables you to identify and create essential skill sets
+                                tailored to your team’s growth. With a flexible template, you can define and track key
+                                competencies that align with organizational objectives, driving both individual and team
+                                performance. This tool helps foster continuous development and ensures your team stays
+                                equipped for success.
+                            </p>
+                            <div> <img src="CompetencyHomepage.png" onclick="openModal('CompetencyHomepage.png')"
+                                    alt="Goals-test" width="100%">
+                            </div>
+                            <br>
+                        </div>
+                        <div class="bg-light p-4 common-scroll remove-padding" id="Badges">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Badges</h2>
+                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>Badges are used to recognize and reward achievements, skills, or contributions in a
+                                community or platform. They serve as a symbol of accomplishment, motivating individuals
+                                to engage more actively. Badges also enhance credibility and create a sense of
+                                competition or collaboration among users. They are widely used in education, gaming, and
+                                professional networks for recognition and encouragement.
+                            </p>
+                            <div> <img src="Badge.png" onclick="openModal('Badge.png')"
+                                    alt="Badge" width="100%">
+                            </div><br>
+
+                            <p>Badge titles now appear with their corresponding icons in the badge list. 
+                            </p>
+                            <div> <img src="Addbadge.png" onclick="openModal('Addbadge.png')"
+                                    alt="Addbadge" width="100%">
+                            </div>
+                            <br>
+                            <p>HR can view all users' praises. 
+
+ 
+<br>
+                                HR can view all users' praises, even if the managers are different. </p>
+                            <div> <img src="Paiseicon.png" onclick="openModal('Paiseicon.png')" alt="addgoal2"
+                                    width="100%">
+                            </div>
+                           
+                            <br>
+                        </div>
+
+                        <div class="bg-light p-4 common-scroll remove-padding" id="role-template">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Template
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>
+                                Admin can create templates based on the job titles. These KRAs are assigned to
+                                users based on their job titles at their appraisal cycle.
+                            </p>
+                            <br>
+                            <p>To add or create the template, start by inserting the Name and selecting a Clone Template
+                                if applicable. Then, fill in the Description, select the Job Title(s), and provide
+                                details like Company, Department, and Location. Once all fields are completed, click the
+                                next button to proceed, and finalize the process by clicking save. </p>
+                            <div>
+                                <img src="templateadd.png" onclick="openModal('templateadd.png')" alt="template"
+                                    width="100%">
+                            </div>
+                            <br>
+                            <div>
+                                <img src="addtemplate2.png" onclick="openModal('addtemplate2.png')" alt="Template"
+                                    width="100%">
+                            </div>
+                            <br>
+                            <img src="savetemplate.png" onclick="openModal('savetemplate.png')" alt="Template"
+                                width="100%">
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="bg-light p-4 common-scroll remove-padding" id="1:1-template">
+                        <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">1:1 Template
+                                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                        </h2>
+                        <p>
+                            A 1:1 meeting (pronounced one-on-one or one-to-one meeting) is a regular check-in
+                            between two people in an organization typically a manager and an employee. It's used to
+                            give feedback, keep each other in the loop, resolve issues, and help the participants
+                            grow in their roles.
+                        </p>
+                        <ul>
+                            <p>Click on the <b>New</b> button from 1:1 template panel.
+                            <div> <img src="new_template.png" onclick="openModal('new_template.png')" alt="New template"
+                                    width="100%"></div><br></p>
+                            <p>To create a 1:1 template fill the data in the required fields and click on the
+                                <b>Create</b> button.
+                            </p>
+                            <div> <img src="fill_template.png" onclick="openModal('fill_template.png')" alt="template"
+                                    width="100%"></div><br></p>
+                            <p>A template will be added in the <b>1:1 Template</b> panel. From here you can edit or
+                                delete the 1:1 template .
+                                <br>
+                            <div> <img src="template_added.png" onclick="openModal('template_added.png')"
+                                    alt="template added" width="100%"></div>
+                            </p><br>
+                            <p>Click on the <b>New</b> button under the <b>1:1</b> tab.
+                                <br>
+                            <div> <img src="schedule.png" onclick="openModal('schedule.png')" alt="schedule"
+                                    width="100%"></div>
+                            </p>
+                            <br>
+                            <p>Fill out all the meeting details in the <b>1:1</b> panel. You can also select
+                                template that is previously created. Select the <b>Recurrence</b> checkbox if you
+                                want that meeting repeats on a regular basis.
+                                <br>
+                            <div> <img src="meeting_save.png" onclick="openModal('meeting_save.png')" alt="meeting"
+                                    width="100%"></div>
+                            </p><br>
+                            <p><b>Recurrence:</b> You can set the <b>Appointment Time</b>, <b>Recurrence
+                                    Pattern</b>-<b>Weekly</b>, <b>Monthly</b>, <b>Quarterly</b>. Also can define
+                                <b>Range of Recurrence</b> and click on the <b>OK</b> button.
+                                <br>
+                            <div> <img src="click_ok.png" onclick="openModal('click_ok.png')" alt="OK" width="100%">
+                            </div>
+                            </p><br>
+                            <p> Now click on the <b>Save</b> button.</p> <br>
+                            <p><b>Meetings:</b> The meeting that you scheduled will be displayed under meetings tab.
+                                You can edit or delete it.
+                                <br>
+                            <div> <img src="all_meeting.png" onclick="openModal('all_meeting.png')" alt="All meeting"
+                                    width="100%"></div>
+                            </p><br>
+                            <p> From here select the user to whom you want to assign task. Now click on <b>Update
+                                    and Complete</b> button.
+                            <div> <img src="task_assign.png" onclick="openModal('task_assign.png')" alt="Task assign"
+                                    width="100%"></div>
+                            </p><br>
+                            <p>Under <b>My Tasks</b> change the status when task is completed. Now click on
+                                <b>Save</b> icon.
+                            <div> <img src="complete.png" onclick="openModal('complete.png')" alt="Complete"
+                                    width="100%"></div>
+                            </p><br>
+                            <div> <img src="general.png" onclick="openModal('general.png')" alt="general" width="100%">
+                            </div>
+                            </p>
+                            <br>
+                            <p>Under <b>Team Tasks</b> change the status when task is completed. Now click on
+                                <b>Save</b> icon.
+                            <div> <img src="team_task.png" onclick="openModal('team_task.png')" alt="team task"
+                                    width="100%"></div><br>
+                            <div> <img src="task_completed.png" onclick="openModal('task_completed.png')"
+                                    alt="task completed" width="100%"></div>
+                            </p>
+                            <br>
+
+                        </ul>
+                    </div>
+                    <div id="FeedbackTemp">
+                        <div class="bg-light p-4 common-scroll remove-padding" id="FeedbackTemplate">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Feedback Template
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+
+                            <p>This is an option for Feedback Template within Administration. By clicking on it, you
+                                will be
+                                redirected to the Feedback Template page.</p>
+                            <div> <img src="Feedback.png" onclick="openModal('Feedback.png')" alt="team task"
+                                    width="100%">
+                            </div><br>
+                            <p>In the Feedback Template, the manager can add multiple feedback template entries.</p>
+                            <div> <img src="FbTemplate.png" onclick="openModal('FbTemplate.png')" alt="team task"
+                                    width="100%"></div><br>
+                            <p>To create the Feedback Template, first give it a name and select the template type. Then,
+                                assign the template to a Department, Title, or User. If you select User, it will show
+                                Assigned to User. After filling in these fields, click the Save button.</p>
+                            <div> <img src="SaveFBtemp.png" onclick="openModal('SaveFBtemp.png')" alt="team task"
+                                    width="100%"></div><br>
+                            <p>And you will also see the categories. To add more categories, click on the 'Add' button.
+                            </p>
+                            <div> <img src="addcate.png" onclick="('addcate.png')" alt="team task" width="100%"></div>
+                            <br>
+                            <p>Then, the default options in the category will be displayed.</p>
+                            <div> <img src="DefaultCategory.png" onclick="('DefaultCategory.png')" alt="team task"
+                                    width="100%"></div><br>
+                            <p>If you don't need any of the default categories, the 'Add' button will provide an option
+                                for you to enter a custom category name in the other field.</p>
+                            <div> <img src="AddCategory.png" onclick="('AddCategory.png')" alt="team task" width="100%">
+                            </div><br>
+                            <p>The category you added will be displayed in the detailed list below. After that, click
+                                the Save button.</p>
+                            <div> <img src="AfterAddCategorys.png" onclick="('AfterAddCategorys.png')" alt="team task"
+                                    width="100%">
+                            </div><br>
+                            <p>Once you have filled in the category and the other fields, you can now save the feedback
+                                template.</p>
+                            <div> <img src="Fina.png" onclick="('Fina.png')" alt="team task" width="100%">
+                            </div><br>
+                            <p>And then, your feedback template will be created and displayed in front of you.</p>
+                            <div> <img src="CreatedFbtemp.png" onclick="('CreatedFbtemp.png')" alt="team task"
+                                    width="100%">
+                            </div><br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                <nav class="pagination mt-3">
+                    <a class="nav nav-prev" href="../roles/" aria-label="Previous page"><i
+                            class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Roles</span></a>
+                    <a class="nav nav-next " href="../settings/" aria-label="Previous page"> <span
+                            class="d-none d-md-block">Settings</span><i class="ti-arrow-right ml-2"></i></a>
+                </nav>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script src="../../../../js/epm-modern-admin.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+
+</body>
+
+</html>

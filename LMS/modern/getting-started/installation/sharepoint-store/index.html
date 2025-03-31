@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Learning Management System 365 | Installation | Sharepoint-Store</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Guide for installing Learning Management System 365 from the SharePoint Store, ensuring easy integration and setup within your Microsoft ecosystem.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+           <!-- Google Tag Manager -->
+           <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+                <!-- Google Tag Manager (noscript) -->
+                <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src=logo.png alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                     <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+          <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"><a href="../../../../../LMS/">Learning Management System 365</a></h5>
+                        <a class=back-btn href="../../../../../sharepoint-employee-onboarding/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Installation
+                                class="sidelist">
+                                <a href="../../installation/">
+                                    Installation
+                                </a>
+                                <ul>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/install.html
+                                       title="Sharepoint Store" class="sidelist active">
+                                        <a href="../sharepoint-store/">
+                                            Installation of Learning Management System 365 from SharePoint Store
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title="Using App File" class="sidelist">
+                                        <a href="../using-app-file/">
+                                            Installation of Learning Management System 365 from App Catalog
+                                        </a>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/install.html
+                                    title="Microsoft Teams" class="sidelist">
+                                     <a href="../../installation/microsoft-teams/">
+                                         Installation of Learning Management System 365 from Microsoft teams
+                                     </a>
+                                 </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title> Installation of applications from SharePoint Store</h2> -->
+                        <!-- <h6>Here we have two option to put app file into the app catalog</h6> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="" >Installation of
+                                Learning Management System 365 from SharePoint Store <i class="fas fa-link"
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                         
+                            <h4 id="_dashboards"><a class="header-icon-link highlight" href="#">Prerequisites:<i class="fas fa-link"
+                                style="font-size:12px; color:lightgray;"></i></a> </h4>
+                <ol>
+                  
+                      <li>The application can only be installed by a Global Admin or SharePoint Admin by following the steps outlined below.</li>
+                        <li>The application’s features rely on APIs, which can be enabled by a Global Admin with the necessary permissions.</li></ol>
+                           </div>
+                            <ol>
+                                <br>
+                                <li>
+                                    Navigate to the app catalog page using the following URL format:
+                                    <br>
+                                     <b><div>
+                                        <b style="word-break: break-all;">https://yourtenantname.sharepoint.com/sites/appcatalog/_layouts/15/tenantAppCatalog.aspx/manageApps</b>
+                                    </div></b>
+                                    <br>
+                                    <p>Replace <em><b>yourtenantname.sharepoint.com</b></em> with your actual tenant name, for example: <em><b>cubiclogics.sharepoint.com</b></em>.
+                                        <br>
+                                    Once you are on the page, click on the "Classic Experience" options.</p>
+                                    <br>
+                                    <div><img src="new_classic.png" onclick="openModal('new_classic.png')" alt="Classic" width="100%"
+                                        height="auto"></div>
+                                </li>
+                                
+                    <br>
+                                   
+                    <li>Click on <b>setting gear icon</b> and select on <b>Add an app</b>.
+                        <br><br>
+                        <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"width="100%" height="auto"></div>
+                        <br>
+                        <div><img src="add_an_app.png" onclick="openModal('add_an_app.png')" alt="Add an app" width="100%" height="auto"></div></li>
+                                      <br>
+                                
+                                <li>Click on <b>SharePoint Store</b> and type <b>Apps365</b> in search box.
+                                    All applications from Apps365
+                                    will sort.</li>
+                                <br>
+                                <div><img src="apps365SharePointStore.png" onclick="openModal('apps365SharePointStore.png')" alt="Sahrepoint store"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <br>
+
+                                <li>Click on <b>Learning Management System 365</b> application.</li>
+                                <br>
+
+                                <div><img src="mod.png" onclick="openModal('mod.png')" alt="Click OBM 365" width="100%"
+                                        height="auto"></div>
+
+
+                               
+                                    <br>
+                                    <li>Click on <b>Add to Apps site</b>.</li>
+                                    <br>
+                                    <div><img src="add_catalog.png" onclick="openModal('add_catalog.png')" alt="Add to app catalog"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <li>Select the checkbox (Enable this app and add it to all sites ) and click on <b>Add</b> button.
+                                  
+                                     
+                                        
+                                        </li>
+                                       
+                                
+                               <br>
+                                    <div><img src="enable.png" onclick="openModal('enable.png')"
+                                            alt="Enable" width="100%" height="auto"></div><br>
+                                            <div><img src="enable_add.png" onclick="openModal('enable_add.png')"
+                                                alt="Enable add" width="100%" height="auto"></div>
+                                                <div class="notices note">
+                                                    <div class="paragraph">
+                                                        <p> Now you can make this solution or application package available for all
+                                                            sites in the
+                                                            organization, once the application is installed, later you can
+                                                            remove the app from all sites.
+                                                            <br>
+                                                            <br>
+                                                            By performing these actions, the selected application package will be downloaded from the Microsoft SharePoint Store into your tenant.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                    <br>
+                                    <li>
+                                        A dialog box will open click on the <b>Go to API acess page</b>.
+                                      
+                                        <div>  <br><img src="api.png" onclick="openModal('api.png')"
+                                            alt="API" width="100%" height="auto"></div>
+                                    <br>
+                                    </li>
+                              
+                                <li>
+                                <p> On SharePoint admin center page,From left panel under advanced click on API access option under pending request, there are 3 requests (Presence.Read.All, User.Read.All, and MailboxSettings.Read) select and click on approve one by one for all the 3 requests.</p>
+                            </p>
+                                                                                           <div><img src="api_permission.png" onclick="openModal('api_permission.png')"
+                                                                                               alt="API permission" width="100%" height="auto"></div>
+                                                                                       <br>
+                                <div><img src="added.png" onclick="openModal('added.png')"
+                                    alt="Added" width="100%" height="auto"></div></li>
+                            <br>
+                                    <li>Go to Location (i.e., Site collection or subsite) where you want to install the <b>Learning Management System 365</b> application.</li>
+                                  
+                                    <div class="notices note">
+                                        <div class="paragraph">
+                                            <p> We have to add Learning Management System 365 as the web part on the page.
+
+                                                </p>
+                                        </div>
+                                    </div>
+
+                                  
+                                    <br>
+
+                                    <li>Now click on <b>+ icon</b> and then select the Learning Management System
+                                        365 as shown in below.</li>
+                                    <br>
+                                    <div><img src="adding_newOBM.png" onclick="openModal('adding_newOBM.png')" alt="Plus icon"
+                                        width="100%" height="auto"></div>
+                                        <br>
+                                    <div><img src="select_newOBM.png" onclick="openModal('select_newOBM.png')" alt="Select OBM"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                    <li>You can also change the title areas as plain by clicking on
+                                        <b>Edit</b> icon and selecting Plain for better look as shown in
+                                        below.
+                                    </li>
+                                    <br>
+
+
+                                    <div><img src="edit_title.png" onclick="openModal('edit_title.png')" alt="Edit title"
+                                            width="100%" height="auto"></div>
+                                    <br>
+
+                                    <li>Finally click on <b>Publish</b> button.</li>
+                        <br>
+                        <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button" width="100%"
+                            height="auto"></div>
+                            <br>
+                            <div><img src="obm_app.png" onclick="openModal('obm_app.png')" alt="OBM app" width="100%"
+                                height="auto"></div>
+                                    <li>
+                                        Finally, refresh the page.
+                                    </li>
+
+
+                    </ol>
+                    <br>
+                    <h4>How to remove this solution available to all sites in the organization</h4>
+                    <br>
+                    <ol>
+                        <li>
+                            Now select the Learning Management System 365, click on files and then the deploy icon. 
+                            <br><br>
+                            <div><img src="remove.png" onclick="openModal('remove.png')" alt="Remove"
+                                width="100%" height="auto"></div>
+                        </li>
+                        <br>
+                        <li>
+                            Now unselect the check box and finally click on deploy button.
+ 
+                            <br><br>
+                            <div><img src="deploy__.png" onclick="openModal('deploy__.png')" alt="Deploy"
+                                width="100%" height="auto"></div>
+                        </li>
+                    </ol>
+                    <div class="notices note">
+                        <div class="paragraph">
+                            <p>There are two types of installations:
+                                <br>
+                                <br>
+                               1. Installation via package upload in the app catalog site.
+                               <br>
+                               2. Installation from the SharePoint store (AppSource).
+                               <br>
+                               <br>
+                                If you delete the package installation and reinstall the app from
+                                the SharePoint store, or vice versa, it will not impact or result in
+                                data loss. This is because the application's data is stored safely
+                                in SharePoint lists, which remain unaffected by the installation
+                                method.</p>
+                        </div>
+                        <br>
+                    </div>
+                        </div>
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../../installation/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i>
+                                <span class="d-none d-md-block">Installation</span></a>
+                            <a class="nav nav-next" href="../../installation/using-app-file/" aria-label="Previous page">
+                                <span class="d-none d-md-block">App catalog</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                        href=https://www.hr365.us/sla/>SLA.</a>
+                    <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                        href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                        href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                    Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                    
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+           function openModal(src) {
+  
+  document.getElementById("imageId").src= src;
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+  
+}                       
+                              
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML=date;
+       </script>
+       <script src="../../../../../js/header-footer.js"></script>
+</body>
+
+</html> 

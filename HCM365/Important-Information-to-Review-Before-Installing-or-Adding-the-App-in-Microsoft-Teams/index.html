@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>CLM 365 | Microsoft Teams</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Employee Directory - HR365">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+</head>
+
+<body>
+    <section class="single  pb-0">
+        <div class="container container-padding">
+            <div>
+
+                <div>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title> Installation of applications from SharePoint Store</h2> -->
+                        <!-- <h6>Here we have two option to put app file into the app catalog</h6> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Must-Read Before
+                                    Proceeding<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h3>
+                            <p>Here’s the information on how an app in Microsoft Teams interlinks with SharePoint.</p>
+                            <p>There are two locations in Microsoft Teams where the app can be installed:</p>
+                            <ol>
+
+                                <li>Microsoft Teams Personal (Side Navigation)</li>
+                                <li>Microsoft Teams Channel</li>
+                            </ol>
+                            <div>
+                                <h5 style="color: var(--primary-color);">
+                                    1. Microsoft Teams Personal App<br>
+                                </h5> <br>
+                                <p>The Microsoft Teams Personal app is located in the side navigation within Teams,
+                                    as shown below.</p>
+                                <div><img src="TeamApp.png" onclick="openModal('TeamApp.png')" alt="TeamsApp"
+                                        width="100%" height="auto"></div><br>
+                                <p>The data for the Microsoft Teams personal app is stored in the root site of
+                                    SharePoint. If you would like to use the app within SharePoint as well, you’ll
+                                    need to add it to a web part on the root site page.</p>
+                                <br>
+                                For example:
+                                <br>
+                                <br>
+                                <ul>
+                                    <li>• Root Site URL: https://YourTenantName.sharepoint.com</li>
+                                    <li>• Example Root Site: If your tenant name is "Megazap" your root site URL
+                                        will be https://megazap.sharepoint.com.</li>
+                                </ul>
+                                <br>
+                                <br>
+                                <div><img src="home.png" onclick="openModal('home.png')" alt="TeamsApp"
+                                        width="100%" height="auto"></div><br>
+                                <p>The app is installed on the root site by adding it as a web part on the site
+                                    page.</p>
+                                <br>
+                                <br>
+
+                                <div><img src="RootSite.png" onclick="openModal('RootSite.png')" alt="TeamsApp"
+                                        width="100%" height="auto"></div><br>
+                                <p>If you’ve already installed the app on a SharePoint site other than the root site
+                                    and want to install it in Microsoft Teams as a Personal app, you can proceed
+                                    with the installation. However, please note that the data from the SharePoint
+                                    app will not be reflected in the Microsoft Teams Personal app. This will be a
+                                    fresh installation, requiring all settings to be reconfigured.</p>
+                                <br>
+                                <h5 style="color: var(--primary-color);">2. MS teams channel app.</h5>
+                                <br>
+                                <p>If you have already installed the app in a SharePoint site collection other than the
+                                    root site, completed all configurations, and populated it with data, and you want to
+                                    use the same setup and data in Microsoft Teams, you can install the app as a Teams
+                                    channel app. For every Teams SharePoint site, there will be a corresponding channel
+                                    in Microsoft Teams.</p>
+                                    <br>
+                                    <p> <b>Example:</b> Suppose your Teams SharePoint site is named Supportservices. You can install the app by adding it as a web part on the site page at:
+                                        <br>
+                                        <p>https://megazap.sharepoint.com/SitePages/TMP365.</p>
+                                        </p>
+                                        <div><img src="SiteSS.png" onclick="openModal('SiteSS.png')" alt="TeamsApp"
+                                            width="100%" height="auto"></div><br>
+                                            <p>To use the same app with the existing configuration and data from the SharePoint site in Microsoft Teams, follow these steps:</p>
+                                            <ol>
+                                                <li>Navigate to the Teams workspace that is linked to the SharePoint site (with the same name as the SharePoint site).</li>
+                                                <li>In that team’s channel, click the "+" icon at the top to add a new tab.</li>
+                                                <li>Select the app from the list, add it to the channel, and save it.</li>
+                                            </ol>
+                                            <br>
+                                            <p>This will enable the app in the Teams channel, utilizing the same configuration and data from the linked SharePoint site.</p>
+                                            <br>
+                                            <div><img src="CreateChannel.png" onclick="openModal('CreateChannel')" alt="TeamsApp"
+                                                width="100%" height="auto"></div><br>
+                                                <p> The Teams app is now installed in the Teams channel. The data for the Teams channel app is stored in its corresponding SharePoint site.</p>
+                                                <br>
+                                                <div><img src="Teams.png" onclick="openModal('Teams.png')" alt="TeamsApp"
+                                                    width="100%" height="auto"></div><br>
+                                                    <br>
+                                                    <p><b>Conclusion:</b></p>
+                                                   
+                                                    <ul>
+                                                        <li>•	The data for the Teams Personal app is stored in the SharePoint root site.</li>
+                                                        <li>•	The data for the Teams channel app is stored in the corresponding SharePoint site linked to that channel.</li>
+                                                        <li>•	An app installed on a SharePoint site other than the root site, with its own settings and data, will not reflect in the Teams Personal app, as it requires a fresh setup.</li>
+                                                    </ul>
+                            </div>
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev"
+                                href="/sharepoint-employee-directory/modern/getting-started/installation/microsoft-teams/"
+                                aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>
+                                <span class="d-none d-md-block">Installation of CLM 365 from Microsoft Teams</span></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <script src="../../../../../js/script.min.js"></script>
+
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../../.././js/header-footer.js"></script>
+</body>
+
+</html>

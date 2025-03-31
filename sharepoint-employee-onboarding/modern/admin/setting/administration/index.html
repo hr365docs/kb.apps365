@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset=utf-8>
+  <title>Employee Onboarding 365 | Admin Guide | Settings | Administration</title>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=generator content="Hugo 0.92.2">
+  <meta name=description content="Admin guide for the Administration section in Employee Onboarding 365, providing tools to manage user roles, permissions, and system configurations for efficient onboarding.">
+  <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+  <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+  <link rel=icon href=# type=image/x-icon>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato
+    }
+  </style>
+  <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+  <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+             <!-- Google Tag Manager -->
+             <script>(function (w, d, s, l, i) {
+              w[l] = w[l] || []; w[l].push({
+                  'gtm.start':
+                      new Date().getTime(), event: 'gtm.js'
+              }); var f = d.getElementsByTagName(s)[0],
+                  j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                      'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+      <!-- End Google Tag Manager -->
+</head>
+
+<body>
+                  <!-- Google Tag Manager (noscript) -->
+                  <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+  <header class="shadow-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+          <img src="../../../../../images/logo_.png" width="100%" height="auto" alt="HR365" />
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+           <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+          <!-- <select class=lang-list id=select-language onchange="location=this.value"><option id=en value=https://github.com/hr365docs/My-project.git/ selected>En -->
+          <!-- </option><option id=fr value=https://github.com/hr365docs/My-project.git/fr/>Fr</option></select> -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="single section-sm pb-0">
+   <div class="container container-padding">
+      <div class=row>
+        <div class=col-lg-3>
+          <div class=sidebar>
+            <h5 class="mbHeading" style="color:SlateBlue"><a href="../../../../../sharepoint-employee-onboarding/">Employee Onboarding 365</a></h5>
+            <a class=back-btn href="../../../../../sharepoint-employee-onboarding/" aria-label=back></a>
+            <ul class=list-styled>
+              <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title="Admin Guide" class="sidelist
+    active">
+                <a href="../../../admin/">
+                  Admin Guide
+                </a>
+                <ul id="obm-modern-admin">
+                </ul>
+          </div>
+        </div>
+        <div class=col-lg-9>
+          <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+
+            <div class="bg-light p-4 remove-padding">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Administration<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <div class="notices note">
+                <div class="paragraph">
+                  <p>You must have <b>Admin</b> role to access <b>Administration</b>.</p>
+                </div>
+              </div>
+              In <b>Administration</b>, you have a number of menu items to configure various aspects of the system.
+              <br><br>
+              <li>
+                <a href="./#categories">
+                  Categories
+                </a>
+              </li>
+              <li>
+                <a href="./#departments">
+                  Departments
+                </a>
+              </li>
+              <li>
+                <a href="./#activity-type">
+                  Activity Type
+                </a>
+              </li>
+              <li>
+                <a href="./#standard-task">
+                  Standard Task
+                </a>
+              </li>
+              <li>
+                <a href="./#positions">
+                  Positions
+                </a>
+              </li>
+              <li>
+                <a href="./#employee-types">
+                  Employee Types
+                </a>
+              </li>
+              <li>
+                <a href="./#location">
+                  Location
+                </a>
+              </li>
+              <li>
+                <a href="./#reason-for-offboard">
+                  Reason For Offboard
+                </a>
+              </li>
+              <li>
+                <a href="./#notice-period">
+                  Notice Period
+                </a>
+              </li>
+              <br>
+              <div><img src="administration.png" onclick="openModal('administration.png')" alt="administration" width="100%"
+                  height="auto"></div>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="categories">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Categories <i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                Catagories will reflects in the <a href="../administration/#standard-task">Standard Task</a>.
+                <br>
+                <br>
+                <u><b>Add catagories</b></u>: From here you can add categories and process as per your requirement.
+                <br>
+                <br>
+                <div><img src="catagory.png" onclick="openModal('catagory.png')" alt="Categories" width="100%" height="auto">
+                </div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Add</b>, this displays <b>Add Category</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Category</b> name and select the <b>Process Type</b> as per your requirement.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    <p>The categories will now reflect in the <b>Standard Task</b> under Administration from side
+                      navigation panel.</p>
+                    <div><img src="category_.png" onclick="openModal('category_.png')" alt="Add task" width="100%"
+                        height="auto"></div>
+                  </li>
+                </ol>
+                <br>
+                <b>Search </b>: From here you can search different fields as per <b>Name</b> and <b>Process</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br><br>
+            
+
+                <b>Edit</b>:- You can edit only role. Click the edit icon, this display <b>Edit User</b> page. Update
+                the role and click on <b>Update</b> button.
+                <br>
+               
+
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="departments">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Departments <i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                From here you can add department and add admin as per your requirement.
+                <br><br>
+                <u> <b>Add department</b></u>
+                <br><br>
+                <ol>
+                  <li>
+                    Click on <b>+ Departments</b>, this displays <b>Add Department</b> page.
+                    <br><br>
+                    <div><img src="department.png" onclick="openModal('department.png')" alt="department" width="100%"
+                        height="auto"></div>
+                  </li>
+                  <br>
+                  <li>
+                    Add the <b>Department</b> and search the <b>Admin</b>.
+                    <br><br>
+                    <div><img src="depart.png" onclick="openModal('depart.png')" alt="Submit Department" width="100%" height="auto">
+                    </div>
+                  </li>
+                  <br>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    <p>The department now reflects in the <b>Basic Information</b> tab of <b>Onboard</b> page.</p>
+                    <div><img src="depart_.png" onclick="openModal('depart_.png')" alt="Department dropdown" width="100%" height="auto">
+                    </div>
+                  </li>
+                </ol>
+                <br>
+
+                <b>Sync from M365</b>: If you click, it will fetch departments available in M365 and push the department
+                names in list.
+                <br>
+                <br>
+                <b>Search </b>: From here you can search different fields as per <b>Name</b> and <b>Admin</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit department and/or admin. Click the edit icon, this display <b>Edit
+                  Department</b> page. Update the department and/or admin and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="activity-type">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Activity Type<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                The activity type reflects in the <a href="../administration/#standard-task">Standard Task</a>.
+                <br><br>
+                From here you can add <b>Activity Type</b> and <b>Admin</b> as per your requirement.
+                <br>
+                <br>
+                <u> <b>Add activity type</b></u>
+                <br>
+                <br>
+                <div><img src="activity.png" onclick="openModal('activity.png')" alt="Add activity type" width="100%" height="auto">
+                </div>
+
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Activity Type</b>, this displays <b>Add Activity Type</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Activity Type</b> and search the <b>Admin</b>.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    <p>The activity type will now reflects in the Standard Task under Administration from side
+                      navigation panel.
+                    
+                    <div><img src="activity_.png" onclick="openModal('activity_.png')" alt="Activity dropdown" width="100%"
+                        height="auto"></div>
+                    </p>
+                  </li>
+                </ol>
+                <br>
+
+
+                <b>Search </b>: From here you can search different fields as per <b>Name</b> and <b>Admin</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit activity type and/or admin. Click the edit icon, this display <b>Edit
+                  Activity type</b> page. Update the activity type and/or admin and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="standard-task">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Standard Task<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                <b>Standard Task</b> settings are managed to create the <a href="../administration/#task-template">Task
+                  Templates</a>.
+                <br>
+
+
+                From here you can create <b>Standard Task</b> as per your requirement.
+                <br>
+                <br>
+                <u> <b>Standard Task</b></u>
+                <br><br>
+
+                <div><img src="standard_task.png" onclick="openModal('standard_task.png')" alt="Standard Task" width="100%"
+                    height="auto"></div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Task</b>, this displays <b>Add Task</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Task Name</b>, <b>Process Type</b>, <b>Category</b>, <b>Resolution Days</b>,
+                    <b>Department</b>, <b>Activity Type</b>, <b>Task Assigned Type</b> and <b>Remarks</b>.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    You can attach necessary documents.
+                  </li>
+                  <li>
+                    Click on <b>Submit</b> button.
+                  </li>
+
+                </ol>
+                <br>
+                <b>Task Name </b>: Here you can create the task for the process of <b>OnBoarding</b> or
+                <b>OffBoarding</b>.
+                <br><br>
+                <b>Process Type </b>: Here you have two process namely <b>OnBoarding</b> or <b>OffBoarding</b>. You can
+                choose base on your requirements.
+                <br><br>
+                <b>Category </b>: This field is available based on the entries in <a
+                  href="../administration/#categories">Categories</a> from Administration Panel.
+                <br><br>
+                <b>Resolution Days </b>: Here you can add the minimum number of days required to complete the task.
+                <br><br>
+                <b>Department </b>: This field is available based on the entries in <a
+                  href="../administration/#departments">Department</a> from Administration Panel.
+                <br><br>
+                <b>Activity Types </b>: This field is available based on the entries in <a
+                  href="../administration/#activity-type">Activity Types</a> from Administration Panel.
+                <br><br>
+                <b>Task Assigned Type </b>: Here you can assign the task to <b>Reporting Manager</b> or <b>Regular</b>.
+                In regular you can assign to M365 members or teams(HR, IT and Admin).
+                <br><br>
+                <b>Remarks </b>: Here you can write any particular requirements for completion of the task.
+                <br><br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit <b>Task Name</b>, <b>Process Type</b>, <b>Category</b>, <b>Resolution
+                  Days</b>, <b>Department</b>, <b>Activity Type</b>, <b>Task Assigned Type</b> and <b>Remarks</b>. Click
+                the edit icon, this display <b>Edit Location</b> page. Update the fields which you want to update and
+                click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="task-template">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Task Template<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                Task templates reflects in <b>Task</b> tab of <b>Onboard</b> page.
+                <br>
+                From here you can create <b>Task Template</b> as per your requirement.
+                <br><br>
+
+                <u> <b>Task Templates</b></u>
+                <br><br>
+
+                <div><img src="task_template.png" onclick="openModal('task_template.png')" alt="Task Templates" width="100%"
+                    height="auto"></div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Add</b>, this displays <b>Add Task Templates</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Template Name</b> and <b>Process Type</b>.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Enable the <b>Default</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Default</b> toggle, then it will dispaly the task templates by default in their respective componenets.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Select the admin which you can update from <b>Activity type</b>.Select the actions from the list by
+                    checking the checkbox as per you requirement.
+                  </li>
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+
+                </ol>
+                <br>
+
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit <b>Template Name</b> and actions. Click the edit icon, this display <b>Edit
+                  Task Template</b> page. Update the fields which you want to update and click on <b>save</b> button.
+                <div class="notices note">
+                  <div class="paragraph">
+                    <p>You can clone the task by clicking on <b>Colne</b> button.</p>
+                  </div>
+                  <br>
+
+              </ul>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="positions">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Positions<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                From here you can add position as per your requirement.
+                <br><br>
+                <u> <b>Add Positions</b></u>
+                <br><br>
+                <div><img src="position.png" onclick="openModal('position.png')" alt="Add Positions" width="100%" height="auto">
+                </div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Position</b>, this displays <b>Add Position</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Position</b>.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Submit</b> button.
+                  </li>
+                  <li>
+                    The postion now reflects in the <b>Basic Information</b> tab of <b>Onboard</b> page.
+                  </li>
+                </ol>
+                <br>
+
+                <b>Sync from M365</b>: If you click, it will fetch position available in M365 and push the position
+                names in list.
+                <br>
+                <br>
+                <b>Search </b>: From here you can search different fields as per <b>Name</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit postion name. Click the edit icon, this display <b>Edit Postion</b> page.
+                Update the <b>Employee Type</b> and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="employee-types">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Employee Type<i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+                From here you can add position as per your requirement.
+                <br><br>
+                <u> <b>Add Employee Type</b></u>
+                <br><br>
+                <div><img src="employee_type.png" onclick="openModal('employee_type.png')" alt="Add Employee Type" width="100%"
+                    height="auto"></div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Type</b>, this displays <b>Add Employee Type</b> page.
+                  </li>
+                  <li>
+                    Add the <b>Employee Type</b>.
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Submit</b> button.
+                  </li>
+                  <li>
+                    The employee type now reflects in the in the <b>Basic Information</b> tab of <b>Onboard</b> page.
+                  </li>
+                </ol>
+                <br>
+
+
+                <b>Search </b>: From here you can search different fields as per <b>Type</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit <b>Employee Type</b>. Click the edit icon, this display <b>Edit Employee
+                  Type</b> page. Update the <b>Employee Type</b> and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="location">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Location <i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+
+                From here you can add location as per your requirement.
+                <br><br>
+                <u>
+                  <b>Add Location</b>
+                </u>
+                <br><br>
+                <div><img src="location.png" onclick="openModal('location.png')" alt="Add Location" width="100%" height="auto">
+                </div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Location</b>, this displays <b>Add Location</b> page.
+                  </li>
+                  <li>
+                    Enter the <b>Zip code</b>.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enter zip code only, as city reflects automatically.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Enable the <b>Active</b> toggle.
+                    <div class="notices note">
+                      <div class="paragraph">
+                        <p>You must enable the <b>Active</b> toggle, then only links will be displayed.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    The postion now reflects in the home page.
+                  </li>
+                </ol>
+                <br>
+                <b>Sync from M365</b>: If you click, it will fetch location available in M365 and push the location
+                names in list.
+                <br>
+                <br>
+
+                <b>Search </b>: From here you can search different fields as per <b>Type</b>.
+                <br>
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>:- You can edit <b>Zip code</b>. Click the edit icon, this display <b>Edit Location</b> page.
+                Update the <b>Zip Code</b> and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="reason-for-offboard">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Reason For Offboard <i
+                    class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+
+
+                From here you can add <b>Reason For Offboard</b> as per your requirement.
+                <br><br>
+                <u><b>Add Reason for Offboard</b></u>
+                <br><br>
+                <div><img src="reason_for_offboard.png" onclick="openModal('reason_for_offboard.png')" alt="Reason for Offboard"
+                    width="100%" height="auto"></div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Add</b>, this displays <b>Add Reason</b> page.
+                  </li>
+                  <li>
+                    Enter the <b>Reason For Offboard</b>.
+
+                  </li>
+
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    The reason for offboard now reflects in the in the <b>Basic Information</b> tab of <b>Offboard</b>
+                    page.
+                  </li>
+                </ol>
+                <br>
+
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>: You can edit <b>Reason For Offboarding</b>. Click the edit icon, this display <b>Edit
+                  Reason</b> page. Update the <b>Reason For Offboarding</b> and click on <b>Update</b> button.
+                <br>
+            </div>
+            <div class="bg-light p-4 remove-padding common-scroll" id="notice-period">
+              <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Notice Period <i class="fas fa-link"
+                    style="font-size:12px; color:lightgray;"></i></a> </h2>
+              <br>
+              <ul class=page-list>
+
+
+
+                From here you can add <b>Notice Period</b> as per your requirement.
+                <br><br>
+                <u><b>Add Notice Period</b></u>
+                <br><br>
+                <div><img src="notice_period.png" onclick="openModal('notice_period.png')" alt="Add Notice Period" width="100%"
+                    height="auto"></div>
+                <br>
+                <ol>
+                  <li>
+                    Click on <b>+ Add</b>, this displays <b>Add Notice Period Days</b> page.
+                  </li>
+                  <li>
+                    Enter the <b>Notice Period Days</b>.
+
+                  </li>
+
+                  <li>
+                    Click on <b>Save</b> button.
+                  </li>
+                  <li>
+                    The notice period now reflects in the in the <b>Basic Information</b> tab of <b>Offboard</b> page.
+                  </li>
+                </ol>
+                <br>
+
+                <br>
+                <b>Delete </b>: Click the delete icon, this displays a dialog box. Click <b>Yes</b> button.
+                <br>
+                <br>
+                <b>Edit</b>: You can edit <b>Notice Period Days</b>. Click the edit icon, this display <b>Edit Notice
+                  Period Days</b> page. Update the <b>Notice Period Days</b> and click on <b>Update</b> button.
+                <br>
+            </div>
+
+            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+            <nav class="pagination mt-3">
+              <a class="nav nav-prev" href="../../set-up-of-application/system-setting/" aria-label="Previous page"><i
+                  class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">System Setting</span></a>
+              <a class="nav nav-next" href="../../report/" aria-label="Previous page"> <span
+                  class="d-none d-md-block">Report</span><i class="ti-arrow-right ml-2"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+      <div class="mySlides">
+        <img src="" id="imageId" style="width:100%">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a href="https://www.hr365.us/sla/">SLA.</a>
+            <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+              href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+        
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../../../js/script.min.js"></script>
+  <script>
+    function openModal(src) {
+
+      document.getElementById("imageId").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+
+    }
+
+    date = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = date;
+  </script>
+  <script src="../../../../../js/header-footer.js"></script>
+  <script src="../../../../../js/showhidefunction.js"></script>
+  <script src="../../js-modern-admin/obm-modern-admin.js"></script>
+</body>
+
+</html>

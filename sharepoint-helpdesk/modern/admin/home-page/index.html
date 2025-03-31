@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Helpdesk 365 | Admin Guide | Home-Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="HR365 Helpdesk Admin Guide provides comprehensive information on setting up, managing, and using the Helpdesk 365 application.">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../sharepoint-helpdesk/">Helpdesk 365</a>
+                        </h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>Home Page</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <!-- <ul class=page-list> -->
+
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Home Page
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                In home page, you have data of Unassigned, Teams Tickets, Teams Closed, Ticket Mailbox,
+                                My Tickets, Requested by Me, and My Closed tickets.
+                                <br><br>
+                                <p>There are Three options in Home Page to display the tickets </p>
+
+                                <ol type="I">
+
+                                    <li>Classic View</li>
+                                    <li>Kanban View</li>
+                                    <li>Modern View</li>
+                                </ol>
+                                <br>
+                                <div><img src="ViewList.png" onclick="openModal('ViewList.png')" alt="View" width="100%"
+                                        height="auto"></div>
+                                <br>
+                                <h4>Classic view</h4>
+                                <ul style="list-style-type:disc">
+                                    <li>Tickets will be highlighted with the different colours on the basis of ticket
+                                        Priority</li>
+
+                                    <li>Bell icon notification for unread tickets on the home page.</li>
+                                </ul>
+                                <br>
+                                <div><img src="tableview.png" onclick="openModal('tableview.png')" alt="View"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <h4>Kanban view</h4>
+                                <br>
+                                <!-- <p>On click of this icon kanban view will be opened</p>
+                                <div><img src="kanbanview.png" onclick="openModal('kanbanview.png')" alt="Home kanban"
+                                        width="100%" height="auto"></div>
+                                <br> -->
+
+                                <p>You can drag and drop tickets to change the status of ticket in kanban view</p>
+
+                                <div><img src="Kanban.png" onclick="openModal('Kanban.png')" alt="Home kanban"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+
+                            </ul>
+                            <h4>Modern View.</h4>
+                            <div><img src="modernview.png" onclick="openModal('modernview.png')" alt="Modern View"
+                                    width="100%" height="auto"></div> <br>
+                            <br>
+                            <h4>Sort</h4>
+                            <p>Click on this button to sort data by various fields such as Teams, Services, Request
+                                Type, and more in ascending or descending order.</p>
+                            <div><img src="sorting.png" onclick="openModal('sorting.png')" alt="sorting" width="100%"
+                                    height="auto"></div> <br>
+                            <br>
+                            <p>Sorting options include Teams, Services, Sub Services, Request Type, Priority, and more,
+                                with both ascending and descending order controls.</p>
+                            <div><img src="Sort.png" onclick="openModal('Sort.png')" alt="sorting" width="100%"
+                                    height="auto"></div> <br>
+                            <br>
+
+                            <h4>Ticket Creation</h4>
+
+                            <p>From here, users can raise tickets for any service. To raise tickets, follow the below
+                                steps:</p>
+
+                            <li>Click on the <b>+ New ticket </b> on the Home page, this displays the new ticket page.
+                            </li>
+                            <br>
+                            <div><img src="NewTicket.png" onclick="openModal('NewTicket.png')" alt="Add Ticket"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>To create a new ticket, select the relevant fields such as Title, Teams, Services,
+                                Priority Type, and Request Type. Add a description of the issue, CC users if needed, and
+                                choose the media of communication before submitting the ticket.</p>
+                            <div><img src="Form.png" onclick="openModal('Form.png')" alt="Add Ticket" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>When the toggle is turned is on this is how you view the ticket form</li>
+                            <br>
+                            <div><img src="Teams.png" onclick="openModal('Teams.png')" alt="Add Ticket" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>When the toggle is turned off, selecting teams in the new ticket panel is no longer
+                                required. The teams will be auto-generated based on the selected services and
+                                subservices.</li>
+                            <br>
+                            <div><img src="Form.png" onclick="openModal('Form.png')" alt="Add Ticket" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <p>To create a new ticket, select the relevant fields such as Title, Teams, Services,
+                                Priority Type, and Request Type. Add a description of the issue, CC users if needed, and
+                                choose the media of communication before submitting the ticket.</p>
+                            <div><img src="helpd.png" onclick="openModal('helpd.png')" alt="Add Ticket" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <h5>Drag and Drop</h5>
+                            <p>User can attach the file(s) with the help of Drag and Drop feature</p>
+                            <div><img src="dragDrop.png" onclick="openModal('dragDrop.png')" alt="Drag Drop"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+                            <h4>Custom Views</h4>
+
+                            <p>Open the select box add the custom view</p>
+
+                            <div><img src="forGoView.png" onclick="openModal('forGoView.png')" alt="Custom View"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>Select the <b>Configure view</b> option</p>
+
+                            <div><img src="conf.png" onclick="openModal('conf.png')" alt="Custom View" width="100%"
+                                    height="auto"></div>
+                            <br>
+
+                            <p>Now click on Add button</p>
+
+                            <div><img src="customAdd.png" onclick="openModal('customAdd.png')" alt="Custom View"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+                            <p>The admin can create different views of the tabs and tables of the home page.</p>
+
+                            <div><img src="createView.png" onclick="openModal('createView.png')" alt="Create View"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+                            <h4>Assign tickets and update status from the home page.</h4>
+
+                            <p>Click on Status dropdown and select one option</p>
+                            <div><img src="statusUpdatehom.png" onclick="openModal('statusUpdatehom.png')"
+                                    alt="Create View" width="100%" height="auto"></div>
+                            <br>
+                            <p>Fill the required fields. then click on submit button</p>
+                            <div><img src="submithm.png" onclick="openModal('submithm.png')" alt="Create View"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+                            <h4>Bulk Assign ticket</h4>
+                            <br>
+                            <p>
+                                In the 'Unassigned' tab, users can now streamline ticket management by selecting
+                                multiple unassigned tickets for bulk updates. This enhancement enables users to
+                                designate a team, assign a specific user, modify the ticket status (e.g., 'Resolved'),
+                                and finalize changes with a single 'Update' action.</p>
+                            <div><img src="UnAssignTicket.png" onclick="openModal('UnAssignTicket.png')"
+                                    alt="Create View" width="100%" height="auto"></div>
+                                    <br>
+                                    <p>Users can now efficiently update the status, team, and assignee for all unassigned tickets by utilizing the multi-select option.</p>
+                            <div><img src="MultipleSelect.png" onclick="openModal('MultipleSelect.png')"
+                                    alt="Create View" width="100%" height="auto"></div>
+                                    <br>
+
+                            <br>
+
+                            <h4>Close ticket on behalf of ticket owner.</h4>
+                            <p>Click on Status dropdown and select close option</p>
+                            <div><img src="close.png" onclick="openModal('close.png')" alt="Create View" width="100%"
+                                    height="auto"></div> <br>
+                            <p>Choose "Close the ticket on behalf of the ticket owner" and then proceed to click the
+                                "Submit" button. </p>
+                            <div><img src="closed.png" onclick="openModal('closed.png')" alt="Create View" width="100%"
+                                    height="auto"></div>
+                            <br>
+
+                            <br>
+
+                        </div>
+
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="kanban-view">
+                            <li data-nav-id=../Getting-started/installation/using-app-file title='Kanban View'
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Kanban View<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+
+                                <p> To create new tickets in kanbal view, follow the below steps:</p>
+
+                                <ol>
+                                    <div><img src="Kanban_view.png" onclick="openModal('Kanban_view.png')" alt="Kanban view" width="100%"
+                                            height="auto"></div><br>
+                                    <li>
+                                        Go to home page and select <b>kanban</b> view.
+                                    </li>
+
+                                    <li>
+                                        Click on <b>+New Ticket</b>, this displays <b>New Ticket</b> page.
+
+                                    </li>
+
+                                    <li>
+                                        Enter <b>Title</b>, <b>Priority</b>, <b>Request type</b>, <b>Teams</b>,
+                                        <b>service</b>, <b>Requester</b> and <b>Ticket Discription.</b>
+
+                                    </li>
+                                    <li>Can also copy-paste screenshots in the ticket description.</li>
+
+                                    <li>
+                                        Click the <b>Submit</b> button.
+                                    </li>
+                                </ol>
+
+                                <p> To assign tickets in kanbal view, follow the below steps:</p>
+
+                                <ol>
+                                    <div><img src="assign_to_sub.png" onclick="openModal('assign_to_sub.png')" alt="Assign tickets" width="100%"
+                                            height="auto"></div><br>
+                                    <br>
+                                    <li>
+                                        Drag the ticket from <b>Unassigned</b> column and drop it in <b>Teams
+                                            Tickets</b> column, this displays <b>Assign to</b> pop-up.
+                                    </li>
+                                    <li>
+                                        Select the <b>Teams</b>, <b>Assigned to</b> and <b>Status</b>.
+                                    </li>
+                                    <li>
+                                        Click the <b>Submit</b> button.
+                                    </li>
+                                </ol>
+
+
+
+
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="table-view">
+                            <li data-nav-id=../Getting-started/installation/using-app-file title="Table View"
+                                class="sidelist">
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Table View<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+
+                                <p>To create new tickets in table view, follow the below steps:</p>
+
+                                <ol>
+                                    <div><img src="table.png" onclick="openModal('table.png')" alt="Table View" width="100%"
+                                            height="auto"></div><br>
+                                    <li>
+                                        Go to home page and select <b>Table</b> view.
+                                    </li>
+
+                                    <li>
+                                        Click on <b>+New Ticket</b>, this displays <b>New Ticket</b> page.
+
+                                    </li>
+
+                                    <li>
+                                        Enter <b>Title</b>, <b>Priority</b>, <b>Request type</b>, <b>Teams</b>,
+                                        <b>service</b>, <b>Requester</b> and <b>Ticket Discription</b>.
+
+
+                                    </li>
+                                    <li>Can also copy-paste screenshots in the ticket description.</li>
+
+                                    <li>
+                                        Click the <b>Submit</b> button.
+                                    </li>
+                                </ol>
+
+
+                                <p>To assign tickets in table view, follow the below steps:</p>
+
+                                <ol>
+                                    <div><img src="assigned.png" onclick="openModal('assigned.png')" alt="Assigned steps" width="100%"
+                                            height="auto"></div><br>
+                                    <li>
+                                        Click on <b>Ticket ID</b> or <b>Title</b> from home page.
+                                    </li>
+                                    <li>
+                                        Enter the <b>Assigned to</b> and <b>Status</b> in comment page under properties.
+                                    </li>
+                                    <li>
+                                        Click the <b>Update</b> button.
+                                    </li>
+                                </ol>
+
+
+
+
+
+                        </div> -->
+
+                        </ul>
+                    </div>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/architecture-diagram/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">Architecture Diagram</span></a>
+                        <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/dashboard/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Dashboard</span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+</body>
+<script src="../../../../js/header-footer.js"></script>
+<script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>
+<script src="../../../../js/showhidefunction.js"></script>
+
+</html>

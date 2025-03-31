@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset=utf-8>
+  <title>HR365</title>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=generator content="Hugo 0.92.2">
+  <meta name=description content="HR365 - HR365 ">
+  <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+  <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+  <link rel=icon href=https://hr365docs.github.io/docs/images/favicon.png type=image/x-icon>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato
+    }
+  </style>
+  <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+  <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+  <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+  <!-- <script src='../js\Headernavbar.js'></script> -->
+
+  <!-- Google Tag Manager --> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+  })(window,document,'script','dataLayer','GTM-TX9SKDMB');</script> 
+  <!-- End Google Tag Manager --> 
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) --> 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" 
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <header class="banner overlay bg-cover" data-background=https://hr365docs.github.io/docs/images/banner.jpg>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+          <img style="margin-top:5p" class=img-fluid src="./images/HRlogo.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+        </div>
+      </div>
+    </nav>
+    <div class="container section">
+      <div class=row>
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white mb-3  supportHeading">
+            Support Center & Knowledge base
+          </h1>
+
+          <p class="text-white mb-4 findadviceheading">
+            Find advice and answers from our support team fast or get in touch
+          </p>
+          <div class=position-relative>
+            <form class="banner_form" action="">
+
+              <input id="search" class="form-control" placeholder="Have a question? Just ask here or enter terms" />
+              <i class="ti-search search-icon"></i>
+            </form>
+            <script>
+              $(function () {
+                var projects = [
+
+                  {
+                    value: "Employee Directory",
+                    label: "<p>Employee Directory</p><p></p>",
+                    url: "https://kb.hr365.us/sharepoint-employee-directory/"
+                  },
+
+                  {
+                    value: "Asset Management",
+                    label: "<p>Asset Management\n</p><p></p>",
+                    url: "https://kb.hr365.us/online-asset-management-application/"
+                  },
+
+                  {
+                    value: "Helpdesk",
+                    label: "<p>Helpdesk</p>",
+                    url: "https://kb.hr365.us/sharepoint-helpdesk/"
+                  },
+
+                  {
+                    value: "Time-Off Manager",
+                    label: "<p>Time-Off Manager</p>",
+                    url: "https://kb.hr365.us/employee-vacation-tracker-time-off-manager/"
+                  },
+
+                  {
+                    value: "Timesheet",
+                    label: "<p>Timesheet</p>",
+                    url: "https://kb.hr365.us/online-timesheet-software/"
+                  },
+
+                  {
+                    value: "Employee On-boarding",
+                    label: "<p>Employee On-boarding</p>",
+                    url: "https://kb.hr365.us/sharepoint-employee-onboarding/"
+                  },
+
+                  {
+                    value: "Performance Management",
+                    label: "<p>Performance Management</p>",
+                    url: "https://kb.hr365.us/employee-performance-management/"
+                  },
+
+
+                  {
+                    value: "Contact",
+                    label: "<p>Got Any Questions, contact\n</p>",
+                    url: "https://www.apps365.com/support/"
+                  },
+
+
+                ];
+                $("#search").autocomplete({
+                  source: projects
+                })
+                  .data("ui-autocomplete")._renderItem = function (ul, item) {
+
+
+
+                    var input = document.querySelector('.banner_form input');
+
+                    input.onkeyup = function (e) {
+                      input_val = this.value;
+
+                      let autocompleteitems = document.querySelectorAll(".autocomplete_items a");
+                      for (let i = 0; i < autocompleteitems.length; i++) {
+                        if (input_val == autocompleteitems[i].innerText) {
+                          let geturl = document.querySelector('.banner_form');
+                          geturl.action = autocompleteitems[i].href
+                        }
+                      }
+                    }
+
+
+
+                    // variables
+
+
+                    // events
+
+
+                    return $("<li class='autocomplete_items'>")
+                      .append("<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label)
+                      .appendTo(ul);
+                  };
+
+              });
+
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="ptb-20 section">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h2 class="section-title questionHeading">Find your answer by Application</h2>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./sharepoint-employee-directory/" class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <!-- <i class="ti-package icon text-primary d-block mb-4"></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="employee-directory.png" alt="Employee Directory"
+              width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Employee Directory 365</h3>
+            <!-- <p class=mb-0>Employee directory</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 ">
+          <a href="./online-asset-management-application/ "
+            class="px-4 py-5 bg-white shadow text-center d-block match-height ">
+            <!-- <i class="ti-package icon text-primary d-block mb-4 "></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="asset-management.png " alt="Asset management"
+              width="100%" height="auto">
+            <h3 class="mb-3 mt-0 mobgetstarted">Asset Management 365</h3>
+            <!-- <p class=mb-0>Asset Management</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./sharepoint-helpdesk/" class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <!-- <i class="ti-credit-card icon text-primary d-block mb-4"></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="helpdesk.png" alt="HR365-Helpdesk" width="100%"
+              height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Helpdesk 365</h3>
+            <!-- <p class=mb-0>Helpdesk</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 ">
+          <a href="./employee-vacation-tracker-time-off-manager/ "
+            class="px-4 py-5 bg-white shadow text-center d-block match-height ">
+            <!-- <i class="ti-package icon text-primary d-block mb-4 "></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="Timeoffmanager.png " alt="Time of manager"
+              width="100%" height="auto">
+            <h3 class="mb-3 mt-0 mobgetstarted">Time-Off Manager 365</h3>
+            <!-- <p class=mb-0>Time Off Manger</p> -->
+          </a>
+
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./online-timesheet-software/" class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <!-- <i class="ti-panel icon text-primary d-block mb-4"></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="timesheet_qns.png" alt="Timesheet" width="100% "
+              height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Timesheet 365</h3>
+            <!-- <p class=mb-0>Timesheet</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./contract-management/" class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <!-- <i class="ti-panel icon text-primary d-block mb-4"></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="CLM365.png" alt="Timesheet" width="100% "
+              height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">CLM 365</h3>
+            <!-- <p class=mb-0>Timesheet</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 ">
+          <a href="./sharepoint-employee-onboarding/ "
+            class="px-4 py-5 bg-white shadow text-center d-block match-height ">
+            <!-- <i class="ti-package icon text-primary d-block mb-4 "></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="employee-onboarding.png " alt="Employee onboarding"
+              width="100%" height="auto">
+            <h3 class="mb-3 mt-0 mobgetstarted">Employee Onboarding 365</h3>
+            <!-- <p class=mb-0>Employee on-boarding</p> -->
+          </a>
+        </div>
+      
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./Civic365/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <img style="width:96px; height:96px; padding:12px;" src="./images/Civic365 1200px.png"
+              alt="Performance Management" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Civic 365</h3>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./Expense-tracker/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <img style="width:96px; height:96px; padding:12px;" src="./images/ET365.png"
+              alt="Expense-Tracker-365" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Expense Tracker 365</h3>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./RM365/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <img style="width:96px; height:96px; padding:12px;" src="./images/recruitment-management.png"
+              alt="Performance Management" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Recruitment Management 365</h3>
+          </a>
+        </div>
+      
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./employee-performance-management/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <!-- <i class="ti-package icon text-primary d-block mb-4"></i> -->
+            <img style="width:96px; height:96px; padding:12px;" src="./images/new-emp-logo.png"
+              alt="Performance Management" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">Performance Management 365</h3>
+            <!-- <p class=mb-0>Employee on-boarding</p> -->
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="./LMS/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <img style="width:96px; height:96px; padding:12px;" src="https://ik.imagekit.io/zn4au2jftpm5/Apps365/Logos/LMS365_9696px_7Y0lEnQyo.png?updatedAt=1726841210506"
+              alt="Expense-Tracker-365" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">LMS 365</h3>
+          </a>
+        </div>
+        <!-- <div class="col-lg-4 col-sm-6 mb-4">
+          <a href="/HCM365/"
+            class="px-4 py-5 bg-white shadow text-center d-block match-height" style="padding-left: 1rem !important;
+                      padding-right: 1rem !important;">
+            <img style="width:96px; height:96px; padding:12px;" src="https://ik.imagekit.io/zn4au2jftpm5/hr365/Icons/FavIcon%20200px_JAFIuznsMC.png?updatedAt=1703782607541"
+              alt="HR365-HRMS" width="100% " height="auto ">
+            <h3 class="mb-3 mt-0 mobgetstarted">HR365-HRMS</h3>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class=container>
+      <div class=row>
+        <div class=col-12>
+          <div class="section px-3 bg-white shadow text-center ">
+            <h2 class="mb-4 fontweight questionHeading">Didn&rsquo;t find an answer to your question?</h2>
+            <!-- <p class=mb-4>Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam.</p> -->
+            <a href="https://www.apps365.com/support/" class="btn btn-primary contactbtn">Contact Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="section pb-4 ">
+    <div class=container>
+      <div class="row align-items-center ">
+        <div class="col-md-8 text-md-left text-center ">
+          <p class="mb-md-0 mb-4 ">© 2025-<a href=https://www.hr365.us />HR365.</a>
+            <a href="https://www.hr365.us/sla/">SLA.</a>
+            <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+              href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center ">
+          <ul class=list-inline>
+            <li class=list-inline-item>
+              <a class="text-color d-inline-block p-2 " href=https://www.facebook.com/hr365apps/ aria-label=Facebook><i
+                  class=ti-facebook></i></a>
+            </li>
+            <li class=list-inline-item>
+              <a class="text-color d-inline-block p-2 " href=https://twitter.com/HR365_HRMS aria-label=Twitter><i
+                  class=ti-twitter-alt></i></a>
+            </li>
+            <li class=list-inline-item>
+              <a class="text-color d-inline-block p-2 " href=https://www.linkedin.com/company/cubic-logics-india-pvt-ltd
+                aria-label=Linkedin><i class=ti-linkedin></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script.min.js "></script>
+  <script src="./js/header-footer.js "></script>
+  <!-- <script type="text/javascript ">
+    
+    $(document).ready(function () {
+         $(".homelink ").addClass('active');
+        	$(".employeedirectorylink ").removeClass('active');
+        	$(".assetmanagementlink ").removeClass('active');
+	      	$(".helpdesklink ").removeClass('active');
+        	$(".timeofmanagerlink ").removeClass('active');
+        	$(".timesheetlink ").removeClass('active');
+		      $(".onboardinglink ").addClass('active');
+        	$(".performancelink ").removeClass('active');
+        	$(".contactlink ").removeClass('active');
+              
+  
+    }); 
+  </script> -->
+
+</body>
+
+</html>
