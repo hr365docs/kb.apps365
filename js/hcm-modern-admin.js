@@ -154,8 +154,9 @@ $(document).ready(function () {
 
                 "<ul id='modernadminmainsetting'>" +
                 "<li class='dropdownicon sidelist' title='view'>" +
-                "<a  class='qwe' href='/sharepoint-employee-directory/modern/admin/settings/views/'>" +
-                "Views" +
+                "<a  class='qwe' href='/HCM365/modern/admin/settings/UserRole/index.html'>" +
+                "User's Role Permissions" +
+              
                 "</a>" +
                 "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIcongeneral aside_dropdown_icon''>" +
                 "</li>" +
@@ -165,92 +166,14 @@ $(document).ready(function () {
 
                 "<ul class='sidenavSub-topics aside_dropdown_list' id='edmmoderngeneral'>" +
                 "<li  data-nav-id='../advanced/' title='Search filters' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Alignemployeebasicinformation'>Align employee basic information</a>" +
+                "<a href='/HCM365/modern/admin/settings/UserRole/#UserRole'>User's</a>" +
                 "</li>" +
 
                 // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
                 // "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Birthday'>Birthdays and work anniversaries images</a>" +
                 // "</li>" +
 
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Clearalpha'>Clear alphabet selection with reset filter</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Dashboardfeature'>Dashboard feature</a>" +
-                "</li>" +
-
-                // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                // "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Desktopdefaultview'>Desktop default view</a>" +
-                // "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#GridWidth'>Grid Width</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Hidemanagerofspecificuser'>Hide manager of specific user</a>" +
-                "</li>" +
-
-                // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                // "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Hidemanagerofspecificuser'>Hide manager of specific user</a>" +
-                // "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Hidemobilenumberofspecificuser'>Hide mobile number of specific user</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#SharepointConfiguration'>Sharepoint page configuration </a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Imageprofiletag'>Image profile tag</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Labels'>Labels</a>" +
-                "</li>" +
-
-                // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                // "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Mobiledefaultview'>Mobile default view</a>" +
-                // "</li>" +
-
-                // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                // "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Removeextracharacterfromaccountname'>Remove extra character from account name</a>" +
-                // "</li>" +
-
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#ShoworHidemodules'>Show or Hide modules</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Sortby'>Sort by</a>" +
-                "</li>" +
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#theme'>Theme</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Useworkemailidinsteadaccountloginid'>Work email ID/UPN ID</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#view'>view</a>" +
-                "</li>" +
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Userpropertiesingridview'>User properties in grid view</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Userpropertiesinlistview'>User properties in list view</a>" +
-                "</li>" +
-
-                "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#UserpropertiesinProfileCard'>User properties in Profile Card</a>" +
-                "</li>" +
-
+               
                 "</ul>" +
 
                 "</li>" +
@@ -418,33 +341,33 @@ $(document).ready(function () {
                 // help end 
 
 
-                "<ul id='modernadminmainsetting'>" +
-                "<li data-nav-id='../advanced/' title=Help class= 'dropdownicon sidelist'>" +
-                "<li title='Apps 365'>" +
-                //anchor tag
-                "<a href='/sharepoint-employee-directory/modern/admin/help/'>" +
-                "Apps" +
-                "</a>" +
-                //Arrow Icon
-                "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
+                // "<ul id='modernadminmainsetting'>" +
+                // "<li data-nav-id='../advanced/' title=Help class= 'dropdownicon sidelist'>" +
+                // "<li title='Apps 365'>" +
+                // //anchor tag
+                // "<a href='/sharepoint-employee-directory/modern/admin/help/'>" +
+                // "Apps" +
+                // "</a>" +
+                // //Arrow Icon
+                // "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
 
-                        "<ul>" +
-                        "<li>" +
-                                "ED635"+
-                        "</li>" +
-                        "<li>" +
-                                "ED635"+
-                        "</li>" +
-                        "<li>" +
-                                "ED635"+
-                        "</li>" +
-                        "<li>" +
-                                "ED635"+
-                        "</li>" +
+                //         "<ul>" +
+                //         "<li>" +
+                //                 "ED635"+
+                //         "</li>" +
+                //         "<li>" +
+                //                 "ED635"+
+                //         "</li>" +
+                //         "<li>" +
+                //                 "ED635"+
+                //         "</li>" +
+                //         "<li>" +
+                //                 "ED635"+
+                //         "</li>" +
 
-                        "</ul>" +  
-                "</li>" +
-                "</li>"+
+                //         "</ul>" +  
+                // "</li>" +
+                // "</li>"+
                 "</ul>"
 
         )

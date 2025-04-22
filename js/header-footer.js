@@ -1,6 +1,55 @@
 
 document.querySelectorAll("head link")[2].href = window.location.origin + "/images/headericon.png.ico";
-
+window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+ 
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        // Open the collapse (if using Bootstrap)
+        const collapse = new bootstrap.Collapse(target, {
+          toggle: true
+        });
+ 
+        // Scroll after a short delay
+        setTimeout(() => {
+          const yOffset = -100;
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 300); // delay allows time for collapse to expand
+      }
+    }
+  });
+ 
+ 
+document.querySelectorAll('.card-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+ 
+      if (href.startsWith('#')) {
+        e.preventDefault(); // prevent default anchor behavior
+        const target = document.querySelector(href);
+ 
+        if (target) {
+          // Show the collapse (manually trigger Bootstrap collapse if not using data-toggle)
+          const collapse = new bootstrap.Collapse(target, {
+            toggle: true
+          });
+ 
+          // Update URL hash without reloading
+          history.replaceState(null, null, href);
+ 
+          // Scroll to the target 100px above
+          const yOffset = -100;
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+ 
+          setTimeout(() => {
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }, 300); // small delay to allow collapse animation to kick in
+        }
+      }
+    });
+  });
 $(document).ready(function() {
     document.getElementsByName("description")[0].content = document.title;
 

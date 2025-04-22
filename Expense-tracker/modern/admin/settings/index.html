@@ -460,17 +460,216 @@
                             <p id="Location"><b>Approver Budget Limit </b>is as per Approver approved expense amount is
                                 validated or exceed in expense tracking applications.</p>
                             <ul>
-                                <li>•	Approver Budget limit add for particular approver they can approve this much amount only .</li>
+                                <li>• Approver Budget limit add for particular approver they can approve this much
+                                    amount only .</li>
                             </ul>
                             <p>Navigate to 'General Settings' and click on 'Budget Limit'."</p>
                             <div> <img src="BugetLimit.png" onclick="openModal( 'BugetLimit.png') " alt="Settings"
                                     width="100% " height="auto"></div><br>
+                            <p><b>Approver Budget limits</b>: A toggle to activate or deactivate the Approver Budget
+                                limits
+                                integration in the application.
+                                <br>
+                                <b>Save Button</b>: A button to save changes or configurations made in the Approver
+                                Budget
+                                limit settings
+                            </p>
+                            <div> <img src="BudgetApprovers.png" onclick="openModal( 'BudgetApprovers.png') "
+                                    alt="Settings" width="100% " height="auto"></div><br>
+                            <p>Navigate to Administration, then select Approver Budget.</p>
+                            <div> <img src="ApproverBudget.png" onclick="openModal( 'ApproverBudget.png') "
+                                    alt="Settings" width="100% " height="auto"></div><br>
+                            <p>Click on Approver, and a panel will open displaying Frequency, Approver Budget, Start
+                                Date, and End Date. You can define the budget limit and specify its applicability.
+                                Additionally, you can add multiple approvers as needed.</p>
+                            <div> <img src="ApproverBudget.png" onclick="openModal( 'ApproverBudget.png') "
+                                    alt="Settings" width="100% " height="auto"></div><br>
+
+                            <div> <img src="ApproverPanel.png" onclick="openModal( 'ApproverPanel.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>Click on Approver, and a panel will open displaying Frequency, Approver Budget, Start
+                                Date, and End Date. You can define the budget limit and specify its applicability.
+                                Additionally, you can add multiple approvers as needed.</p>
+                            <div> <img src="AddBudget.png" onclick="openModal( 'AddBudget.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>After saving, the Approver Limit is added to the Detail List. Whenever an approver
+                                approves an expense, the amount will be automatically updated in the list.</p>
+                            <div> <img src="budgetList.png" onclick="openModal( 'budgetList.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>1. When an expense is approved, the Available Amount and Consumed Amount are updated
+                                accordingly.</p>
+                            <p>2. there are multiple approvers at the same level, only the approving approver’s amount
+                                is updated, while the other approver’s amount remains unchanged until they approve.</p>
+                            <div> <img src="AdminUser.png" onclick="openModal( 'AdminUser.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>When an expense is created, it is sent for approval based on the defined approval
+                                workflow.</p>
+                            <div> <img src="SingleExpense.png" onclick="openModal( 'SingleExpense.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>After creating an expense, the amount is deducted from the approver's limit. For example,
+                                if the approver's initial limit is 10,000 and an expense of 1,000 is approved, the
+                                Consumed Amount becomes 1,000, and the approver can approve up to the remaining 9,000.
+                            </p>
+                            <div> <img src="ReduceLimit.png" onclick="openModal( 'ReduceLimit.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+                            <p>After the 1st level approval, the 2nd level approvers' amounts will also be updated based
+                                on the total approved amount, following the same process as the 1st level approver.
+                            </p>
+                            <div> <img src="comments.png" onclick="openModal( 'comments.png') " alt="Settings"
+                                    width="100% " height="auto"></div><br>
+
+                            <p><b>Mileage</b></p>
+                            <p>If an approver does not have a sufficient budget limit, they will not receive the expense
+                                for approval.</p>
+
+                            <ol>
+                                <li> Mileage includes a Grade and Rate, which are used to calculate the total based on
+                                    the distance while creating an expense.</li>
+
+                                <li> Users can select a Grade when adding or editing a user in the User module.</li>
+
+                                <li> In the Mileage panel, a Rate can be assigned to a selected Grade.</li>
+
+                                <li> When an expense is created, the system automatically applies the Rate corresponding
+                                    to the User’s Grade from the User module and the Mileage panel.</li>
+                                <div> <img src="mileage.png" onclick="openModal( 'mileage.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>Navigate to General Settings and enable Mileage.</p>
+                                <div> <img src="MileageToogle.png" onclick="openModal( 'mileage.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <div> <img src="ActionCom.png" onclick="openModal( 'ActionCom.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>The Mileage option will appear in the Master Navbar.</p>
+                                <div> <img src="Ad-Mileage.png" onclick="openModal( 'Ad-Mileage.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>Now, the Mileage Panel will be visible.</p>
+                                <div> <img src="Listofmileage.png" onclick="openModal( 'Listofmileage.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>Click on Add to open a panel where you can enter Grades and Rates.</p>
+                                <div> <img src="Addmileage.png" onclick="openModal( 'Addmileage.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>Enter the Grade and Rate, then click Submit.</p>
+                                <p>Assign the Grade to the user in the User Module.</p>
+                                <div> <img src="MileageGrade.png" onclick="openModal( 'MileageGrade.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>The distance will be calculated based on the assigned Mileage Rate when creating an
+                                    expense.</p>
+                                <div> <img src="Submit.png" onclick="openModal( 'Submit.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p><b>Delete Expense </b></p>
+                                <p>Deleting an Expense makes it inactive, and it can be restored based on the expiration
+                                    date.
+                                    <br>
+                                    As per settings, the Recycle Bin and Bulk Inactive options will be available. These
+                                    features are only applicable to Finance, Finance Head, and HR Head.
+                                </p>
+
+                                <p>Navigate to General Settings and click on Delete Expense.</p>
+                                <div> <img src="DeleteExpense.png" onclick="openModal( 'DeleteExpense.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>A dialog box will open.</p>
+                                <div> <img src="DeleteToogle.png" onclick="openModal( 'DeleteToogle.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p><b>Delete Expense</b>: A toggle to activate or deactivate the Delete Expense feature,
+                                    which will reflect across the entire application.
+                                    <br>
+                                    <b>Delete Expense After 30 Days</b>: Any inactive expense will be automatically
+                                    deleted after 30 days through Power Automate.
+                                    <br>
+                                    <b> Save Button</b>: A button to save any changes or configurations made in the
+                                    Delete Expense settings.
+                                </p>
+                                <div> <img src="DeleteOn.png" onclick="openModal( 'DeleteOn.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>After that, you will be able to see the Recycle Bin and Bulk Delete options.</p>
+                                <div> <img src="bulkdelete.png" onclick="openModal( 'bulkdelete.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>After clicking the Delete icon.</p>
+                                <div> <img src="deleteconfirm.png" onclick="openModal( 'deleteconfirm.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>Click on <b>Confirm</b>, and the selected expenses will be marked as inactive and
+                                    moved to the <b> Recycle Bin.</b></p>
+                                <div> <img src="RecyleBin.png" onclick="openModal( 'RecyleBin.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>A panel will open for the Recycle Bin, where all the deleted expenses will be
+                                    displayed.</p>
+                                <div> <img src="Deleted.png" onclick="openModal( 'Deleted.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>When deleting any expense, if the expense has an associated budget limit, the
+                                    corresponding amount should be reverted (refunded) to the respective Department,
+                                    Location, Cost Center, and Project.</p>
+                                <div> <img src="departmentdelete.png" onclick="openModal( 'departmentdelete.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>After reviewing the expense, click on the Restore icon to bring it back.</p>
+                                <div> <img src="backbutton.png" onclick="openModal( 'backbutton.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p><b>User Role scope</b></p>
+                                <br>
+                                <p>User Role Scope is used to filter expenses based on Location, Department, and Cost
+                                    Center in the expense tracking application.</p>
+                                <ol>
+                                    <li>As per the role scope, the expenses will be displayed in the Expense Home
+                                        Module.</li>
+                                    <li>This feature is applicable only to Finance, Finance Head, and HR Head.</li>
+                                </ol>
+                                <p>Navigate to User Roles and Permissions and click on Role Scope.</p>
+                                <div> <img src="UserRoleScopes.png" onclick="openModal( 'UserRoleScopes.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>Navigate to User Roles and Permissions and click on Role Scope.</p>
+                                <div> <img src="UserRoleScopes.png" onclick="openModal( 'UserRoleScopes.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p><b>Enable Role Scope:</b> A toggle to activate or deactivate the Role Scope feature,
+                                    which
+                                    will reflect across the entire application.
+                                    <br>
+                                    <b>Save Button:</b> A button to save any changes or configurations made in the
+                                    Enable Role
+                                    Scope settings.
+                                </p>
+                                <div> <img src="Rolesave.png" onclick="openModal( 'Rolesave.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>Then, click on the User Module, add or edit a user, and select the role as Finance,
+                                    Finance Head, or HR Head. The Role Scope field will only be displayed for these
+                                    roles.</p>
+                                <div> <img src="addroleuser.png" onclick="openModal( 'addroleuser.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>The Role Scope has three options: ALL, Cost Center, Department, and Location.</p>
+                                <ol>
+                                    <li>If you select Location, the Location Scope field will appear below.</li>
+                                    <li>If you select Department, the Department Scope field will appear.</li>
+                                    <li>If you select ALL, all fields will be displayed.</li>
+                                </ol>
+                                <div> <img src="DepartmentScope.png" onclick="openModal( 'DepartmentScope.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <div> <img src="LocationScope.png" onclick="openModal( 'LocationScope.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>After saving, check the Expense Home Page. For example, if Joni's Role Scope is set
+                                    to Location and the Location Scope is set to Canada, then, when Joni is the current
+                                    user and their role is Finance Head, only expenses related to users who have Canada
+                                    as their location will be displayed in the Expense Home and Approved file.</p>
+                                <div> <img src="rolelocation.png" onclick="openModal( 'rolelocation.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>Following the set flow, expenses will be displayed based on the defined Role Scope
+                                    and Location Scope settings.</p>
+                                <div> <img src="Flow.png" onclick="openModal( 'Flow.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <p>When an expense is created, it will be checked against the current user’s Role Scope
+                                    (Location, Department, or Cost Center) to determine which expenses should be
+                                    displayed based on the user’s assigned scope.</p>
+                                <div> <img src="John.png" onclick="openModal( 'John.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <div> <img src="Shan.png" onclick="openModal( 'Shan.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <p>When an expense is created, it will be displayed for the current user only if the
+                                    Reported By field matches their Role Scope settings (Location, Department, or Cost
+                                    Center).</p>
+                                <div> <img src="numbers.png" onclick="openModal( 'numbers.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>After see joni current user and role scope enabled from stiing which have reported by
+                                    location is canada those expense only will dilpaly here</p>
+                                <div> <img src="currentUser.png" onclick="openModal( 'currentUser.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
                         </div>
-
-
-
-
-
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev " href="../administration/ " aria-label="Previous page"><i
