@@ -122,63 +122,61 @@
                             <br>
 
 
-                            <p>Admin can add users to this application. There are different types of roles like the user, admin, asset manager, supervisor and no access as shown below.</p>
+                            <p>Admins can add users to the application and assign them specific roles. Below are the available user roles:</p>
+
 
                             <br>
                             <div><img src="user_panel.png " onclick="openModal( 'user_panel.png ') " alt="User panel" width="100% " height="auto"></div>
                             <br>
                             <div class="ul">
                                 <ul>
-                                    <li>
-                                        <b> User:</b> Only able to view assigned assets to them.
-                                    </li>
-                                    <li>
-                                        <b>Power user:</b> Able to see all the assets only.
-                                    </li>
-                                    <li>
-                                        <b>Asset Manager:</b> Able to add assets, delete assets, assign assets and return assets, audit assets,report assets, book assets, edit or delete book assets and depreciation.
-                                    </li>
-                                    <li>
-                                        <b>Supervisor:</b> Able to assign assets, return assets, audit assets, report assets book assets, edit or delete book assets and depreciation.
-                                    </li>
-                                    <li>
-                                        <b>No Access:</b> The user cannot access the application.
-                                    </li>
+                                    <li><b>User:</b> Can only view assets assigned to them.</li>
+                                    <li><b>Power User:</b> Can view all assets in the system.</li>
+                                    <li><b>Asset Manager:</b> Can add, delete, assign, and return assets; audit and report assets; book, edit, or delete booked assets; and manage depreciation.</li>
+                                    <li><b>Supervisor:</b> Can assign and return assets, audit and report assets, book, edit, or delete booked assets, and manage depreciation.</li>
+                                    <li><b>No Access:</b> Cannot access the application.</li>
                                 </ul>
                                 <br>
                                 <div class="box">
                                     <ol type="i">
-                                        <li>
-                                            <b> <u>Add</u></b>
-                                            <br> To add users, click on users under settings from the side panel, a page will open, click on add tab, add users page will open, First select the user type (M365 users or Non M365 users). For M365 users details fill fetch from M365 automatically if exist, you can edit the details further and click on submit button. For non M365 users, need to add all details manually.
-                                            <br>
-                                            <b>Note:</b> Assign & return assets notification for non M365 users works on Power Automate setup
-                                            <br>
-                                            <br>
-                                            <div><img src="Users.png " onclick="openModal( 'Users.png ') " alt="Users" width="100% " height="auto"></div>
-                                            <br>
-                                        </li>
-                                        <li>
-                                            <b><u>Bulk Add</u></b>
-                                            <br> Download the sample file and fill the email Ids and role as per specified format in the sample and save it. Choose the same file and click on save button
-                                            <br>
-                                            <b>Note:</b> Add only email(s) and role for M365 users, no need to add details if user’s details are available in O365. If user is M365 user, update “No” in
-                                            <b>IsNonM365User</b> column. You can add both M365 and non M365 users from bulk add.
-                                            <br>
-                                            <br>
-                                            <div><img src="bulk_add.png" onclick="openModal( 'bulk_add.png') " alt="Bulk add" width="100% " height="auto"></div><br>
-                                        </li>
-                                        <li><b><u>Edit User Role</u></b>
-                                            <br> We can edit user roles for either individual or multiple users as shown below in the image. Select multiple users to assign the same role.
-                                        </li>
-                                        <li>
-                                            <b><u>Delete User</u></b>
-                                            <br> Select the users and click on delete users.
-                                        </li>
-                                        <li>
-                                            <b><u>Sync from M365</u></b>
-                                            <br> If you click on sync from M365 tab, the user's detail in the table will update from O365 </li>
-                                    </ol>
+    <li>
+        <b><u>Add</u></b><br>
+        To add users, navigate to <b>Users</b> under <b>Settings</b> in the side panel. On the opened page, click the <b>Add</b> tab.<br>
+        <ul>
+            <li>Select the user type: <b>M365 User</b> or <b>Non-M365 User</b>.</li>
+            <li>For M365 users, details will be fetched automatically (if the user exists in M365). You can still edit the details before clicking <b>Submit</b>.</li>
+            <li>For Non-M365 users, you must manually enter all details.</li>
+        </ul>
+        <b>Note:</b> Notifications for asset assignment and return for Non-M365 users require Power Automate setup.<br><br>
+        <div><img src="Users.png" onclick="openModal('Users.png')" alt="Users" width="100%" height="auto"></div>
+    </li>
+
+    <li>
+        <b><u>Bulk Add</u></b><br>
+        Download the sample file, fill in the email addresses and roles as per the specified format, save the file, then upload it.<br>
+        <ul>
+            <li>Only provide email(s) and role for M365 users. No need to enter additional details if the user's information exists in O365.</li>
+            <li>For M365 users, set the <b>IsNonM365User</b> column to <b>No</b>.</li>
+            <li>You can add both M365 and Non-M365 users using the Bulk Add feature.</li>
+        </ul><br>
+        <div><img src="bulk_add.png" onclick="openModal('bulk_add.png')" alt="Bulk add" width="100%" height="auto"></div>
+    </li>
+
+    <li>
+        <b><u>Edit User Role</u></b><br>
+        You can edit the roles of individual or multiple users. To assign the same role to multiple users, select them and update their role simultaneously.
+    </li>
+
+    <li>
+        <b><u>Delete User</u></b><br>
+        To remove users, select the desired users and click <b>Delete Users</b>.
+    </li>
+
+    <li>
+        <b><u>Sync from M365</u></b><br>
+        Clicking the <b>Sync from M365</b> button will update user details in the table from O365.
+    </li>
+</ol>
                                 </div>
 
 
@@ -200,21 +198,21 @@
                                 <ol type="a">
                                     <li>
                                         <p>
-                                            <b>Currency:</b> From here, you can select the type of currency from the dropdown. Click on the <b>Save</b> button.
+                                            <b>Currency:</b> From this section, you can select the desired currency type from the dropdown menu. After selecting, click on the <b>Save</b> button to apply the changes.
                                             <div><img src="currency.png " onclick="openModal( 'currency.png') " alt="Currency" width="100% " height="auto"></div>
                                         </p>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Date Format:</b> From here, you can select the date format from the dropdown. Click on the <b>Save</b> button.
+                                            <b>Date Format:</b> From this section, you can select the date format from the dropdown. Click on the <b>Save</b> button.
                                             <div><img src="date_format.png" onclick="openModal( 'date_format.png') " alt="Date format" width="100% " height="auto"></div>
                                         </p>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Asset ID Prefix: Asset ID Prefix specifies the letter prefix for the generated Asset ID.
+                                            <p><b>Asset ID Prefix:</b> Asset ID Prefix specifies the letter prefix for the generated Asset ID.
                                 <div><img src="asset_ID.png " onclick="openModal( 'asset_ID.png') " alt="Asset ID" width="100% "
                                     height="auto"></div>
                             </b>
@@ -247,15 +245,13 @@
                                     </li>
                                     <br>
                                     <li>
-                                        <p>
-                                            <b>System Generated Barcode:</b> If this is enabled, barcode generate automatically upon adding assets.
-                                        </p>
+                                        <p> <b>System-Generated Barcode:</b> If enabled, a barcode will be generated automatically when an asset is added. </p>
                                         <div><img src="system_generated_barcode.png " onclick="openModal( 'system_generated_barcode.png') " alt="System generated" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>External User:</b> If you enabled it, you could add external user's or guest user's in the application and can assign assets to them.
+                                            <b>External User:</b> If enabled, you can add external or guest users to the application and assign assets to them.
                                         </p>
 
                                         <div class="notices note">
@@ -268,21 +264,20 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Internal Datalist Path:</b> If this is enabled, App data can be stored in the SharePoint list within the app or externally at the site/subsite collection level where the app is installed.
+                                            <b>Internal Datalist Path:</b> If 
+                                              enabled, App data can be stored in the SharePoint list within the app or externally at the site/subsite collection level where the app is installed.
                                         </p>
                                         <div><img src="detail_path.png" onclick="openModal( 'detail_path.png') " alt="Detail path" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
-                                        <p>
-                                            <b> Show projects while assigning assets:</b> If this is enabled, project option will display while assigning assets in pop, you can assign assets to the users along with project.
-                                        </p>
+                                        <p> <b>Show Projects While Assigning Assets:</b> If enabled, the project option will appear in the assignment popup. You can then assign assets to users along with a project. </p>
                                         <div><img src="show_project.png " onclick="openModal( 'show_project.png') " alt="Show project" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Camera Scanner: </b> If this is enabled, camera scanner tab will display on the home page from where you can scan the barcode of the assets to search the assets.
+                                            <b>Camera Scanner: </b> If enabled, camera scanner tab will display on the home page from where you can scan the barcode of the assets to search the assets.
                                         </p>
                                         <div><img src="camera_scanner.png " onclick="openModal( 'camera_scanner.png') " alt="Camera scanner" width="100% " height="auto"></div>
                                     </li>
@@ -304,14 +299,14 @@
 
                                     <li>
                                         <p>
-                                            <b>Assign Assets to Location:</b> If this is enabled, location option will display while assigning assets in pop, from where you can assign assets to the location.
+                                            <b>Assign Assets to Location:</b> If enabled, location option will display while assigning assets in pop, from where you can assign assets to the location.
                                         </p>
                                         <div><img src="assign_asset.png " onclick="openModal( 'assign_asset.png') " alt="Assign assets" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Assign Assets to Non M365 Users:</b> If this is enabled, assign assets to non M365user's option will display while assigning assets in pop, from where you can assign assets to non O365.
+                                            <b> Assign Assets to Non M365 Users:</b> If enabled, assign assets to non M365user's option will display while assigning assets in pop, from where you can assign assets to non O365.
                                         </p>
                                         <div><img src="assign_asset_to_non_M365.png " onclick="openModal( 'assign_asset_to_non_M365.png') " alt="Non M365" width="100% " height="auto"></div>
                                     </li>
@@ -325,14 +320,14 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Enable Software:</b> If this is enabled, software tabs on  home page will display, one tab is used to sync O365 license another is used to add software manually and can assign to users.
+                                            <b> Enable Software:</b> If enabled, software tabs on  home page will display, one tab is used to sync O365 license another is used to add software manually and can assign to users.
                                         </p>
                                         <div><img src="enable_software.png " onclick="openModal( 'enable_software.png') " alt=" Enable software" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Asset Location Mandatory:</b> If this is enabled, you can get the asset location.
+                                            <b> Asset Location Mandatory:</b> If enabled, you can get the asset location.
                                         </p>
                                         <div><img src="asset_location_mandatory.png " onclick="openModal( 'asset_location_mandatory.png') " alt="Location mandatory" width="100% " height="auto"></div>
                                     </li>
@@ -340,21 +335,21 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b>CC to Location Email Id:</b> If this is enabled, email notification will be sent to location.
+                                            <b>CC to Location Email Id:</b> If enabled, email notification will be sent to location.
                                         </p>
                                         <div><img src="CC_location.png " onclick="openModal( 'CC_location.png') " alt="CC location" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Allow Asset Manager to Add Assets:</b> If this is enabled, Manager can add Assets.
+                                            <b>Allow Asset Manager to Add Assets:</b> If enabled, Manager can add Assets.
                                         </p>
                                         <div><img src="add_assets.png " onclick="openModal( 'add_assets.png') " alt="Add assets" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Allow Asset Manager to Delete Assets:</b> If this is enabled, Manager can delete Assets.
+                                            <b>Allow Asset Manager to Delete Assets:</b> If enabled, Manager can delete Assets.
                                         </p>
                                         <div><img src="delete_asset.png " onclick="openModal( 'delete_asset.png') " alt="Delete asset" width="100% " height="auto"></div>
                                     </li>
@@ -368,54 +363,54 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Allow User to Book Assets:</b> If this is enabled, Users can Book Assets.
+                                            <b>Allow User to Book Assets:</b> If enabled, Users can Book Assets.
                                         </p>
                                         <div><img src="asset_book.png" onclick="openModal( 'asset_book.png') " alt="Allow user" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Select Approver to Book Assets:</b> If this is enabled, Users can select approver.
+                                            <b>Select Approver to Book Assets:</b> If enabled, Users can select approver.
                                         </p>
                                         <div><img src="approver_book_asset.png " onclick="openModal( 'approver_book_asset.png') " alt="Select approver" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Availability of Assets During Maintenance:</b> If this is enabled, Users can book asset which is in maintenance.
+                                            <b>Availability of Assets During Maintenance:</b> If enabled, Users can book asset which is in maintenance.
                                         </p>
                                         <div><img src="availability_of_asset_during_maintenance.png " onclick="openModal( 'availability_of_asset_during_maintenance.png') " alt="Availability of asset" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Maintenance Module:</b> If this is enabled, you can add Maintenance Frequency and Maintenance Due Date while adding assets.
+                                            <b> Maintenance Module:</b> If  enabled, you can add Maintenance Frequency and Maintenance Due Date while adding assets.
                                         </p>
                                         <div><img src="maintenance_module.png " onclick="openModal( 'maintenance_module.png') " alt="Maintenance module" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
-                                        <p> <b>Hide Asset ID Prefix:</b> If this is enabled, You can hide Asset ID prefix.</p>
+                                        <p> <b>Hide Asset ID Prefix:</b> If enabled, You can hide Asset ID prefix.</p>
                                         <div><img src="hide_asset_ID.png " onclick="openModal( 'hide_asset_ID.png') " alt="Hide asset ID" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Consumable Module:</b> If this is enabled, consumable tabs will displays on the home page.
+                                            <b>Consumable Module:</b> If enabled, consumable tabs will displays on the home page.
                                         </p>
                                         <div><img src="consumable_module.png " onclick="openModal( 'consumable_module.png') " alt="Consumable module" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Allow Users to Request Consumable:</b> If this is enabled, users can raise requests for consumable items.
+                                            <b>Allow Users to Request Consumable:</b> If enabled, users can raise requests for consumable items.
                                         </p>
                                         <div><img src="allow_user_to_request_consumable.png " onclick="openModal( 'allow_user_to_request_consumable.png') " alt="Allow user to request" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Allow Shipping of Consumable:</b> If this is enabled, users can request shipping of the consumable item.
+                                            <b>Allow Shipping of Consumable:</b> If enabled, users can request shipping of the consumable item.
                                             <div><img src="allow_shipping_of_consumable.png " onclick="openModal( 'allow_shipping_of_consumable.png') " alt="Shipping Consumable" width="100% " height="auto"></div>
                                         </p>
                                     </li>
@@ -429,7 +424,7 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Serial Number Mandatory:</b> If this is enabled, entry of serial number is mandatory.
+                                            <b>Serial Number Mandatory:</b> If enabled, entry of serial number is mandatory.
                                         </p>
                                         <div><img src="serial_number_mandatory.png " onclick="openModal( 'serial_number_mandatory.png') " alt="Serial number" width="100% " height="auto"></div>
                                     </li>
@@ -528,7 +523,7 @@
                             <ul class=page-list>
 
 
-                                <p>Here you can set up email notifications for assigned or on return assets. You can also setup reminders through email notifications for asset expiry and return date of the assets.
+                                <p>You can set up email notifications for asset assignments and returns. Additionally, you can configure email reminders for asset expiry and return dates.
                                     <br>
                                     <br>
                                     <div><img src="email.png " onclick="openModal( 'email.png') " alt="Email" width="100% " height="auto"></div>
@@ -536,36 +531,49 @@
 
                                 </p>
                                 <ul>
-                                    <li>By default, “To users on assigning assets“ is enabled and receives the email notification. if you enter the email ID and click on submit both the admin and the entered email IDs receive an email notification on assigning assets to the users.
+                                    <li>
+                                        <b>“To users on assigning assets”:</b> This is enabled by default. Users receive an email notification when assets are assigned to them. If you enter additional email IDs and click the <b>Submit</b> button, both the admin and the specified recipients will receive the notification.
                                     </li>
                                     <br>
-                                    <li>By default, “To users on returning assets“ is enabled and admin receives the email notification. if you enter the email ID and click on submit button, both admin and the entered email IDs receive email notification on
-                                        returning assets from the users.</li>
+                                    <li>
+                                        <b>“To users on returning assets”:</b> This is enabled by default. The admin receives a notification when assets are returned. If you enter additional email IDs and click the <b>Submit</b> button, both the admin and the specified recipients will receive the notification.
+                                    </li>
                                     <br>
-                                    <li> By default, “To groups on assigning assets“ is enabled and admin receives the email notification. if you enter email ID and click on submit button, both admin and the entered email IDs receive email notification on
-                                        returning assets from the group.</li>
+                                    <li>
+                                        <b>“To groups on assigning assets”:</b> This is enabled by default. The admin receives a notification when assets are assigned to a group. If you enter additional email IDs and click the <b>Submit</b> button, both the admin and the specified recipients will receive the notification.
+                                    </li>
                                     <br>
-                                    <li> By default, “To groups on returning assets“ is enabled and admin receives the email notification. if you enter the email ID and click on submit button, both admin and the entered email IDs receive email notification on
-                                        returning assets from the group.</li>
-
+                                    <li>
+                                        <b>“To groups on returning assets”:</b> This is enabled by default. The admin receives a notification when assets are returned by a group. If you enter additional email IDs and click the <b>Submit</b> button, both the admin and the specified recipients will receive the notification.
+                                    </li>
                                 </ul>
+                                
                                 <br>
                                 <h5><u>Email Reminder or Enable Automatic Reminders</u></h5>
-                                <p>By default, “Enable Automatic Reminders” is enabled, admin will receive email notification regarding the asset expiry date and returning assets of the users based on days entered in settings.
-                                    <br>
-                                    <br> Here the person will receive an email notification whose email ID(s) are entered in the “Choose Email Address” box. You can add up to 4 emails (IDs) in choose email ids separated by “;” without space.
-                                    <br>
-                                    <br> When you enter the number as day for “Set Return date Reminder” and click on submit, email notification will receive before the number of days entered to the return date When you enter number as day for “Set Expiry
-                                    / End date Reminder 1” and click on submit, email notification will receive before the number of days entered to the expiry date of the assets
-                                    <br>
-                                    <br> In same way “Set Expiry / End date Reminder 2” will works.
-                                    <div class="notices note">
-                                        <div class="paragraph">
-                                            <p> The person who install the application, by default is an admin, such person will receive email notifications and email reminders.</p>
-                                        </div>
-                                    </div>
-
+                                <p>
+                                    By default, <b>“Enable Automatic Reminders”</b> is enabled. The admin will receive email notifications regarding the asset expiry date and return of assets by users, based on the number of days set in the settings.
                                 </p>
+                                <p>
+                                    The person will receive email notifications if their email ID(s) are entered in the <b>“Choose Email Address”</b> box. You can add up to <b>4 email addresses</b>, separated by a <b>semicolon (;) without spaces</b>.
+                                </p>
+                                
+                                <p><b>Important Reminders:</b></p>
+                                <ul>
+                                    <li>
+                                        When you enter a number of days for <b>“Set Return Date Reminder”</b> and click <b>Submit</b>, an email notification will be sent <b>before</b> the specified number of days prior to the asset’s return date.
+                                    </li>
+                                    <li>
+                                        When you enter a number of days for <b>“Set Expiry / End Date Reminder 1”</b> and click <b>Submit</b>, an email notification will be sent <b>before</b> the specified number of days prior to the asset’s expiry date.
+                                    </li>
+                                    <li>
+                                        Similarly, <b>“Set Expiry / End Date Reminder 2”</b> works the same way as Reminder 1.
+                                    </li>
+                                </ul>
+                                
+                                <div class="notices note">
+                                    <p><b>Note:</b> The person who installs the application is automatically assigned as the admin and will receive all related email notifications and reminders by default.</p>
+                                </div>
+                                
 
                         </div>
                         <div class="bg-light p-4 common-scroll remove-padding" id="custom-email">
@@ -575,21 +583,26 @@
                             <ul class=page-list>
 
 
-                                <p>Here you can change the email notification body format for assigned and returned assets email notifications. Click on <b>Custom Email</b> under <b>Settings</b> from side panel/ custom email page opens from where you can customize
-                                    the email.
-                                    <br>
-                                    <br> Select the check box of <b>Assign Assets</b>, <b>Return Assets</b>, <b>Book Assets</b>, <b>Approve Assets</b> or <b>Approve Assets</b>. If you want to add extra placeholder in email body, just click on the placeholder
-                                    under placeholder section, placeholder get added in email body and finally click on <b> Submit</b> button as shown in below. If you want to edit text do same as you do in <b>MS word.</b>
-                                    <br>
-
-                                    <div><img src="custom_email.png " onclick="openModal( 'custom_email.png')" alt="Custom email" width="100% " height="auto"></div>
-                                    <br>
-                                    <div><img src="submit.png " onclick="openModal( 'submit.png') " alt="Click submit" width="100% " height="auto"></div>
-                                    <br>
-
-
+                                <p>
+                                    Here you can change the email notification body format for assigned and returned asset email notifications. To begin, click on <b>Custom Email</b> under <b>Settings</b> from the side panel. The custom email page will open, allowing you to customize the email body.
                                 </p>
-
+                                
+                                <p>
+                                    Select the checkboxes for <b>Assign Assets</b>, <b>Return Assets</b>, <b>Book Assets</b>, <b>Approve Assets</b>, or any other relevant option. If you want to add extra placeholders in the email body, simply click on the desired placeholder from the <b>Placeholder Section</b>. The placeholder will be added to the email body automatically.
+                                </p>
+                                
+                                <p>
+                                    After making your customizations, click on the <b>Submit</b> button to save the changes. You can edit the text in the same way you would in <b>Microsoft Word</b>.
+                                </p>
+                                
+                                <div>
+                                    <img src="custom_email.png" onclick="openModal('custom_email.png')" alt="Custom Email" width="100%" height="auto">
+                                </div>
+                                
+                                <div>
+                                    <img src="submit.png" onclick="openModal('submit.png')" alt="Click Submit" width="100%" height="auto">
+                                </div>
+                                
 
                         </div>
                         <div class="bg-light p-4 common-scroll remove-padding" id="column-setting">
