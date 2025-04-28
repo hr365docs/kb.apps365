@@ -116,109 +116,93 @@
                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
             </h2>
      
-        <ol type="I">
-            <li><h3>Weekly Timesheets.</h3> 
+            <ol type="I">
+                <li><h3>Weekly Timesheets</h3>
+                    <ol>
+                        <li><h4>Setup</h4>
+                            <p>Admin can set up or customize weekly timesheets as per their requirements before using them. Below are the important points to note:</p>
             
-                <ol>
-                    <li><h4>Setup</h4>
-                        <br>
-                   <p>
-                    Admin can setup or customize weekly timesheets as per their requirement before going to use weekly timesheets. Please look into below points.
-                   </p>
-   
-                       <p> By default all features are disabled you can enable and setup it based on your requirement.</p>
-                      
-                     
-                      <b>Note:</b>   You can click on finally save setting buttons after making setup in each tab of setting page.
-                     <br><br>
-                      
-                     <b>Time Tracking Days:</b>    Here you can block weekend days: Please go to settings from side panel under advance setting tab, you can uncheck days in Time Tracking Days row then click on save button and finally click on save settings button.
-                        <br>
-                        <br>
-                      <b>Restrict daily and weekly hours:</b>   Here you can setup max daily hour and max weekly hour due to which user not able to put time beyond this limit in their weekly time sheet. Go to settings under features tab enable the Restrict daily and weekly hours row toggle and put restrict time for daily or weekly and click on save icon and then click on save settings button.
-                        <br>
-                        <br>
-                     <b>   Activities:</b> If it enabled, activity column in weekly timesheets is displayed from where user can select activity in their weekly timesheets. To enable it go to settings side panel under settings from, under general tab enable “Display Activities” row toggle switch and then click save setting button. 
-                     <br>
-                     <br>
-                      <b>Work Place:</b>   If it enabled, work place column in weekly timesheets is displayed from where user can select work place in their weekly timesheets. This play important role because some project billing is made based on onsite rate. To enable it to go to settings from side panel under settings, under feature tab enable “Work Place” row toggle switch, work place popup will display, you can add some more work places, click on submit button of popup and then save setting button. <br>
-                       <b>Note:</b>  Do not edit or remove on-site word in work place popup otherwise onsite billing would not work.
-                        <br>
-                        <br>
-                     <b> Mandatory task selection while tracking time:</b>   By default this feature is enabled, if you want to submit timesheets without task you can do it just disable it, go to settings from side panel under settings, under features tab, disable “Mandatory task selection while tracking time” row toggle switch and then click on save setting button.
-                        </p> </li>
-                        <br>
-                        
-                    <li><h4>Weekly timesheet Submitting</h4>
-                        <br>
-                    <p>Here you can submit timesheets for past week or on last working day of current week from weekly timesheets tab or from side panel under timesheetss. To submit it, first select week number, select project selected project will show in task column dropdown, select task, enter times and add comment in comment icon and finally click on submit button as shown in below image.Time-filling indicator in a weekly timesheet (Time shows in green color if its equal to daily time limit and blue if its not equal to daily time limit).</p> 
-             
-                <div><img src="timesheet.png" onclick="openModal('timesheet.png')" alt="Weekly timesheet" width="100%" height="auto"></div>
+                            <p>By default, all features are disabled. You can enable and configure them based on your requirements.</p>
+                            <p><strong>Note:</strong> Click on the 'Save Settings' button after making changes in each tab of the settings page.</p>
+            
+                            <p><strong>Time Tracking Days:</strong> Block weekend days by navigating to Settings in the side panel under the Advanced Settings tab. Uncheck the days you don't want to track and click on the 'Save' button, followed by 'Save Settings.'</p>
+            
+                            <p><strong>Restrict Daily and Weekly Hours:</strong> Set a maximum number of hours for both daily and weekly time entries. If enabled, users cannot log hours beyond these limits. Go to Settings, enable the 'Restrict Daily and Weekly Hours' toggle, enter the desired limits, and save the settings.</p>
+            
+                            <p><strong>Activities:</strong> If enabled, the activity column will appear in the weekly timesheet, allowing users to select activities. To enable, go to Settings in the side panel under the General tab, enable the 'Display Activities' toggle, and save the settings.</p>
+            
+                            <p><strong>Work Place:</strong> If enabled, users can select a workplace in their weekly timesheet. This is essential for billing some projects based on onsite rates. To enable, go to Settings under the Features tab, enable the 'Workplace' toggle, add work places as needed, click 'Submit' in the popup, and save the settings. <strong>Note:</strong> Do not edit or remove the "on-site" word in the workplace popup to ensure onsite billing functions correctly.</p>
+            
+                            <p><strong>Mandatory Task Selection While Tracking Time:</strong> By default, this feature is enabled. If you want to allow users to submit timesheets without selecting tasks, disable this feature. Go to Settings under the Features tab, disable the 'Mandatory Task Selection While Tracking Time' toggle, and save the settings.</p>
+                        </li>
+            
+                        <li><h4>Submitting Weekly Timesheets</h4>
+                            <p>Timesheets can be submitted for the past week or on the last working day of the current week via the 'Weekly Timesheets' tab or from the side panel under 'Timesheets.' To submit, select the week number, choose the project, select the task from the dropdown, enter the time, add comments, and click the 'Submit' button. Time-filling indicators will show in green if the time matches the daily limit or in blue if it doesn't.</p>
+                            <div>
+                                <img src="timesheet.png" onclick="openModal('timesheet.png')" alt="Weekly Timesheet" width="100%" height="auto">
+                            </div>
+                        </li>
+            
+                        <li><h4>Submitting Weekly Timesheets for Multiple Projects or Tasks</h4>
+                            <p>Users can submit timesheets for multiple projects or tasks using the 'Add' button, as shown below:</p>
+                            <div>
+                                <img src="add_.png" onclick="openModal('add_.png')" alt="Submit Timesheet" width="100%" height="auto">
+                            </div>
+                        </li>
+            
+                        <li><h4>Saving Timesheets</h4>
+                            <p>Timesheets can be saved for later submission. To save, click the 'Save' button, and the timesheet will appear in the 'Drafts' section. You can refresh by clicking the refresh icon next to the week calendar to display the draft timesheets.</p>
+                            <div>
+                                <img src="saved_timesheet.png" onclick="openModal('saved_timesheet.png')" alt="Saved Timesheets" width="100%" height="auto">
+                            </div>
+                        </li>
+            
+                        <li><h4>Canceling Weekly Timesheets</h4>
+                            <p>Users can cancel their submitted timesheets only if they have not been approved. To cancel, click the cross icon located on the right side of the weekly timesheets table:</p>
+                            <div>
+                                <img src="delete.png" onclick="openModal('delete.png')" alt="Timesheet Cancellation" width="100%" height="auto">
+                            </div>
+                        </li>
+            
+                        <li><h4>Cloning Weekly Timesheets</h4>
+                            <p>Users are allowed to clone weekly timesheets and edit the cloned timesheet. To clone a timesheet, follow the steps below:</p>
+                            <div>
+                                <img src="clone_icon.png" onclick="openModal('clone_icon.png')" alt="Clone Weekly Timesheet" width="100%" height="auto">
+                            </div>
+                            <ol>
+                                <li>
+                                    <p>Click on the <strong>Clone Weekly Timesheet</strong> icon. A dialog box will appear. Select the week from the dropdown menu.</p>
+                                    <div>
+                                        <img src="select_week.png" onclick="openModal('select_week.png')" alt="Select Week" width="100%" height="auto">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Click on the <strong>Clone</strong> button in the dialog box.</p>
+                                    <div>
+                                        <img src="clone_btn.png" onclick="openModal('clone_btn.png')" alt="Clone Button" width="100%" height="auto">
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>The timesheet will be cloned for the selected week. Edit the cloned timesheet's time and click the 'Submit' button after making the changes.</p>
+                                    <div>
+                                        <img src="edit_cloned.png" onclick="openModal('edit_cloned.png')" alt="Edit Cloned Timesheet" width="100%" height="auto">
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
                 </li>
-                <br>
-                    <li><h4>Weekly timesheets Submitting for Multiple Projects or Tasks</h4>
-                        <br>
-                    <p>You are able to submit timesheets for multiple projects or multiple tasks on which you has been worked using Add button as shown in below image.
-                        <br>
-                        <div><img src="add_.png" onclick="openModal('add_.png')" alt="Submit timesheet"width="100%" height="auto"></div>
-                    </p>
-                    </li>
-                    <br>
-                    <li><h4>Save timesheetss </h4>
-                      
-                    <p>Here you are able to save timesheets and can submit it later, just click on save button, it will display in drafts as shown in below image (click of refresh icon beside week calendar to display draft timesheets).
-                        <br>
-                        <div><img src="saved_timesheet.png" onclick="openModal('saved_timesheet.png')" alt="Saved timesheets"width="100%" height="auto"></div>
-                    </p></li>
-                    <br>
-                    <li><h4> Weekly timesheets cancellation.</h4>
-                    <p>User can allow to cancel their submitted timesheetss only not approved. To cancel it just click on cross icon located right side of weekly timesheets table as shown in below image.
-                        <br>
-                        <div><img src="delete.png" onclick="openModal('delete.png')" alt="Timesheet cancellation" width="100%" height="auto"></div>
-                    </p></li>
-                    <br>
-                    <li><h4> Clone Weekly Timesheet</h4>
-                        <p>Users are allowed to clone the weekly timesheets and also able to edit cloned timesheet.
-                            <br>
-                            <div><img src="clone_icon.png" onclick="openModal('clone_icon.png')" alt="Clone weekly timesheet" width="100%" height="auto"></div>
-                        </p></li><br>
-                        <ol>
-                            <li>
-                                <p>
-                                    First click on the <b>Clone Weekly Timesheet </b>icon. A dialog box will appear. Select week from the week dropdown.
-                                    <div><img src="select_week.png" onclick="openModal('select_week.png')" alt="Select week" width="100%" height="auto"></div>
-                                </p>
-                            </li><br>
-                            <li>
-                                <p>
-                                    Now click on the <b>Clone</b> button from the dialog box.
-                                    <div><img src="clone_btn.png" onclick="openModal('clone_btn.png')" alt="Clone button" width="100%" height="auto"></div>
-                                </p>
-                            </li><br>
-                            <li>
-                                <p>
-                                    Timesheet will be cloned in the selected week from the dialog box . Now you can edit that timesheet's time and after editing click on submit .
-                                    <div><img src="edit_cloned.png" onclick="openModal('edit_cloned.png')" alt="Edit cloned" width="100%" height="auto"></div>
-                                </p>
-                            </li>
-                        </ol>
-                </ol>
-            </li>
+            </ol>
             
-            <br>
-            
-            
-            
-        </ol>
                 </div>
             <div class="bg-light p-4 remove-padding common-scroll" id="approval">
                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval
                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
             </h2>
     
-        <p>
-            Project managers can approve the timesheet from Approval tab, select the week then employee, click on item of the table, timesheet table with approve and reject button appears from where you can take the action accordingly
-        </p>
+            <p>
+                Project Managers have the ability to approve timesheets from the Approval tab. To do this, they need to select the desired week and employee, then click on an item in the table. This will display the timesheet table with options to approve or reject the timesheet, allowing managers to take appropriate action.
+            </p>
         <div class="notices note">
             <div class="paragraph">
                 <p> Program manager can approve project manger’s time sheets.</p>
@@ -237,12 +221,13 @@
                     <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Pending Weekly Timesheets
                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                 </h2>
-               <p>
-                By default it is disabled, Admin can enable it from settings under the general tab in the “Show pending weekly timesheet from” row. select one from the dropdown list and click on the save settings button. Then you can able to see it inside the panel under the timesheet. 
-               </p>
-               <p>
-                Select the filters based on your requirement and click on apply filters then all pending timesheets will be filtered out as shown in below image. If you click on remind button, a reminder mail will be sent to employee. 
-               </p>
+                <p>
+                    By default, this feature is disabled. However, Admins can enable it by navigating to the settings page, selecting the "General" tab, and enabling the "Show pending weekly timesheet from" option. After selecting the appropriate value from the dropdown list, click on the save settings button. Once enabled, the feature will be visible within the panel under the timesheets section.
+                </p>
+                
+                <p>
+                    Users can apply filters based on their requirements and click the "Apply Filters" button. This will filter out all pending timesheets, as shown in the image below. Additionally, clicking the "Remind" button will send a reminder email to the respective employee.
+                </p>
                <div><img src="pending_.png" onclick="openModal('pending_.png')" alt="Pending timesheet" width="100%"
                 height="auto"></div>
                 <br>

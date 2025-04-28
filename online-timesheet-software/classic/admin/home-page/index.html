@@ -81,136 +81,161 @@
                 <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
         </h2>
       
-    <p>In home page you can see various tabs like status, my tasks, weekly timesheets, approval task status and Log Weekly timesheets. As feature as shown in below image.
+        <p>
+            On the homepage, you will find various tabs such as "Status", "My Tasks", "Weekly Timesheets", "Approval Task Status", and "Log Weekly Timesheets" as shown in the image below.
+            <br>
+            <div><img src="home_page.png" onclick="openModal('home_page.png')" alt="Home page" width="100%" height="auto"></div>
+        </p>
+        
         <br>
-        <div><img src="home_page.png" onclick="openModal('home_page.png')" alt="Home page" width="100%" height="auto"></div>
-    </p>
-    <br>
-    <ol type="I">
-        <li><h3>Weekly timesheets</h3> 
-            <ol>
-             <li>   <h4>Setup</h4></li>
-          
-            
-            <p>
-                Admin can setup or customize weekly timesheets as per their requirement before going to use weekly timesheet. Please look into below points.
-            </p>
-            <p>
-                By default all features are disabled you can enable and setup it based on your requirement.
-            </p>
-            <div class="notices note">
-                <div class="paragraph">
-                    <p> You can click on finally save setting buttons after making setup in each tab of setting page.</p>
-                </div>
-            </div>
-            <p>
-                <b>Time Tracking Days:</b>Here you can block weekend days: Please go to settings from side panel under advance setting tab, you can uncheck days in Time Tracking Days row then click on save button and finally click on save settings button.
-            </p>
-            <p>
-                <b>Restrict daily and weekly hours:</b>Here you can setup max daily hour and max weekly hour due to which user not able to put time beyond this limit in their weekly time sheet. Go to settings under features tab enable the Restrict daily and weekly hours row toggle and put restrict time for daily or weekly and click on save icon and then click on save settings button.
-            </p>
-            <p>
-                <b>Activities:</b>If it enabled, activity column in weekly timesheet is displayed from where user can select activity in their weekly timesheet. To enable it go to settings side panel under settings from, under general tab enable “Display Activities” row toggle switch and then click save setting button. 
-            </p>
-            <p>
-                <b>Work Place:</b>If it enabled, work place column in weekly timesheet is displayed from where user can select work place in their weekly timesheet. This play important role because some project billing is made based on onsite rate. To enable it to go to settings from side panel under settings, under feature tab enable “Work Place” row toggle switch, work place popup will display, you can add some more work places, click on submit button of popup and then save setting button.
-            </p>
-            <div class="notices note">
-                <div class="paragraph">
-                    <p> Do not edit or remove on-site word in work place popup otherwise onsite billing would not work.</p>
-                </div>
-            </div>
-            <p>
-                <b>Mandatory task selection while tracking time:</b>By default this feature is enabled, if you want to submit timesheet without task you can do it just disable it, go to settings from side panel under settings, under features tab, disable “Mandatory task selection while tracking time” row toggle switch and then click on save setting button.
-            </p>
-            <li><h4>Weekly Timesheets Submitting</h4></li>
-            <p>
-                Here you can submit timesheet for past week or on last working day of current week from weekly timesheet tab or from side panel under timesheets. To submit it, first select week number, select project selected project will show in task column dropdown, select task, enter times and add comment in comment icon and finally click on submit button as shown in below image.
-            </p>
-            <li><h4>Weekly Timesheet Submitting for Multiple Projects or Tasks</h4></li>
-            <p>
-                You are able to submit timesheets for multiple projects or multiple tasks on which you has been worked using Add button as shown in below image.
-            </p>
-            <li><h4>Save Timesheets</h4></li>
-            <p>
-                Here you are able to save timesheet and can submit it later, just click on save button, it will display in drafts as shown in below image (click of refresh icon beside week calendar to display draft timesheet).
-            </p>
-            <li><h4>Weekly Timesheets Cancellation.</h4></li>
-            <p>
-                User can allow to cancel their submitted timesheets only not approved. To cancel it just click on cross icon located right side of weekly timesheet table as shown in below image.
-            </p>
-            
-        </ol>
-        <li><h3>Track Time or Daily Timesheets</h3></li>
-        <p>By default Track Time tab is disabled. To enable it to go to settings from side panel under settings, under feature tab enable “Daily time tracking” row toggle switch, Track time able looks like as shown below image.</p>
-        <ol>
-            <li><h4>Setup</h4></li>
-            <p>
-                Few of setups of weekly timesheet is applicable for Track time. Admin can setup or customize Track Time as per their requirement before going to use weekly timesheet. Please look into below points.
-            </p>
-            <p>
-                <b>Tracker column setup:</b> BY default, three-time tracking is displayed (Track time, log time and duration), you can disable any of it as per your requirement. To disable it to go to settings from side panel under settings, under feature tab, in “Daily time tracking options” row uncheck and click on save button and then save setting button.
-            </p>
-            <p>
-                <b>Enable daily timesheet report notification:</b> By default, it is enabled, you can disable it from under feature tab in “Daily time tracking options” row.
-            </p>
-            <p>
-                <b>Max limit of hours per day:</b> You can setup maximum limit hour per day for Track Time. Go to settings from side panel under settings, under feature tab first enable “Restrict daily and weekly hours” toggle switch then add max time limit and click on save icon finally click o save settings button.
-            </p>
-            <li><h4>Track Time or Daily Timesheet submitting</h4></li>
-            <p>
-                Here you can submit daily track time for current day or past day. To submit it, first select date, select project, tasks display related to selected project in task column dropdown, select task, add memo in memo column, add time in racker column finally click on save button, added details will appears in below table, select the check box and finally click on submit button as shown in below image.
-            </p>
-            <div class="notices note">
-                <div class="paragraph">
-                    <p> If you submit daily tack time timesheet, it will map with weekly timesheet table from where you can cancel submitted time if required.</p>
-                    <br>
-                    <p>	You are able to submit daily timesheet for multiple projects or multiple tasks on which you have been worked. Just repeat adding daily timesheet by clicking on save button and finally select all check box and click on submit button.</p>
-                    <br>
+        <ol type="I">
+            <li><h3>Weekly Timesheets</h3>
+                <ol>
+                    <li><h4>Setup</h4></li>
                     <p>
-                        save as draft for daily timesheet is not available 
+                        Admins can customize weekly timesheets based on their requirements before use. Below are the key features for customization.
                     </p>
+                    <p>
+                        By default, all features are disabled. You can enable and configure them based on your needs.
+                    </p>
+                    <div class="notices note">
+                        <div class="paragraph">
+                            <p>You can click on the "Save Settings" button after making changes in each tab on the settings page.</p>
+                        </div>
+                    </div>
+                    <p>
+                        <b>Time Tracking Days:</b> Block weekends by going to Settings > Advanced Settings > Time Tracking Days. Uncheck the weekend days and save the settings.
+                    </p>
+                    <p>
+                        <b>Restrict Daily and Weekly Hours:</b> Configure max daily and weekly hours by enabling the respective toggle in Settings under Features tab, set the limits, and save the settings.
+                    </p>
+                    <p>
+                        <b>Activities:</b> Enabling this will show the activity column in the weekly timesheet. To enable it, go to Settings > General, toggle "Display Activities" on, and save the settings.
+                    </p>
+                    <p>
+                        <b>Work Place:</b> This feature displays the work place column, where users can select their work location. This is particularly important for billing purposes. To enable it, go to Settings > Features and toggle "Work Place" on. You can add more work places and save the settings.
+                    </p>
+                    <div class="notices note">
+                        <div class="paragraph">
+                            <p>Do not edit or remove the "On-site" option in the work place popup, as it is essential for accurate onsite billing.</p>
+                        </div>
+                    </div>
+                    <p>
+                        <b>Mandatory Task Selection:</b> By default, task selection is mandatory when tracking time. To disable it, go to Settings > Features, toggle off "Mandatory task selection while tracking time," and save the settings.
+                    </p>
+                    
+                    <li><h4>Submitting Weekly Timesheets</h4></li>
+                    <p>
+                        Submit timesheets for the past week or on the last working day of the current week. You can do this from the "Weekly Timesheets" tab or the side panel under "Timesheets." To submit:
+                        <ul>
+                            <li>Select the week number.</li>
+                            <li>Choose the project and corresponding task from the dropdown menu.</li>
+                            <li>Enter time and comments, and then click "Submit" to save.</li>
+                        </ul>
+                    </p>
+                    
+                    <li><h4>Submitting Weekly Timesheets for Multiple Projects or Tasks</h4></li>
+                    <p>
+                        You can submit timesheets for multiple projects or tasks by clicking the "Add" button to include them in your weekly timesheet.
+                    </p>
+                    
+                    <li><h4>Saving Timesheets</h4></li>
+                    <p>
+                        Save timesheets for later submission by clicking the "Save" button. These will appear in drafts, which can be viewed by refreshing the week calendar.
+                    </p>
+                    
+                    <li><h4>Weekly Timesheet Cancellation</h4></li>
+                    <p>
+                        Users can cancel their submitted timesheets as long as they are not approved. To cancel, click the "Cross" icon located on the right side of the weekly timesheet table.
+                    </p>
+                </ol>
+        
+                <li><h3>Track Time or Daily Timesheets</h3></li>
+                <p>
+                    The "Track Time" tab is disabled by default. To enable it, go to Settings > Features, toggle on "Daily Time Tracking," and the track time option will be available as shown below.
+                </p>
+                <ol>
+                    <li><h4>Setup</h4></li>
+                    <p>
+                        Some settings from the Weekly Timesheet are also applicable to Track Time. Admins can set up Track Time based on their requirements before enabling it.
+                    </p>
+                    <p>
+                        <b>Tracker Column Setup:</b> By default, three tracking columns are displayed: "Track Time," "Log Time," and "Duration." To disable any of them, go to Settings > Features and uncheck the respective option in the "Daily Time Tracking Options" row, then save the settings.
+                    </p>
+                    <p>
+                        <b>Enable Daily Timesheet Report Notification:</b> This option is enabled by default. You can disable it under "Daily Time Tracking Options" in the Settings.
+                    </p>
+                    <p>
+                        <b>Max Limit of Hours per Day:</b> To set the maximum daily time limit for "Track Time," enable "Restrict Daily and Weekly Hours" in the settings, define the limit, and save the settings.
+                    </p>
+                    
+                    <li><h4>Submitting Daily Timesheets</h4></li>
+                    <p>
+                        To submit a daily timesheet, select the date, project, task, and enter the time and memo. Then click "Save." After saving, select the checkbox and click "Submit" to finalize the entry.
+                    </p>
+                    <div class="notices note">
+                        <div class="paragraph">
+                            <p>If you submit a daily timesheet, it will also reflect in the weekly timesheet table where you can cancel it if needed.</p>
+                            <p>You can submit timesheets for multiple projects or tasks by repeating the process and selecting multiple checkboxes before submitting.</p>
+                            <p>Note: Drafts for daily timesheets are not supported.</p>
+                        </div>
+                    </div>
+                </ol>
+        
+                <li><h3>Status</h3></li>
+                <p>
+                    The "Status" tab provides the status of your submitted timesheets.
+                </p>
+        
+                <li><h3>My Tasks</h3></li>
+                <p>
+                    Under the "My Tasks" tab, users can find tasks assigned to them.
+                </p>
+        
+                <li><h3>Approval</h3></li>
+                <p>
+                    Project managers can approve timesheets from the "Approval" tab. To approve, select the week, employee, and the timesheet entry. Then, use the "Approve" or "Reject" button to finalize the decision.
+                </p>
+                <div class="notices note">
+                    <div class="paragraph">
+                        <p>Program managers can approve project managers' timesheets.</p>
+                    </div>
                 </div>
-            </div>
+        
+                <li><h3>Log Weekly Timesheet As</h3></li>
+                <p>
+                    This feature allows admins and program managers to submit timesheets on behalf of users. By default, it is disabled. To enable it, go to Settings > Advanced Settings, and toggle on "Time Tracking Delegation by Admin/PM."
+                </p>
+                <p>
+                    To log a timesheet, go to the "Weekly Timesheets" tab, select the user and week number, fill in the details, and click "Submit."
+                </p>
+                <div class="notices note">
+                    <div class="paragraph">
+                        <p>Follow the same steps to submit daily timesheets on behalf of users.</p>
+                    </div>
+                </div>
+        
+                <li><h3>Task Status</h3></li>
+                <p>
+                    Project managers can view the task status of employees from the "Task Status" tab and notify users if their task deadline is overdue.
+                </p>
+                <p>
+                    You can filter the task status and export the filtered data to an Excel file by clicking the "Export" link at the top-right of the table.
+                </p>
+                <p>
+                    To notify users, select the items in the action column, click "Notify," add comments in the popup, and click "Submit" to send the notification via email.
+                </p>
+        
+                <li><h3>Self-Assign Task (or Home Page Task Tab)</h3></li>
+                <p>
+                    Users can create their own tasks from the "Task" tab, which is disabled by default. Admins can enable it from Settings > Features by toggling on the "Self-Assign Task" option.
+                </p>
+                <p>
+                    <b>Allow Self-Assign Task Billable:</b> By default, billable tasks are disabled. Admins can enable this option from Settings > Features by toggling on the "Allow Self-Assign Task Billable" option.
+                </p>
+            </li>
         </ol>
-        <li><h3>Status</h3></li>
-        <p>You can find status of your submitted timesheet in status tab as shown in below.</p>
-        <li><h3>My Tasks</h3></li>
-        <p>User can be able to find task those which are assigned to them under My task tab as shown in below image.</p>
-        <li><h3>Approval </h3></li>
-        <p>Project managers can approve the timesheet from Approval tab, select the week then employee, click on item of the table, timesheet table with approve and reject button appears from where you can take the action accordingly</p>
-        <div class="notices note">
-            <div class="paragraph">
-                <p> Program manager can approve project manger’s time sheets.</p>
-            </div>
-        </div>
-        <li><h3>Log Weekly Timesheet As.</h3></li>
-        <p>By this feature admin and program manager can able to submit timesheet on behalf of the users and by default this feature is disabled, to enable it, go to the settings from side panel under settings, under advance settings tab enable “Time tracking delegation by Admin / PM” row toggle switch. </p>
-        <p>
-            First click on weekly timesheet tab, log weekly timesheet dropdown appears, select the user from it and select the week number, fill the details in timesheets, and finally click on submit button shown in below image.
-        </p>
-        <div class="notices note">
-            <div class="paragraph">
-                <p> same step should follow to submit daily timesheet on behalf of the users.</p>
-            </div>
-        </div>
-        <li><h3>Task Status</h3></li>
-        <p>
-            Project manager can check task status of their employees from Task Status Tab of home page and notify users in case of task deadline date is overdue as shown image.
-        </p>
-        <p>
-            Here you can filter task status from filters and can exports filtered data in to excel file, just click on export link at right top of the table.
-        </p>
-        <p>
-            To notify the users about their task status, select the items in action column, click on notify button, popup will display and add the comments and click on submit button, users will get notified through mail
-        </p>
-        <li><h3>Self-Assign Task (or Home page task tab).</h3></li>
-        <p>
-            Users can create their  tasks by their own from task tab as shown in below image, by default it is disabled, admin can enable it from settings from side panel, under settings, under feature tab, enable toggle switch for “Self-Assign Task” row.
-        </p>
-        <p>
-            <b>Allow self-assign task billable :</b>By default this feature is disabled or billable is No in Add task page as shown in above image, when it is enable users are allowed to create billable tasks, admin can enable it from settings from side panel, under settings, under feature tab, enable toggle switch for “Allow self-assign task billable” row.
-        </p>
+        
     </ol>
             </div>
            
