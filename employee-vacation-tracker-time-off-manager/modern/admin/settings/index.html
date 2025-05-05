@@ -120,7 +120,10 @@
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Settings
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                             </h2>
-                            <p>The Settings page is visible only to admins. By default, the person who installed the application will be the admin. Roles can be assigned as admin to any person from the users' page.</p>
+                            <p>Settings page is visible only to admin. On the default note, the one who has installed
+                                the application would be an admin, the roles could be assigned as admin to any person
+                                from the user’s page.</p>
+
                             <ol type="I">
                                 <li>
                                     <a href="../settings/#general">General</a>
@@ -143,7 +146,8 @@
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                             </h2>
-                            <p>In this section, you can customize various settings, such as changing the theme, date format, color code, brand logo, etc. You can select the theme color as light, dark, or site theme.</p>
+                            <p>Here, you can change theme, date format, color code, brand logo etc.</p>
+
                             <img src="general.png" onclick="openModal('general.png')" alt="general" width="100%">
                             <br><br>
 
@@ -157,34 +161,38 @@
                                 <img src="theme.png" onclick="openModal('theme.png')" alt="theme" width="100%">
                                 <br> <br>
                                 <li id="Annualleave">
-                                    <h6>Annual Leave Start Date and Annual Leave End Date</h6>
-<p>You can specify the annual leave start and end dates here or, alternatively, set them based on the joining date, depending on your requirements for leave calculation. If accrued leaves are enabled, leaves will be calculated and allocated to users based on these dates and the candidate's joining date.</p>
+                                    <h6>Annual Leave Start Date and Annual Leave End Date</h6>You can specify the annual
+                                    leave start and end dates here, or alternatively, set them based on the joining
+                                    date, depending on your requirements for leave calculation. If accrued leaves are
+                                    enabled, leaves
+                                    would be calculated and allocated to users based on these date and date of joining
+                                    of the candidate.
                                     <br><br> <br>
                                     <img src="annualLJD.png" onclick="openModal('annualLJD.png')" alt="Leave calculate"
                                         width="100%">
                                     <br><br>
                                     <b>Example</b>
                                     <div class="example">
-                                        <p>For example, let's say:</p>
-                                        <ul>
-                                            <li>Candidate joining date = 15<sup>th</sup> March 2024</li>
-                                            <li>Annual Start Date = 1<sup>st</sup> Jan 2024</li>
-                                            <li>Annual End Date = 31<sup>st</sup> Dec 2024</li>
-                                            <li>Casual Leaves = 24</li>
-                                        </ul>
-                                    
-                                        <p>&#10004; If accrued leave is disabled, the candidate's allocated leave would be:</p>
-                                        <p>(24 leaves / 12 months) * Remaining months (9 months) = 18 leaves allocated for the year</p>
-                                    
-                                        <p>&#10004; If accrued leave is enabled and the type is Monthly, the allocated leave for March will be 2, and it will increase by 2 each month.</p>
-                                    
-                                        <p>&#10004; If accrued leave is enabled and the type is Quarterly:</p>
-                                        <ul>
-                                            <li>24 leaves / 3 quarters = 8 leaves for each quarter</li>
-                                            <li>First Quarter: (8 leaves / 4 months) = 2 leaves per month</li>
-                                            <li>Remaining months to complete the first quarter (2 months) = 2 leaves * 2 months = 4 leaves allocated in the first quarter.</li>
-                                            <li>Subsequently, 8 leaves would be allocated for each quarter automatically.</li>
-                                        </ul>
+                                        let say
+                                        <br>
+                                        candidate joining date = 15 <sup>th</sup> March 2024.
+                                        <br>
+                                        Annual Start date= 1 <sup>st</sup> Jan 2024 <br>
+                                        Annual End Date = 31<sup>st</sup> Dec 2024. <br>
+                                        Casual Leaves = 24.
+                                        <p>&#10004; If accrued is disabled, candidate allocated leave would be
+                                            (24 leaves /12 month) * Remaining months i.e., 9 months = 18 Leaves
+                                            allocates for a years
+                                        </p>
+                                        <p>&#10004; If accrued is enabled and type is Monthly, for march month allocated
+                                            leave will be 2 and it increase by 2 on every month.</p>
+                                        <p>&#10004; If accrued is enabled and type is quarterly <br>
+                                            24 leaves/ 3 quarter for year = 8 leaves for each quarter <br>
+                                            Now (1st quarter= 8 leaves) / 4 months = 2 leaves <br>
+                                            ∴ 2 leaves * 2 months (remaining months to complete one quarter) = 4 leaves
+                                            allocates in first quarter and then 8 leaves would allocate for in each
+                                            quarter automatically.
+                                        </p>
                                         <!-- <p>Allocated leaves </p> -->
                                 </li>
                                 <br>
@@ -631,7 +639,7 @@
                                 <li id="Allowbackdateleaves">
                                     <h6>Allow backdate leaves </h6>User can be allowed to submit back date leaves by X
                                     days
-                                </li><br>
+                                </li>
                                 <img src="11.png" onclick="openModal('11.png')" alt="Office Location" width="100%"><br>
                                 <br>
                                 <h6>Leaves Based On</h6> Leaves are based on 3 categories. This could be enabled by
