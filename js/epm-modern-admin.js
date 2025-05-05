@@ -160,7 +160,7 @@ $(document).ready(function () {
 
 
         "<li class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/Expense-tracker/modern/admin/settings/'>" +
+        "<a class='qwe' href='/Employee-performance-management/modern/admin/settings/'>" +
         "Settings" +
         "</a>" +
         "<img src='../../down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +

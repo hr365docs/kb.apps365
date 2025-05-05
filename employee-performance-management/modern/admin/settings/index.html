@@ -137,7 +137,7 @@
                                 </ul>
                                 <ul>
 
-                                    <p>
+                                    <p><br>
                                         Setting options, as mentioned below, are available for Admin, HR Manager
                                         Admin, and HR Head admin. All the general settings like adding users to the
                                         application, notification settings and features setup or setup the appraisal
@@ -164,23 +164,18 @@
                         <div class="bg-light p-4 common-scroll remove-padding" id="general-setting">
                             <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>General Settings<i
                                         class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <br>
+                          
                             <ul class=page-list>
-                                <p>Here you can set the date format, and theme color, configure SharePoint API
-                                    permissions, hide the side navigation panel, hide the web part title, remove the
-                                    custom web part CSS, final rating, brand logo, etc.
-
-                                    <br>
-
+                                <p>
+                                    Here, you can set the date format and theme color, configure SharePoint API permissions, hide the side navigation panel, hide the web part title, remove custom web part CSS, manage the final rating, brand logo, and more.
                                 </p>
-
+                                
                                 <li id="API-Configuration">
                                     <p>
-                                        <b>API Configuration:</b> API configuration help in working delta sync,
-                                        excluding unlicensed and shared mailbox users on theuser's page Click on the
-                                        link.
-
+                                        <b>API Configuration:</b> API configuration helps enable delta sync and allows the exclusion of unlicensed and shared mailbox users on the user page. Click on the link to configure.
                                     </p>
+                                </li>
+                                
                                     <div>
                                         <img src="02.png" onclick="openModal( '02.png') " alt="Settings" width="100% "
                                             height="auto">
@@ -202,7 +197,7 @@
                                 </li>
                                 <br>
 
-                                <li id="SharepointPageConfiguration">
+                                <li id="SharepointPageConfiguration"><br>
                                     <p>
                                         <b>Hide Sharepoint Page's Default Components:</b> This component is an integral
                                         part of SharePoint by default.
@@ -217,13 +212,13 @@
                                         <div> <img src="05.png" onclick="openModal( '05.png') " alt="Settings"
                                                 width="100% " height="auto">
                                             <br>
-                                        </div>
+                                        </div><br>
                                         <li><b>Hide Side Navigation Panel </b> : Hide side navigation panel in
                                             sharepoint
                                             page where app is running</li><br>
                                         <img src="06.png" onclick="openModal( '06.png') " alt="Settings" width="100% "
                                             height="auto">
-                                        <br>
+                                        <br><br>
                                         <li><b>Hide WebPart Title</b> : GCC (US Government Community Cloud), if your
                                             Microsoft 365 tenant is GCC, please enable this setting to make it work</li>
                                         <br>
@@ -390,24 +385,21 @@
                     <div class="bg-light p-4 common-scroll remove-padding" id="AdvanceSettings">
                         <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Advance Settings<i
                                     class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
-                        <br>
+                    
                         <ul class=page-list>
                             <p>
-                                The Advanced Settings section allows administrators to customize key functionalities,
-                                including KRA module configurations, KPI settings, and appraisal review delegation.
-                                Here, you can streamline performance management processes, ensuring they align with
-                                organizational goals and enhance operational efficiency.
+                                The <strong>Advanced Settings</strong> section allows administrators to customize key functionalities, including KRA module configurations, KPI settings, and appraisal review delegation. This section helps streamline performance management processes, ensuring alignment with organizational goals and enhancing operational efficiency.
                             </p>
-                            <div><img src="advance.png" onclick="openModal( 'advance.png') " alt="AdvanceSettings"
-                                    width="100% " height="auto"></div>
+                            
+                            <div>
+                                <img src="advance.png" onclick="openModal('advance.png')" alt="Advanced Settings" width="100%" height="auto">
+                            </div>
                             <br>
+                            
                             <p>
-                                The KRA Module Section allows administrators to customize key components of the
-                                self-review process. Here, you can toggle options for features such as Achievements,
-                                Self Reflections, and Employee's Action Plan. Additionally, you can manage summaries by
-                                both employees and appraisers, agree upon goals, and enforce mandatory KRAs, ensuring a
-                                tailored review experience that aligns with organizational objectives.
+                                The <strong>KRA Module</strong> section enables administrators to tailor critical aspects of the self-review process. You can toggle features such as Achievements, Self-Reflections, and Employee Action Plans. Additionally, it allows management of summaries by both employees and appraisers, agreement on goals, and enforcement of mandatory KRAs, ensuring a review experience customized to organizational needs.
                             </p>
+                            
                             <div><img src="KRAModules.png" onclick="openModal( 'KRAModules.png') " alt="AdvanceSettings"
                                     width="100% " height="auto"></div>
                             <br>
@@ -657,61 +649,48 @@
                                     alt="Notification" width="100% " height="auto">
                             </div>
                             <br>
-                            <li>
-
-                                It triggers notifications to the appraisee and has different notification
-                                templates.
-
-                                </p>
-                            </li>
-                            <br>
-                            <li>
-                                <p>
-                                    <b>Review Announcement:</b> A reminder notification could be triggered to all
-                                    the appraisees. (One day before the self-review could start)
-
-                                </p>
-                            </li>
-                            <br>
-                            <li>
-                                <p>
-
-                                    <b>Review Notifications:</b> Notifications are triggered to all appraisees on
-                                    the self-review start date.
-
-                                </p>
-                            </li>
-                            <br>
-                            <li>
-                                <p>
-                                    <b>Last Day Reminder:</b> Reminder notifications are triggered to all the
-                                    appraisees a day before the self-review time deadline.
-
-                                </p>
-                            </li>
-                            <br>
-                            <li>
-                                <p>
-                                    <b>Last Day Notification:</b> Notifications are triggered to all the appraisees
-                                    on the last day of the self-review timeline.
-
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <b>Review Completion Notification:</b> Notifications are triggered to all the
-                                    appraisees
-                                    on the Review Completion
-                                </p>
-                            </li>
-                            <br>
-                            <li>
-                                <p>
-                                    <b>Review Resubmit:</b> Notifications are triggered to all the appraisees
-                                    to review again and resubmit .
-                                </p>
-                            </li>
-                            <br>
+                          
+                                <li>
+                                    Notifications are triggered to the appraisee and use different notification templates.
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Review Announcement:</b> A reminder notification is triggered to all appraisees one day before the self-review begins.
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Review Notifications:</b> Notifications are triggered to all appraisees on the self-review start date.
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Last Day Reminder:</b> Reminder notifications are triggered to all appraisees one day before the self-review deadline.
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Last Day Notification:</b> Notifications are triggered to all appraisees on the last day of the self-review timeline.
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Review Completion Notification:</b> Notifications are triggered to all appraisees upon review completion.
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>Review Resubmit:</b> Notifications are triggered to all appraisees prompting them to review again and resubmit.
+                                    </p>
+                                </li>
+                           
+                            
 
                             <h3 id="Appraisals-Review"><a style="font-size:18px ;" class="header-icon-link highlight "
                                     href=#>Appraisal’s-Review<i class="fas fa-link "
