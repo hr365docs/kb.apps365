@@ -105,10 +105,9 @@
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General <i
                                             class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
 
-                                            <p>
-                                                From this section, you can update the date format, configure a custom email, set the initial asset ID, and more.
-                                            </p>
-                                            
+                                <p>
+                                    From here you can update date format, custom email, first asset ID etc.
+                                </p>
                                 <br>
                                 <div><img src="2.png" onclick="openModal('general_setting.png')" alt="General setting"
                                         width="100%" height="auto"></div>
@@ -134,9 +133,10 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    From this section, you can select the desired currency type from the dropdown menu. Once selected, click the <b>Save</b> button to apply the changes.
+                                    From here, you can select the type of currency from the dropdown. Click on the Save
+                                    button.
                                 </p>
-                                
+
                                 <div><img src="currency.png" onclick="openModal('currency.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
@@ -151,9 +151,10 @@
                                 </h2>
 
                                 <p>
-                                    From this section, you can choose the preferred date format from the dropdown menu. After making your selection, click the <b>Save</b> button to apply the changes.
+                                    From here, you can select the date format from the dropdown. Click on the Save
+                                    button.
+
                                 </p>
-                                
 
                                 <div><img src="date_format.png" onclick="openModal('date_format.png')"
                                         alt="date formate" width="100%" height="auto"></div>
@@ -243,84 +244,79 @@
                                 <div><img src="email_notification.png" onclick="openModal('email_notification.png')"
                                         alt="email notification" width="100%" height="auto">
                                 </div><br>
-                                <p>
-                                    By default, the setting <b>“To users on assigning assets”</b> is enabled, and email notifications are sent. Enter an email ID and click the <b>Submit</b> button—both the admin and the specified email address will receive notifications when an asset is assigned to a user.
+                                <p>Default setting, “To users on assigning assets“ is enabled and receives the email
+                                    notification. Enter the email ID and click on submit button, both the admin and the
+                                    entered email ID’s would receive an email notification on assigning assets to the
+                                    users.
                                 </p>
-                                
+                                <p>Default setting, “To users on returning assets“ is enabled and admin receives the
+                                    email notification. Enter the email ID and click on submit button, both admin and
+                                    the entered email IDs would receive email notification on returning assets from the
+                                    users.</p>
+                                <p>By default, “To groups on assigning assets“ is enabled and admin receives the email
+                                    notification. Enter email ID and click on submit button, both admin and the entered
+                                    email IDs would receive email notification on returning assets from the group.</p>
+                                <p>By default, “To groups on returning assets“ is enabled and admin receives the email
+                                    notification. Enter the email ID and click on submit button, both admin and the
+                                    entered email IDs would receive email notification on returning assets from the
+                                    group.</p><br>
+                                <p><b><u>Email Reminder or Enable Automatic Reminders</u></b></p><br>
                                 <p>
-                                    Similarly, the <b>“To users on returning assets”</b> setting is enabled by default. When an asset is returned, the admin and the entered email ID will receive an email notification.
+                                    By default, “Enable Automatic Reminders” is enabled, admin would receive email
+                                    notification regarding the asset expiry date and returning assets of the users based
+                                    on days entered in settings.
                                 </p>
-                                
-                                <p>
-                                    The <b>“To groups on assigning assets”</b> setting is also enabled by default. Enter the email ID and click <b>Submit</b> to send notifications to both the admin and the specified email addresses when assets are assigned to a group.
-                                </p>
-                                
-                                <p>
-                                    Likewise, the <b>“To groups on returning assets”</b> setting is enabled by default. Email notifications will be sent to the admin and the provided email IDs upon asset return from the group.
-                                </p>
-                                
-                                <br>
-                                <p><b><u>Email Reminders or Automatic Notifications</u></b></p><br>
-                                
-                                <p>
-                                    The <b>“Enable Automatic Reminders”</b> feature is enabled by default. The admin receives email alerts regarding asset expiry and asset returns based on the number of days configured in the settings.
-                                </p>
-                                
-                                <p>
-                                    Recipients listed in the <b>“Choose Email Address”</b> field will also receive reminders. You may enter up to 4 email addresses, separated by semicolons (“;”) with no spaces.
-                                </p>
-                                
-                                <p>
-                                    When a value is entered under <b>“Set Return Date Reminder”</b> and submitted, the system sends an email notification the specified number of days before the asset's return date.
-                                </p>
-                                
-                                <p>
-                                    Similarly, the <b>“Set Expiry / End Date Reminder 1”</b> option sends a notification the given number of days prior to the asset’s expiry date.
-                                </p>
-                                
-                                <p>
-                                    The <b>“Set Expiry / End Date Reminder 2”</b> feature functions in the same manner as Reminder 1, allowing for a secondary reminder.
-                                </p>
-                                
+                                <p>Here the person will receive an email notification whose email ID(s) are entered in
+                                    the “Choose Email Address” box. You can add up to 4 emails (IDs) in choose email ids
+                                    separated by “;” without space.</p>
+                                <p>When you enter the number as day for “Set Return date Reminder” and click on submit,
+                                    email notification would be received before the number of days entered to the return
+                                    date. When you enter number as day for “Set Expiry / End date Reminder 1” and click
+                                    on submit, email notification would be received before the number of days entered to
+                                    the expiry date of the assets.</p>
+                                <p>Similar way “Set Expiry / End date Reminder 2” will works.</p>
                                 <div class="notices note">
                                     <div class="paragraph">
                                         <p>
-                                            The person who installs the application is assigned the admin role by default and will automatically receive all system-generated email notifications and reminders.
+                                            The person who install the application, by default is an admin, such person
+                                            will receive email notifications and email reminders.
                                         </p>
+
                                     </div>
                                 </div>
-                                
                                 <p>
-                                    When creating an asset, it is mandatory to assign it to a user during the creation process.
+
+                                    When a user creates an asset, they must select an assigned user during the process.
                                 </p>
-                                
+
 
                                 <div><img src="AssignTouser.png" onclick="openModal('AssignTouser.png')"
                                         alt="AssignTouser" width="100%" height="auto">
                                 </div><br>
                                 <p>
-                                    Once a user receives an email notification for asset approval, they are expected to complete the approval process. If the user fails to approve the asset within the designated time, an <b>Acknowledgement Date Reminder 1</b> will be triggered.
+                                    After a user receives an email notification for approval, if they fail to approve,
+                                    an Acknowledgement Date Reminder 1 is sent. This reminder is triggered after the
+                                    specified number of days, reminding the user to complete the approval process.
                                 </p>
-                                <p>
-                                    This reminder is automatically sent after the number of days specified in the settings, serving as a follow-up notification to prompt the user to take the necessary approval action.
-                                </p>
-                                
 
 
                                 <div><img src="Rem1.png" onclick="openModal('Rem1.png')" alt="AssignTouser" width="100%"
                                         height="auto">
                                 </div><br>
                                 <p>
-                                    If the user still does not approve the asset after receiving the first reminder, a <b>Second Reminder</b> will be sent. This acts as an additional prompt, urging the user to complete the approval process within the specified timeframe.
+                                    If the user still does not approve after the first reminder, a Second Reminder is
+                                    sent. This serves as an additional prompt for the user to complete the approval
+                                    process within the designated timeframe.
                                 </p>
-                                
+
+
                                 <div><img src="Rem2.png" onclick="openModal('Rem2.png')" alt="AssignTouser" width="100%"
                                         height="auto">
                                 </div><br>
                                 <p>
-                                    The third option is an <b>automatic approval</b>. If the user does not take action within the specified number of days, the system will automatically process the approval based on the selected timeframe.
+                                    The third option is that if the user does not approve within the specified number of
+                                    days, the approval will be automatically processed based on the selected timeframe.
                                 </p>
-                                
 
 
                                 <div><img src="AutoApprove.png" onclick="openModal('AutoApprove.png')"
@@ -337,9 +333,8 @@
                                 </h2>
 
 
-                                <p>
-                                    Within the <b>Naming Convention</b> feature, you can easily rename a field and save your changes by clicking the <b>Save</b> button.
-                                </p>
+                                <p>Within the Naming Convention feature, you have the option to easily modify the name
+                                    of the field itself and then save your changes by clicking on the "Save" button.</p>
 
                                 <div><img src="naming.png" onclick="openModal('naming.png')" alt="email notification"
                                         width="100%" height="auto">
@@ -356,7 +351,9 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    The favicon appears on the left side of the browser tab, helping users quickly identify the website. When the toggle is turned on, the icon is shown; otherwise, it is hidden.
+                                    The favicon is shown on the left side of the browser tab, making it easy for users
+                                    to identify the website. If the toggle is turned on, the icon will be displayed;
+                                    otherwise, it will not appear.
                                 </p>
 
                                 <div><img src="icon.png" onclick="openModal('icon.png')" alt="currency" width="100%"
@@ -373,21 +370,20 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    Clicking on <b>Hide Organization Name From Asset Details</b> opens a panel with a toggle. When enabled, the organization name will be hidden.
+                                    Clicking on <b>Hide Organization Name From Asset Details</b> will open a panel with
+                                    a toggle. When this toggle is switched on, the organization name will be hidden.
                                 </p>
 
                                 <div><img src="orgname.png" onclick="openModal('icon.png')" alt="currency" width="100%"
                                         height="auto"></div>
                                 <br>
-                                <p>
-                                    As shown below, when the toggle is off, the organization name remains visible.
-                                </p>
+                                <p>As shown in the image below, when the toggle is off, the organization name will not
+                                    be hidden.</p>
                                 <div><img src="hideorg.png" onclick="openModal('hideorg.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
-                                <p>
-                                    When the toggle is turned on, the organization name is hidden or replaced, as shown below.
-                                </p>
+                                <p>When the toggle is on, the panel will hide the organization name. As shown in the
+                                    image below, the organization name is replaced with another.</p>
                                 <div><img src="hideorg2.png" onclick="openModal('hideorg.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
@@ -400,22 +396,22 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    Clicking on <b>Hide User Name and User Location</b> opens a panel with a toggle. When enabled, the user's information will be hidden.
+                                    Clicking on <b>Hide User Name And User Location</b> will open a panel with a toggle.
+                                    When this toggle is switched on, the information of the user will be hidden.
                                 </p>
+
                                 <div><img src="username.png" onclick="openModal('username.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
 
-                                <p>
-                                    When the toggle is off, the user’s name and department remain visible, as shown below.
-                                </p>
+                                <p>As shown in the image below, when the toggle is off, the user location and user
+                                    departmnet will not be hidden.</p>
                                 <div><img src="hideuser.png" onclick="openModal('hideuser.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
 
-                                <p>
-                                    When the toggle is on, this information is hidden or replaced, as shown in the image below.
-                                </p>
+                                <p>When the toggle is on, the panel will hide the user location and department. As shown
+                                    in the image below, the user name and location is replaced with another.</p>
                                 <div><img src="hideuser2.png" onclick="openModal('hideuser2.png')" alt="currency"
                                         width="100%" height="auto"></div>
                                 <br>
