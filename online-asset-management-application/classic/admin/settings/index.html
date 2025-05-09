@@ -119,13 +119,13 @@
                         <div class="bg-light p-4 common-scroll remove-padding" id="user">
                             <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>Users<i class="fas fa-link "
                                 style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <br>
+                            
 
 
                             <p>Admins can add users to the application and assign them specific roles. Below are the available user roles:</p>
 
 
-                            <br>
+                           
                             <div><img src="user_panel.png " onclick="openModal( 'user_panel.png ') " alt="User panel" width="100% " height="auto"></div>
                             <br>
                             <div class="ul">
@@ -186,11 +186,12 @@
                         <div class="bg-light p-4 common-scroll remove-padding" id="general-setting">
                             <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>General Settings<i class="fas fa-link "
                         style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <br>
+                           
                             <ul class=page-list>
-                                <p>Here you can set date format, currency, asset accept notification, system generated barcode, theme color, brand logo etc.
+                                <p>From this section, you can configure various system settings such as date format, currency, asset acceptance notifications, system-generated barcodes, theme colors, brand logo, and more.</p>
 
-                                    <br>
+
+                                   
                                     <div><img src="General_settings.png " onclick="openModal( 'General_settings.png') " alt="General setting" width="100% " height="auto"></div>
                                     <br>
 
@@ -256,7 +257,8 @@
 
                                         <div class="notices note">
                                             <div class="paragraph">
-                                                <p>Make sure guests or external users SharePoint site permissions should be provided where the Asset management application is hosted.</p>
+                                                <p>Ensure that appropriate SharePoint site permissions are granted to guests or external users where the Asset Management application is hosted.</p>
+
                                             </div>
                                         </div>
                                         <div><img src="external_user.png " onclick="openModal( 'external_user.png') " alt="External user" width="100% " height="auto"></div>
@@ -271,27 +273,29 @@
                                     </li>
                                     <br>
                                     <li>
-                                        <p> <b>Show Projects While Assigning Assets:</b> If enabled, the project option will appear in the assignment popup. You can then assign assets to users along with a project. </p>
+                                        <p><b>Show Projects While Assigning Assets:</b> When enabled, the project selection field will be displayed in the asset assignment popup, allowing you to assign assets to users in association with a specific project.</p>
+
                                         <div><img src="show_project.png " onclick="openModal( 'show_project.png') " alt="Show project" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Camera Scanner: </b> If enabled, camera scanner tab will display on the home page from where you can scan the barcode of the assets to search the assets.
+                                            <b>Camera Scanner:</b> When enabled, a Camera Scanner tab will appear on the home page, allowing users to scan asset barcodes to quickly locate and access asset details.
                                         </p>
+                                        
                                         <div><img src="camera_scanner.png " onclick="openModal( 'camera_scanner.png') " alt="Camera scanner" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Retain Asset's Last Location:</b> If this feature is enabled, the user’s location will retain on available assets after returning the assets. You can see retained location in user location field of the assets.
+                                            <b>Retain Asset's Last Location:</b> When this option is enabled, the user's location will be retained on assets after they are returned. The retained location will be visible in the asset's "User Location" field.
                                         </p>
                                         <div><img src="retain_asset_location.png " onclick="openModal( 'retain_asset_location.png') " alt="Retain asset" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Assets accept notification:</b> If it is enabled, when an asset is assigned to users, they will receive an email notification from where users can accept/reject assets. If it is disabled when assets are assigned to users, email notifications we not sent and those assets will show on the acknowledgment status page later we can initiate.
+                                            <b>Asset Acceptance Notification:</b> If enabled, users will receive an email notification upon asset assignment, allowing them to accept or reject the asset. If disabled, no notification will be sent, and the assigned assets will appear on the Acknowledgment Status page, where acceptance can be initiated manually.
                                         </p>
                                         <div><img src="accept_notification.png " onclick="openModal( 'accept_notification.png') " alt="Accept notification" width="100% " height="auto"></div>
                                     </li>
@@ -313,14 +317,14 @@
                                     <br>
                                     <li>
                                         <p>
-                                            <b>Assets Advance Booking:</b> If you disable this <b>Assets Advance Booking</b> feature it will be disabled from the application.
+                                            <b>Assets Advance Booking:</b> If this option is disabled, the advance booking functionality for assets will be removed from the application interface.
                                         </p>
                                         <div><img src="asset_advance_booking.png " onclick="openModal( 'asset_advance_booking.png') " alt="Advance booking" width="100% " height="auto"></div>
                                     </li>
                                     <br>
                                     <li>
                                         <p>
-                                            <b> Enable Software:</b> If enabled, software tabs on  home page will display, one tab is used to sync O365 license another is used to add software manually and can assign to users.
+                                            <b>Enable Software:</b> When enabled, two software-related tabs will be displayed on the home page. One tab allows syncing of O365 licenses (based on API configuration), and the other enables manual addition of software, which can then be assigned to users.
                                         </p>
                                         <div><img src="enable_software.png " onclick="openModal( 'enable_software.png') " alt=" Enable software" width="100% " height="auto"></div>
                                     </li>
@@ -433,87 +437,87 @@
                                         <p><b> Asset Acknowledgement:</b> If you type the acknowledgement text, user can see the acknowledgement page (the acknowledgement page link is available in the assigned email notification of the user).</p>
                                         <div><img src="asset_acknowledgement.png " onclick="openModal( 'asset_acknowledgement.png') " alt="Asset acknowledge" width="100% " height="auto"></div>
                                         <br>
-                                        <p><b>Create PDF of asset acknowledgment:</b> When you enable this and set up Power Automate, pdf file will create and stored in SP library and sent to user who has acknowledged the assets.</p>
+                                        <p><b>Create PDF of Asset Acknowledgment:</b> When this option is enabled and integrated with Power Automate, a PDF file will be generated, stored in the designated SharePoint library, and automatically sent to the user who has acknowledged the asset.</p>
 
-                                    </li>
-                                    <p>Below mentioned is the URL where you can find pdf files</p>
-                                   
-                    <p>https://YourTenantName.sharepoint.com/sites/SiteName/HR365AMPAssetdoc</p>
-                                    <br>
-                                    <br>
+                                        <p>You can access the generated PDF files at the following URL:</p>
+                                        
+                                        <p><i>https://YourTenantName.sharepoint.com/sites/SiteName/<br>HR365AMPAssetdoc</i></p>
+                                        
+                                    
+                                    
 
-                                    <li>
-                                        <p>
-                                            <b>Barcode Customization:</b> From here you can customize barcode by adding <b>Barcode Title Text</b>, <b>Organization Name</b>, <b>Asset Field Attribute</b> and enabling <b>Set Asset Field Attribute for Barcode</b>.
-                                        </p>
-                                        <div><img src="barcode_customization.png " onclick="openModal( 'barcode_customization.png') " alt="Customization" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>SCCM Integration:</b> From here you can Integrate SCCM. Enter <b>Web API Url.</b>
-                                        </p>
-                                        <div><img src="SCCM.png " onclick="openModal( 'SCCM.png') " alt="Integrate SCCM" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Alloc8 Integeration:</b> From here you can Integrate Alloc8. Enter the <b>Azure web app service's domain.</b>
-                                        </p>
-                                        <div><img src="alloc8.png " onclick="openModal( 'alloc8.png') " alt="Alloc8" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Kace Integeration:</b> From here you can Integrate Alloc8. Enter the <b>Azure web app service's domain.</b>
-                                        </p>
-                                        <div><img src="kace.png " onclick="openModal( 'kace.png') " alt="Kace" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>MS Intune Filters:</b>By using these filters only filtered data will be pulled from MS-intunes, filter by platform , filter compliance by status, filter ownership by type, also exclude VM's by enabling the toogle.</b>
-                                        </p>
-                                        <div><img src="msintunefilter.png" onclick="openModal( 'msintunefilter.png') " alt="MS Intune" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Software & MS Intune Integration:</b> If you integrate it, Intune assets will sync in the application.
-                                        </p>
-                                        <div><img src="software.png " onclick="openModal( 'software.png') " alt="Software" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-
-                                    <li>
-                                        <p>
-                                            <b>Enable Theme Color:</b> You can select color as per your requirement and click on <b>Save</b> button.
-                                        </p>
-                                        <div><img src="theme_color.png " onclick="openModal( 'theme_color.png') " alt="Theme color" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Sharepoint site collection home link:</b> You can enable this from the general settings, you can see the SharePoint link option on the side navigation panel.
-                                        </p>
-                                        <div><img src="url_.png" onclick="openModal( 'url_.png') " alt="URL" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Brand Logo:</b> You can upload logo by clicking on <b>Upload logo</b>. You can crop the logo and finally click on <b>Save Logo</b> button.
-                                        </p>
-                                        <div><img src="brand_logo.png " onclick="openModal( 'brand_logo.png') " alt="Brand logo" width="100% " height="auto"></div>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p>
-                                            <b>Assets View For Users:</b> You can select the categories and subcategories of assets, only those will be available to the users for booking.
-                                        </p>
-                                        <div><img src="assetsviewuser.png" onclick="openModal( 'assetsviewuser.png') " alt="Assets view users" width="100% " height="auto"></div>
-                                    </li>
-
-                                </ol>
+                                        <ol>
+                                            <li>
+                                                <p>
+                                                    <b>Barcode Customization:</b> You can customize barcodes by adding a <b>Barcode Title Text</b>, <b>Organization Name</b>, <b>Asset Field Attribute</b>, and enabling the <b>Set Asset Field Attribute for Barcode</b> option.
+                                                </p>
+                                                <div><img src="barcode_customization.png" onclick="openModal('barcode_customization.png')" alt="Customization" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>SCCM Integration:</b> Integrate SCCM by entering the <b>Web API URL</b>.
+                                                </p>
+                                                <div><img src="SCCM.png" onclick="openModal('SCCM.png')" alt="Integrate SCCM" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Alloc8 Integration:</b> Integrate Alloc8 by entering the <b>Azure Web App Service Domain</b>.
+                                                </p>
+                                                <div><img src="alloc8.png" onclick="openModal('alloc8.png')" alt="Alloc8" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Kace Integration:</b> Integrate Kace by entering the <b>Azure Web App Service Domain</b>.
+                                                </p>
+                                                <div><img src="kace.png" onclick="openModal('kace.png')" alt="Kace" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>MS Intune Filters:</b> These filters allow you to pull only filtered data from MS Intune. You can filter by platform, compliance status, ownership type, and exclude virtual machines by enabling the toggle.
+                                                </p>
+                                                <div><img src="msintunefilter.png" onclick="openModal('msintunefilter.png')" alt="MS Intune" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Software & MS Intune Integration:</b> By integrating, Intune assets will sync directly with the application.
+                                                </p>
+                                                <div><img src="software.png" onclick="openModal('software.png')" alt="Software" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Enable Theme Color:</b> Select your desired theme color and click the <b>Save</b> button to apply the changes.
+                                                </p>
+                                                <div><img src="theme_color.png" onclick="openModal('theme_color.png')" alt="Theme color" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>SharePoint Site Collection Home Link:</b> Enable this option from the general settings to display the SharePoint link in the side navigation panel.
+                                                </p>
+                                                <div><img src="url_.png" onclick="openModal('url_.png')" alt="URL" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Brand Logo:</b> Upload your brand logo by clicking on <b>Upload Logo</b>. You can crop the logo, then click on <b>Save Logo</b> to finalize the upload.
+                                                </p>
+                                                <div><img src="brand_logo.png" onclick="openModal('brand_logo.png')" alt="Brand logo" width="100%" height="auto"></div>
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <p>
+                                                    <b>Assets View For Users:</b> Select the asset categories and subcategories that should be available for users to book.
+                                                </p>
+                                                <div><img src="assetsviewuser.png" onclick="openModal('assetsviewuser.png')" alt="Assets view users" width="100%" height="auto"></div>
+                                            </li>
+                                        </ol>
+                                        
 
                         </div>
                         <div class="bg-light p-4 common-scroll remove-padding" id="email-notification">
@@ -612,23 +616,24 @@
                             <ul class=page-list>
 
 
-                                <p>Here you can add columns and arrange the order in the table for Home, Assign Assets, Return Assets and Report Assets.
+                                <p>
+                                    Here you can customize the columns and arrange the order for the tables in Home, Assign Assets, Return Assets, and Report Assets.
                                     <ol type="I">
-                                        <li> Displaying Column to the Table - just select the check boxes of fields based on your requirement and click on submit as shown in the below image.
+                                        <li>
+                                            <b>Displaying Columns in the Table:</b> Select the checkboxes next to the fields you wish to display, based on your requirements, and then click on the <b>Submit</b> button, as shown in the image below.
+                                            <br><br>
+                                            <div><img src="column.png" onclick="openModal('column.png')" alt="Column" width="100%" height="auto"></div>
                                             <br>
-                                            <br>
-                                            <div><img src="column.png " onclick="openModal( 'column.png') " alt="Column" width="100% " height="auto"></div>
-                                            <br>
-
                                         </li>
-                                        <li> Arrangement of Column Orders - Drag the single field and drop it to arrange the order of columns as per your requirement, do the same for other fields and finally click on submit as shown below.
-                                            <br>
-                                            <br>
-                                            <div><img src="columns_orders.png " onclick="openModal( 'columns_orders.png') " alt="Columns orders" width="100% " height="auto"></div>
+                                        <li>
+                                            <b>Arranging Column Order:</b> Drag and drop individual fields to arrange the column order as per your preference. Repeat this process for other fields and click on the <b>Submit</b> button to finalize your changes, as shown below.
+                                            <br><br>
+                                            <div><img src="columns_orders.png" onclick="openModal('columns_orders.png')" alt="Column Orders" width="100%" height="auto"></div>
                                             <br>
                                         </li>
                                     </ol>
                                 </p>
+                                
 
 
                         </div>
@@ -639,10 +644,13 @@
                             <ul class=page-list>
 
 
-                                <p>Here you can display or hide fields of the dashboard for rows. Click on <b>Dashboard Setting</b> under <b>Settings</b> from side panel dashboard settings page will open.
+                                <p>
+                                    This section allows you to manage the display of fields in the dashboard rows. To access the dashboard settings, click on <b>Dashboard Settings</b> under the <b>Settings</b> menu in the side panel. The dashboard settings page will open.
+                                    <br><br>
+                                    Select the checkboxes next to the fields you want to display in the dashboard rows. Uncheck those fields that are not required. Once you’ve made your selections, click on the <b>Submit</b> icon to save your changes, as shown below.
                                     <br>
-                                    <br> Select the checkboxes of fields that should display in the row of the dashboard and uncheck those that are not required and click on submit icon as shown below.
-                                    <br>
+                              
+                                
                                     <div><img src="Dashboard.png " onclick="openModal( 'Dashboard.png') " alt="dashboard setting" width="100% " height="auto"></div>
                                     <br>
                                 </p>
