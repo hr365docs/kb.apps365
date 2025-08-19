@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Stock 365 | Admin Guide | Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="Admin guide for the Settings section of Stock 365, offering customization options for system preferences and configurations.">
+
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../Stock365/">Stock 365</a></h5>
+                        <a class=back-btn href="../../../../Stock365/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="stockmodernadmin">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             <div class="col-lg-9">
+    <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+        <div class="bg-light p-4 remove-padding">
+            <h3 id="_dashboards">
+                <a class="header-icon-link highlight" href="#">Settings
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+               <p>This section offers a comprehensive overview of the configurable settings available within the Stock 365 setting panel, enabling tailored system customization.</p>
+
+            <div class="sidelist active" data-nav-id="./Settings/" title="Settings">
+                <img src="settings.png" onclick="openModal('settings.png')" alt="Settings Overview" width="100%" height="auto">
+            </div>
+        </div>
+
+        <!-- Default Stock Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="default-stock">
+            <h3 id="_default_stock">
+                <a class="header-icon-link highlight" href="#">Enter Stock Symbol
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Admins can set a default stock symbol that will automatically load each time the user opens the application. This enhances user experience by preloading the most relevant or frequently used stock information.</p>
+           
+            <img src="default-stock.png" onclick="openModal('default-stock.png')" alt="Default Stock Symbol Example" width="100%" height="auto">
+        </div>
+
+        <!-- Default Filter Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="default-filter">
+            <h3 id="_default_filter">
+                <a class="header-icon-link highlight" href="#">Filters
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Filters help narrow down the displayed data. Admins can define default filters that will be applied every time the application is loaded.</p>
+           
+            <img src="default-filter.png" onclick="openModal('default-filter.png')" alt="Default Filter Example" width="100%" height="auto">
+       <br><br><img src="default-filter1.png" onclick="openModal('default-filter1.png')" alt="Default Filter Example" width="100%" height="auto"><br>
+        </div>
+
+        <!-- Theme Option Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="theme-option">
+            <h3 id="_theme_option">
+                <a class="header-icon-link highlight" href="#">Theme
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+          <p>Choose the default theme to be applied across the interface. After selecting your preferred option, click the <strong>Save</strong> button to apply the changes:</p>
+<ul>
+    <li>
+        <strong>Light:</strong> A bright, clean interface. This is the default selection.
+        <br><br>
+        <img src="light.png" onclick="openModal('light.png')" alt="Light Theme Preview" width="100%" height="auto">
+    </li><br>
+    <li><br>
+        <strong>Dark:</strong> A dark theme designed for low-light environments.
+        <br><br>
+        <img src="dark.png" onclick="openModal('dark.png')" alt="Dark Theme Preview" width="100%" height="auto">
+    </li><br>
+    <li>
+        <strong>Site:</strong> Inherits the theme from the associated SharePoint site.
+        <br><br>
+        <img src="site.png" onclick="openModal('site.png')" alt="Site Theme Preview" width="100%" height="auto">
+    </li>
+</ul>
+
+        <!-- Interval (valid for 1D Chart) Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="interval-setting">
+            <h3 id="_interval_chart">
+                <a class="header-icon-link highlight" href="#">Interval (valid for 1D Chart)
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>This setting allows you to define the refresh interval for the 1-day chart view.</p>
+            <p>Available intervals may include options like 1 minute, 5 minutes, and 15 minutes. Shorter intervals show more detailed activity; longer intervals highlight overall trends.</p>
+            <img src="interval-setting.png" onclick="openModal('interval-setting.png')" alt="Interval Setting Example" width="100%" height="auto">
+        </div>
+
+        <!-- Chart Height Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="chart-height-setting">
+            <h3 id="_chart_height">
+                <a class="header-icon-link highlight" href="#">Enter Chart Height (px)
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Customize the vertical height of the chart in pixels. Useful for adjusting visibility on different screen sizes.</p>
+            <p>You can slide the control to increase or decrease the height as per your layout preference.</p>
+            <img src="chart-height.png" onclick="openModal('chart-height.png')" alt="Chart Height Setting Example" width="100%" height="auto">
+        </div>
+
+        <!-- Layout Option Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="layout-option">
+            <h3 id="_layout_option">
+                <a class="header-icon-link highlight" href="#">Layout
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Choose how data is visually displayed in the web part:</p>
+            <ul>
+                <li><strong>Detailed Layout:</strong> Full-feature chart view for deeper analysis.</li><br>
+                <img src="detailed-option.png" onclick="openModal('detailed-option.png')" alt="Layout Option Example" width="100%" height="auto"><br>
+                <br>
+                <img src="detailed-option1.png" onclick="openModal('detailed-option1.png')" alt="Layout Option Example" width="100%" height="auto"><br>
+                <br>
+                <li><strong>Compact Layout:</strong> Simplified version for a quick overview.</li><br>
+            </ul>
+            <img src="compact-option.png" onclick="openModal('compact-option.png')" alt="Layout Option Example" width="100%" height="auto"><br>
+            <img src="compact-option1.png" onclick="openModal('compact-option1.png')" alt="Layout Option Example" width="100%" height="auto"><br>
+        </div>
+
+        <!-- Data to Show Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="data-to-show">
+            <h3 id="_data_to_show">
+                <a class="header-icon-link highlight" href="#">Data to Display
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Enable or disable components shown in the web part:</p>
+        
+            <img src="data-to-show.png" onclick="openModal('data-to-show.png')" alt="Data Visibility Settings Example" width="100%" height="auto">
+        </div>
+
+        <!-- SharePoint Page Configuration Section -->
+        <div class="bg-light p-4 common-scroll remove-padding" id="sharepoint-config">
+            <h3 id="_sharepoint_config">
+                <a class="header-icon-link highlight" href="#">SharePoint Page Configuration
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Control SharePoint UI elements for a streamlined application experience:</p>
+           
+           
+ <ul>
+    <p><strong>Hide side navigation panel in SharePoint page:</strong> Removes the left navigation.</p>
+    <p><strong>Hide top bar in SharePoint page:</strong> Hides the blue SharePoint site bar at the top.</p>
+    <p><strong>Hide command bar in SharePoint page:</strong> Removes the command/action menu strip.</p>
+    <p><strong>Hide SharePoint comments wrapper:</strong> Disables comments section in the page layout.</p>
+    <p><strong>Hide webpart title in SharePoint page:</strong> Hides the web part title/header section.</p>
+    <p><strong>Apply custom CSS to remove webpart spaces:</strong> Minimizes blank space between parts.</p>
+    <p><strong>Hide top SharePoint nav header:</strong> Removes the very top navigation bar (site name/nav).</p>
+</ul>
+
+            <img src="sharepoint-config1.png" onclick="openModal('sharepoint-config1.png')" alt="SharePoint Config Example" width="100%" height="auto">
+        </div>
+
+        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
+        <nav class="pagination mt-3">
+            <a class="nav nav-prev" href="../homepage/" aria-label="Previous page">
+                <i class="ti-arrow-left mr-2"></i>
+                <span class="d-none d-md-block">Home Page</span>
+            </a>
+            <a class="nav nav-next" href="../help/" aria-label="Next page">
+                <span class="d-none d-md-block">Help</span>
+                <i class="ti-arrow-right ml-2"></i>
+            </a>
+        </nav>
+    </div>
+</div>
+
+            </div>
+    </section>
+    <div id="myModal " class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src=" " id="imageId " style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/sto-modern-admin.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+</body>
+
+</html>

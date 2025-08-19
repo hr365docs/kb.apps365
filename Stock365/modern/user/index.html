@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stock 365 | User Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="description" content="Stock 365 - Admin interface for managing recruitment processes." />
+  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css" />
+    <link rel="icon" href="https://hr365docs.github.io/docs/images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+  
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --primary-color: #5637da;
+        --body-color: #f9f9f9;
+        --text-color: #636363;
+        --text-color-dark: #242738;
+        --white-color: #ffffff;
+        --light-color: #f8f9fa;
+        --font-family: Lato;
+      }
+    </style>
+  
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen" />
+  
+    <!-- External Scripts -->
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+  
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  
+
+<body>
+                    <!-- Google Tag Manager (noscript) -->
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                            style="display:none;visibility:hidden">
+                        </iframe>
+                    </noscript>
+                    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+
+                    <a class="nav-link text-dark" href=https://hr365docs.github.io/docs />Home</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../sharepoint-employee-directory/">Employee
+                            Directory</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark " href="../../../online-asset-management-application/">Asset
+                            Management</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../sharepoint-helpdesk/">HR365
+                            Helpdesk</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../employee-vacation-tracker-time-off-manager/">Time
+                            Off
+                            Manager</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../online-timesheet-software/">Timesheets</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../sharepoint-employee-onboarding/">Employee
+                            On-boarding</a>
+                    </li>
+                    <li class=nav-item>
+                        <a class="nav-link text-dark active-dark" href="../../../contract-management/">PerfoStockance
+                            Management</a>
+                    </li>
+
+                    <li class=nav-item>
+                        <a class="nav-link text-dark" href="../../../contact/">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0 ">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../Stock365/">Stock 365
+                                 </a></h5>
+                        <a class=back-btn href="../../../Stock365/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title=" Admin Guide" class="sidelist
+active">
+                                <a href="../user/">
+                                    User Guide
+                                </a>
+                                <ul id="stockmodernuser"></ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title></h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Stock 365
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <div class="bg-light p-4 remove-padding">
+
+                                <li data-nav-id=../Getting-started/installation/using-app-file title='Table of content'
+                                    class="sidelist">
+
+                                    <h3 id="_dashboards"><a class="header-icon-link highlight">Table of content<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <br>
+                                    <ul class="list-styled-content">
+
+
+                                        <ul>
+                                            <li data-nav-id="./Settings/" title=Introduction class=sidelist>
+
+                                                <a href="./introduction/">
+                                                    Introduction
+                                                </a>
+                                            </li>
+                                            
+
+                                            <li data-nav-id="./Settings/" title="Home Page" class=sidelist>
+
+                                                <a href="./homepage/">
+                                                    Home Page
+                                                </a>
+                                            </li>
+                                           
+
+                                            
+
+
+
+                                
+
+
+                                          
+
+
+                                            <li data-nav-id="./Settings/" title=Help class=sidelist>
+
+                                                <a href="./help/">
+                                                    Help
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                            </div>
+                            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                            <nav class="pagination mt-3">
+                                <a class="nav nav-prev" href="../../../Stock365/"
+                                    aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                        class="d-none d-md-block">Stock 365</span></a>
+                                <a class="nav nav-next" href="./introduction/" aria-label="Previous page"> <span
+                                        class="d-none d-md-block">Introduction</span><i
+                                        class="ti-arrow-right ml-2"></i></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a>
+                        <a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/teStocks-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-teStocks-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HStockS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../js/header-footer.js"></script>
+    <script src="../../../js/sto-modern-user.js"></script>
+</body>
+
+</html>

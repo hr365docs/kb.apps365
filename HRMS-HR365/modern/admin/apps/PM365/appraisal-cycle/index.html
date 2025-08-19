@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>HR365-HRMS | Admin Guide | Apps |PM365| Admin Guide | Appraisal Cycle</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Time-Off Manager">
+    
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../../../HRMS-HR365/">HR365-HRMS </a></h5>
+                        <a class=back-btn href="../../../../../../HRMS-HR365/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=../Time-off-manager/index.html title="Admin Guide" class="sidelist active">
+
+                                <a href="../../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <div id="hcm-admin-guide" class="sidenavbarscrollstyle">
+                                   
+                                </div>     
+                                
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title> Introduction</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Appraisal Cycle Process
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            <p>User can track the Performance Management application workflow.</p>
+                            <p>
+                                <b>Steps 1</b>:
+                                Appraisees can get notified about the appraisal cycle one-day prior to the call review
+                                announcement (Using reminder notification).
+
+                            </p>
+                            <p>
+                                Once the appraisal cycle starts, appraisees will see category-wise KRAs based on the
+                                assigned template in the Self Review section of the homepage. They can thoroughly review
+                                the KRAs, sign off on their review, and submit it for approval.
+                            <div><img src="selfreivew.png" onclick="openModal('selfreivew.png')" alt="Self review"
+                                    width="100%">
+                            </div><br>
+                            <div><img src="overall.png" onclick="openModal('overall.png')" alt="Overall rating"
+                                    width="100%">
+                            </div><br>
+                            </p>
+
+                            <p>When the user fills out their self-review, the attachment icon is also available.</p>
+
+                            <div> <img src="DocsIcon.png" onclick="openModal('DocsIcon.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+                            <p>By clicking on the icon, the user can add an attachment and then click the Save button to
+                                upload it.</p>
+
+                            <div> <img src="Document.png" onclick="openModal('Document.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+                            <p>After that, the user will see an eye icon in the same column. By clicking on this icon,
+                                they can view their attachment.</p>
+
+                            <div> <img src="SeeIcon.png" onclick="openModal('SeeIcon.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+                            <p>After the user submits their self-review, their manager will see the review under 'My
+                                Teams.' When the manager reviews it, the same column will display the eye icon, allowing
+                                the manager to view the attachment.</p>
+
+                            <div> <img src="ManagerView.png" onclick="openModal('ManagerView.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+
+                            <p>And then, by clicking on the eye icon, the manager can check the user's attachment and
+                                also download it if needed.</p>
+
+                            <div> <img src="Attachment.png" onclick="openModal('Attachment.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+                            <p>
+                                Appraisees can see the below screen under self-review when the self-review period has
+                                expired. They can raise the request to extend the days by clicking on the click here
+                                link.
+                            <div> <img src="prevdate.png" onclick="openModal('prevdate.png')" alt="Extend days"
+                                    width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                The HR team receives the extended appraisal days request notification and sees the
+                                request on home page under the requests tab. To extend they can add a day number to be
+                                extended in the extension box and click on extend.
+                            <div> <img src="extend.png" onclick="openModal('extend.png')" alt="Add day extended"
+                                    width="100%">
+                            </div><br>
+                            <p>
+                                If a reason is not provided, HR has the authority to reject the request during the
+                                validation process.
+                            <div> <img src="reject.png" onclick="openModal('reject.png')" alt="Add day extended"
+                                    width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                <b>Step2 (Appraiser review or Manager review)</b>
+                            </p>
+                            <p>Appraisers can get notified about the appraiser review of their appraisee cycle,
+                                Initiation one-day before the self-review timeline called the appraiser review
+                                announcement, and on the day of the self-review timeline called the appraise review
+                                reminder notification.
+
+                            </p>
+                            <p>
+                                Under my teams, the managers or appraisers can find appraisees of their team and
+                                Employee's self-review status (Not started, pending, and completed).
+                            </p>
+                            <p>
+                                Once the appraisee completes their self-review, the “Employee Review Status” column
+                                updates to completed, and an action or edit icon is displayed in the “Action” column
+                                from where the appraiser can start reviewing by clicking on it.
+                            <div> <img src="2nd.png" onclick="openModal('2nd.png')" alt="Employee status" width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                Click on the edit icon, which displays the manager review page from where the manager
+                                can review their appraisee. The appraiser or Manager can review by selecting the
+                                Appraisers rating dropdown and adding remarks accordingly for each category KRAs.
+                            <div> <img src="manager.png" onclick="openModal('manager.png')" alt="Manager review"
+                                    width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                Once the appraiser completes the rating and comment they can finally sign and submit
+                                their review by clicking on the “Sign” button.
+                            <div> <img src="summary.png" onclick="openModal('summary.png')" alt="Summary HR review"
+                                    width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                The appraiser can find the appraisee’s rating (self-review) and their rating called
+                                overall rating on the manager review page under the review option.
+                            <div> <img src="overallrating.png" onclick="openModal('overallrating.png')"
+                                    alt="Appraisee's rating" width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                <b>Additional Reviews</b>:
+                                Here the appraiser could request additional reviews for their appraisee from the
+                                appraisee’s previous manager.
+                            </p>
+                            <p>
+                                To send a request click on the “Additional Review” option of the Manager review page,
+                                “Add Additional Reviewer” display select the previous manager and the weightage and
+                                click to save on the save button.
+                            </p>
+                            <p>
+                                <b>Name</b>: The appraiser can type the appraisee’s previous manager from whom
+                                additional review could be requested or taken.
+                            </p>
+                            <p>
+                                <b>Weightage</b>: The appraiser may feed the percentage of weightage of the rating that
+                                would be taken from the previous manager’s reviews.
+                            </p>
+                            <p>Initially, the appraiser’s weightage of the rating is considered 100% if they provide
+                                some percentage to an additional reviewer then it would be deducted. The average of the
+                                sum of the appraiser’s review and the additional reviewer’s rating is calculated as the
+                                final rating and is considered the appraiser’s review .
+                            <div> <img src="additinal_manager.png" onclick="openModal('additinal_manager.png')"
+                                    alt="Additional reviewer" width="100%">
+                            </div><br>
+                            <div> <img src="Additional_review.png" onclick="openModal('Additional_review.png')"
+                                    alt="Weightage" width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                The Manager can find additional review requests under “Additional Reviews”. Click on the
+                                edit icon of the action column displays the “Additional Review” page.
+                            <div> <img src="additionalreivw.png" onclick="openModal('additionalreivw.png')"
+                                    alt="Review request" width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                On the “Additional review” page, The Manager can review by selecting the Appraisers
+                                rating dropdown and adding remarks accordingly for each category KRAs and finally submit
+                                their review by clicking on submit button.
+                            <div> <img src="save_add_review.png" onclick="openModal('save_add_review.png')"
+                                    alt="Save add review" width="100%">
+                            </div><br>
+                            <div> <img src="submit_add_review.png" onclick="openModal('submit_add_review.png')"
+                                    alt="Submit add review" width="100%">
+                            </div><br>
+                            </p>
+                            <p>
+                                <b>Step3: (HR Review)</b>
+                            </p>
+                            <p>HR roles users (HR Managers, HR Heads, and HR admins) can get notified about the HR
+                                review of the appraisee during the appraisee. HR can get notified about the HR review on
+                                the day before the appraiser review timeline called the HR review announcement and also
+                                on the day of the appraiser review timeline called the appraisal HR reminder
+                                notification.</p>
+                            <p>
+
+                                <b>HR executives</b><br>
+                                HR executives can check appraisee's and appraiser's review status and their completed
+                                reviews by clicking on the edit icon of the “Action” column.
+
+                            </p>
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p>
+                                        HR Executive can extend self-review days on appraisee request, views appraisees
+                                        and appraiser’s review, and cannot edit the appraiser’s review.
+
+                                    </p>
+                                    <div> <img src="hr_executive.png" onclick="openModal('hr_executive.png')"
+                                            alt="HR executives" width="100%"></div><br>
+
+
+                                </div>
+                            </div>
+                            <p>HR view ratings and comments of appraisees and appraisers on the “HR Review” page by
+                                clicking on the edit icon or pencil icon of the “Action” column.</p>
+                            <div> <img src="hr_executive_review.png" onclick="openModal('hr_executive_review.png')"
+                                    alt="HR review" width="100%"></div><br>
+
+                            <p><b>HR Manger, HR heads, and HR admins</b></p>
+                            <p>HR Manger, HR heads, and HR admins can review or check the appraisee's and appraiser’s
+                                ratings and comments. They can edit the appraiser’s and additional reviewer's ratings
+                                and comments accordingly from the “HR review “page in case required. Click on the edit
+                                icon of the “Action” column and displays the “HR Review” page.
+
+                            <div> <img src="hr_review_comp.png" onclick="openModal('hr_review_comp.png')"
+                                    alt="HR appraisals" width="100%"></div><br>
+                            <div> <img src="hr_review.png" onclick="openModal('hr_review.png')" alt="HR review skills"
+                                    width="100%"></div><br>
+                            </p>
+                            <p>Click on the edit icon of the “Appraiser’s Rating” or “Appraiser’s Rating Remarks”
+                                displays the “Edit Appraiser Review” page from where ratings and comments can be edited.
+                            <div> <img src="edit_appraiser.png" onclick="openModal('edit_appraiser.png')"
+                                    alt="Appraiser's rating remarks" width="100%"></div><br>
+                            </p>
+                            <p>
+                                Click on the edit icon of the additional manager rating or remarks column displays the
+                                Edit Additional Review” page from where ratings and comments can be edited.
+
+                            </p>
+                            <p>Under the Overall Rating of HR Review page, Self-rating, appraiser rating, and a final
+                                rating (Appraiser + additional reviewer rating) are displayed.</p>
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p>
+                                        Final rating column displays only when an additional reviewer reviewed the
+                                        appraisee.
+                                    </p>
+                                    <div> <img src="overall_review.png" onclick="openModal('overall_review.png')"
+                                            alt="HR review page" width="100%"></div><br>
+                                </div>
+                            </div>
+                            <p><b>HR Head, HR Head admin</b></p>
+                            <p>HR Head and HR Head admin can check the reviews status of appraisees, only the appraisee
+                                self-review and their appraiser review are completed they can finally release the
+                                appraisal conformation.
+                            <div> <img src="hr_head_admin.png" onclick="openModal('hr_head_admin.png')"
+                                    alt="HR Head admin" width="100%"></div><br>
+                            </p>
+                            <p>
+                                Go to the release option on the “Home” page, type the comments, and submit them. All
+                                appraisers will be notified about the release. The appraisal cycle process completes at
+                                this point.
+
+                            <div> <img src="summary_hr_review.png" onclick="openModal('summary_hr_review.png')"
+                                    alt="Summary and plan" width="100%"></div><br>
+                            </p>
+                            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                            <nav class="pagination mt-3">
+                                <a class="nav nav-prev" href="../dashboard/" aria-label="Previous page"><i
+                                        class="ti-arrow-left mr-2"></i> <span
+                                        class="d-none d-md-block">Dashboard</span></a>
+                                <a class="nav nav-next " href="../roles/" aria-label="Previous page"> <span
+                                        class="d-none d-md-block">Roles</span><i class="ti-arrow-right ml-2"></i></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a>
+                        <a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../../js/script.min.js"></script>
+    
+    <script src="../../../../../../js/showhidefunction.js"></script>
+    
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../../../../js/header-footer.js"></script>
+    <script src="../../../../../../js/hcm-modern-admin.js"></script>
+
+</body>
+
+</html>

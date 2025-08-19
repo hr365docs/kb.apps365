@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <title>Task Management 365</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="description" content=" Asset Management " />
+
+
+
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css" />
+
+
+  <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css" />
+
+
+  <link rel="icon" href="#" type="image/x-icon" />
+
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+
+
+
+  <link href="../css/style.min.css" rel="stylesheet" media="screen" />
+
+
+
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+
+
+  <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+
+
+  <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+
+
+  <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+       <!-- Google Tag Manager -->
+       <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+
+
+<body>
+
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                  style="display:none;visibility:hidden">
+              </iframe>
+          </noscript>
+          <!-- End Google Tag Manager (noscript) -->
+  <header class="banner overlay bg-cover" data-background="https://hr365docs.github.io/docs/images/banner.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+
+
+
+
+          <img style="margin-top:5px ;" class="img-fluid" src="../images/HRlogo.png" alt="HR365">
+
+
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  common-header" id="navigation">
+        
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white mb-3 supportHeading">
+            Support Center &amp; Knowledge base
+          </h1>
+          <p class="text-white mb-4 findadviceheading">
+            Find advice and answers from our support team fast or get in touch
+          </p>
+          <div class="position-relative">
+            <form class="banner_form" action="">
+
+              <input
+                id="search"
+                class="form-control"
+                placeholder="Have a question? Just ask here or enter terms"
+              />
+              <i class="ti-search search-icon"></i>
+            </form>
+
+            <script>
+              $(function () {
+                var projects = [
+
+                  {
+                    value: "Installation(Classic)",
+                    label: "<p>Installation(Classic)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/getting-started/installation/"
+                  },
+                  {
+                    value: "Installation(365)",
+                    label: "<p>Installation(365)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/getting-started/installation/"
+                  },
+                  {
+                    value: "Installation of applications from app catalog(Classic)",
+                    label: "<p>Installation of applications from app catalog(Classic)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/getting-started/installation/using-app-file/"
+                  },
+                  {
+                    value: "Installation of applications from app catalog(365)",
+                    label: "<p>Installation of applications from app catalog(365)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/getting-started/installation/using-app-file/"
+                  },
+                  {
+                    value: "Installation of applications from SharePoint Store(Classic)",
+                    label: "<p>Installation of applications from SharePoint Store(Classic)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/getting-started/installation/sharepoint-store/"
+                  },
+                  {
+                    value: "Installation of applications from SharePoint Store(365)",
+                    label: "<p>Installation of applications from SharePoint Store(365)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/getting-started/installation/sharepoint-store/"
+                  },
+                  {
+                    value: "Upgrading(Classic)",
+                    label: "<p>Upgrading(Classic)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/getting-started/upgrading/"
+                  },
+                  {
+                    value: "Upgrading(365)",
+                    label: "<p>Upgrading(365)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/getting-started/upgrading/"
+                  },
+                  {
+                    value: "User Guide(Classic-User)",
+                    label: "<p>User Guide(Classic-User) </p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/"
+                  },
+                  {
+                    value: "User Guide(365-User)",
+                    label: "<p>User Guide(365-User) </p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/"
+                  },
+                  {
+                    value: "Introduction(Classic-User)",
+                    label: "<p>Introduction(Classic-User)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/introduction/"
+                  },
+                  {
+                    value: "Introduction(365-User)",
+                    label: "<p>Introduction(365-User)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/introduction/"
+                  },
+
+                  {
+                    value: "Getting started(Classic-User)",
+                    label: "<p>Getting started(Classic-User)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/getting-started/"
+                  },
+                  {
+                    value: "Getting started(365-User)",
+                    label: "<p>Getting started(365-User)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/getting-started/"
+                  },
+                  {
+                    value: "Home Page(Classic-User)",
+                    label: "<p>Home Page(Classic-User)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/home-page/"
+                  },
+                  {
+                    value: "Home Page(365-User)",
+                    label: "<p>Home Page(365-User)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/home-page/"
+                  },
+
+                  {
+                    value: "User Interface(Classic-User)",
+                    label: "<p>User Interface(Classic-User)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/user-interface/"
+                  },
+                  {
+                    value: "User Interface(365-User)",
+                    label: "<p>User Interface(365-User)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/user-interface/"
+                  },
+                  {
+                    value: "Help(Classic-User)",
+                    label: "<p>Help(Classic-User)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/user/help/"
+                  },
+                  {
+                    value: "Help(365-User)",
+                    label: "<p>Help(365-User)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/user/help/"
+                  },
+                  {
+                    value: "Help(Classic-Admin)",
+                    label: "<p>Help(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/help/"
+                  },
+                  {
+                    value: "Help(365-Admin)",
+                    label: "<p>Help(365-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/help/"
+                  },
+                  {
+                    value: "Admin Guide(Classic-Admin)",
+                    label: "<p>Admin Guide(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/"
+                  },
+                  {
+                    value: "Admin Guide(365-Admin)",
+                    label: "<p>Admin Guide(365-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/"
+                  },
+                  {
+                    value: "Asset(Classic-Admin)",
+                    label: "<p>Asset(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/assets/"
+                  },
+                  {
+                    value: "Asset(365-Admin)",
+                    label: "<p>Asset(365-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/assets/"
+                  },
+                  {
+                    value: "Introduction(Classic-Admin)",
+                    label: "<p>Introduction(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/introduction/"
+                  },
+                  {
+                    value: "Introduction(365-Admin)",
+                    label: "<p>Introduction(365-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/introduction/"
+                  },
+                  {
+                    value: "Home Page(Classic-Admin)",
+                    label: "<p>Home Page(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/home-page/"
+                  },
+                  {
+                    value: "Home Page(365-Admin)",
+                    label: "<p>Home Page(365-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/home-page/"
+                  },
+                  {
+                    value: "Architecture Diagram(Classic-Admin)",
+                    label: "<p>Architecture Diagram(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/architecture-diagram/"
+                  },
+                  {
+                    value: "Architecture Diagram(365-Admin)",
+                    label: "<p>Architecture Diagram(365-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/architecture-diagram/"
+                  },
+                  {
+                    value: "Consumable(Classic-Admin)",
+                    label: "<p>Consumable(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/consumable/"
+                  },
+                  {
+                    value: "Consumable(365-Admin)",
+                    label: "<p>Consumable(365-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/consumable/"
+                  },
+                  {
+                    value: "Software(Classic-Admin)",
+                    label: "<p>Software(Classic-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/software/"
+                  },
+                  {
+                    value: "Software(365-Admin)",
+                    label: "<p>Software(365-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/software/"
+                  },
+                  {
+                    value: "Settings(Classic-Admin)",
+                    label: "<p>Settings\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/settings/"
+                  },
+                  {
+                    value: "Settings(365-Admin)",
+                    label: "<p>Settings\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/settings/"
+                  },
+                  {
+                    value: "Administration(Classic-Admin)",
+                    label: "<p>Administration\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/administration/"
+                  },
+                  {
+                    value: "Administration(365-Admin)",
+                    label: "<p>Administration\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/administration/"
+                  },
+                  {
+                    value: "Report(Classic-Admin)",
+                    label: "<p>Report(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/report/"
+                  },
+                  {
+                    value: "Report(365-Admin)",
+                    label: "<p>Report(365-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/report/"
+                  },
+                  {
+                    value: "Audit-log(Classic-Admin)",
+                    label: "<p>Audit-log(Classic-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/audit-log/"
+                  },
+                  {
+                    value: "Audit-log(365-Admin)",
+                    label: "<p>Audit-log(365-Admin)</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/audit-log/"
+                  },
+                  {
+                    value: "Dashboard(Classic-Admin)",
+                    label: "<p>Dashboard(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/dashboard/"
+                  },
+                  {
+                    value: "Dashboard(365-Admin)",
+                    label: "<p>Dashboard(365-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/dashboard/"
+                  },
+                  {
+                    value: "MS Intune Integration(Classic-Admin)",
+                    label: "<p>MS Intune Integration(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/ms-intune-integration/"
+                  },
+
+                  {
+                    value: "Camera Scanner(Classic-Admin)",
+                    label: "<p>Camera scanner(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/camera-scanner/"
+                  },
+                  {
+                    value: "Camera Scanner(365-Admin)",
+                    label: "<p>Camera scanner(365-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/camera-scanner/"
+                  },
+                  {
+                    value: "Barcode Scanner(Classic-Admin)",
+                    label: "<p>Barcode Scanner(Classic-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/barcode-scanner/"
+                  },
+                  {
+                    value: "Barcode Scanner(365-Admin)",
+                    label: "<p>Barcode Scanner(365-Admin)\n</p><p></p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/barcode-scanner/"
+                  },
+                  {
+                    value: "Depreciation(Classic-Admin)",
+                    label: "<p>Depreciation(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/depreciation/"
+                  },
+                  {
+                    value: "Depreciation(365-Admin)",
+                    label: "<p>Depreciation(365-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/depreciation/"
+                  },
+
+                  {
+                    value: "Release Note(Classic)",
+                    label: "<p>Release Note(Classic)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/release-note/"
+                  },
+                  {
+                    value: "Release Note(365)",
+                    label: "<p>Release Note(365)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/release-note/"
+                  },
+                  {
+                    value: "Book Asset(Classic-Admin)",
+                    label: "<p>Book Asset(Classic-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/book-assets/"
+                  },
+                  {
+                    value: "Book Asset(365-Admin)",
+                    label: "<p>Book Asset(365-Admin)</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/book-assets/"
+                  },
+                  {
+                    value: "QR Code(Classic-Admin)",
+                    label: "<p>QR Code(Classic-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/admin/qr-code/"
+                  },
+                  {
+                    value: "QR Code(365-Admin)",
+                    label: "<p>QR Code(MOdern-Admin)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/admin/qr-code/"
+                  },
+                  {
+                    value: "Faq(Classic)",
+                    label: "<p>Faq(Classic)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/classic/faq/"
+                  },
+                  {
+                    value: "Faq(365)",
+                    label: "<p>Faq(365)\n</p>",
+                    url: "https://kb.hr365.us/task-management-365/modern/faq/"
+                  },
+                  
+                ];
+                $( "#search" ).autocomplete({
+          	source: projects
+          })
+          .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+            
+
+            
+          var input = document.querySelector('.banner_form input');
+
+            input.onkeyup = function(e) {
+            input_val = this.value; 
+            
+            let autocompleteitems= document.querySelectorAll(".autocomplete_items a");
+            for(let i=0; i<autocompleteitems.length; i++){
+                if(input_val==autocompleteitems[i].innerText){
+                  let geturl=document.querySelector('.banner_form');
+                  geturl.action=autocompleteitems[i].href
+                  document.querySelector('#search').click();
+                }
+            }
+          }
+           
+            
+            
+                      // variables
+        
+        
+        // events
+      
+        
+            return $( "<li class='autocomplete_items'>" )
+              .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label )
+              .appendTo( ul );
+            };
+            
+          });
+          
+        </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+
+
+
+  <section class="ptb-20 section">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center logodisplay assetsmainlogo">
+          <div class="logoIcon_asset"><img src="https://ik.imagekit.io/zn4au2jftpm5/hr365/Icons/Icons-96px/TaskManagement365%20-%2096Trans_n5rObW--h.png?updatedAt=1699946054339"  class="asset-img" height="auto" 
+            style="
+            /* margin-top: -14px; */
+           height: 65px;
+           width: 65px;"
+            /></div>
+            <div>
+            <h2 class="logotitle  mobfontsize">Task Management 365</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-panel icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Getting Started</h3>
+            <ul>
+              <li><a href="./modern/getting-started/installation/">Installing</a></li>
+              <li><a href="./modern/getting-started/upgrading/">Upgrading</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-folder icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Guides</h3>
+            <ul>
+              <li><a href="./modern/user/">User Guide</a></li>
+              <li><a href="./modern/admin/">Admin Guide</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-cloud icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Contribute!</h3>
+            <ul>
+              <li><a href="../contribute/">Contribute!</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="./modern/release-note/">Release Notes</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <section class="ptb-20 section over-hidd">
+    <div class="container">
+    
+    
+    <div class="home-recent">
+      <div class="home-blog-latest">
+           <h2>Latest Posts</h2>
+ <h4 class="hd">From Our Technical Blog</h4>
+ 
+ <div class="blog_wrap">
+  
+ 
+   <h3><a href="../task-management-365/modern/getting-started/upgrading/" class="highlight">Preparing for a Larger Upgrade </a></h3>
+ <div class="tags">
+ 
+   <a class="tag-link highlight" href="../task-management-365/modern/getting-started/upgrading/">Upgrading</a>
+ 
+ </div>
+ 
+ 
+   <!-- <p class="author">
+     By pgorod | July 15, 2019
+   </p> -->
+   <div class="paragraph">
+ <p>Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible.
+ But we know that if you’re many versions behind the latest, and dealing with a large instance full
+ of customisations, or having inherited the instance from a predecessor, perhaps with little
+ documentation, can make the prospect of upgrading a bit more daunting.</p>
+ </div>
+   
+   <p>
+     <a class="more highlight" href="../task-management-365/modern/getting-started/upgrading/">Read More &gt;</a>
+   </p>
+   <h3><a href="./modern/admin/" class="highlight">Admin Guide</a></h3>
+ <div class="tags">
+ 
+   <a class="tag-link highlight" href="./modern/admin/">Admin</a>
+ 
+ </div>
+   <div class="paragraph">
+ <p>This admin guide provides an overview features and functionality about the Asset Management application to administrator. Admin can do customisations as per their requirements.</p>
+ </div>
+   
+   <p>
+     <a class="more highlight" href="./modern/admin/">Read More &gt;</a>
+   </p>
+   
+   <h3><a href="./modern/user/" class="highlight">User Guide</a></h3>
+ <div class="tags">
+ 
+   <a class="tag-link highlight" href="./modern/user/">User</a>
+ 
+ </div>
+ 
+ 
+   
+   <div class="paragraph">
+ <p>This admin guide provides an overview features and functionality about the Task Management application to administrator. Admin can do customisations as per their requirements.</p>
+ </div>
+   
+   <p>
+     <a class="more highlight" href="./modern/user/">Read More &gt;</a>
+   </p>
+   
+   
+
+
+
+
+
+
+
+    
+     <h3><a href="/task-management-365/Configure-powerautomate/" class="highlight">Configure power automate for asset acknowledgement</a></h3>
+     <p>
+       <a class="more highlight" href="/task-management-365\Configure-powerautomate">Read More &gt;</a>
+     </p>
+  
+    
+    
+ </div>
+ 
+ 
+ 
+      </div>
+      <div class="home-recently-edited">
+           <h2>Recently Edited</h2>
+ <h4 class="hd">Documentation Pages</h4>
+ <div class="edit_wrap">
+     
+     
+        <ul>
+ 
+     <li>
+    <h4 class="">
+                  <a href="./Custom-level-Permission/" class="highlight">Custom Level Permissions</a>
+                  
+                </h4>
+                
+  
+     </li>
+ 
+ 
+ </ul>
+ 
+      </div>
+    </div>
+  </section> 
+
+
+
+
+
+
+  <footer class="section pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href="https://www.hr365.us/">HR365.</a> <a href="https://www.hr365.us/sla/">SLA.</a> <a
+              href="https://www.hr365.us/terms-and-conditions/">T&amp;C.</a> <a
+              href="https://www.hr365.us/end-user-license-agreement-eula/">EULA.</a> <a
+              href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy/">Privacy
+              Policy.</a> <a href="https://www.cubiclogics.com/">Cubic Logics.</a></p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class="list-inline">
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/"
+                aria-label="Facebook"><i class="ti-facebook"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS" aria-label="Twitter"><i
+                  class="ti-twitter-alt"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i
+                  class="ti-linkedin"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="../js/script.min.js"></script>
+  <script src="../js/header-footer.js"></script>
+  <!-- <script src="../js/Headernavbar.js"></script>
+  <script type="text/javascript">
+    
+    $(document).ready(function () {
+         $(".homelink").removeClass('active');
+        	$(".employeedirectorylink").removeClass('active');
+        	$(".assetmanagementlink").addClass('active');
+	      	$(".helpdesklink").removeClass('active');
+        	$(".timeofmanagerlink").removeClass('active');
+        	$(".timesheetlink").removeClass('active');
+		      $(".onboardinglink").removeClass('active');
+        	$(".performancelink").removeClass('active');
+        	$(".contactlink").removeClass('active');
+              
+  
+    }); 
+  </script> -->
+</body>
+
+
+</html>

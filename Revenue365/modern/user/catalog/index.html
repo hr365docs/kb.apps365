@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Revenue365 | Admin Guide | Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Admin guide for the Administration section of Expense Tracker 365, allowing admins to manage users, settings, and system configurations.">
+
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../Revenue365/">Revenue 365</a></h5>
+                        <a class=back-btn href="../../../../Expense-tracker/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=../Time-off-manager/index.html title="Admin Guide" class="sidelist active">
+                           
+                                <a href="../../user/">
+                                    User Guide
+                                </a>
+                                <ul id="revuser">
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title> Introduction</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_catalog"><a class="header-icon-link highlight" href="">Catalog
+    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+</h2>
+
+<p>When you click on <strong>Catalog</strong>, you will see the following four options:</p>
+
+<ol>
+  <li><strong>Products</strong> – Add and manage individual product offerings with associated pricing and details.</li>
+  <li><strong>Services</strong> – Define service-based offerings such as consulting, implementation, or support.</li>
+  <li><strong>Subscriptions</strong> – Set up recurring revenue models by configuring subscription-based items.</li>
+  <li><strong>Bundles</strong> – Combine multiple products or services into a single bundled offering.</li>
+</ol>
+
+<div><img src="catalog-main.png" onclick="openModal('catalog-main.png')" alt="Catalog Overview" width="100%" height="auto"></div> <br>
+<div>
+
+<h4>Products</h4>
+<p>Click on <strong>Products</strong> to view or manage your list of product offerings.</p>
+<div><img src="catalog-products.png" onclick="openModal('catalog-products.png')" alt="Products" width="100%" height="auto"></div> <br>
+<p>Click <strong>Add</strong> to create a new product. Fill in the product details such as name, pricing, and description, then click <strong>Save and Add More</strong>.</p>
+<div><img src="add.png" onclick="openModal('add.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<p>To edit a saved product, click on the product name, make your changes, then click the <strong>Update</strong> button.</p>
+<div><img src="update4.png" onclick="openModal('update4.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<h4>Services</h4>
+<p>Click on <strong>Services</strong> to define service-related offerings.</p>
+<div><img src="catalog-services.png" onclick="openModal('catalog-services.png')" alt="Services" width="100%" height="auto"></div> <br>
+<p>Click <strong>Add</strong>, enter the service details, and then click <strong>Save and Add More</strong> to make the service available in the catalog.</p>
+<div><img src="add1.png" onclick="openModal('add1.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<p>To edit a saved service, click on the service name, make your changes, then click the <strong>Update</strong> button.</p>
+<div><img src="update3.png" onclick="openModal('update3.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<h4>Subscriptions</h4>
+<p>Select <strong>Subscriptions</strong> to manage recurring revenue items.</p>
+<div><img src="catalog-subscriptions.png" onclick="openModal('catalog-subscriptions.png')" alt="Subscriptions" width="100%" height="auto"></div> <br>
+<p>Click <strong>Add</strong>, define the subscription name, billing cycle, and pricing. Then click <strong>Save and Add More</strong>.</p>
+<div><img src="add2.png" onclick="openModal('add2.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<p>To edit a saved subscription, click on the subscription name, make your changes, then click the <strong>Update</strong> button.</p>
+<div><img src="update2.png" onclick="openModal('update2.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<h4>Bundles</h4>
+<p>Click on <strong>Bundles</strong> to create or manage bundled offerings combining multiple items.</p>
+<div><img src="catalog-bundles.png" onclick="openModal('catalog-bundles.png')" alt="Bundles" width="100%" height="auto"></div> <br>
+<p>Click <strong>Add</strong>, select the desired products or services to include in the bundle, and click <strong>Save and Add More</strong>.</p>
+<div><img src="add3.png" onclick="openModal('add3.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+<p>To edit a saved bundle, click on the bundle name, make your changes, then click the <strong>Update</strong> button.</p>
+<div><img src="update1.png" onclick="openModal('update1.png')" alt="Services" width="100%" height="auto"></div> <br>
+
+
+</div>
+
+                           
+                          
+
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../administration/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Administraion</span></a>
+                            <a class="nav nav-next " href="../help/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Help</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script src="../../../../js/rev-modern-user.js"></script>
+    <script>
+        function openModal(src) {
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+</body>
+
+</html>
