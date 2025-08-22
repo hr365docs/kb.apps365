@@ -306,9 +306,13 @@ $(document).ready(function () {
           "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#GUsers'> Guest Users </a>" +
           "</li>" +
 
+          "<li data-nav-id='../General' title=Show Home Sample Data class=sidelist>" +
+          "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#ShowHomeSampleData'> Show Home Sample Data </a>" +
+          "</li>" +
           "<li data-nav-id='../General' title=Users class=sidelist>" +
           "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Preonboarding'> Preonboarding </a>" +
           "</li>" +
+  
   
   
           "</li>" +
@@ -344,6 +348,9 @@ $(document).ready(function () {
 
         "<li data-nav-id='../General' title=Users class=sidelist>" +
         "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Notification/#Reminder-Notifications'>Reminder Notifications </a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title=Users class=sidelist>" +
+        "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Notification/#_enable_task_notification'>Enable Task Notification with Power Automate Flow</a>" +
         "</li>" +
 
 
@@ -456,6 +463,9 @@ $(document).ready(function () {
         "<a href='/sharepoint-employee-onboarding/modern/admin/process/#pre-onboarding'>Pre-onboarding</a>" +
         "</li>" +
         "</ul>" +
+         "<li data-nav-id='../General' title=email-tracker class='sidelist'>" +
+        "<a href='/sharepoint-employee-onboarding/modern/admin/email-tracker'> Email Tracker</a>" +
+        "</li>" +
 
 
         "<li class='dropdownicon sidelist' title='Help'>" +

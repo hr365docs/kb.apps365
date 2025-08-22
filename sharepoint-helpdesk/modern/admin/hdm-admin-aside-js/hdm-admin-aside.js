@@ -74,6 +74,9 @@ $(document).ready(function () {
         "<li data-nav-id='./Column-Setting/' title='Display help page' class='sidelist'>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#DisplayHelpPage'>Display Help Page</a>"+
         "</li>"+
+         "<li data-nav-id='./Column-Setting/' title='Disable New ticket Popup Notification' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Popup-Notification'>Disable New ticket Popup Notification</a>" +
+        "</li>" +
         "</li><li data-nav-id='./Column-Setting/' title='Display help page' class='sidelist'>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#singleLine'>Single line ticket form</a>"+
         "</li>"+
@@ -83,6 +86,9 @@ $(document).ready(function () {
         "</li><li data-nav-id='./Column-Setting/' title='Display help page' class='sidelist'>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#emailcss'>Disable email notifications to all CC users</a>"+
         "</li>"+
+                "</li><li data-nav-id='./Column-Setting/' title='Disable New ticket option for Users' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#New-Ticket-Option'>Disable New ticket option for Users</a>" +
+        "</li>" +
         "</li><li data-nav-id='./Column-Setting/' title='Display help page' class='sidelist'>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#SharepointURL'>Use Sharepoint URL for MS Teams installed application</a>"+
         "</li>"+
@@ -156,6 +162,10 @@ $(document).ready(function () {
         "<li data-nav-id='./Add Assets/ ' title='Merge Tickets' class='sidelist '>"+
         "<ul class='sidenavSub-topics '>"+
         "</ul>"+
+        "<li data-nav-id='./Add Assets/ ' title='Merge Tickets' class='sidelist '>"+
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#Ticket-Properties-Without-Reopening'>Allow Members To Edit Ticket Properties Without Reopening The Ticket.</a>" +
+        "</li>" +
+        "<li>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#merge-tickets'>Merge Tickets</a>"+
         "</li>"+
         "<li data-nav-id='./Add Assets/ ' title='Split Tickets' class='sidelist '>"+
@@ -222,6 +232,9 @@ $(document).ready(function () {
         "<li data-nav-id='./Assign-Assets/ ' title='Teams' class='sidelist '>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/role/#teams'>Add/Edit Teams</a>"+
         "</li>"+
+         "<li data-nav-id='./Assign-Assets/ ' title='Escalation Teams' class='sidelist '>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/role/#Escalation-Teams'>Escalation Teams</a>" +
+        "</li>" +
         "<li data-nav-id='./Assign-Assets/' title=Service class='sidelist'>"+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/role/#service'>Service</a>"+
         "</li>"+
@@ -235,40 +248,52 @@ $(document).ready(function () {
         "</li>"+
 
        
-        "<li class='dropdownicon sidelist'>"+
-        "<a class='qwe'  href='/sharepoint-helpdesk/modern/admin/settings/integration/'>Integrations</a>"+
-        "<img  class='helpdesk-img aside_dropdown_icon' src='/sharepoint-helpdesk/modern/admin/hdm-admin-aside-js/down-arrow-svgrepo-com.svg'>"+
-        "</li>"+
-        "<li data-nav-id='./Add Assets/ ' title='Integrations' class='sidelist dropdown_romove_dot'>"+
-        "<ul class='sidenavSub-topics aside_dropdown_list'>"+
-        "<li data-nav-id='./Assign-Assets/ ' title='Phone' class='sidelist '>"+
-        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#phone'>Phone</a>"+
-        "<li data-nav-id='./Add Assets/ ' title='Helpdesk Mailbox' class='sidelist '>"+
-        "<ul class='sidenavSub-topics '>"+
-        "</ul>"+
-        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#helpdesk-mailbox'>Helpdesk Mailbox</a>"+
-        "</li>"+
+         "<li class='dropdownicon sidelist'>" +
+        "<a class='qwe'  href='/sharepoint-helpdesk/modern/admin/settings/integration/'>Integrations</a>" +
+        "<img  class='helpdesk-img aside_dropdown_icon' src='/sharepoint-helpdesk/modern/admin/hdm-admin-aside-js/down-arrow-svgrepo-com.svg'>" +
+        "</li>" +
+        "<li data-nav-id='./Add Assets/ ' title='Integrations' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='./Assign-Assets/ ' title='Phone' class='sidelist '>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#phone'>Phone</a>" +
+        "<li data-nav-id='./Add Assets/ ' title='Helpdesk Mailbox' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#helpdesk-mailbox'>Helpdesk Mailbox</a>" +
+        "</li>" +
         // "<li data-nav-id='./Add Assets/ ' title='Microsoft Graph API' class='sidelist '>"+
         // "<ul class='sidenavSub-topics '>"+
         // "</ul>"+
         // "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#graph-api'>Microsoft Graph API</a>"+
         // "</li>"+
-        "<li data-nav-id='./Add Assets/ ' title='Integrate with HR365 Asset Management' class='sidelist '>"+
-        "<ul class='sidenavSub-topics '>"+
-        "</ul>"+
-        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft'>Integrate with HR365 Asset Management</a>"+
-        "<li data-nav-id='./Add Assets/ ' title='Integrate Microsoft Form with Helpdesk' class='sidelist '>"+
-        "<ul class='sidenavSub-topics '>"+
-        "</ul>"+
-        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft'>Integrate Microsoft Form with Helpdesk</a>"+
-        "</li>"+
-        "<li data-nav-id='./Add Assets/ ' title='DevOps Integrations' class='sidelist '>"+
-        "<ul class='sidenavSub-topics '>"+
-        "</ul>"+
-        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#DevOps-Integrations'>DevOps Integrations</a>"+
-        "</li>"+
-        "</ul>"+
-        "</li>"+
+        "<li data-nav-id='./Add Assets/ ' title='Integrate with HR365 Asset Management' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft'>Integrate with HR365 Asset Management</a>" +
+        "<li data-nav-id='./Add Assets/ ' title='Integrate Microsoft Form with Helpdesk' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<li data-nav-id='./Add Assets/ ' title='Copilot Integeration' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#Copilot-Integeration'>Copilot Integeration</a>" +
+        "<li data-nav-id='./Add Assets/ ' title='Integrate Microsoft Form with Helpdesk' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft'>Integrate Microsoft Form with Helpdesk</a>" +
+        "</li>" +
+                "<li data-nav-id='./Assign-Assets/ ' title='Integrating Mail Tracker with Helpdesk 365' class='sidelist '>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#email-tracker'>Integrating Mail Tracker with Helpdesk 365</a>" +
+        "</li>" +
+        "<li data-nav-id='./Add Assets/ ' title='DevOps Integrations' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#DevOps-Integrations'>DevOps Integrations</a>" +
+        "</li>" +
+        "</ul>" +
+        "</li>" +
+
+
 
        
         "<li class='dropdownicon sidelist'>"+

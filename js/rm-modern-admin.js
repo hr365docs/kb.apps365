@@ -21,10 +21,32 @@ $(document).ready(function () {
         "</a>" +
 
         "</li>" +
+        "<li data-nav-id='./Settings/' title='dashboard' class=sidelist>" +
+
+        "<a href='/RM365/modern/admin/dashboard/'>" +
+        "Dashboard" +
+        "</a>" +
+
+        "</li>" +
+         "<li data-nav-id='./Settings/' title='dashboard' class=sidelist>" +
+
+        "<a href='/RM365/modern/admin/reports/'>" +
+        "Report" +
+        "</a>" +
+
+        "</li>" +
         "<li class='dropdownicon sidelist' title='Draft'>" +
         "<a href='/RM365/modern/admin/draft/'>" +
         "Draft" +
         "</a>" +
+
+        "<li data-nav-id='./Settings/' title=active-candidate class=sidelist>" +
+
+        "<a href='/RM365/modern/admin/active-items/'>" +
+        " Active Candidates" +
+        "</a>" +
+        "</li>" +
+
 
 
         "<li data-nav-id='./Settings/' title=inactive-items class=sidelist>" +
@@ -56,57 +78,8 @@ $(document).ready(function () {
         "<li data-nav-id='../system-settings' title=system-settings class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
 
-
-        "<li data-nav-id='../user' title=Users and Departments class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/RM365/modern/admin/settings/users-departments/'>Users and Departments</a>" +
-        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
-        "</a>" +
-        "</li>" +
-        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
-        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
-        "<li data-nav-id='../General' title='User' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/users-departments/#User'>User</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/users-departments/#Department'>Departments</a>" +
-        "</li>" +
-
-        "</ul>" +
-        "<li data-nav-id='../user' title=Job Posting class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/RM365/modern/admin/settings/Job-Posting/'>Job Posting</a>" +
-        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
-        "</a>" +
-        "</li>" +
-        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
-        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
-        "<li data-nav-id='../General' title='Custom Fields' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-location'>Job Location</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Cost Center' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-priority'>Job Priority</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Job Title' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-title'>Job Title</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-type'>Job Type</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#Work-Mode'>Work Mode</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a>" +
-        "</li>" +
-
-        "</ul>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Email-configration'>Email Configuration</a>" +
-        "</li>" +
-        "<li data-nav-id='../user' title=Feature class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/RM365/modern/admin/settings/general-setting'>General Settings</a>" +
+   "<li data-nav-id='../user' title=Feature class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/general-setting/'>General Settings</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
@@ -137,11 +110,101 @@ $(document).ready(function () {
 
 
         "</ul>" +
-        "<li data-nav-id='../General' title='Sharepoint Page Configuration:' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/permissions/'>Permission</a>" +
+        "<li>"+
+        "<li data-nav-id='../user' title=JTemplates class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/templates/'>Templates</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "</a>" +
         "</li>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+          "<li data-nav-id='../General' title='Job Description Template' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/templates/#_job_description_template'>Job Description Template</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Offer Letter Template' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/templates/#_offer_letter_template'>Offer Letter Template</a>" +
+        "</li>" +
+
+
+         "</ul>"+
+         "</li>"+
+
+        "<li data-nav-id='../user' title=Users and Departments class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/users-departments/'>Users and Permissions</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "</a>" +
+        "</li>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='../General' title='User' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/users-departments/#User'>User</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/users-departments/#Department'>Permissions</a>" +
+        "</li>" +
+
+        "</ul>" +
+        "<li data-nav-id='../user' title=Job Posting class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/Job-Posting/'>Job Posting</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "</a>" +
+        "</li>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='../General' title='Custom Fields' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-location'>Job Location</a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title='Custom Fields' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#depart'>Departments</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Cost Center' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-priority'>Job Priority</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Job Title' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-title'>Job Title</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-type'>Job Type</a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#job-code'>Job Code</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#Work-Mode'>Work Mode</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a>" +
+        "</li>" +
+
+        "</ul>" +
+        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Email-configration/'>Email Configuration</a>" +
+        "</li>" +
+
+
+          "<li data-nav-id='../user' title='custom filed' class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/custom-field/'>Custom Fields</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "</a>" +
+        "</li>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='../General' title='Complexity Level' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/custom-field/#custom-field'>Custom Fields</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Score Card' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/custom-field/#custom-form'>Custom Forms</a>" +
+        "</li>" +
+
+        "</ul>" +
+
+     
+        
         "<li data-nav-id='../user' title=Feature class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/RM365/modern/admin/settings/hiring-process'>Hiring Process</a>" +
+        "<a class='qwe' href='/RM365/modern/admin/settings/hiring-process/'>Hiring Process</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
@@ -155,15 +218,14 @@ $(document).ready(function () {
         "</li>" +
 
         "</ul>" +
+        
         " <li data-nav-id='./Custom-Emails/' title=Users class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/Requisition-Templates'>" +
-        "Requisition Templates" +
-        " </a>" +
-        "</li>" +
-        " <li data-nav-id='./Custom-Emails/' title=Users class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/portal-configration'>" +
+        "<a href='/RM365/modern/admin/settings/portal-configration/'>" +
         "Portal Configuration" +
         " </a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Sharepoint Page Configuration:' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/Azure-OpenAI-Integration/'>Azure Open AI Integration</a>" +
         "</li>" +
 
         "</ul>" +

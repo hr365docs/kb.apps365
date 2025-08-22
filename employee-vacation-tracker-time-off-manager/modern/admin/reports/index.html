@@ -7,8 +7,8 @@
         <meta name="description" content="Time-Off Manager 365 - View and manage employee time-off reports, including vacation, sick leave, and other leave reports.">
     
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
         <link rel="icon" href="#" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     
@@ -28,13 +28,13 @@
             }
         </style>
     
-        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+        <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     
         <!-- jQuery and Bootstrap Scripts -->
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     
         <!-- Google Tag Manager -->
         <script>
@@ -66,7 +66,7 @@
 <header class="shadow-bottom sticky-top bg-white">
 <nav class="navbar navbar-expand-lg navbar-light">
 <div class="container px-2 px-md-0">
-    <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+    <a class="navbar-brand px-2" href="https://kb.apps365.com/">
         <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
         </a>
         <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -112,24 +112,51 @@
                 <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
         </h2>
               
-        <ol type="I">
-            <li><h6>Employee Leave Reports</h6>All information related to user leave balances, including department and location-based leave data, can be viewed. Additionally, users can generate reports by clicking the <b>Export</b> button.</li>
-            <br>
+       <ol type="I">
+        <!-- Reports Overview -->
+        <li>
+            
+            View comprehensive reports related to employee activities and leave trends. Visual summaries help track productivity and absenteeism across departments and locations.
+            <br><br>
             <div><img src="reports.png" onclick="openModal('reports.png')" alt="Reports" width="100%" height="auto"></div>
             <br>
-        
-            <li><h6>Employee Work Reports</h6>The Employee Work Reports feature provides detailed insights into employees' work activities, such as hours worked and tasks completed. Reports can be filtered by department and location, and users can generate a comprehensive report by clicking the <b>Export</b> button.</li>
+        </li>
+
+        <!-- Employee Reports -->
+        <li>
+            <h6>Employee Reports</h6>
+
+            <!-- Leaves -->
+            
+            <b>Leaves : </b>View user leave balances by department and location. Export detailed reports using the export button.<br>
+            <br><div><img src="reports1.png" onclick="openModal('reports1.png')" alt="Reports" width="100%" height="auto"></div>
             <br>
-            <div><img src="employeework.png" onclick="openModal('employeework.png')" alt="Employee Work Report" width="100%" height="auto"></div>
+
+            <!-- Workdays -->
+          
+          <b>Workdays :</b>  Detailed overview of employees’ work hours and tasks. Filters available by department and location for easy report generation.<br>
             <br>
-        
-            <li><h6>Leave Reports</h6>Reports such as Time-off Type by Department, Time-off Type by Location, Weekdays Time-off by Department, Absence Rate by Department, Absence Rate by Location, and Weekdays Time-off by Location can be viewed.</li>
+            <div><img src="employeework.png" onclick="openModal('employeework.png')" alt="Employee Work Reports" width="100%" height="auto"></div>
             <br>
+        </li>
+
+        <!-- Leave Reports -->
+        <li>
+            <h6>Leave Reports</h6>
+           <p>
+    The Leave Report provides a detailed view of employee leave records including leave type, duration, department, and approval status. Users can easily track and manage leave requests, helping teams monitor attendance trends and ensure compliance with leave policies.
+</p>
+<br>
             <div><img src="leave_report.png" onclick="openModal('leave_report.png')" alt="Leave Report" width="100%" height="auto"></div>
             <br>
-        </ol>
-        
-           
+            <p>
+    Use the available filters to quickly narrow down and view specific leave records based on your selection criteria.
+</p>
+<div><img src="leave_report1.png" onclick="openModal('leave_report1.png')" alt="Leave Report" width="100%" height="auto"></div>
+            <br>
+
+        </li>
+    </ol>
      
         </div>
         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">

@@ -7,8 +7,8 @@
         <meta name="description" content="Time-Off Manager 365 Admin Guide - Homepage for managing time-off and leave policies.">
     
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
         <link rel="icon" href="#" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     
@@ -28,13 +28,13 @@
             }
         </style>
     
-        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+        <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     
         <!-- jQuery and Bootstrap Scripts -->
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     
         <!-- Google Tag Manager -->
         <script>
@@ -66,7 +66,7 @@
 <header class="shadow-bottom sticky-top bg-white">
 <nav class="navbar navbar-expand-lg navbar-light">
 <div class="container px-2 px-md-0">
-    <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+    <a class="navbar-brand px-2" href="https://kb.apps365.com/">
         <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
         </a>
         <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -202,12 +202,63 @@
         
                        
                       </ul>
-                <p><h5>Calendar</h5>
+                      <ul>
+                      <li id="teamapproval">
+    <h6>Team Approvals</h6>
+    Displays all requests that require your action as a higher-level manager, including approvals for leaves, Comp Offs, and cancellations. You can approve, reject, or review the status of each request.
+</li><br>
+<div><img src="teamapprove.png" onclick="openModal('teamapprove.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+<li id="approval">
+    <h6>Approvals</h6>
+    View and manage all pending leave requests submitted by team members. You can approve or reject them based on the company leave policy.
+</li><br><div><img src="teamapprove1.png" onclick="openModal('teamapprove1.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+<p>Click on the Action Menu  to<b> approve</b> or <b>reject</b> leave request. </p><br>
+</li><br><div><img src="approved1.png" onclick="openModal('approved1.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+<li id="compoffrequest">
+    <h6>Comp Off Requests</h6>
+    Shows requests submitted by employees for compensatory off in return for working on weekends or holidays. These require managerial approval.
+</li><br>
+<div><img src="teamapprove2.png" onclick="openModal('teamapprove2.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+
+<li id="cancellations">
+    <h6>Leave Cancellations</h6>
+    Displays requests from employees to cancel previously approved leaves. You can approve or reject the cancellation based on organizational needs.
+</li><br>
+<div><img src="teamapprove4.png" onclick="openModal('teamapprove4.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+
+<li id="approved">
+    <h6>Approved</h6>
+    Lists all team requests that you have reviewed and approved. Useful for tracking past approvals.
+</li><br>
+<div><img src="teamapprove3.png" onclick="openModal('teamapprove3.png')" alt="Manager actions" width="100%" height="auto"></div>
+       <li><br>
+    <p>Click on the "Action Menu" to view the leave status.</p>
+</li>
+<br>
+
+    <img src="approved2.png" onclick="openModal('approved2.png')" alt="Manager actions" width="100%" height="auto">
+
+<br>
+           <br>
+
+<li id="rejected">
+    <h6>Rejected</h6>
+    Lists all requests that you have rejected, including the reason (if provided), for employee reference.
+</li><br>
+<div><img src="teamapprove5.png" onclick="openModal('teamapprove5.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+</ul>
+               <p><h5>Calendar</h5>
                     <br>
-                    <p>Now, the user will see the Teams Calendar, where they can view leaves based on the selected date.</p>
+                    <p>Now, the user will see the Calendar, where they can view leaves based on the selected date.</p>
                 <div><img src="TeamsCalender.png" onclick="openModal('TeamsCalender.png')" alt="Manager actions" width="100%" height="auto"></div>
                       <br>
-                <p>Then, the user will see three options: <b>My Calendar</b>, <b>Department's Calendar</b> and <b>Organization's Calendar</b></p>
+                <p>Then, the user will see four options: <b>My Calendar</b>, <b>Department's Calendar</b>, <b>Team's Calendar</b> and <b>Organization's Calendar</b></p>
                 <div><img src="threeOption.png" onclick="openModal('threeOption.png')" alt="Manager actions" width="100%" height="auto"></div>
                       <br>
                 <p>If the user selects the <b>Department's Calendar</b> option, they will see leaves in the calendar based on their department.</p>
@@ -219,6 +270,10 @@
                 <p>If the user selects the My Calendar option, they will be able to see their own leaves that they have applied for.</p>
                 <div><img src="mycalender.png" onclick="openModal('mycalender.png')" alt="Manager actions" width="100%" height="auto"></div>
                       <br>
+                       <p>If the user selects the <b>Team's Calendar</b> option, they will see leaves in the calendar based on Team Members.</p>
+                <div><img src="DepartmentOption1.png" onclick="openModal('DepartmentOption1.png')" alt="Manager actions" width="100%" height="auto"></div>
+                      <br>
+               
                
 
     </ol>

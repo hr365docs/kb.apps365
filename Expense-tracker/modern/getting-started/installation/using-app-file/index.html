@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description" content="Guide for installing Expense Tracker 365 using the app file for efficient setup and configuration.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -24,11 +24,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -56,7 +56,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -92,13 +92,13 @@
                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                     title=using-app-file class="sidelist">
                                     <a href="../sharepoint-store/">
-                                        Installation of Expense-Tracker 365 from sharepoint store
+                                        Installation of Expense-Tracker 365 from Sharepoint Store
                                     </a>
                                 </li>
                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                     title=using-app-file class="sidelist active">
                                     <a href="../using-app-file/">
-                                        Installation of Expense-Tracker 365 from app catalog
+                                        Installation of Expense-Tracker 365 from App Catalog
                                     </a>
                                 </li>
                 
@@ -125,10 +125,10 @@
                                             style="font-size:12px; color:lightgray;"></i></a> </h4> 
                                             <ol>  
                                 
-                                                <li>The installation of the application is restricted to Global Admin or SharePoint Admin, who can complete the process by adhering to the steps provided below.</li>
-                                                <li>The functionality of the application depends on APIs, which can be enabled by a Global Admin possessing the required permissions.</li>
-                                                <li>Typically, the provided link will direct you to a OneDrive or similar file-sharing platform, accompanied by a specific expiration date. Ensure that you download the installation package, which is typically in a ZIP or CAB format. After downloading the installation package, follow the instructions in the knowledge base to upload the app to the app catalog.
-                                                </li>
+                                          <li>The application can only be installed by a Global Admin or SharePoint Admin by following the steps outlined below.</li>
+                                            <li>The application’s features rely on APIs, which can be enabled by a Global Admin with the necessary permissions.</li>
+                                            <li>Typically, the link provided will be a OneDrive or similar file-sharing link with a specific expiration date. Please make sure to download the installation package. which is usually a zip or cab file. Once the installation package is downloaded, follow the instructions in the knowledge base to upload the app to the app catalog.
+                                            </li>
                                             </ol>
                                                 </li>
                                 
@@ -185,7 +185,10 @@
                                         height="auto"></div>
                                         <div class="notices note">
                                             <div class="paragraph">
-                                                <p> Once the application is installed, you can make the solution or application package available across all sites in the organization. If needed, you can later remove the app from all sites.
+                                                <p> Now you can make this solution or application package available for all
+                                                    sites in the
+                                                    organization, once the application is installed, later you can
+                                                    remove the app from all sites.
                                                     <br>
                                                     <br>
                                                     By performing these actions, the selected application package will be downloaded from the Microsoft SharePoint Store into your tenant.
@@ -197,9 +200,7 @@
 
                              
 
-                                <li>Navigate to the site collection where you intend to install the application.
-
-                                </li>
+                                <li>Open your site collection where you need to install your application.</li>
 
                                 <!-- <div class="notices note">
                                     <div class="paragraph">
@@ -229,40 +230,66 @@
                                         height="auto"></div>
                                     </li>
                                         <br>
-                                        <li>For a cleaner appearance, you can also change the title areas to plain by clicking the Edit icon and selecting Plain, as shown below.</li>
-                                    <br><br>
+                                    <li>For a cleaner appearance, you can also change the title areas to plain by clicking the <b>Properties</b> icon and selecting<b> Plain,</b> as shown below.
+                            </li>
+                            <div><img src="edit_title.png" onclick="openModal('edit_title.png')" alt="Edit title"
+                                    width="100%" height="auto"></div>
+                            
+                            <br>
+    <li>
+    When users first access <b>Expense Tracker 365</b>, a welcome popup appears to introduce the platform and guide them through the initial setup process.
+    A toggle option is available to <b>load sample data</b> for demonstration purposes. Enable this if you'd like to explore Expense Tracker 365 with prefilled examples.
+</li>
+<br>
+<div><img src="expense_get1.png" onclick="openModal('expense_get1.png')" alt="Welcome Popup - Expense Tracker" width="100%" height="auto"></div>
+<br>
+<br>
+<li>
+    After completing the initial setup in <b>Expense Tracker 365</b>, the platform prompts you to assign a user as the <b>Finance Head</b> or <b>Finance</b> approver. 
+    The selected user will be added as the <b>second-level approver</b> in the default workflow, with the application installer set as the first-level approver. These roles can be updated later as needed.
+</li>
+<br>
+<div><img src="1.png" onclick="openModal('1.png')" alt="Expense Approver Setup" width="100%" height="auto"></div>
 
-                                    <div><img src="edit.png" onclick="openModal('edit.png')" alt="Edit title area" width="100%"
-                                        height="auto"></div>
-                                    </li>
-                                    <br>
+<br>
+<li>Begin the Quick Setup by configuring the required components one by one.</li>
+<br>
+<div><img src="2.png" onclick="openModal('2.png')" alt="Expense Approver Setup" width="100%" height="auto"></div>
 
-                                    <li>Finally click on <b>Publish</b> button.
-                                    <br><br>
-                                    <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish" width="100%"
-                                        height="auto"></div>
-                                    </li>
-                                        <br>
-                                                <li>
-                                                    Finally, refresh the page.
-                                                </li>
-                                    </li>
+<br>
+
+
+                            
+
+                                    <li>Once all setup steps are completed (100%), the “Proceed” button becomes active, allowing users to access the full application.</li>
+<br>
+<div><img src="ProceedExpense.png" onclick="openModal('ProceedExpense.png')" alt="Proceed Button" width="100%" height="auto"></div>
+
+
+    <li>Finally, click on the <b>Publish</b> button.</li>
+    <br>
+                                <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+    <li>Refresh the page to apply changes.</li>
+
                                     </ol>
                                     <div class="notices note">
                                         <div class="paragraph">
-                                            <p>There are two distinct methods of installation:
+                                            <p>There are two types of installations:
                                                 <br>
                                                 <br>
-                                                1.<b> Package Upload Installation </b>via the app catalog site.
-                                                <br>
-                                                2. <b>Installation from the SharePoint store</b> (AppSource).
-                                                <br>
-                                                <br>
-                                                Please note that deleting the package installation and subsequently
-                                                reinstalling the app from either the SharePoint Store or the app catalog
-                                                will not result in any data loss. This is because the application's data is securely
-                                                stored in SharePoint lists, which remain intact regardless of the installation method used.
-                                            </p>
+                                               1. Installation via package upload in the app catalog site.
+                                               <br>
+                                               2. Installation from the SharePoint store (AppSource).
+                                               <br>
+                                               <br>
+                                                If you delete the package installation and reinstall the app from
+                                                the SharePoint store, or vice versa, it will not impact or result in
+                                                data loss. This is because the application's data is stored safely
+                                                in SharePoint lists, which remain unaffected by the installation
+                                                method.</p>
                                         </div>
                                         <br>
                                     </div>
@@ -277,9 +304,9 @@
                             <nav class="pagination mt-3">
                                 <a class="nav nav-prev" href="../sharepoint-store/" aria-label="Previous page"><i
                                         class="ti-arrow-left mr-2"></i>
-                                    <span class="d-none d-md-block">Sharepoint store</span></a>
+                                    <span class="d-none d-md-block">Sharepoint Store</span></a>
                                 <a class="nav nav-next" href="../microsoft-teams/" aria-label="Previous page">
-                                    <span class="d-none d-md-block">Microsoft teams</span><i
+                                    <span class="d-none d-md-block">Microsoft Teams</span><i
                                         class="ti-arrow-right ml-2"></i></a>
                             </nav>
                         </div>

@@ -110,12 +110,18 @@ $(document).ready(function () {
         "</li>" +       
         "<li data-nav-id='../General' title='Log settings' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#LogSettings'>Log settings</a>" +
+        "</li>" +   
+         "<li data-nav-id='../General' title='Make Notes Required' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#_notesrequired'>Make Notes Required</a>" +
+        "</li>" +  
+         "<li data-nav-id='../General' title='Brand Logo' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#Brand-logo'>Brand Logo</a>" +
         "</li>" +       
         "</ul>" +
         "</li>"+
 
         "<li data-nav-id='../user' title=Advance Settings class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='employee-vacation-tracker-time-off-manager/modern/admin/settings/#advance-settings'>  Advance Settings</a>" +
+        "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#advance-settings'>  Advance Settings</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
@@ -157,6 +163,9 @@ $(document).ready(function () {
         "<li data-nav-id='../General' title='Enable recurrence of leaves ' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#EnableRecurrenceOfleaves'> Enable recurrence of leaves  </a>" +
         "</li>" +     
+         "<li data-nav-id='../General' title='Enable Team Approval ' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#teamapproval'>Enable Team Approvals  </a>" +
+        "</li>" +     
         "</ul>" +
 
 
@@ -172,6 +181,9 @@ $(document).ready(function () {
         "</li>" +
         "<li data-nav-id='../General' title='Reminder notifications to approvers' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#Remindernotificationstoapprovers'> Reminder notifications to approvers </a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title=' Shared Mailbox' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#SharedMailbox'> Shared Mailbox ID</a>" +
         "</li>" +
        
         "</ul>" +
@@ -194,6 +206,10 @@ $(document).ready(function () {
         "<li data-nav-id='../General' title='Allow backdate leaves' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#Allowbackdateleaves'> Allow backdate leaves </a>" +
         "</li>" +
+         "<li data-nav-id='../General' title='Enable Leave Eligibility Delay' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#leaveeligibilitydelay'> Enable Leave Eligibility Delay </a>" +
+        "</li>" +
+        
         "<li data-nav-id='../General' title='LeavesBasedOn' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/#LeavesBasedOn'> Leaves Based On </a>" +
         "</li>" +

@@ -8,8 +8,8 @@
     <meta name=generator content="Hugo 0.92.2">
     <meta name=description
         content="Guide to the Administration section in CLM 365, exclusive to admins for managing workflows, business units, users, and more.">
-    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
-    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=stylesheet href=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://kb.apps365.com/plugins/themify-icons/themify-icons.css>
     <link rel=icon href=# type=image/x-icon>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
@@ -25,11 +25,11 @@
             --font-family: Lato
         }
     </style>
-    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
-    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
-    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
-    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
-    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+    <link href=https://kb.apps365.com/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://kb.apps365.com/plugins/jquery/jquery-ui.js></script>
+    <script src=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -54,7 +54,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -114,18 +114,28 @@
                             <div><img src="2.png" onclick="openModal('2.png')" alt="Report data" width="100%"
                                     height="auto"></div><br>
 
-                            <p><b>Business Unit: </b> Business Units categorize different segments or divisions within
+                            <!-- <p><b>Business Unit: </b> Business Units categorize different segments or divisions within
                                 an organization. They are used to organize contracts and manage permissions or access
                                 levels for users based on their roles within specific business units.</p>
                             <div><img src="3.png" onclick="openModal('3.png')" alt="Report data" width="100%"
-                                    height="auto"></div><br>
+                                    height="auto"></div><br> -->
+                                    <p><b>Clause Library:</b> The Clause Library is a centralized repository within CLM365 that stores reusable legal clauses. Users can select predefined clauses while drafting contracts, ensuring consistency and reducing drafting time.</p>
+<div><img src="clauseLibrary.png" onclick="openModal('clauseLibrary.png')" alt="Clause Library" width="100%" height="auto"></div><br>
+<p>When you click <strong>+ Add</strong> in the Clause Library, a new clause creation form opens. This interface allows users to define reusable clauses by specifying the type, name, tags, and clause content using a rich text editor.</p>
+<div><img src="clauseLibrary2.png" onclick="openModal('clauseLibrary2.png')" alt="Clause Library" width="100%" height="auto"></div><br>
+<p>To create a new clause, select the appropriate <strong>Clause Type</strong>, enter a unique <strong>Clause Name</strong>, add relevant <strong>Tags</strong> for easy search, and provide the full <strong>Clause</strong> content. You may also assign a <strong>Clause Title</strong> and optionally create an <strong>Alternate Clause</strong> for variations.</p>
+<div><img src="clauseLibrary1.png" onclick="openModal('clauseLibrary1.png')" alt="Clause Library" width="100%" height="auto"></div><br>
+<p><b>Clause Type:</b> Clause Types help categorize clauses in the Clause Library, such as indemnity clauses, termination clauses, confidentiality clauses, etc. These types assist in organizing and retrieving clauses based on their legal function or relevance.</p>
+
+<div><img src="clauseType2.png" onclick="openModal('clauseType2.png')" alt="Clause Type" width="100%" height="auto"></div><br>
+
 
                             <p><b>Contract Type: </b> Contract Types in CLM365 categorize contracts based on their
                                 nature or purpose, such as sales contracts, service agreements, non-disclosure
                                 agreements (NDAs), etc. Each type might have specific templates, clauses, or processes
                                 associated with it.</p>
                             <p>Go to "Administration" in the left navigation bar ,select "Contract type", click on
-                                "Edit" option of a contract</p>
+                                "+ Contract Type" .</p>
                             <div><img src="contractType.png" onclick="openModal('contractType.png')" alt="Report data"
                                     width="100%" height="auto"></div><br>
                             <p>Add a field by filling Column name, Type and Contract type.</p>
@@ -151,9 +161,7 @@
                             <div><img src="NewField.png" onclick="openModal('NewField.png')" alt="Report data"
                                     width="100%" height="auto"></div><br>
 
-                            <p><b>Counter Party: </b> Counterparty Types classify different types of counterparties
-                                based on their nature, such as customers, vendors, partners, etc. This classification
-                                helps in segmenting and managing contracts associated with different counterparties.</p>
+                            <p><b>Counter Party: </b> The Counterparty section in CLM365 enables you to manage external parties involved in contracts. It supports both individual and bulk additions for streamlined contract collaboration and tracking.</p>
                             <div><img src="5.png" onclick="openModal('5.png')" alt="Report data" width="100%"
                                     height="auto"></div><br>
 
@@ -168,6 +176,15 @@
                                 document types associated with contracts.
                             </p>
                             <div><img src="7.png" onclick="openModal('7.png')" alt="Report data" width="100%"
+                                    height="auto"></div><br>
+                                    <p><strong>Obligations</strong> represent the specific actions, tasks, or responsibilities outlined in a contract that must be fulfilled by either party. This module helps track and manage these commitments efficiently throughout the contract lifecycle.</p>
+ <div><img src="17.png" onclick="openModal('17.png')" alt="Report data" width="100%"
+                                    height="auto"></div><br>
+                                    <p>Clicking <strong>+ Add</strong> in the Obligations section opens the <strong>Add Obligation</strong> form, where you define the obligation's title, contract type, category, priority, status, and description. Use <strong>Save</strong> to submit or <strong>Save and Add More</strong> to continue adding obligations.</p>
+<div><img src="18.png" onclick="openModal('18.png')" alt="Report data" width="100%"
+                                    height="auto"></div><br>
+<p><strong>Obligation Type</strong> categorizes each obligation (e.g., Compliance, Payment, Delivery) to streamline tracking, reporting, and reminder workflows, ensuring clarity and accountability.</p>
+ <div><img src="71.png" onclick="openModal('71.png')" alt="Report data" width="100%"
                                     height="auto"></div><br>
 
                             <!-- <p><b>Obligations: </b> Obligations refer to commitments or responsibilities outlined in a contract that parties must fulfill. CLM365 might include a module to manage, track, and ensure compliance with these obligations.
@@ -210,8 +227,8 @@
                     <nav class="pagination mt-3">
                         <a class="nav nav-prev" href="../reports/" aria-label="Previous page"><i
                                 class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Reports</span></a>
-                        <a class="nav nav-next " href="../settings/" aria-label="Previous page"> <span
-                                class="d-none d-md-block">Settings</span><i class="ti-arrow-right ml-2"></i></a>
+                        <a class="nav nav-next " href="../counterparty/" aria-label="Previous page"> <span
+                                class="d-none d-md-block">Counterparty</span><i class="ti-arrow-right ml-2"></i></a>
                     </nav>
                 </div>
             </div>

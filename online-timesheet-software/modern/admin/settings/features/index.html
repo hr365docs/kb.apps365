@@ -18,7 +18,7 @@
     
     
     
-    <meta property="og:url" content="https://hr365docs.github.io/docs/sharepoint-timesheet/">
+    <meta property="og:url" content="https://kb.apps365.com/sharepoint-timesheet/">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:title" content="Timesheet 365 | Admin Guide | Features">
@@ -26,8 +26,8 @@
     
     
 
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -45,11 +45,11 @@
         }
     </style>
 
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -79,7 +79,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -194,29 +194,60 @@
 
 
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="custom-fields">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Custom Fields
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
+                         <div class="bg-light p-4 remove-padding common-scroll" id="custom-fields">
+   <ul class="page-list">
+    <h2 id="_dashboards">
+        <a class="header-icon-link highlight" href="#">Custom Fields
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h2>
 
+    
+   <p>
+    Custom fields allow you to tailor data input across Projects, Users, Clients, Tasks, and Weekly Timesheets to suit your organization’s reporting and operational needs.
+</p>
 
-                                <p>
-                                    You can add custom fields to projects and user pages from here.
-                                </p>
-                                <p>To add custom fields to the project page, click on configure button, open the custom
-                                    filed then click on Add button. Select the project as a category type, fill in the
-                                    other details, and submit it.</p>
+<div><img src="1.png" onclick="openModal('1.png')" alt="Custom Fields Overview" width="100%" height="auto"></div>
+<br>
 
+<div><img src="2.png" onclick="openModal('2.png')" alt="Custom Field Categories" width="100%" height="auto"></div>
+<br>
 
-                                <div><img src="custom_fields.png" onclick="openModal('custom_fields.png')"
-                                        alt="Custom fields" width="100%" height="auto"></div>
+<p>
+    <b>Users:</b> Add custom fields to capture user-level information. You can optionally link fields to SPO/EXO user profile properties. Fill in the details and click <b>Save and Add More</b> to continue.
+</p>
 
+<div><img src="user_custom_fields.png" onclick="openModal('user_custom_fields.png')" alt="User Custom Fields" width="100%" height="auto"></div>
+<br>
 
+<p>
+    <b>Projects:</b> Create custom fields to track project-specific data such as priority or region. Fields may be marked as global, required, or included in timesheets. Fill in the details and click <b>Save and Add More</b>.
+</p>
 
+<div><img src="custom_fields.png" onclick="openModal('custom_fields.png')" alt="Project Custom Fields" width="100%" height="auto"></div>
+<br>
 
+<p>
+    <b>Clients:</b> Define custom fields linked to client records. You can assign fields to specific tabs and enable global access or timesheet visibility. Fill in the required information and click <b>Save and Add More</b>.
+</p>
 
-                        </div>
+<div><img src="client_custom_fields.png" onclick="openModal('client_custom_fields.png')" alt="Client Custom Fields" width="100%" height="auto"></div>
+<br>
+
+<p>
+    <b>Tasks:</b> Add task-related fields to capture additional attributes. You may assign fields to individual tasks and configure global or timesheet visibility. Complete the form and click <b>Save and Add More</b>.
+</p>
+
+<div><img src="task_custom_fields.png" onclick="openModal('task_custom_fields.png')" alt="Task Custom Fields" width="100%" height="auto"></div>
+<br>
+
+<p>
+    <b>Weekly Timesheets:</b> Use custom fields to record additional metadata for weekly timesheet entries. Enter the required details and click <b>Save and Add More</b>.
+</p>
+
+<div><img src="weekly_custom_fields.png" onclick="openModal('weekly_custom_fields.png')" alt="Weekly Timesheet Custom Fields" width="100%" height="auto"></div>
+
+</div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="projects-off-days">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Projects Off Days

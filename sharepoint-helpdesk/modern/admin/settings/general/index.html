@@ -8,8 +8,8 @@
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
         content="The HR365 Helpdesk Admin Guide - General Settings provides administrators with instructions on configuring essential settings for the helpdesk system. Learn how to manage helpdesk configurations, customize user roles, set up ticketing parameters, and optimize the workflow to enhance the helpdesk functionality.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -58,7 +58,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -256,8 +256,7 @@
 
                             </div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll"
-                            id="Disable New ticket Popup Notification">
+                          <div class="bg-light p-4 remove-padding common-scroll" id="Popup-Notification">
                             <div class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Disable New ticket
                                         Popup Notification
@@ -265,9 +264,9 @@
                                 </h2>
 
                                 <p>
-                                    Enabling the "Disable New Ticket Popup Notification" option will prevent the notification popup from appearing after a ticket is created.
+                                    If the user enables the "Disable New Ticket Popup Notification" option, the
+                                    notification popup will not appear after creating a ticket.
                                 </p>
-                                
 
                                 <div><img src="DisableNewTicket.png" onclick="openModal('DisableNewTicket.png')"
                                         alt="help" width="100%" height="auto"></div>
@@ -327,22 +326,20 @@
 
                             </div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="emailcss">
+                          <div class="bg-light p-4 remove-padding common-scroll" id="New-Ticket-Option">
                             <div class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Disable New ticket
                                         option for Users <i class="fas fa-link"
                                             style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
 
-                                <p>
-                                    When the <strong>"Disable New Ticket Option for Users"</strong> toggle is turned <strong>ON</strong>, users with the 
-                                    <strong>"User"</strong> role will no longer see the <strong>"New Ticket Create"</strong> button in the application. 
-                                    This setting ensures that only authorized roles, such as <strong>Admins</strong> or specific support agents, can 
-                                    create new tickets, thus restricting general users from submitting new requests.
-                                </p>
-                                <p>
-                                    If this toggle is turned <strong>OFF</strong>, all users, including those with the <strong>"User"</strong> role, 
-                                    will be able to access the <strong>"New Ticket Create"</strong> button and create tickets as usual.
+                                <p>When the "Disable New Ticket Option for Users" toggle is turned ON, users with the
+                                    "User" role will no longer see the "New Ticket Create" button in the application.
+                                    This setting ensures that only authorized roles, such as Admins or specific support
+                                    agents, can create new tickets, restricting general users from raising new requests.
+                                    <br>
+                                    If this toggle is turned OFF, all users, including those with the "User" role, will
+                                    be able to access and create new tickets as usual.
                                 </p>
 
                                 <div><img src="newCreationbtn.png" onclick="openModal('newCreationbtn.png')" alt="help"
@@ -395,21 +392,7 @@
                                 <div><img src="customizefavicon.png" onclick="openModal('customizeFavicon.png')"
                                         alt="Language selection" width="100%" height="auto"></div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="languagebrowserdefaultlanguage">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language selection as
-                                        browser default language
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    Here, you can enable the toggle for the language selection as browser default
-                                    language.
-
-                                </p>
-
-                                <div><img src="language.png" onclick="openModal('language.png')" alt="Language"
-                                        width="100%" height="auto"></div>
-                                <div class="bg-light p-4 remove-padding common-scroll" id="languageisNotdetected">
+                           <div class="bg-light p-4 remove-padding common-scroll" id="languageisNotdetected">
                                     <ul class=page-list>
                                         <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language
                                                 selection in
@@ -419,16 +402,32 @@
                                         <p>
                                             Helpdesk 365 can work in Czech, Dutch, English, French, German, Hungarian,
                                             Italian,
-                                            Japanese, Polish,Portuguese, Russian and Spanish as per your browser
+                                            Japanese, Polish,Portuguese, Russian, Spanish,Chinese and Korean as per your
+                                            browser
                                             language. Admin
                                             can enable the toggle Language selection as browser default language.
 
                                         </p>
                                         <div><img src="select_lang.png" onclick="openModal('select_lang.png')"
                                                 alt="Language selection" width="100%" height="auto"></div>
+                                                <p>Support for Hebrew and Arabic languages has been added to enhance multilingual accessibility within the application.</p>
+                               <div><img src="he.png" onclick="openModal('he.png')" alt="show projects" width="100%"
+                                        height="auto"/></div>
+<br>
+                                        <p>When Hebrew is selected as the preferred language, the application interface will automatically update to Hebrew.</p>
+                               <div><img src="Heb3.png" onclick="openModal('Heb3.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                         <div><img src="Heb2.png" onclick="openModal('Heb2.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                        <p>When Arabic is selected as the preferred language, the application interface will automatically update to Arabic.</p>
+                               <div><img src="Heb1.png" onclick="openModal('Heb1.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                         <div><img src="Heb4.png" onclick="openModal('Heb4.png')" alt="show projects" width="100%"
+                                        height="auto"></div>
                                     </ul>
                                 </div>
-                        </div>
+                               
+                       
                         <div class="bg-light p-4 remove-padding common-scroll" id="languageUpdate">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language update

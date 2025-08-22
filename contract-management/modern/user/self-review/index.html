@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="generator" content="Hugo 0.92.2">
         <meta name="description" content="Manage and perform self-reviews within CLM 365, helping users assess their performance and achievements.">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
         <link rel="icon" href="#" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -24,11 +24,11 @@
             }
         </style>
     
-        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+        <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     
         <!-- Google Tag Manager -->
         <script>
@@ -59,7 +59,7 @@
 <header class="shadow-bottom sticky-top bg-white">
 <nav class="navbar navbar-expand-lg navbar-light">
 <div class="container px-2 px-md-0">
-    <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+    <a class="navbar-brand px-2" href="https://kb.apps365.com/">
         <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
         </a>
         <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -92,81 +92,96 @@
     </div>
     </div>
 
-    <div class=col-lg-9>
-        <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
-        <!-- <h2 class=mb-5 id=title> Introduction</h2> -->
-        <div class="bg-light p-4 remove-padding">
-            <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Reports
-                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-        </h2>
-        <p>
-            Users can view their specific reports, whereas admins have access to all reports across the system.
-        </p>
-                
-           <ol type="I">
-            <li>
-                <a href="../self-review/#review">Contract Reports</a>
-            </li>
-            <li>
-                <a href="../self-review/#summary-and-plan">Request Reports</a>
-            </li>
-            <li>
-                <a href="../self-review/#task-report">Task Reports</a>
-            </li>
-  
-           </ol>
-            
-           <img src="1.png" onclick="openModal('1.png')" alt="Self Review" width="100%">
-           
-     
-        </div>
-        
+   <div class="col-lg-9">
+  <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+    <!-- <h2 class="mb-5" id="title">Introduction</h2> -->
 
-        <div class="bg-light p-4 common-scroll remove-padding" id="review">
-            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Contract Reports
-                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-        </h2>
-     <p>Users view contracts they're involved in; admins see all contracts.</p>
-     
-        <img src="review.png" onclick="openModal('review.png')" alt="Reviews" width="100%">
-       
-        <br>
-     
-        </div>
+    <div class="bg-light p-4 remove-padding">
+      <h2 id="_dashboards">
+        <a class="header-icon-link highlight" href="#">
+          Reports <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
 
-        <div class="bg-light p-4 common-scroll remove-padding" id="summary-and-plan">
-            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Request Reports
-                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-        </h2>
-      <p>Users access their requests; admins view all requests.</p>
-     
-        <img src="summary_plan.png" onclick="openModal('summary_plan.png')" alt="Summary plan" width="100%">
-       <br>
-       <br>
-        
-        </div>
-        <div class="bg-light p-4 common-scroll remove-padding" id="task-report">
-            <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Task Reports
-                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-        </h2>
-     <p>Users see tasks they're part of; admins access all tasks.</p>
-     
-        <img src="2.png" onclick="openModal('2.png')" alt="Reviews" width="100%">
-       
-        <br>
-     
-        </div>
+      <p>
+        CLM365 provides role-based reporting. Users can view reports relevant to their activities, while administrators have access to a complete overview across the platform.
+      </p>
 
-        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-            <nav class="pagination mt-3">
-                <a class="nav nav-prev" href="../home/"
-                    aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
-                        class="d-none d-md-block">Home Page</span></a>
-                <a class="nav nav-next" href="../feedback/" aria-label="Previous page"> <span
-                        class="d-none d-md-block">360 Feedback</span><i class="ti-arrow-right ml-2"></i></a>
-            </nav>
-        </div>
+      <ol type="I">
+        <li>
+          <a href="../self-review/#review">Contract Reports</a>
+        </li>
+        <li>
+          <a href="../self-review/#summary-and-plan">Request Reports</a>
+        </li>
+        <li>
+          <a href="../self-review/#task-report">Task Reports</a>
+        </li>
+      </ol>
+
+      <img src="1.png" onclick="openModal('1.png')" alt="Reports Overview" width="100%">
     </div>
+
+    <div class="bg-light p-4 common-scroll remove-padding" id="review">
+      <h2>
+        <a class="header-icon-link highlight" href="#">Contract Reports
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
+
+      <p>
+        View contract-related data. Regular users can access contracts they’re associated with, while admins can monitor all contract activity within the organization.
+      </p>
+
+      <img src="review.png" onclick="openModal('review.png')" alt="Contract Reports" width="100%">
+      <br>
+    </div>
+
+    <div class="bg-light p-4 common-scroll remove-padding" id="summary-and-plan">
+      <h2>
+        <a class="header-icon-link highlight" href="#">Request Reports
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
+
+      <p>
+        Request reports provide insights into all contract requests. End users see their submissions, while administrators oversee the full request pipeline.
+      </p>
+
+      <img src="summary_plan.png" onclick="openModal('summary_plan.png')" alt="Request Reports" width="100%">
+      <br><br>
+    </div>
+
+    <div class="bg-light p-4 common-scroll remove-padding" id="task-report">
+      <h2>
+        <a class="header-icon-link highlight" href="#">Task Reports
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
+
+      <p>
+        Track task assignments and statuses. Users can view tasks they’re involved in, while administrators gain full visibility into team-wide task distribution.
+      </p>
+
+      <img src="task.png" onclick="openModal('task.png')" alt="Task Reports" width="100%">
+      <br>
+    </div>
+
+    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+      <nav class="pagination mt-3">
+        <a class="nav nav-prev" href="../home/" aria-label="Previous page">
+          <i class="ti-arrow-left mr-2"></i> 
+          <span class="d-none d-md-block">Home Page</span>
+        </a>
+        <a class="nav nav-next" href="../theme/" aria-label="Next page">
+          <span class="d-none d-md-block">Themes</span>
+          <i class="ti-arrow-right ml-2"></i>
+        </a>
+      </nav>
+    </p>
+  </div>
+</div>
+
 </div>
 </div>
     </div>

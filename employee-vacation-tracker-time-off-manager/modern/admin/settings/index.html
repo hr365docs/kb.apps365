@@ -10,8 +10,8 @@
         content="Time-Off Manager 365 - Configure and customize settings for the time-off management system.">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
@@ -31,13 +31,13 @@
         }
     </style>
 
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
 
     <!-- jQuery and Bootstrap Scripts -->
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -70,7 +70,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -120,7 +120,10 @@
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Settings
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                             </h2>
-                            <p>The Settings page is visible only to admins. By default, the person who installed the application will be the admin. Roles can be assigned as admin to any person from the users' page.</p>
+                            <p>Settings page is visible only to admin. On the default note, the one who has installed
+                                the application would be an admin, the roles could be assigned as admin to any person
+                                from the user’s page.</p>
+
                             <ol type="I">
                                 <li>
                                     <a href="../settings/#general">General</a>
@@ -143,7 +146,8 @@
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                             </h2>
-                            <p>In this section, you can customize various settings, such as changing the theme, date format, color code, brand logo, etc. You can select the theme color as light, dark, or site theme.</p>
+                            <p>Here, you can change theme, date format, color code, brand logo etc.</p>
+
                             <img src="general.png" onclick="openModal('general.png')" alt="general" width="100%">
                             <br><br>
 
@@ -157,34 +161,38 @@
                                 <img src="theme.png" onclick="openModal('theme.png')" alt="theme" width="100%">
                                 <br> <br>
                                 <li id="Annualleave">
-                                    <h6>Annual Leave Start Date and Annual Leave End Date</h6>
-<p>You can specify the annual leave start and end dates here or, alternatively, set them based on the joining date, depending on your requirements for leave calculation. If accrued leaves are enabled, leaves will be calculated and allocated to users based on these dates and the candidate's joining date.</p>
+                                    <h6>Annual Leave Start Date and Annual Leave End Date</h6>You can specify the annual
+                                    leave start and end dates here, or alternatively, set them based on the joining
+                                    date, depending on your requirements for leave calculation. If accrued leaves are
+                                    enabled, leaves
+                                    would be calculated and allocated to users based on these date and date of joining
+                                    of the candidate.
                                     <br><br> <br>
                                     <img src="annualLJD.png" onclick="openModal('annualLJD.png')" alt="Leave calculate"
                                         width="100%">
                                     <br><br>
                                     <b>Example</b>
                                     <div class="example">
-                                        <p>For example, let's say:</p>
-                                        <ul>
-                                            <li>Candidate joining date = 15<sup>th</sup> March 2024</li>
-                                            <li>Annual Start Date = 1<sup>st</sup> Jan 2024</li>
-                                            <li>Annual End Date = 31<sup>st</sup> Dec 2024</li>
-                                            <li>Casual Leaves = 24</li>
-                                        </ul>
-                                    
-                                        <p>&#10004; If accrued leave is disabled, the candidate's allocated leave would be:</p>
-                                        <p>(24 leaves / 12 months) * Remaining months (9 months) = 18 leaves allocated for the year</p>
-                                    
-                                        <p>&#10004; If accrued leave is enabled and the type is Monthly, the allocated leave for March will be 2, and it will increase by 2 each month.</p>
-                                    
-                                        <p>&#10004; If accrued leave is enabled and the type is Quarterly:</p>
-                                        <ul>
-                                            <li>24 leaves / 3 quarters = 8 leaves for each quarter</li>
-                                            <li>First Quarter: (8 leaves / 4 months) = 2 leaves per month</li>
-                                            <li>Remaining months to complete the first quarter (2 months) = 2 leaves * 2 months = 4 leaves allocated in the first quarter.</li>
-                                            <li>Subsequently, 8 leaves would be allocated for each quarter automatically.</li>
-                                        </ul>
+                                        let say
+                                        <br>
+                                        candidate joining date = 15 <sup>th</sup> March 2024.
+                                        <br>
+                                        Annual Start date= 1 <sup>st</sup> Jan 2024 <br>
+                                        Annual End Date = 31<sup>st</sup> Dec 2024. <br>
+                                        Casual Leaves = 24.
+                                        <p>&#10004; If accrued is disabled, candidate allocated leave would be
+                                            (24 leaves /12 month) * Remaining months i.e., 9 months = 18 Leaves
+                                            allocates for a years
+                                        </p>
+                                        <p>&#10004; If accrued is enabled and type is Monthly, for march month allocated
+                                            leave will be 2 and it increase by 2 on every month.</p>
+                                        <p>&#10004; If accrued is enabled and type is quarterly <br>
+                                            24 leaves/ 3 quarter for year = 8 leaves for each quarter <br>
+                                            Now (1st quarter= 8 leaves) / 4 months = 2 leaves <br>
+                                            ∴ 2 leaves * 2 months (remaining months to complete one quarter) = 4 leaves
+                                            allocates in first quarter and then 8 leaves would allocate for in each
+                                            quarter automatically.
+                                        </p>
                                         <!-- <p>Allocated leaves </p> -->
                                 </li>
                                 <br>
@@ -380,6 +388,77 @@
                                         <p>For downloading, the user can click on the 'Download' option to retrieve the logs.</p>
                                         <img src="DownloadLogs.png" onclick="openModal('DownloadLogs.png')"
                                             alt="Office Location" width="100%"><br><br>
+
+                                             <h2 id="_notesrequired">
+        <a class="header-icon-link highlight" href=#>
+            Make Notes Required
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h2>
+
+    Turn on this setting to make the <b>'Notes to Approver'</b> field mandatory when submitting a leave request. This ensures that employees provide context or details for their request, which helps approvers make informed decisions.
+    <br><br>
+
+    <div>
+        <img src="NotesToggle.png" onclick="openModal('NotesToggle.png')" alt="Toggle Notes Required" width="100%" height="auto">
+    </div>
+    <br>
+
+    <p>Click on the <b>'Make Notes Required'</b> toggle switch to enable it. Once enabled, the leave request form will not allow submission unless the <b>'Notes to Approver'</b> field is filled in.</p>
+
+    <div>
+        <img src="NotesMandatoryField.png" onclick="openModal('NotesMandatoryField.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <div>
+        <img src="NotesMandatoryField1.png" onclick="openModal('NotesMandatoryField1.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <br>
+
+                                               <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo"><ul class="page-list">
+   
+    
+</ul>
+
+
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+
+                                        Brand logo
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                Here you can add your company logo, which will be displayed at the top of the navigation
+                                bar. From here, the admin can add or update the company logo. The updated logo will
+                                appear at the top of the navigation bar. The recommended size for the logo is 150 X 60,
+                                with the same aspect ratio, and a transparent or white background is recommended for
+                                better visibility and user experience.
+                                <br>
+                                <br>
+                                <div><img src="BrandLogo1.png" onclick="openModal('BrandLogo1.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>Click on the 'Upload Logo' button, then select the logo file. After selecting, the
+                                    user will have the option to crop the logo, allowing them to adjust the image as
+                                    needed.</p>
+                                <div><img src="Crop.png" onclick="openModal('Crop.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+                                <p>After cropping, the user can click on the 'Save Logo' button. Once saved, the logo
+                                    will be visible on the top bar.</p>
+
+                                <div><img src="SaveBrand.png" onclick="openModal('SaveBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="UploadBrand.png" onclick="openModal('UploadBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>If the user wants to remove the logo they added and upload a new one, they can click
+                                    the 'Remove' button. A confirmation prompt will appear asking 'Yes' or 'No.' If the
+                                    user selects 'Yes,' the logo will be removed.
+                                </p>
+                                <div><img src="RemoveBrand.png" onclick="openModal('RemoveBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <br>
+
+                            </ul>
+                        </div>
                                     </ul>
                                 </li> <br>
 
@@ -491,6 +570,13 @@
                                 </li> <br>
                                 <img src="24.png" onclick="openModal('24.png')" alt="Office Location"
                                     width="100%"><br><br>
+                                   <li id="teamapproval">
+                                   <h6>Enable Team Approvals</h6>
+                                   If enabled, the 'Team Approvals' section will be visible on the home page, allowing higher-level managers (managers of managers) to review and act on team requests.
+                                  </li><br>
+
+                                <img src="team.png" onclick="openModal('team.png')" alt="Office Location"
+                                    width="100%"><br><br>
 
 
                             </ol>
@@ -518,6 +604,11 @@
                                     notifications to approvers.
                                 </li> <br>
                                 <img src="10.png" onclick="openModal('10.png')" alt="Office Location" width="100%"><br>
+                                <br>
+                                <li id="SharedMailbox">
+                                    <h6>Shared Mailbox ID</h6>The shared mailbox ID is automatically validated upon entry to ensure it is valid and accessible.
+                                </li> <br>
+                                <img src="70.png" onclick="openModal('70.png')" alt="Office Location" width="100%"><br>
                                 <br>
 
                             </ol>
@@ -631,8 +722,14 @@
                                 <li id="Allowbackdateleaves">
                                     <h6>Allow backdate leaves </h6>User can be allowed to submit back date leaves by X
                                     days
-                                </li><br>
-                                <img src="11.png" onclick="openModal('11.png')" alt="Office Location" width="100%"><br>
+                                </li>
+                                 <img src="0.png" onclick="openModal('0.png')" alt="Calculate partial leave"
+                                    width="100%">
+                                <br><br>
+                                <li id="leaveeligibilitydelay">
+                                    <h6>Enable Leave Eligibility Delay </h6>Enable this option to assign leave only after a defined number of days from an employee’s joining date. When this toggle is turned on, the system will allow you to specify the number of days after which leave becomes eligible.
+                                </li>
+                                <img src="EligibilityDaysInput.png" onclick="openModal('EligibilityDaysInput.png')" alt="Eligibility Days Input" width="100%" height="auto"><br>
                                 <br>
                                 <h6>Leaves Based On</h6> Leaves are based on 3 categories. This could be enabled by
                                 selecting the check box and click on <b>Save</b> button.

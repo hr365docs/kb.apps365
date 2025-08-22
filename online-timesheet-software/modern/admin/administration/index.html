@@ -9,8 +9,8 @@
     <meta name="description" content="Asset Management for Timesheet 365">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
@@ -31,13 +31,13 @@
         }
     </style>
 
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
 
     <!-- External Scripts -->
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -66,7 +66,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -143,6 +143,14 @@
                                         <p>You can <b>edit</b>, <b>delete</b>, and <b>disable</b> client information using the respective icons located on the right side in the action column.</p>
                                         <p>To delete multiple clients, select your desired items and click on the <b>Bulk Delete</b> option.</p>
                                         <div><img src="clients.png" onclick="openModal('clients.png')" alt="clients" width="100%" height="auto"></div><br>
+                                        <p>You can edit, delete and disable the client information through the edit
+                                            icon, delete icon, and achieve icon respectively located on the right side
+                                            in the action column.</p>
+                                        <p>To delete multiple items, select your desired item and click on the bulk
+                                            delete tab.</p>
+                                        <div><img src="addClient.png " onclick="openModal( 'addClient.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
                                         <p>To add a client, click the <b>Add Client</b> button. Fill in the general details as shown below.</p>
                                         <div><img src="C.png" onclick="openModal('C.png')" alt="Add custom" width="100%" height="auto"></div><br>
                                         <p>Click <b>Save and Continue</b> after entering the details.</p>
@@ -184,6 +192,26 @@
                                         <div><img src="UpdateBulkProject.png" onclick="openModal('UpdateBulkProject.png')" alt="Update bulk project" width="100%" height="auto"></div><br>
                                         <p>If there’s any mismatch in data, an error will be displayed with the following details:</p>
                                         <div><img src="UpdateProjectError.png" onclick="openModal('UpdateProjectError.png')" alt="Project update error" width="100%" height="auto"></div><br>
+                                         <h3 id="_dashboards"><a id="Project-Deletion-Restriction"
+                                                class="header-icon-link highlight " href=#>Project
+                                                Deletion Restriction<i class="fas fa-link "
+                                                    style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                        <p>Projects that are already associated with submitted timesheets cannot be
+                                            deleted. This restriction ensures the integrity of historical timesheet data
+                                            and prevents loss of critical project records.</p>
+                                        <div><img src="ProjectDelete.png" onclick="openModal( 'ProjectDelete.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <div><img src="Cantdelete.png" onclick="openModal( 'Cantdelete.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>However, administrators can disable such projects to prevent further use
+                                            while retaining historical data.</p>
+                                        <div><img src="projectdisable.png" onclick="openModal( 'projectdisable.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+
                                     </ol>
                             </li>
                             </ol>
@@ -401,8 +429,8 @@
                         </div> -->
                     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                     <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="../reports/" aria-label="Previous page"><i
-                                class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Reports</span></a>
+                        <a class="nav nav-prev" href="../dashboard/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Dashboard</span></a>
                         <a class="nav nav-next" href="../settings/" aria-label="Previous page"> <span
                                 class="d-none d-md-block">Settings</span><i class="ti-arrow-right ml-2"></i></a>
                     </nav>

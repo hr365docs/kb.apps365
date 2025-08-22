@@ -8,8 +8,8 @@
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
         content="The HR365 Helpdesk Admin Guide - Role Settings explains how administrators can manage roles and permissions for different users within the helpdesk system. This section provides instructions on assigning roles such as Administrator, Agent, and User, along with defining their specific access levels and privileges.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -58,7 +58,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -103,7 +103,7 @@
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Roles <i
                                             class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
-                                <p>From this section, admin can assign roles to users and teams.</p>
+                                <p>From here, admin can assign roles to users and teams.</p>
 
                                 <div><img src="user_role.png" onclick="openModal('user_role.png')" alt="User role"
                                         width="100%" height="auto"></div>
@@ -112,15 +112,28 @@
                                 <br><br>
                                 <b>Admin:</b>
                                 <ul class="ul_li_styles">
-                                    <li><strong>Admin</strong> has full control over the application.</li>
-                                    <li>Can perform all settings adjustments.</li>
-                                    <li>Has the ability to raise tickets on behalf of others.</li>
-                                    <li>Can generate reports for all teams.</li>
-                                    <li>Has access to view the dashboard.</li>
-                                    <li>Can assign tickets across all teams.</li>
-                                    <li>Can view all teams in the side navigation.</li>
+                                    <li>
+                                        Admin has full control.
+                                    </li>
+                                    <li>
+                                        Able to perform all settings.
+                                    </li>
+                                    <li>
+                                        Able to raise tickets on behalf of another person.
+                                    </li>
+                                    <li>
+                                        Generate reports of all teams.
+                                    </li>
+                                    <li>
+                                        View dashboard.
+                                    </li>
+                                    <li>
+                                        Able to assign the tickets of all teams.
+                                    </li>
+                                    <li>
+                                        View all the teams in side navigation.
+                                    </li>
                                 </ul>
-                                
                                 <br>
                                 <br>
                                 <b>Supervisor:</b>
@@ -168,64 +181,123 @@
                                     </li>
                                 </ul>
                                 <b>Power Users</b>
-<ul class="ul_li_styles">
-    <li>
-        Power Users have the ability to view tickets they have created, as well as tickets that are currently unassigned.
-    </li>
-</ul>
-<div class="notices note">
-    <div class="paragraph">
-        <p>Depending on custom configurations, Admins, Supervisors, and Agents may have the ability to delete tickets.</p>
-    </div>
-</div>
-
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Power users have the privilege to view tickets created by themselves and those
+                                        that are unassigned.
+                                    </li>
+                                </ul>
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Based on custom settings, the admin, supervisor, and agents can delete the
+                                            tickets.</p>
                                     </div>
                                 </div>
 
                         </div>
+                                <div class="bg-light p-4 remove-padding common-scroll" id="Add-Lite-Users">
+                                    <ul class=page-list>
+                                        <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add lite users
+                                                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                        </h2>
+                                    </ul>
+                                    <p>In the <b> Add User</b> section, there are three types of Lite Users available:
+                                        <b> Lite User
+                                            Approver </b>, <b> Lite User Dispatcher</b> and <b>Light User Observer</b>.
+                                    </p>
+                                    <div><img src="liteuser.png" onclick="openModal('liteuserpng')" alt="Add users"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <p>The Lite User Approver can access the Approval tab to review and approve
+                                        tickets.</p>
+                                    <div><img src="Approval.png" onclick="openModal('Approval.png')" alt="Add users"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <p>The Lite User Dispatcher functions like a supervisor. Tickets cannot be assigned
+                                        to this role.</p>
+                                    <div><img src="User.png" onclick="openModal('User.png')" alt="Add users"
+                                            width="100%" height="auto"></div>
+                                    <br>
+                                    <p>Their name does not appear in the Assigned To dropdowns.</p>
+                                    <div><img src="not-Assigned.png" onclick="openModal('not-Assigned.png')"
+                                            alt="Add users" width="100%" height="auto"></div><br>
+                                             <p>The Lite User Observer is a view-only role with restricted access. They can monitor tickets and activities but cannot perform any actions such as approvals, edits, or assignments. This role is ideal for stakeholders or auditors who need read-only access to system data.</p>
+    <br>
+
+       <div>
+        <img src="lig.png" onclick="openModal('lig.png')" alt="User role counts" width="100%" height="auto">
+    </div>
+                                    <p>The Help page displays the count of Lite User Approvers and Lite User
+                                        Dispatchers and Lite User Observer.</p>
+                                    <div><img src="usercansee.png" onclick="openModal('usercansee.png')" alt="Add users"
+                                            width="100%" height="auto"></div>
+
+
+                                </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="users">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Roles and scopes
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    Admins can assign roles to Office 365 users within the Helpdesk application, based on the required ticket scope. While users can be assigned as Supervisors or Agents across multiple teams, their assigned ticket scope and roles will remain consistent.
+                                    Admin can assign roles to O365 users with ticket scope as per requirement in the
+                                    Helpdesk application. You can select both supervisor and agents for multiple teams,
+                                    however, ticket scope will remain the same along with roles.
                                 </p>
-                                
 
 
-                                <b>Types of Ticket Scopes</b>
-<br><br>
 
-<b>Global Access</b>
-<ul class="ul_li_styles">
-    <li>Can view unassigned tickets across all teams in the Helpdesk.</li>
-    <li>Can assign tickets to any team.</li>
-    <li>Can edit or update tickets from all teams via the comment page.</li>
-</ul>
-
-<br>
-<b>Team Access I</b>
-<ul class="ul_li_styles">
-    <li>Can view unassigned tickets across all teams.</li>
-    <li>Can assign tickets to any team.</li>
-</ul>
-
-<br>
-<b>Team Access II</b>
-<ul class="ul_li_styles">
-    <li>Can view unassigned tickets across all teams.</li>
-    <li>Can assign tickets only within their assigned teams.</li>
-</ul>
-
-<br>
-<b>Restricted Access</b>
-<ul class="ul_li_styles">
-    <li>Can only view tickets assigned to their own team.</li>
-    <li>Detailed views of team tickets are not accessible.</li>
-    <li>Can update only the tickets assigned directly to them.</li>
-</ul>
-
+                                <b>Different types of tickets scope</b>
+                                <br><br>
+                                <b>Global access:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets in the Helpdesk.
+                                    </li>
+                                    <li>
+                                        Can assign tickets for all teams.
+                                    </li>
+                                    <li>
+                                        Can edit or update a ticket of all teams from the comment page only.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Team access I:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets in the Helpdesk.
+                                    </li>
+                                    <li>
+                                        Can assign tickets for all teams.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Team access II:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can view all team's unassigned tickets.
+                                    </li>
+                                    <li>
+                                        Tickets cannot be assigned to this role.
+                                    </li>
+                                </ul>
+                                <br>
+                                <b>Restricted access:</b>
+                                <br>
+                                <ul class="ul_li_styles">
+                                    <li>
+                                        Can only view their team's assigned tickets.
+                                    </li>
+                                    <li>
+                                        Team tickets detailed view will not be available.
+                                    </li>
+                                </ul>
+                                <li>
+                                    Can update only tickets assigned to him/her.
+                                </li>
 
                         </div>
 
@@ -235,23 +307,20 @@
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add/Edit Users
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                <p>To add users, follow the steps below:</p>
+
+                                To add the users, follow the below steps:
+                                <br>
                                 <ol>
                                     <li>
-                                        Click on <b>Configure</b>. This will display the <b>Users</b> page.
-                                    </li>
-                                </ol>
-                                 <br>
+                                        Click on <b>Configure</b>, this displays <b>Users</b> page.
+                                    </li> <br>
                                     <div><img src="1.png" onclick="openModal('1.png')" alt="Add users" width="100%"
                                             height="auto"></div> <br>
                                     <li>
-                                       
-                                            The <b>Active Users</b> tab displays all users who are currently active in the system. These users retain access to their assigned roles and responsibilities.
-                                        </li>
-                                        ctive Users </b> tab displays all users who are currently active and
+                                        The <b>Active Users </b> tab displays all users who are currently active and
                                         participating in the system. These users have access to all their assigned roles
                                         and responsibilities.
-                                    </li> <br><br>
+                                    </li> <br>
                                     <div><img src="active.png" onclick="openModal('active.png')" alt="Add users"
                                             width="100%" height="auto"></div> <br>
 
@@ -278,7 +347,7 @@
                                     <div><img src="3.png" onclick="openModal('3.png')" alt="Add users" width="100%"
                                             height="auto"></div>
                                     <br>
-                                    
+
                                 </ol>
                                 <br>
                         </div>
@@ -288,11 +357,11 @@
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Add/Edit End Users
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                <p>Click on <b>Configure</b> to proceed further.</p> <br>
+                                <p>Click on "Configure" to proceed further.</p> <br>
 
                                 <div><img src="toggleEndUser.png" onclick="openModal('toggleEndUser.png')"
                                         alt="Add teams" width="100%" height="auto"></div> <br>
-                                <p>Click on <b>+ Add</b> button to display Add user Page.</p>
+                                <p>Click on <b>+ Add</b>button to display Add user Page.</p>
 
                                 <div><img src="AddeditEndUser.png" onclick="openModal('AddeditEndUser.png')"
                                         alt="Add End User" width="100%" height="auto"></div>
@@ -306,14 +375,6 @@
                                 <p>You can modify and remove the user by clicking on these icons.</p> <br>
                                 <div><img src="4.png" onclick="openModal('4.png')" alt="Add users" width="100%"
                                         height="auto"></div>
-
-
-
-
-
-
-
-
                         </div>
 
 
@@ -323,22 +384,23 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    Admins can create multiple teams based on organizational requirements. Both Admins and Supervisors will be able to view all teams in the side navigation panel.
+                                    Admin can create multiple teams as per your requirement. Admin and supervisor can
+                                    view all the teams in the side navigation panel.
                                 </p>
-                                
+
                                 <p>
-                                    To create a new team, follow these steps:
+                                    Admin can create teams from the settings. To create follow the below steps:
                                 </p>
-                                
+
+
                                 <ol>
                                     <li>
-                                        Click on <b>Teams</b> to open the <b>Add/Edit Teams</b> page.
+                                        Click on teams, this displays <b>Add/Edit Teams</b> page.
                                     </li>
+
                                     <li>
-                                        Click on the <b>+ New Team</b> button to open the <b>New Team</b> creation page.
+                                        Click on <b>+New Team</b> button, this displays <b>New</b> page.
                                     </li>
-                               
-                                
                                     <br>
                                     <div><img src="add_teams.png" onclick="openModal('add_teams.png')" alt="Add teams"
                                             width="100%" height="auto"></div>
@@ -346,17 +408,16 @@
 
 
                                     <li>
-                                        Enter the <b>Team Name</b>, assign a unique <b>Team Code</b>, select a <b>Supervisor</b>, and add <b>Team Members</b>.
+                                        Enter the <b>Name</b>, give <b>Code</b>, add <b>Supervisor</b> and add the
+                                        <b>Team Members</b>.
+
                                     </li>
-                                    <li>
-                                        <b>Multiple Ticket Mailboxes:</b> You can associate departmental or team-specific email addresses with teams. A dedicated ticket mailbox can be configured for each.
-                                    </li>
-                                    
+                                    <li>Multiple ticket mailboxes : Can add the department or team's email address to
+                                        teams and a ticket mailbox can be configured for it.</li>
                                     <br>
                                     <div><img src="fillTeamsReq.png" onclick="openModal('fillTeamsReq.png')"
                                             alt="Add teams" width="100%" height="auto"></div>
-                                    <br>
-
+                                    <br id="Escalation-Teams">
                                     <li>
                                         Finally click the <b>Save</b> button.
                                     </li><br>
@@ -391,16 +452,17 @@
                                             width="100%" height="auto"></div>
                                     <br>
                                     <li>
-                                        Select the team from the dropdown and check the box to define the level of SLA escalation.
+                                        Select the team from the dropdown, and select the check box to define the level
+                                        of SLA Escalation.
                                         <div class="notices note">
                                             <div class="paragraph">
-                                                <p>
-                                                    The SLA escalation code is predefined. For first-level escalation, the code is <b>XX L1</b>, and for second-level escalation, it is <b>XX L2</b>, where <b>XX</b> is derived from the team's assigned code.
+                                                <p>The code is predefined for SLA Escalation. For first-level, code is
+                                                    XX L1 And for Second-level, the code is XX L2.(XX is based on code
+                                                    added )
                                                 </p>
                                             </div>
                                         </div>
                                     </li>
-                                    
 
                                     <li>
                                         Enter the <b>Supervisor</b> and add the <b>Team Members</b>.
@@ -416,30 +478,9 @@
 
                                 </ol>
 
-<br><br>
-                                <p>In the <b> Add User</b> section, there are two types of Lite Users available: <b> Lite User
-                                    Approver </b> and <b> Lite User Dispatcher</b>.</p>
-                                <div><img src="liteuser.png" onclick="openModal('liteuserpng')" alt="Add users" width="100%"
-                                        height="auto"></div>
-                                        <br>
-                                <p>The Lite User Approver can access the Approval tab to review and approve tickets.</p>
-                                <div><img src="Approval.png" onclick="openModal('Approval.png')" alt="Add users" width="100%"
-                                        height="auto"></div>
-                                        <br>
-                                <p>The Lite User Dispatcher functions like an agent but does not receive tickets assigned by other users.</p>
-                                <div><img src="User.png" onclick="openModal('User.png')" alt="Add users" width="100%"
-                                        height="auto"></div>
-                                        <br>
-                                        <p>Their name will not appear in the <b>Assigned To</b> dropdown list.</p>
 
-                                <div><img src="not-Assigned.png" onclick="openModal('not-Assigned.png')" alt="Add users" width="100%"
-                                        height="auto"></div><br>
-                                        <p>The Help page displays the total count of Lite User Approvers and Lite User Dispatchers.</p>
-
-                                <div><img src="usercansee.png" onclick="openModal('usercansee.png')" alt="Add users" width="100%"
-                                        height="auto"></div>
-
-
+                        
+                            </ul>
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="service">
                             <ul class=page-list>
@@ -448,12 +489,40 @@
                                 </h2>
 
 
-                                <p>Once teams are created, the admin can add various services for each department from the settings, as shown below.</p>
 
+                                <p>
+                                    Once you create teams, admin can add various services for individual
+                                    department from
+                                    settings as shown in below.
+                                </p>
 
                                 <div><img src="add_service.png" onclick="openModal('add_service.png')" alt="Add service"
                                         width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    Go to the Services panel where you can see multiple choice boxes. Select the
+                                    Service(s) you wish to delete from the list for removal.
+                                </p>
 
+                                <div><img src="bulkdelete.png" onclick="openModal('bulkdelete.png')" alt="Add service"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <p>
+                                    Now, click on the Bulk Delete option — a confirmation popup will appear. Click on
+                                    the "Yes" button to permanently delete the selected items.
+                                </p>
+
+                                <div><img src="Yes.png" onclick="openModal('Yes.png')" alt="Add service" width="100%"
+                                        height="auto"></div>
+                                <br>
+                                <p>
+                                    A success message will confirm that your selected Services have been deleted
+                                    successfully.
+                                </p>
+
+                                <div><img src="deleted.png" onclick="openModal('delete.png')" alt="Add service"
+                                        width="100%" height="auto"></div>
 
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="sub-service">
@@ -463,29 +532,54 @@
                                 </h2>
 
 
-                                <p>The administrator has the ability to add sub-services. <br>Click on <b>Configure</b> to proceed.</p>
+                                <p>
+                                    The administrator has the ability to add sub-services. <br>
+                                    Click on Configure to process Continue.
+
+                                </p>
 
 
                                 <div><img src="sub_service.png" onclick="openModal('sub_service.png')" alt="Sub service"
-                                        width="100%" height="auto"></div><br>
-                                <p>To create a sub-service, simply click on <b>Configure.</b></p> <br>
+                                        width="100%" height="auto"></div>
+                                <p>To create a sub-service, simply click on Configure.</p> <br>
                                 <div><img src="sub_service1.png" onclick="openModal('sub_service1.png')"
                                         alt="Sub service" width="100%" height="auto"></div>
-                                <p><br>
+                                <p>
                                     Add sub-services as depicted in the image.</p> <br>
                                 <div><img src="sub_service2.png" onclick="openModal('sub_service2.png')"
                                         alt="Sub service" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    Go to the Sub Services L1 panel where you can see multiple choice boxes. Select the
+                                    Sub Service(s) you wish to delete from the list for removal.</p> <br>
+                                <div><img src="sub.png" onclick="openModal('sub.png')" alt="Sub service" width="100%"
+                                        height="auto"></div>
+                                <br>
+                                <p>
+                                    Now, click on the Bulk Delete option — a confirmation popup will appear. Click on
+                                    the "Yes" button to permanently delete the selected items.</p> <br>
+                                <div><img src="subYes.png" onclick="openModal('subYes.png')" alt="Sub service"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>A success message will confirm that your selected Sub Services L1 have been deleted
+                                    successfully.</p> <br>
+                                <div><img src="subYes.png" onclick="openModal('subYes.png')" alt="Sub service"
+                                        width="100%" height="auto"></div>
 
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="advance">
                             <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Advance Permissions
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Advance
+                                        Permissions
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
 
 
-                                <p>Permissions can be assigned to admins, supervisors, and agents, enabling users to edit priorities, request types, and close tickets.</p>
-
+                                <p>
+                                    Various permissions could be provided to admin, supervisor, agent. It would
+                                    allow
+                                    users to edit priority, request type and close ticket.
+                                </p>
 
 
 
@@ -493,7 +587,8 @@
                                         alt="Advace permissions" width="100%" height="auto"></div>
                                 <br>
                                 <p>Admins, Supervisors, and Agents can edit requester details based on their
-                                    permissions, while Users have limited or no access. This ensures controlled and
+                                    permissions, while Users have limited or no access. This ensures controlled
+                                    and
                                     secure data management.</p>
 
 
@@ -529,15 +624,19 @@
                                 </p>
                                 <div><img src="enable.png" onclick="openModal('enable.png')" alt="Enable" width="100%" height="auto"></div> -->
                                 <br>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable Agent to View
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable Agent
+                                        to View
                                         Own Private Notes
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
 
                                 <p>
-                                    This toggle option allows agents to view their own private notes within a ticket.
-                                    When enabled (On), agents can access and review any private notes they have added to
-                                    a ticket. When disabled (Off), agents will not be able to view their private notes
+                                    This toggle option allows agents to view their own private notes within a
+                                    ticket.
+                                    When enabled (On), agents can access and review any private notes they have
+                                    added to
+                                    a ticket. When disabled (Off), agents will not be able to view their private
+                                    notes
                                     after submission.
                                 </p>
                                 <div><img src="EnableAgent.png" onclick="openModal('EnableAgent.png')"
@@ -548,11 +647,36 @@
                                 </p>
                                 <div><img src="PrivateNotes.png" onclick="openModal('PrivateNotes.png')"
                                         alt="ticket property" width="100%" height="auto"></div>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Properties
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Private Note Edit <i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>Two new options have been added:</p>
+                                <b>Enable Toggle</b>:
+                                <ol>
+                                    <li> A toggle switch has been introduced to enable or disable the feature.</li>
+                                    <li> A numeric input field allows you to set the duration (in minutes) for which the
+                                        feature remains enabled after activation.</li>
+                                    <br>
+                                </ol>
+
+                                </p>
+                                <div><img src="deletePrivatenotes.png" onclick="openModal('deletePrivatenotes.png')"
+                                        alt="Ticket properties" width="100%" height="auto"></div>
+                                <br>
+                                <p>The Edit and Delete buttons allow users to modify or remove private notes. These
+                                    options are only visible within the time duration configured in the settings.</p>
+                                <div><img src="Private.png" onclick="openModal('Private.png')" alt="Ticket properties"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket
+                                        Properties
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                <p>The ticket properties feature allows you to hide or display specific ticket fields in the ticket form.</p>
-
+                                <p>
+                                    Using ticket properties feature, it would be able to hide or show the ticket
+                                    fields
+                                    in ticket form.
+                                </p>
 
                                 <div><img src="ticket_propeties.png" onclick="openModal('ticket_propeties.png')"
                                         alt="Ticket properties" width="100%" height="auto"></div>
