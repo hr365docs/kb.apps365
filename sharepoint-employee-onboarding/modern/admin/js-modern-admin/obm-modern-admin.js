@@ -23,7 +23,7 @@ $(document).ready(function () {
         // "</li>" +
 
         "<li class='dropdownicon sidelist'>" +
-        "<a class='qwe'  href='/sharepoint-employee-onboarding/modern/admin/setting'> Settings </a>" +
+        "<a class='qwe'  href='/sharepoint-employee-onboarding/modern/admin/setting/'> Settings </a>" +
         "<img class='helpdesk-img aside_dropdown_icon_setting' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
 
@@ -464,7 +464,7 @@ $(document).ready(function () {
         "</li>" +
         "</ul>" +
          "<li data-nav-id='../General' title=email-tracker class='sidelist'>" +
-        "<a href='/sharepoint-employee-onboarding/modern/admin/email-tracker'> Email Tracker</a>" +
+        "<a href='/sharepoint-employee-onboarding/modern/admin/email-tracker/'> Email Tracker</a>" +
         "</li>" +
 
 

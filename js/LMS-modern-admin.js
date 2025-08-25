@@ -21,7 +21,7 @@ $(document).ready(function () {
   "</a>"+
 
 "</li>"+
-"<li class='dropdownicon sidelist' title='Theme'>" +
+"<li class=' sidelist' title='Theme' data-nav-id='./Settings/'>" +
 "<a href='/LMS/modern/admin/Theme/'>" +
 "Theme" +
 "</a>" +
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 
 "<li class='dropdownicon sidelist'>" +
-"<a class='qwe' href='/LMS/modern/admin/setting'>" +
+"<a class='qwe' href='/LMS/modern/admin/setting/'>" +
 "Settings" +
 "</a>" +
 "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
