@@ -313,6 +313,36 @@
                                 <br><img src="25.png" onclick="openModal('25.png')"
                                     alt="Office Location" width="100%"><br>
                                 <br>
+                                                        <h2 id="_notesrequired">
+        <a class="header-icon-link highlight" href=#>
+            Make Notes Required
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h2>
+
+    Turn on this setting to make the <b>'Notes to Approver'</b> field mandatory when submitting a leave request. This ensures that employees provide context or details for their request, which helps approvers make informed decisions.
+    <br><br>
+
+    <div>
+        <img src="NotesToggle.png" onclick="openModal('NotesToggle.png')" alt="Toggle Notes Required" width="100%" height="auto">
+    </div>
+    <br>
+
+    <p>Click on the <b>'Make Notes Required'</b> toggle switch to enable it. Once enabled, the leave request form will not allow submission unless the <b>'Notes to Approver'</b> field is filled in.</p>
+
+    <div>
+        <img src="NotesMandatoryField.png" onclick="openModal('NotesMandatoryField.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <div>
+        <img src="NotesMandatoryField1.png" onclick="openModal('NotesMandatoryField1.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <br>
+
+                                               <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo"><ul class="page-list">
+   
+    
+</ul>
+
                                 <!-- <li id="Language">
                                     <h6>Language selection as browser default language.</h6> Select browser Default
                                     Language.
@@ -393,7 +423,7 @@
                                 </li> <br> -->
 
                             </ol>
-                        </div>
+
                         <div class="bg-light p-4 common-scroll" id="advance-settings">
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Advance
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
@@ -500,6 +530,14 @@
                                 </li> <br>
                                 <img src="24.png" onclick="openModal('24.png')" alt="Office Location"
                                     width="100%"><br><br>
+                                                                       <li id="teamapproval">
+                                   <h6>Enable Team Approvals</h6>
+                                   If enabled, the 'Team Approvals' section will be visible on the home page, allowing higher-level managers (managers of managers) to review and act on team requests.
+                                  </li><br>
+
+                                <img src="team.png" onclick="openModal('team.png')" alt="Office Location"
+                                    width="100%"><br><br>
+
 
 
                             </ol>
@@ -649,6 +687,11 @@
                                 </li>
                                 <img src="11.png" onclick="openModal('11.png')" alt="Office Location" width="100%"><br>
                                 <br>
+                                 <li id="leaveeligibilitydelay">
+                                    <h6>Enable Leave Eligibility Delay </h6>Enable this option to assign leave only after a defined number of days from an employee’s joining date. When this toggle is turned on, the system will allow you to specify the number of days after which leave becomes eligible.
+                                </li>
+                                <img src="EligibilityDaysInput.png" onclick="openModal('EligibilityDaysInput.png')" alt="Eligibility Days Input" width="100%" height="auto"><br>
+                                <br>
                                 <h6>Leaves Based On</h6> Leaves are based on 3 categories. This could be enabled by
                                 selecting the check box and click on <b>Save</b> button.
                                 <br><br>
@@ -716,42 +759,44 @@
                                     <br>
 
                             </ol>
-                            <!-- <div class="bg-light p-4 common-scroll" id="Audit-Logs">
+                            <div class="bg-light p-4 common-scroll" id="Audit-Logs">
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Audit Logs
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                <p>The Audit Logs feature in the application provides a detailed record of all user
-                                    activities and system changes within the Settings module. It helps administrators
-                                    track
-                                    modifications, identify unauthorized actions, and ensure compliance with
-                                    organizational
-                                    policies. </p>
-                                <p>Click on this icon button.</p>
-                                <img src="Aduitlogo.png" onclick="openModal('Aduitlogo.png')" alt="Report"
-                                    width="100%"><br>
-                                <br>
-                                <p>After clicking, a panel will be shown where you can check the history of any setting.
-                                </p>
-                                <img src="AduitlogoPanel.png" onclick="openModal('AduitlogoPanel.png')" alt="Report"
-                                    width="100%"><br>
-                                <br>
-                                <p>If the user wants to view the previous history of the Date Format, they should click
-                                    on the Date Format option. Both the previous and current history will be displayed,
-                                    showing what it was before and what changes have been made.</p>
-                                <img src="Dateformat.png" onclick="openModal('Dateformat.png')" alt="Report"
-                                    width="100%"><br>
-                                <br>
-                                <p>Then, the Audit Logs panel will be displayed. The user should click on the Date
-                                    Format option.</p>
-                                <img src="DateformatAduit.png" onclick="openModal('DateformatAduit.png')" alt="Report"
-                                    width="100%"><br>
-                                <br>
-                                <p>Then, the user will get all the details of the Audit Logs.</p>
-                                <img src="auditlogDetails.png" onclick="openModal('auditlogDetails.png')" alt="Report"
-                                    width="100%"><br>
-                                <br>
+                               <p>The Audit Logs feature in the application provides a detailed record of all user
+    activities and system changes within the Settings module. It helps administrators
+    track modifications, identify unauthorized actions, and ensure compliance with
+    organizational policies.
+</p>
+
+<p>Click on this icon button.</p>
+<img src="Aduitlogo.png" onclick="openModal('Aduitlogo.png')" alt="Audit Logs Icon"
+    width="100%"><br><br>
+
+<p>After clicking, a panel will be shown where you can check the history of any setting.
+</p>
+<img src="AduitlogoPanel.png" onclick="openModal('AduitlogoPanel.png')" alt="Audit Logs Panel"
+    width="100%"><br><br>
+
+<p>If the user wants to view the previous history of the <b>Additional Approvers</b>, they should click
+    on the <b>Additional Approvers</b> option. Both the previous and current values will be displayed,
+    showing what it was before and what changes have been made.
+</p>
+<img src="Dateformat.png" onclick="openModal('Dateformat.png')" alt="Additional Approvers"
+    width="100%"><br><br>
+
+<p>Then, the Audit Logs panel will be displayed. The user should click on the
+    <b>Additional Approvers</b> option.
+</p>
+<img src="DateformatAduit.png" onclick="openModal('DateformatAduit.png')" alt="Additional Approvers Audit"
+    width="100%"><br><br>
+
+<p>Then, the user will get all the details of the Audit Logs.</p>
+<img src="auditlogDetails.png" onclick="openModal('auditlogDetails.png')" alt="Audit Log Details"
+    width="100%"><br><br>
+
                             </div>
-                        </div> -->
+                        </div>
 
 
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">

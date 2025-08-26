@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+  <meta charset="utf-8">
+  <title>Admin Guide for Modern SharePoint Employee Directory</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Hugo 0.92.2">
+  <meta name="description" content="Comprehensive admin guide for managing HR365's Modern SharePoint Employee Directory effectively and efficiently.">
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <style>
+      :root {
+          --primary-color: #5637da;
+          --body-color: #f9f9f9;
+          --text-color: #636363;
+          --text-color-dark: #242738;
+          --white-color: #ffffff;
+          --light-color: #f8f9fa;
+          --font-family: Lato;
+      }
+  </style>
+  <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({
+              'gtm.start': new Date().getTime(), event: 'gtm.js'
+          }); var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+                  <!-- Google Tag Manager (noscript) -->
+                  <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                     <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+          <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                      <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../Google-ED365/">Google Workspace Employee Directory 365 </a></h5>
+                        <a class=back-btn href="../../../../Google-ED365/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title="Admin-Guide"
+                                class="sidelist
+active">
+                                <a href="../../../Google-ED365/modern/admin/">
+                                    Admin Guide
+                                </a>
+                                <div id="edmfullyadminguide" class="sidenavbarscrollstyle"> 
+                                  </div>
+                                </ul>
+                            </li>
+                           
+
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>Employee Directory 365</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+                              <h2 id="_dashboards"><a class="header-icon-link highlight mbHeading" href=#>Google Workspace Employee Directory 365<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                              </h2>
+                              <br>
+                              <h3 class="tablecontentfont">Table of content</h3>
+                  
+                              <br>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                                  title="Installation" class="sidelist active">
+
+
+                                    <ul class="list-styled-content">
+                                        <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/requirments/
+
+                                            title="Introduction" class=sidelist>
+                                            <a href="./introduction/">
+                                                Introduction
+                                            </a>
+                                        <li title="Profile Card">
+                                            <a href="./profile-card/">Profile Card</a>
+                                        </li>
+                                        <li title="Profile Card">
+                                          <a href="./dashboard/">Dashboard</a>
+                                      </li>
+                                        <!-- <li>    
+            <a href="./profile/">Managing User Profile</a>
+        </li> -->
+                                   
+
+
+                                        <li title="Settings">
+                                            <a href="./settings/">Settings</a>
+                                            <ul class="ml-15 sidenavSub-topics">
+                                                <!-- <li>    
+                    <a href="./User-Interface/navigation/">Navigation</a>
+                </li> -->
+                <li title="General">
+                    <a href="./settings/general/">General</a>
+                    <!-- <ul class="sidenavSub-topics">
+                        <li  data-nav-id="../advanced/" title="Search filters" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#search-filter">Search filters</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Allow users to export directory" class="sidelists">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#allow-user-export-directory">Allow users to export directory</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Language selection as browser default language" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#language-selection-as-browser">Language selection as browser default language</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Language selection in case browser default language is not detected" class="sidelist ">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#language-selection">Language selection in case browser default language is not detected</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Update users role and permissions" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#update-roles">Update users role and permissions</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Update users department" class="sidelist ">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#update-department">Update users department
+                          </a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Update job title" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#update-jobtitle">Update job title
+                          </a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Update users location" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#update-location">Update users location  </a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Collaboration" class="sidelist ">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#collaboration">Collaboration </a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Custom link" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#custom-link">Custom link</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Organization chart type" class="sidelist">
+                          <a href="../../../Google-ED365/modern/admin/settings/general/#organization-chart-type">Organization chart type</a>
+                        </li>
+                    </li>
+                  </ul> -->
+                </li>
+                <li title="Exclude Options">
+                    <a href="./settings/views/">Views</a>
+
+                </li>
+                <li title="Views">
+                    <a href="./settings/exclude-options/">Exclude Options</a>
+
+                </li>
+                <li title="Advanced">
+                    <a href="./settings/advanced/">Advanced</a>
+                    <!-- <ul class="ml-15 sidenavSub-topics">
+                        <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/requirments/
+                        title="Configure SharePoint API permissions" class=sidelist>
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#configure-permission">Configure SharePoint API permissions
+                            </a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Filter Group by" class="sidelistss">
+                          <a href="../../../Google-ED365/modern/admin/settings/advanced/#filter-group-by">Filter Group by</a>
+                        </li>
+                        <li  data-nav-id="../advanced/" title="Sync unlicensed users" class="sidelistss">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#sync-unlicensed-users">Sync unlicensed users</a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Show external users" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#show-external-users">Show external users</a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Organizational Chart" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#organizational-chart">Organizational Chart</a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Sync employee profile images" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#sync-profile-image">Sync employee profile images</a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Sync and display mobile number from azure" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#sync-mobile-number">Sync and display mobile number from azure</a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title=" User presence " class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#user-presence">User presence </a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Auto load instead load more button" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#auto-load">Auto load instead load more button  </a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Hide side navigation panel in SharePoint page" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#hide-navigation-panel">Hide side navigation panel in SharePoint page  </a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Hide webpart title in SharePoint page" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#hide-webpart-title">Hide webpart title in SharePoint page  </a>
+                          </li>
+                          <li  data-nav-id="../advanced/" title="Custom css for webpart to remove spaces" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#custom-css">Custom css for webpart to remove spaces  </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Records to load" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#records">Records to load  </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Birthday and anniversary templates" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#birthday-template">Birthday and anniversary templates</a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Custom fields " class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#custom-fields">Custom fields </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Extend custom fields search capability" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#extend-custom-field">Extend custom fields search capability
+                            </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Extend mobile number and phone number search capability
+                          " class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#extend-mobile-number">Extend mobile number and phone number search capability
+
+                            </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Image Profile Tag" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#image-profile-tag">Image Profile Tag</a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Custom Function " class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#custom-function">Custom Function</a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Select topbar filters " class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#Select-topbar-filters">Select topbar filters</a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Executive Assistant relationship" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#executive-assistant">Executive Assistant relationship </a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Employee info page" class="sidelist ">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#employee-info-page">Employee info page</a>
+                          </li>
+                          <li  data-nav-id="../Records/" title="Import non M365 users" class="sidelist">
+                            <a href="../../../Google-ED365/modern/admin/settings/advanced/#import-non-M365-users">Import non M365 users </a>
+                          </li>
+
+                </li>
+
+            </ul> -->
+                                </li>
+                            </ul>
+                        
+                                        <li>
+                                            <a href="./help/">Help</a>
+                                        </li>
+                                    </ul>
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../../../Google-ED365/"
+                                aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>Google Workspace Employee Directory 365<span
+                                    class="d-none d-md-block"></span></a>
+                            <a class="nav nav-next" href="../admin/introduction/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Introduction</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a href="https://www.hr365.us/sla/">SLA.</a>
+                    <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                        href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                        href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                    Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                    
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+   
+    <script src="../../../js/google-ed365-admin.js"></script>
+    <script src="../../../js/showhidefunction.js"></script>
+    <script src="../../../js/header-footer.js"></script>
+   
+    <script>
+           function openModal(src) {
+  
+  document.getElementById("imageId").src= src;
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+  
+}                       
+                              
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML=date;
+       </script>
+</body>
+
+</html> 

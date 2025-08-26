@@ -371,47 +371,65 @@
                             </li>
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
-                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
-                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval Workflow<i
-                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <ul class=page-list>
-                                    <p>The process defines the structured steps through which employee-submitted
-                                        timesheets are reviewed and approved. The workflow typically involves several
-                                        key stages:</p>
-                                    <div><img src="approvalWorkflow.png" onclick="openModal( 'approvalWorkflow.png') "
-                                            alt="tasks" width="100% " height="auto"></div>
-                                    <br>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
-                            <p><b>Employee Submission:</b> Employees submit their completed timesheets for a given
-                                period, detailing hours worked, tasks completed, and other relevant data.
-                            </p>
-                            <p><b>Manager Review:</b> The timesheet is forwarded to the employee's manager or supervisor
-                                for initial review. The manager checks for accuracy, verifies the recorded hours, and
-                                ensures alignment with project or task requirements.
-                            </p>
-                            <p><b>Approval or Rejection:</b> Based on the review, the manager either approves the
-                                timesheet or rejects it with comments requesting revisions or clarifications.</p>
-                            <p><b>Escalation (if needed):</b> If the timesheet involves special approvals (e.g.,
-                                overtime, special projects), it may be escalated to higher management or specific
-                                department heads for final approval.</p>
-                            <p><b>Final Approval:</b> Once all required approvals are completed, the timesheet is
-                                officially marked as approved and ready for payroll processing or integration into the
-                                billing system.</p>
-                            <p><b>Notifications:</b> Both the employee and relevant stakeholders are notified of the
-                                timesheet's status, whether approved or needing revisions.</p>
-                            <div><img src="addapprovers.png" onclick="openModal( 'addapprovers.png') " alt="tasks"
-                                    width="100% " height="auto"></div>
-                            <br>
-                            <p>This workflow ensures accountability, accuracy, and proper tracking of work hours,
-                                leading to smoother payroll processing and compliance with company policies.</p>
-                            <!-- <p>Submit Approval Workflow</p>
-                            <div><img src="submit.png" onclick="openModal( 'submit.png') " alt="tasks" width="100% "
-                                    height="auto"></div>
-                            <br> -->
-                        </div>
+    <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+        <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval Workflow<i
+                    class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+        <ul class=page-list>
+            <p>The Approval Workflow allows organizations to streamline and standardize the timesheet approval process. Follow the instructions below to create a new approval workflow:</p>
+            
+            <p>Click on <b>+ New Approval</b> to start setting up a new approval workflow.</p>
+             <div><img src="1.png" onclick="openModal('1.png')" alt="Project selection screen" width="100%" height="auto"></div>
+            <br>
+            <p>Enter the workflow <b>Name</b>, provide a <b>Description</b>, and select the associated <b>Client</b>.</p>
+            <div><img src="UpdatedScreen.png" onclick="openModal('UpdatedScreen.png')" alt="Workflow details screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Choose the relevant <b>Project</b> linked to the selected client.</p>
+            <div><img src="approvalWorkflow.png" onclick="openModal('approvalWorkflow.png')" alt="Project selection screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Assign <b>Approvers</b> for the workflow.</p>
+             <div><img src="addapprovers1.png" onclick="openModal('addapprovers1.png')" alt="Add approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Each approval level supports two types of selection:</p>
+            <p>– <b>All</b>: Every approver at this level must approve before proceeding.</p>
+            <p>– <b>Any</b>: Approval from any one approver is sufficient to move forward.</p>
+            <div><img src="addapprovers.png" onclick="openModal('addapprovers.png')" alt="Add approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>You can set up multiple <b>Approval Levels</b> (e.g., Level 1, Level 2), with designated approvers for each stage.</p>
+            <div><img src="multiapprovers.png" onclick="openModal('multiapprovers.png')" alt="Multiple approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Once all details and approvers are configured, click on the <b>save and add more</b> button to finalize and activate the approval workflow.</p>
+            <div><img src="submitworkflow.png" onclick="openModal('submitworkflow.png')" alt="Submit workflow screen" width="100%" height="auto"></div>
+            <br>
+            <h4>Timesheet Approval Process</h4>
+
+            <p><b>Employee Submission:</b> Employees submit their completed timesheets for a given
+                period, detailing hours worked, tasks completed, and other relevant data.
+            </p>
+            <p><b>Manager Review:</b> The timesheet is forwarded to the employee's manager or supervisor
+                for initial review. The manager checks for accuracy, verifies the recorded hours, and
+                ensures alignment with project or task requirements.
+            </p>
+            <p><b>Approval or Rejection:</b> Based on the review, the manager either approves the
+                timesheet or rejects it with comments requesting revisions or clarifications.</p>
+            <p><b>Escalation (if needed):</b> If the timesheet involves special approvals (e.g.,
+                overtime, special projects), it may be escalated to higher management or specific
+                department heads for final approval.</p>
+            <p><b>Final Approval:</b> Once all required approvals are completed, the timesheet is
+                officially marked as approved and ready for payroll processing or integration into the
+                billing system.</p>
+            <p><b>Notifications:</b> Both the employee and relevant stakeholders are notified of the
+                timesheet's status, whether approved or needing revisions.</p>
+           
+
+            <p>This process ensures a structured and efficient approval workflow, enhancing <b>accountability</b>, <b>accuracy</b>, and <b>compliance</b> within the organization, while also enabling smoother payroll processing and proper tracking of work hours.</p>
+        </ul>
+    </li>
+</div>
                     </div>
                     <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Activities">
                             <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">

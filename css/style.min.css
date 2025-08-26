@@ -961,7 +961,9 @@ a.nav-link.text-dark.active-dark {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link.text-dark:hover {
-    color: #0078d7 !important;
+    color: var(--primary-color)!important;
+    font-weight: 500 !important;
+    text-shadow: 0 0 0.2px currentColor; 
 }
 
 .mb-5,
