@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="generator" content="Hugo 0.92.2">
         <meta name="description" content="Timesheet 365 installation guide for integrating with Microsoft Teams.">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
         <link rel="icon" href="#" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             }
         </style>
     
-        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+        <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     
         <!-- Google Tag Manager -->
         <script>
@@ -58,7 +58,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -82,13 +82,13 @@
                 <div class=col-lg-3>
                     <div class=sidebar>
                         <h5 class="mbHeading" style="color:SlateBlue"> <a
-                                href="../../../../../online-asset-management-application/">Timesheet 365</a></h5>
+                                href="../../../../../online-timesheet-software/">Timesheet 365</a></h5>
                         <a class=back-btn href="../../installation/" aria-label=back></a>
 
                         <ul class=list-styled>
                             <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Installation
                                 class="sidelist">
-                                <a href="../../../../../online-asset-management-application/modern/getting-started/installation/">
+                                <a href="../../../../../online-timesheet-software/modern/getting-started/installation/">
                                     Installation
                                 </a>
                                 <ul>
@@ -103,16 +103,16 @@
                                         title="Using App File" class="sidelist">
                                         <a
                                             href="../../../../../online-timesheet-software/modern/getting-started/installation/using-app-file/">
-                                            Installation of Timesheet 365 from app catalog
+                                            Installation of Timesheet 365 from App Catalog
                                         </a>
 
 
                                    
-                                    <li data-nav-id="https://hr365docs.github.io/docs/helpdesk/getting-started/installation/Sharepoint_store/"
+                                    <li data-nav-id="https://kb.apps365.com/helpdesk/getting-started/installation/Sharepoint_store/"
                                         title="Microsoft Teams" class="sidelist active">
                                         <a
                                             href="/online-timesheet-software/modern/getting-started/installation/microsoft-teams/">
-                                            Installation of Timesheet 365 from Microsoft teams
+                                            Installation of Timesheet 365 from Microsoft Teams
                                         </a>
                                     </li>
 
@@ -133,14 +133,16 @@
                             <ol>  <h4 id="_dashboards"><a class="header-icon-link highlight" href="#">Prerequisites:<i class="fas fa-link"
                                 style="font-size:12px; color:lightgray;"></i></a> </h4> 
 
-                                <li>The installation of the application is restricted to Global Admin or SharePoint Admin, who can complete the process by adhering to the steps provided below.</li>
-                                <li>The functionality of the application depends on APIs, which can be enabled by a Global Admin possessing the required permissions.</li></ol>
-                                <p>Please read this <a href="./../../../../Important-Information-to-Review-Before-Installing-or-Adding-the-App-in-Microsoft-Teams/">Article</a> before Installing or adding the App to Microsoft Teams.</p>
+                          <li>A global admin or SharePoint admin is capable of installing the application.</li>
+                            <li>The application's features function through APIs, and global admins have the
+                                authority to enable these APIs.</li></ol>
+                                <p>Please read this <a href="./../../../../Important-Information-to-Review-Before-Installing-or-Adding-the-App-in-Microsoft-Teams/">Article</a> before Installing or adding the App in Microsoft Teams.</p>
                             <div class="notices note">
                            
                                 <div class="paragraph">
 
-                                    <p>Only the SharePoint Administrator has the authority to install applications. Additionally, the Administrator can assign administrative privileges to other members. </p>
+                                    <p>Only SharePoint Administrator can install the applications. Administrator can
+                                        make a member an admin. </p>
                                 </div>
                                 <ol>
                                     <!-- <li>
@@ -214,24 +216,24 @@
                                                     onclick="openModal('permission_policies.png')"
                                                     alt="permission policies" width="100%" height="auto"></div><br>
                                     </li>
-                                    <li>From the list of policies click on the <b>Global (Org wide default)</b> to open it.</li><br>
+                                    <li>From the list of policies click on the <b>Global policy</b> to open it.</li><br>
 
                                     <div><img src="global_org.png" onclick="openModal('global_org.png')"
                                             alt="global org" width="100%" height="auto"></div><br>
                             </li>
-                            <li>Enable <b> upload custom apps</b> and <b>User pinning</b></li>
+                            <li><b>Toggle on <b> upload custom apps</b> and <b>User pinning</b></li>
                             <br>
 
                             <div><img src="custom_apps.png" onclick="openModal('custom_apps.png')" alt="custom apps"
                                     width="100%" height="auto"></div><br>
                             </li>
-                            <li>Click on "Add Apps" to install an app.</li><br>
+                            <li>Click on Add Apps to install an app.</li><br>
 
                             <div><img src="allow_all_apps.png" onclick="openModal('allow_all_apps.png')"
                                     alt="allow all apps" width="100%" height="auto"></div><br>
                             </li>
                            
-                            <li>Search for <b>Timesheet 365</b> to add it. </li>
+                            <li>Search for <b>Timesheet 365</b> that you want to add. </li>
                             <br>
 
                             <div><img src="search_app.png" onclick="openModal('search_app.png')" alt="Search app"
@@ -242,10 +244,7 @@
                             
 
                             </li>
-                            <li>In the list of installed apps, locate <b>Timesheet 365</b>.
-If you want to pin <b>Timesheet 365</b> to the app bar, select it in the list.
-After selecting the app, click the <b>Save</b> button at the bottom to confirm the changes.
-Once saved, ensure that <b>Timesheet 365</b> is now pinned to your Teams app bar and is available for use.</li><br>
+                            <li>Choose that application, then click the <b>Save</b> button.</li><br>
 
                             <div><img src="save.png" onclick="openModal('save.png')" alt="Save" width="100%"
                                     height="auto"></div><br>

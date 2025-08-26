@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description" content="Guide for upgrading CLM 365, ensuring a smooth transition to the latest version with improved features and functionality.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
         --font-family: Lato;
       }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
   
     <!-- Google Tag Manager -->
     <script>
@@ -91,6 +91,31 @@ active">
                                 <a href="../upgrading/">
                                     Upgrading
                                 </a>
+                                 <ul>
+                                    
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/install.html
+                                        title="Installation"  class="sidelist">
+                                        <a href="../upgrading/sharepoint/">
+                                            Upgrading of CLM 365 deployed through  SharePoint Store
+                                        </a>
+                                    </li>
+
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=Catalog class="sidelist">
+                                        <a href="../upgrading/catalog/">
+                                            Upgrading of CLM 365 deployed through  App Catalog Upload
+                                        </a>
+                                    </li>
+                                    
+                                    <!-- <li data-nav-id=../../../Getting-started/installation/using-app-file/install.html
+                                        title="Installation"  class="sidelist">
+                                        <a href="/sharepoint-employee-directory/modern/getting-started/upgrading/manual/">
+                                            Upgrading of Employee Directory 365 update manual file
+                                        </a>
+                                    </li> -->
+
+
+                                </ul>
 
 
                             </li>
@@ -104,91 +129,48 @@ active">
                       <!-- <h2 class=mb-5 id=title>Upgrading</h2> -->
                       <div class="bg-light p-4 remove-padding">
                         <ul class=page-list>
-                          <h3 id="_dashboards"><a class="header-icon-link highlight upgradingfont" href="#">Perform Update<i class="fas fa-link"
-                            style="font-size:12px; color:lightgray;"></i></a> </h3>
-                       
-                         
-                            <p>To update the application, follow these steps:</p>
+                                <li data-nav-id=../Getting-started/installation/using-app-file title=Installation
+                                    class="sidelist">
+                                   
+                                    You can Upgrade the CLM 365 in two ways:
 
-                          <br>
-                          <div class="notices note">
-                            <div class="paragraph">
-                              <p>The application can only be upgraded by a SharePoint Administrator.</p>
+                                    <ol>
+                                        <li data-nav-id="../../Getting-started/installation/install/" title=installation
+                                            class="sidelist">
+                                            <a href="../upgrading/sharepoint/">
+                                                Using SharePoint Store
+                                            </a>
+                                        </li>
+                                        <li data-nav-id="../../Getting-started/installation/using-app-file/"
+                                            title=installation class=sidelist>
+                                            <a href="../upgrading/catalog/">
+                                                Using App catalog
+                                            </a>
+                                        </li>
+                                        <!-- <li data-nav-id="../../Getting-started/installation/install/" title=installation
+                                        class="sidelist">
+                                        <a href="../../../../sharepoint-employee-directory/modern/getting-started/installation/microsoft-teams/">
+                                          Update with the manual file.
+                                        </a>
+                                    </li> -->
+                                </li>
+                                </ol>
+                            </ul>
 
-                            </div>
-                          <br>
-                          <ol>
-                            <li>
-                                Open the appcatalog page with the below URL.
-
-                              <br><br>
-                             <b>https://yourtenantname.sharepoint.com/sites/appcatalog/_layouts/15/tenantAppCatalog.aspx/manageApps</b>
-                            <br><br>
-                            <p>YourTenantName – Replace your tenant’s name from the above URL.</p>
-                            <br>
-                            <div><img src="App.png" onclick="openModal('App.png')" alt="Apps" width="100%" height="auto"></div>
-                            <br>
-                              <br>
-                            <li>Click on <b>classic experience</b> as shown below.</li>
-                            <br>
-                            <div><img src="share.png" onclick="openModal('share.png')" alt="App for sharepoint" width="100%" height="auto"></div>
-                            <br>
-          
-                            </li>
-                            <li> Select the <b>CLM 365</b>, click on <b>Files</b> and then <b>Upgrade Store App</b>.</li>
-                            <br>
-                            
-                            <div><img src="upgrade.png" onclick="openModal('upgrade.png')" alt="Upgrade" width="100%" height="auto">
-                            </div>
-                            <br>
-          
-                            <br>
-                            <li>Once you click on the <b>Upgrade Store App</b> button, this will redirect you to the below page then click on the <b>Deploy</b> button.</li>
-                            <br>
-                            <div><img src="deploy.png" onclick="openModal('deploy.png')" alt="Deploy" width="100%"
-                                height="auto"></div>
-                            </li>
-                            <br>
-                            <div class="notices note">
-                              <div class="paragraph">
-                                  <p>If you want to make this application available for all sites, you can select the <b>check box</b> and then click on the <b>Deploy</b> button.</p>
-                              </div>
-                              <li>You can verify the application version in the <b>App Catalog</b> and Employee Directory 365. In both, the application version must be the same.</li>
-          <br>
-                                      
-                              <h4>How to Remove the Solution from All Sites in the Organization</h4>
- 
-
-                                <br>
-                                <ol>
-                                    <li>
-                                      Navigate to <b>CLM 365, </b>select it, click on the <b>Files</b> tab, and then select the <b>Deploy </b>icon.
-                                        <br><br>
-                                 <div><img src="deploy__.png" onclick="openModal('deploy__.png')" alt="Deploy"
-                                          width="100%" height="auto"></div>
-                                     
-                                  </li>
-                                  <br>
-                                  <li>
-                                      Now unselect the check box and finally click on deploy button.
- 
-                                      <br><br>
-                                      <div><img src="remove.png" onclick="openModal('remove.png')" alt="Remove"
-                                          width="100%" height="auto"></div><br>
-                                         
-                                  </li>
-                            </li>
-                        </ul>
                         </li>
                         </ul>
                       </div>
-                      <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                      <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="../installation/" aria-label="Previous page"><i
-                            class="ti-arrow-left mr-2"></i>
-                          <span class="d-none d-md-block">Installation</span></a>
-                        <!-- <a class="nav nav-next" href=https://github.com/hr365docs/My-project.git/Upgrading/requirments/ aria-label="Previous page"> <span class="d-none d-md-block">Requirments</span><i class="ti-arrow-right ml-2"></i></a> -->
-                      </nav>
+                       <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+
+
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../installation/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i>
+                                <span class="d-none d-md-block">Installation</span></a>
+                            <a class="nav nav-next" href="../upgrading/sharepoint/" aria-label="Previous page">
+                                <span class="d-none d-md-block">Sharepoint</span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
                     </div>
                   </div>
             </div>

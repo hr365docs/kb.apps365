@@ -13,12 +13,15 @@ $(document).ready(function () {
     "</a>"+  
 "</li>"+
 
+
 "<li class='dropdownicon sidelist' title='Self Review'>"+
 "<a class='qwe' href='/contract-management/modern/user/self-review/'>"+
     "Reports"+
     "</a>"+ 
     "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
 "</li>"+
+
+
 
 "<li data-nav-id='./installation/requirments/' class='sidelist dropdown_romove_dot'>"+
     
@@ -44,10 +47,16 @@ $(document).ready(function () {
     "</ul>"+
 
 "</li>"+
+"<li class='dropdownicon sidelist' title='themes'>"+
+"<a class='qwe' href='/contract-management/modern/user/theme/'>"+
+    "Themes"+
+    "</a>"+ 
+   
+"</li>"+
 
 
 "<li class='dropdownicon sidelist' title='Help'>"+
-    "<a class='qwe' href='/contract-management/modern/user/feedback/'>"+
+    "<a class='qwe' href='/contract-management/modern/user/help/'>"+
         "Help"+
      "</a>"+ 
     // "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+

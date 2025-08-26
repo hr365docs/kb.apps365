@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .scroll-to-top {
+            position: fixed;
+            bottom: 3vh;
+            /* 3% of viewport height */
+            right: 3vw;
+            /* 3% of viewport width */
+            width: 4vw;
+            /* 4% of viewport width */
+            height: 4vw;
+            /* 4% of viewport width (keeps it square) */
+            background-color: #EE2288;
+            color: white;
+            text-align: center;
+            line-height: 4vw;
+            /* Center text */
+            font-size: 2vw;
+            /* Adjust icon size */
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #d01c75;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+    <h1>Sukhdev</h1>
+    <br>
+    <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti fugiat similique, nam dignissimos hic,
+    eveniet doloribus odio atque quis a, corporis eaque libero quia mollitia rem modi iste aliquam!
+
+    <div class="scroll-to-top">↑</div> <!-- Scroll to Top Icon -->
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.scroll-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

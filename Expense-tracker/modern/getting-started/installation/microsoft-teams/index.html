@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description" content="Guide for installing Expense Tracker 365 in Microsoft Teams for seamless expense tracking and management.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -24,11 +24,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
            <!-- Google Tag Manager -->
            <script>
             (function (w, d, s, l, i) {
@@ -55,7 +55,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -89,13 +89,13 @@
                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                     title=using-sharepoint-store class="sidelist">
                                     <a href="../sharepoint-store/">
-                                        Installation of Expense-Tracker 365 from sharepoint store
+                                        Installation of Expense-Tracker 365 from Sharepoint Store
                                     </a>
                                 </li>
                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                         title=using-app-file class="sidelist">
                                         <a href="../using-app-file/">
-                                            Installation of Expense-Tracker 365 from app catalog
+                                            Installation of Expense-Tracker 365 from App Catalog
                                         </a>
                                     </li>
                                    
@@ -172,10 +172,19 @@
                                 <br> -->
 
                              
-                                <p>Please read this <a href="./../../../../Important-Information-to-Review-Before-Installing-or-Adding-the-App-in-Microsoft-Teams/"><b>article</b></a> before installing or adding the app in Microsoft Teams.</p>
+                               <li>A global admin or SharePoint admin is capable of installing the application.</li>
+                            <li>The application's features function through APIs, and global admins have the
+                                authority to enable these APIs.</li></ol>
+                                <p>Please read this <a href="./../../../../Important-Information-to-Review-Before-Installing-or-Adding-the-App-in-Microsoft-Teams/">Article</a> before Installing or adding the App in Microsoft Teams.</p>
+                            <div class="notices note">
+                           
+                                <div class="paragraph">
 
-                                <li>After deploying the application, select it and click on the <b>Sync to Teams</b> option from the <b>Files</b> menu.</li><br>
-
+                                    <p>Only SharePoint Administrator can install the applications. Administrator can
+                                        make a member an admin. </p>
+                                </div>
+                                <ol>
+                                <li>Once the application has been deployed, choose it and select the <b>Sync to Teams</b> option from the files menu.</li><br>
                                 <div><img src="sync_EPM.png" onclick="openModal('sync_EPM.png')" alt="Sync to teams" width="100%"
                                     height="auto"></div>
                               
@@ -188,8 +197,8 @@
 
 
                             </li>
-                            <li>Microsoft Teams will open. From the side navigation bar, click on <b>Apps</b>, then select the <b>Expense-Tracker 365</b> application as shown in the image below.</li><br>
-
+                            <li>Teams will open and now click on <b>Apps</b> from side navigation. Click on the
+                                <b>Expense-Tracker 365</b> application as shown below in the image.</li><br>
 
                             <div><img src="apps_epm.png" onclick="openModal('apps_epm.png')" alt="Apps"
                                     width="100%" height="auto"></div><br>
@@ -285,7 +294,7 @@
 
 
                             </li>
-                            <li>From the list of policies click on the <b>Global (Org wide default)</b> to open it.</li><br>
+                            <li>From the list of policies click on the <b>Global policy</b> to open it.</li><br>
 
                             <div><img src="global_org.png" onclick="openModal('global_org.png')" alt="global org"
                                     width="100%" height="auto"></div><br>
@@ -349,9 +358,9 @@
                                 <a class="nav nav-prev" href="../../installation/using-app-file/" aria-label="Previous page"><i
                                         class="ti-arrow-left mr-2"></i>
                                     <span class="d-none d-md-block">App Catalog</span></a>
-                                <!-- <a class="nav nav-next" href="../sharepoint-store/" aria-label="Previous page">
-                                    <span class="d-none d-md-block">SharePoint Store</span><i
-                                        class="ti-arrow-right ml-2"></i></a> -->
+                                <a class="nav nav-next" href="../../upgrading/" aria-label="Previous page">
+                                    <span class="d-none d-md-block">Upgarding</span><i
+                                        class="ti-arrow-right ml-2"></i></a>
                             </nav>
                         </div>
                     </div>

@@ -8,8 +8,8 @@
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
         content="The HR365 Helpdesk Admin Guide provides a detailed overview of the Reports feature, allowing users to manage and generate various reports for tracking helpdesk activities.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -58,7 +58,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -131,6 +131,13 @@
                                     <div><img src="SearchFilter.png" onclick="openModal('SearchFilter.png')"
                                             alt="Report" width="100%" height="auto"></div>
                                     <br>
+                                    <p>In the Reports section, users with the role of Supervisor or Agent will only see
+                                        tickets related to the teams they are assigned to. <br>
+                                        They will not have visibility into tickets from other teams. <br>
+                                        Users with the Admin role can view all tickets across all teams.</p>
+                                    <div><img src="reporttickets.png" onclick="openModal('reporttickets.png')"
+                                            alt="Report" width="100%" height="auto"></div>
+                                    <br>
                                     <h4><b>Teams Reports</b></h4>
 
                                     <div><img src="teams-report.png" onclick="openModal('teams-report.png')"
@@ -183,6 +190,13 @@
 <p>Similarly, when the user applies a filter, such as selecting "Resolved" in the Status filter, only tickets with the "Resolved" status will be displayed. The total count of these filtered tickets will be shown for better visibility and tracking.</p>
 
                                     <div><img src="ResolvedSearch.png" onclick="openModal('ResolvedSearch.png')"
+                                            alt="CSAT report" width="100%" height="auto"></div>
+                                             <p>Three new filters have been added to the Agent Ticket Data and Requester Ticket
+                                        Data panels.
+                                        <br>
+                                        These filters apply exclusively to the currently selected ticket.
+                                    </p>
+                                    <div><img src="Agent-tickets.png" onclick="openModal('Agent-tickets.png')"
                                             alt="CSAT report" width="100%" height="auto"></div>
                                 </ul>
 

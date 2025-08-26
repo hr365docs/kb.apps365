@@ -8,8 +8,8 @@
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
         content="Guide for installing Expense Tracker 365 from the SharePoint Store, enabling seamless integration with Microsoft 365.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -57,7 +57,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -83,7 +83,7 @@
                 <div class=col-lg-3>
                     <div class=sidebar>
                         <h5 class="mbHeading" style="color:SlateBlue"> <a
-                                href="../../../../../Expense-tracker/">Expense-Tracker 365</a>
+                                href="../../../../../Expense-tracker/">Expense Tracker 365</a>
                         </h5>
                         <a class=back-btn href="../../../../../Expense-tracker/" aria-label=back></a>
 
@@ -103,7 +103,7 @@
                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                         title=using-app-file class="sidelist">
                                         <a href="../using-app-file/">
-                                            Installation of Expense-Tracker 365 from app catalog
+                                            Installation of Expense-Tracker 365 from App Catalog
                                         </a>
                                     </li>
 
@@ -137,8 +137,10 @@
                                             class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h4>
                                 <ol>
 
-                                    <li>The installation of the application is restricted to Global Admin or SharePoint Admin, who can complete the process by adhering to the steps provided below.</li>
-                                    <li>The functionality of the application depends on APIs, which can be enabled by a Global Admin possessing the required permissions.</li>
+                                    <li>The application can only be installed by a Global Admin or SharePoint Admin by
+                                        following the steps outlined below.</li>
+                                    <li>The application’s features rely on APIs, which can be enabled by a Global Admin
+                                        with the necessary permissions.</li>
                                 </ol>
 
                             </li>
@@ -187,7 +189,7 @@
                                 applications from Apps365
                                 will Show.</li>
                             <br>
-                            <div><img src="apps365SharePointStore.jpeg" onclick="openModal('apps365SharePointStore.jpeg')"
+                            <div><img src="apps365SharePointStore.png" onclick="openModal('apps365SharePointStore.png')"
                                     alt="Sharepoint store" width="100%" height="auto"></div>
                             <br>
                             <br>
@@ -206,7 +208,7 @@
                                     alt="Classic sharepoint store" width="100%" height="auto"></div>
                             <br>
 
-                            <li>Select the checkbox labeled "Enable this app and add it to all sites," and click on
+                            <li>Select the checkbox (Enable this app and add it to all sites ) and click on
                                 <b>Add</b> button.
                             </li>
 
@@ -215,8 +217,10 @@
                                     height="auto"></div>
                             <div class="notices note">
                                 <div class="paragraph">
-                                    <p> Once the application is installed, you can make the solution or 
-                                        application package available across all sites in the organization. If needed, you can later remove the app from all sites.
+                                    <p> Now you can make this solution or application package available for all
+                                        sites in the
+                                        organization, once the application is installed, later you can
+                                        remove the app from all sites.
                                         <br>
                                         <br>
                                         By performing these actions, the selected application package will be downloaded
@@ -234,11 +238,12 @@
                                     alt="API Access" width="100%" height="auto"></div>
                             <br>
                             <li>
-                                <p>In the SharePoint Admin Center, from the left panel, navigate to the
-                                    <strong>Advanced</strong> section and select <strong>API Access</strong>. Under the <strong>Pending Requests</strong> tab,
-                                    you will find several requests, including <em>Microsoft Graph, Presence.Read.All, User.Read.All, MailboxSettings.Read, Calendars.Read, 
-                                    Group.Read.All, Chat.ReadWrite, Chat.Create, and Mail.Read.Shared</em>. For each request, select it and click <strong>Approve</strong> individually.</p>
-
+                                <p> On SharePoint admin center page,From left panel under advanced click on API
+                                    access option under pending request, there are requests
+                                    ( Microsoft Graph, Presence.Read.All, User.Read.All, MailboxSettings.Read,
+                                    Calendars.Read, Group.Read.All, Chat.ReadWrite, Chat.Create,
+                                    Mail.Read.Shared) select and click on approve one by one for all the
+                                    requests.</p>
                             </li>
                             <div> <br><img src="APIAccess.png" onclick="openModal('APIAccess.png')" alt="API Access"
                                     width="100%" height="auto"></div>
@@ -253,8 +258,9 @@
                                     width="100%" height="auto"></div>
 
                             <br>
-                            <li>Navigate to the desired location (i.e., site collection or subsite) where you wish to install the 
-                                <b>Expense-Tracker 365</b> application.</li>
+                            <li>Go to Location (i.e., Site collection or subsite) where you want to install the
+                                <b>Expense-Tracker 365</b> application.
+                            </li>
 
                             <div class="notices note">
                                 <div class="paragraph">
@@ -286,21 +292,107 @@
                                 <div><img src="edit_title.png" onclick="openModal('edit_title.png')" alt="Edit title"
                                         width="100%" height="auto"></div>
                                 <br> -->
+                                <li>
+    When users first access <b>Expense Tracker 365</b>, a welcome popup appears to introduce the platform and guide them through the initial setup process.
+    A toggle option is available to <b>load sample data</b> for demonstration purposes. Enable this if you'd like to explore Expense Tracker 365 with prefilled examples.
+</li>
+<br>
+<div><img src="expense_get1.png" onclick="openModal('expense_get1.png')" alt="Welcome Popup - Expense Tracker" width="100%" height="auto"></div>
+<br>
+<br>
+<li>
+    After completing the initial setup in <b>Expense Tracker 365</b>, the platform prompts you to assign a user as the <b>Finance Head</b> or <b>Finance</b> approver. 
+    The selected user will be added as the <b>second-level approver</b> in the default workflow, with the application installer set as the first-level approver. These roles can be updated later as needed.
+</li>
+<br>
+<div><img src="1.png" onclick="openModal('1.png')" alt="Expense Approver Setup" width="100%" height="auto"></div>
 
-                            <li>Finally click on <b>Publish</b> button.</li>
-                            <br>
-                            <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
+<br>
+<li>Begin the Quick Setup by configuring the required components one by one.</li>
+<br>
+<div><img src="2.png" onclick="openModal('2.png')" alt="Expense Approver Setup" width="100%" height="auto"></div>
+
+<br>
+<li>Add expense types to classify and streamline expense submissions.</li>
+<br>
+<div><img src="ExpenseType.png" onclick="openModal('ExpenseType.png')" alt="Expense Type" width="100%" height="auto"></div>
+
+<br>
+<li>When an expense type is successfully added, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="ExpenseTypeCompleted.png" onclick="openModal('ExpenseTypeCompleted.png')" alt="Expense Type Completed" width="100%" height="auto"></div>
+
+<br>
+<li>Add cost centers to categorize transactions and route expenses accurately.</li>
+<br>
+<div><img src="23.png" onclick="openModal('23.png')" alt="Cost Center" width="100%" height="auto"></div>
+
+<br>
+<li>When a cost center is successfully added, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="CostCenter.png" onclick="openModal('CostCenter.png')" alt="Cost Center" width="100%" height="auto"></div>
+
+<br>
+<li>Add departments for better visibility and collaboration across teams.</li>
+<br>
+<div><img src="CostCenterCompleted.png" onclick="openModal('CostCenterCompleted.png')" alt="Cost Center Completed" width="100%" height="auto"></div>
+
+<br>
+<li>When a department is successfully added, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="CostCenterCompleted1.png" onclick="openModal('CostCenterCompleted1.png')" alt="Cost Center Completed" width="100%" height="auto"></div>
+
+<br>
+<li>Add an approval workflow for streamlined and automated expense validation.</li>
+<br>
+<div><img src="ApprovalSetup.png" onclick="openModal('ApprovalSetup.png')" alt="Approval Setup" width="100%" height="auto"></div>
+
+<br>
+<li>When an approval is successfully added, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="ApprovalCompleted.png" onclick="openModal('ApprovalCompleted.png')" alt="Approval Completed" width="100%" height="auto"></div>
+
+<br>
+<li>Add users to enable access, collaboration, and task management within the app.</li>
+<br>
+<div><img src="UsersSetup.png" onclick="openModal('UsersSetup.png')" alt="Users Setup" width="100%" height="auto"></div>
+
+<br>
+<li>When a user is successfully added, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="UsersCompleted.png" onclick="openModal('UsersCompleted.png')" alt="Users Completed" width="100%" height="auto"></div>
+
+<br>
+<li>Configure general settings to customize the experience and enable advanced features.</li>
+<br>
+<div><img src="GeneralSettings.png" onclick="openModal('GeneralSettings.png')" alt="General Settings" width="100%" height="auto"></div>
+
+<br>
+<li>When general settings are successfully configured, the status changes to "Completed", indicating that the task is finished.</li>
+<br>
+<div><img src="GeneralSettingsCompleted.png" onclick="openModal('GeneralSettingsCompleted.png')" alt="General Settings Completed" width="100%" height="auto"></div>
+
+<br>
+<li>Once all setup steps are completed (100%), the “Proceed” button becomes active, allowing users to access the full application.</li>
+<br>
+<div><img src="ProceedExpense.png" onclick="openModal('ProceedExpense.png')" alt="Proceed Button" width="100%" height="auto"></div>
+
+
+    <li>Finally, click on the <b>Publish</b> button.</li>
+    <br>
+                                <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
                                     width="100%" height="auto"></div>
                             <br>
 
-                            <li>
-                                Finally, refresh the page.
-                            </li>
+    <li>Refresh the page to apply changes.</li>
+
+   
+
+
+                           
                         </ol>
                         <br>
-                        <!-- <h4>How to Remove the Solution from All Sites in the Organization
- 
-Navigate to <b>Employee Directory 365, </b>select it, click on the <b>Files</b> tab, and then select the <b>Deploy </b>icon.</h4>
+                        <!-- <h4>How to remove this solution available to all sites in the organization</h4>
                                 <br>
                                 <ol>
                                     <li>
@@ -320,18 +412,19 @@ Navigate to <b>Employee Directory 365, </b>select it, click on the <b>Files</b> 
                                 </ol> -->
                         <div class="notices note">
                             <div class="paragraph">
-                                <p>There are two distinct methods of installation:
+                                <p>There are two types of installations:
                                     <br>
                                     <br>
-                                    1.<b> Package Upload Installation </b>via the app catalog site.
+                                    1. Installation via package upload in the app catalog site.
                                     <br>
-                                    2. <b>Installation from the SharePoint store</b> (AppSource).
+                                    2. Installation from the SharePoint store (AppSource).
                                     <br>
                                     <br>
-                                    Please note that deleting the package installation and subsequently
-                                    reinstalling the app from either the SharePoint Store or the app catalog
-                                    will not result in any data loss. This is because the application's data is securely
-                                    stored in SharePoint lists, which remain intact regardless of the installation method used.
+                                    If you delete the package installation and reinstall the app from
+                                    the SharePoint store, or vice versa, it will not impact or result in
+                                    data loss. This is because the application's data is stored safely
+                                    in SharePoint lists, which remain unaffected by the installation
+                                    method.
                                 </p>
                             </div>
                             <br>
@@ -340,11 +433,11 @@ Navigate to <b>Employee Directory 365, </b>select it, click on the <b>Files</b> 
 
                     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                     <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="../../installation/using-app-file/" aria-label="Previous page"><i
+                        <a class="nav nav-prev" href="../../installation/" aria-label="Previous page"><i
                                 class="ti-arrow-left mr-2"></i>
-                            <span class="d-none d-md-block">App Catalog</span></a>
-                        <a class="nav nav-next" href="../../installation/microsoft-teams/" aria-label="Previous page">
-                            <span class="d-none d-md-block">Microsoft Teams</span><i
+                            <span class="d-none d-md-block">installation</span></a>
+                        <a class="nav nav-next" href="../../installation/using-app-file/" aria-label="Previous page">
+                            <span class="d-none d-md-block">App Catalog</span><i
                                 class="ti-arrow-right ml-2"></i></a>
                     </nav>
                 </div>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Revenue365 | Admin Guide | Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Admin guide for the Administration section of Expense Tracker 365, allowing admins to manage users, settings, and system configurations.">
+
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img class=img-fluid src="../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../Revenue365/">Revenue 365</a></h5>
+                        <a class=back-btn href="../../../../Expense-tracker/" aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=../Time-off-manager/index.html title="Admin Guide" class="sidelist active">
+                           
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="revmodernadmin">
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title> Introduction</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Administration
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                            
+<p>When you click on <strong>Administration</strong>, you will see the following four options:</p>
+
+<ol>
+  <li><strong>Clients</strong> – Manage and view client information.</li>
+  <li><strong>Partners</strong> – Add or modify partner organizations.</li>
+  <li><strong>Projects</strong> – Track and assign projects to clients.</li>
+  <li><strong>Approval Workflow</strong> – Create and manage approval workflows for revenue processes.</li>
+</ol>
+
+                            <div><img src="Admin.png" onclick="openModal('Admin.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <h4>Clients</h4>
+                                    <p>When you click on <strong>Client</strong>, the client page will open.</p>
+
+
+                                      <div><img src="clients.png" onclick="openModal('clients.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Click on <strong>Add</strong> and complete the general details form. Then, click <strong>Save and Continue</strong>.</p>
+
+                                      <div><img src="clients1.png" onclick="openModal('clients1.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Enter the contact details in the next section, and click <strong>Save and Continue</strong>.</p>
+
+                                      <div><img src="clients2.png" onclick="openModal('clients2.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>To upload documents, click on <strong>Attachments</strong>, add the required files, and click <strong>Add Client</strong> to finalize the process.</p>
+                                    <div><img src="clients3.png" onclick="openModal('clients3.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+<div>
+
+                                <h4>Partners</h4>
+                                <p>When you click on <strong>Partners</strong>, the partner page will open.</p>
+
+
+                                      <div><img src="partners.png" onclick="openModal('partners.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Click on <strong>Add</strong> and fill in the general information of the partner. Then, click <strong>Save and Continue</strong>.</p>
+
+                                      <div><img src="parner.png" onclick="openModal('parner.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Enter the contact details in the next step, and click <strong>Save and Continue</strong>.</p>
+
+                                      <div><img src="contact.png" onclick="openModal('contact.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>To upload relevant documents, click on <strong>Attachments</strong>, add the necessary files, and click <strong>Add Partner</strong> to complete the process.</p>
+                                    <div><img src="partners1.png" onclick="openModal('partners1.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+
+                                 <h4>Projects</h4>
+                                 <p>When you click on <strong>Projects</strong>, the project page will open.</p>
+                                      <div><img src="project.png" onclick="openModal('project.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Click on <strong>Add</strong>, fill in the project details, and click the <strong>Save</strong> button to create a new project.</p>
+                                      <div><img src="project1.png" onclick="openModal('project1.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>To make changes to an existing project, click on the project name
+Update the necessary details and click <strong>Update</strong> to save the changes.</p>
+                                      <div><img src="project3.png" onclick="openModal('project3.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    
+
+                                     <h4>Approval Workflow</h4>
+                                      <p><b>Approval Workflow</b>: The application features an approval workflow for every
+                                invoice. By default, the admin of the application serves as the first-level approver </p>
+                                      <div><img src="invoice.png" onclick="openModal('invoice.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>To add a new workflow, click "+ New Approval Workflow", fill in the required fields, and click "Add Approver(s)" to select an approver.</p>
+                                      <div><img src="invoice1.png" onclick="openModal('invoice1.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                     <p>In this feature, you can select single or multiple approvers to approve an invoice. You
+                                have the option to choose an approver by their name, their role, the user's manager, or
+                                the user's manager's manager.</p>
+                                      <div><img src="invoice2.png" onclick="openModal('invoice2.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>Click the "Submit" button to save the approval workflow.</p>
+                                    <div><img src="invoice3.png" onclick="openModal('invoice3.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+                                    <p>To edit a saved approval workflow, click on the workflow name, make your changes, then click the "Update" button.</p>
+                                    <div><img src="invoice4.png" onclick="openModal('invoice4.png')" alt="validate" width="100%"
+                                    height="auto"></div> <br>
+
+
+
+
+                           
+                     </div>     
+
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../reports/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Reports</span></a>
+                            <a class="nav nav-next " href="../catalog/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Catalog</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script src="../../../../js/rev-modern-admin.js"></script>
+    <script>
+        function openModal(src) {
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+</body>
+
+</html>

@@ -9,8 +9,8 @@
     <meta name="description" content="Asset Management for Timesheet 365">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
@@ -31,13 +31,13 @@
         }
     </style>
 
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
 
     <!-- External Scripts -->
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -66,7 +66,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -143,6 +143,14 @@
                                         <p>You can <b>edit</b>, <b>delete</b>, and <b>disable</b> client information using the respective icons located on the right side in the action column.</p>
                                         <p>To delete multiple clients, select your desired items and click on the <b>Bulk Delete</b> option.</p>
                                         <div><img src="clients.png" onclick="openModal('clients.png')" alt="clients" width="100%" height="auto"></div><br>
+                                        <p>You can edit, delete and disable the client information through the edit
+                                            icon, delete icon, and achieve icon respectively located on the right side
+                                            in the action column.</p>
+                                        <p>To delete multiple items, select your desired item and click on the bulk
+                                            delete tab.</p>
+                                        <div><img src="addClient.png " onclick="openModal( 'addClient.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
                                         <p>To add a client, click the <b>Add Client</b> button. Fill in the general details as shown below.</p>
                                         <div><img src="C.png" onclick="openModal('C.png')" alt="Add custom" width="100%" height="auto"></div><br>
                                         <p>Click <b>Save and Continue</b> after entering the details.</p>
@@ -184,6 +192,26 @@
                                         <div><img src="UpdateBulkProject.png" onclick="openModal('UpdateBulkProject.png')" alt="Update bulk project" width="100%" height="auto"></div><br>
                                         <p>If there’s any mismatch in data, an error will be displayed with the following details:</p>
                                         <div><img src="UpdateProjectError.png" onclick="openModal('UpdateProjectError.png')" alt="Project update error" width="100%" height="auto"></div><br>
+                                         <h3 id="_dashboards"><a id="Project-Deletion-Restriction"
+                                                class="header-icon-link highlight " href=#>Project
+                                                Deletion Restriction<i class="fas fa-link "
+                                                    style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                                        <p>Projects that are already associated with submitted timesheets cannot be
+                                            deleted. This restriction ensures the integrity of historical timesheet data
+                                            and prevents loss of critical project records.</p>
+                                        <div><img src="ProjectDelete.png" onclick="openModal( 'ProjectDelete.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <div><img src="Cantdelete.png" onclick="openModal( 'Cantdelete.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+                                        <p>However, administrators can disable such projects to prevent further use
+                                            while retaining historical data.</p>
+                                        <div><img src="projectdisable.png" onclick="openModal( 'projectdisable.png') "
+                                                alt="Add custom" width="100% " height="auto"></div>
+                                        <br>
+
                                     </ol>
                             </li>
                             </ol>
@@ -343,47 +371,65 @@
                             </li>
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
-                            <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
-                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval Workflow<i
-                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <ul class=page-list>
-                                    <p>The process defines the structured steps through which employee-submitted
-                                        timesheets are reviewed and approved. The workflow typically involves several
-                                        key stages:</p>
-                                    <div><img src="approvalWorkflow.png" onclick="openModal( 'approvalWorkflow.png') "
-                                            alt="tasks" width="100% " height="auto"></div>
-                                    <br>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Tasks">
-                            <p><b>Employee Submission:</b> Employees submit their completed timesheets for a given
-                                period, detailing hours worked, tasks completed, and other relevant data.
-                            </p>
-                            <p><b>Manager Review:</b> The timesheet is forwarded to the employee's manager or supervisor
-                                for initial review. The manager checks for accuracy, verifies the recorded hours, and
-                                ensures alignment with project or task requirements.
-                            </p>
-                            <p><b>Approval or Rejection:</b> Based on the review, the manager either approves the
-                                timesheet or rejects it with comments requesting revisions or clarifications.</p>
-                            <p><b>Escalation (if needed):</b> If the timesheet involves special approvals (e.g.,
-                                overtime, special projects), it may be escalated to higher management or specific
-                                department heads for final approval.</p>
-                            <p><b>Final Approval:</b> Once all required approvals are completed, the timesheet is
-                                officially marked as approved and ready for payroll processing or integration into the
-                                billing system.</p>
-                            <p><b>Notifications:</b> Both the employee and relevant stakeholders are notified of the
-                                timesheet's status, whether approved or needing revisions.</p>
-                            <div><img src="addapprovers.png" onclick="openModal( 'addapprovers.png') " alt="tasks"
-                                    width="100% " height="auto"></div>
-                            <br>
-                            <p>This workflow ensures accountability, accuracy, and proper tracking of work hours,
-                                leading to smoother payroll processing and compliance with company policies.</p>
-                            <!-- <p>Submit Approval Workflow</p>
-                            <div><img src="submit.png" onclick="openModal( 'submit.png') " alt="tasks" width="100% "
-                                    height="auto"></div>
-                            <br> -->
-                        </div>
+    <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
+        <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Approval Workflow<i
+                    class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+        <ul class=page-list>
+            <p>The Approval Workflow allows organizations to streamline and standardize the timesheet approval process. Follow the instructions below to create a new approval workflow:</p>
+            
+            <p>Click on <b>+ New Approval</b> to start setting up a new approval workflow.</p>
+             <div><img src="1.png" onclick="openModal('1.png')" alt="Project selection screen" width="100%" height="auto"></div>
+            <br>
+            <p>Enter the workflow <b>Name</b>, provide a <b>Description</b>, and select the associated <b>Client</b>.</p>
+            <div><img src="UpdatedScreen.png" onclick="openModal('UpdatedScreen.png')" alt="Workflow details screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Choose the relevant <b>Project</b> linked to the selected client.</p>
+            <div><img src="approvalWorkflow.png" onclick="openModal('approvalWorkflow.png')" alt="Project selection screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Assign <b>Approvers</b> for the workflow.</p>
+             <div><img src="addapprovers1.png" onclick="openModal('addapprovers1.png')" alt="Add approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Each approval level supports two types of selection:</p>
+            <p>– <b>All</b>: Every approver at this level must approve before proceeding.</p>
+            <p>– <b>Any</b>: Approval from any one approver is sufficient to move forward.</p>
+            <div><img src="addapprovers.png" onclick="openModal('addapprovers.png')" alt="Add approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>You can set up multiple <b>Approval Levels</b> (e.g., Level 1, Level 2), with designated approvers for each stage.</p>
+            <div><img src="multiapprovers.png" onclick="openModal('multiapprovers.png')" alt="Multiple approvers screen" width="100%" height="auto"></div>
+            <br>
+            
+            <p>Once all details and approvers are configured, click on the <b>save and add more</b> button to finalize and activate the approval workflow.</p>
+            <div><img src="submitworkflow.png" onclick="openModal('submitworkflow.png')" alt="Submit workflow screen" width="100%" height="auto"></div>
+            <br>
+            <h4>Timesheet Approval Process</h4>
+
+            <p><b>Employee Submission:</b> Employees submit their completed timesheets for a given
+                period, detailing hours worked, tasks completed, and other relevant data.
+            </p>
+            <p><b>Manager Review:</b> The timesheet is forwarded to the employee's manager or supervisor
+                for initial review. The manager checks for accuracy, verifies the recorded hours, and
+                ensures alignment with project or task requirements.
+            </p>
+            <p><b>Approval or Rejection:</b> Based on the review, the manager either approves the
+                timesheet or rejects it with comments requesting revisions or clarifications.</p>
+            <p><b>Escalation (if needed):</b> If the timesheet involves special approvals (e.g.,
+                overtime, special projects), it may be escalated to higher management or specific
+                department heads for final approval.</p>
+            <p><b>Final Approval:</b> Once all required approvals are completed, the timesheet is
+                officially marked as approved and ready for payroll processing or integration into the
+                billing system.</p>
+            <p><b>Notifications:</b> Both the employee and relevant stakeholders are notified of the
+                timesheet's status, whether approved or needing revisions.</p>
+           
+
+            <p>This process ensures a structured and efficient approval workflow, enhancing <b>accountability</b>, <b>accuracy</b>, and <b>compliance</b> within the organization, while also enabling smoother payroll processing and proper tracking of work hours.</p>
+        </ul>
+    </li>
+</div>
                     </div>
                     <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Activities">
                             <li data-nav-id=../Getting-started/installation/using-app-file class="sidelist">
@@ -401,8 +447,8 @@
                         </div> -->
                     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                     <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="../reports/" aria-label="Previous page"><i
-                                class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Reports</span></a>
+                        <a class="nav nav-prev" href="../dashboard/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Dashboard</span></a>
                         <a class="nav nav-next" href="../settings/" aria-label="Previous page"> <span
                                 class="d-none d-md-block">Settings</span><i class="ti-arrow-right ml-2"></i></a>
                     </nav>

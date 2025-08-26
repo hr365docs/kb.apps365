@@ -58,6 +58,8 @@ $(document).ready(function() {
             `<li class='nav-item dropdown'>` +
                 `<a class='nav-link dropdown-toggle text-dark' href='#' id='hr365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>HR365</a>` +
                 `<div class='dropdown-menu' aria-labelledby='hr365Dropdown'>` +
+                 `<a class='dropdown-item onboardinglink' href='/HRMS-HR365'>HRMS-HR365</a>` +
+           
                 `<a class='dropdown-item onboardinglink' href='/sharepoint-employee-onboarding/'>Employee Onboarding 365</a>` +
    
                 `<a class='dropdown-item employeedirectorylink' href='/sharepoint-employee-directory/'>Employee Directory 365</a>` +
@@ -87,6 +89,9 @@ $(document).ready(function() {
 
 
                 `<a class='dropdown-item timesheetlink' href='/online-timesheet-software/'>Timesheet 365</a>` +
+               `<a class='dropdown-item revenuelink' href='/Revenue365/'>Revenue 365</a>` +
+                // `<a class='dropdown-item revenuelink' href='/Stock365/'>Stock 365</a>` +
+                `<a class='dropdown-item tasklink' href='/task-management-365/'>Task Management 365</a>` +
                
                 `</div>` +
 
@@ -100,7 +105,14 @@ $(document).ready(function() {
 
 
                 `</div>` +
+
             `</li>` +
+             `<li class='nav-item dropdown'>` +
+        `<a class='nav-link dropdown-toggle text-dark' href='#' id='webpartDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>SharePoint Add-ins</a>` +
+        `<div class='dropdown-menu' aria-labelledby='webpartDropdown'>` +
+        `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
+        `</div>` +
+        `</li>` +
         `</ul>`
     );
 });
@@ -118,6 +130,45 @@ window.addEventListener("load", () => {
         }
     }
 });
+window.addEventListener("load", () => {
+    const currentPath = window.location.pathname.split('/')[1];
+    document.querySelectorAll(".dropdown-menu .dropdown-item").forEach(item => {
+        const itemPath = item.getAttribute("href").split('/')[1];
+        if (itemPath === currentPath) {
+            item.classList.add("active-submenu");
+        }
+    });
+});
+const style = document.createElement("style");
+style.innerHTML = `
+ /* Prevent blue flash or bold on click */
+  .dropdown-menu .dropdown-item:focus,
+  .dropdown-menu .dropdown-item:active {
+      background-color: transparent !important;
+      color: inherit !important;
+      outline: none !important;
+      box-shadow: none !important;
+  }
+        /* Submenu items base style */
+  .dropdown-menu .dropdown-item {
+   background-color: transparent !important;
+     
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      transition: all 0.2s ease;
+      
+  }
+       .active-submenu {
+    color: var(--primary-color)!important;
+    font-weight: 500 !important;
+    text-shadow: 0 0 0.2px currentColor; 
+
+
+
+
+
+`;
+document.head.appendChild(style);
 // window.addEventListener("load", () => {
 //     let headerItems = document.querySelectorAll(".navbar-nav .nav-item a");
 //     let currentPath = window.location.pathname.split('/')[1]; // Get the first segment of the current URL path

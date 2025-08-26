@@ -132,6 +132,21 @@ $(document).ready(function () {
         "<li data-nav-id='../General' title='Location' class='sidelist'>" +
         "<a href='/Expense-tracker/modern/admin/settings/#Location'>Location</a>" +
         "</li>" +
+        "<li data-nav-id='../General' title='Employee Grades' class='sidelist'>" +
+        "<a href='/Expense-tracker/modern/admin/settings/#Employee-Grades'>Employee Grades</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Expense Type Limits' class='sidelist'>" +
+        "<a href='/Expense-tracker/modern/admin/settings/#Expense-Type-Limits'>Expense Type Limits</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Approver Budget Limit' class='sidelist'>" +
+        "<a href='/Expense-tracker/modern/admin/settings/#Approver-Budget-Limit'>Approver Budget Limit</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Mileage' class='sidelist'>" +
+        "<a href='/Expense-tracker/modern/admin/settings/#Mileage'>Mileage</a>" +
+        "</li>" +
+        "<li data-nav-id='../General' title='Delete Expense' class='sidelist'>" +
+        "<a href='/Expense-tracker/modern/admin/settings/#Delete-Expense'>Delete Expense</a>" +
+        "</li>" +
 
         "</ul>" +
         "</ul>" +

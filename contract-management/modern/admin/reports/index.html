@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description" content="Guide for displaying user-specific reports in CLM 365, with admin access to all reports.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -24,11 +24,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -57,7 +57,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -99,39 +99,64 @@ active">
 
                     </div>
                 </div>
-                <div class=col-lg-9>
-                  <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
-                  <!-- <h2 class=mb-5 id=title> Help</h2> -->
-                  <div class="bg-light p-4 remove-padding">
-                      <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Reports
-                          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                  </h2>
-                      <br>
-                      <p>Display user-specific reports, while <b>admins</b> have access to all reports.</p>  
-                      <div><img src="reports.png" onclick="openModal('reports.png')" alt="Report page" width="100%" height="auto"></div>
-                      <br>
-          
-                      <p><b>Contract Reports</b>: Users can view contracts they are involved in, while <b>admins</b> can access all contracts.</p> 
-                      <div><img src="report_data.png" onclick="openModal('report_data.png')" alt="Report data" width="100%" height="auto"></div>
-                      <br>
-          
-                      
-                      <p><b>Request Reports</b>: Users have access to the requests they have created, whereas <b>admins</b> can view all requests.</p> 
-                      <div><img src="1.png" onclick="openModal('1.png')" alt="Report data" width="100%" height="auto"></div>
-                      <br>
-                      <p><b>Task Reports</b>: Users can see the tasks they are assigned to, and <b>admins</b> can access all tasks.</p>
-                      <div><img src="2.png" onclick="openModal('2.png')" alt="Report data" width="100%" height="auto"></div>
-                      <br>
-                  </div>
-                  <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                                          <nav class="pagination mt-3">
-                                              <a class="nav nav-prev" href="../settings/"
-                                                  aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
-                                                      class="d-none d-md-block">Settings</span></a>
-                                                      <a class="nav nav-next" href="../help/" aria-label="Previous page"> <span class="d-none d-md-block">Help</span><i class="ti-arrow-right ml-2"></i></a>
-                                          </nav>
-                                      </div>
-                                  </div>
+              <div class="col-lg-9">
+    <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+        <!-- <h2 class="mb-5" id="title"> Help</h2> -->
+        <div class="bg-light p-4 remove-padding">
+            <h2 id="_dashboards">
+                <a class="header-icon-link highlight" href="#">Reports
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h2>
+            <br>
+            <p>
+                The Reports module in CLM365 offers a comprehensive overview of user activity and system-wide data insights. 
+                End users are presented with personalized reports based on their roles and access levels, while system administrators 
+                can view and manage all reports across the platform for complete operational transparency.
+            </p>
+            <div><img src="reports.png" onclick="openModal('reports.png')" alt="Report page" width="100%" height="auto"></div>
+            <br>
+
+            <p>
+                <b>Contract Reports</b>: <br>
+                This report section displays a list of contracts relevant to the logged-in user, filtered by participation or assignment. 
+                Administrators, however, have elevated privileges allowing them to access a centralized view of all contracts managed within the organization.
+            </p>
+            <div><img src="report_data.png" onclick="openModal('report_data.png')" alt="Contract Report Data" width="100%" height="auto"></div>
+            <br>
+
+            <p>
+                <b>Request Reports</b>: <br>
+                Request reports allow users to monitor and analyze their submitted contract requests. Admins benefit from a full-spectrum 
+                view of all incoming and processed requests, enabling efficient tracking and resolution of contract workflows.
+            </p>
+            <div><img src="1.png" onclick="openModal('1.png')" alt="Request Report Data" width="100%" height="auto"></div>
+            <br>
+
+            <p>
+                <b>Task Reports</b>: <br>
+                This section provides a breakdown of all tasks either assigned to or created by the user. Administrators receive detailed 
+                access to every task within the system, helping ensure accountability and prompt completion across departments.
+            </p>
+            <div><img src="2.png" onclick="openModal('2.png')" alt="Task Report Data" width="100%" height="auto"></div>
+            <br>
+        </div>
+
+        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+            <nav class="pagination mt-3">
+                <a class="nav nav-prev" href="../dashboard/" aria-label="Previous page">
+                    <i class="ti-arrow-left mr-2"></i> 
+                    <span class="d-none d-md-block">Dashboard</span>
+                </a>
+                <a class="nav nav-next" href="../administration/" aria-label="Next page"> 
+                    <span class="d-none d-md-block">Administration</span>
+                    <i class="ti-arrow-right ml-2"></i>
+                </a>
+            </nav>
+        </p>
+    </div>
+</div>
+
             </div>
         </div>
         </div>

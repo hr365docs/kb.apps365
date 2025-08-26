@@ -8,8 +8,8 @@
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
         content="The HR365 Helpdesk Admin Guide - Ticket Customization explains how administrators can configure and customize ticket settings within the helpdesk system. This section covers various options, such as defining ticket fields, customizing ticket statuses, and creating ticket templates to streamline the support process.">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
@@ -25,11 +25,11 @@
             --font-family: Lato;
         }
     </style>
-    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -58,7 +58,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -563,6 +563,39 @@
 
                                 <div><img src="save_body.png" onclick="openModal('save_body.png')" alt="save email body"
                                         width="100%" height="auto"></div><br>
+                        </div>
+                           <div class="bg-light p-4 remove-padding common-scroll" id="Ticket-Properties-Without-Reopening">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Allow Members To Edit
+                                        Ticket Properties Without Reopening The Ticket.
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    A new toggle option has been added under the Ticket Customization section:</p>
+                                <p>
+                                    Name: Allow User to Edit Ticket Properties Without Reopening the Ticket
+                                    This setting enables users to modify ticket properties even when the ticket is in a
+                                    closed state, without the need to reopen it.
+                                </p>
+
+                                <div><img src="Reopening-the-Ticket.png" onclick="openModal('Reopening-the-Ticket.png')"
+                                        alt="Merge tickets" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    When this toggle is enabled, the "Update" button will be visible even if the ticket
+                                    is closed, allowing users to edit ticket properties as needed. If the toggle is
+                                    disabled, the system will retain its default behavior, and editing closed tickets
+                                    will not be allowed.
+                                </p>
+
+                                <div><img src="updated.png" onclick="openModal('updated.png')" alt="Merge tickets"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+
+
+
+
                         </div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="merge-tickets">
                             <ul class=page-list>

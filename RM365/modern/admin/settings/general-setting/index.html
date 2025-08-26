@@ -8,9 +8,9 @@
         <meta name="description" content="Recruitment Management 365 Admin Guide - General Settings" />
       
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css" />
-        <link rel="icon" href="https://hr365docs.github.io/docs/images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css" />
+        <link rel="icon" href="https://kb.apps365.com/images/favicon.ico" type="image/x-icon" />
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
       
         <!-- Scripts -->
@@ -30,13 +30,13 @@
           }
         </style>
       
-        <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen" />
+        <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen" />
       
         <!-- External Scripts -->
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+        <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+        <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+        <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
       
         <!-- Google Tag Manager -->
         <script>
@@ -65,7 +65,7 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
                     <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
@@ -90,7 +90,7 @@
                     <div class=sidebar>
                         <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../../RM365/">Recruitment
                                 Management 365</a></h5>
-                        <a class=back-btn href="../../../../contract-management/" aria-label=back></a>
+                        <a class=back-btn href="../../../../../RM365/" aria-label=back></a>
                         <ul class=list-styled>
                             <li data-nav-id="" title=Admin-Guide class="sidelist
 active">
@@ -98,7 +98,7 @@ active">
                                     Admin Guide
                                 </a>
 
-                                <ul id="rmmmodernadmin">
+                                <ul id="rmmmodernadmin" class="sidenavbarscrollstyle">
 
                                 </ul>
                             </li>
@@ -106,151 +106,104 @@ active">
 
                     </div>
                 </div>
-                <div class=col-lg-9>
-                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+               <div class="col-lg-9">
+  <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
 
-                        <div class="bg-light p-4 remove-padding">
-                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General Setting
-                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                            </h2>
-                            <br>
-                            <p>
-                                You may change various settings such as the <b>date format</b>, <b>theme</b>, <b>logo</b>, and more in this section.
-                            </p><br>
+    <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Brand Logo
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>You can upload your organization's branding image here.</p><br>
+        <div><img src="14.png" onclick="openModal('14.png')" alt="Brand Logo" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
 
-                            <div><img src="1.png" onclick="openModal('1.png')" alt="RM365" width="100%" height="auto">
-                            </div>
-                            <br>
+    <div class="bg-light p-4 remove-padding common-scroll" id="Date-Format">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Date Format
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>Customize the format in which dates appear, such as MM-DD-YY, YY-MM-DD, or other available options.</p><br>
+        <div><img src="2.png" onclick="openModal('2.png')" alt="Date Format Settings" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
 
+    <div class="bg-light p-4 remove-padding common-scroll" id="Enable-Favicon">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Enable Favicon
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>Activate the toggle to display your favicon in supported areas.</p><br>
+        <div><img src="5.png" onclick="openModal('5.png')" alt="Favicon Settings" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
 
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Date-Format">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Date Format
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    In the <b>Date Format</b> section, you can customize how dates appear, choosing from formats like <b>MM-DD-YY</b>, <b>YY-MM-DD</b>, or any other format that suits your preference.
-                                </p><br>
-                                <div><img src="2.png" onclick="openModal('2.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
-                            </ul>
-                        </div>
+    <div class="bg-light p-4 remove-padding common-scroll" id="Enable-Log-Collection">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Enable Log Collection
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>Activate logging by toggling the switch to collect system activity.</p><br>
+        <div><img src="log.png" onclick="openModal('log.png')" alt="Log Settings" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
 
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Theme">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Theme
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    In the <b>Theme</b> settings, you can switch between <b>Dark</b>, <b>Light</b>, or a <b>Site theme color</b> for a personalized visual experience.
-                                </p><br>
-                                <div><img src="3.png" onclick="openModal('3.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
-                            </ul>
-                        </div>
+    <div class="bg-light p-4 remove-padding common-scroll" id="Page-Component-Visibility">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Page Component Visibility
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p><b>Toggle visibility of default interface components:</b> Adjust layout settings to suit your workspace needs.</p><br>
+        <div><img src="6.png" onclick="openModal('6.png')" alt="Component Settings" width="100%" height="auto"></div><br>
 
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Languages">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Languages
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    With the <b>Language Selection</b> feature, you can change the application's language in case your browser's default language isn't detected. Simply select your preferred language from the dropdown menu—for example, selecting <b>French</b> will apply the French language across the application.
-                                </p>
-                                <div><img src="4.png" onclick="openModal('4.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
-                            </ul>
-                        </div>
-                      
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Enable-Favicon">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Enable Favicon
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    To make the favicon visible, turn on the toggle, and the favicon will be displayed.
-                                </p><br>
-                                <div><img src="5.png" onclick="openModal('5.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
-                            </ul>
-                        </div>
+        <ol>
+          <li><b>Remove Extra Padding</b>: Removes outer spacing around embedded components.</li><br>
+          <img src="8.png" onclick="openModal('8.png')" alt="Remove Padding" width="100%" height="auto"><br>
 
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Hide-Sharepoint-Pages-Default-Components">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Hide Sharepoint Page's Default Components
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    <b>Hide SharePoint Page's Default Components:</b> This component is a built-in part of SharePoint.
-                                </p><br>
-                                <div><img src="6.png" onclick="openModal('6.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
+          <li><b>Hide Section Titles</b>: Suppress default section headers for cleaner presentation.</li><br>
+          <img src="9.png" onclick="openModal('9.png')" alt="Hide Titles" width="100%" height="auto"><br>
 
-                                <ol>
-                                    <p>
-                                        Select <b>Configure</b> to proceed with further customization.
-                                    </p>
-                                    <div> <img src="7.png" onclick="openModal( '7.png') " alt="Settings"
-                                            width="100% " height="auto">
-                                        <br>
-                                    </div>
-                                    <li><b>Remove Custom Webpart CSS</b> : Enable this toggle will remove space
-                                        outside of webpart</li><br>
-                                    <img src="8.png" onclick="openModal( '8.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                    <li><b>Hide WebPart Title</b> : GCC (US Government Community Cloud), if your
-                                        Microsoft 365 tenant is GCC, please enable this setting to make it work</li>
-                                    <br>
-                                    <img src="9.png" onclick="openModal( '9.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                    <li><b>Hide Side Navigation Panel </b> : Hide side navigation panel in sharepoint
-                                        page where app is running</li><br>
-                                    <img src="10.png" onclick="openModal( '10.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                    
-                                   
-                                    <li><b>Hide Top Command Bar on Sharepoint Page</b> : Instructions for hiding the
-                                        Top Command Bar on a SharePoint page</li><br>
-                                    <img src="11.png" onclick="openModal( '11.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                    <li><b>Hide Top Site Header</b>: Instructions for hiding the Top Command Bar on a
-                                        SharePoint page</li><br>
-                                    <img src="12.png" onclick="openModal( '12.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                    <li><b>Hide Comments Wrapper</b>:The app's running Sharepoint page's comments wrapper can be hidden.</li><br>
-                                    <img src="13.png" onclick="openModal( '13.png') " alt="Settings"
-                                        width="100% " height="auto">
-                                    <br>
-                                </ol>
-                            </ul>
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#> Brand Logo
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>You can add your company's logo here.</p><br>
-                                <div><img src="14.png" onclick="openModal('14.png')" alt="RM365" width="100%" height="auto">
-                                </div>   <br>
-                            </ul>
+          <li><b>Hide Side Navigation</b>: Removes side panel navigation from workspace pages.</li><br>
+          <img src="10.png" onclick="openModal('10.png')" alt="Navigation Settings" width="100%" height="auto"><br>
 
+          <li><b>Hide Top Toolbar</b>: Conceals command bar for a distraction-free interface.</li><br>
+          <img src="11.png" onclick="openModal('11.png')" alt="Toolbar Settings" width="100%" height="auto"><br>
 
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                        <nav class="pagination mt-3">
-                            <a class="nav nav-prev" href="../Email-configration/" aria-label="Previous page"><i
-                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Email Configuration</span></a>
-                            <a class="nav nav-next" href="../permissions/" aria-label="Previous page"> <span
-                                    class="d-none d-md-block">Permission</span><i
-                                    class="ti-arrow-right ml-2"></i></a>
-                        </nav>
-                    </div>
-                </div>
+          <li><b>Hide Page Header</b>: Allows removal of the page header to simplify layout.</li><br>
+          <img src="12.png" onclick="openModal('12.png')" alt="Header Settings" width="100%" height="auto"><br>
+
+          <li><b>Hide Comments Section</b>: Disable comments display area on workspace pages.</li><br>
+          <img src="13.png" onclick="openModal('13.png')" alt="Comments Settings" width="100%" height="auto"><br>
+
+          <li><b>Hide Search Bar</b>: Remove built-in search functionality from the interface.</li><br>
+          <img src="18.png" onclick="openModal('18.png')" alt="Search Bar Settings" width="100%" height="auto"><br>
+        </ol>
+      </ul>
+    </div>
+
+    <div class="bg-light p-4 remove-padding common-scroll" id="Language">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Language
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>Default language is English; users can switch to other supported languages as needed.</p><br>
+        <div><img src="language.png" onclick="openModal('language.png')" alt="Language Settings" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
+
+    <div class="bg-light p-4 remove-padding common-scroll" id="Theme">
+      <ul class="page-list">
+        <h2><a class="header-icon-link highlight" href="#"> Theme
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+        <p>Choose between dark mode, light mode, or site themes available for the workspace.</p><br>
+        <div><img src="3.png" onclick="openModal('3.png')" alt="Theme Settings" width="100%" height="auto"></div><br>
+      </ul>
+    </div>
+
+    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+      <nav class="pagination mt-3">
+        <a class="nav nav-prev" href="../../settings/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Settings</span></a>
+        <a class="nav nav-next" href="../Requisition-Templates/" aria-label="Next page"> <span class="d-none d-md-block"></span><i class="ti-arrow-right ml-2">Requisition Templates</i></a>
+      </nav>
+    </p>
+  </div>
+</div>
+
             </div>
         </div>
         </div>
@@ -295,7 +248,7 @@ active">
             </div>
         </div>
     </footer>
-    <script src="../../../../../../js/script.min.js"></script>
+    <script src="../../../../../js/script.min.js"></script>
     <script src="../../../../../js/showhidefunction.js"></script>
     <script src="../../../../../js/header-footer.js"></script>
     <script src="../../../../../js/rm-modern-admin.js"></script>
