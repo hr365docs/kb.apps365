@@ -21,20 +21,19 @@ $(document).ready(function () {
   "</a>"+
 
 "</li>"+
-"<li class=' sidelist' title='Theme' data-nav-id='./Settings/'>" +
-"<a href='/LMS/modern/admin/Theme/'>" +
-"Theme" +
-"</a>" +
-
-"</li>" +
-
-"<li data-nav-id='../advanced/' title=Help class='sidelist dropdown_romove_dot'>" +
+"<li data-nav-id='/LMS/modern/admin/Theme/' title='Theme' class='sidelist'>" +
+            "<a href='/LMS/modern/admin/Theme/'>" +
+                "Theme" +
+            "</a>" +
+        "</li>" +
 
 
 
 
 
-"<li class='dropdownicon sidelist'>" +
+
+
+"<li data-nav-id='/LMS/modern/admin/setting/' class='dropdownicon sidelist'>" +
 "<a class='qwe' href='/LMS/modern/admin/setting/'>" +
 "Settings" +
 "</a>" +
@@ -121,7 +120,7 @@ $(document).ready(function () {
 "<a href='/LMS/modern/admin/setting/Courses/#Survey'>Survey</a>" +
 "</li>" +
 "<li data-nav-id='../General' title='Courses' class='sidelist'>" +
-"<a href='/LMS/modern/admin/setting/Courses/'>Courses</a>" +
+"<a href='/LMS/modern/admin/setting/Courses/#Courses1'>Courses</a>" +
 "</li>" +
 "<li data-nav-id='../General' title='Certificate Template' class='sidelist'>" +
 "<a href='/LMS/modern/admin/setting/Courses/#CertificateTemplate'>Certificate Template</a>" +
@@ -140,7 +139,7 @@ $(document).ready(function () {
 
 
 
-           "<li class='dropdownicon sidelist' title=Help>"+
+           "<li data-nav-id='/LMS/modern/admin/help/' class='dropdownicon sidelist' title=Help>"+
     "<a  class='qwe' href='/LMS/modern/admin/help/'>"+
         "Help"+
     "</a>"+
