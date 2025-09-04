@@ -897,6 +897,28 @@
                     </div>
                 </div>
             </div>
+            <div class="card mb-4 rounded-0 shadow border-0">
+    <div class="card-header rounded-0 bg-white border p-0 border-0">
+        <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
+            data-bs-toggle="collapse" href="#createdbyrequestedby" role="button"
+            aria-expanded="false" aria-controls="createdbyrequestedby">
+            <span>What is the difference between the "Created By" and "Requested By" columns?</span>
+            <i class="ti ti-plus text-primary text-right"></i>
+        </a>
+    </div>
+<div id="createdbyrequestedby" class="collapse" data-parent="#accordion">
+    <div class="card-body font-secondary text-color pt-0">
+        <ol style="padding-left: 18px; margin: 0;">
+            <li>When a ticket is created directly through the application, both the <b>Created By</b> and <b>Requested By</b> fields display the same information — the user who initiated the request.</li>
+            <li>However, when a ticket is generated via <b>Power Automate</b>, the <b>Created By</b> field reflects the account credentials under which the flow connection is configured, as all automated actions run under that account. In this case, the <b>Requested By</b> field identifies the actual requester of the ticket.</li>
+                  </ol><br>
+                  <p><b>Note:</b> If the <b>Created By</b> column creates confusion in reporting or visibility, you may adjust the view by navigating to <b>Column Settings</b> and removing this column, since the <b>Requested By</b> field should be considered the authoritative source for identifying request ownership.</p>
+  
+    </div>
+</div>
+
+
+</div>
     </section>
     <footer class="section pb-4">
         <div class=container>

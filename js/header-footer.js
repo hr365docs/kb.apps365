@@ -77,7 +77,7 @@ $(document).ready(function() {
 
             `</li>` +
             `<li class='nav-item dropdown'>` +
-                `<a class='nav-link dropdown-toggle text-dark' href='#' id='bizapp365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>BizApp365</a>` +
+                `<a class='nav-link dropdown-toggle text-dark' href='#' id='bizapp365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Business Apps</a>` +
 
                 `<div class='dropdown-menu' aria-labelledby='bizapp365Dropdown'>` +
  
