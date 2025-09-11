@@ -112,6 +112,8 @@
 
 
                         </div>
+                   
+
                         <div class="bg-light p-4 remove-padding common-scroll" id="phone">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Phone
@@ -137,6 +139,62 @@
                                         height="auto"></div>
 
                         </div>
+                             <div class="bg-light p-4 remove-padding common-scroll" id="agentic-tickets">
+    <ul class="page-list">
+        <h2 id="_agentic-tickets">
+            <a class="header-icon-link highlight" href="#">
+                Agentic Ticket
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+
+       <p>
+    The Agentic Tickets feature uses AI to handle ticket replies. 
+    It becomes active when either the <strong>AI</strong> or <strong>Co-pilot</strong> toggle is enabled 
+    in the Integration section. The feature only applies to the teams that are selected.
+</p><br>
+        <div>
+            <img src="integration_toggles.png" onclick="openModal('integration_toggles.png')" 
+                 alt="Integration Toggles" width="100%" height="auto">
+        </div>
+        <br>
+         <div>
+            <img src="agentic_tab1.png" onclick="openModal('agentic_tab1.png')" 
+                 alt="Agentic Tickets Tab" width="100%" height="auto">
+        </div><br>
+
+        <li>
+            A new tab named <strong>Agentic Tickets</strong> will appear on the homepage. 
+            This tab includes <em>Draft</em>, <em>Open</em>, <em>Resolved</em>, and <em>Closed</em> sections.
+        </li><br>
+        <div>
+            <img src="agentic_tab.png" onclick="openModal('agentic_tab.png')" 
+                 alt="Agentic Tickets Tab" width="100%" height="auto">
+        </div>
+        <br>
+
+        <li>
+            Ticket lifecycle:
+            <ul>
+                <li><strong>Draft</strong> — Newly created tickets through Agentic Tickets appear here by default.</li>
+                <li><strong>Open</strong> — When the ticket is opened from the comment page, it moves to Open.</li>
+                <li><strong>Resolved</strong> — If the ticket is resolved by AI, it moves to Resolved.</li>
+                <li><strong>Closed</strong> — If the ticket is closed by AI or through auto-close, it moves to Closed.</li>
+            </ul>
+        </li>
+        <div>
+            <img src="image.png" onclick="openModal('image.png')" 
+                 alt="Ticket Lifecycle" width="100%" height="auto">
+        </div>
+        <br>
+
+        
+
+        <p>
+            Note: Unlike other tabs, the <strong>Agentic Tickets</strong> tab does not display ticket counts.
+        </p>
+    </ul>
+</div>
                         <div class="bg-light p-4 remove-padding common-scroll" id="helpdesk-mailbox">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Helpdesk Mailbox
@@ -307,10 +365,68 @@
                                     </ul>
                                 </li>
                         </div>
+                            <div class="bg-light p-4 remove-padding common-scroll" id="AI-Integration">
+
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                                        Azure Open AI Integration<i class="fas fa-link"
+                                            style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <br>
+
+   <p>
+    <strong>Azure OpenAI</strong> empowers <strong>Helpdesk 365</strong> with intelligent automation by analyzing tickets, emails, and customer queries in real time. 
+    It extracts key information, categorizes requests, suggests responses, and streamlines resolution workflows — enabling faster, more accurate, and efficient 
+    service desk operations.
+</p>
+
+
+    <p>
+        To enable this functionality, navigate to <strong>Integration</strong> and open the 
+        <strong>Azure Open AI Integration</strong> panel.
+    </p>
+
+    <div>
+        <img src="azure_ai_step1.png" onclick="openModal('azure_ai_step1.png')" 
+             alt="AI API Integration Settings" width="100%" height="auto">
+    </div><br>
+
+    <p>
+        Inside the panel, configure the following options for Azure OpenAI:
+    </p>
+    <ul class="page-list">
+        <li><strong>Azure Open AI Integration</strong> — Use the toggle to turn AI integration <em>On</em> or <em>Off</em>.</li>
+        <div>
+            <img src="azure_ai_step11.png" onclick="openModal('azure_ai_step11.png')" 
+                 alt="Enable Azure OpenAI Toggle" width="100%" height="auto">
+        </div><br>
+
+        <li><strong>Azure AI Endpoint</strong> — The REST API or service endpoint hosted on Microsoft Azure.</li>
+        <li><strong>Azure AI API Key</strong> — Authentication token required for secure connection with Azure AI services.</li>
+        <li><strong>Azure AI Deployment Name</strong> — Identifier of the deployed AI model in your Azure resource.</li><br>
+          <p>
+        To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
+         refer this Guide: 
+        <a href="../../../../Configure-Azure-AI/" target="_blank">Configure Azure AI Documentation</a>.
+    </p>
+        <div>
+            <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
+                 alt="Azure AI Configuration Example" width="100%" height="auto">
+        </div>
+    </ul>
+
+    <p>
+        After entering the required details, click <strong>Save</strong> to activate the integration. 
+       
+    </p>
+     <div>
+            <img src="azure_ai_step13.png" onclick="openModal('azure_ai_step13.png')" 
+                 alt="Azure AI Configuration Example" width="100%" height="auto">
+        </div><br>
+</div>
+
 
                         <div class="bg-light p-4 remove-padding common-scroll" id="Copilot-Integeration">
                             <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight " href=#>Copilot Integeration
+                                <h2 id="_dashboards"><a class="header-icon-link highlight " href=#>Copilot Integration
                                         <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
 
@@ -321,9 +437,80 @@
 
                                 </p>
 
+
                                 <div><img src="copilot.png" onclick="openModal( 'copilot.png') " alt="Copilot"
                                         width="100% " height="auto"></div>
                                 <br>
+                                 <p>
+            To integrate <strong>Copilot</strong> with <strong>Helpdesk 365</strong>, begin by creating your Copilot agent in 
+            <a href="https://copilotstudio.microsoft.com/" target="_blank">Copilot Studio</a>.
+        </p>
+        <p>Ensure that you have a <strong>Premium Power Automate license</strong> to proceed with the configuration.</p>
+
+        <p>Click on your <strong>Copilot Agent</strong>, then go to <strong>Settings</strong>.</p>
+        <div>
+            <img src="copilot_settings1.png" onclick="openModal('copilot_settings1.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+<div>
+            <img src="copilot_settings2.png" onclick="openModal('copilot_settings2.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+
+        <p>In the <strong>Knowledge</strong> section, add your Knowledge Base.</p>
+        <div>
+            <img src="copilot_settings3.png" onclick="openModal('copilot_settings3.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+        <p>Under <strong>Security</strong>, select <strong>Web Channel Security</strong> and copy the <strong>Secret 1</strong> key.</p>
+        <div>
+            <img src="copilot_settings.png" onclick="openModal('copilot_settings.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+        <div>
+             <img src="copilot_settings4.png" onclick="openModal('copilot_settings4.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Next, in <strong>Power Automate</strong>, go to <strong>My Flows</strong> and import the 
+            <strong>Copilot server solution</strong>.
+        </p>
+        <div>
+             <img src="copilot_settings5.png" onclick="openModal('copilot_settings5.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+        <p>
+            Open the flow and click <strong>Edit</strong>. 
+        </p>
+        <div>
+            <img src="powerautomate_flows.png" onclick="openModal('powerautomate_flows.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>Disable the <strong>New Designer</strong> toggle 
+            and paste the previously copied <strong>Secret 1</strong> value into the <strong>Headers</strong> field.</p>
+<div>
+            <img src="powerautomate_flows1.png" onclick="openModal('powerautomate_flows1.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Save the flow and copy the <strong>HTTP GET URL</strong> generated under the 
+            <em>When an HTTP request is received</em> trigger.
+        </p>
+        <div>
+            <img src="powerautomate_flows2.png" onclick="openModal('powerautomate_flows2.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Return to the application, enable the <strong>Copilot integration</strong> toggle, 
+            and paste this URL into the configuration field.
+        </p>
+        <div>
+            <img src="powerautomate_httpurl.png" onclick="openModal('powerautomate_httpurl.png')" 
+                 alt="Power Automate HTTP GET URL" width="100%" height="auto">
+        </div><br>
+
+        
                                 <p> Once configured, Copilot will appear on the Comment page.</p>
 
                                 <div><img src="commentpage-copilot.png" onclick="openModal( 'commentpage-copilot.png') "
