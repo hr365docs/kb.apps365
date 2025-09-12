@@ -47,9 +47,11 @@ $(document).ready(function () {
      "</a>"+ 
     "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
 "</li>"+
-"<li data-nav-id='./installation/requirments/'  class='sidelist dropdown_romove_dot'>"+
-   
+
         
+"<li data-nav-id='./installation/requirments/' class='sidelist dropdown_romove_dot'>"+
+    
+    
     "<ul class='sidenavSub-topics aside_dropdown_list active'>"+
     "<li data-nav-id='../General' title='Feedback Request'  class=sidelist>"+
                 "<a href='/employee-performance-management/modern/user/feedback/#feedback-request'>"+
@@ -77,8 +79,26 @@ $(document).ready(function () {
             
 
     "</ul>"+
+    
 
-"</li>")
+"</li>"+
+"<li data-nav-id='./installation/requirments/'  class='sidelist dropdown_romove_dot'>"+
+  "<li data-nav-id='./installation/requirments/' title= 'PIP' class=sidelist>"+
+    "<a href='/employee-performance-management/modern/user/pip/'>"+
+    "PIP"+
+    "</a>"+  
+"</li>"+
+"<li data-nav-id='./installation/requirments/' title= 'praise' class=sidelist>"+
+    "<a href='/employee-performance-management/modern/user/praise/'>"+
+    "Praise"+
+    "</a>"+  
+"</li>"+
+"<li data-nav-id='./installation/requirments/' title= '1:1' class=sidelist>"+
+    "<a href='/employee-performance-management/modern/user/oneonone/'>"+
+    "1:1"+
+    "</a>"+  
+"</li>"
+)
                                            
                                         });
 

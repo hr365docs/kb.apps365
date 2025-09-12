@@ -36,6 +36,13 @@ $(document).ready(function () {
         "</a>" +
 
         "</li>" +
+        "<li data-nav-id='./Settings/' title='Delegation' class=sidelist>" +
+
+        "<a href='/employee-performance-management/modern/admin/delegation/'>" +
+        "Delegation" +
+        "</a>" +
+
+        "</li>" +
         "<li data-nav-id='./Settings/' title='Document' class=sidelist>" +
 
         "<a href='/employee-performance-management/modern/admin/Document/'>" +
@@ -190,6 +197,9 @@ $(document).ready(function () {
         "</li>" +
         "<li data-nav-id='../General' title='GCC tenant' class='sidelist'>" +
         "<a href='/employee-performance-management/modern/admin/settings/#GCC-tenant'> GCC tenant </a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title='Lanaguges' class='sidelist'>" +
+        "<a href='/employee-performance-management/modern/admin/settings/#language'> Languages </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Overall Rating Method' class='sidelist'>" +
         "<a href='/employee-performance-management/modern/admin/settings/#Overall-Rating-Method'> Overall Rating Method </a>" +
