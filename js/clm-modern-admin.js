@@ -21,7 +21,10 @@ $(document).ready(function () {
   "</a>"+
 
 "</li>"+
-"<li class='dropdownicon sidelist' title='Help'>" +
+
+
+"</li>"+
+"<li class='dropdownicon sidelist' title='dashboard'>" +
 "<a href='/contract-management/modern/admin/dashboard/'>" +
 "Dashboard" +
 "</a>" +
@@ -62,13 +65,20 @@ $(document).ready(function () {
 " Counterparty"+
     "</a>"+
 "</li>"+
+
+
+
 "<li data-nav-id='./Settings/' title='Themes' class=sidelist>"+
 
     "<a href='/contract-management/modern/admin/theme/'>"+
         "Themes"+
   "</a>"+
-  "</li>"+
+  "<li data-nav-id='./Settings/' title=delegation class=sidelist>"+
 
+"<a href='/contract-management/modern/admin/delegation/'>"+
+" Delegation"+
+    "</a>"+
+"</li>"+
 
    
 "<li class='dropdownicon sidelist' title='Settings'>" +
@@ -126,6 +136,7 @@ $(document).ready(function () {
 "</li>"+
 
 
+
        
         "</ul>"+
     "</ul>"+
@@ -146,7 +157,10 @@ $(document).ready(function () {
 
 
 "<ul class='sidenavSub-topics aside_dropdown_list' id='modernsettingedm'>" +
-"<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+"<li  data-nav-id='../advanced/' title='feedback' class='sidelist'>" +
+"<a href='/contract-management/modern/admin/help/#feedback'>Feedback</a>" +
+"</li>"+
+"<li  data-nav-id='../advanced/' title='Product Activation' class='sidelist'>" +
 "<a href='/contract-management/modern/admin/help/#product-activation'>Product Activation</a>" +
 "</li>" )
                                            
