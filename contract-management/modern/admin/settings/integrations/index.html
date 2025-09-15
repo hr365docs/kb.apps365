@@ -18,7 +18,7 @@
     
     
     
-    <meta property="og:url" content="https://kb.apps365.com/sharepoint-helpdesk/">
+    <meta property="og:url" content="https://kb.apps365.com/sharepoint-CLM/">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:title" content="Contract Management 365 | Admin Guide | Settings | Integration">
@@ -175,30 +175,132 @@ Toggle between available services to configure your preferred e-signature provid
             <b>Azure OpenAI Integration:</b> Integration with Azure OpenAI enables advanced language model capabilities within CLM365 for smarter data interaction.
         </li>
 
-        <br>
-        <img src="8.png" onclick="openModal('8.png')" alt="E-Signature Integration" width="100%" height="auto">
-<br><br>
+    <br>
+ <li><strong>Azure OpenAI</strong> — Toggle to activate or deactivate AI integration.</li>
+            <div>
+            <img src="azure_ai_step11.png" onclick="openModal('azure_ai_step11.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </div><br>
+            <li><strong>Azure AI Endpoint</strong> — REST API or service endpoint hosted on Microsoft Azure.</li>
+            <li><strong>Azure AI API Key</strong> — Authentication token to securely connect with Azure AI services.</li>
+            <li><strong>Azure AI Deployment Name</strong> — Identifier of the deployed model within your Azure resource.</li><Br>
+                  <p>
+        To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
+         refer this Guide: 
+        <a href="/Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
+    </p>
+                  <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </ul>
+       
+
+        <p>
+            Once configured, click <strong>Save</strong> to apply the integration settings.
+        </p>
+ <div>
+            <img src="azure_ai_step2.png" onclick="openModal('azure_ai_step2.png')" 
+                 alt="Azure AI API Integration Panel" width="100%" height="auto">
+        </div><br>
         <li>
             <b>Copilot Integration:</b> Allows enabling or disabling the Copilot assistant feature. To activate, enter the configured Power Automate (PA) URL and click <b>Save</b>. Once activated, Copilot provides intelligent automation and contextual assistance.
         </li><br>
         
         <img src="9.png" onclick="openModal('9.png')" alt="E-Signature Integration" width="100%" height="auto">
+     <p>
+            To integrate <strong>Copilot</strong> with <strong>CLM 365</strong>, begin by creating your Copilot agent in 
+            <a href="https://copilotstudio.microsoft.com/" target="_blank">Copilot Studio</a>.
+        </p>
+        <p>Ensure that you have a <strong>Premium Power Automate license</strong> to proceed with the configuration.</p>
 
-    </ul>
+       
+      
+<p>In the left-hand sidebar, select <strong>Agents</strong>.</p>
+<div>
+    <img src="age.png" onclick="openModal('age.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<p>
+     If you don’t already have an agent, click on <strong>+ New Agent</strong> to create one, then configure it as required.<br>
+</p>
+<div>
+    <img src="age1.png" onclick="openModal('age1.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<p>If you already have an existing agent, simply click on that agent to open it.</p>
+
+       
+<div>
+    <img src="copilot_settings1.png" onclick="openModal('copilot_settings1.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+<p>In the <strong>Knowledge</strong> section, add your Knowledge Base.</p>
+<div>
+    <img src="copilot_settings3.png" onclick="openModal('copilot_settings3.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+
+
+
+<p>Then go to <strong>Settings</strong>. Under <strong>Security</strong>, select <strong>Web Channel Security</strong> and copy the <strong>Secret 1</strong> key.</p>
+<div>
+    <img src="copilot_settings2.png" onclick="openModal('copilot_settings2.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<div>
+    <img src="copilot_settings.png" onclick="openModal('copilot_settings.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+
+<div>
+    <img src="copilot_settings4.png" onclick="openModal('copilot_settings4.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+        <p>
+            Next, in <strong>Power Automate</strong>, go to <strong>My Flows</strong> and import the 
+            <strong>Copilot server solution</strong>.
+        </p>
+        <div>
+             <img src="copilot_settings5.png" onclick="openModal('copilot_settings5.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+        <p>
+            Open the flow and click <strong>Edit</strong>. 
+        </p>
+        <div>
+            <img src="powerautomate_flows.png" onclick="openModal('powerautomate_flows.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>Disable the <strong>New Designer</strong> toggle 
+            and paste the previously copied <strong>Secret 1</strong> value into the <strong>Headers</strong> field.</p>
+<div>
+            <img src="powerautomate_flows1.png" onclick="openModal('powerautomate_flows1.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Save the flow and copy the <strong>HTTP GET URL</strong> generated under the 
+            <em>When an HTTP request is received</em> trigger.
+        </p>
+        <div>
+            <img src="powerautomate_flows2.png" onclick="openModal('powerautomate_flows2.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Return to the application, enable the <strong>Copilot integration</strong> toggle, 
+            and paste this URL into the configuration field.
+        </p>
+        <div>
+            <img src="powerautomate_httpurl.png" onclick="openModal('powerautomate_httpurl.png')" 
+                 alt="Power Automate HTTP GET URL" width="100%" height="auto">
+        </div><br>
+
+   
+
 </div>
-
-</ul>
-
-
-
-
-                            </ul>
-
-
-
-                        </div>
-                        </ul>
-                    </div>
+</ul></ul></div>
                     <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev " href="../userroles/" aria-label="Previous page"><i
