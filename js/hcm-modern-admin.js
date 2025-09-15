@@ -556,9 +556,9 @@ $(document).ready(function () {
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Additionalmanager'>Additional manager</a>" +
 "</li>" +
 
-// "<li data-nav-id='../advanced/' title='Analytics Report' class='sidelist'>" +
-// "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Analytics-Report'>Analytics Report</a>" +
-// "</li>" +
+"<li data-nav-id='../advanced/' title='Analytics Report' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Analytics-Report'>Analytics Report</a>" +
+"</li>" +
 
 "<li data-nav-id='../advanced/' title='Auto load' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Autoloadinsteadloadmorebutton'>Auto load instead load more button</a>" +
@@ -1503,6 +1503,9 @@ $(document).ready(function () {
         
   "</ul>" +
 "</li>" +
+ "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+        "<a href='/HRMS-HR365/modern/admin/apps/ET365/settings/#integration'>Integration</a>" +
+        "</li>" +
                
                
                 
@@ -1531,89 +1534,147 @@ $(document).ready(function () {
                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/'>Settings</a>" +
                 
                 "</li>"+
-                 "<li class='dropdownicon sidelist' title='Job Posting'>" +
-  "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/'>" +
-    "Job Posting" +
-  "</a>" +
-  "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
+"<li data-nav-id='../advanced/' title='RM365 - General Settings' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/general-setting/'>General Settings</a>" +
 "</li>" +
- "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
 
-       "<li data-nav-id='../General' title='Custom Fields' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-location'>Job Location</a>" +
-        "</li>" +
+"<li data-nav-id='../advanced/' title='RM365 - Field Customization' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/custom-field/'>Field Customization</a>" +
+"</li>" +
+"<li data-nav-id='../advanced/' title='RM365 - Templates' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Requisition-templates/'>Templates</a>" +
+"</li>" +
+"<li data-nav-id='../advanced/' title='RM365 - Permissions' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/permissions/'>Permissions</a>" +
+"</li>" +
+
+"<li class='dropdownicon sidelist' title='Job Posting'>" +
+"<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/'>Job Posting</a>" +
+"<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
+"</li>" +
+"<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-priority'>Job Priority</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-title'>Job Title</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-type'>Job Type</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-code'>Job Code</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#work-mode'>Work Mode</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a></li>" +
+"</ul>" +
+"</li>" +
+"<li data-nav-id='../advanced/' title='RM365 - Email Configuration' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Email-configration/'>Email Configuration</a>" +
+"</li>" +
+
+"<li class='dropdownicon sidelist' title='Hiring Process'>" +
+"<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/'>Hiring Process</a>" +
+"<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
+"</li>" +
+"<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#question-complexity-level'>Question Complexity Level</a></li>" +
+    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#score-card'>Score Card</a></li>" +
+"</ul>" +
+"</li>" +
+
+"<li data-nav-id='../advanced/' title='RM365 - Portal Configuration' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/portal-configration/'>Portal Configuration</a>" +
+"</li>" +
+
+"<li data-nav-id='../advanced/' title='RM365 - Integrations' class='sidelist'>" +
+"<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Azure-OpenAI-Integration/'>Integrations</a>" +
+"</li>"+
+"</li>"+
+
+
+
+
+
+
+
+
+//                  "<li class='dropdownicon sidelist' title='Job Posting'>" +
+//   "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/'>" +
+//     "Job Posting" +
+//   "</a>" +
+//   "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
+// "</li>" +
+//  "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
+
+//        "<li data-nav-id='../General' title='Custom Fields' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-location'>Job Location</a>" +
+//         "</li>" +
          
-        "<li data-nav-id='../General' title='Cost Center' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-priority'>Job Priority</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Job Title' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-title'>Job Title</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-type'>Job Type</a>" +
-        "</li>" +
+//         "<li data-nav-id='../General' title='Cost Center' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-priority'>Job Priority</a>" +
+//         "</li>" +
+//         "<li data-nav-id='../General' title='Departments' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a>" +
+//         "</li>" +
+//         "<li data-nav-id='../General' title='Job Title' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-title'>Job Title</a>" +
+//         "</li>" +
+//         "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-type'>Job Type</a>" +
+//         "</li>" +
         
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#Work-Mode'>Work Mode</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Location' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a>" +
-        "</li>" +
+//         "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#Work-Mode'>Work Mode</a>" +
+//         "</li>" +
+//         "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a>" +
+//         "</li>" +
 
    
     
 
-  "</ul>" +
-"</li>" +
+//   "</ul>" +
+// "</li>" +
                  
-                 "<li data-nav-id='../advanced/' title='RM365 - Email Configuration' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Email-configration/'>Email Configuration</a>" +
+//                  "<li data-nav-id='../advanced/' title='RM365 - Email Configuration' class='sidelist'>" +
+//                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Email-configration/'>Email Configuration</a>" +
                 
-                "</li>"
-                 +
-                 "<li data-nav-id='../advanced/' title='RM365 - General-ettings' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/general-setting/'>General Settings</a>" +
+//                 "</li>"
+//                  +
+//                  "<li data-nav-id='../advanced/' title='RM365 - General-ettings' class='sidelist'>" +
+//                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/general-setting/'>General Settings</a>" +
                 
-                "</li>"
-                 +
-                 "<li data-nav-id='../advanced/' title='RM365 - Permission' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/permissions/'>Permission</a>" +
+//                 "</li>"
+//                  +
+//                  "<li data-nav-id='../advanced/' title='RM365 - Permission' class='sidelist'>" +
+//                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/permissions/'>Permission</a>" +
                 
-                "</li>"
-                 +
-                 "<li class='dropdownicon sidelist' title='Hirinig Process'>" +
-  "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/'>" +
-    "Hiring Process" +
-  "</a>" +
-  "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
-"</li>" +
- "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
- "<li data-nav-id='../General' title='Complexity Level' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#Complexity-Level'>Complexity Level</a>" +
-        "</li>" +
-        "<li data-nav-id='../General' title='Score Card' class='sidelist'>" +
-        "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#Score-Card'>Score Card</a>" +
-        "</li>" +
+//                 "</li>"
+//                  +
+//                  "<li class='dropdownicon sidelist' title='Hirinig Process'>" +
+//   "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/'>" +
+//     "Hiring Process" +
+//   "</a>" +
+//   "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
+// "</li>" +
+//  "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
+//  "<li data-nav-id='../General' title='Complexity Level' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#Complexity-Level'>Complexity Level</a>" +
+//         "</li>" +
+//         "<li data-nav-id='../General' title='Score Card' class='sidelist'>" +
+//         "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#Score-Card'>Score Card</a>" +
+//         "</li>" +
 
 
 
 
- "</ul>"+
- "</li>"
-                 +
-                 "<li data-nav-id='../advanced/' title='RM365 - Requisition Templates' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Requisition-Templates/'>Requisition Templates</a>" +
+//  "</ul>"+
+//  "</li>"
+//                  +
+//                  "<li data-nav-id='../advanced/' title='RM365 - Requisition Templates' class='sidelist'>" +
+//                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Requisition-Templates/'>Requisition Templates</a>" +
                 
-                "</li>"
-                 +
-                 "<li data-nav-id='../advanced/' title='RM365 - Portal Configuration' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/portal-configration/'>Portal Configuration</a>" +
+//                 "</li>"
+//                  +
+//                  "<li data-nav-id='../advanced/' title='RM365 - Portal Configuration' class='sidelist'>" +
+//                 "<a href='/HRMS-HR365/modern/admin/apps/RM365/settings/portal-configration/'>Portal Configuration</a>" +
                 
-                "</li>"
-                 +
+//                 "</li>"
+//                  +
                  
 
                 "</li>" +
@@ -1640,7 +1701,7 @@ $(document).ready(function () {
     "Roles" +
   "</a>" +
   // "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
-"</li>" +
+// "</li>" +
 //  "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
 // "<li data-nav-id='./Email-Notification/' title=users class='sidelist'>" +
 //         "<a href='/HRMS-HR365/modern/admin/apps/PM365/roles/#user'>User</a>" +
@@ -1668,7 +1729,7 @@ $(document).ready(function () {
 //         "</li>" +
        
 //  "</ul>"+
-//  "</li>"+
+ "</li>"+
                 
 
 

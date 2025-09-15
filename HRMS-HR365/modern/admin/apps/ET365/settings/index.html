@@ -370,18 +370,81 @@
 
                                 <div> <img src="Feature.png" onclick="openModal( 'Feature.png') " alt="Settings"
                                         width="100% " height="auto"></div><br>
-                                <h3 id="_dashboards"><a id="Custom-Fields" class="header-icon-link highlight "
-                                        href=#>Custom Fields<i class="fas fa-link "
-                                            style="font-size:12px; color:lightgray;"></i></a>
-                                </h3>
-                                <p>You can create a custom field using this feature. To do so, click
-                                    the "+ Custom
-                                    Field" button, fill in the required fields, and then click the "Save" button. The
-                                    custom field will be displayed in the new expense panel.</p> <br>
-                                <div> <img src="fe.png" onclick="openModal( 'fe.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <div> <img src="fe1.png" onclick="openModal( 'fe1.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
+                               <h3 id="_dashboards">
+    <a id="Custom-Fields" class="header-icon-link highlight" href="#">
+        Custom Fields
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+</h3>
+
+<p>
+    The <strong>Custom Fields</strong> feature allows administrators to create additional fields 
+    in the Expense Module. These fields can be used to capture extra information beyond the 
+    default system fields.
+</p>
+
+<h4>Create a Custom Field</h4>
+<p>
+    To create a custom field, click on the <strong>+ Custom Field</strong> button, fill in the required details, 
+    and then click the <strong>Save</strong> button. The custom field will then be displayed in the 
+    new expense panel.
+</p>
+
+<div>
+    <img src="fe.png" onclick="openModal('fe.png')" alt="Custom Field Creation" width="100%" height="auto">
+</div>
+<br>
+
+<div>
+    <img src="fe1.png" onclick="openModal('fe1.png')" alt="Custom Fields Panel" width="100%" height="auto">
+</div>
+<br>
+
+<h4>Role-based Editability</h4>
+<p>
+    Custom columns can also be made editable based on user roles. 
+    For example, if the role is <strong>Finance Head</strong>, that user will be able to 
+    add or edit values in the custom column, while other users without this role will only 
+    have read-only access.
+</p>
+
+<ol>
+    <li>
+        From the <strong>Column Category</strong>, select the <strong>Expense Module</strong>.
+        <div>
+            <img src="custom_role1.png" onclick="openModal('custom_role1.png')" alt="Select Expense Module" width="100%" height="auto">
+        </div>
+    </li>
+    <br>
+
+    <li>
+        Enable the <strong>Is Editable</strong> option, then fill in the form and select the role 
+        (e.g., Finance Head) that should have editing rights.
+        <div>
+            <img src="custom_role2.png" onclick="openModal('custom_role2.png')" alt="Is Editable Option with Role Selection" width="100%" height="auto">
+        </div>
+    </li>
+    <br>
+
+    <li>
+        Click on the <strong>Save</strong> button to add the custom field.
+        <div>
+            <img src="custom_role3.png" onclick="openModal('custom_role3.png')" alt="Save Custom Field" width="100%" height="auto">
+        </div>
+    </li>
+    <br>
+
+    <li>
+        When creating an expense, the selected field will be <strong>editable</strong> 
+        for users with the assigned role. For all other users, it will remain <strong>read-only</strong>.
+        <div>
+            <img src="custom_role4.png" onclick="openModal('custom_role4.png')" alt="Editable vs Read-only Custom Field" width="100%" height="auto">
+        </div>
+        <br>
+        <div>
+            <img src="custom_role5.png" onclick="openModal('custom_role5.png')" alt="Editable vs Read-only View" width="100%" height="auto">
+        </div>
+    </li>
                                 <h3 id="_dashboards"><a id="Cost-Center" class="header-icon-link highlight " href=#>Cost
                                         Center<i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
                                 </h3>
