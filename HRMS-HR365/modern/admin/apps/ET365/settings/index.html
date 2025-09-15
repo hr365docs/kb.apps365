@@ -709,7 +709,364 @@
                                 <div> <img src="currentUser.png" onclick="openModal( 'currentUser.png') " alt="Settings"
                                         width="100% " height="auto"></div><br>
                         </div> -->
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
+                       
+
+                         
+                        <div class="bg-light p-4 common-scroll remove-padding" id="integration">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">Integration<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
+                            <br>
+                            <ul class="page-list">
+                               
+  
+
+    <p>
+        The <strong>Integration</strong> module allows you to seamlessly connect the Expense Tracker 
+        with third-party applications to enhance functionality and automate workflows. 
+        One of the key integrations available is with <strong>Zoho Books</strong>.
+    </p>
+<br>
+                                        <img src="zoho.png" onclick="openModal( 'zoho.png') " alt="Settings" width="100% "
+                                            height="auto">
+                                        <br>
+
+    <div class="bg-light p-4 common-scroll remove-padding" id="ZohoBooks">
+        <h3 id="_dashboards">
+            <a class="header-icon-link highlight" href="#">
+                Zoho Books Integration
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h3>
+        <br>
+
+        <ul class="page-list">
+            <p>
+                <strong>Zoho Books</strong> is a cloud-based accounting platform that helps businesses manage 
+                invoicing, expense tracking, inventory, tax compliance, bank reconciliation, and financial reporting. 
+                It reduces manual errors and provides insights for better financial decision-making.
+            </p>
+
+            <p>
+                To enable the integration, go to <strong>Integration</strong> then click on <strong>Account Integration</strong>, 
+                turn on the <strong>Zoho Books</strong> toggle this will open the Zoho Books integration panel.
+            </p>
+            <div>
+                <img src="zoho_enable.png" onclick="openModal('zoho_enable.png')" 
+                     alt="Enable Zoho Books Integration" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 1: Client ID & Secret</strong><br>
+                Log in to <a href="https://api-console.zoho.in" target="_blank">https://api-console.zoho.in</a>.  
+                Enter the Expense Tracker site URL in both Homepage and Authorized Redirect fields.  
+                
+            </p>
+            <div>
+                <img src="zoho_clientid.png" onclick="openModal('zoho_clientid.png')" 
+                     alt="Zoho Client ID and Secret" width="100%" height="auto">
+            </div><br>
+            <p>Then navigate to Client secret, Copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.</p>
+            <div>
+                <img src="zoho_enable1.png" onclick="openModal('zoho_enable1.png')" 
+                     alt="Zoho Client ID and Secret" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 2: Organization ID</strong><br>
+                Log in to <a href="https://books.zoho.in" target="_blank">https://books.zoho.in</a>, 
+                click on the company name, and copy the <strong>Organization ID</strong>.
+            </p>
+            <div>
+                <img src="zoho_orgid.png" onclick="openModal('zoho_orgid.png')" 
+                     alt="Zoho Organization ID" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 3: Request URL</strong><br>
+                Configure Power Automate to obtain the <strong>Zoho Books Request URL</strong>.  
+                In Power Automate, open <strong>Solutions</strong>, search for HR365 Expense Tracker and open it.
+            </p>
+            <div>
+                <img src="zoho_requesturl.png" onclick="openModal('zoho_requesturl.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+            <p>
+                Then search Zoho and click on edit icon.
+                
+             <div>
+                <img src="zoho_requesturl1.png" onclick="openModal('zoho_requesturl1.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+           
+                <p>Click on Manual and copy the Http url  Paste it into the Request URL field in Expense Tracker.</p>
+            <div>
+                <img src="zoho_requesturl2.png" onclick="openModal('zoho_requesturl2.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+            <div>
+                <img src="zoho_requesturl3.png" onclick="openModal('zoho_requesturl3.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+
+
+
+            <p>
+                <strong>Step 4: Redirect URIs</strong><br>
+                Enter the Expense Tracker site URL in both Redirect URI fields (Approved and Settings).  
+                Click <strong>Save</strong> to complete setup.
+            </p>
+            <div>
+                <img src="zoho_redirect.png" onclick="openModal('zoho_redirect.png')" 
+                     alt="Zoho Redirect URIs" width="100%" height="auto">
+            </div><br>
+
+          
+<!-- 
+            <p>
+   Click on <strong>Users</strong>, then click on <strong>Settings</strong>.  
+  The settings panel will open, and at the bottom, you will see 
+  <strong>Validate Users with Zoho Books</strong>. Click on <strong>Configure</strong>.
+</p>
+
+            <div>
+                <img src="zoho_syncusers.png" onclick="openModal('zoho_syncusers.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br>
+            <p> Click on <strong>Sync Users from Zoho Books</strong></p>
+             <div>
+                <img src="zoho_syncusers1.png" onclick="openModal('zoho_syncusers1.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br>
+            <p> After clicking on <strong>Sync Users from Zoho Books</strong>, you will be redirected to this page.  
+   Enter your email and click <strong>Next</strong> to proceed.</p>
+            <div>
+                <img src="zoho_syncusers2.png" onclick="openModal('zoho_syncusers2.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br> -->
+
+            <p>
+                <strong>Mapping Expense Types</strong><br>
+               <p> Open the <strong>Expense Type</strong> panel.</p>
+            </p>
+            <div>
+                <img src="zoho_expensetype.png" onclick="openModal('zoho_expensetype.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+            <p>Select <strong>Zoho Books Expense Type</strong>.</p>
+              <div>
+                <img src="zoho_expensetype1.png" onclick="openModal('zoho_expensetype1.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+            <p> Map your master expense type in <strong>Expense Tracker</strong> to the <strong>Zoho Books expense type</strong>.</p>
+
+            <div>
+                <img src="zoho_expensetype2.png" onclick="openModal('zoho_expensetype2.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Expense Synchronization</strong><br>
+                After the final approver gives approval, the expense record is marked as 
+                <strong>Expense Synced in Zoho Books</strong>. The details are then visible in Zoho Books.
+            </p>
+            <div>
+                <img src="zoho_expensesynced.png" onclick="openModal('zoho_expensesynced.png')" 
+                     alt="Expense Synced in Zoho Books" width="100%" height="auto">
+            </div><br>
+            <div>
+                <img src="image.png" onclick="openModal('image.png')" 
+                     alt="Expense Synced in Zoho Books" width="100%" height="auto">
+            </div><br>
+        </ul>
+    </div>
+    <div class="bg-light p-4 common-scroll remove-padding" id="AzureOpenAI">
+    <h3 id="_aiapiintegration">
+        <a class="header-icon-link highlight" href="#">
+            AI API Integration 
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+
+    <ul class="page-list">
+         
+        <p>
+            <strong>Azure OpenAI</strong> introduces an advanced feature that automatically processes receipts 
+            and bills added as attachments. It extracts relevant details, organizes the data, and fills in the 
+            required fields, making expense management seamless and efficient.  
+            Users can record, categorize, manage, and analyze business expenses with greater accuracy and speed.
+        </p>
+
+        <p>
+            To enable this functionality, navigate to <strong>General Settings</strong> and open the 
+            <strong>AI API Integration</strong> panel.
+        </p>
+        <div>
+            <img src="azure_ai_step1.png" onclick="openModal('azure_ai_step1.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The panel provides configuration options for Azure OpenAI:
+        </p>
+        <ul>
+            <li><strong>Enable Azure OpenAI</strong> — Toggle to activate or deactivate AI integration.</li>
+            <div>
+            <img src="azure_ai_step11.png" onclick="openModal('azure_ai_step11.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </div><br>
+            <li><strong>Azure AI Endpoint</strong> — REST API or service endpoint hosted on Microsoft Azure.</li>
+            <li><strong>Azure AI API Key</strong> — Authentication token to securely connect with Azure AI services.</li>
+            <li><strong>Azure AI Deployment Name</strong> — Identifier of the deployed model within your Azure resource.</li><Br>
+                <p>
+        To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
+         refer this Guide: 
+        <a href="/Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
+    </p>
+                  <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </ul>
+       
+
+        <p>
+            Once configured, click <strong>Save</strong> to apply the integration settings.
+        </p>
+ <div>
+            <img src="azure_ai_step2.png" onclick="openModal('azure_ai_step2.png')" 
+                 alt="Azure AI API Integration Panel" width="100%" height="auto">
+        </div><br>
+        <p>
+            Expense attachments can then be added directly from the <strong>Home Page</strong> by selecting 
+            <strong>Add</strong>, or by using the <strong>Upload</strong> option.  
+           
+        </p>
+        <div>
+            <img src="azure_ai_step4.png" onclick="openModal('azure_ai_step4.png')" 
+                 alt="Add or Upload Expense Attachments" width="100%" height="auto">
+        </div><br>
+ <p>To enable uploads, toggle on <strong>Import Cards</strong> in Settings and select 
+            <strong>Upload</strong> from the Home page.</p>
+            <div>
+            <img src="azure_ai_step41.png" onclick="openModal('azure_ai_step41.png')" 
+                 alt="Add or Upload Expense Attachments" width="100%" height="auto">
+        </div><br>
+        <p>
+            Select <strong>Expense Attachment</strong> and upload the required receipts or supporting documents.
+        </p>
+        <div>
+            <img src="azure_ai_step5.png" onclick="openModal('azure_ai_step5.png')" 
+                 alt="Expense Attachment" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The system will automatically extract the relevant details from the uploaded receipts and 
+            populate the necessary fields in the Expense Tracker application.
+        </p>
+        <div>
+            <img src="azure_ai_step7.png" onclick="openModal('azure_ai_step7.png')" 
+                 alt="AI Extracted Receipt Data" width="100%" height="auto">
+        </div><br>
+         <div>
+            <img src="azure_ai_step8.png" onclick="openModal('azure_ai_step8.png')" 
+                 alt="AI Extracted Receipt Data" width="100%" height="auto">
+        </div><br>
+    </ul>
+     <li>
+            <b>Copilot Integration:</b> Allows enabling or disabling the Copilot assistant feature. To activate, enter the configured Power Automate (PA) URL and click <b>Save</b>. Once activated, Copilot provides intelligent automation and contextual assistance.
+        </li><br>
+        
+        <img src="co.png" onclick="openModal('co.png')" alt="E-Signature Integration" width="100%" height="auto">
+     <p>
+            To integrate <strong>Copilot</strong> with <strong>CLM 365</strong>, begin by creating your Copilot agent in 
+            <a href="https://copilotstudio.microsoft.com/" target="_blank">Copilot Studio</a>.
+        </p>
+        <p>Ensure that you have a <strong>Premium Power Automate license</strong> to proceed with the configuration.</p>
+
+      
+<p>In the left-hand sidebar, select <strong>Agents</strong>.</p>
+<div>
+    <img src="age.png" onclick="openModal('age.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<p>
+     If you don’t already have an agent, click on <strong>+ New Agent</strong> to create one, then configure it as required.<br>
+</p>
+<div>
+    <img src="age1.png" onclick="openModal('age1.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<p>If you already have an existing agent, simply click on that agent to open it.</p>
+
+       
+<div>
+    <img src="copilot_settings1.png" onclick="openModal('copilot_settings1.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+<p>In the <strong>Knowledge</strong> section, add your Knowledge Base.</p>
+<div>
+    <img src="copilot_settings3.png" onclick="openModal('copilot_settings3.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+
+
+
+<p>Then go to <strong>Settings</strong>. Under <strong>Security</strong>, select <strong>Web Channel Security</strong> and copy the <strong>Secret 1</strong> key.</p>
+<div>
+    <img src="copilot_settings2.png" onclick="openModal('copilot_settings2.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+<div>
+    <img src="copilot_settings.png" onclick="openModal('copilot_settings.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+
+<div>
+    <img src="copilot_settings4.png" onclick="openModal('copilot_settings4.png')" 
+         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+</div><br>
+
+        <p>
+            Next, in <strong>Power Automate</strong>, go to <strong>My Flows</strong> and import the 
+            <strong>Copilot server solution</strong>.
+        </p>
+        <div>
+             <img src="copilot_settings5.png" onclick="openModal('copilot_settings5.png')" 
+                 alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+        </div><br>
+        <p>
+            Open the flow and click <strong>Edit</strong>. 
+        </p>
+        <div>
+            <img src="powerautomate_flows.png" onclick="openModal('powerautomate_flows.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>Disable the <strong>New Designer</strong> toggle 
+            and paste the previously copied <strong>Secret 1</strong> value into the <strong>Headers</strong> field.</p>
+<div>
+            <img src="powerautomate_flows1.png" onclick="openModal('powerautomate_flows1.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Save the flow and copy the <strong>HTTP GET URL</strong> generated under the 
+            <em>When an HTTP request is received</em> trigger.
+        </p>
+        <div>
+            <img src="powerautomate_flows2.png" onclick="openModal('powerautomate_flows2.png')" 
+                 alt="Power Automate Flow Configuration" width="100%" height="auto">
+        </div><br>
+        <p>
+            Return to the application, enable the <strong>Copilot integration</strong> toggle, 
+            and paste this URL into the configuration field.
+        </p>
+        <div>
+            <img src="co.png" onclick="openModal('co.png')" 
+                 alt="Power Automate HTTP GET URL" width="100%" height="auto">
+        </div><br>
+</div>
+                            </ul></div></ul></div>
+ <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev " href="../administration/ " aria-label="Previous page"><i
                                     class="ti-arrow-left mr-2"></i> <span
@@ -718,6 +1075,9 @@
                                     class="d-none d-md-block">RM365 - Home Page</span><i class="ti-arrow-right ml-2"></i></a>
                         </nav>
                     </div>
+
+</div>
+                        </div>
                 </div>
             </div>
     </section>

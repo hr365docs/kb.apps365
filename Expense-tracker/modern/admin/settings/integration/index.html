@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Expense Tracker 365 | Admin Guide | General Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Admin guide for the General Settings section of Expense Tracker 365, offering customization options for system preferences and configurations.">
+
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src='../../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id="navigation"></div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../Expense-tracker/">Expense-tracker 365</a></h5>
+                        <a class=back-btn href="../../../../../Expense-tracker/" aria-label=back></a>
+                        <ul class="list-styled">
+                            <li data-nav-id="https://github.com/hr365docs/My-project.git/installation/" title="Admin Guide" class="sidelist active">
+                                <a href="../../../admin/">Admin Guide</a>
+                                <ul id="ETmodernadmin"></ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+                        <div class="bg-light p-4 common-scroll remove-padding" id="integration">
+                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">Integration<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
+                            <br>
+                            <ul class="page-list">
+                               
+  
+
+    <p>
+        The <strong>Integration</strong> module allows you to seamlessly connect the Expense Tracker 
+        with third-party applications to enhance functionality and automate workflows. 
+        One of the key integrations available is with <strong>Zoho Books</strong>.
+    </p>
+<br>
+                                        <img src="1.png" onclick="openModal( '1.png') " alt="Settings" width="100% "
+                                            height="auto">
+                                        <br>
+
+    <div class="bg-light p-4 common-scroll remove-padding" id="ZohoBooks">
+        <h3 id="_dashboards">
+            <a class="header-icon-link highlight" href="#">
+                Zoho Books Integration
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h3>
+        <br>
+
+        <ul class="page-list">
+            <p>
+                <strong>Zoho Books</strong> is a cloud-based accounting platform that helps businesses manage 
+                invoicing, expense tracking, inventory, tax compliance, bank reconciliation, and financial reporting. 
+                It reduces manual errors and provides insights for better financial decision-making.
+            </p>
+
+            <p>
+                To enable the integration, go to <strong>General Settings</strong> then click on <strong>Account Integration</strong>, 
+                turn on the <strong>Zoho Books</strong> toggle this will open the Zoho Books integration panel.
+            </p>
+            <div>
+                <img src="zoho_enable.png" onclick="openModal('zoho_enable.png')" 
+                     alt="Enable Zoho Books Integration" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 1: Client ID & Secret</strong><br>
+                Log in to <a href="https://api-console.zoho.in" target="_blank">https://api-console.zoho.in</a>.  
+                Enter the Expense Tracker site URL in both Homepage and Authorized Redirect fields.  
+                
+            </p>
+            <div>
+                <img src="zoho_clientid.png" onclick="openModal('zoho_clientid.png')" 
+                     alt="Zoho Client ID and Secret" width="100%" height="auto">
+            </div><br>
+            <p>Then navigate to Client secret, Copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.</p>
+            <div>
+                <img src="zoho_enable1.png" onclick="openModal('zoho_enable1.png')" 
+                     alt="Zoho Client ID and Secret" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 2: Organization ID</strong><br>
+                Log in to <a href="https://books.zoho.in" target="_blank">https://books.zoho.in</a>, 
+                click on the company name, and copy the <strong>Organization ID</strong>.
+            </p>
+            <div>
+                <img src="zoho_orgid.png" onclick="openModal('zoho_orgid.png')" 
+                     alt="Zoho Organization ID" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Step 3: Request URL</strong><br>
+                Configure Power Automate to obtain the <strong>Zoho Books Request URL</strong>.  
+                In Power Automate, open <strong>Solutions</strong>, search for HR365 Expense Tracker and open it.
+            </p>
+            <div>
+                <img src="zoho_requesturl.png" onclick="openModal('zoho_requesturl.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+            <p>
+                Then search Zoho and click on edit icon.
+                
+             <div>
+                <img src="zoho_requesturl1.png" onclick="openModal('zoho_requesturl1.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+           
+                <p>Click on Manual and copy the Http url  Paste it into the Request URL field in Expense Tracker.</p>
+            <div>
+                <img src="zoho_requesturl2.png" onclick="openModal('zoho_requesturl2.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+            <div>
+                <img src="zoho_requesturl3.png" onclick="openModal('zoho_requesturl3.png')" 
+                     alt="Zoho Books Request URL" width="100%" height="auto">
+            </div><br>
+
+
+
+            <p>
+                <strong>Step 4: Redirect URIs</strong><br>
+                Enter the Expense Tracker site URL in both Redirect URI fields (Approved and Settings).  
+                Click <strong>Save</strong> to complete setup.
+            </p>
+            <div>
+                <img src="zoho_redirect.png" onclick="openModal('zoho_redirect.png')" 
+                     alt="Zoho Redirect URIs" width="100%" height="auto">
+            </div><br>
+
+          
+
+            <p>
+   Click on <strong>Users</strong>, then click on <strong>Settings</strong>.  
+  The settings panel will open, and at the bottom, you will see 
+  <strong>Validate Users with Zoho Books</strong>. Click on <strong>Configure</strong>.
+</p>
+
+            <div>
+                <img src="zoho_syncusers.png" onclick="openModal('zoho_syncusers.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br>
+            <p> Click on <strong>Sync Users from Zoho Books</strong></p>
+             <div>
+                <img src="zoho_syncusers1.png" onclick="openModal('zoho_syncusers1.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br>
+            <p> After clicking on <strong>Sync Users from Zoho Books</strong>, you will be redirected to this page.  
+   Enter your email and click <strong>Next</strong> to proceed.</p>
+            <div>
+                <img src="zoho_syncusers2.png" onclick="openModal('zoho_syncusers2.png')" 
+                     alt="Zoho User Synchronization" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Mapping Expense Types</strong><br>
+               <p> Open the <strong>Expense Type</strong> panel.</p>
+            </p>
+            <div>
+                <img src="zoho_expensetype.png" onclick="openModal('zoho_expensetype.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+            <p>Select <strong>Zoho Books Expense Type</strong>.</p>
+              <div>
+                <img src="zoho_expensetype1.png" onclick="openModal('zoho_expensetype1.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+            <p> Map your master expense type in <strong>Expense Tracker</strong> to the <strong>Zoho Books expense type</strong>.</p>
+
+            <div>
+                <img src="zoho_expensetype2.png" onclick="openModal('zoho_expensetype2.png')" 
+                     alt="Zoho Books Expense Type Mapping" width="100%" height="auto">
+            </div><br>
+
+            <p>
+                <strong>Expense Synchronization</strong><br>
+                After the final approver gives approval, the expense record is marked as 
+                <strong>Expense Synced in Zoho Books</strong>. The details are then visible in Zoho Books.
+            </p>
+            <div>
+                <img src="zoho_expensesynced.png" onclick="openModal('zoho_expensesynced.png')" 
+                     alt="Expense Synced in Zoho Books" width="100%" height="auto">
+            </div><br>
+            <div>
+                <img src="image.png" onclick="openModal('image.png')" 
+                     alt="Expense Synced in Zoho Books" width="100%" height="auto">
+            </div><br>
+        </ul>
+    </div>
+    <div class="bg-light p-4 common-scroll remove-padding" id="AzureOpenAI">
+    <h3 id="_aiapiintegration">
+        <a class="header-icon-link highlight" href="#">
+            AI API Integration 
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+
+    <ul class="page-list">
+         
+        <p>
+            <strong>Azure OpenAI</strong> introduces an advanced feature that automatically processes receipts 
+            and bills added as attachments. It extracts relevant details, organizes the data, and fills in the 
+            required fields, making expense management seamless and efficient.  
+            Users can record, categorize, manage, and analyze business expenses with greater accuracy and speed.
+        </p>
+
+        <p>
+            To enable this functionality, navigate to <strong>General Settings</strong> and open the 
+            <strong>AI API Integration</strong> panel.
+        </p>
+        <div>
+            <img src="azure_ai_step1.png" onclick="openModal('azure_ai_step1.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The panel provides configuration options for Azure OpenAI:
+        </p>
+        <ul>
+            <li><strong>Enable Azure OpenAI</strong> — Toggle to activate or deactivate AI integration.</li>
+            <div>
+            <img src="azure_ai_step11.png" onclick="openModal('azure_ai_step11.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </div><br>
+            <li><strong>Azure AI Endpoint</strong> — REST API or service endpoint hosted on Microsoft Azure.</li>
+            <li><strong>Azure AI API Key</strong> — Authentication token to securely connect with Azure AI services.</li>
+            <li><strong>Azure AI Deployment Name</strong> — Identifier of the deployed model within your Azure resource.</li><Br>
+                <p>
+        To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
+         refer this Guide: 
+        <a href="/Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
+    </p>
+                  <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
+                 alt="AI API Integration Settings" width="100%" height="auto">
+        </ul>
+       
+
+        <p>
+            Once configured, click <strong>Save</strong> to apply the integration settings.
+        </p>
+ <div>
+            <img src="azure_ai_step2.png" onclick="openModal('azure_ai_step2.png')" 
+                 alt="Azure AI API Integration Panel" width="100%" height="auto">
+        </div><br>
+        <p>
+            Expense attachments can then be added directly from the <strong>Home Page</strong> by selecting 
+            <strong>Add</strong>, or by using the <strong>Upload</strong> option.  
+           
+        </p>
+        <div>
+            <img src="azure_ai_step4.png" onclick="openModal('azure_ai_step4.png')" 
+                 alt="Add or Upload Expense Attachments" width="100%" height="auto">
+        </div><br>
+ <p>To enable uploads, toggle on <strong>Import Cards</strong> in Settings and select 
+            <strong>Upload</strong> from the Home page.</p>
+            <div>
+            <img src="azure_ai_step41.png" onclick="openModal('azure_ai_step41.png')" 
+                 alt="Add or Upload Expense Attachments" width="100%" height="auto">
+        </div><br>
+        <p>
+            Select <strong>Expense Attachment</strong> and upload the required receipts or supporting documents.
+        </p>
+        <div>
+            <img src="azure_ai_step5.png" onclick="openModal('azure_ai_step5.png')" 
+                 alt="Expense Attachment" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The system will automatically extract the relevant details from the uploaded receipts and 
+            populate the necessary fields in the Expense Tracker application.
+        </p>
+        <div>
+            <img src="azure_ai_step7.png" onclick="openModal('azure_ai_step7.png')" 
+                 alt="AI Extracted Receipt Data" width="100%" height="auto">
+        </div><br>
+         <div>
+            <img src="azure_ai_step8.png" onclick="openModal('azure_ai_step8.png')" 
+                 alt="AI Extracted Receipt Data" width="100%" height="auto">
+        </div><br>
+    </ul>
+</div>
+
+</div>
+                        </div>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../notification/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Notification</span></a>
+                            <a class="nav nav-next" href="../feature/" aria-label="Next page"> <span class="d-none d-md-block">Features</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <footer class="section pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href="https://www.hr365.us/">HR365.</a> <a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href="https://www.hr365.us/terms-and-conditions/">T&C.</a> <a href="https://www.hr365.us/end-user-license-agreement-eula/">EULA.</a> <a href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy/">Privacy Policy.</a> <a href="https://www.cubiclogics.com/">Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS" aria-label="Twitter"><i class="ti-twitter-alt"></i></a></li>
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i class="ti-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/ET-modern-admin.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+</body>
+</html>

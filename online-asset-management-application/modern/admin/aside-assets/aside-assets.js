@@ -192,7 +192,7 @@ $(document).ready(function() {
                     "</li>"+
             
                     
-                    "<li class='helpdesk-dropdown sidelist'title='Users/Roles/Permissions' >"+
+                    "<li class='dropdownicon sidelist'title='Users/Roles/Permissions' >"+
                     "<a class='qwe' href='/online-asset-management-application/modern/admin/settings/role/'>Users, Roles, Permissions</a>"+
                     "<img  class='helpdesk-img aside_dropdown_icon' src='/online-asset-management-application/modern/user/amm-user-assets/down-arrow-svgrepo-com.svg'>"+
                     "</li>"+
@@ -274,10 +274,14 @@ $(document).ready(function() {
                     "<ul class='sidenavSub-topics aside_dropdown_list'>"+
                     "<li data-nav-id='./Assign-Assets/ ' title='Depreciation Method' class='sidelist '>"+
                     "<a href='/online-asset-management-application/modern/admin/settings/features/#depreciation-method'>Depreciation Method</a>"+
+                    "<li data-nav-id='./Assign-Assets/ ' title='Depreciation Method' class='sidelist '>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#Default-camera-scanner'>Default camera scanner for edit assets</a>"+
+                    "<li data-nav-id='./Assign-Assets/ ' title='Depreciation Settings' class='sidelist '>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#Depreciation-Settings'>Depreciation Settings</a>"+
                     "<li data-nav-id='./Add Assets/ ' title='System Generated Barcode' class='sidelist '>"+
                     "<ul class='sidenavSub-topics '>"+
                     "</ul>"+
-                    "<a href='/online-asset-management-application/modern/admin/settings/features/#Configure-Barcode-Field(s)>'>Configure-Barcode-Field(s)></a>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#Configure-Barcode-Field'>Configure-Barcode-Field(s)</a>"+
                     "</li>"+
                     "<li data-nav-id='./Add Assets/ ' title='System Generated Barcode' class='sidelist '>"+
                     "<ul class='sidenavSub-topics '>"+
@@ -329,6 +333,16 @@ $(document).ready(function() {
                     "</ul>"+
                     "<a href='/online-asset-management-application/modern/admin/settings/features/#quick-action'>Quick Action</a>"+
                     "</li>"+
+                    "<li data-nav-id='./Add Assets/ ' title='Show Only User Asset in Asset Acknowledgement' class='sidelist '>"+
+                    "<ul class='sidenavSub-topics '>"+
+                    "</ul>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#Show-Only-User-Asset-Asset-Acknowledgement'>Show Only User Asset in Asset Acknowledgement</a>"+
+                    "</li>"+
+                    "<li data-nav-id='./Add Assets/ ' title='Hide And Show Dashboard' class='sidelist '>"+
+                    "<ul class='sidenavSub-topics '>"+
+                    "</ul>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#hide_and_show_dashboard'>Hide And Show Dashboard</a>"+
+                    "</li>"+
                     "<li data-nav-id='./Add Assets/ ' title='Quick Action' class='sidelist '>"+
                     "<ul class='sidenavSub-topics '>"+
                     "</ul>"+
@@ -343,10 +357,19 @@ $(document).ready(function() {
                     "<ul class='sidenavSub-topics '>"+
                     "</ul>"+
                     "<a href='/online-asset-management-application/modern/admin/settings/features/#camera-scanner'>Camera Scanner</a>"+
+                    "<li data-nav-id='./Add Assets/ ' title='Make Category and Subcategory Static' class='sidelist '>"+
+                    "<ul class='sidenavSub-topics '>"+
+                    "</ul>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#make_category_subcategory_static'>Make Category and Subcategory Static</a>"+
                     "<li data-nav-id='./Add Assets/ ' title='Consumable Module' class='sidelist '>"+
                     "<ul class='sidenavSub-topics '>"+
                     "</ul>"+
                     "<a href='/online-asset-management-application/modern/admin/settings/features/#consumable-module'>Inventory Module</a>"+
+                    "</li>"+
+                    "<li data-nav-id='./Add Assets/ ' title='Inventory Module Title Text' class='sidelist '>"+
+                    "<ul class='sidenavSub-topics '>"+
+                    "</ul>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#inventory_module_title_text'>Inventory Module Title Text</a>"+
                     "</li>"+
                     "<li data-nav-id='./Add Assets/ ' title='Enable logs collection' class='sidelist '>"+
                     "<ul class='sidenavSub-topics '>"+
@@ -362,6 +385,11 @@ $(document).ready(function() {
                     "<ul class='sidenavSub-topics '>"+
                     "</ul>"+
                     "<a href='/online-asset-management-application/modern/admin/settings/features/#maintenance-module'>Maintenance Module</a>"+
+                    "</li>"+
+                    "<li data-nav-id='./Add Assets/ ' title='Advance Booking Filter' class='sidelist '>"+
+                    "<ul class='sidenavSub-topics '>"+
+                    "</ul>"+
+                    "<a href='/online-asset-management-application/modern/admin/settings/features/#advance_booking_filter'>Advance Booking Filter</a>"+
                     "</li>"+
                    
                     "<li data-nav-id='./Add Assets/ ' title='Asset Acknowledgement' class='sidelist '>"+
