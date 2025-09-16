@@ -108,47 +108,83 @@
   </li>
 <!-- Home Page -->
 <p>
-  The <b>Request 365 Home Page</b> provides a user-friendly interface where 
-  users can create, view, and manage requests. All submitted requests are displayed 
-  in a structured list, showing key details such as <b>Title, Contract Type, 
-  Counterparty, Currency,</b> and <b>Status</b>.
+  The <b>Request 365 Home Page</b> provides a simple and user-friendly view of all requests.  
+  Users can easily create, edit, or delete requests, and each request clearly shows key details 
+  such as <b>Title, Contract Type, Counterparty, Currency,</b> and <b>Status</b>.
 </p>
 <div>
   <img src="homepage.png" onclick="openModal('homepage.png')" alt="Request 365 Home Page" width="100%" height="auto">
 </div><br>
 
-<p>Key features of the Home Page include:</p>
-<ul>
-  <li><b>Add Request:</b> Click on the <b>+ New Request</b> button to open the request panel.  
-      Here, users can fill in details like contract type, counterparty, currency, and other request information.<br><br>
-      <img src="add_request.png" onclick="openModal('add_request.png')" alt="Add New Request Example" width="100%" height="auto"><br>
-      <img src="add_request1.png" onclick="openModal('add_request1.png')" alt="Add New Request Example" width="100%" height="auto"><br>
-
-  </li><br>
-
-  <li><b>Edit Request:</b> Update request details if changes are required.<br><br>
-      <img src="edit_request.png" onclick="openModal('edit_request.png')" alt="Edit Request Example" width="100%" height="auto"><br>
-        <img src="edit_request1.png" onclick="openModal('edit_request1.png')" alt="Edit Request Example" width="100%" height="auto">
-
-  </li><br>
-
-  <li><b>Delete Request:</b> Remove a request if it is no longer needed.<br><br>
-      <img src="delete_request.png" onclick="openModal('delete_request.png')" alt="Delete Request Example" width="100%" height="auto">
-  </li><br>
-
- 
-
-  
+<p><b> Create a Request</b></p>
 <p>
-  The <b>Request 365 Settings</b> panel allows administrators to configure global 
-  options for appearance, permissions, and request management. These settings 
-  ensure consistency across the organization and provide flexibility in how 
-  requests are displayed and processed.
+  To begin, click on the <b>+ New Request</b> button. A request panel opens where you enter information 
+  such as contract type, counterparty, currency, and related details. Once submitted, the request will appear 
+  under <b>In Progress</b>.
 </p>
 <div>
-  <img src="settings.png" onclick="openModal('settings.png')" alt="Request 365 Settings Page" width="100%" height="auto">
+  <img src="add_request.png" onclick="openModal('add_request.png')" alt="Add Request" width="100%" height="auto"><br>
+  <img src="add_request1.png" onclick="openModal('add_request1.png')" alt="Add Request Example" width="100%" height="auto">
 </div><br>
 
+<p><b> Review & Approval</b></p>
+
+<p>
+  When a user submits a new request, it first appears in the <b>In Progress</b> section. 
+  This means the request has been created but is still waiting for review and approval.
+</p>
+<div>
+  <img src="requests_inprogress.png" onclick="openModal('requests_inprogress.png')" alt="Requests In Progress" width="100%" height="auto">
+</div><br>
+
+
+<p>
+  The request is then sent to the manager or designated approver. The approver reviews the details 
+  and can either <b>Approve</b>, <b>Reject</b>, or <b>Send Back for More Information</b>. 
+  Until the approver takes action, the request will remain in <b>In Progress</b>.
+</p>
+<div>
+  <img src="1.png" onclick="openModal('2.png')" alt="Manager Review Example" width="100%" height="auto">
+</div><br>
+<div>
+  <img src="2.png" onclick="openModal('2.png')" alt="Manager Review Example" width="100%" height="auto">
+</div><br>
+
+
+<p>
+  Once the manager or approver approves the request, its status changes to <b>Active</b>. 
+  This means the request is confirmed and the contract or process can now move forward. 
+  Active requests are visible under the <b>Active</b> section for tracking and further actions.
+</p>
+<div>
+  <img src="3.png" onclick="openModal('3.png')" alt="Active Requests" width="100%" height="auto">
+</div><br>
+
+
+
+
+
+<p>
+  With every active request, tasks may be assigned to team members. These tasks are displayed under 
+  <b>My Tasks</b>, helping users focus on their individual responsibilities. Tasks are grouped by 
+  <b>Due</b>, <b>Overdue</b>, and <b>Completed</b> for easy tracking.
+</p>
+<div>
+  <img src="tasks_due.png" onclick="openModal('tasks_due.png')" alt="Tasks Due" width="100%" height="auto"><br>
+ </div><br>
+
+<p><b>Step 5: Edit or Delete Requests</b></p>
+<p>
+  Users can edit details of a request when updates are required, or delete requests that are no longer needed. 
+  These actions ensure that the request list always reflects accurate and current information.
+</p>
+<div>
+  <img src="edit_request.png" onclick="openModal('edit_request.png')" alt="Edit Request" width="100%" height="auto"><br>
+  <img src="edit_request1.png" onclick="openModal('edit_request1.png')" alt="Edit Request Example" width="100%" height="auto"><br>
+  <img src="delete_request.png" onclick="openModal('delete_request.png')" alt="Delete Request" width="100%" height="auto">
+</div><br>
+<p>The Request 365 Settings panel allows administrators to configure global options for appearance, permissions, and request management. These settings ensure consistency across the organization and provide flexibility in how requests are displayed and processed.</p>
+ <img src="settings.png" onclick="openModal('settings.png')" alt="Edit Request" width="100%" height="auto"><br>
 
       <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                         <nav class="pagination mt-3">

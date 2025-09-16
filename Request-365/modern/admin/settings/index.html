@@ -170,45 +170,96 @@
     </div><br>
     <ul>
       <li><b>User Grid:</b> Displays Name, Email, and Role for each entry.</li><br>
-      <li><b>Role Assignment:</b> Assign or update roles via the dropdown (Admin, User, Finance, HR, etc.).</li><br>
+         <img src="users.png" onclick="openModal('users.png')" alt="Users Example" width="100%" height="auto"><br>
+
+      <li><b>Role Assignment:</b> Assign or update roles via the dropdown (Admin or User).</li><br>
+        <img src="1.png" onclick="openModal('1.png')" alt="Users Example" width="100%" height="auto"><br>
+
       <li><b>Search & Pagination:</b> Search by Name, Email, or Role, and control number of entries per page.</li><br>
+        <img src="2.png" onclick="openModal('2.png')" alt="Users Example" width="100%" height="auto"><br>
+
       <li><b>User Removal:</b> Remove users and revoke access when needed.</li><br>
+        <img src="3.png" onclick="openModal('3.png')" alt="Users Example" width="100%" height="auto"><br>
+
     </ul>
-    <img src="users.png" onclick="openModal('users.png')" alt="Users Example" width="100%" height="auto">
+   </div>
+<!-- Contract Type -->
+<div class="bg-light p-4 common-scroll remove-padding" id="contract-type">
+  <h3 id="_contract_type">
+    <a class="header-icon-link highlight" href="#">Contract Type
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>
+    Define and manage available <b>Contract Types</b> for requests to maintain consistency across the organization.
+     
+  
+    
+  </p><br>
+  <img src="contract_type.png" onclick="openModal('contract_type.png')" alt="Contract Type Example" width="100%" height="auto"><br>
+  <p>
+   Click on <b>+ Add</b> to create a new contract type. While adding, enter the following details:
+    <ul>
+      <li><b>Contract Name</b> – e.g., Master Agreement, NDA, Service Contract</li>
+      <li><b>Contract Code</b> – a short identifier for the contract type</li>
+      <li><b>Status</b> – toggle between Active/Inactive</li>
+    </ul>
+   <p> After filling the details, click <b>Save</b> to add the contract type.</p>
+  </p>
+  <img src="5.png" onclick="openModal('5.png')" alt="Contract Type Example" width="100%" height="auto"><br>
+ </div>
+
+<!-- Counterparty -->
+<div class="bg-light p-4 common-scroll remove-padding" id="counterparty">
+  <h3 id="_counterparty">
+    <a class="header-icon-link highlight" href="#">Counterparty
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>
+    Manage <b>Counterparties</b> for your contracts by adding organizations or individuals involved.  
+  
+  </p><br>
+  <img src="counterparty.png" onclick="openModal('counterparty.png')" alt="Counterparty Example" width="100%" height="auto"><br>
+
+  <p>
+      Click on <b>+ Add</b> to create a new counterparty. While adding, provide:
+    <ul>
+      <li><b>Counterparty Name</b> – organization or individual</li>
+      <li><b>Email</b> – contact email of the counterparty</li>
+      <li><b>Status</b> – toggle Active/Inactive</li>
+    </ul>
+   <p> Once completed, click <b>Save</b> to add the counterparty to the system.</p>
+  </p>
+   <img src="6.png" onclick="openModal('6.png')" alt="Contract Type Example" width="100%" height="auto"><br>
+
   </div>
 
-  <!-- Contract Type -->
-  <div class="bg-light p-4 common-scroll remove-padding" id="contract-type">
-    <h3 id="_contract_type">
-      <a class="header-icon-link highlight" href="#">Contract Type
-        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-      </a>
-    </h3>
-    <p>Define and manage available contract types for requests to maintain consistency.</p>
-    <img src="contract_type.png" onclick="openModal('contract_type.png')" alt="Contract Type Example" width="100%" height="auto">
-  </div>
+<!-- Currency -->
+<div class="bg-light p-4 common-scroll remove-padding" id="currency">
+  <h3 id="_currency">
+    <a class="header-icon-link highlight" href="#">Currency
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>
+    The <b>Currency</b> section is used to configure how currency values are displayed in requests.  
+  </p>
+  <p>
+     <img src="currency.png" onclick="openModal('currency.png')" alt="Currency Example" width="100%" height="auto">
 
-  <!-- Counterparty -->
-  <div class="bg-light p-4 common-scroll remove-padding" id="counterparty">
-    <h3 id="_counterparty">
-      <a class="header-icon-link highlight" href="#">Counterparty
-        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-      </a>
-    </h3>
-    <p>Add and manage counterparties with their details (e.g., organization, contact email).</p>
-    <img src="counterparty.png" onclick="openModal('counterparty.png')" alt="Counterparty Example" width="100%" height="auto">
-  </div>
+    <ul>
+     <li><b>Organization Currency</b> – the primary currency chosen to standardize financial records and transactions within your organization.  
+  </li>
+  <img src="currency1.png" onclick="openModal('currency1.png')" alt="Currency Example" width="100%" height="auto">
+<br><br>
+      <li><b>Number Separator</b> – choose how numbers should appear:  
+        
+    <p>Once the separator preference is selected, the change applies across all requests.</p>
+  </p>
+    <img src="currency2.png" onclick="openModal('currency2.png')" alt="Currency Example" width="100%" height="auto">
 
-  <!-- Currency -->
-  <div class="bg-light p-4 common-scroll remove-padding" id="currency">
-    <h3 id="_currency">
-      <a class="header-icon-link highlight" href="#">Currency
-        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-      </a>
-    </h3>
-    <p>Set a default currency for requests. Number separators (comma, period) can also be configured.</p>
-    <img src="currency.png" onclick="openModal('currency.png')" alt="Currency Example" width="100%" height="auto">
-  </div>
+</div>
 
   <!-- Approver Roles -->
   <div class="bg-light p-4 common-scroll remove-padding" id="approver-roles">
