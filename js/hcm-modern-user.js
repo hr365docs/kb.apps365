@@ -180,11 +180,20 @@ $(document).ready(function () {
                 "<li data-nav-id='../apps/PM365/' title='PM365 - Reports' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/user/apps/PM365/reports/'>Reports</a>" +
                 "</li>" +
-                 "<li data-nav-id='../apps/PM365/' title='PM365 - Reports' class='sidelist'>" +
+                 "<li data-nav-id='../apps/PM365/' title='PM365 - Self-Review' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/user/apps/PM365/self-review/'>Self Review</a>" +
                 "</li>" +
-                 "<li data-nav-id='../apps/PM365/' title='PM365 - Reports' class='sidelist'>" +
+                 "<li data-nav-id='../apps/PM365/' title='PM365 - Feedback' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/user/apps/PM365/feedback/'>Feedback</a>" +
+                "</li>" +
+                 "<li data-nav-id='../apps/PM365/' title='PM365 - PIP' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/user/apps/PM365/pip/'>PIP</a>" +
+                "</li>" +
+                 "<li data-nav-id='../apps/PM365/' title='PM365 - Praise' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/user/apps/PM365/praise/'>Praise</a>" +
+                "</li>" +
+                 "<li data-nav-id='../apps/PM365/' title='PM365 - 1:1' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/user/apps/PM365/oneonone/'>1:1</a>" +
                 "</li>" +
                 "</ul>" +
                 "</li>" +
