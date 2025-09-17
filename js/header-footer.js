@@ -139,36 +139,43 @@ window.addEventListener("load", () => {
         }
     });
 });
+
+// Inject required styles
 const style = document.createElement("style");
 style.innerHTML = `
- /* Prevent blue flash or bold on click */
-  .dropdown-menu .dropdown-item:focus,
-  .dropdown-menu .dropdown-item:active {
-      background-color: transparent !important;
-      color: inherit !important;
-      outline: none !important;
-      box-shadow: none !important;
+  /* Remove underline / border from top nav items */
+  .navbar-nav .nav-item a,
+  .navbar-nav .nav-item a:focus,
+  .navbar-nav .nav-item a:active,
+  .navbar-nav .nav-item a:hover {
+    text-decoration: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-image: none !important;
   }
-        /* Submenu items base style */
+
+  /* Submenu items base style */
   .dropdown-menu .dropdown-item {
-   background-color: transparent !important;
-     
-      font-weight: 500;
-      padding: 0.5rem 1.25rem;
-      transition: all 0.2s ease;
-      
+    background-color: transparent !important;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+    border: none !important;
   }
-       .active-submenu {
+
+  .active-submenu {
     color: var(--primary-color)!important;
     font-weight: 500 !important;
     text-shadow: 0 0 0.2px currentColor; 
-
-
-
-
-
+    text-decoration: none !important;
+    border: none !important;
+  }
 `;
 document.head.appendChild(style);
+
 // window.addEventListener("load", () => {
 //     let headerItems = document.querySelectorAll(".navbar-nav .nav-item a");
 //     let currentPath = window.location.pathname.split('/')[1]; // Get the first segment of the current URL path
