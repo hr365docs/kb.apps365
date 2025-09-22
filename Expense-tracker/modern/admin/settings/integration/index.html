@@ -92,6 +92,7 @@
                 <div class="col-lg-9">
                     <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
                         <div class="bg-light p-4 common-scroll remove-padding" id="integration">
+                       
                             <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">Integration<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
                             <br>
                             <ul class="page-list">
@@ -107,6 +108,131 @@
                                         <img src="1.png" onclick="openModal( '1.png') " alt="Settings" width="100% "
                                             height="auto">
                                         <br>
+<div class="bg-light p-4 common-scroll remove-padding" id="XeroAccount">
+    <h3 id="_xeroaccount">
+        <a class="header-icon-link highlight" href="#">
+            XeroAccount Integration
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+
+    <ul class="page-list">
+
+        <p>
+            <strong>XeroAccount</strong> is a cloud-based accounting platform that enables businesses to 
+            automate tasks such as invoicing, expense tracking, and bank reconciliation.  
+            It integrates seamlessly with the Expense Tracker application to streamline financial operations.  
+        </p>
+
+        <p>
+            To configure, go to <strong>Account Integration</strong> and select <strong>Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step1.png" onclick="openModal('xero_step1.png')" 
+                 alt="Xero Account Settings Navigation" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            This will open the <strong>Xero Account Integration Panel</strong>.  
+        </p>
+        <div>
+            <img src="xero_step2.png" onclick="openModal('xero_step2.png')" 
+                 alt="Xero Account Integration Panel" width="100%" height="auto">
+        </div><br>
+
+        <p>The panel includes the following options:</p>
+        <ul>
+            <li><strong>Enable XeroAccount</strong> — Toggle to activate or deactivate the integration.</li>
+            <li><strong>Add User in XeroAccount</strong> — Allow adding users directly into XeroAccount.</li>
+            <li><strong>Xero Account Client ID</strong> — Unique identifier for API authentication.</li>
+            <li><strong>Xero Account Secret ID</strong> — Secret key paired with Client ID for secure API access.</li>
+            <li><strong>Xero Account Tenant ID</strong> — Unique identifier of the specific Xero organization.</li>
+            <li><strong>Xero Account Request URL</strong> — URL used for authentication and authorization.</li>
+            <li><strong>Redirect URI for Approved</strong> — Redirect link after successful authorization.</li>
+            <li><strong>Redirect URI for Settings</strong> — Redirect link to manage integration settings.</li>
+           
+        <div>
+            <img src="xero_step3.png" onclick="openModal('xero_step3.png')" 
+                 alt="Xero Account Panel Options" width="100%" height="auto">
+        </div><br>
+<p>
+    Once all the required details are filled in, click <strong>Save</strong> to apply and store the XeroAccount integration settings.
+</p>
+<div>
+    <img src="xero_save.png" onclick="openModal('xero_save.png')" 
+         alt="Save XeroAccount Settings" width="100%" height="auto">
+</div><br>
+
+        <p>
+            To manage users, click on <strong>Users</strong> in the side panel, then go to <strong>Settings</strong>.  
+        </p>
+        <div>
+            <img src="xero_step4.png" onclick="openModal('xero_step4.png')" 
+                 alt="Xero Account User Settings" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the settings panel, scroll down to <strong>Validate Users with Xero Account</strong> and click 
+            <strong>Configure</strong>.  
+        </p>
+        <div>
+            <img src="xero_step5.png" onclick="openModal('xero_step5.png')" 
+                 alt="Configure User Validation with Xero" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Next, click <strong>Sync Users from XeroAccount</strong> to import users.  
+        </p>
+        <div>
+            <img src="xero_step6.png" onclick="openModal('xero_step6.png')" 
+                 alt="Sync Users from XeroAccount" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            For mapping expenses, open the <strong>Expense Type</strong> panel and select 
+            <strong>Xero Account Expense Type</strong>.  
+        </p>
+        <div>
+            <img src="xero_step7.png" onclick="openModal('xero_step7.png')" 
+                 alt="Expense Type Mapping Option" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the <strong>Xero Account Expense Type</strong> panel, map your application’s master expense types 
+            to the respective Xero expense categories.  
+        </p>
+        <div>
+            <img src="xero_step8.png" onclick="openModal('xero_step8.png')" 
+                 alt="Mapping Expense Types" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Once an expense is submitted and approved by the final approver, a confirmation prompt will appear.  
+        </p>
+        <div>
+            <img src="xero_step9.png" onclick="openModal('xero_step9.png')" 
+                 alt="Expense Approval Confirmation" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            After approval, the expense record is automatically marked as <strong>Expense Synced in Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step10.png" onclick="openModal('xero_step10.png')" 
+                 alt="Expense Synced in Xero" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The synced details will then be visible directly in the <strong>Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step11.png" onclick="openModal('xero_step11.png')" 
+                 alt="Synced Expense in Xero Account" width="100%" height="auto">
+        </div><br>
+
+    </ul>
+</div>
 
     <div class="bg-light p-4 common-scroll remove-padding" id="ZohoBooks">
         <h3 id="_dashboards">
@@ -125,7 +251,7 @@
             </p>
 
             <p>
-                To enable the integration, go to <strong>General Settings</strong> then click on <strong>Account Integration</strong>, 
+                To enable the integration, go to <strong>Integration</strong> then click on <strong>Account Integration</strong>, 
                 turn on the <strong>Zoho Books</strong> toggle this will open the Zoho Books integration panel.
             </p>
             <div>
@@ -299,9 +425,9 @@
                 <p>
         To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
          refer this Guide: 
-        <a href="/Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
+        <a href="../../../../Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
     </p>
-                  <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
+                  <img src="azure_step12.png" onclick="openModal('azure_step12.png')" 
                  alt="AI API Integration Settings" width="100%" height="auto">
         </ul>
        

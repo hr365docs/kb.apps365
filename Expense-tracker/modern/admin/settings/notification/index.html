@@ -91,23 +91,76 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
-                        <div class="bg-light p-4 common-scroll remove-padding" id="Notification">
-                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">Notification<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
-                            <br>
-                            <ul class="page-list">
-                               
-                                 
-                                <p>In the Notifications section, each action triggers a distinct email. You have the
-                                    flexibility to customize the email template, enable or disable it, and add CC
-                                    recipients according to your preferences.</p>
-                                <div> <img src="notification.png" onclick="openModal( 'notification.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
+                       <div class="bg-light p-4 common-scroll remove-padding" id="Notification">
+    <h3 id="_notification">
+        <a class="header-icon-link highlight" href="#">
+            Notifications<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+    <ul class="page-list">
 
-                            </ul>
+        <p>
+            In the Notifications section, each action triggers a distinct email. 
+            You have the flexibility to customize the email template, enable or disable it, 
+            and add CC recipients according to your preferences.
+        </p>
+        <div>
+            <img src="notification.png" onclick="openModal('notification.png')" 
+                 alt="Notification Settings" width="100%" height="auto">
+        </div>
+        <br>
 
+        <h4 id="_email_templates">Email Templates</h4>
+        <p>
+            The application allows you to customize email templates and add placeholders 
+            based on the template type. These templates are triggered automatically 
+            according to their purpose and will be reflected in the emails sent to users.
+        </p>
+        <div>
+            <img src="email-templates.png" onclick="openModal('email-templates.png')" 
+                 alt="Email Templates" width="100%" height="auto">
+        </div>
+        <br>
 
+        <h5>Template Types</h5>
+       <p>
+    In the Email Template section, different template types are available.
+</p>
 
-                        </div>
+        <div>
+            <img src="template-types.png" onclick="openModal('template-types.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div>
+        <br>
+
+        <h5>Using Placeholders</h5>
+        <ul>
+            <li>Click on the <strong>Placeholder</strong> option to view nine types of placeholders.</li><br>
+            <div>
+            <img src="1.png" onclick="openModal('1.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <div>
+            <img src="placeholders.png" onclick="openModal('placeholders.png')" 
+                 alt="Placeholders" width="100%" height="auto">
+        </div><br><br>
+            <li>Placeholders can be inserted wherever necessary within the email template.</li>
+            <li>Once added, the placeholder values will be dynamically populated and displayed directly in the email.</li>
+        </ul><br>
+      
+        
+         <div>
+            <img src="2.png" onclick="openModal('2.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+          <p>
+            This flexibility ensures that email communication remains accurate, 
+            consistent, and tailored to each scenario.
+        </p>
+    </ul>
+</div>
+
  <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev" href="../user-role/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">User Roles and Permissions</span></a>

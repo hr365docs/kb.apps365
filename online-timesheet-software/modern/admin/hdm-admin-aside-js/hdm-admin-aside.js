@@ -11,13 +11,14 @@ $(document).ready(function () {
         "<li data-nav-id='./installation/requirments/' title='Home Page' class='sidelist'>"+
         "<a href='/online-timesheet-software/modern/admin/home-page/'>Home Page</a>"+
         "</li>"+
-        
         "<li data-nav-id='./Settings/' title=Reports class='sidelist'>"+
         "<a href='/online-timesheet-software/modern/admin/reports/'>Reports</a>"+
         "</li>"+
-       "<li data-nav-id='./Settings/' title=Dashboard class='sidelist'>"+
+
+        "<li data-nav-id='./Settings/' title=Dashboard class='sidelist'>"+
         "<a href='/online-timesheet-software/modern/admin/dashboard/'>Dashboard</a>"+
         "</li>"+
+      
         "<li data-nav-id='./Adminstration' title=Introduction class='sidelist'>"+
         "<a href='/online-timesheet-software/modern/admin/administration/'>Administration</a>"+
         "</li>"+
@@ -172,6 +173,14 @@ $(document).ready(function () {
         "</li>" +
         "<li data-nav-id='../General' title='Send Pending Timesheet Approval Notification' class='sidelist'>" +
         "<a href='/online-timesheet-software/modern/admin/settings/notification/#Send-Pending-Timesheet-Approval-Notification'>Send Pending Timesheet Approval Notification</a>" +
+        "</li>" +
+
+         "<li data-nav-id='../General' title='Shared Mailbox ID' class='sidelist'>" +
+        "<a href='/online-timesheet-software/modern/admin/settings/notification/#shared-mailbox-id'>Shared Mailbox ID</a>" +
+        "</li>" +
+
+         "<li data-nav-id='../General' title='Local Shared Mailbox ID' class='sidelist'>" +
+        "<a href='/online-timesheet-software/modern/admin/settings/notification/#local-shared-mailbox-id'>Local Shared Mailbox ID</a>" +
         "</li>" +
         "</li>"+
         "</ul>" +
