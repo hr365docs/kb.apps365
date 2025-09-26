@@ -791,6 +791,460 @@
                                         <img src="zoho.png" onclick="openModal( 'zoho.png') " alt="Settings" width="100% "
                                             height="auto">
                                         <br>
+                                                       <div class="bg-light p-4 common-scroll remove-padding" id="Quickbooks">
+    <h3 id="_quickbooks">
+        <a class="header-icon-link highlight" href="#">
+            Quickbooks Integration
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+
+    <ul class="page-list">
+
+        <p>
+            <strong>Quickbooks</strong> is a widely used cloud-based accounting platform by Intuit that enables 
+            businesses to manage invoices, payroll, expense tracking, tax compliance, bank reconciliation, and financial reporting.  
+            Integrating it with the Expense Tracker application helps automate workflows and reduce manual entry.  
+        </p>
+
+        <p>
+            To configure, go to <strong>Account Integration</strong> and select <strong>Quickbooks</strong>.  
+        </p>
+        <div>
+            <img src="qb_step1.png" onclick="openModal('qb_step1.png')" 
+                 alt="Quickbooks Integration Navigation" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            This will open the <strong>Quickbooks Integration Panel</strong>.  
+        </p>
+        <div>
+            <img src="qb_step2.png" onclick="openModal('qb_step2.png')" 
+                 alt="Quickbooks Integration Panel" width="100%" height="auto">
+        </div><br>
+
+        <p>The panel includes the following options:</p>
+        <ul>
+            <li><strong>Enable Quickbooks</strong> — Toggle to activate or deactivate the integration.</li>
+            <li><strong>Add User in Quickbooks</strong> — Allow adding users directly into Quickbooks.</li>
+            <li><strong>Quickbooks Client ID</strong> — Unique identifier for API authentication.</li>
+            <li><strong>Quickbooks Client Secret</strong> — Secret key paired with Client ID for secure API access.</li>
+            <li><strong>Quickbooks Sandbox Company ID (Company ID)</strong> — Unique identifier of your Quickbooks company account.</li>
+            <li><strong>Quickbooks Request URL</strong> — URL used for authentication and authorization.</li>
+            <li><strong>Redirect URI for Approved</strong> — Redirect link after successful authorization.</li>
+            <li><strong>Redirect URI for Settings</strong> — Redirect link to manage integration settings.</li>
+        </ul>
+
+        <div>
+            <img src="qb_step3.png" onclick="openModal('qb_step3.png')" 
+                 alt="Quickbooks Panel Options" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Once all the required details are filled in, click <strong>Save</strong> to apply and store the Quickbooks integration settings.
+        </p>
+        <div>
+            <img src="qb_save.png" onclick="openModal('qb_save.png')" 
+                 alt="Save Quickbooks Settings" width="100%" height="auto">
+        </div><br>
+
+        <!-- ================= CREDENTIALS SECTION ================== -->
+        <h4>How to Get Quickbooks Credentials</h4>
+
+        <p><strong>Step 1: Client ID & Secret</strong><br>
+            1. Go to the <a href="https://developer.intuit.com/app/developer/homepage" target="_blank">Intuit Developer Portal</a> and sign in with your Quickbooks account. <br>
+            <div>
+            <img src="qb_step15.png" onclick="openModal('qb_step15.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+2. Create a new app by selecting <strong>Quickbooks Online and Payments</strong>. <br>
+            <img src="qb_step19.png" onclick="openModal('qb_step19.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        
+            3. Fill in application details such as app name, add Permissions. <br>
+            <div>
+             <img src="qb_step16.png" onclick="openModal('qb_step16.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+        <div>
+         <img src="qb_step17.png" onclick="openModal('qb_step17.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+            5. After creating the app, copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.
+        </p>
+         <div>
+         <img src="qb_step18.png" onclick="openModal('qb_step18.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+
+        <p><strong>Step 2: Sandbox Company ID (Company ID)</strong><br>
+           
+        </p>
+        <p>
+    2. In the top menu, go to <strong>MyHub</strong>, open the dropdown, and select <strong>Sandbox</strong>. <br>
+</p>
+
+<div>
+    <img src="qb_step21.png" onclick="openModal('qb_step21.png')" 
+         alt="Quickbooks Sandbox Company ID Display" width="100%" height="auto">
+</div><br>
+
+<p>
+    4. Your <strong>Sandbox Company ID</strong> (Company ID) will be displayed in the URL or under your company profile. <br>
+</p>
+<div>
+    <img src="qb_step20.png" onclick="openModal('qb_step20.png')" 
+         alt="Quickbooks MyHub Sandbox Selection" width="100%" height="auto">
+</div><br>
+
+<p>
+    5. Copy and paste this <strong>Sandbox Company ID</strong> into the integration panel. <br>
+</p>
+<div>
+    <img src="qb_step22.png" onclick="openModal('qb_step22.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+       
+
+        <p><strong>Step 3: Request URL</strong><br>
+            1. Open <strong>Power Automate</strong> and navigate to <strong>Solutions</strong>. <br>
+            <div>
+    <img src="qb_step23.png" onclick="openModal('qb_step23.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+            2. Search for <strong>HRMS365</strong> and open it. <br>
+            <div>
+    <img src="qb_step24.png" onclick="openModal('qb_step24.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+            3. Click on <strong>Cloud Flows</strong>, then select <strong>Quickbooks</strong> and click on the edit (pencil) icon. <br>
+            <div>
+    <img src="qb_step25.png" onclick="openModal('qb_step25.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+            4. Select <strong>Manual</strong> and copy the <strong>HTTP URL</strong>. <br>
+            <div>
+    <img src="qb_step26.png" onclick="openModal('qb_step26.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+ <div>
+    <img src="qb_step27.png" onclick="openModal('qb_step27.png')" 
+         alt="Copy Sandbox Company ID into Integration Panel" width="100%" height="auto">
+</div><br>
+            5. Paste this URL into the <strong>Quickbooks Request URL</strong> field in Expense Tracker.
+        </p>
+        <div>
+            <img src="qb_requesturl.png" onclick="openModal('qb_requesturl.png')" 
+                 alt="Quickbooks Request URL via Power Automate" width="100%" height="auto">
+        </div><br>
+
+        <p><strong>Step 4: Redirect URIs</strong><br>
+            Enter the Expense Tracker site URL in both Redirect URI fields:  
+            - Redirect URI for Approved  
+            - Redirect URI for Settings  
+            Then click <strong>Save</strong> to complete setup.
+        </p>
+         <div>
+            <img src="qb_step4.png" onclick="openModal('qb_step4.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+
+        <!-- ========== USER & EXPENSE FLOW =========== -->
+        <p>
+            To manage users, click on <strong>Users</strong> in the side panel, then go to <strong>Settings</strong>.  
+        </p>
+        <div>
+            <img src="qb_step14.png" onclick="openModal('qb_step14.png')" 
+                 alt="Quickbooks User Settings" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the settings panel, scroll down to <strong>Validate Users with Quickbooks</strong> and click 
+            <strong>Configure</strong>.  
+        </p>
+        <div>
+            <img src="qb_step5.png" onclick="openModal('qb_step5.png')" 
+                 alt="Configure User Validation with Quickbooks" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Next, click <strong>Sync Users from Quickbooks</strong> to import users.  
+        </p>
+        <div>
+            <img src="qb_step6.png" onclick="openModal('qb_step6.png')" 
+                 alt="Sync Users from Quickbooks" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            For mapping expenses, open the <strong>Expense Type</strong> panel and select 
+            <strong>Quickbooks Expense Type</strong>.  
+        </p>
+        <div>
+            <img src="qb_step7.png" onclick="openModal('qb_step7.png')" 
+                 alt="Quickbooks Expense Type Mapping" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the <strong>Quickbooks Expense Type</strong> panel, map your application’s master expense types 
+            to the respective Quickbooks expense categories.  
+        </p>
+        <div>
+            <img src="qb_step8.png" onclick="openModal('qb_step8.png')" 
+                 alt="Mapping Expense Types in Quickbooks" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Once an expense is submitted and approved by the final approver, a confirmation prompt will appear.  
+        </p>
+        <div>
+            <img src="qb_step9.png" onclick="openModal('qb_step9.png')" 
+                 alt="Expense Approval Confirmation in Quickbooks" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            After approval, the expense record is automatically marked as <strong>Expense Synced in Quickbooks</strong>.  
+        </p>
+        <div>
+            <img src="qb_step10.png" onclick="openModal('qb_step10.png')" 
+                 alt="Expense Synced in Quickbooks" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The synced details will then be visible directly in the <strong>Quickbooks Online</strong> account.  
+        </p>
+        <div>
+            <img src="qb_step11.png" onclick="openModal('qb_step11.png')" 
+                 alt="Synced Expense in Quickbooks" width="100%" height="auto">
+        </div><br>
+
+    </ul>
+</div>
+
+<div class="bg-light p-4 common-scroll remove-padding" id="XeroAccount">
+    <h3 id="_xeroaccount">
+        <a class="header-icon-link highlight" href="#">
+            XeroAccount Integration
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
+
+    <ul class="page-list">
+
+        <p>
+            <strong>XeroAccount</strong> is a cloud-based accounting platform that enables businesses to 
+            automate tasks such as invoicing, expense tracking, and bank reconciliation.  
+            It integrates seamlessly with the Expense Tracker application to streamline financial operations.  
+        </p>
+
+        <p>
+            To configure, go to <strong>Account Integration</strong> and select <strong>Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step1.png" onclick="openModal('xero_step1.png')" 
+                 alt="Xero Account Settings Navigation" width="100%" height="auto">
+        </div><br>
+
+        
+        <p>The panel includes the following options:</p>
+        <ul>
+            <li><strong>Enable XeroAccount</strong> — Toggle to activate or deactivate the integration.</li>
+            <li><strong>Add User in XeroAccount</strong> — Allow adding users directly into XeroAccount.</li>
+            <li><strong>Xero Account Client ID</strong> — Unique identifier for API authentication.</li>
+            <li><strong>Xero Account Secret ID</strong> — Secret key paired with Client ID for secure API access.</li>
+            <li><strong>Xero Account Tenant ID</strong> — Unique identifier of the specific Xero organization.</li>
+            <li><strong>Xero Account Request URL</strong> — URL used for authentication and authorization.</li>
+            <li><strong>Redirect URI for Approved</strong> — Redirect link after successful authorization.</li>
+            <li><strong>Redirect URI for Settings</strong> — Redirect link to manage integration settings.</li>
+        </ul>
+
+        <div>
+            <img src="xero_step3.png" onclick="openModal('xero_step3.png')" 
+                 alt="Xero Account Panel Options" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Once all the required details are filled in, click <strong>Save</strong> to apply and store the XeroAccount integration settings.
+        </p>
+        <div>
+            <img src="xero_save.png" onclick="openModal('xero_save.png')" 
+                 alt="Save XeroAccount Settings" width="100%" height="auto">
+        </div><br>
+
+        <!-- ================= NEW SECTION LIKE ZOHO ================== -->
+        <h4>How to Get Xero Credentials</h4>
+
+        <p><strong>Step 1: Client ID & Secret</strong><br>
+            1. Go to the <a href="https://developer.xero.com/app/manage/" target="_blank">Xero Developer Portal</a> and log in with your Xero account. <br>
+            <div>
+            <img src="24.png" onclick="openModal('24.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+            2. Click <strong>New App</strong> and enter application details such as name, company URL, and privacy policy. <br>
+            <div>
+            <img src="25.png" onclick="openModal('25.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+         <div>
+            <img src="26.png" onclick="openModal('26.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+            3. In the <strong>Redirect URI</strong> field, enter the Expense Tracker site URL. <br>
+             <div>
+            <img src="27.png" onclick="openModal('27.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+            4. After creating the app, copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.
+            <div>
+            <img src="28.png" onclick="openModal('28.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+        </p>
+        
+
+       <p><strong>Step 2: Tenant ID</strong><br>
+    1. Log in to your <strong>Xero account</strong> and select your organization. <br>
+</p>
+<div>
+    <img src="36.png" onclick="openModal('36.png')" 
+         alt="Xero Login and Select Organization" width="100%" height="auto">
+</div><br>
+
+<p>
+    2. Use the <strong>Xero API</strong> or API tools (like Postman) to retrieve the <strong>Tenant ID</strong> after authorization. <br>
+</p>
+<div>
+    <img src="37.png" onclick="openModal('37.png')" 
+         alt="Retrieve Tenant ID via API Tools" width="100%" height="auto">
+</div><br>
+
+<p>
+    3. Copy this <strong>Tenant ID</strong> and paste it in the integration panel. <br>
+</p>
+<div>
+    <img src="38.png" onclick="openModal('38.png')" 
+         alt="Copy Tenant ID into Integration Panel" width="100%" height="auto">
+</div><br>
+<div>
+    <img src="39.png" onclick="openModal('39.png')" 
+         alt="Copy Tenant ID into Integration Panel" width="100%" height="auto">
+</div><br>
+
+       
+
+        <p><strong>Step 3: Request URL</strong><br>
+            1. Open <strong>Power Automate</strong> and navigate to <strong>Solutions</strong>. <br>
+             <div>
+            <img src="29.png" onclick="openModal('29.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+            2. Search for <strong>HRMS365</strong> and open it. <br>
+             <div>
+            <img src="30.png" onclick="openModal('30.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+           3. Click on <strong>Cloud Flows</strong>, then select <strong>Xero</strong> and click on the edit icon. <br>
+     <div>
+            <img src="31.png" onclick="openModal('31.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+            4. Select <strong>Manual</strong> and copy the <strong>HTTP URL</strong>. <br>
+             <div>
+            <img src="32.png" onclick="openModal('32.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+         <img src="33.png" onclick="openModal('33.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+      
+            5. Paste this URL into the <strong>Xero Account Request URL</strong> field in Expense Tracker.
+        </p>
+ <div>
+            <img src="34.png" onclick="openModal('34.png')" 
+                 alt="Xero Client ID and Secret" width="100%" height="auto">
+        </div><br>
+
+        <p><strong>Step 4: Redirect URIs</strong><br>
+            Enter the Expense Tracker site URL in both Redirect URI fields:  
+            - Redirect URI for Approved  
+            - Redirect URI for Settings  
+            Then click <strong>Save</strong> to complete setup.
+        </p>
+        <div>
+            <img src="35.png" onclick="openModal('35.png')" 
+                 alt="Xero Redirect URI Setup" width="100%" height="auto">
+        </div><br>
+
+        <!-- ========== EXISTING USER & EXPENSE FLOW =========== -->
+        <p>
+            To manage users, click on <strong>Users</strong> in the side panel, then go to <strong>Settings</strong>.  
+        </p>
+        <div>
+            <img src="xero_step4.png" onclick="openModal('xero_step4.png')" 
+                 alt="Xero Account User Settings" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the settings panel, scroll down to <strong>Validate Users with Xero Account</strong> and click 
+            <strong>Configure</strong>.  
+        </p>
+        <div>
+            <img src="xero_step5.png" onclick="openModal('xero_step5.png')" 
+                 alt="Configure User Validation with Xero" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Next, click <strong>Sync Users from XeroAccount</strong> to import users.  
+        </p>
+        <div>
+            <img src="xero_step6.png" onclick="openModal('xero_step6.png')" 
+                 alt="Sync Users from XeroAccount" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            For mapping expenses, open the <strong>Expense Type</strong> panel and select 
+            <strong>Xero Account Expense Type</strong>.  
+        </p>
+        <div>
+            <img src="xero_step7.png" onclick="openModal('xero_step7.png')" 
+                 alt="Expense Type Mapping Option" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            In the <strong>Xero Account Expense Type</strong> panel, map your application’s master expense types 
+            to the respective Xero expense categories.  
+        </p>
+        <div>
+            <img src="xero_step8.png" onclick="openModal('xero_step8.png')" 
+                 alt="Mapping Expense Types" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            Once an expense is submitted and approved by the final approver, a confirmation prompt will appear.  
+        </p>
+        <div>
+            <img src="xero_step9.png" onclick="openModal('xero_step9.png')" 
+                 alt="Expense Approval Confirmation" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            After approval, the expense record is automatically marked as <strong>Expense Synced in Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step10.png" onclick="openModal('xero_step10.png')" 
+                 alt="Expense Synced in Xero" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            The synced details will then be visible directly in the <strong>Xero Account</strong>.  
+        </p>
+        <div>
+            <img src="xero_step11.png" onclick="openModal('xero_step11.png')" 
+                 alt="Synced Expense in Xero Account" width="100%" height="auto">
+        </div><br>
+
+    </ul>
+</div>
 
     <div class="bg-light p-4 common-scroll remove-padding" id="ZohoBooks">
         <h3 id="_dashboards">
@@ -983,7 +1437,7 @@
                 <p>
         To learn how to generate and retrieve your <em>Endpoint</em>, <em>API Key</em>, and <em>Deployment Name</em> 
          refer this Guide: 
-        <a href="/Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
+        <a href="../../../../../Configure-Azure-AI/" target="_blank">Configure Azure AI</a>.
     </p>
                   <img src="azure_ai_step12.png" onclick="openModal('azure_ai_step12.png')" 
                  alt="AI API Integration Settings" width="100%" height="auto">

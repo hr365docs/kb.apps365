@@ -503,6 +503,69 @@ To add a new approval flow, refer to this guide:
          <div>
             <img src="sub1.png" onclick="openModal('sub1.png')" alt="Interviews" width="100%" height="auto">
         </div><br>
+
+       <div class="bg-light p-4 remove-padding common-scroll" id="field-access">
+  <h3 id="_Field_Access">
+    <a class="header-icon-link highlight" href="#">Field Access
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+
+  <!-- Requisition -->
+  <h4>Requisition</h4>
+  <p>Within a requisition, administrators can control field access for applicants, users, or based on user roles. This ensures that sensitive information is visible only to the intended audience.</p>
+  
+  <p>To configure access, click on the <b>eye icon</b> next to the respective field.</p>
+  <div>
+    <img src="eye-icon.png" onclick="openModal('eye-icon.png')" alt="Eye Icon Example" width="100%" height="auto">
+  </div><br>
+
+  <ul>
+    <li><b>Access for applicants:</b> Enabling this toggle allows the field to be visible to applicants in the live job posting.</li>
+    <div>
+      <img src="a.png" onclick="openModal('a.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+
+    <li><b>Access based on user name:</b> Enabling this toggle will make the field visible only to selected users. Note: the current user cannot be removed.</li>
+    <div>
+      <img src="b.png" onclick="openModal('b.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+
+    <li><b>Access based on user role:</b> Enabling this toggle will make the field visible only to users with selected roles.</li>
+    <div>
+      <img src="c.png" onclick="openModal('c.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+  </ul>
+
+  <!-- Applicant Form -->
+  <h4>Applicant Form</h4>
+  <p>In the applicant form, three default fields are always visible. All other fields can have access configured using the same options available in requisitions.</p>
+  
+  <ul>
+    <li><b>Access based on user name:</b> Allows visibility only to selected users. The current user cannot be removed.</li>
+    <li><b>Access based on user role:</b> Allows visibility only to users with selected roles.</li>
+  </ul>
+  <div>
+    <img src="applicant-form-hide.png" onclick="openModal('applicant-form-hide.png')" alt="Field Access in Applicant Form" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>For example, the "Number of Positions" field has been granted access to John and Nestor:</p>
+    <img src="d.png" onclick="openModal('d.png')" alt="Field Access Example" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>Currently, only John and Nestor can view the "Number of Positions" field:</p>
+    <img src="f.png" onclick="openModal('f.png')" alt="Field Access Example" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>All other users do not have access to this field:</p>
+    <img src="e.png" onclick="openModal('e.png')" alt="Field Access Example" width="100%" height="auto">
+  </div>
+</div>
+
+
     </ul>
 </div>
 

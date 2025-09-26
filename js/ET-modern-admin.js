@@ -111,6 +111,12 @@ $(document).ready(function () {
      "<li data-nav-id='./Settings/'  class='sidelist dropdown_romove_dot'>" +
 
         "<ul class='sidenavSub-topics aside_dropdown_list active'>" +
+         "<li data-nav-id='../General' title='Quickbooks Integration' class='sidelist'>" +
+        "<a class='qwe' href='/Expense-tracker/modern/admin/settings/integration/#_quickbooks'>   Quickbooks Integration</a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title='XeroAccount Integration' class='sidelist'>" +
+        "<a class='qwe' href='/Expense-tracker/modern/admin/settings/integration/#XeroAccount'>   XeroAccount Integration</a>" +
+        "</li>" +
  "<li data-nav-id='../General' title='Zoho Books Integration' class='sidelist'>" +
         "<a class='qwe' href='/Expense-tracker/modern/admin/settings/integration/#ZohoBooks'>   Zoho Books Integration</a>" +
         "</li>" +
