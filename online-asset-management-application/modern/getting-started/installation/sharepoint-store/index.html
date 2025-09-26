@@ -73,7 +73,7 @@
                     <div class=sidebar>
                         <h5 class="mbHeading" style="color:SlateBlue"> <a
                                 href="../../../../../online-asset-management-application/">Asset Management 365</a></h5>
-                        <a class=back-btn href="../../installation/"
+                        <a class=back-btn href="../../../../../online-asset-management-application/"
                             aria-label=back></a>
 
                         <ul class=list-styled>
@@ -121,149 +121,147 @@
                             <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Installation of
                                     Asset Management 365 from SharePoint Store <i class="fas fa-link"
                                         style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <h4 id="_dashboards"><a class="header-icon-link highlight" href="#">Prerequisites:<i class="fas fa-link"
-                                style="font-size:12px; color:lightgray;"></i></a> </h4> 
-<ol>
-                          <li>The installation of the application is restricted to Global Admin or SharePoint Admin, who can complete the process by adhering to the steps provided below.</li>
-                                                    <li>The functionality of the application depends on APIs, which can be enabled by a Global Admin possessing the required permissions.</li></ol>
-                                                    </div>
+                            <h4 id="_dashboards"><a class="header-icon-link highlight" href="#">Prerequisites:<i
+                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h4>
                             <ol>
+                                <li>The application can only be installed by a Global Admin or SharePoint Admin by
+                                    following the steps outlined below.</li>
+                                <li>The application’s features rely on APIs, which can be enabled by a Global Admin with
+                                    the necessary permissions.</li>
+                            </ol>
+                        </div>
+                        <ol>
+                            <br>
+                            <li>
+                                Navigate to the app catalog page using the following URL format:
                                 <br>
-                                <li>
-                                    Navigate to the App Catalog page using the following URL format:
-                                    <br><br>
+                                <b>
                                     <div>
-                                      <strong style="word-break: break-all;">
-                                        https://yourtenantname.sharepoint.com/sites/appcatalog/_layouts/15/tenantAppCatalog.aspx/manageApps
-                                      </strong>
+                                        <b
+                                            style="word-break: break-all;">https://yourtenantname.sharepoint.com/sites/appcatalog/_layouts/15/tenantAppCatalog.aspx/manageApps</b>
                                     </div>
+                                </b>
+                                <br>
+                                <p>Replace <em><b>yourtenantname.sharepoint.com</b></em> with your actual tenant name,
+                                    for example: <em><b>cubiclogics.sharepoint.com</b></em>.
                                     <br>
-                                    <p>
-                                      Replace <em><strong>yourtenantname.sharepoint.com</strong></em> with your actual tenant name.
-                                      For example: <em><strong>cubiclogics.sharepoint.com</strong></em>.
-                                    </p>
-                                    <p>
-                                      Once on the page, click on the <strong>Classic Experience</strong> option.
-                                    </p>
-                                    <div>
-                                      <img src="classic_.png" onclick="openModal('classic_.png')" alt="Classic Experience View"
-                                        style="width: 100%; height: auto;">
-                                    </div>
-                                  </li>
-                                  
-
+                                    Once you are on the page, click on the "Classic Experience" options.
+                                </p>
                                 <br>
+                                <div><img src="classic_.png" onclick="openModal('classic_.png')" alt="Classic"
+                                        width="100%" height="auto"></div>
+                            </li>
 
-                                <li>
-                                    Click on the <strong>Settings</strong> gear icon, then select <strong>Add an app</strong>.
-                                  </li>
-                                  
-                                    <br><br>
-                                    <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"
-                                            width="100%" height="auto"></div>
-                                    <br>
-                                    <div><img src="add_an_app.png" onclick="openModal('add_an_app.png')"
-                                            alt="Add an app" width="100%" height="auto"></div>
-                                </li>
-                                <br>
+                            <br>
 
-                                <li>
-                                    Click on the <strong>SharePoint Store</strong> and enter <strong>Apps365</strong> in the search box. 
-                                    All applications published by Apps365 will be displayed.
-                                  </li>
-                                  
-                                <br>
-                                <div><img src="apps365SharePointStore.jpeg" onclick="openModal('apps365SharePointStore.png')" alt="Sahrepoint store"
+                            <li>Click on <b>setting gear icon</b> and select on <b>Add an app</b>.
+                                <br><br>
+                                <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"
                                         width="100%" height="auto"></div>
                                 <br>
-                                <br>
-
-                                <li>Click on <b>Asset Management 365</b> application.</li>
-                                <br>
-
-                                <div><img src="assetManagemnt.jpeg" onclick="openModal('AssetManagement365.png')" alt="Click OBM 365" width="100%"
-                                        height="auto"></div>
-
-
-
-                                <br>
-                                <li>Click on <b>Add to Apps site</b>.</li>
-                                <br>
-                                <div><img src="add_catalog.png" onclick="openModal('add_catalog.png')"
-                                        alt="Add to app catalog" width="100%" height="auto"></div>
-                                <br>
-                                <li>Select the checkbox  labeled "Enable this app and add it to all sites", and click on <b>Add</b>  button.
-
-
-                                   <br>
-
-                                </li>
-<br>
-                                <div><img src="enable.png" onclick="openModal('enable.png')" alt="Enable" width="100%"
-                                        height="auto"></div>
-                                        <div class="notices note">
-                                            <div class="paragraph">
-                                                <p>Once the application is installed, you can make the solution or application package available across all sites in the organization. If needed, you can later remove the app from all sites.
-    <br>
-    <br>
-                                                    By performing these actions, the selected application package will be downloaded from the Microsoft SharePoint Store into your tenant.
-                                                </p>
-                                            </div>
-                                        </div>
-                                <br>
-                                <li>Click on <b>OK</b> button.</li>
-
-                                <div> <br><img src="PermissionApproval.png" onclick="openModal('PermissionApproval.png')"
-                                        alt="API Access" width="100%" height="auto"></div>
-                                <br>
-                                <li>
-                                    <p>In the SharePoint Admin Center, from the left panel, navigate to the
-                                        <strong>Advanced</strong> section and select <strong>API Access</strong>. Under the <strong>Pending Requests</strong> tab,
-                                        you will find several requests, including <em>Microsoft Graph, Presence.Read.All, User.Read.All, MailboxSettings.Read, Calendars.Read, 
-                                        Group.Read.All, Chat.ReadWrite, Chat.Create, and Mail.Read.Shared</em>. For each request, select it and click <strong>Approve</strong> individually.</p>
-                                </li>
-                                <div> <br><img src="api_permission.png" onclick="openModal('API_Request.png')" alt="API Access"
+                                <div><img src="add_an_app.png" onclick="openModal('add_an_app.png')" alt="Add an app"
                                         width="100%" height="auto"></div>
-                                <br>
-                                <li>
-                                    The user can select and approve each permission individually before proceeding further.
-                                </li>
-                                <div> <br><img src="AM365PendingRequest.png" onclick="openModal('AM365PendingRequest.png')"
-                                        alt="API Access" width="100%" height="auto"></div>
-                                <br>
-                                <div> <br><img src="Approve.png" onclick="openModal('Approve.png')" alt="API Access"
-                                    width="100%" height="auto"></div>
-                               
-                                          <br>
-                          
-                                          <li>Navigate to the desired location (i.e., site collection or subsite) where you wish to install the 
-                                            <b>Employee Directory 365</b> application.</li>
+                            </li>
+                            <br>
 
-                                <div class="notices note">
-                                    <div class="paragraph">
-                                        <p> We have to add Asset Management 365 as the web part on the page.
+                            <li>Click on <b>SharePoint Store</b> and type <b>Apps365</b> in search box. All
+                                applications from Apps365 would be sorted.</li>
+                            <br>
+                            <div><img src="apps365SharePointStore.png" onclick="openModal('apps365SharePointStore.png')"
+                                    alt="Sahrepoint store" width="100%" height="auto"></div>
+                            <br>
+                            <br>
 
-                                        </p>
-                                    </div>
+                            <li>Click on <b>Asset Management 365</b> application.</li>
+                            <br>
+
+                            <div><img src="AssetManagement365.png" onclick="openModal('AssetManagement365.png')"
+                                    alt="Click OBM 365" width="100%" height="auto"></div>
+
+
+
+                            <br>
+                            <li>Click on <b>Add to Apps site</b>.</li>
+                            <br>
+                            <div><img src="add_catalog.png" onclick="openModal('add_catalog.png')"
+                                    alt="Add to app catalog" width="100%" height="auto"></div>
+                            <br>
+                            <li>Select the checkbox (Enable this app and add it to all sites ) and click on
+                                <b>Add</b> button.
+
+                                <br>
+
+                            </li>
+                            <br>
+                            <div><img src="enable.png" onclick="openModal('enable.png')" alt="Enable" width="100%"
+                                    height="auto"></div>
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p>Now you can make this solution or application package available for all sites in
+                                        the organization, once the application is installed, later you can remove the
+                                        app from all sites.
+                                        <br>
+                                        <br>
+                                        By performing these actions, the selected application package will be downloaded
+                                        from the Microsoft SharePoint Store into your tenant.
+                                    </p>
                                 </div>
+                            </div>
+                            <br>
+                            <li>Click on <b>OK</b> button.</li>
 
-                                <br>
-                                <li>Click on<b> New</b> and select <b>Page</b>.</li><br>
-                                <div><img src="new_page.png" onclick="openModal('new_page.png')" alt="new page"
-                                        width="100%" height="auto"></div><br>
+                            <div> <br><img src="PermissionApproval.png" onclick="openModal('PermissionApproval.png')"
+                                    alt="API Access" width="100%" height="auto"></div>
+                            <br>
+                            <li>
+                                <p> On SharePoint admin center page,From left panel under advanced click on API
+                                    access option under pending request, there are requests
+                                    ( Microsoft Graph, Presence.Read.All, User.Read.All, MailboxSettings.Read,
+                                    Calendars.Read, Group.Read.All, Chat.ReadWrite, Chat.Create,
+                                    Mail.Read.Shared) select and click on approve one by one for all the
+                                    requests.</p>
+                            </li>
+                            <div> <br><img src="API_Request.png" onclick="openModal('API_Request.png')" alt="API Access"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <li>
+                                The user can select and approve individual permissions, then proceed further.
+                            </li>
+                            <div> <br><img src="AM365PendingRequest.png" onclick="openModal('AM365PendingRequest.png')"
+                                    alt="API Access" width="100%" height="auto"></div>
+                            <br>
+                            <div> <br><img src="Approve.png" onclick="openModal('Approve.png')" alt="API Access"
+                                    width="100%" height="auto"></div>
 
-                                        <li>
-                                            Click on the <strong>+</strong> icon, then select <strong>Asset Management 365</strong>, as shown below.
-                                          </li>
-                                          
-                                <br>
-                                <div><img src="plus.png" onclick="openModal('plus.png')" alt="Plus icon" width="100%"
-                                        height="auto"></div>
-                                <br>
-                                <div><img src="AMM_.png" onclick="openModal('AMM_.png')" alt="Select AMM" width="100%"
-                                        height="auto"></div>
-                                <br>
-                                <!-- <li>You can also change the title areas as plain by clicking on
+                            <br>
+
+                            <li>Go to Location (i.e., Site collection or subsite) where you want to install the
+                                <b>Asset Management 365</b> application.
+                            </li>
+
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p> We have to add Asset Management 365 as the web part on the page.
+
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br>
+                            <li>Click on New and select Page.</li><br>
+                            <div><img src="new_page.png" onclick="openModal('new_page.png')" alt="new page" width="100%"
+                                    height="auto"></div><br>
+
+                            <li>Now click on <b>+ icon</b> and then select the Asset Management
+                                365 as shown in below.</li>
+                            <br>
+                            <div><img src="plus.png" onclick="openModal('plus.png')" alt="Plus icon" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="AMM_.png" onclick="openModal('AMM_.png')" alt="Select AMM" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <!-- <li>You can also change the title areas as plain by clicking on
                                         <b>Edit</b> icon and selecting Plain for better look as shown in
                                         below.
                                     </li>
@@ -274,38 +272,153 @@
                                             width="100%" height="auto"></div>
                                     <br> -->
 
-                                <li>Finally click on <b>Publish</b> button.</li>
-                                <br>
-                                <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
-                                        width="100%" height="auto"></div>
-                                <br>
-
-                                <li>
-                                    Finally, refresh the page.
-                                </li>
-                            </ol>
+                            <li>When users first access Asset Management 365, a welcome popup is displayed to introduce
+                                the platform and guide them through the initial setup.
+                                Clicking <b> "Get Started"</b> will initiate the onboarding experience for both
+                                administrators
+                                and users.</li>
                             <br>
-                            <div class="notices note">
-                                <div class="paragraph">
-                                    <p>There are two distinct methods of installation:
-                                        <br>
-                                        <br>
-                                        1.<b> Package Upload Installation </b>via the app catalog site.
-                                        <br>
-                                        2. <b>Installation from the SharePoint store</b> (AppSource).
-                                        <br>
-                                        <br>
-                                        Please note that deleting the package installation and subsequently
-                                        reinstalling the app from either the SharePoint Store or the app catalog
-                                        will not result in any data loss. This is because the application's data is securely
-                                        stored in SharePoint lists, which remain intact regardless of the installation method used.
-                                    </p>
-                                </div>
-                                <br>
+                            <div><img src="get1.png" onclick="openModal('get1.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>The Quick Setup in Asset Management 365 allows users to configure their asset management
+                                system efficiently. The setup includes the following key steps:
+                                <ol>
+                                    <li>Adding Categories</li>
+                                    <li> Adding Model Numbers</li>
+                                    <li>Adding Vendors</li>
+                                    <li>Adding Users</li>
+                                    <li>Creating Custom Forms</li>
+                                    <li>Configuring General Settings</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <div><img src="get2.png" onclick="openModal('get2.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add categories to Asset Management 365 to classify assets efficiently and improve asset
+                                tracking and organization.</li>
+                            <br>
+                            <div><img src="get3.png" onclick="openModal('get3.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+
+                            <div><img src="get4.png" onclick="openModal('get1.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Once a category is added successfully, the status updates to "Completed", indicating the
+                                setup step has been finished.</li>
+                            <br>
+                            <div><img src="get5.png" onclick="openModal('get5.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add model numbers to Asset Management 365 to create a structured and professional
+                                tracking system for assets.
+                            </li>
+                            <br>
+                            <div><img src="get6.png" onclick="openModal('get6.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="get7.png" onclick="openModal('get7.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>After model numbers are added, the setup status changes to "Completed", confirming the
+                                task is done.</li>
+                            <br>
+                            <div><img src="get8.png" onclick="openModal('get8.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add vendors to Asset Management 365 to easily reference suppliers during asset creation
+                                and enhance purchasing clarity.</li>
+                            <br>
+                            <div><img src="get9.png" onclick="openModal('get9.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="get10.png" onclick="openModal('get10.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Once vendor details are added, the system marks the status as "Completed", showing
+                                successful configuration.</li>
+                            <br>
+                            <div><img src="get11.png" onclick="openModal('get11.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add users to Asset Management 365 to enable collaboration and improve oversight of asset
+                                activities.</li>
+                            <br>
+                            <div><img src="get12.png" onclick="openModal('get12.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="get13.png" onclick="openModal('get13.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>When users are added, the status changes to "Completed", confirming the setup is
+                                finalized.</li>
+                            <br>
+                            <div><img src="get14.png" onclick="openModal('get14.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add custom forms in Asset Management 365 to capture department-specific data and support
+                                collaborative workflows.</li>
+                            <br>
+                            <div><img src="get15.png" onclick="openModal('get15.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Once custom forms are created, the step is marked "Completed", indicating the
+                                customization is in place.</li>
+                            <div><img src="get16.png" onclick="openModal('get16.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Add general settings to Asset Management 365 to configure global preferences and enable
+                                personalized system behavior.</li>
+                            <br>
+                            <div><img src="get17.png" onclick="openModal('get17.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+
+
+                            <br>
+                            <div><img src="get18.png" onclick="openModal('get18.png')" alt="Publish button" width="100%"
+                                    height="auto"></div>
+                            <br>
+                            <li>Finally click on <b>Publish</b> button.</li>
+                            <br>
+                            <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
+                                    width="100%" height="auto"></div>
+                            <br>
+
+                            <!-- <li>
+                                The Quick Setup in Asset Management 365 allows users to configure their asset management
+                                system efficiently. The setup includes the following key steps:
+                            </li>
+                            <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish button"
+                                    width="100%" height="auto"></div>
+                            <br> -->
+                            <li>
+                                Finally, refresh the page.
+                            </li>
+                        </ol>
+                        <br>
+                        <div class="notices note">
+                            <div class="paragraph">
+                                <p>There are two types of installations:
+                                    <br>
+                                    <br>
+                                    1. Installation via package upload in the app catalog site.
+                                    <br>
+                                    2. Installation from the SharePoint store (AppSource).
+                                    <br>
+                                    <br>
+                                    If you delete the package installation and reinstall the app from
+                                    the SharePoint store, or vice versa, it will not impact or result in
+                                    data loss. This is because the application's data is stored safely
+                                    in SharePoint lists, which remain unaffected by the installation
+                                    method.
+                                </p>
                             </div>
-                            <!-- <h4>How to Remove the Solution from All Sites in the Organization
- 
-Navigate to <b>Employee Directory 365, </b>select it, click on the <b>Files</b> tab, and then select the <b>Deploy </b>icon.</h4>
+                            <br>
+                        </div>
+                        <!-- <h4>How to remove this solution available to all sites in the organization</h4>
                     <br>
                     <ol>
                         <li>
@@ -323,22 +436,20 @@ Navigate to <b>Employee Directory 365, </b>select it, click on the <b>Files</b> 
                                 width="100%" height="auto"></div>
                         </li>
                     </ol> -->
-                        </div>
-
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                        <nav class="pagination mt-3">
-                            <a class="nav nav-prev" href="../../installation/" aria-label="Previous page"><i
-                                    class="ti-arrow-left mr-2"></i>
-                                <span class="d-none d-md-block">Installation</span></a>
-                            <a class="nav nav-next" href="../../installation/using-app-file/"
-                                aria-label="Previous page">
-                                <span class="d-none d-md-block">App Catalog</span><i
-                                    class="ti-arrow-right ml-2"></i></a>
-                        </nav>
-                        </nav>
                     </div>
+
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="../../installation/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i>
+                            <span class="d-none d-md-block">Installation</span></a>
+                        <a class="nav nav-next" href="../../installation/using-app-file/" aria-label="Previous page">
+                            <span class="d-none d-md-block">App Catalog</span><i class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                    </nav>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <div id="myModal" class="modal">
