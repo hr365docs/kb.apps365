@@ -179,12 +179,48 @@ active">
 
     <div class="bg-light p-4 remove-padding common-scroll" id="Language">
       <ul class="page-list">
-        <h2><a class="header-icon-link highlight" href="#"> Language
+        <h2><a class="header-icon-link highlight" href="#"> Languages
           <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
         <p>Default language is English; users can switch to other supported languages as needed.</p><br>
         <div><img src="language.png" onclick="openModal('language.png')" alt="Language Settings" width="100%" height="auto"></div><br>
       </ul>
     </div>
+    <div class="bg-light p-4 remove-padding common-scroll" id="default-currency">
+  <h3 id="_default_currency">
+    <a class="header-icon-link highlight" href="#">Default Currency
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+
+ <p>
+
+ By default, the <b>system currency</b> is set to <b>USD</b>. Administrators can update this setting by selecting a different currency from the dropdown menu and clicking <b>Save</b>. Once saved, the selected currency will be applied as the new system default.
+
+</p>
+  <div>
+    <img src="currency-settings.png" onclick="openModal('currency-settings.png')" alt="Default Currency Settings" width="100%" height="auto">
+  </div><br>
+   <div>
+    <img src="currency-settings1.png" onclick="openModal('currency-settings1.png')" alt="Default Currency Settings" width="100%" height="auto">
+  </div><br>
+
+  <p>Once configured, the selected currency will automatically appear in the following places:</p>
+  <ul>
+    <li><b>Requisition:</b> When adding a requisition, the chosen currency will be visible for the <i>Minimum Annual Budget</i> and <i>Maximum Annual Budget</i> fields. Users can also change the currency manually if needed.<br><br>
+      <img src="currency-requisition.png" onclick="openModal('currency-requisition.png')" alt="Currency in Requisition" width="100%" height="auto">
+    </li><br>
+    <li><b>Job Posting:</b> The selected currency will appear when posting a new job.<br><br>
+      <img src="currency-jobposting.png" onclick="openModal('currency-jobposting.png')" alt="Currency in Job Posting" width="100%" height="auto">
+    </li><br>
+    <li><b>Candidate Management:</b> While adding a candidate to a job, the default currency will be displayed.<br><br>
+      <img src="currency-candidate.png" onclick="openModal('currency-candidate.png')" alt="Currency in Candidate Management" width="100%" height="auto">
+    </li><br>
+    <!-- <li><b>Offer Letter:</b> The selected currency will also be reflected while generating an offer letter.<br>
+      <img src="currency-offerletter.png" onclick="openModal('currency-offerletter.png')" alt="Currency in Offer Letter" width="100%" height="auto">
+    </li> -->
+  </ul>
+</div>
+
 
     <div class="bg-light p-4 remove-padding common-scroll" id="Theme">
       <ul class="page-list">
@@ -198,7 +234,7 @@ active">
     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
       <nav class="pagination mt-3">
         <a class="nav nav-prev" href="../../settings/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Settings</span></a>
-        <a class="nav nav-next" href="../Requisition-Templates/" aria-label="Next page"> <span class="d-none d-md-block"></span><i class="ti-arrow-right ml-2">Requisition Templates</i></a>
+        <a class="nav nav-next" href="../templates/" aria-label="Next page"> <span class="d-none d-md-block"></span><i class="ti-arrow-right ml-2"> Templates</i></a>
       </nav>
     </p>
   </div>

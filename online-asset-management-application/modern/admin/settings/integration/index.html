@@ -101,50 +101,90 @@
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Integration<i
                                             class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
                                 <p>
-                                    From here you can Integrate helpdesk application with other application.
+                                    From here you can Integrate Asset management application with other application.
                                 </p>
                                 <div><img src="intregation.png" onclick="openModal('intregation.png')" alt="intregation"
                                         width="100%" height="auto"></div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="intune">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Intune
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    To Sync office 365 softwares and to integrate MS intune in Asset Management 365
-                                    application, please configure web API as per the instructions.Select the Software &
-                                    MS Intune Integration, click on the Full Sync button as shown in below. You can see
-                                    synced Intune assets on return assets page or click on the return tab on the home
-                                    page.
-                                </p>
-                                <!-- <div><img src="general.png" onclick="openModal('general.png')" alt="General" width="100%" height="auto"></div><br>
-                                <p>Select the checkbox for providing the necessary access.</p>
-                                <div><img src="API_access.png" onclick="openModal('API_access.png')" alt="API Access" width="100%" height="auto"></div><br>
-                                <p>Click on <b>Approve</b> option to approve the access.</p>
-                                <div><img src="approve.png" onclick="openModal('approve.png')" alt="Approve" width="100%" height="auto"></div><br> -->
-                                <div><img src="integrations.png" onclick="openModal('integrations.png')"
-                                        alt="integrations.png" width="100%" height="auto"></div><br>
-                                <b>Full Sync</b> <br>
-                                <p>Click the "Full Sync" button to synchronize the Intune assets. Ensure that the Graph
-                                    API is approved. <br>
-                                    <b>Note:</b> Microsoft allows syncing Intune assets to users with the Global Admin
-                                    and Intune Administrator roles. Therefore, the Asset Management 365 admin must be
-                                    either a Global Admin or Intune Admin to utilize this feature.
-                                </p> <br>
-                                <b>Daily sync</b><br>
-                                <p>The app automatically performs a daily sync every day when the admin opens it. This
-                                    will update Intune asset details if changes are present in the Intune assets.
-                                    However, if you want to trigger the sync manually, you can click on the button.</p>
-                       
-                        <p><b>Update User Details: </b>The system automatically synchronizes user information from Azure Active Directory (Azure AD) to ensure the Users list always reflects the most up-to-date details.</p>
-                         <div><img src="integrations1.png" onclick="openModal('integrations1.png')"
-                                        alt="integrations.png" width="100%" height="auto"></div><br>
+                     <div class="bg-light p-4 remove-padding common-scroll" id="intune">
+    <ul class="page-list">
+        <h2 id="_dashboards">
+            <a class="header-icon-link highlight" href="#">Intune
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <p>
+            To sync Office 365 software and integrate Microsoft Intune with Asset Management 365,
+            please configure the web API as per the instructions. Select <b>Software & MS Intune Integration</b>,
+            then click on the <b>Full Sync</b> button as shown below. You can view synced Intune assets
+            on the Return Assets page or by clicking on the <b>Return</b> tab on the home page.
+        </p>
 
-                         <p>When viewing an asset, the <b>User Department</b> and <b>User Location</b> are highlighted as the first two columns, providing quick visibility into key user attributes.</p>
-                         <div><img src="integrations2.png" onclick="openModal('integrations2.png')"
-                                        alt="integrations.png" width="100%" height="auto"></div><br>
- </div>
+        <div><img src="integrations.png" onclick="openModal('integrations.png')"
+                alt="Integrations" width="100%" height="auto"></div><br>
+
+        <b>Full Sync</b> <br>
+        <p>
+            Click the <b>Full Sync</b> button to synchronize the Intune assets. Ensure that the Graph API is approved. <br>
+            <b>Note:</b> Microsoft allows syncing Intune assets only for users with the <b>Global Admin</b> or
+            <b>Intune Administrator</b> roles. Therefore, the Asset Management 365 admin must hold one of these roles
+            to utilize this feature.
+        </p>
+        <br>
+
+        <b>Daily Sync</b><br>
+        <p>
+            The app automatically performs a sync every day when the admin opens it. This updates Intune asset details
+            if any changes exist. If needed, you can also trigger a manual sync by clicking the button.
+        </p>
+
+        <p><b>Update User Details: </b>The system automatically synchronizes user information from Azure Active Directory (Azure AD)
+            to ensure the Users list always reflects the most up-to-date details.</p>
+        <div><img src="integrations1.png" onclick="openModal('integrations1.png')"
+                alt="Integration User Sync" width="100%" height="auto"></div><br>
+
+        <p>
+            When viewing an asset, the <b>User Department</b> and <b>User Location</b> are shown as the first two columns,
+            providing quick visibility into key user attributes.
+        </p>
+        <div><img src="integrations2.png" onclick="openModal('integrations2.png')"
+                alt="Integration Columns" width="100%" height="auto"></div><br>
+
+        <!-- New Improvement: Intune Exclude Filters -->
+        <h3> Intune Exclude Filters</h3>
+        <p>
+            Asset Management 365 now supports <b>MS Intune Exclude Filters</b>. These filters work only when
+            MS Intune integration is successful. To configure, click on the accordion <b>(+)</b> icon and you’ll see the following options:
+        </p><br>
+         <div><img src="exclude1.png" onclick="openModal('exclude1.png')" alt="Exclude by Platforms"
+                    width="100%" height="auto"></div><br>
+
+        <ol>
+            <li><b>Exclude by Platforms:</b> Select from available options and click the checkbox:
+                Windows, iOS/iPad, macOS, Android.
+            </li><br>
+            <div><img src="exclude11.png" onclick="openModal('exclude11.png')" alt="Exclude by Platforms"
+                    width="100%" height="auto"></div><br>
+
+            <li><b>Exclude by Compliance Status:</b> Filter devices based on compliance states:
+                Compliant, Non-compliant, Not Evaluated.
+            </li><br>
+            <div><img src="exclude2.png" onclick="openModal('exclude2.png')" alt="Exclude by Compliance"
+                    width="100%" height="auto"></div><br>
+
+            <li><b>Exclude by Ownership Type:</b> Choose ownership types to exclude:
+                Personal, Corporate, Unknown.
+            </li><br>
+            <div><img src="exclude3.png" onclick="openModal('exclude3.png')" alt="Exclude by Ownership"
+                    width="100%" height="auto"></div><br>
+
+            <li><b>Exclude Virtual Machines (VMs):</b> Toggle this option ON if you want to exclude VMs from syncing.
+            </li><br>
+            <div><img src="exclude4.png" onclick="openModal('exclude4.png')" alt="Exclude VMs"
+                    width="100%" height="auto"></div><br>
+        </ol>
+    </ul>
+</div>
 
 
 

@@ -161,7 +161,7 @@
 
        <p>You can choose a <b>template</b> for the <b>job description</b> or write it manually. Once completed, click <b>Next</b> to proceed.
 
-You can also create custom templates through the <strong>Job Description Template</strong> option available in the settings panel. For detailed steps, see our <a href="https://kb.apps365.com/HRMS-HR365/modern/admin/apps/RM365/settings/templates/#_job_description_template" target="_blank">Job Description Template guide</a>.</p>
+You can also create custom templates through the <strong>Job Description Template</strong> option available in the settings panel. For detailed steps, see our <a href="https://kb.apps365.com/HRMS-HR365/modern/admin/apps/RM365/settings/Requisition-Templates/#_job_description_template" target="_blank">Job Description Template guide</a>.</p>
 
   <img src="32.png" onclick="openModal('32.png')" alt="Requisition" width="100%" height="auto">
         </div><br>
@@ -277,13 +277,15 @@ You can also create custom templates through the <strong>Job Description Templat
 
 <p>In the <b>Requisition</b> section, complete the form by providing the job title, description, qualifications, salary range, and other relevant information to create a clear and detailed posting.</p><br>
 <div><img src="3.png" onclick="openModal('3.png')" alt="Job Details" width="100%" height="auto"></div><br>
+
+<div id="publish_status">
 <p>Select the <b>Publish Status</b> to define where you want the job to be published. Options include 
 <b>Confidential External</b>, <b>Confidential Internal</b>, <b>External</b>, and <b>Internal</b>. For a detailed guide, visit the 
-  <a href="https://kb.apps365.com/HRMS-HR365/modern/admin/apps/RM365/settings/portal-configration/" target="_blank">
+  <a href="https://kb.apps365.com/RM365/modern/admin/settings/portal-configration/" target="_blank">
    portal configuration documentation
   </a>.</p><br>
 <div><img src="publish.png" onclick="openModal('publish.png')" alt="Publish Status Options" width="100%" height="auto"></div><br>
-
+</div>
 <p>Click on the <b>Next</b> button to proceed.</p><br>
 <div><img src="4.png" onclick="openModal('4.png')" alt="Next Button" width="100%" height="auto"></div><br>
 
@@ -503,6 +505,67 @@ To add a new approval flow, refer to this guide:
          <div>
             <img src="sub1.png" onclick="openModal('sub1.png')" alt="Interviews" width="100%" height="auto">
         </div><br>
+        <div class="bg-light p-4 remove-padding common-scroll" id="field-access">
+  <h3 id="_Field_Access">
+    <a class="header-icon-link highlight" href="#">Field Access
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+
+  <!-- Requisition -->
+  <h4>Requisition</h4>
+  <p>Within a requisition, administrators can control field access for applicants, users, or based on user roles. This ensures that sensitive information is visible only to the intended audience.</p>
+  
+  <p>To configure access, click on the <b>eye icon</b> next to the respective field.</p>
+  <div>
+    <img src="eye-icon.png" onclick="openModal('eye-icon.png')" alt="Eye Icon Example" width="100%" height="auto">
+  </div><br>
+
+  <ul>
+    <li><b>Access for applicants:</b> Enabling this toggle allows the field to be visible to applicants in the live job posting.</li><br>
+    <div>
+      <img src="a.png" onclick="openModal('a.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+
+    <li><b>Access based on user name:</b> Enabling this toggle will make the field visible only to selected users. Note: the current user cannot be removed.</li><br>
+    <div>
+      <img src="b.png" onclick="openModal('b.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+
+    <li><b>Access based on user role:</b> Enabling this toggle will make the field visible only to users with selected roles.</li><br>
+    <div>
+      <img src="c.png" onclick="openModal('c.png')" alt="Eye Icon Example" width="100%" height="auto">
+    </div><br>
+  </ul>
+
+  <!-- Applicant Form -->
+  <h4>Applicant Form</h4>
+  <p>In the applicant form, three default fields are always visible. All other fields can have access configured using the same options available in requisitions.</p>
+  
+  <ul>
+    <li><b>Access based on user name:</b> Allows visibility only to selected users. The current user cannot be removed.</li>
+    <li><b>Access based on user role:</b> Allows visibility only to users with selected roles.</li>
+  </ul><br>
+  <div>
+    <img src="applicant-form-hide.png" onclick="openModal('applicant-form-hide.png')" alt="Field Access in Applicant Form" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>For example, the "Number of Positions" field has been granted access to John and Nestor:</p>
+    <img src="d.png" onclick="openModal('d.png')" alt="Field Access Example" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>Currently, only John and Nestor can view the "Number of Positions" field:</p>
+    <img src="f.png" onclick="openModal('f.png')" alt="Field Access Example" width="100%" height="auto">
+  </div><br>
+
+  <div>
+    <p>All other users do not have access to this field:</p>
+    <img src="g.png" onclick="openModal('g.png')" alt="Field Access Example" width="100%" height="auto">
+  </div>
+</div>
+
     </ul>
 </div>
  <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
