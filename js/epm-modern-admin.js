@@ -55,7 +55,7 @@ $(document).ready(function () {
         "<a  class='qwe' href='/employee-performance-management/modern/admin/roles/'>" +
         " Roles" +
         " </a>" +
-        " <img src='../../down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>" +
+        " <img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>" +
         "</li>" +
         "<li data-nav-id='./Settings/'  class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list active'>" +
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 
         "<li data-nav-id='./Email-Notification/' title=users class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#user'>User</a>" +
+        "<a href='/employee-performance-management/modern/admin/roles/user'>User</a>" +
         "</li>" +
 
         "<li data-nav-id='./Custom-Emails/' title=Manager class='sidelist'>" +
@@ -96,7 +96,7 @@ $(document).ready(function () {
         "<a  class='qwe' href='/employee-performance-management/modern/admin/administration/'>" +
         " Administration" +
         " </a>" +
-        " <img src='../../down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>" +
+        " <img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>" +
         "</li>" +
         "<li data-nav-id='./Settings/'  class='sidelist dropdown_romove_dot'>" +
 
@@ -170,105 +170,105 @@ $(document).ready(function () {
         "<a class='qwe' href='/employee-performance-management/modern/admin/settings/'>" +
         "Settings" +
         "</a>" +
-        "<img src='../../down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
+        "<img src='/down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
         "</li>" +
 
 
         "<li data-nav-id='../system-settings' title=system-settings class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
         "<li data-nav-id='../user' title=General class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/#general-setting'>General Settings </a>" +
-        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/general-setting/'>General Settings </a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
         "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
         "<li data-nav-id='../General' title='API Configuration' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#API-Configuration'>API Configuration</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#API-Configuration'>API Configuration</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Date format' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Dateformat'> Date format </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Dateformat'> Date format </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Sharepoint Page Configuration:' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#SharepointPageConfiguration'> Sharepoint Page Configuration </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#SharepointPageConfiguration'> Sharepoint Page Configuration </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Theme' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Theme'> Theme </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Theme'> Theme </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='GCC tenant' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#GCC-tenant'> GCC tenant </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#GCC-tenant'> GCC tenant </a>" +
         "</li>" +
          "<li data-nav-id='../General' title='Lanaguges' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#language'> Languages </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#language'> Languages </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Overall Rating Method' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Overall-Rating-Method'> Overall Rating Method </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Overall-Rating-Method'> Overall Rating Method </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Acknowledgement' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Acknowledgement'> Acknowledgement </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Acknowledgement'> Acknowledgement </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Brand Logo' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Brand-Logo'> Brand Logo </a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Brand-Logo'> Brand Logo </a>" +
         "</li>" +
      
 
         "</ul>" +
         "<li data-nav-id='../General' title='Users' class='sidelist'>" +
-        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/#users'> Users</a>" +
+        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/users/'> Users</a>" +
         "</li>" +
         " <li data-nav-id='./Custom-Emails/' title=Advance Settings class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#AdvanceSettings'>" +
+        "<a href='/employee-performance-management/modern/admin/settings/advance-settings/'>" +
         "Advance Settings" +
         " </a>" +
         "</li>" +
         "<li data-nav-id='../user' title=Feature class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/#notification'>Notification</a>" +
-        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/notification/'>Notification</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
         "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
         "<li data-nav-id='../General' title='Self-Review' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Self-Review'> Self-Review</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#Self-Review'> Self-Review</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Appraisal’s-Review' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Appraisals-Review'>Appraisal’s-Review</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#Appraisals-Review'>Appraisal’s-Review</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='HR-Review' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#HR-Review'>HR-Review</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#HR-Review'>HR-Review</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='360 Degree' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#360Degree'>360 Degree</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#360Degree'>360 Degree</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='1:1' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#OnetoOne'>1:1</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#OnetoOne'>1:1</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='KPI' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#KPI'>KPI</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/notification/#KPI'>KPI</a>" +
         "</li>" +
 
         "</ul>" +
         "<li data-nav-id='../user' title=Feature class='dropdownicon sidelist'>" +
-        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/#features'>Features</a>" +
-        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "<a class='qwe' href='/employee-performance-management/modern/admin/settings/features/'>Features</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
         "</li>" +
         "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
         "<li data-nav-id='../General' title='Ratings' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Ratings'> Ratings</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/features/#Ratings'> Ratings</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='360 Feedback' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#360Feedback'>360 Feedback</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/features/#360Feedback'>360 Feedback</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Rating Verbatim' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#Rating-Verbatim'>Rating Verbatim</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/features/#Rating-Verbatim'>Rating Verbatim</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Appraisal Cycle' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#AppraisalCycle'>Appraisal Cycle</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/features/#AppraisalCycle'>Appraisal Cycle</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='1:1' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/settings/#KPICycle'>KPI Cycle</a>" +
+        "<a href='/employee-performance-management/modern/admin/settings/features/#KPICycle'>KPI Cycle</a>" +
         "</li>" +
 
         "</ul>" +
@@ -291,7 +291,7 @@ $(document).ready(function () {
         "<a href='/employee-performance-management/modern/admin/help/'>" +
         "Help" +
         "</a>" +
-        "<img src='../../down-arrow-svgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
+        "<img src='/down-arrow-svgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
         "</li>" +
 
         "<li data-nav-id='../advanced/' title=Help class='sidelist dropdown_romove_dot'>" +

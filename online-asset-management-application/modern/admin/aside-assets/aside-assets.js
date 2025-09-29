@@ -133,7 +133,7 @@ $(document).ready(function() {
             
                    
                     "<li class='dropdownicon sidelist' title='Views'>"+
-                    "<a class='qwe' href='/online-asset-management-application/modern/admin/settings/views'>Views</a>"+
+                    "<a class='qwe' href='/online-asset-management-application/modern/admin/settings/views/'>Views</a>"+
                     "<img  class='helpdesk-img aside_dropdown_icon' src='/online-asset-management-application/modern/user/amm-user-assets/down-arrow-svgrepo-com.svg'>"+
                     "</li>"+
             

@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Performance Management 365 | Admin Guide | Settings</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Asset Management">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src='/images/HR365_Logo.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../employee-performance-management/">Performance Management 365</a></h5>
+                        <a class=back-btn href="../../../../../employee-performance-management/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="epmmodernadmin" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title></h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <ul class=page-list>
+                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Settings<i
+                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+
+                               
+
+                    <div class="bg-light p-4 common-scroll remove-padding" id="notification">
+                        <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Notification<i
+                                    class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h3>
+                        <br>
+                        <ul class=page-list>
+                            <p>
+                                Notification settings or email templates users could change the body of the email
+                                (changing the text in the email body or adding placeholders).
+
+                            </p>
+
+                            <p>The notification has Six categories: Self Review, appraisers review, HR review, 360
+                                Degree, 1:1, and KPI.
+                            </p>
+
+                            <div><img src="notifactionNew.png" onclick="openModal( 'notifactionNew.png') "
+                                    alt="Notification" width="100% " height="auto"></div>
+                            <br>
+
+                            <h3 id="Self-Review"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                    href=#>Self-Review<i class="fas fa-link "
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <p>By clicking the edit icon in the Self Review notifications, you can easily customize and
+                                modify the email notifications. This allows you to tailor the communication to suit your
+                                needs and ensure clarity for recipients.
+                            <div>
+                                <img src="selfreview.png" onclick="openModal( 'selfreview.png') " alt="Notification"
+                                    width="100% " height="auto">
+                            </div>
+                            <br>
+                            <div>
+                                <img src="editselfreview.png" onclick="openModal( 'editselfreview.png') "
+                                    alt="Notification" width="100% " height="auto">
+                            </div>
+                            <br>
+                            <li>
+
+                                It triggers notifications to the appraisee and has different notification
+                                templates.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Announcement:</b> A reminder notification could be triggered to all
+                                    the appraisees. (One day before the self-review could start)
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+
+                                    <b>Review Notifications:</b> Notifications are triggered to all appraisees on
+                                    the self-review start date.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Reminder:</b> Reminder notifications are triggered to all the
+                                    appraisees a day before the self-review time deadline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Notification:</b> Notifications are triggered to all the appraisees
+                                    on the last day of the self-review timeline.
+
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Review Completion Notification:</b> Notifications are triggered to all the
+                                    appraisees
+                                    on the Review Completion
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Resubmit:</b> Notifications are triggered to all the appraisees
+                                    to review again and resubmit .
+                                </p>
+                            </li>
+                            <br>
+
+                            <h3 id="Appraisals-Review"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                    href=#>Appraisal’s-Review<i class="fas fa-link "
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <li>
+                                <p>By clicking the edit icon in the Appraiser Review notifications, you can easily
+                                    customize and modify the email notifications. This allows you to tailor the
+                                    communication to suit your needs and ensure clarity for recipients.</p>
+                                <div><img src="editappraiser.png" onclick="openModal( 'editappraiser.png') "
+                                        alt="Notification" width="100% " height="auto"></div>
+                                <br>
+                                <div><img src="updateemail.png" onclick="openModal( 'updateemail.png') "
+                                        alt="Notification" width="100% " height="auto"></div>
+                                <br>
+
+                                <p>
+                                    Notifications are triggers to the appraisers (Manger of appraisee) and have
+                                    different notifications templates.
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Announcement:</b> Notifications are triggered or sent to all
+                                    appraisers one day in advance of the appraiser’s start date or on a self-review
+                                    timeline. (Appraiser review starts next day of self-review timeline)
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Notifications:</b> Notifications are triggered or sent to all
+                                    appraisers on the appraisal-review set start date. i.e., on the next day of the
+                                    self-review timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Reminder:</b> The notifications are triggered or sent to all
+                                    appraisers on a day before the appraisal review timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Notification:</b> Notifications are triggered to all the appraisers
+                                    on the day of the appraisal-review timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Additional appraiser's review completion:</b> Notification are triggered on the
+                                    Completion of Additional Review.
+
+                                </p>
+                            </li><br>
+                            <li>
+                                <p>
+                                    <b>Additional Appraiser Request:</b> Notification are triggered to Manager for
+                                    Additional Appraiser Request.
+                                </p>
+                            </li><br>
+                            <li>
+                                <p>
+                                    <b>Release Review:</b> Notification are triggered when your review is released.
+
+                                </p>
+                            </li><br>
+                            <h3 id="HR-Review"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                    href=#>HR-Review<i class="fas fa-link "
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <p>By clicking the edit icon in the HR365 Review notifications, you can easily customize and
+                                modify the email notifications. This allows you to tailor the communication to suit your
+                                needs and ensure clarity for recipients.</p>
+                            <div><img src="hr.png" onclick="openModal( 'hr.png') " alt="HR365" width="100% "
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="hrEmail.png" onclick="openModal( 'hrEmail.png') " alt="HR365" width="100% "
+                                    height="auto"></div>
+                            <br>
+                            <p>Notifications are triggered or sent to the HR executives. In this category, they are
+                                different notifications</p>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Announcement:</b> Notifications are triggered or sent to HR executives
+                                    (Team) before one day of the HR review start date or on an appraiser review
+                                    timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Review Notifications:</b> Notifications are triggered or sent to HR
+                                    executives (Team)on the HR review start date. i.e., on the next day of the
+                                    appraiser-review timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Reminder:</b> Notifications are triggered or sent to HR executives
+                                    (Team) on a day before the HR review time deadline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Last Day Notification:</b> Notifications are triggered or sent to HR
+                                    executives (Team) on the day of the HR executive review timeline.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Request To Extend Review (Request):</b> Notification is triggered to request
+                                    extend the number of days for self-review.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Request To Extend Review (Approved):</b> Notification is triggered to Approved
+                                    extend the number of days for self-review.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Request To Extend Review (Rejected):</b> Notification is triggered to Rejected
+                                    extend the number of days for self-review.
+
+                                </p>
+                            </li>
+                            <br>
+                            <div class="notices note">
+                                <div class="paragraph">
+                                    <p>
+                                        All reminder's notifications work with the help of power automation.
+                                        <br><br>
+                                        Self-review start date and timeline are defined during appraisal cycle
+                                        creation.
+                                        <br><br>
+                                        Appraisal review starts on the next day of the self-review timeline, the
+                                        appraiser review timeline is defined during appraisal cycle creation.
+                                        <br><br>
+                                        HR review starts on the next day of the appraiser-review timeline, the HR
+                                        review timeline is defined during appraisal cycle creation.
+
+                                    </p>
+
+
+
+                                </div>
+                            </div>
+                            <h3 id="360Degree"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                    href=#>360 Degree<i class="fas fa-link "
+                                        style="font-size:12px; color:lightgray;"></i></a> </h3>
+                            <p>
+                                By clicking the edit icon in the 360 Feedback notifications, you can easily customize
+                                and modify the email notifications. This allows you to tailor the communication to suit
+                                your needs and ensure clarity for recipients.</p>
+                            <div><img src="360.png" onclick="openModal( '25.png') " alt="Notification" width="100% "
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="360email.png" onclick="openModal( '360email.png') " alt="Notification"
+                                    width="100% " height="auto"></div>
+                            <br>
+
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Request Feedback:</b> Notification is triggered on the Request of 360 feedback.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Feedback Completion:</b> Notification is triggered on the completion of feedback.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Email To:</b>
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Feedback Remainder:</b> Notification is triggered for feedback reminder.
+
+                                </p>
+                            </li>
+                            <br>
+                            <h3 id="OnetoOne"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                    href=#>1:1<i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                            </h3>
+                            <p>By clicking the edit icon in the 1:1 Review notifications, you can easily customize and
+                                modify the email notifications. This allows you to tailor the communication to suit your
+                                needs and ensure clarity for recipients.</p>
+                            <div><img src="1on1.png" onclick="openModal( '1on1.png') " alt="Notification" width="100% "
+                                    height="auto"></div>
+                            <br>
+                            <div><img src="1on1email.png" onclick="openModal( '1on1email.png') " alt="Notification"
+                                    width="100% " height="auto"></div>
+                            <br>
+                            <h3 id="KPI"><a style="font-size:18px ;" class="header-icon-link highlight " href=#>KPI<i
+                                        class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                            </h3>
+                            <p>By clicking the edit icon in the KPI Review notifications, you can easily customize and
+                                modify the email notifications. This allows you to tailor the communication to suit your
+                                needs and ensure clarity for recipients.</p>
+                            <div><img src="KPIemail.png" onclick="openModal( 'KPIemail.png') " alt="Notification"
+                                    width="100% " height="auto"></div>
+                            <br>
+                            <div><img src="kpiupload.png" onclick="openModal( 'kpiupload.png') " alt="Notification"
+                                    width="100% " height="auto"></div>
+                            <br>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Task Notification:</b> Notification is triggered when task Assign.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Task Reminder:</b> Notification is triggered to completion the task.
+
+                                </p>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    <b>Meeting Overdue:</b> Notification is triggered that meeting is overdue.
+
+                                </p>
+                            </li>
+                            <br>
+
+                            <!-- <h3 id="_dashboards"><a style="font-size:18px ;" class="header-icon-link highlight "
+                                        href=#>KPI<i class="fas fa-link "
+                                            style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <div><img src="27.png" onclick="openModal( 'notification.png') " alt="Notification"
+                                        width="100% " height="auto"></div>
+                                <br>
+
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>KPI Rejected:</b> Notification is triggered when KPI Request is Rejected.
+
+                                    </p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        <b>KPI Approved:</b> Notification is triggered when KPI Request is Approved.
+
+                                    </p>
+                                </li>
+                                <br> -->
+
+                    </div>
+
+
+
+
+
+                            </ul>
+
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
+                     <nav class="pagination mt-3">
+                        <a class="nav nav-prev " href="../advance-settings/" aria-label="Previous page"><i
+                                class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">Advance Settings</span></a>
+                        <a class="nav nav-next " href="../features/ " aria-label="Previous page"> <span
+                                class="d-none d-md-block">Features</span><i class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal " class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src=" " id="imageId " style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/epm-modern-admin.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+</body>
+
+</html>

@@ -43,7 +43,7 @@ $(document).ready(function () {
 "</li>"+
 //portal
 "<li class='dropdownicon sidelist' title='Portal'>"+
-  "<a class='qwe' href='/RM365/modern/user/Portal/'>Portal</a>"+
+  "<a class='qwe' href='/RM365/modern/user/portal/'>Portal</a>"+
   "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>"+
 "</li>"+
 "<li data-nav-id='./Setting/' title='Roles Dropdown' class='sidelist dropdown_romove_dot'>"+
