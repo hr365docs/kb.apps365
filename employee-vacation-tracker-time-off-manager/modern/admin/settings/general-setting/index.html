@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Time-Off Manager 365 | Admin Guide | Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="Time-Off Manager 365 - Configure and customize settings for the time-off management system.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://hr365docs.github.io/docs/css/style.min.css" rel="stylesheet" media="screen">
+
+    <!-- jQuery and Bootstrap Scripts -->
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/docs/">
+                    <img class=img-fluid src="../../../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../../employee-vacation-tracker-time-off-manager/">Time off Manager 365 </a>
+                        </h5>
+                        <a class=back-btn href="../../../../../employee-vacation-tracker-time-off-manager/"
+                            aria-label=back></a>
+
+                        <ul class=list-styled>
+                            <li data-nav-id=../Time-off-manager/index.html title="Admin Guide" class="sidelist active">
+                                <a href="../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <div id="tmpmodernadmin" class="sidenavbarscrollstyle"></div>
+                            </li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                        <!-- <h2 class=mb-5 id=title> Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General Settings
+                                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                            </h2>
+                           
+                       
+                            <p>Here, you can change theme, date format, color code, brand logo etc.</p>
+
+                            <img src="general.png" onclick="openModal('general.png')" alt="general" width="100%">
+                            <br><br>
+
+                            <ol id="themes">
+                                <li>
+                                    <h6>Theme
+
+                                    </h6>Here, you can change the theme color light, dark and site theme.
+                                </li>
+                                <br>
+                                <img src="theme.png" onclick="openModal('theme.png')" alt="theme" width="100%">
+                                <br> <br>
+                                <li id="Annualleave">
+                                    <h6>Annual Leave Start Date and Annual Leave End Date</h6>You can specify the annual
+                                    leave start and end dates here, or alternatively, set them based on the joining
+                                    date, depending on your requirements for leave calculation. If accrued leaves are
+                                    enabled, leaves
+                                    would be calculated and allocated to users based on these date and date of joining
+                                    of the candidate.
+                                    <br><br> <br>
+                                    <img src="annualLJD.png" onclick="openModal('annualLJD.png')" alt="Leave calculate"
+                                        width="100%">
+                                    <br><br>
+                                    <b>Example</b>
+                                    <div class="example">
+                                        let say
+                                        <br>
+                                        candidate joining date = 15 <sup>th</sup> March 2024.
+                                        <br>
+                                        Annual Start date= 1 <sup>st</sup> Jan 2024 <br>
+                                        Annual End Date = 31<sup>st</sup> Dec 2024. <br>
+                                        Casual Leaves = 24.
+                                        <p>&#10004; If accrued is disabled, candidate allocated leave would be
+                                            (24 leaves /12 month) * Remaining months i.e., 9 months = 18 Leaves
+                                            allocates for a years
+                                        </p>
+                                        <p>&#10004; If accrued is enabled and type is Monthly, for march month allocated
+                                            leave will be 2 and it increase by 2 on every month.</p>
+                                        <p>&#10004; If accrued is enabled and type is quarterly <br>
+                                            24 leaves/ 3 quarter for year = 8 leaves for each quarter <br>
+                                            Now (1st quarter= 8 leaves) / 4 months = 2 leaves <br>
+                                            ∴ 2 leaves * 2 months (remaining months to complete one quarter) = 4 leaves
+                                            allocates in first quarter and then 8 leaves would allocate for in each
+                                            quarter automatically.
+                                        </p>
+                                        <!-- <p>Allocated leaves </p> -->
+                                </li>
+                                <br>
+                                <li id="Dateformat">
+                                    <h6>Date Format</h6>If you change the date format, it will update in entire
+                                    application.
+                                </li>
+                                <br>
+                                <img src="date_format.png" onclick="openModal('date_format.png')" alt="Date formate"
+                                    width="100%">
+                                <br><br>
+                                <li id="DefineWorkWeek">
+                                    <h6> Define Work Week</h6>In this table add 0 in the cell for weekend. Leave
+                                    calculation
+                                    would be done based on working days.
+                                </li>
+                                <br>
+                                <img src="work_week.png" onclick="openModal('work_week.png')" alt="Work week"
+                                    width="100%">
+                                <br><br>
+
+
+
+
+
+
+
+                                <li id="ColorCode">
+                                    <h6>Color code in calendar by</h6>Here, you could define color in calendar bases on
+                                    leave status and leave type. This could be enabled, by selecting the check box and
+                                    click on save icon.
+                                </li>
+                                <br>
+                                <img src="color_c.png" onclick="openModal('color_c.png')" alt="Color code" width="100%">
+                                <br><br>
+                                <li id="Timeoffcalendar">
+                                    <h6>Display team's time off on calendar
+
+                                    </h6>You can, if enabled, view the calendar of leaves taken by Team members in the
+                                    same department.
+                                </li>
+                                <br>
+                                <img src="1.png" onclick="openModal('1.png')" alt="allow user" width="100%">
+                                <br><br>
+                                <li id="DisplayOrganization">
+                                    <h6>Display organization calendar
+
+                                    </h6>
+                                    The organization calendar is visible only to specific roles that have been selected.
+                                </li>
+                                <br>
+                                <img src="organization.png" onclick="openModal('organization.png')" alt="organization"
+                                    width="100%">
+                                <br><br>
+
+                                <li id="microsoftUsers">
+                                    <h6>Allow all microsoft 365 users in this tenant</h6>Microsoft 365 users would not
+                                    get the access of application until users are added in users list of the
+                                    application. If enabled, all the tenant users could use the application from the
+                                    URL.
+                                </li>
+                                <br>
+                                <img src="allow_users.png" onclick="openModal('allow_users.png')" alt="allow user"
+                                    width="100%">
+                                <br><br id="SampleDataDashboard">
+                                <li>
+                                    <h6>Show Sample data in Dashboard</h6> To display sample data on the dashboard,
+                                    simply activate the toggle button.
+                                </li>
+                                <br>
+                                <img src="leaves_reordering.png" onclick="openModal('leaves_reordering.png')"
+                                    alt="leave reordering" width="100%">
+                                <br id="ShowFavoriteicon"><br>
+
+                                <li>
+                                    <h6>Show Favorite icon</h6>
+                                    Activate the toggle to display the favicon on the left side of the browser tab,
+                                    facilitating easy identification of the website for users.
+                                </li>
+                                <br>
+                                <img src="Favoriteicon.png" onclick="openModal('Favoriteicon.png')"
+                                    alt="leave reordering" width="100%">
+                                <br id="LeavesReordering"><br>
+                                <li>
+                                    <h6>Leaves reordering</h6>Here You Can reorder the Leaves.
+                                </li>
+                                <br>
+                                <img src="2.png" onclick="openModal('2.png')" alt="brand logo" width="100%">
+                                <br id="HideSharePoint"><br>
+                                <li>
+                                    <h6>Hide SharePoint page's default components.</h6>Select Configure to Process
+                                    Continue.
+                                </li><br>
+                                <img src="4.png" onclick="openModal('4.png')" alt="brand logo" width="100%">
+                                <br><br>
+                                <p><b>Remove custom webpart CSS :</b>Enable this toggle will remove space outside of
+                                    Webpart. </p>
+                                <p><b>Hide webpart title in sharepoint page :</b>Enable this toggle will remove the
+                                    Webpart title.</p>
+                                <p><b>Hide side navigation panel in sharepoint page :</b> Enable this toggle will hide
+                                    side navigation Panel.</p>
+                                <p><b>Hide top command bar on sharepoint page :</b>Enable this toggle will hide the
+                                    command bar on sharepoint page.</p>
+                                <p><b>Hide top site header :</b>Enable this toggle will hide top site header where app
+                                    is running.</p>
+                                <p><b>Hide comments wrapper :</b>Enable this toggle will hide comments wrapper in
+                                    sharepoint page where app is running.</p>
+                                <p><b>Hide Left Navigation Bar On Collapse For Teams :</b>Enable this toggle will hide
+                                    left navigation bar on collapse for teams where app is running.</p>
+                                <br id="Display-Title">
+
+                                <li><b>Display Title :</b>
+
+                                    You have the option to toggle the visibility of the title field when applying for
+                                    leave.
+                                </li>
+                                <br><img src="Displaytile.png" onclick="openModal('Displaytile.png')"
+                                    alt="Office Location" width="100%"><br>
+                                <br>
+                                <li id="Language">
+                                    <h6>Language selection as browser default language.</h6> Select browser Default
+                                    Language.
+                                </li> <br>
+                                <img src="25.png" onclick="openModal('25.png')" alt="Office Location"
+                                    width="100%"><br><br>
+                                <br>
+                                <li>
+                                    <h6>Language selection in case browser default language is not detected:</h6>If the
+                                    browser default language is not detected, you can manually choose your preferred
+                                    language using the dropdown menu provided.
+                                </li> <br>
+                                <img src="26.png" onclick="openModal('26.png')" alt="Office Location"
+                                    width="100%"><br><br>
+                                <li>
+                                    <b>Language:</b> You can modify the language text here. <br> <br>
+                                    <img src="29.png" onclick="openModal('29.png')" alt="Office Location"
+                                        width="100%"><br><br>
+                                </li>
+                                <li id="LogSettings">
+                                    <h6>Log Settings</h6>
+                                    <p>The user has the option to enable log collection. If you want to collect logs,
+                                        please turn on the toggle. These logs are used for troubleshooting any issues
+                                        occurring in your application.</p>
+                                    <img src="EnableLogsCollection.png" onclick="openModal('EnableLogsCollection.png')"
+                                        alt="Office Location" width="100%"><br>
+                                    <br>
+                                    <h6>Log Types</h6>
+                                    <p>After enabling log collection, the user will see an option for 'Log Types'
+                                        below."</p>
+                                    <img src="LogsType.png" onclick="openModal('LogsType.png')" alt="Office Location"
+                                        width="100%"><br><br>
+                                    <ul style="list-style-type: bullet;">
+                                        <li><b>Debug Logs:</b> Captures detailed system activity for in-depth
+                                            troubleshooting. It generates extensive logs and requires significant
+                                            storage
+                                            space. Ideal for resolving specific issues. </li>
+                                        <br>
+                                        <li><b>Information Logs:</b>Records all application actions, providing a
+                                            complete
+                                            activity trail. Useful for analyzing suspected issues but consumes moderate
+                                            storage. </li>
+                                        <br>
+                                        <li><b>Warning Logs:</b>Logs errors and potential risks that might not
+                                            immediately
+                                            disrupt functionality. Focused on early issue detection with minimal storage
+                                            impact. </li>
+                                        <br>
+                                        <li><b>Error Logs:</b>Logs critical errors affecting application functionality.
+                                            Provides essential details for immediate troubleshooting with minimal
+                                            storage
+                                            usage.</li>
+                                        <br>
+                                        <img src="ThreeOption.png" onclick="openModal('ThreeOption.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <p>If the user selects 'Debug' from the log types and saves it.</p>
+                                        <img src="DebugAndSave.png" onclick="openModal('DebugAndSave.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <p>Then, the user will see an option to 'Download Logs' after going to the help
+                                            page.</p>
+                                        <img src="HelpDownload.png" onclick="openModal('HelpDownload.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <p>In the field, the current user's name must be entered, and then by clicking
+                                            on 'View,' the user can access and view the debug logs.</p>
+                                        <img src="UserAndView.png" onclick="openModal('UserAndView.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <img src="logsView.png" onclick="openModal('logsView.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <p>The user can click on the 'Share' icon to share the logs. Encrypted logs will
+                                            be shared with Cubic for further troubleshooting and to provide a more
+                                            efficient resolution.</p>
+                                        <img src="Share.png" onclick="openModal('Share.png')"
+                                            alt="Office Location" width="100%"><br><br>
+                                        <p>For downloading, the user can click on the 'Download' option to retrieve the logs.</p>
+                                        <img src="DownloadLogs.png" onclick="openModal('DownloadLogs.png')"
+                                            alt="Office Location" width="100%"><br><br>
+
+                                             <h2 id="_notesrequired">
+        <a class="header-icon-link highlight" href=#>
+            Make Notes Required
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h2>
+
+    Turn on this setting to make the <b>'Notes to Approver'</b> field mandatory when submitting a leave request. This ensures that employees provide context or details for their request, which helps approvers make informed decisions.
+    <br><br>
+
+    <div>
+        <img src="NotesToggle.png" onclick="openModal('NotesToggle.png')" alt="Toggle Notes Required" width="100%" height="auto">
+    </div>
+    <br>
+
+    <p>Click on the <b>'Make Notes Required'</b> toggle switch to enable it. Once enabled, the leave request form will not allow submission unless the <b>'Notes to Approver'</b> field is filled in.</p>
+
+    <div>
+        <img src="NotesMandatoryField.png" onclick="openModal('NotesMandatoryField.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <div>
+        <img src="NotesMandatoryField1.png" onclick="openModal('NotesMandatoryField1.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
+    </div>
+    <br>
+
+                                               <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo"><ul class="page-list">
+   
+    
+</ul>
+
+
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+
+                                        Brand logo
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                Here you can add your company logo, which will be displayed at the top of the navigation
+                                bar. From here, the admin can add or update the company logo. The updated logo will
+                                appear at the top of the navigation bar. The recommended size for the logo is 150 X 60,
+                                with the same aspect ratio, and a transparent or white background is recommended for
+                                better visibility and user experience.
+                                <br>
+                                <br>
+                                <div><img src="BrandLogo1.png" onclick="openModal('BrandLogo1.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>Click on the 'Upload Logo' button, then select the logo file. After selecting, the
+                                    user will have the option to crop the logo, allowing them to adjust the image as
+                                    needed.</p>
+                                <div><img src="Crop.png" onclick="openModal('Crop.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+                                <p>After cropping, the user can click on the 'Save Logo' button. Once saved, the logo
+                                    will be visible on the top bar.</p>
+
+                                <div><img src="SaveBrand.png" onclick="openModal('SaveBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="UploadBrand.png" onclick="openModal('UploadBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>If the user wants to remove the logo they added and upload a new one, they can click
+                                    the 'Remove' button. A confirmation prompt will appear asking 'Yes' or 'No.' If the
+                                    user selects 'Yes,' the logo will be removed.
+                                </p>
+                                <div><img src="RemoveBrand.png" onclick="openModal('RemoveBrand.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <br>
+
+                            </ul>
+                        </div>
+                                    </ul>
+                                </li> <br>
+
+                            </ol>
+                        </div>
+                      
+
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../../settings/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">settings</span></a>
+                            <a class="nav nav-next" href="../advance-setting/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Advance Settings</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a><a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script src="../../../../../js/tmp-modern-adminguide.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+
+</body>
+
+</html>
