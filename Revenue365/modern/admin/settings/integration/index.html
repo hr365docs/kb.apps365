@@ -107,18 +107,82 @@
                     width="100%" height="auto"></div><br>
             <p>This section allows users to manage external integrations. Under <b>Account Integration</b>, toggling on Zoho Books will display the configuration fields and sync options.</p>
 
-            <h4 id="_dashboards">
-                <a class="header-icon-link highlight" href="#">Account Integration
-                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-                </a>
-            </h4><br>
-            <div><img src="zoho_toggle1.png" onclick="openModal('zoho_toggle1.png')" alt="Zoho Books Integration"
-                    width="100%" height="auto"></div><br>
-           <p>Once Zoho Books is enabled, users can configure required fields like Client ID and Request URL, and toggle sync options such as Client, Product, and Transaction management.</p>
-<p>This ensures seamless data integration between Revenue 365 and Zoho Books for improved accuracy and reduced manual work.</p>
+           
+            <div class="bg-light p-4 common-scroll remove-padding" id="ZohoBooksRevenue365">
+    <h3 id="_dashboards">
+        <a class="header-icon-link highlight" href="#">
+            Zoho Books Integration
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+    </h3>
+    <br>
 
-<div><img src="zoho_toggle2.png" onclick="openModal('zoho_toggle2.png')" alt="Zoho Books Integration"
-                    width="100%" height="auto"></div><br>
+    <ul class="page-list">
+        <p>
+            <strong>Zoho Books</strong> is a cloud-based accounting platform that helps businesses manage 
+            invoicing, inventory, tax compliance, bank reconciliation, and financial reporting. 
+            Revenue 365 integrates with Zoho Books to ensure seamless data synchronization and reduce manual errors.
+        </p>
+
+        <p>
+            To enable the integration, go to <strong>Integration</strong> then click on <strong>Account Integration</strong>, 
+            turn on the <strong>Zoho Books</strong> toggle to open the integration panel.
+        </p>
+        <div>
+            <img src="zoho_toggle1.png" onclick="openModal('zoho_toggle1.png')" 
+                 alt="Enable Zoho Books Integration" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            <strong>Step 1: Client ID & Secret</strong><br>
+            Log in to <a href="https://api-console.zoho.in" target="_blank">https://api-console.zoho.in</a>.  
+            Enter the Revenue 365 site URL in both Homepage and Authorized Redirect fields.  
+            Copy the <strong>Client ID</strong> and <strong>Client Secret</strong>.
+        </p>
+        <div>
+            <img src="zoho_clientid.png" onclick="openModal('zoho_clientid.png')" 
+                 alt="Zoho Client ID and Secret" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            <strong>Step 2: Organization ID</strong><br>
+            Log in to <a href="https://books.zoho.in" target="_blank">https://books.zoho.in</a>, 
+            click on the company name, and copy the <strong>Organization ID</strong>.
+        </p>
+        <div>
+            <img src="zoho_orgid.png" onclick="openModal('zoho_orgid.png')" 
+                 alt="Zoho Organization ID" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            <strong>Step 3: Request URL</strong><br>
+            Configure Power Automate to obtain the <strong>Zoho Books Request URL</strong>.  
+            In Power Automate, open <strong>Solutions</strong>, search for HR365 Revenue 365, and open it.
+        </p>
+        <div>
+            <img src="zoho_requesturl.png" onclick="openModal('zoho_requesturl.png')" 
+                 alt="Zoho Books Request URL" width="100%" height="auto">
+        </div><br>
+        <p>Search for Zoho and click the edit icon, then select Manual and copy the HTTP URL. Paste it into the Request URL field in Revenue 365.</p>
+        <div>
+            <img src="zoho_requesturl2.png" onclick="openModal('zoho_requesturl2.png')" 
+                 alt="Zoho Books Request URL" width="100%" height="auto">
+        </div><br>
+
+        <p>
+            <strong>Step 4: Redirect URIs</strong><br>
+            Enter the Revenue 365 site URL in both Redirect URI fields (Approved and Settings).  
+            Click <strong>Save</strong> to complete setup.
+        </p>
+        <div>
+            <img src="zoho_redirect.png" onclick="openModal('zoho_redirect.png')" 
+                 alt="Zoho Redirect URIs" width="100%" height="auto">
+        </div><br>
+
+       
+    </ul>
+</div>
+
 
                    
 

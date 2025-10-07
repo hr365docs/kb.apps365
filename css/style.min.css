@@ -961,7 +961,7 @@ a.nav-link.text-dark.active-dark {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link.text-dark:hover {
-    color: var(--primary-color)!important;
+   color: var(--primary-color)!important;
     font-weight: 500 !important;
     text-shadow: 0 0 0.2px currentColor; 
 }
@@ -1516,6 +1516,17 @@ section .container{
     display: flex !important;
   }
 
+  .card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 200px; /* adjust as needed */
+  box-sizing: border-box;
+}
+
+
 
 
   
@@ -1953,3 +1964,4 @@ span.msanchortag{
     .civic{
         font-size: 12px;
     }
+    
