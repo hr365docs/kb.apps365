@@ -79,12 +79,12 @@
                 <div class="col-lg-3">
                     <div class="sidebar">
                        <h5 class="mbHeading" style="color:SlateBlue"> <a
-                                href="../../../../../Expense-tracker/">Expense-tracker 365</a></h5>
+                                href="../../../../../Expense-tracker/">Expense Tracker 365</a></h5>
                         <a class=back-btn href="../../../../../Expense-tracker/" aria-label=back></a>
                         <ul class="list-styled">
                             <li data-nav-id="https://github.com/hr365docs/My-project.git/installation/" title="Admin Guide" class="sidelist active">
                                 <a href="../../../admin/">Admin Guide</a>
-                                <ul id="ETmodernadmin"></ul>
+                                <ul id="ETmodernadmin" class="sidenavbarscrollstyle"></ul>
                             </li>
                         </ul>
                     </div>
@@ -149,8 +149,85 @@
 
 
                         </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="UserRoleScopes">
+    <ul class="page-list">
+        <h2 id="_userRoleScopes">
+            <a class="header-icon-link highlight" href="#">
+                User Role Scopes
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+
+          <p>User Role Scope is used to filter expenses based on Location, Department, and Cost
+                                    Center in the expense tracking application.</p>
+        <br>
+                                <ol>
+                                    <li>As per the role scope, the expenses will be displayed in the Expense Home
+                                        Module.</li>
+                                    <li>This feature is applicable only to Finance, Finance Head, and HR Head.</li>
+                                </ol>
+                               
+                                <p>Navigate to User Roles and Permissions and click on Role Scope.</p>
+                                       <div> <img src="UserRoleScopes.png" onclick="openModal( 'UserRoleScopes.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+        <br>
+                                <p><b>Enable Role Scope:</b> A toggle to activate or deactivate the Role Scope feature,
+                                    which
+                                    will reflect across the entire application.
+                                    <br>
+                                    <b>Save Button:</b> A button to save any changes or configurations made in the
+                                    Enable Role
+                                    Scope settings.
+                                </p>
+                                  <div><img src="UserRoleScopes1.png" onclick="openModal('UserRoleScopes1.png')" 
+                  alt="User Role Scopes view" width="100%" height="auto"></div>
+        <br>
+                                <p>Then, click on the User Module, add or edit a user, and select the role as Finance,
+                                    Finance Head, or HR Head. The Role Scope field will only be displayed for these
+                                    roles.</p>
+                                <div> <img src="addroleuser.png" onclick="openModal( 'addroleuser.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>The Role Scope has three options: ALL, Cost Center, Department, and Location.</p>
+                                <ol>
+                                    <li>If you select Location, the Location Scope field will appear below.</li>
+                                    <li>If you select Department, the Department Scope field will appear.</li>
+                                    <li>If you select ALL, all fields will be displayed.</li>
+                                </ol>
+                                <div> <img src="DepartmentScope.png" onclick="openModal( 'DepartmentScope.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <div> <img src="LocationScope.png" onclick="openModal( 'LocationScope.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>After saving, check the Expense Home Page. For example, if Joni's Role Scope is set
+                                    to Location and the Location Scope is set to Canada, then, when Joni is the current
+                                    user and their role is Finance Head, only expenses related to users who have Canada
+                                    as their location will be displayed in the Expense Home and Approved file.</p>
+                                <div> <img src="rolelocation.png" onclick="openModal( 'rolelocation.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>Following the set flow, expenses will be displayed based on the defined Role Scope
+                                    and Location Scope settings.</p>
+                                <div> <img src="Flow.png" onclick="openModal( 'Flow.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <p>When an expense is created, it will be checked against the current user’s Role Scope
+                                    (Location, Department, or Cost Center) to determine which expenses should be
+                                    displayed based on the user’s assigned scope.</p>
+                                <div> <img src="John.png" onclick="openModal( 'John.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <div> <img src="Shan.png" onclick="openModal( 'Shan.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+                                <p>When an expense is created, it will be displayed for the current user only if the
+                                    Reported By field matches their Role Scope settings (Location, Department, or Cost
+                                    Center).</p>
+                                <div> <img src="numbers.png" onclick="openModal( 'numbers.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>After see joni current user and role scope enabled from stiing which have reported by
+                                    location is canada those expense only will dilpaly here</p>
+                                <div> <img src="currentUser.png" onclick="openModal( 'currentUser.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+    </ul>
+</div>
+
                             </ul>
-                        </div>
+                   
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev" href="../general-setting/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">General Settings</span></a>

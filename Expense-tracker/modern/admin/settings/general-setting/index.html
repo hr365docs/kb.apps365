@@ -79,159 +79,221 @@
                 <div class="col-lg-3">
                     <div class="sidebar">
                        <h5 class="mbHeading" style="color:SlateBlue"> <a
-                                href="../../../../../Expense-tracker/">Expense-tracker 365</a></h5>
+                                href="../../../../../Expense-tracker/">Expense Tracker 365</a></h5>
                         <a class=back-btn href="../../../../../Expense-tracker/" aria-label=back></a>
                         <ul class="list-styled">
                             <li data-nav-id="https://github.com/hr365docs/My-project.git/installation/" title="Admin Guide" class="sidelist active">
                                 <a href="../../../admin/">Admin Guide</a>
-                                <ul id="ETmodernadmin"></ul>
+                                <ul id="ETmodernadmin" class="sidenavbarscrollstyle"></ul>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
-                        <div class="bg-light p-4 common-scroll remove-padding" id="General-setting">
-                            <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">General Settings<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
-                            <br>
-                            <ul class="page-list">
-                               
-                                <p> This section allowing administrators to configure various general preferences such
-                                    as date formats, themes, languages Currency etc.</p>
-                                <div> <img src="2.png" onclick="openModal( '2.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <ol>
-                                    <li id="themes"><b>Theme</b>: In this section, you can switch the theme to dark,
-                                        light, or a
-                                        Site theme color.</li> <br>
-                                    <div> <img src="3.png" onclick="openModal( '3.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+                  <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+    <div class="bg-light p-4 common-scroll remove-padding" id="General-setting">
+        <h3 id="_dashboards"><a class="header-icon-link highlight" href="#">General Settings<i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h3>
+        <br>
+        <ul class="page-list">
+            <p>This section allowing administrators to configure various general preferences such
+                as date formats, themes, languages Currency etc.</p>
+            <div><img src="2.png" onclick="openModal('2.png')" alt="Settings" width="100%" height="auto"></div><br>
+            <ol>
+                <li id="themes"><b>Theme</b>: In this section, you can switch the theme to dark,
+                    light, or a Site theme color.</li><br>
+                <div><img src="3.png" onclick="openModal('3.png')" alt="Settings" width="100%" height="auto"></div><br>
 
-                                    <li id="Dateformat"><b>Date Format </b>: In the Date Format section, you can
-                                        customize the date
-                                        format to options such as MM-DD-YY, YY-MM-DD, or any other format you prefer.
-                                    </li> <br>
-                                    <div> <img src="4.png" onclick="openModal( '4.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+                <li id="Dateformat"><b>Date Format</b>: In the Date Format section, you can
+                    customize the date format to options such as MM-DD-YY, YY-MM-DD, or any other format you prefer.</li><br>
+                <div><img src="4.png" onclick="openModal('4.png')" alt="Settings" width="100%" height="auto"></div><br>
 
-                                    <li id="Currency"><b>Currency </b>: With this feature, you can change your currency
-                                        to options
-                                        such as USD, EUR, INR, and more.</li> <br>
-                                    <div> <img src="5.png" onclick="openModal( '5.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+                <li id="Currency"><b>Currency</b>: In this section, you can configure your organization’s currency preferences. 
+This includes setting a default currency, allowing selection of available currencies, and defining how numbers should be displayed with separators.</li><br>
+<div><img src="5.png" onclick="openModal('5.png')" alt="Currency Settings" width="100%" height="auto"></div><br>
 
-                                    <li id="CurrencySeperator"><b>Currency Seperator </b>: With this feature, you can
-                                        change the currency
-                                        separator by selecting the checkbox for international, India, or no separator.
-                                        For example, selecting "international" would format the number as 1,000.00,
-                                        "India" would format it as 1,00,000.00, and "no separator" would format it as
-                                        100000.00.</li> <br>
-                                    <div> <img src="6.png" onclick="openModal( '6.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+<ol>
+    <li id="DefaultCurrency"><b>Default Currency</b>: Set the primary currency for your application (e.g., USD, EUR, INR). 
+    All new expenses will use this currency by default.</li><br>
+    <div><img src="5a.png" onclick="openModal('5a.png')" alt="Default Currency" width="100%" height="auto"></div><br>
 
-                                    <li id="Language"><b>Language </b>: With this feature, you can change the language
-                                        selection if
-                                        the browser's default language is not detected. You can select the desired
-                                        language from a dropdown menu, and that language will be applied to your
-                                        application.For example, if you select French,the application language will
-                                        change to French.</li> <br>
-                                    <div> <img src="7.png" onclick="openModal( '7.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-
-                                    <li id="CustomColumn"><b>Custom Column </b>: To enable the display of custom
-                                        columns, turn on the toggle. The custom columns will then be displayed as
-                                        columns on the homepage and will also be added to the Expense Form.</li> <br>
-                                    <div> <img src="8.png" onclick="openModal( '8.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-                                    <div> <img src="20.png" onclick="openModal( '20.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+     <li id="CurrencySeperator"><b>Currency Separator</b>: Define how large numbers are formatted in reports and expense forms. 
+    Options include:<br>
+     <b>International:</b> 1,000.00<br>
+     <b>India:</b> 1,00,000.00<br>
+     <b>No Separator:</b> 100000.00</li><br>
+    <div><img src="6.png" onclick="openModal('6.png')" alt="Currency Separator" width="100%" height="auto"></div><br>
 
 
-                                    <li id="ExpenseFutureDays"><b>Expense Future Days </b>:When creating new expenses,
-                                        the days from today's
-                                        date up to the selected number of days will be active, while all other days will
-                                        be disabled. For example, If 5 days is selected and the chosen date is July 17,
-                                        then the next 5 days, from July 18 to July 22, will be active, while all other
-                                        days will be disabled.
-                                    </li> <br>
-                                    <div> <img src="9.png" onclick="openModal( '9.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-                                    <div> <img src="21.png" onclick="openModal( '21.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+    <li id="CurrencySelection"><b>Currency Selection</b>: From here, you can choose which currencies should be available in the dropdown for users when submitting expenses. 
+    For example, you may enable USD, EUR, and INR while hiding others.</li><br>
+    <div><img src="5b.png" onclick="openModal('5b.png')" alt="Currency Selection" width="100%" height="auto"></div><br>
 
-                                    <li id="DisplayProjectName"><b>Display Project Name </b>: To enable the project
-                                        name, simply turn on the
-                                        toggle. The project will then be displayed in both reports and the
-                                        Administration section.</li> <br>
-                                    <div> <img src="10.png" onclick="openModal( '10.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-                                    <div> <img src="22.png" onclick="openModal( '22.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
+   </ol>
+
+                <li id="Language"><b>Language</b>: With this feature, you can change the language
+                    selection if the browser's default language is not detected. You can select the desired
+                    language from a dropdown menu, and that language will be applied to your
+                    application. For example, if you select French, the application language will
+                    change to French.</li><br>
+                <div><img src="7.png" onclick="openModal('7.png')" alt="Settings" width="100%" height="auto"></div><br>
+<!-- 
+                <li id="CustomColumn"><b>Custom Column</b>: To enable the display of custom
+                    columns, turn on the toggle. The custom columns will then be displayed as
+                    columns on the homepage and will also be added to the Expense Form.</li><br>
+                <div><img src="8.png" onclick="openModal('8.png')" alt="Settings" width="100%" height="auto"></div><br>
+                <div><img src="20.png" onclick="openModal('20.png')" alt="Settings" width="100%" height="auto"></div><br> -->
+
+                <!-- <li id="ExpenseFutureDays"><b>Expense Future Days</b>: When creating new expenses,
+                    the days from today's date up to the selected number of days will be active, while all other days will
+                    be disabled. For example, If 5 days is selected and the chosen date is July 17,
+                    then the next 5 days, from July 18 to July 22, will be active, while all other
+                    days will be disabled.</li><br>
+                <div><img src="9.png" onclick="openModal('9.png')" alt="Settings" width="100%" height="auto"></div><br>
+                <div><img src="21.png" onclick="openModal('21.png')" alt="Settings" width="100%" height="auto"></div><br> -->
+
+                <li id="DisplayProject"><b>Display Project Name</b>: To enable the project
+                    name, simply turn on the toggle. The project will then be displayed in both reports and the
+                    Administration section.</li><br>
+                <div><img src="10.png" onclick="openModal('10.png')" alt="Settings" width="100%" height="auto"></div><br>
+                <div><img src="22.png" onclick="openModal('22.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+                <li id="DisplayLocation"><b>Display Location</b>: Toggle on to display location details in expense reports.</li><br>
+                <div><img src="8a.png" onclick="openModal('8a.png')" alt="Display Location" width="100%" height="auto"></div><br>
+                <div><img src="8b.png" onclick="openModal('8b.png')" alt="Display Location" width="100%" height="auto"></div><br>
 
 
 
+                <li id="ExpenseTrackingID"><b>Expense Tracking Number</b>: In the "Expense Tracking ID"
+                    field, you can enter the expense ID, such as request or ET, which will be added as a prefix.</li><br>
+                <div><img src="11.png" onclick="openModal('11.png')" alt="Settings" width="100%" height="auto"></div><br>
+                <div><img src="23.png" onclick="openModal('23.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+                <!-- New options start here -->
+
+                <li id="Reimbursable"><b>Reimbursable</b>: Enable or disable tracking of expenses that are reimbursable. 
+When enabled, the <i>Reimbursable</i> option will appear in the Expense Form.</li><br>
+<div><img src="reimbursable.png" onclick="openModal('reimbursable.png')" alt="Reimbursable Setting" width="100%" height="auto"></div><br>
+<div><img src="reimbursable1.png" onclick="openModal('reimbursable1.png')" alt="Reimbursable Setting" width="100%" height="auto"></div><br>
+
+<li id="ReimbursedBadge"><b>Reimbursed Badge</b>: When the Reimbursable option is enabled, 
+this toggle controls whether a <i>Reimbursed</i> badge is shown in Expense Details.</li><br>
+<div><img src="reimbursed-badge.png" onclick="openModal('reimbursed-badge.png')" alt="Reimbursed Badge" width="100%" height="auto"></div><br>
 
 
-                                    <li id="ExpenseTrackingID"><b>Expense Tracking ID</b>: In the "Expense Tracking ID"
-                                        field, you can
-                                        enter the expense ID, such as request or ET, which will be added as a prefix.
-                                    </li> <br>
-                                    <div> <img src="11.png" onclick="openModal( '11.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-                                    <div> <img src="23.png" onclick="openModal( '23.png') " alt="Settings" width="100% "
-                                            height="auto"></div><br>
-
-                                    <li id="SharepointPageConfiguration"><b>Sharepoint Page Configuration</b>:</li> <br>
-
-                                    <ol>
-                                        <li><b>Remove Custom Webpart CSS :</b></li> Activating this toggle option within
-                                        the settings will result in the automatic removal of empty space surrounding the
-                                        designated webpart.
-                                        <div> <img src="12.png" onclick="openModal( '12.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-                                        <li><b>Hide Webpart Title on SharePoint Page :</b>
-                                        </li>This functionality enables users to conceal the titles of webparts on
-                                        SharePoint pages where applications are active.
-                                        <div> <img src="13.png" onclick="openModal( '13.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-                                        <li><b>Hide Side Navigation Panel on SharePoint Page :</b>
-                                        </li> Hide side navigation panel in Sharepoint page where App is running.
-                                        <div> <img src="14.png" onclick="openModal( '14.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-                                        <li><b>Hide Top Command Bar on SharePoint Page :</b>
-                                        </li>Toggling this off will hide the command bar at the top of the SharePoint
-                                        page.
-                                        <div> <img src="15.png" onclick="openModal( '15.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-
-                                        <li><b>Hide Top Bar on SharePoint :</b>
-                                        </li>Turning it off will hide the top bar in SharePoint.
-                                        <div> <img src="16.png" onclick="openModal( '16.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-
-                                        <li><b>Hide Comment Container:</b>
-                                        </li>Toggling it off will hide the comment container in SharePoint.
-                                        <div> <img src="17.png" onclick="openModal( '17.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-
-                                        <li><b>Hide Top Site Header
-                                                :</b>
-                                        </li>Turning it off will hide the top site header.
-                                        <div> <img src="18.png" onclick="openModal( '18.png') " alt="Settings"
-                                                width="100% " height="auto"></div><br>
-
-                                    </ol>
+                <li id="SampleDashboardData"><b>Sample Dashboard Data</b>: Load sample data to view dashboard in demo mode.</li><br>
+                <div><img src="25.png" onclick="openModal('25.png')" alt="Sample Dashboard Data" width="100%" height="auto"></div><br>
+                <div><img src="25a.png" onclick="openModal('25a.png')" alt="Sample Dashboard Data" width="100%" height="auto"></div><br>
 
 
-                                </ol>
+                <li id="SampleExpenseData"><b>Sample Expense Data</b>: Populate the application with sample expense data for testing/demo.</li><br>
+                <div><img src="26.png" onclick="openModal('26.png')" alt="Sample Expense Data" width="100%" height="auto"></div><br>
+                <div><img src="26a.png" onclick="openModal('26a.png')" alt="Sample Expense Data" width="100%" height="auto"></div><br>
+
+
+                <li id="PaidExpenses">
+  <b>Paid Expenses : </b>When enabled, the Paid Pivot will be displayed on the home page, and the Paid icon will appear in Expense Details.
+</li>
+<br>
+
+                <div><img src="27.png" onclick="openModal('27.png')" alt="Paid Expenses" width="100%" height="auto"></div><br>
+                <div><img src="27a.png" onclick="openModal('27a.png')" alt="Paid Expenses" width="100%" height="auto"></div><br>
+
+                <div><img src="27b.png" onclick="openModal('27b.png')" alt="Paid Expenses" width="100%" height="auto"></div><br>
+
+
+                <li id="ExpenseAttachments"><b>Expense Attachments</b>:  Enable this toggle to make attachments mandatory while submitting an expense, time, and distance.</li><br>
+                <div><img src="28.png" onclick="openModal('28.png')" alt="Expense Attachments" width="100%" height="auto"></div><br>
+                <div><img src="28a.png" onclick="openModal('28a.png')" alt="Expense Attachments" width="100%" height="auto"></div><br>
+
+
+                <li id="ExpenseTypeCode"><b>Expense Type Code</b>: Enable this to addcode for your expense types.</li><br>
+                <div><img src="29.png" onclick="openModal('29.png')" alt="Expense Type Code" width="100%" height="auto"></div><br>
+                <div><img src="29a.png" onclick="openModal('29a.png')" alt="Expense Type Code" width="100%" height="auto"></div><br>
+
+
+                <li id="MultipleCostCenter"><b>Multiple Cost Center</b>: When enabled, a separate cost center entry will be created for each row in the Multiple Expense.</li><br>
+                <div><img src="30.png" onclick="openModal('30.png')" alt="Multiple Cost Center" width="100%" height="auto"></div><br>
+                
+                <li id="DraftExpenseID"><b>Draft Expense ID</b>: When enabled, an expense ID will be generated for draft expenses as well.</li><br>
+                <div><img src="31.png" onclick="openModal('31.png')" alt="Draft Expense ID" width="100%" height="auto"></div><br>
+<div><img src="30a.png" onclick="openModal('30a.png')" alt="Multiple Cost Center" width="100%" height="auto"></div><br>
+
+                <li id="SelfDeclaration"><b>Self-Declaration</b>:When enabled, a checkbox will appear while creating expenses, asking if you agree to submit the expenses with or without uploading a receipt.</li><br>
+                <div><img src="32.png" onclick="openModal('32.png')" alt="Self-Declaration" width="100%" height="auto"></div><br>
+                <div><img src="32a.png" onclick="openModal('32a.png')" alt="Self-Declaration" width="100%" height="auto"></div><br>
+
+
+                <li id="ExpenseTime"><b>Expense Time</b>: When enabled, you can specify the start and end time while creating an expense.</li><br>
+                <div><img src="33.png" onclick="openModal('33.png')" alt="Expense Time" width="100%" height="auto"></div><br>
+                <div><img src="33a.png" onclick="openModal('33a.png')" alt="Expense Time" width="100%" height="auto"></div><br>
+
+
+                <li id="CloneMultipleExpense"><b>Clone Multiple Expense</b>: When enabled, you can clone expense rows in multiple expense.</li><br>
+                <div><img src="34.png" onclick="openModal('34.png')" alt="Clone Multiple Expense" width="100%" height="auto"></div><br>
+                
+
+                <!-- Existing SharePoint Config kept as is -->
+                <li id="SharepointPageConfiguration"><b>Sharepoint Page Configuration</b>:</li><br>
+                <ol>
+                    <li><b>Remove Custom Webpart CSS :</b></li> Activating this toggle option within
+                    the settings will result in the automatic removal of empty space surrounding the
+                    designated webpart.
+                    <div><img src="12.png" onclick="openModal('12.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Webpart Title on SharePoint Page :</b></li> This functionality enables users to conceal the titles of webparts on
+                    SharePoint pages where applications are active.
+                    <div><img src="13.png" onclick="openModal('13.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Side Navigation Panel on SharePoint Page :</b></li> Hide side navigation panel in SharePoint page where App is running.
+                    <div><img src="14.png" onclick="openModal('14.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Top Command Bar on SharePoint Page :</b></li> Toggling this off will hide the command bar at the top of the SharePoint page.
+                    <div><img src="15.png" onclick="openModal('15.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Top Bar on SharePoint :</b></li> Turning it off will hide the top bar in SharePoint.
+                    <div><img src="16.png" onclick="openModal('16.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Comment Container:</b></li> Toggling it off will hide the comment container in SharePoint.
+                    <div><img src="17.png" onclick="openModal('17.png')" alt="Settings" width="100%" height="auto"></div><br>
+                    <li><b>Hide Top Site Header :</b></li> Turning it off will hide the top site header.
+                    <div><img src="18.png" onclick="openModal('18.png')" alt="Settings" width="100%" height="auto"></div><br>
+                </ol>
+
+                <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+
+                                        Brand logo
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                Here you can add your company logo, which will be displayed at the top of the navigation
+                                bar. From here, the admin can add or update the company logo. The updated logo will
+                                appear at the top of the navigation bar. The recommended size for the logo is 150 X 60,
+                                with the same aspect ratio, and a transparent or white background is recommended for
+                                better visibility and user experience.
+                                <br>
+                                <br>
+                                <div><img src="35.png" onclick="openModal('35.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>Click on the 'Upload Logo' button, then select the logo file. After selecting, the
+                                    user will have the option to crop the logo, allowing them to adjust the image as
+                                    needed.</p>
+                                <div><img src="36.png" onclick="openModal('36.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+                                <p>After cropping, the user can click on the 'Save Logo' button. Once saved, the logo
+                                    will be visible on the top bar.</p>
+
+                                <div><img src="37.png" onclick="openModal('37.png')"
+                                        alt="Update users role" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="38.png" onclick="openModal('38.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <p>If the user wants to remove the logo they added and upload a new one, they can click
+                                    the 'Reset Logo' button. 
+                                </p>
+                                <div><img src="39.png" onclick="openModal('39.png')"
+                                        alt="Update users role" width="100%" height="auto"></div><br>
+                                <br>
 
                             </ul>
-
-
-
-                        </div>
-                            </ul>
-                        </div>
+                     
+                </div></ol></ul></div>
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev" href="../settings/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Settings</span></a>

@@ -91,7 +91,7 @@
                 <div class=col-lg-3>
                     <div class=sidebar>
                        <h5 class="mbHeading" style="color:SlateBlue"> <a
-                                href="../../../../../Expense-tracker/">Expense-tracker 365</a></h5>
+                                href="../../../../../Expense-tracker/">Expense Tracker 365</a></h5>
                         <a class=back-btn href="../../../../../Expense-tracker/" aria-label=back></a>
                         <ul class=list-styled>
                             <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
@@ -100,80 +100,48 @@
                                 <a href="../../../admin/">
                                     Admin Guide
                                 </a>
-                                <ul id="ETmodernadmin">
+                                <ul id="ETmodernadmin" class="sidenavbarscrollstyle">
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class=col-lg-9>
-                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
-                        <!-- <h2 class=mb-5 id=title></h2> -->
-                        <div class="bg-light p-4 remove-padding">
-                            <ul class=page-list>
-                                <h3 id="_dashboards"><a class="header-icon-link highlight" href=#>Features<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                 <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+    <div class="bg-light p-4 remove-padding">
+        <ul class="page-list">
 
-                               
+            <h3 id="_dashboards">
+                <a class="header-icon-link highlight" href="#">Features
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>The <strong>Features</strong> section provides advanced tools such as custom fields, cost centers, departments, employee grades, mileage tracking, and approver budget limits to enhance expense management efficiency and flexibility.</p>
+            <div>
+                <img src="Feature.png" onclick="openModal('Feature.png')" alt="Feature Overview" width="100%" height="auto">
+            </div>
+            <br>
 
-                            <!-- <p class="post-meta border-bottom pb-3 mb-0 mt-3">Updated on 29 Dec 2018</p> -->
-
-                        </div>
-
-                   
-<p>The <strong>Features</strong> section provides advanced tools such as custom fields, cost centers, departments, employee grades, mileage tracking, and approver budget limits to enhance expense management efficiency and flexibility.</p>
-                    
-
-
-
-
-                       
-
-                               <div>
-    <img src="Feature.png" onclick="openModal('Feature.png')" alt="Feature Overview" width="100%" height="auto">
-</div>
-<br>
-
-<h3 id="_dashboards">
-    <a id="Custom-Fields" class="header-icon-link highlight" href="#">
-        Custom Fields
-        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-    </a>
-</h3>
-
-<p>
-    The <strong>Custom Fields</strong> feature allows administrators to create additional fields 
-    in the Expense Module. These fields can be used to capture extra information beyond the 
-    default system fields.
-</p>
-
-<h4>Create a Custom Field</h4>
-<p>
-    To create a custom field, click on the <strong>+ Custom Field</strong> button, fill in the required details, 
-    and then click the <strong>Save</strong> button. The custom field will then be displayed in the 
-    new expense panel.
-</p>
-
-<div>
-    <img src="fe.png" onclick="openModal('fe.png')" alt="Custom Field Creation" width="100%" height="auto">
-</div>
-<br>
-
-<div>
-    <img src="fe1.png" onclick="openModal('fe1.png')" alt="Custom Fields Panel" width="100%" height="auto">
-</div>
-<br>
-
-<h4>Role-based Editability</h4>
-<p>
-    Custom columns can also be made editable based on user roles. 
-    For example, if the role is <strong>Finance Head</strong>, that user will be able to 
-    add or edit values in the custom column, while other users without this role will only 
-    have read-only access.
-</p>
-
-<ol>
-    <li>
+            <!-- 1. Custom Fields -->
+            <h3 id="_dashboards">
+                <a id="Custom-Fields" class="header-icon-link highlight" href="#">Custom Fields
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>The <strong>Custom Fields</strong> feature allows administrators to create additional fields in the Expense Module. These fields can be used to capture extra information beyond the default system fields.</p><br>
+            <h4>Create a Custom Field</h4>
+            <p>To create a custom field, click on the <strong>+ Custom Field</strong> button, fill in the required details, and then click <strong>Save</strong>. The custom field will then be displayed in the new expense panel.</p>
+            <div>
+                <img src="fe.png" onclick="openModal('fe.png')" alt="Custom Field Creation" width="100%" height="auto">
+            </div>
+            <br>
+            <div>
+                <img src="fe1.png" onclick="openModal('fe1.png')" alt="Custom Fields Panel" width="100%" height="auto">
+            </div>
+            <br>
+            <h4>Role-based Editability</h4>
+            <p>Custom columns can also be made editable based on user roles...</p>
+            <li>
         From the <strong>Column Category</strong>, select the <strong>Expense Module</strong>.
         <div>
             <img src="custom_role1.png" onclick="openModal('custom_role1.png')" alt="Select Expense Module" width="100%" height="auto">
@@ -208,10 +176,10 @@
         <div>
             <img src="custom_role5.png" onclick="openModal('custom_role5.png')" alt="Editable vs Read-only View" width="100%" height="auto">
         </div>
-    </li>
+    </li><br>
 
-<br><br>
-                                <h3 id="_dashboards"><a id="Cost-Center" class="header-icon-link highlight " href=#>Cost
+            <!-- 2. Cost Center -->
+             <h3 id="_dashboards"><a id="Cost-Center" class="header-icon-link highlight " href=#>Cost
                                         Center<i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
                                 </h3>
                                 <p><b>Cost Center</b> : You can create a Cost Center using this
@@ -224,28 +192,35 @@
                                         width="100% " height="auto"></div><br>
                                 <div> <img src="Cost.png" onclick="openModal( 'Cost.png') " alt="Settings" width="100% "
                                         height="auto"></div><br>
-                                <h3 id="_dashboards"><a id="Department" class="header-icon-link highlight "
-                                        href=#>Department<i class="fas fa-link "
-                                            style="font-size:12px; color:lightgray;"></i></a>
-                                </h3>
-                                <p><b>Department</b>: You can create a Department in this feature. Click
+            <!-- 3. Departments -->
+            <h3 id="_dashboards">
+                <a id="Department" class="header-icon-link highlight" href="#">Department
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+             <p><b>Department</b>: You can create a Department in this feature. Click
                                     the
                                     "+Department" button, fill in
                                     the columns, and then click the "Save" button.</p> <br>
-                                <div> <img src="Department.png" onclick="openModal( 'Department.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
+            <div><img src="Department.png" onclick="openModal('Department.png')" alt="Settings" width="100%" height="auto"></div>
+            <br>
+            <div><img src="cost2.png" onclick="openModal('cost2.png')" alt="Settings" width="100%" height="auto"></div>
+            <br>
 
-                                <div> <img src="cost2.png" onclick="openModal( 'cost2.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <h3 id="_dashboards"><a class="header-icon-link highlight " href=#>Job Title<i
-                                            class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
-                                </h3>
-                                <p><b>Job Title</b> : You can create a Job Title in this feature. Click
+            <!-- 4. Job Title -->
+            <h3 id="Job-Title">
+                <a class="header-icon-link highlight" href="#">Job Title
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+           <p><b>Job Title</b> : You can create a Job Title in this feature. Click
                                     the "+Add" button, fill in the
                                     columns, and then click the "Save" button.</p> <br>
-                                <div> <img src="Jobtitle.png" onclick="openModal( 'Jobtitle.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <h3 id="_dashboards"><a id="Location" class="header-icon-link highlight "
+            <div><img src="Jobtitle.png" onclick="openModal('Jobtitle.png')" alt="Settings" width="100%" height="auto"></div>
+            <br>
+
+            <!-- 5. Location -->
+            <h3 id="_dashboards"><a id="Location" class="header-icon-link highlight "
                                         href=#>Location<i class="fas fa-link "
                                             style="font-size:12px; color:lightgray;"></i></a>
                                 </h3>
@@ -254,78 +229,16 @@
                                     columns, and then click the "Save" button.</p> <br>
                                 <div> <img src="Location.png" onclick="openModal( 'Location.png') " alt="Settings"
                                         width="100% " height="auto"></div><br>
-                                <h3 id="_dashboards"><a id="Employee-Grades" class="header-icon-link highlight "
-                                        href=#>Employee Grades<i class="fas fa-link "
-                                            style="font-size:12px; color:lightgray;"></i></a>
-                                </h3>
-                                <p><b>Employee Grades </b>is as per user grade fixing Budget for
-                                    particular expense type in expense tracking applications.</p>
-                                <ul>
-                                    <li>Users can add Grade for fixing limit as per user grade .</li>
-                                </ul>
-                                <br>
-                                <p>1. Go to the Features and click on Employee Grades.</p>
-                                <div> <img src="EmployeeGrade.png" onclick="openModal( 'EmployeeGrade.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <p>2. This Dialog box will open</p>
-                                <div> <img src="Employee.png" onclick="openModal( 'Employee.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
 
-                                <p>• Enable Employeegrades: A toggle to activate or deactivate the Employeegrades
-                                    integration in the application.
-                                    <br>
-                                    • Save Button: A button to save changes or configurations made in the Employee
-                                    grades settings.
-                                </p>
-                                <div> <img src="Action.png" onclick="openModal( 'Action.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>3. Now Click on Users</p>
-                                <div> <img src="Users2.png" onclick="openModal( 'Users2.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>4. Then click on Add user</p>
-                                <div> <img src="AddUsers.png" onclick="openModal( 'AddUsers.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>5. "The 'Add or Edit' panel will open, and at the bottom, you will find the 'Grade'
-                                    field with a selection option."</p>
-                                <div> <img src="SelectGrade.png" onclick="openModal( 'SelectGrade.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>6. Then, click on 'Expense Type' under the 'Administration' section.</p>
-                                <div> <img src="Expense-Type.png" onclick="openModal( 'Expense-Type.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
 
-                                <div> <img src="AddExpense.png" onclick="openModal( 'AddExpense.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>7. After only per diem and Hotel and food expense only have these limit.Then make
-                                    sure toggle on for wide limit.</p>
-                                <div> <img src="Food.png" onclick="openModal( 'Food.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <h3 id="_dashboards"><a id="Expense-Type-Limits" class="header-icon-link highlight "
-                                        href=#>Expense Type Limits<i class="fas fa-link "
-                                            style="font-size:12px; color:lightgray;"></i></a>
-                                </h3>
-                                <p><b>Expense Type Limits Based on Grade</b>
-                                    <br>
-
-                                    Users can set a limit for expense types based on employee grades. For example, if a
-                                    user's grade is E1, and a limit of 2000 is defined for the "Per Diem" expense type,
-                                    the user can create expenses under this type only within the specified limit of
-                                    2000.
-                                </p>
-                                <div> <img src="Limit.png" onclick="openModal( 'Limit.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>While creating a Per Diem expense, if the amount exceeds the defined limit, an error
-                                    validation message will be displayed.</p>
-                                <div> <img src="Error.png" onclick="openModal( 'Error.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                            </ul>
-                            <h3 id="_dashboards"><a id="Approver-Budget-Limit" class="header-icon-link highlight "
+         <h3 id="_dashboards"><a id="Approver-Budget-Limit" class="header-icon-link highlight "
                                     href=#>Approver Budget Limit<i class="fas fa-link "
                                         style="font-size:12px; color:lightgray;"></i></a>
                             </h3>
                             <p><b>Approver Budget Limit </b>is as per Approver approved expense amount is
                                 validated or exceed in expense tracking applications.</p>
                             <ul>
-                                <li>• Approver Budget limit add for particular approver they can approve this much
+                                <li> Approver Budget limit add for particular approver they can approve this much
                                     amount only .</li>
                             </ul>
                             <p>Navigate to 'General Settings' and click on 'Budget Limit'."</p>
@@ -382,7 +295,69 @@
                             </p>
                             <div> <img src="comments.png" onclick="openModal( 'comments.png') " alt="Settings"
                                     width="100% " height="auto"></div><br>
-                            <h3 id="_dashboards"><a id="Mileage" class="header-icon-link highlight " href=#>Mileage<i
+
+
+
+
+                          
+
+            <!-- 7. Distance / Mileage -->
+          <!-- Distance Section -->
+<h3 id="_distance">
+    <a id="Distance" class="header-icon-link highlight" href="#">Distance
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+</h3>
+<p>When enabled you can add distace expenses.</p>
+
+<!-- Distance content/images can go here if any -->
+<div>
+    <img src="distance.png" onclick="openModal('distance.png')" alt="Distance" width="100%" height="auto">
+</div>
+<br>
+<div>
+    <img src="distance1.png" onclick="openModal('distance1.png')" alt="Distance" width="100%" height="auto">
+</div>
+<br>
+
+ <!-- 8. Time -->
+            <h3 id="Time">
+                <a class="header-icon-link highlight" href="#">Time
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>when enabled time related expenses can be added.</p>
+             <div><img src="log4.png" onclick="openModal('log4.png')" alt="Settings" width="100%" height="auto"></div><br>
+             <div><img src="t.png" onclick="openModal('t.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+
+
+
+
+           
+            <!-- 9. Manage Expenses -->
+            <h3 id="Manage-Expenses">
+                <a class="header-icon-link highlight" href="#">Manage Expenses
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Enable this to show single and multiple expenses.</p>
+             <div><img src="log3.png" onclick="openModal('log3.png')" alt="Settings" width="100%" height="auto"></div><br>
+             <div><img src="e.png" onclick="openModal('e.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+
+
+            <!-- 10. Custom Forex Rate -->
+            <h3 id="Custom-Forex-Rate">
+                <a class="header-icon-link highlight" href="#">Custom Forex Rate
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p>Enable this to manually add forex rate.</p>
+             <div><img src="log2.png" onclick="openModal('log2.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+<!-- Mileage Section -->
+  <h3 id="_dashboards"><a id="Mileage" class="header-icon-link highlight " href=#>Mileage<i
                                         class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
                             </h3>
                             <p>If an approver does not have a sufficient budget limit, they will not receive the expense
@@ -422,10 +397,60 @@
                                     expense.</p>
                                 <div> <img src="Submit.png" onclick="openModal( 'Submit.png') " alt="Settings"
                                         width="100% " height="auto"></div><br>
-                                         <h3 id="_dashboards"><a id="Delete-Expense" class="header-icon-link highlight " href=#>Delete Expense <i
-                                        class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
-                            </h3>
-                                <p>Deleting an Expense makes it inactive, and it can be restored based on the expiration
+            <!-- 11. Employee Grades -->
+           <h3 id="_dashboards"><a id="Employee-Grades" class="header-icon-link highlight "
+                                        href=#>Employee Grades<i class="fas fa-link "
+                                            style="font-size:12px; color:lightgray;"></i></a>
+                                </h3>
+                                <p><b>Employee Grades </b>is as per user grade fixing Budget for
+                                    particular expense type in expense tracking applications.</p>
+                                <ul>
+                                    <li>Users can add Grade for fixing limit as per user grade .</li>
+                                </ul>
+                                <br>
+                                <p>1. Go to the Features and click on Employee Grades.</p>
+                                <div> <img src="EmployeeGrade.png" onclick="openModal( 'EmployeeGrade.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+                                <p>2. This Dialog box will open</p>
+                                <div> <img src="Employee.png" onclick="openModal( 'Employee.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+
+                                <p>• Enable Employeegrades: A toggle to activate or deactivate the Employeegrades
+                                    integration in the application.
+                                    <br>
+                                    • Save Button: A button to save changes or configurations made in the Employee
+                                    grades settings.
+                                </p>
+                                <div> <img src="Action.png" onclick="openModal( 'Action.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>3. Now Click on Users</p>
+                                <div> <img src="Users2.png" onclick="openModal( 'Users2.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>4. Then click on Add user</p>
+                                <div> <img src="AddUsers.png" onclick="openModal( 'AddUsers.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>5. "The 'Add or Edit' panel will open, and at the bottom, you will find the 'Grade'
+                                    field with a selection option."</p>
+                                <div> <img src="SelectGrade.png" onclick="openModal( 'SelectGrade.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>6. Then, click on 'Expense Type' under the 'Administration' section.</p>
+                                <div> <img src="Expense-Type.png" onclick="openModal( 'Expense-Type.png') "
+                                        alt="Settings" width="100% " height="auto"></div><br>
+
+                                <div> <img src="AddExpense.png" onclick="openModal( 'AddExpense.png') " alt="Settings"
+                                        width="100% " height="auto"></div><br>
+                                <p>7. After only per diem and Hotel and food expense only have these limit.Then make
+                                    sure toggle on for wide limit.</p>
+                                <div> <img src="Food.png" onclick="openModal( 'Food.png') " alt="Settings" width="100% "
+                                        height="auto"></div><br>
+
+            <!-- 12. Delete Expense -->
+            <h3 id="_dashboards">
+                <a id="Delete-Expense" class="header-icon-link highlight" href="#">Delete Expense
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+           <p>Deleting an Expense makes it inactive, and it can be restored based on the expiration
                                     date.
                                     <br>
                                     As per settings, the Recycle Bin and Bulk Inactive options will be available. These
@@ -471,73 +496,132 @@
                                 <p>After reviewing the expense, click on the Restore icon to bring it back.</p>
                                 <div> <img src="backbutton.png" onclick="openModal( 'backbutton.png') " alt="Settings"
                                         width="100% " height="auto"></div><br>
-                                <p><b>User Role scope</b></p>
-                                <br>
-                                <p>User Role Scope is used to filter expenses based on Location, Department, and Cost
-                                    Center in the expense tracking application.</p>
-                                <ol>
-                                    <li>As per the role scope, the expenses will be displayed in the Expense Home
-                                        Module.</li>
-                                    <li>This feature is applicable only to Finance, Finance Head, and HR Head.</li>
-                                </ol>
-                                <p>Navigate to User Roles and Permissions and click on Role Scope.</p>
-                                <div> <img src="UserRoleScopes.png" onclick="openModal( 'UserRoleScopes.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <p>Navigate to User Roles and Permissions and click on Role Scope.</p>
-                                <div> <img src="UserRoleScopes.png" onclick="openModal( 'UserRoleScopes.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <p><b>Enable Role Scope:</b> A toggle to activate or deactivate the Role Scope feature,
-                                    which
-                                    will reflect across the entire application.
-                                    <br>
-                                    <b>Save Button:</b> A button to save any changes or configurations made in the
-                                    Enable Role
-                                    Scope settings.
+                               
+
+            <!-- 13. Import Cards -->
+            <h3 id="Import-Cards">
+                <a class="header-icon-link highlight" href="#">Import Cards
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+           <p>Enable this option to display import cards, allowing users to upload and view imported data.</p>
+
+<div>
+    <img src="log1.png" onclick="openModal('log1.png')" alt="Settings" width="100%" height="auto">
+</div>
+<br>
+
+<p>To upload bulk expenses:</p>
+<ol>
+    <li>
+        Click on <strong>Add</strong> and select <strong>Upload</strong>.
+        <div>
+            <img src="import.png" onclick="openModal('import.png')" alt="Upload Option" width="100%" height="auto">
+        </div>
+        <br>
+    </li>
+    <li>
+        Attach the file containing the bulk expenses, then click on the <strong>Upload</strong> button.
+        <div>
+            <img src="import1.png" onclick="openModal('import1.png')" alt="Attach File" width="100%" height="auto">
+        </div>
+        <br>
+    </li>
+    <li>
+        The system will automatically fetch the details from the uploaded file.
+        <div>
+            <img src="import2.png" onclick="openModal('import2.png')" alt="Fetched Details" width="100%" height="auto">
+        </div>
+        <br>
+    </li>
+</ol>
+
+
+
+
+            <!-- 14. Expense Future Days -->
+            <h3 id="Expense-Future-Days">
+                <a class="header-icon-link highlight" href="#">Expense Future Days
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                </a>
+            </h3>
+            <p > When creating new expenses,
+                    the days from today's date up to the selected number of days will be active, while all other days will
+                    be disabled. For example, If 5 days is selected and the chosen date is July 17,
+                    then the next 5 days, from July 18 to July 22, will be active, while all other
+                    days will be disabled.</p><br>
+                <div><img src="9.png" onclick="openModal('9.png')" alt="Settings" width="100%" height="auto"></div><br>
+                <div><img src="21.png" onclick="openModal('21.png')" alt="Settings" width="100%" height="auto"></div><br>
+
+            <!-- 15. Logs Collection -->
+           <div class="bg-light p-4 remove-padding common-scroll" id="Logs-Collection">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Logs Types
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>After enabling log collection, the user will see an option for 'Log Types' below."
                                 </p>
-                                <div> <img src="Rolesave.png" onclick="openModal( 'Rolesave.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>Then, click on the User Module, add or edit a user, and select the role as Finance,
-                                    Finance Head, or HR Head. The Role Scope field will only be displayed for these
-                                    roles.</p>
-                                <div> <img src="addroleuser.png" onclick="openModal( 'addroleuser.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>The Role Scope has three options: ALL, Cost Center, Department, and Location.</p>
-                                <ol>
-                                    <li>If you select Location, the Location Scope field will appear below.</li>
-                                    <li>If you select Department, the Department Scope field will appear.</li>
-                                    <li>If you select ALL, all fields will be displayed.</li>
-                                </ol>
-                                <div> <img src="DepartmentScope.png" onclick="openModal( 'DepartmentScope.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <div> <img src="LocationScope.png" onclick="openModal( 'LocationScope.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <p>After saving, check the Expense Home Page. For example, if Joni's Role Scope is set
-                                    to Location and the Location Scope is set to Canada, then, when Joni is the current
-                                    user and their role is Finance Head, only expenses related to users who have Canada
-                                    as their location will be displayed in the Expense Home and Approved file.</p>
-                                <div> <img src="rolelocation.png" onclick="openModal( 'rolelocation.png') "
-                                        alt="Settings" width="100% " height="auto"></div><br>
-                                <p>Following the set flow, expenses will be displayed based on the defined Role Scope
-                                    and Location Scope settings.</p>
-                                <div> <img src="Flow.png" onclick="openModal( 'Flow.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <p>When an expense is created, it will be checked against the current user’s Role Scope
-                                    (Location, Department, or Cost Center) to determine which expenses should be
-                                    displayed based on the user’s assigned scope.</p>
-                                <div> <img src="John.png" onclick="openModal( 'John.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <div> <img src="Shan.png" onclick="openModal( 'Shan.png') " alt="Settings" width="100% "
-                                        height="auto"></div><br>
-                                <p>When an expense is created, it will be displayed for the current user only if the
-                                    Reported By field matches their Role Scope settings (Location, Department, or Cost
-                                    Center).</p>
-                                <div> <img src="numbers.png" onclick="openModal( 'numbers.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
-                                <p>After see joni current user and role scope enabled from stiing which have reported by
-                                    location is canada those expense only will dilpaly here</p>
-                                <div> <img src="currentUser.png" onclick="openModal( 'currentUser.png') " alt="Settings"
-                                        width="100% " height="auto"></div><br>
+                                <div><img src="Showlogs.png" onclick="openModal('Showlogs.png')" alt="title text"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                <ul style="list-style-type: bullet;">
+                                    <li><b>Debug Logs:</b> Captures detailed system activity for in-depth
+                                        troubleshooting. It generates extensive logs and requires significant storage
+                                        space. Ideal for resolving specific issues. </li>
+                                    <br>
+                                    <li><b>Information Logs:</b>Records all application actions, providing a complete
+                                        activity trail. Useful for analyzing suspected issues but consumes moderate
+                                        storage. </li>
+                                    <br>
+                                    <li><b>Warning Logs:</b>Logs errors and potential risks that might not immediately
+                                        disrupt functionality. Focused on early issue detection with minimal storage
+                                        impact. </li>
+                                    <br>
+                                    <!-- <li><b>Error Logs:</b>Logs critical errors affecting application functionality.
+                                        Provides essential details for immediate troubleshooting with minimal storage
+                                        usage.</li> -->
+                                    <br>
+                                </ul>
+                                </p>
+                                <div><img src="LogsType.png" onclick="openModal('LogsType.png')" alt="title text"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>If the user selects 'Debug' from the log types and saves it.</p>
+                                <div><img src="Debug.png" onclick="openModal('Debug.png')" alt="title text" width="100%"
+                                        height="auto"></div>
+                                <br>
+                                <p>Then, the user will see an option to 'Download Logs' after going to the help page.
+                                </p>
+                                <div><img src="HelpPageDownLoadLlogs.png"
+                                        onclick="openModal('HelpPageDownLoadLlogs.png')" alt="title text" width="100%"
+                                        height="auto"></div>
+                                <br>
+                                <p>In the field, the current user's name must be entered, and then by clicking on
+                                    'View,' the user can access and view the debug logs.</p>
+                                <div><img src="ViewLogs.png" onclick="openModal('ViewLogs.png')" alt="title text"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="DebugView.png" onclick="openModal('DebugView.png')" alt="title text"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>The user can click on the 'Share' icon to share the logs. Encrypted logs will be
+                                    shared with Cubic for further troubleshooting and to provide a more efficient
+                                    resolution.</p>
+                                <div><img src="Sharelogs.png" onclick="openModal('Sharelogs.png')" alt="title text"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p>For downloading, the user can click on the 'Download' option to retrieve the logs.
+                                </p>
+                                <div><img src="downloadlogs.png" onclick="openModal('downloadlogs.png')"
+                                        alt="title text" width="100%" height="auto"></div>
+                            </ul>
+
+
                         </div>
+                        </div>
+        </ul>
+    </div>
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev " href="../integration/ " aria-label="Previous page"><i

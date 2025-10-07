@@ -83,10 +83,7 @@ active">
                                     Admin Guide
                                 </a>
                                
-                                <ul id="clmmodernadmin" class="sidenavbarscrollstyle">
-
-                                </ul>
-                            
+                                <ul id="clmmodernadmin" class="sidenavbarscrollstyle"></ul>
                         </li>
                         </ul>
 
@@ -96,46 +93,142 @@ active">
   <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
 
     <div class="bg-light p-4 remove-padding">
-      <h2 id="_dashboards">
-        <a class="header-icon-link highlight" href="#">Dashboard
+  <h2 id="_dashboards">
+    <a class="header-icon-link highlight" href="#">Dashboard
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h2>
+  <br>
+  <p>CLM365 provides two primary dashboards designed to streamline contract and request visibility across the platform:</p>
+  <ul class="ul_li_styles">
+    <li><strong>Contract Dashboard</strong></li>
+    <li><strong>Request Dashboard</strong></li>
+  </ul>
+  <br>
+  <div><img src="epmhelp.png" onclick="openModal('epmhelp.png')" alt="Dashboard Overview" width="100%" height="auto"></div>
+  <br>
+
+  <!-- Contract Dashboard Section -->
+  <div class="bg-light p-4 remove-padding common-scroll" id="Contract">
+    <ul class="page-list">
+      <h2 id="_contract_dashboard">
+        <a class="header-icon-link highlight" href="#">Contract
           <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
         </a>
       </h2>
-      <br>
-      <p>CLM365 provides two primary dashboards designed to streamline contract and request visibility across the platform:</p>
-      <ul class="ul_li_styles">
-        <li><strong>Contract Dashboard</strong></li>
-        <li><strong>Request Dashboard</strong></li>
-      </ul>
-      <br>
-      <div><img src="epmhelp.png" onclick="openModal('epmhelp.png')" alt="Dashboard Overview" width="100%" height="auto"></div>
-      <br>
-    </div>
+    </ul>
+    <p><strong>Contract Dashboard:</strong> Provides a centralized view of all contracts and contract requests, enabling efficient monitoring, management, and tracking throughout the contract lifecycle.</p>
+    <div><img src="3.png" onclick="openModal('3.png')" alt="Settings Example 2" width="100%" height="auto"></div>
 
-    <div class="bg-light p-4 remove-padding common-scroll" id="Contract">
-      <ul class="page-list">
-        <h2 id="_contract_dashboard">
-          <a class="header-icon-link highlight" href="#">Contract
-            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-          </a>
-        </h2>
-      </ul>
-      <p><strong>Contract Dashboard:</strong> Offers a centralized view of published contract requests and directly created contracts, enabling efficient monitoring and management across contract lifecycles.</p>
-      <div><img src="help_icon.png" onclick="openModal('help_icon.png')" alt="Contract Dashboard" width="100%" height="auto"></div>
-      <br>
-    </div>
 
-    <div class="bg-light p-4 remove-padding common-scroll" id="Request">
-      <ul class="page-list">
-        <h2 id="_request_dashboard">
-          <a class="header-icon-link highlight" href="#">Request
-            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-          </a>
-        </h2>
-      </ul>
-      <p><strong>Request Dashboard:</strong> Provides end-to-end visibility into contract requests, capturing each stage from initiation to final publication for better tracking and oversight.</p>
-      <div><img src="request.png" onclick="openModal('request.png')" alt="Request Dashboard" width="100%" height="auto"></div>
-      <br>
+<h3>Contracts by Type</h3>
+<p>Shows the distribution of contracts across different categories, providing a clear understanding of the types of agreements managed within the system.</p>
+<div><img src="contracts_by_type.png" onclick="openModal('contracts_by_type.png')" alt="Contracts by Type" width="100%" height="auto"></div>
+<br>
+
+<h3>Contracts by Status</h3>
+<p>Displays contracts according to their current status, helping track workflow stages and progress across all agreements.</p>
+<div><img src="contracts_by_status.png" onclick="openModal('contracts_by_status.png')" alt="Contracts by Status" width="100%" height="auto"></div>
+<br>
+
+<h3>Contracts by Assignee</h3>
+<p>Highlights the number of contracts assigned to each individual, allowing visibility into workloads and responsibilities.</p>
+<div><img src="contracts_by_assignee.png" onclick="openModal('contracts_by_assignee.png')" alt="Contracts by Assignee" width="100%" height="auto"></div>
+<br>
+
+<h3>Contracts Over Time</h3>
+<p>Tracks contract activity over a period of time, showing trends and identifying periods of high or low activity.</p>
+<div><img src="contracts_by_month.png" onclick="openModal('contracts_by_month.png')" alt="Contracts Over Time" width="100%" height="auto"></div>
+<br>
+
+<h3>Expiring Contracts</h3>
+<p>Provides an overview of contracts approaching their end dates, supporting proactive renewal or termination planning.</p>
+<div><img src="expiring_contracts.png" onclick="openModal('expiring_contracts.png')" alt="Expiring Contracts" width="100%" height="auto"></div>
+<br>
+
+<h3>Top Contracts by Type</h3>
+<p>Highlights the most common contract categories, offering insight into frequently used agreements within the organization.</p>
+<div><img src="top_contracts_by_type.png" onclick="openModal('top_contracts_by_type.png')" alt="Top Contracts by Type" width="100%" height="auto"></div>
+<br>
+
+<h3>Top Contracts by Counterparty</h3>
+<p>Shows the counterparties most frequently involved in contracts, providing visibility into key relationships and partnerships.</p>
+<div><img src="top_contracts_by_counterparty.png" onclick="openModal('top_contracts_by_counterparty.png')" alt="Top Contracts by Counterparty" width="100%" height="auto"></div>
+<br>
+
+<h3>Contract Costs</h3>
+<p>Displays the cost distribution across contracts over time, allowing monitoring of financial trends and budget allocation.</p>
+<div><img src="contracts_by_cost.png" onclick="openModal('contracts_by_cost.png')" alt="Contract Costs" width="100%" height="auto"></div>
+<br>
+
+<h3>Settings</h3>
+<p>Use the settings options to adjust the layout, reorganize sections, or modify which elements are displayed.</p>
+<p>Charts can be customized, moved, or removed to enhance visualization and improve dashboard clarity.</p>
+<div >
+  <div><img src="2.png" onclick="openModal('2.png')" alt="Settings Example 1" width="100%" height="auto"></div>
+  <div><img src="1.png" onclick="openModal('1.png')" alt="Settings Example 2" width="100%" height="auto"></div>
+</div>
+<br>
+
+  </div>
+
+  <!-- Request Dashboard Section -->
+  <div class="bg-light p-4 remove-padding common-scroll" id="Request">
+    <ul class="page-list">
+      <h2 id="_request_dashboard">
+        <a class="header-icon-link highlight" href="#">Request
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
+    </ul>
+    <p><strong>Request Dashboard:</strong> Provides a complete view of all contract requests, allowing visibility into each stage from initiation to final approval and publication for efficient tracking and management.</p><br>
+ <div><img src="4.png" onclick="openModal('4.png')" alt="Settings Example 2" width="100%" height="auto"></div>
+
+<h3>Requests by Type</h3>
+<p>Displays the distribution of requests across different categories, providing insight into the types of requests being processed.</p>
+<div><img src="requests_by_type.png" onclick="openModal('requests_by_type.png')" alt="Requests by Type" width="100%" height="auto"></div>
+<br>
+
+<h3>Requests by Status</h3>
+<p>Shows requests according to their current status, helping monitor progress and identify bottlenecks in the approval process.</p>
+<div><img src="requests_by_status.png" onclick="openModal('requests_by_status.png')" alt="Requests by Status" width="100%" height="auto"></div>
+<br>
+
+<h3>Requests by Assignee</h3>
+<p>Highlights requests assigned to individuals, providing visibility into workloads and responsibility allocation.</p>
+<div><img src="requests_by_assignee.png" onclick="openModal('requests_by_assignee.png')" alt="Requests by Assignee" width="100%" height="auto"></div>
+<br>
+
+<h3>Requests Over Time</h3>
+<p>Tracks the volume of requests over a period of time, showing trends and periods of increased activity.</p>
+<div><img src="requests_by_month.png" onclick="openModal('requests_by_month.png')" alt="Requests Over Time" width="100%" height="auto"></div>
+<br>
+
+<h3>Request Aging</h3>
+<p>Illustrates the aging of requests, helping identify requests that require attention based on how long they have been pending.</p>
+<div><img src="requests_aging.png" onclick="openModal('requests_aging.png')" alt="Request Aging" width="100%" height="auto"></div>
+<br>
+
+<h3>Top Requests by Type</h3>
+<p>Highlights the most frequently submitted request types, providing insight into common organizational needs.</p>
+<div><img src="top_requests_by_type.png" onclick="openModal('top_requests_by_type.png')" alt="Top Requests by Type" width="100%" height="auto"></div>
+<br>
+
+<h3>Top Requests by Counterparty</h3>
+<p>Displays the counterparties most frequently involved in requests, offering insight into key relationships.</p>
+<div><img src="top_requests_by_counterparty.png" onclick="openModal('top_requests_by_counterparty.png')" alt="Top Requests by Counterparty" width="100%" height="auto"></div>
+<br>
+
+<h3>Settings</h3>
+<p>Use the settings options to adjust the dashboard layout, reorganize sections, or modify which elements are displayed.</p>
+<p>Requests can be customized, moved, or removed to improve visualization and enhance clarity.</p>
+<div>
+  <div><img src="5.png" onclick="openModal('5.png')" alt="Settings Example 1" width="100%" height="auto"></div><br>
+  <div><img src="6.png" onclick="openModal('6.png')" alt="Settings Example 2" width="100%" height="auto"></div>
+</div>
+<br>
+
+</div>
     </div>
 
     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">

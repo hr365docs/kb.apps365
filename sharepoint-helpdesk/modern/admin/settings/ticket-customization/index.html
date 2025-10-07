@@ -81,7 +81,7 @@
         <div class="container container-padding">
             <div class=row>
                 <div class=col-lg-3>
-                    \ <div class=sidebar>
+                    <div class=sidebar>
                         <h5 class="mbHeading" style="color:SlateBlue"> <a
                                 href="../../../../../sharepoint-helpdesk/">Helpdesk 365</a>
                         </h5>
@@ -107,7 +107,7 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
 
                                 <p>
-                                    From this section, you can customize the tickets.
+                                    From here, you can customize the tickets.
                                 </p>
 
                                 <div><img src="ticket_customize.png" onclick="openModal('ticket_customize.png')"
@@ -124,9 +124,9 @@
 
 
                                 <p>
-                                    From this section, you can <strong>add</strong>, <strong>edit</strong>, or <strong>delete</strong> the priority types. 
-                                    These priority options will be displayed in the <strong>new request panel</strong>, allowing the requester to 
-                                    select the appropriate priority for their ticket.
+                                    From here you can add, edit or delete the priority types. These priorities are
+                                    displayed in the new request panel from where the requester can select the
+                                    priorities for their ticket.
                                 </p>
 
 
@@ -146,7 +146,7 @@
                                     <br>
                                     <li>
                                         <p>
-                                            Enter the <b>Add New Priority</b> and click on <b>Save</b> button.
+                                            Enter <b>Add New Priority</b> and click on <b>Save</b> button.
                                         </p>
 
                                         <div><img src="add_priority.png" onclick="openModal('add_priority.png')"
@@ -179,30 +179,37 @@
 
 
                                 <p>
-                                    The admin can add request types from the settings. These request types will be displayed in the New Ticket panel.
+                                    Admin can add request types from settings such request type will display in new
+                                    ticket panel.
                                 </p>
-                                
+
+
                                 <p>
-                                    To create a request type, follow these steps:
+                                    To create request type, follow the below steps:
                                 </p>
-                                
+
                                 <ol>
+
                                     <li>
                                         <p>
-                                            Click on <b>+ Add</b>, which will display the <b>Add Request Type</b> page.
+                                            Click on <b>+Add</b>, this displays <b>Add Request Type</b> page.
                                         </p>
-                                        <div><img src="request_type.png" onclick="openModal('request_type.png')" alt="Add Request Type" width="100%" height="auto"></div>
+
+                                        <div><img src="request_type.png" onclick="openModal('request_type.png')"
+                                                alt="Add Request Type" width="100%" height="auto"></div>
                                         <br>
+
                                     </li>
-                                
+
                                     <li>
                                         <p>
-                                            Enter the <b>Request Type</b> name and click the <b>Submit</b> button.
+                                            Enter <b>Add Request Type</b> and click on <b>Submit</b> button.
                                         </p>
-                                        <div><img src="add_request.png" onclick="openModal('add_request.png')" alt="Enter Request Type" width="100%" height="auto"></div>
+
+                                        <div><img src="add_request.png" onclick="openModal('add_request.png')"
+                                                alt="Enter request" width="100%" height="auto"></div>
                                     </li>
                                 </ol>
-                                
                                 <br>
 
 
@@ -231,13 +238,14 @@
 
 
                                 <p>
-                                    From here, the admin can add, edit, or delete status types. These statuses will be displayed on the requester's homepage, allowing them to track the status of their tickets.
+                                    From here admin could add, edit, or delete the status. All these status are
+                                    displayed on the home page of the requester and they would be able to check the
+                                    status for their ticket.
                                 </p>
-                                
+
                                 <p>
-                                    To create a status, follow these steps:
+                                    To create status, follow the below steps:
                                 </p>
-                                
 
                                 <ol>
                                     <div><img src="new_status.png" onclick="openModal('new_status.png')"
@@ -300,7 +308,24 @@
                                 <div><img src="ticket_sq.png" onclick="openModal('ticket_sq.png')" alt="Ticket sequence"
                                         width="100%" height="auto"></div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id=ticket-sequence>
+                        
+                        <!-- 1) Modern View Fields -->
+<div class="bg-light p-4 remove-padding common-scroll" id="modern-view-fields">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Modern View Fields
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            This option lets you manage the order and visibility of fields in the modern view. 
+            You can rearrange the sequence of fields and use checkboxes to decide which fields 
+            are visible to users and members. This provides flexibility to customize how information 
+            is displayed.
+        </p>
+        <div><img src="8.png" onclick="openModal('8.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id=ticket-sequence>
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Sequence
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
@@ -330,6 +355,296 @@
                                     </div>
                                 </div>
                         </div>
+
+<!-- 2) Transfer of Ticket -->
+<div class="bg-light p-4 remove-padding common-scroll" id="transfer-ticket">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Transfer of Ticket
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            A toggle option that allows agents to transfer tickets between teams or members. 
+            When enabled, a transfer option will be available in ticket actions.
+        </p>
+        <div><img src="7.png" onclick="openModal('7.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
+<!-- 3) Reopen Tickets on Reply -->
+<div class="bg-light p-4 remove-padding common-scroll" id="reopen-reply">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Reopen Tickets on Reply
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            This feature works with Microsoft Power Automate. When configured, a ticket will 
+            automatically reopen if a reply is received. Ensure that your helpdesk mailbox 
+            is set up correctly under integrations for this feature to function.
+        </p>
+        <div><img src="6.png" onclick="openModal('6.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
+<!-- 4) Hide Teams Option While Creating Ticket -->
+<div class="bg-light p-4 remove-padding common-scroll" id="hide-teams">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Hide Teams Option While Creating a Ticket
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            When enabled, the <strong>Teams</strong> selection field will be hidden during ticket creation. 
+            This simplifies the request form for users and ensures tickets are automatically routed 
+            without user team selection.
+        </p>
+        <div><img src="5.png" onclick="openModal('5.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
+<!-- 5) Ticket Properties Configuration -->
+<div class="bg-light p-4 remove-padding common-scroll" id="ticket-properties">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Ticket Properties Configuration
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            Enabling this option allows users to update ticket properties such as priority, 
+            category, or assigned team without reopening the ticket. If disabled, tickets 
+            must be reopened before any property changes can be made.
+        </p>
+        <div><img src="1.png" onclick="openModal('1.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
+<!-- 6) Hide Ticket Title -->
+<div class="bg-light p-4 remove-padding common-scroll" id="hide-ticket-title">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Hide Ticket Title
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            When this feature is enabled, the <strong>Ticket Title</strong> field will be hidden 
+            from the new request form. Instead, the system will generate the title automatically 
+            by combining <strong>Teams, Services, and Sub-services</strong>.
+        </p>
+        <div><img src="2.png" onclick="openModal('2.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
+<!-- 7) Hide Consult Button -->
+<div class="bg-light p-4 remove-padding common-scroll" id="hide-consult">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Hide Consult Button
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            a) <strong>Hide Consult Button</strong> – Toggle to completely hide the consult button from ticket actions.<br>
+            b) <strong>Consult with All Team Members</strong> – Toggle to allow or restrict consulting 
+            with all team members at once, depending on your workflow needs.
+        </p>
+        <div><img src="3.png" onclick="openModal('3.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="Enable-ticket-closed-justification">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable ticket closed
+                                        justification
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    The 'Enable ticket closed justification' setting allows users to require
+                                    justification when closing a ticket. This can be toggled on or off as needed for
+                                    additional accountability in ticket management.
+                                </p>
+                                <div><img src="ClosedJusti.png" onclick="openModal('ClosedJusti.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div><br>
+                                 <div><img src="9.png" onclick="openModal('9.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                
+                                <p>
+                                    If you enable Enable ticket closed justification you will need to provide a
+                                    justification every time you close a ticket.
+                                </p>
+                                <div><img src="justification.png" onclick="openModal('justification.png')"
+                                        alt="Review ticket" width="100%" height="auto"></div>
+                                <br>
+                                <p>
+                                    And if the user has enabled the 'Enable ticket closed justification' setting, then
+                                    the second option, 'Make Ticket Closure Justification Mandatory,' will be shown. In
+                                    this case, the user will not be able to close the ticket without providing
+                                    justification—it will be mandatory.
+                                </p>
+                                <div><img src="mandatoryJustifaction.png"
+                                        onclick="openModal('mandatoryJustifaction.png')" alt="Review ticket"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+
+                        </div>
+                          <div class="bg-light p-4 remove-padding common-scroll" id=Tickets-comments-page>
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Tickets Comments page
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    <b>Tickets Comments page</b> could be added.
+                                </p>
+
+                                <div><img src="TicketCommnetsPage.png" onclick="openModal('TicketCommnetsPage.png')"
+                                        alt="Custom Form" width="100%" height="auto"></div>
+                                <br>
+                                <!-- <p>
+                                    On the ticket customization settings panel, click the <b>Configure</b> button.
+                                </p>
+
+
+
+                                <div><img src="TCKET.png" onclick="openModal('TCKET.png')" alt="configure form"
+                                        width="100%" height="auto"></div><br>
+                                <br> -->
+                                <p>If the user keeps this setting on
+                                </p>
+                                <div><img src="Custom.png" onclick="openModal('Custom.png')" alt="Add form" width="100%"
+                                        height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>The ticket properties of the custom form being used to create the ticket will be
+                                    displayed as columns in the properties section of the comment page.
+                                </p>
+                                <div><img src="CustomFields.png" onclick="openModal('CustomFields.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                    <br>
+                                <p>If the user keeps Show approval remarks in comments section
+
+                                    setting on.
+                                </p>
+                                <div><img src="ApprovalToogle.png" onclick="openModal('ApprovalToogle.png')"
+                                        alt="Add form" width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                    <br>
+                                <p>In the Approval tab, after selecting an Approved Ticket, the comment page will open.
+                                </p>
+                                <div><img src="ApprovalTab.png" onclick="openModal('ApprovalTab.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>After selecting this ticket, the comments will be displayed inside the comment page.
+                                </p>
+                                <div><img src="approvalComment.png" onclick="openModal('approvalComment.png')"
+                                        alt="Add form" width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>The ticket you selected in the Approval tab can now be selected in the Teams Tickets
+                                    tab, and its comment page will also be displayed.
+                                </p>
+                                <div><img src="TeamsTab.png" onclick="openModal('TeamsTab.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>After that, the same comments will be shown in the ticket under the Teams Tickets
+                                    tab, just as they were in the ticket under the Approval tab. This happens because
+                                    the toggle is turned on; otherwise, the comments would only be visible under the
+                                    Approval tab.
+                                </p>
+                                <div><img src="teamsComment.png" onclick="openModal('teamsComment.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>If the user keeps this setting on, the mobile number will be fetched from the user's
+                                    details. If the user's mobile number is not available, the office phone number will
+                                    be displayed by default.
+                                </p>
+                                <div><img src="PhoneNO.png" onclick="openModal('PhoneNO.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    <br>
+                                <p>After the setting is turned on, the mobile number will be displayed under the user's
+                                    contact info.
+                                </p>
+                                <div><img src="ContactInfo.png" onclick="openModal('ContactInfo.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>
+                                    Fill out the required data and choose the checkbox to include the field in the form
+                                    to build a custom form. Click the <b>Save</b> button now.
+                                </p>
+                                <div><img src="save_form.png" onclick="openModal('save_form.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <div class="notices note">
+                                    <div class="paragraph">
+                                        <p>Note: To make field mandatory, please check the check box & selected field
+                                            will be denoted by asterisk for your reference. </p>
+                                    </div>
+                                </div>
+
+                                <p><b>Delete</b>: Click on the delete icon to delete a field.</p>
+                                <p><b>Add</b>: Drag the fields to add in the ticket form.</p>
+
+                                <div><img src="delete_field.png" onclick="openModal('delete_field.png')"
+                                        alt="Delete field" width="100%" height="auto"></div><br>
+
+
+                                <p>You can use the search box field to search through the fields.
+
+                                </p><br>
+                                <div><img src="Search.png" onclick="openModal('Search.png')" alt="Delete field"
+                                        width="100%" height="auto"></div><br>
+
+                                <p>The form will be added to the panel after saving, where you may edit or delete it.
+
+                                </p>
+                                <div><img src="added_in_panel.png" onclick="openModal('added_in_panel.png')"
+                                        alt="Added form" width="100%" height="auto"></div><br>
+                                <p>Click on the gear icon to <b>Configure Custom Form</b>.</p>
+                                <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"
+                                        width="100%" height="auto"></div><br>
+                                <p>Select the check box <b>Make this Form as Default Form</b> to make the form as a
+                                    default form. A pop up will appear , click on the <b>OK</b> button.</p>
+                                <div><img src="default_form.png" onclick="openModal('default_form.png')" alt="Add form"
+                                        width="100%" height="auto"></div><br>
+                                <p>The custom form will be displayed on the <b>New Ticket</b> panel.</p>
+                                <div><img src="select_form.png" onclick="openModal('select_form.png')" alt="Select form"
+                                        width="100%" height="auto"></div><br>
+                                <p>Click on the requester configure button from the <b>Notifications.</b></p>
+                                <div><img src="requester.png" onclick="openModal('requester.png')"
+                                        alt="requester configure" width="100%" height="auto"></div><br>
+                                <p>Now click on the edit icon from the <b>Requester</b> panel.</p>
+                                <div><img src="edit_requesters.png" onclick="openModal('edit_requesters.png')"
+                                        alt="edit requester" width="100%" height="auto"></div><br>
+                                <p>From the edit email body panel you could the custom templates from the <b>Custom
+                                        Template</b> dropdown.</p>
+                                <div><img src="custom_body.png" onclick="openModal('custom_body.png')"
+                                        alt="edit email body" width="100%" height="auto"></div><br>
+
+                                <div><img src="save_body.png" onclick="openModal('save_body.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+                        </div>
+
+<!-- 8) Custom Filters -->
+<div class="bg-light p-4 remove-padding common-scroll" id="custom-filters">
+    <div class="page-list">
+        <h2><a class="header-icon-link highlight" href="#">Custom Filters
+            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+        </h2>
+        <p>
+            Create and manage your own filters for tickets. Custom filters allow agents or admins 
+            to save specific search conditions (such as by status, priority, or assigned team) for 
+            quick access and better workflow organization.
+        </p>
+        <div><img src="4.png" onclick="openModal('4.png')" alt="save email body"
+                                        width="100%" height="auto"></div><br>
+    </div>
+</div>
+
                         <div class="bg-light p-4 remove-padding common-scroll" id=custom-form>
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Custom Forms
@@ -343,14 +658,14 @@
                                 <div><img src="custom_form.png" onclick="openModal('custom_form.png')" alt="Custom Form"
                                         width="100%" height="auto"></div>
                                 <br>
-                                <p>
+                                <!-- <p>
                                     On the ticket customization settings panel, click the <b>Configure</b> button.
                                 </p>
 
 
 
                                 <div><img src="configure_form.png" onclick="openModal('configure_form.png')"
-                                        alt="configure form" width="100%" height="auto"></div><br>
+                                        alt="configure form" width="100%" height="auto"></div><br> -->
 
                                 <p>When a panel with custom forms opens, click on the <b>Add</b> button in the panel.
                                 </p>
@@ -376,166 +691,15 @@
                                         alt="Delete field" width="100%" height="auto"></div><br>
 
 
-                                        <p>
-                                            Use the search box to quickly search through the available fields.
-                                       
-
-                                </p><br>
-                                <div><img src="Search.png" onclick="openModal('Search.png')" alt="Delete field"
-                                        width="100%" height="auto"></div><br>
-
-                                        <p>
-                                            The form will be added to the panel after saving, and you will have the option to edit or delete it.
-                                        </p>
-                                        
-                                <div><img src="added_in_panel.png" onclick="openModal('added_in_panel.png')"
-                                        alt="Added form" width="100%" height="auto"></div><br>
-                                <p>Click on the gear icon to <b>Configure Custom Form</b>.</p>
-                                <div><img src="gear_icon.png" onclick="openModal('gear_icon.png')" alt="Gear icon"
-                                        width="100%" height="auto"></div><br>
-                                <p>Select the check box <b>Make this Form as Default Form</b> to make the form as a
-                                    default form. A pop up will appear , click on the <b>OK</b> button.</p>
-                                <div><img src="default_form.png" onclick="openModal('default_form.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                <p>The custom form will be displayed on the <b>New Ticket</b> panel.</p>
-                                <div><img src="select_form.png" onclick="openModal('select_form.png')" alt="Select form"
-                                        width="100%" height="auto"></div><br>
-                                <p>Click on the requester configure button from the <b>Notifications.</b></p>
-                                <div><img src="requester.png" onclick="openModal('requester.png')"
-                                        alt="requester configure" width="100%" height="auto"></div><br>
-                                <p>Now click on the edit icon from the <b>Requester</b> panel.</p>
-                                <div><img src="edit_requesters.png" onclick="openModal('edit_requesters.png')"
-                                        alt="edit requester" width="100%" height="auto"></div><br>
-                                        <p>
-                                            In the Edit Email Body panel, you can select custom templates from the <b>Custom Template</b> dropdown.
-                                        </p>
-                                        
-                                <div><img src="custom_body.png" onclick="openModal('custom_body.png')"
-                                        alt="edit email body" width="100%" height="auto"></div><br>
-
-                                <div><img src="save_body.png" onclick="openModal('save_body.png')" alt="save email body"
-                                        width="100%" height="auto"></div><br>
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id=Tickets-comments-page>
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Tickets Comments page
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-
-                                <p>
-                                    <b>Tickets Comments page</b> could be added.
-                                </p>
-
-                                <div><img src="TicketCommnetsPage.png" onclick="openModal('TicketCommnetsPage.png')"
-                                        alt="Custom Form" width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    On the ticket customization settings panel, click the <b>Configure</b> button.
-                                </p>
-
-
-
-                                <div><img src="TCKET.png" onclick="openModal('TCKET.png')" alt="configure form"
-                                        width="100%" height="auto"></div><br>
-                                <br>
-                                <p>If the user keeps this setting on
-                                </p>
-                                <div><img src="Custom.png" onclick="openModal('Custom.png')" alt="Add form" width="100%"
-                                        height="auto"></div><br>
-                              
-                                  
-                                    <p>
-                                        The ticket properties of the custom form used to create the ticket will be displayed as columns in the properties section of the comment page.
-                                    </p>
-                                    
-                                <div><img src="CustomFields.png" onclick="openModal('CustomFields.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                <p>
-                                    
-                                    <p>
-                                        If the user enables the "Show approval remarks in comments section" setting, the approval remarks will be displayed in the comments section.
-                                    </p>
-                                    
-                                <div><img src="ApprovalToogle.png" onclick="openModal('ApprovalToogle.png')"
-                                        alt="Add form" width="100%" height="auto"></div><br>
-                                <p>
-                                    
-                                    <p>
-                                        In the Approval tab, after selecting an approved ticket, the comment page will open.
-                                    </p>
-                                    
-                                <div><img src="ApprovalTab.png" onclick="openModal('ApprovalTab.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                <p>
-                                    <br>
-                                    <p>
-                                        After selecting this ticket, the comments will appear in the comment section.
-                                    </p>
-                                    
-                                <div><img src="approvalComment.png" onclick="openModal('approvalComment.png')"
-                                        alt="Add form" width="100%" height="auto"></div><br>
-                                <p>
-                                    <br>
-                                <p>The ticket you selected in the Approval tab can now be selected in the Teams Tickets
-                                    tab, and its comment page will also be displayed.
-                                </p>
-                                <div><img src="TeamsTab.png" onclick="openModal('TeamsTab.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                <p>
-                                    <br>
-                                    <p>
-                                        After that, the same comments will appear in the ticket under the "Teams Tickets" tab, just as they were in the ticket under the "Approval" tab. This occurs because the toggle is enabled; otherwise, the comments would only be visible under the "Approval" tab.
-                                    </p>
-                                    
-                                <div><img src="teamsComment.png" onclick="openModal('teamsComment.png')" alt="Add form"
-                                        width="100%" height="auto"></div>
-                                
-                                    
-                                <p>If the user keeps this setting on, the mobile number will be fetched from the user's
-                                    details. If the user's mobile number is not available, the office phone number will
-                                    be displayed by default.
-                                </p>
-                                <div><img src="PhoneNO.png" onclick="openModal('PhoneNO.png')" alt="Add form"
-                                        width="100%" height="auto"></div>
-                                <p>
-                                    <br>
-                                <p>After the setting is turned on, the mobile number will be displayed under the user's
-                                    contact info.
-                                </p>
-                                <div><img src="ContactInfo.png" onclick="openModal('ContactInfo.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                        <p>
-                                            Fill in the required data and select the checkbox to include the field in the form to create a custom form. Then, click the <b>Save</b> button.
-                                        </p>
-                                        
-                                <div><img src="save_form.png" onclick="openModal('save_form.png')" alt="Add form"
-                                        width="100%" height="auto"></div><br>
-                                <div class="notices note">
-                                    <div class="paragraph">
-                                        <p>
-                                            Note: To make a field mandatory, check the checkbox, and the selected field will be marked with an asterisk for reference.
-                                        </p>
-                                        
-                                    </div>
-                                </div>
-
-                                <p><b>Delete</b>: Click on the delete icon to delete a field.</p>
-                                <p><b>Add</b>: Drag the fields to add in the ticket form.</p>
-
-                                <div><img src="delete_field.png" onclick="openModal('delete_field.png')"
-                                        alt="Delete field" width="100%" height="auto"></div><br>
-
-
                                 <p>You can use the search box field to search through the fields.
 
                                 </p><br>
                                 <div><img src="Search.png" onclick="openModal('Search.png')" alt="Delete field"
                                         width="100%" height="auto"></div><br>
 
-                                        <p>
-                                            Once saved, the form will be added to the panel, where you can edit or delete it as needed.
-                                        </p>
-                                        
+                                <p>The form will be added to the panel after saving, where you may edit or delete it.
+
+                                </p>
                                 <div><img src="added_in_panel.png" onclick="openModal('added_in_panel.png')"
                                         alt="Added form" width="100%" height="auto"></div><br>
                                 <p>Click on the gear icon to <b>Configure Custom Form</b>.</p>
@@ -554,17 +718,16 @@
                                 <p>Now click on the edit icon from the <b>Requester</b> panel.</p>
                                 <div><img src="edit_requesters.png" onclick="openModal('edit_requesters.png')"
                                         alt="edit requester" width="100%" height="auto"></div><br>
-                                        <p>
-                                            In the "Edit Email Body" panel, you can select custom templates from the <b>Custom Template</b> dropdown.
-                                        </p>
-                                        
+                                <p>From the edit email body panel you could the custom templates from the <b>Custom
+                                        Template</b> dropdown.</p>
                                 <div><img src="custom_body.png" onclick="openModal('custom_body.png')"
                                         alt="edit email body" width="100%" height="auto"></div><br>
 
                                 <div><img src="save_body.png" onclick="openModal('save_body.png')" alt="save email body"
                                         width="100%" height="auto"></div><br>
                         </div>
-                           <div class="bg-light p-4 remove-padding common-scroll" id="Ticket-Properties-Without-Reopening">
+                      
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Ticket-Properties-Without-Reopening">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Allow Members To Edit
                                         Ticket Properties Without Reopening The Ticket.
@@ -596,7 +759,7 @@
 
 
 
-                        </div>
+                        </div> -->
                         <div class="bg-light p-4 remove-padding common-scroll" id="merge-tickets">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Merge Tickets
@@ -629,10 +792,7 @@
                                     </li>
                                     <br>
                                     <li>
-                                        <p>
-                                            Click the <b>Yes</b> button to display the merge pop-up.
-                                        </p>
-                                        
+                                        <p>Click the <b>Yes</b> button, which displays merge to pop-up.</p>
                                         <div><img src="merge_yes.png" onclick="openModal('merge_yes.png')"
                                                 alt="Merge yes" width="100%" height="auto"></div>
                                     </li>
@@ -657,9 +817,8 @@
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
                                 <p>
-                                    The admin can enable the toggle switch to split tickets.
+                                    Admin can enable the toggle switch for split tickets.
                                 </p>
-                                
                                 <div><img src="split_ticket.png" onclick="openModal('split_ticket.png')"
                                         alt="Split ticket" width="100%" height="auto"></div>
                                 <br>
@@ -741,40 +900,7 @@
                                 </ol>
 
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Enable-ticket-closed-justification">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Enable ticket closed
-                                        justification
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                <p>
-                                    The 'Enable ticket closed justification' setting allows users to require
-                                    justification when closing a ticket. This can be toggled on or off as needed for
-                                    additional accountability in ticket management.
-                                </p>
-                                <div><img src="ClosedJusti.png" onclick="openModal('ClosedJusti.png')"
-                                        alt="Review ticket" width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    If you enable Enable ticket closed justification you will need to provide a
-                                    justification every time you close a ticket.
-                                </p>
-                                <div><img src="justification.png" onclick="openModal('justification.png')"
-                                        alt="Review ticket" width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    And if the user has enabled the 'Enable ticket closed justification' setting, then
-                                    the second option, 'Make Ticket Closure Justification Mandatory,' will be shown. In
-                                    this case, the user will not be able to close the ticket without providing
-                                    justification—it will be mandatory.
-                                </p>
-                                <div><img src="mandatoryJustifaction.png"
-                                        onclick="openModal('mandatoryJustifaction.png')" alt="Review ticket"
-                                        width="100%" height="auto"></div>
-                                <br>
-
-
-                        </div>
+                        
                         <div class="bg-light p-4 remove-padding common-scroll" id="escalate-tickets">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Escalate Tickets
@@ -867,11 +993,8 @@
 
                                 <b>Auto Assign Tickets</b>: If this feature is enabled, the ticket gets assigned to the
                                 agents automatically.
-                                <br>
-                                <br>
-                                <b>Allow agents to set their availability</b>: Once this tab is enabled (this is visible
-                                in the settings to the agents from which they could enable or disable). Tickets would
-                                not get assigned to the agent until they enable this feature.
+
+
                                 <br><br> There are two types of auto assign tickets method, you can select either one.
                                 <br><br>
                                 <b> Round Robin</b>: Assign tickets to the agent in a circular fashion.
@@ -959,7 +1082,7 @@
 
                                 </ol>
 
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Exclude Agents from
+                                <!-- <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Exclude Agents from
                                         Auto Assign
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
@@ -971,7 +1094,7 @@
                                         width="100%" height="auto"></div>
 
 
-                        </div>
+                        </div> -->
                         <div class="bg-light p-4 remove-padding common-scroll" id="ticket-aging-reports">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Ticket Aging Reports
@@ -1028,9 +1151,7 @@
                                     </li> -->
                                 </ol>
                             </ul>
-                        </div>
-                        </ul>
-                    </div>
+                        </div></ul></div>
                     <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                     <nav class="pagination mt-3">
                         <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/settings/general/"

@@ -18,6 +18,11 @@ $(document).ready(function () {
         "Architecture Diagram" +
         "</a>" +
         "</li>" +
+        "<li data-nav-id='../ HR-actions' title=Dashboard class=sidelist>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/dashboard/'>" +
+        "Dashboard" +
+        "</a>" +
+        "</li>" +
         "<li data-nav-id='../ HR-actions' title= HR-actions class=sidelist>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/hr-actions/'>" +
         "HR actions" +
@@ -36,6 +41,12 @@ $(document).ready(function () {
         "</a>" +
         "</li>" +
 
+        "<li data-nav-id='../user' title=Delegation class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/delegation/'>" +
+        "Delegation" +
+        "</a>" +
+        "</li>" +
+
         "<li data-nav-id='../user' title=user class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/reports/'>" +
         "Reports" +
@@ -47,7 +58,7 @@ $(document).ready(function () {
         "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/'>" +
         "System Settings" +
         "</a>" +
-        "<img src='./down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
+        "<img src='/down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
         "</li>" +
 
 
@@ -56,7 +67,7 @@ $(document).ready(function () {
         //     "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/'>"+
         //     "System Settings"+
         //     "</a>"+
-        //     "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
+        //     "<img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
         //     "</div>"+
         "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
         "<li data-nav-id='../user' title=General class='dropdownicon sidelist'>" +
@@ -241,7 +252,7 @@ $(document).ready(function () {
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/help/'>" +
         "Help" +
         "</a>" +
-        "<img src='./down-arrow-svgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
+        "<img src='/down-arrow-svgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' '>" +
         "</li>" +
 
         "<li data-nav-id='../advanced/' title=Help class='sidelist dropdown_romove_dot'>" +
