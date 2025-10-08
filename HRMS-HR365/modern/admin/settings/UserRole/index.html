@@ -220,10 +220,67 @@
                                 </ul>
                                 <br>
                                 </p>
+                                
 
                                 <div><img src="Settings.png" onclick="openModal('Settings.png')" alt="Update users role"
                                         width="100%" height="auto"></div><br>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+
+                                        <div class="" id="RestrictPermissions">
+
+    <h2 id="_restrict_permissions">
+      <a class="header-icon-link highlight" href="#">
+        Restrict Permissions
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+
+    <p>
+      The <strong>Restrict Permissions</strong> feature allows administrators to define access levels for different communication types such as 
+      <em>Post</em>, <em>Announcement</em>, and <em>Poll</em>. <br>
+      <div>
+      <img src="RestrictPermission_Main1.png" onclick="openModal('RestrictPermission_Main1.png')" 
+           alt="Restrict Permissions main configuration screen" width="100%" height="auto">
+    </div><br>
+      
+      
+      For each type, you can choose the appropriate access rule from the dropdown options — 
+      for example, whether users can <strong>Create</strong> or <strong>View</strong> content.
+    </p><br><br>
+
+    <div>
+      <img src="RestrictPermission_Main.png" onclick="openModal('RestrictPermission_Main.png')" 
+           alt="Restrict Permissions main configuration screen" width="100%" height="auto">
+    </div><br>
+
+    <p>
+      Additionally, radio button options are available to manage user-level restrictions:
+      <ul>
+        <li><strong>Allow All Except</strong> – grants access to everyone except the selected users.</li>
+        <li><strong>Allow Selected</strong> – restricts access to only the chosen users.</li>
+      </ul>
+      After selecting the desired rule, choose specific users or groups then click on <b>Save</b> button.
+    </p><br><br>
+
+    <div>
+      <img src="RestrictPermission_Options.png" onclick="openModal('RestrictPermission_Options.png')" 
+           alt="Permission options for post, announcement, and poll" width="100%" height="auto">
+    </div><br>
+
+    <p>
+      Click the <strong>View</strong> button to review the list of excluded or included users based on your selected option. 
+      This ensures administrators have full visibility and control over communication access within the HRMS platform.
+    </p>
+
+    <div>
+      <img src="RestrictPermission_View.png" onclick="openModal('RestrictPermission_View.png')" 
+           alt="View excluded users in Restrict Permissions" width="100%" height="auto">
+    </div><br>
+     <div>
+      <img src="RestrictPermission_View1.png" onclick="openModal('RestrictPermission_View1.png')" 
+           alt="View excluded users in Restrict Permissions" width="100%" height="auto">
+    </div><br>
+    </div>
+                                <h2 id="Apps-Settings"><a class="header-icon-link highlight" href=#>
                                         Apps Settings
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
@@ -245,8 +302,8 @@
                         <a class="nav nav-prev" href="../Administration/" aria-label="Previous page"><i
                                 class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Administration</span></a>
 
-                        <a class="nav nav-next" href="../../apps/ED365/introduction/" aria-label="Previous page"> <span
-                                class="d-none d-md-block">ED365-Introduction</span><i class="ti-arrow-right ml-2"></i></a>
+                        <a class="nav nav-next" href="../ai-control-panel/" aria-label="Previous page"> <span
+                                class="d-none d-md-block">AI Control panel</span><i class="ti-arrow-right ml-2"></i></a>
 
                     </nav>
                 </div>

@@ -108,47 +108,85 @@
                         </div>
                      <div class="bg-light p-4 remove-padding common-scroll" id="intune">
     <ul class="page-list">
-        <h2 id="_dashboards">
-            <a class="header-icon-link highlight" href="#">Intune
-                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-            </a>
-        </h2>
-        <p>
-            To sync Office 365 software and integrate Microsoft Intune with Asset Management 365,
-            please configure the web API as per the instructions. Select <b>Software & MS Intune Integration</b>,
-            then click on the <b>Full Sync</b> button as shown below. You can view synced Intune assets
-            on the Return Assets page or by clicking on the <b>Return</b> tab on the home page.
-        </p>
+       <h2 id="_dashboards">
+    <a class="header-icon-link highlight" href="#">Intune
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+</h2>
+<p>
+    To sync Office 365 software and integrate Microsoft Intune with Asset Management 365,
+    please configure the web API as per the instructions. Select <b>Software & MS Intune Integration</b>,
+    then click on the <b>Full Sync</b> button as shown below. You can view synced Intune assets
+    on the Return Assets page or by clicking on the <b>Return</b> tab on the home page.
+</p>
 
-        <div><img src="integrations.png" onclick="openModal('integrations.png')"
-                alt="Integrations" width="100%" height="auto"></div><br>
+<div><img src="integrations.png" onclick="openModal('integrations.png')"
+        alt="Integrations" width="100%" height="auto"></div><br>
 
-        <b>Full Sync</b> <br>
-        <p>
-            Click the <b>Full Sync</b> button to synchronize the Intune assets. Ensure that the Graph API is approved. <br>
-            <b>Note:</b> Microsoft allows syncing Intune assets only for users with the <b>Global Admin</b> or
-            <b>Intune Administrator</b> roles. Therefore, the Asset Management 365 admin must hold one of these roles
-            to utilize this feature.
-        </p>
-        <br>
+<b>Full Sync</b><br>
+<p>
+    Click the <b>Full Sync</b> button to synchronize the Intune assets. Ensure that the Graph API is approved. <br>
+    <b>Note:</b> Microsoft allows syncing Intune assets only for users with the <b>Global Admin</b> or
+    <b>Intune Administrator</b> roles. Therefore, the Asset Management 365 admin must hold one of these roles
+    to utilize this feature.
+</p>
+<br>
 
-        <b>Daily Sync</b><br>
-        <p>
-            The app automatically performs a sync every day when the admin opens it. This updates Intune asset details
-            if any changes exist. If needed, you can also trigger a manual sync by clicking the button.
-        </p>
+<b>Daily Sync</b><br>
+<p>
+    The app automatically performs a sync every day when the admin opens it. This updates Intune asset details
+    if any changes exist. If needed, you can also trigger a manual sync by clicking the button.
+</p>
 
-        <p><b>Update User Details: </b>The system automatically synchronizes user information from Azure Active Directory (Azure AD)
-            to ensure the Users list always reflects the most up-to-date details.</p>
-        <div><img src="integrations1.png" onclick="openModal('integrations1.png')"
-                alt="Integration User Sync" width="100%" height="auto"></div><br>
+<p>
+  <b>Intune Integration Tooltips:</b> Added helpful tooltips for Intune Integration modules to improve usability. Hover over the info icon 
+ 
+  to see how the new tooltips work.
+</p>
+<div><img src="integrations11.png" onclick="openModal('integrations11.png')"
+        alt="Integration User Sync" width="100%" height="auto"></div><br>
+        <div><img src="integrations12.png" onclick="openModal('integrations12.png')"
+        alt="Integration User Sync" width="100%" height="auto"></div><br>
 
-        <p>
-            When viewing an asset, the <b>User Department</b> and <b>User Location</b> are shown as the first two columns,
-            providing quick visibility into key user attributes.
-        </p>
-        <div><img src="integrations2.png" onclick="openModal('integrations2.png')"
-                alt="Integration Columns" width="100%" height="auto"></div><br>
+<p><b>Update User Details:</b> The system automatically synchronizes user information from Azure Active Directory (Azure AD)
+    to ensure the Users list always reflects the most up-to-date details.
+</p>
+<div><img src="integrations1.png" onclick="openModal('integrations1.png')"
+        alt="Integration User Sync" width="100%" height="auto"></div><br>
+
+<p>
+    When viewing an asset, the <b>User Department</b> and <b>User Location</b> are shown as the first two columns,
+    providing quick visibility into key user attributes.
+</p>
+<div><img src="integrations2.png" onclick="openModal('integrations2.png')"
+        alt="Integration Columns" width="100%" height="auto"></div><br>
+
+<!-- New Section with Corrected Wording -->
+<p>
+      After completing the integration and sync, devices enrolled in Microsoft Intune are now successfully
+    imported and displayed within Asset Management 365. The examples below illustrate how Intune-managed
+    devices and their details appear once the sync is complete.
+</p>
+
+
+<p>
+    The Intune Admin Center overview shows devices grouped by platform (Windows, Android, iOS/iPadOS, macOS, Linux).
+    This confirms which devices are actively managed in Intune.
+</p>
+
+<div><img src="1.jpg" onclick="openModal('1.jpg')"
+        alt="Intune All Devices List" width="100%" height="auto"></div><br>
+<p>
+    The <b>All Devices</b> view displays individual device details such as ownership, compliance status,
+    operating system, OS version, and last check-in. This information is used by Asset Management 365 during sync.
+</p>
+
+<div><img src="2.jpg" onclick="openModal('2.jpg')"
+        alt="Asset Management Synced Devices" width="100%" height="auto"></div><br>
+<p>
+    The Asset Management 365 module now reflects these synced Intune devices, allowing admins to see both
+    user details and compliance information in one integrated system.
+</p>
 
         <!-- New Improvement: Intune Exclude Filters -->
         <h3> Intune Exclude Filters</h3>

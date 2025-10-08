@@ -52,8 +52,14 @@ $(document).ready(function () {
                 "<li  data-nav-id='../advanced/' title='Date Format' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#DateFormat'>Date Format</a>" +
                 "</li>" +
+                "<li  data-nav-id='../advanced/' title='Change the Look' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/general/#_change_the_look'>Change the Look</a>" +
+                "</li>" +
                 "<li  data-nav-id='../advanced/' title='Default Currency' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#DefaultCurrency'>Default Currency</a>" +
+                "</li>" +
+                "<li  data-nav-id='../advanced/' title='AI Knowledge Vault' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/general/#_ai_knowledge_vault'>AI Knowledge Vault</a>" +
                 "</li>" +
                 "<li  data-nav-id='../advanced/' title='GCC Tenant' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#GCC-Tenant'>GCC Tenant</a>" +
@@ -62,17 +68,18 @@ $(document).ready(function () {
                 "<li  data-nav-id='../advanced/' title='Show favorite icon' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#ShowFavIcon'>Show favorite icon</a>" +
                 "</li>" +
-                "<li  data-nav-id='../advanced/' title='Langauge' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/settings/general/#Langauge'>Langauge</a>" +
-                "</li>" +
+                
                 "<li  data-nav-id='../advanced/' title='Brand Logo' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#Brand-logo'>Brand Logo</a>" +
                 "</li>" +
                 "<li  data-nav-id='../advanced/' title='Shared Mail Box' class='sidelist'>" +
-                "<a href='/HRMS-HR365/modern/admin/settings/general/#Brand-logo'>Shared Mail Box</a>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/general/#Shared-Mail-Box'>Shared Mail Box</a>" +
                 "</li>" +
                 "<li  data-nav-id='../advanced/' title='Sharepoint page components' class='sidelist '>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#Sharepoint-page'>Sharepoint page components</a>" +
+                "</li>" +
+                "<li  data-nav-id='../advanced/' title='Langauge' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/general/#_modules'>Modules</a>" +
                 "</li>" +
 
 
@@ -124,6 +131,9 @@ $(document).ready(function () {
                 "<li  data-nav-id='../advanced/' title='Position' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/Administration/#Position'>Position</a>" +
                 "</li>" +
+                "<li  data-nav-id='../advanced/' title='Position' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/Administration/#_delegation'>Delegation</a>" +
+                "</li>" +
 
 
 
@@ -161,9 +171,15 @@ $(document).ready(function () {
                 "<a href='/HRMS-HR365/modern/admin/settings/UserRole/#UserRole'>User's</a>" +
                 "</li>" +
 
-                // "<li  data-nav-id='../advanced/' title='Allow users to export directory' class='sidelist'>" +
-                // "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/views/#Birthday'>Birthdays and work anniversaries images</a>" +
-                // "</li>" +
+                "<li  data-nav-id='../advanced/' title='Restrict Permissions' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/UserRole/#_restrict_permissions'>Restrict Permissions</a>" +
+                "</li>" +
+
+                 "<li  data-nav-id='../advanced/' title='Apps Settings' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/UserRole/#Apps-Settings'>Apps Settings</a>" +
+                "</li>" +
+
+                
 
 
                 "</ul>" +
@@ -256,12 +272,21 @@ $(document).ready(function () {
                 // "</a>" +
                 // "</ul>" +
                 // setting end 
+                 "<li  data-nav-id='../advanced/' title='AI Control Panel' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/ai-control-panel/'>AI Control Panel</a>" +
+                "</li>" +
+                 "<li  data-nav-id='../advanced/' title='Notifications' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/admin/settings/Notifications/'>Notifications</a>" +
+                "</li>" +
+
+                   
 
 
                 "</ul>" +
 
 
                 "</ul>" +
+                
                 "<li data-nav-id='../advanced/' title=Help class='sidelist dropdown_romove_dot'>" +
 
                 "<li class='dropdownicon sidelist' title='Apps'>" +
@@ -1213,6 +1238,14 @@ $(document).ready(function () {
         "Send Pending Timesheet Approval Notification" +
       "</a>" +
     "</li>" +
+
+      "<li data-nav-id='../General' title='Shared Mailbox ID' class='sidelist'>" +
+        "<a href='/HRMS-HR365/modern/admin/apps/TS365/settings/notification/#shared-mailbox-id'>Shared Mailbox ID</a>" +
+        "</li>" +
+
+         "<li data-nav-id='../General' title='Local Shared Mailbox ID' class='sidelist'>" +
+        "<a href='/HRMS-HR365/modern/admin/apps/TS365/settings/notification/#local-shared-mailbox-id'>Local Shared Mailbox ID</a>" +
+        "</li>" +
 
   "</ul>" +
 "</li>" +
