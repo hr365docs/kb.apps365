@@ -19,11 +19,21 @@ $(document).ready(function () {
             "</a>"+
             "</li>"+
         
-        "<li data-nav-id='../ HR-actions' title= HR-actions class=sidelist>"+
-        "<a href='/employee-vacation-tracker-time-off-manager/modern/user/user-interface/'>"+
-          "User Interface"+
-        "</a>"+
-        "</li>"+
+       "<li data-nav-id='../Home-page' title=Comp Off class=sidelist>"+
+            "<a href='/employee-vacation-tracker-time-off-manager/modern/user/comp-off/'>"+
+                "Comp Off"+
+            "</a>"+
+            "</li>"+
+            "<li data-nav-id='../Home-page' title=Delegation class=sidelist>"+
+            "<a href='/employee-vacation-tracker-time-off-manager/modern/user/delegation/'>"+
+                "Delegation"+
+            "</a>"+
+            "</li>"+
+            "<li data-nav-id='../Home-page' title=theme class=sidelist>"+
+            "<a href='/employee-vacation-tracker-time-off-manager/modern/user/theme/'>"+
+                "Theme"+
+            "</a>"+
+            "</li>"+
     
          "<li data-nav-id='../user' title=user class='sidelist'>"+
                 "<a href='/employee-vacation-tracker-time-off-manager/modern/user/help/'>"+

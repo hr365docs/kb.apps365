@@ -93,7 +93,10 @@ $(document).ready(function () {
         "<a href='/RM365/modern/admin/settings/general-setting/#Theme'>Theme</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Language' class='sidelist'>" +
-        "<a href='/RM365/modern/admin/settings/general-setting/#Languages'> Language </a>" +
+        "<a href='/RM365/modern/admin/settings/general-setting/#Languages'> Languages </a>" +
+        "</li>" +
+         "<li data-nav-id='../General' title='Default Currency' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/general-setting/#default-currency'> Default Currency </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Enable Favicon' class='sidelist'>" +
         "<a href='/RM365/modern/admin/settings/general-setting/#Enable-Favicon'> Enable Favicon </a>" +

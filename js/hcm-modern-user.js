@@ -197,6 +197,28 @@ $(document).ready(function () {
                 "</li>" +
                 "</ul>" +
                 "</li>" +
+
+                 "<li class='dropdownicon sidelist' title='Settings'>" +
+                "<a href='/HRMS-HR365/modern/user/settings/'>" +
+                "Settings" +
+                "</a>" +
+                "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconapps aside_dropdown_icon'>" +
+                "</li>" +
+                "<li data-nav-id='./apps/' title='Apps' class='sidelist dropdown_romove_dot'>" +
+                "<ul class='sidenavSub-topics aside_dropdown_list' id='modernuserapps'>" +
+
+                 "<li data-nav-id='../help/' title='General' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/user/settings/general/'>General</a>" +
+                "</li>" +
+                 "<li data-nav-id='../help/' title='Administration' class='sidelist'>" +
+                "<a href='/HRMS-HR365/modern/user/settings/administration/'>Administration</a>" +
+                "</li>" +
+                "</ul>"+
+                "</li>"+
+
+
+
+
                 // Help
                 "<li class='dropdownicon sidelist' title='Help'>" +
                 "<a href='/HRMS-HR365/modern/user/help/'>" +

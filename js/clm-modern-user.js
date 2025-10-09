@@ -18,7 +18,7 @@ $(document).ready(function () {
 "<a class='qwe' href='/contract-management/modern/user/self-review/'>"+
     "Reports"+
     "</a>"+ 
-    "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
+    "<img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>"+
 "</li>"+
 
 
@@ -46,6 +46,12 @@ $(document).ready(function () {
 
     "</ul>"+
 
+"</li>"+
+"<li class='dropdownicon sidelist' title='Delegation'>"+
+"<a class='qwe' href='/contract-management/modern/user/delegation/'>"+
+    "Delegation"+
+    "</a>"+ 
+   
 "</li>"+
 "<li class='dropdownicon sidelist' title='themes'>"+
 "<a class='qwe' href='/contract-management/modern/user/theme/'>"+

@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 "<ul class='sidenavSub-topics aside_dropdown_list' id='modernsettingedm'>" +
 "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
-"<a href='/contract-management/modern/admin/help/#product-activation'>Product Activation</a>" +
+"<a href='/Civic365/modern/admin/help/#product-activation'>Product Activation</a>" +
 "</li>" )
                                            
 });

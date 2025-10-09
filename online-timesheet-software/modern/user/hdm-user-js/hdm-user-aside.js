@@ -10,6 +10,9 @@ $(document).ready(function() {
     "<li data-nav-id='./Home-Page/' title='Home Page'  class='sidelist'>"+
     "<a href='/online-timesheet-software/modern/user/home-page/'>Home Page</a>"+
     "</li>"+
+    "<li data-nav-id='./Home-Page/' title='Report'  class='sidelist'>"+
+    "<a href='/online-timesheet-software/modern/user/report/'>Report</a>"+
+    "</li>"+
     "<li data-nav-id='./User-Interface/' title='Help' class='sidelist'>"+
     "<a href='/online-timesheet-software/modern/user/help/'>Help</a>"+
     "</li>");

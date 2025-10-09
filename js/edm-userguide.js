@@ -16,7 +16,7 @@ $(document).ready(function () {
 
       "<li class='dropdownicon sidelist' title='User Interface'>"+
       "<a class='qwe' href='/sharepoint-employee-directory/modern/user/user-interface/'>User Interface</a>"+
-      "<img src='./down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon''>"+
+      "<img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon''>"+
   "</li>"+
 
       "<li data-nav-id=https://github.com/hr365docs/My-project.git/installation/requirments/"+
@@ -37,13 +37,14 @@ $(document).ready(function () {
 
           "</li>"+
 
-          "<li  class='sidelist' title=Help>"+
-            "<a href='/sharepoint-employee-directory/modern/user/user-interface/#help'>Help</a>"+
-
-          "</li>"+
+         
 
         "</ul>"+
       "</li>"+
+       "<li  class='sidelist' title=Help>"+
+            "<a href='/sharepoint-employee-directory/modern/user/help/'>Help</a>"+
+
+          "</li>"+
 
   "</li>")
                                            

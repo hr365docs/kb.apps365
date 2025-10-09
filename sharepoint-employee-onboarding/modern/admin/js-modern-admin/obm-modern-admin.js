@@ -183,6 +183,9 @@ $(document).ready(function () {
         "<li data-nav-id='../General' title=Users class=sidelist>" +
         "<a href='/sharepoint-employee-onboarding/modern/admin/setting/general-setting/#Language'> Language </a>" +
         "</li>" +
+         "<li data-nav-id='../General' title='Use Sharepoint URL for MS Teams installed application' class='sidelist'>" +
+        "<a href='/sharepoint-employee-onboarding/modern/admin/setting/general-setting/#SharepointURL'>Use Sharepoint URL for MS Teams installed application</a>" +
+        "</li>" +
 
         "<li data-nav-id='../General' title=Users class=sidelist>" +
         "<a href='/sharepoint-employee-onboarding/modern/admin/setting/general-setting/#hide'> Hide Sharepoint Page's Default Components </a>" +
@@ -266,6 +269,10 @@ $(document).ready(function () {
          "<li data-nav-id='../General' title=Users class=sidelist>" +
          "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Integration/#Mailbox-Integration'> Mailbox Integration </a>" +
          "</li>" +
+"<li data-nav-id='../General' title=Users class=sidelist>" +
+         "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Integration/#AI-Integration'> AI Integration </a>" +
+         "</li>" +
+          
  
  
          "</li>" +
@@ -293,6 +300,12 @@ $(document).ready(function () {
           "<li data-nav-id='../General' title=Users class=sidelist>" +
           "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Quick-Share-Links'> Quick Share Links </a>" +
           "</li>" +
+           "<li data-nav-id='../General' title=Users class=sidelist>" +
+          "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Approval-Workflow'> Approval Workflow</a>" +
+          "</li>" +
+           "<li data-nav-id='../General' title=Delegation class=sidelist>" +
+          "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#delegation'> Delegation</a>" +
+          "</li>" +
  
           "<li data-nav-id='../General' title=Users class=sidelist>" +
           "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Create-User-in-M365'> Create User in M365 </a>" +
@@ -312,6 +325,7 @@ $(document).ready(function () {
           "<li data-nav-id='../General' title=Users class=sidelist>" +
           "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Preonboarding'> Preonboarding </a>" +
           "</li>" +
+          
   
   
   

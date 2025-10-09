@@ -99,7 +99,9 @@ $(document).ready(function () {
         "</li><li data-nav-id='./Column-Setting/' title='GCC Tenat' class='sidelist'>"+
         "<a href='/Civic365/modern/admin/settings/general/#Show-favicon-of-Civic-365'>Show Favicon of Civic 365</a>"+
         "</li>"+
-        
+         "<li data-nav-id='../General' title='Use Sharepoint URL for MS Teams installed application' class='sidelist'>" +
+        "<a href='/Civic365/modern/admin/settings/general/#SharepointURL'>Use Sharepoint URL for MS Teams installed application</a>" +
+        "</li>" +
         "</li><li data-nav-id='./Column-Setting/' title='Language selection as browser default language' class='sidelist'>"+
         "<a href='/Civic365/modern/admin/settings/general/#language'>Language </a>"+
         "</li>"+
@@ -259,11 +261,9 @@ $(document).ready(function () {
        "</li>"+
 
         "<li data-nav-id='./Add Assets/ ' title='Copilot Integeration' class='sidelist '>" +
-       
-       
+        
         "<a href='/Civic365/modern/admin/settings/integration/#Copilot-Integeration'>Copilot Integeration</a>" +
-      "</li>"+
-      
+        "</li>"+
         "</ul>"+
         "</li>"+
 
