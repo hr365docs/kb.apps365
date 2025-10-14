@@ -117,18 +117,31 @@ active">
                                     <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                             </h2>
                             <br>
-                            <p>
+                                         <p>
 
                                In the administration area, users can establish an approval workflow to support process oversight. Only individuals assigned the role of Approver during setup are authorized to complete approval actions within the flow.
                             </p>
                             <div><img src="1.png" onclick="openModal('1.png')" alt="RM365" width="100%" height="auto">
                             </div>
                             <br>
+                            <p>By default, the system comes with two pre-created approval workflows: Requisition Approval and Offer Letter Approval. You can set each workflow to Active or Inactive as required.</p>
+                             <div><img src="1a.png" onclick="openModal('1a.png')" alt="RM365" width="100%" height="auto">
+                            </div>
+                            <br>
+
                            <p>To begin setting up a new approval process, select the "+New" option from the menu.</p>
 <div>
     <img src="2.png" onclick="openModal('2.png')" alt="RM365" width="100%" height="auto">
 </div>
 <br>
+<p><b>Workflow Name:</b> Enter a descriptive name for the workflow.</p>
+<p><b>Job Title:</b> Select the job title applicable to this workflow.</p>
+<p><b>Department:</b> Choose the department responsible for the approval process.</p>
+<p><b>Publish Status:</b> Select the workflow's publication status.</p>
+<p><b>Workflow Description:</b> Provide a short description of the workflow purpose.</p>
+<div>
+    <img src="2a.png" onclick="openModal('2a.png')" alt="RM365" width="100%" height="auto">
+</div>
 
 <p>In the setup fields, provide the workflow name and description, then select the approval type—either <strong>Requisition Approval</strong> or <strong>Offer Letter Approval</strong>.</p>
 <div>
@@ -137,14 +150,42 @@ active">
 <br>
 
 
-<p>Then select “Add Approvers” to specify individuals who will be part of the approval process.  
+
+
+ <p>
+        In each level, you can set whether <strong>All</strong> or <strong>Any</strong> approver’s action is required to complete that level.
+    </p>
+
+    <div>
+        <img src="3a.png" onclick="openModal('3a.png')" alt="All or Any Approver Option" width="100%" height="auto">
+    </div>
+    <br>
+    <p>Then select “Add Approvers” to specify individuals who will be part of the approval process.  
 </p>
 <div>
     <img src="3.png" onclick="openModal('3.png')" alt="RM365" width="100%" height="auto">
 </div><br>
- <p>Choose the individuals who will serve as approvers, then confirm your selection by clicking the save icon.</p><br>
-                            <div><img src="4.png" onclick="openModal('4.png')" alt="RM365" width="100%" height="auto">
-                            </div>
+ <p>Choose the individuals who will serve as approvers, then confirm your selection by clicking the save icon.</p>
+<ul>
+    
+    
+    <li><strong>Approver's Name:</strong> Select specific users who will approve.</li>
+    <li><strong>User Manager:</strong> Include the requester’s direct manager if needed.</li>
+    <li><strong>User Manager's Manager:</strong> Include the manager of the requester’s manager if needed.</li>
+    <li><strong>Role:</strong> Select the role(s) that should approve at this level.</li>
+</ul><br>
+<div>
+    <img src="4.png" onclick="openModal('4.png')" alt="RM365" width="100%" height="auto">
+</div><br>
+<p><strong>Auto Approve:</strong> Toggle this option on if you want this approval level to be automatically skipped under certain conditions.</p>
+<ul>
+    <li>The level will be skipped if the requester’s name is selected in the conditions.</li>
+    <li>The level will be skipped if the requester’s job title matches the specified criteria.</li>
+    <li>The level will be skipped if the requester’s department matches the specified criteria.</li>
+</ul><br>
+<div>
+    <img src="4a.png" onclick="openModal('4a.png')" alt="RM365" width="100%" height="auto">
+</div><br>
                           
 
 <br>
@@ -175,6 +216,20 @@ active">
 <p>The workflow will then return to active status.</p>
 <div>
     <img src="11.png" onclick="openModal('11.png')" alt="RM365" width="100%" height="auto">
+</div>
+
+<p>When creating a requisition, you need to specify the job title, department, publish status .</p>
+<div>
+    <img src="10a.png" onclick="openModal('10a.png')" alt="RM365" width="100%" height="auto">
+</div><br>
+
+<p>If the chosen options match an existing approval workflow, that workflow will be triggered automatically.</p>
+<div>
+    <img src="10b.png" onclick="openModal('10b.png')" alt="RM365" width="100%" height="auto">
+</div><br>
+<p>Based on the selected approver in the workflow, the requisition will be routed to them for approval.</p>
+<div>
+    <img src="10c.png" onclick="openModal('10c.png')" alt="RM365" width="100%" height="auto">
 </div><br>
      <div >
   <h2 id="delegation">

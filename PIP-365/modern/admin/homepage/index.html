@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>PIP 365 | Admin Guide | Home-Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Explore the home page of Asset Management 365's Admin Guide for effective asset management, asset tracking, and management best practices.">
+    <!-- External Styles and Scripts -->
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager for tracking -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../PIP-365/">PIP 365</a></h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Installation
+                                class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="PIPadmin" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               <div class="col-lg-9">
+  <div class="p-lg-4 p-4 remove-padding bg-white" id="content">
+
+    <div class="bg-light p-4 remove-padding" id="home-page">
+  <li data-nav-id="../PIP-365/home" class="sidelist" Title="Home Page">
+    <h3 id="PIP-365_homepage">
+      <a class="header-icon-link highlight" href="#">Home Page
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h3>
+  </li>
+ <p>
+        The <strong>Performance Improvement Plan (PIP)</strong> feature in the system enables managers to create, track, and complete structured performance plans for team members. 
+        This ensures accountability, measurable outcomes, and timely progress monitoring.
+    </p>
+    <div>
+        <img src="home.png" onclick="openModal('home.png')" alt="PIP Overview" width="100%" height="auto">
+    </div>
+   
+
+    <!-- In-Progress Section -->
+    <h3 id="pip-inprogress"> In-Progress</h3>
+    <p>
+        Managers can initiate a new PIP and configure key details while the plan is active.
+    </p>
+    <ol type="a">
+        <li>
+            Click on the <strong>+ Add</strong> button to start creating a new PIP.
+            <div>
+                <img src="add.png" onclick="openModal('add.png')" alt="Add New PIP" width="100%" height="auto">
+            </div>
+        </li>
+        <li>
+            Select the <strong>team member</strong> to be placed under the PIP, specify the <strong>reason</strong>, and define the <strong>start and end dates</strong>. Add planned activities to guide the improvement process.
+            <div>
+                <img src="pip_member.png" onclick="openModal('pip_member.png')" alt="Select Team Member and Define PIP Details" width="100%" height="auto">
+            </div>
+        </li>
+        <li>
+            Assign specific <strong>tasks</strong> with start and end dates to measure performance improvements.
+            <div>
+                <img src="pip_task.png" onclick="openModal('pip_task.png')" alt="Add Tasks in PIP" width="100%" height="auto">
+            </div>
+        </li>
+        <li>
+            Use the <strong>+ icon</strong> to add additional tasks as needed.
+            <div>
+                <img src="pip_add_task.png" onclick="openModal('pip_add_task.png')" alt="Add More Tasks in PIP" width="100%" height="auto">
+            </div>
+        </li>
+        <li>
+            Once all details are entered, click the <strong>Save</strong> button to finalize the PIP.
+            <div>
+                <img src="pip_save.png" onclick="openModal('pip_save.png')" alt="Save PIP" width="100%" height="auto">
+            </div>
+        </li>
+        <!-- Manager Options -->
+<p>
+    Once a PIP is created, the manager can access the <strong>3-dot menu</strong> for additional actions. From here, the manager can:
+</p>
+<ul>
+    <li>Edit </li>
+    <li>Make decision </li>
+    <li>View tasks</li>
+</ul>
+<div>
+    <img src="3.png" onclick="openModal('3.png')" alt="Manager 3-dot Menu Options" width="100%" height="auto">
+</div>
+<br>
+
+<!-- Make a Decision -->
+<p>
+    When the manager clicks on <strong>Make  Decision</strong>, the system will display the decision options as shown below:
+</p>
+<div>
+    <img src="4.png" onclick="openModal('4.png')" alt="Make a Decision Options" width="100%" height="auto">
+</div>
+<p>
+    Available actions include:
+</p>
+<ol>
+    <li><b>End PIP and retain Employee</b></li>
+    <li><b>Extend PIP</b> until a specified date</li>
+    <li><b>Notify HR</b> of unsuccessful PIP for the employee</li>
+</ol>
+<br>
+
+<!-- Employee Response -->
+<p>
+    Once a PIP is made, the employee under PIP will be notified.  
+    The employee must review the decision, provide their <strong>response</strong>, and <strong>sign</strong> the acknowledgement.  
+    Their signed response will be displayed under the <b>Employee Response</b> section.
+</p>
+<div>
+    <img src="5.png" onclick="openModal('5.png')" alt="Employee Response in PIP" width="100%" height="auto">
+</div>
+<br>
+
+<!-- Manager Response -->
+<p>
+    In addition, the manager can provide a <strong>detailed description</strong> of the decision in the <b>Manager Response</b> section.  
+    The manager must also sign the decision and click <strong>Update</strong> to finalize and update the PIP record.
+</p>
+<div>
+    <img src="6.png" onclick="openModal('6.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div>
+<br>
+
+    </ol>
+
+    <!-- Completed Section -->
+    <h3 id="pip-completed">Completed</h3>
+    <p>
+        After the PIP duration ends, managers can review the progress and outcomes. A PIP marked as <strong>Completed</strong> provides a summary of tasks achieved, areas improved, and overall performance results.
+    </p>
+<div>
+    <img src="8.png" onclick="openModal('8.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div><br>
+<p>
+    The manager can view the complete <strong>PIP details</strong> as well as the individual <strong>tasks</strong> assigned within the plan.  
+    By clicking on the <strong>3-dot menu</strong>, the following options are available:
+</p>
+<div><div>
+    <img src="9.png" onclick="openModal('9.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div><br>
+<ul>
+    <li><b>View</b> – Opens the complete PIP record with all associated information.</li>
+    <div><div>
+    <img src="11.png" onclick="openModal('11.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div><br>
+    <li><b>View Tasks</b> – Displays the list of tasks defined within the PIP, including their status and due dates.</li>
+    <div><div>
+    <img src="10.png" onclick="openModal('10.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div><br>
+</ul>
+
+    <!-- PIP Section -->
+    <h3 id="pip-overview"> PIP</h3>
+  <p> If the manager places the user under a Performance Improvement Plan, the user will be notified, and the PIP details will appear here.  </p>
+<div>
+    <img src="12.png" onclick="openModal('12.png')" alt="Manager Response in PIP" width="100%" height="auto">
+</div><br>
+
+
+
+
+      <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../introduction/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Introduction
+                                  </span></a>
+                            <a class="nav nav-next" href="../settings/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Settings</span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+
+  </div>
+</div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/teStocks-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-teStocks-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HStockS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+      <script src="../../../../js/pip-admin.js"></script>
+    
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../aside-assets/aside-assets.js"></script>
+</body>
+
+</html>

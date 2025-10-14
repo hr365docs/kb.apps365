@@ -242,6 +242,15 @@
                                     width="100%">
                                 <br><br>
 
+                                <li id="DisplayDepartment">
+    <h6>Display department calendar</h6>
+    The department calendar is visible only to specific roles that have been selected.
+</li>
+<br>
+<img src="department.png" onclick="openModal('department.png')" alt="department" width="100%">
+<br><br>
+
+
                                 <li id="microsoftUsers">
                                     <h6>Allow all microsoft 365 users in this tenant</h6>Microsoft 365 users would not
                                     get the access of application until users are added in users list of the
@@ -297,6 +306,36 @@
                                 <p><b>Hide Left Navigation Bar On Collapse For Teams :</b>Enable this toggle will hide
                                     left navigation bar on collapse for teams where app is running.</p>
                                 <br id="Display-Title"> -->
+                                <div class="bg-light p-4 remove-padding common-scroll" id="SharepointURL">
+                            <div class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Use Sharepoint URL for
+                                        MS Teams installed application
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+
+                                <p>
+                                    The option Use SharePoint URL for MS Teams installed application enables the
+                                    integration of SharePoint links within the MS Teams application, allowing users to
+                                    access SharePoint resources directly from Teams.
+                                </p>
+
+                                <div><img src="URL.png" onclick="openModal('URL.png')" alt="help" width="100%"
+                                        height="auto"></div>
+
+                            </div><br>
+                           <p >
+    Enable the <b>“Use SharePoint URL for MS Teams installed application”</b> toggle, then enter your SharePoint site URL in the following format:
+    <br>
+    <span>
+        https://<em>yourtenantname</em>.sharepoint.com/sites/<em>SiteName</em>/SitePages/<em>PageName.aspx</em>
+    </span>
+    <br>
+    After entering the URL, click the <b>Save</b> button to apply your changes.
+</p>
+<div><img src="URL1.png" onclick="openModal('URL1.png')" alt="help" width="100%"
+                                        height="auto"></div>
+
+                            </div><br>
 
                                 <li><b>Display Title :</b>
 
@@ -337,6 +376,13 @@
         <img src="NotesMandatoryField1.png" onclick="openModal('NotesMandatoryField1.png')" alt="Notes Required Field Highlight" width="100%" height="auto">
     </div>
     <br>
+
+
+
+
+
+
+
 
                                                <div class="bg-light p-4 remove-padding common-scroll" id="Brand-logo"><ul class="page-list">
    
@@ -517,6 +563,16 @@
                                 </li> <br>
                                 <img src="16.png" onclick="openModal('16.png')" alt="Office Location" width="100%"><br>
                                 <br>
+                                <li id="IntegrationOutlook">
+    <h6>Integration with Outlook Calendar</h6>
+    By enabling this feature, approved leave requests will create events in the Outlook calendars of the selected roles.
+    <br>
+    <b>Note:</b> This requires the Power Automate flow integration.
+</li>
+<br>
+<img src="outlookintegration.png" onclick="openModal('outlookintegration.png')" alt="Outlook Integration" width="100%">
+<br><br>
+
                                 <li id="MicrosoftoutlookCalender">
                                     <h6>Show Time off requests in Microsoft outlook calender.</h6>When we apply leave,
                                     Outlook Calendar is blocked.
@@ -737,6 +793,14 @@
                                     <br><br>
 
                                 </li>
+                                <li id="LeaveItemPermissions">
+    <h6>Leave Item Permissions</h6>
+    Based on your choice, leave requests will be visible to only your team, your department, or everyone in the organization.
+</li>
+<br>
+<img src="leavepermissions.png" onclick="openModal('leavepermissions.png')" alt="Leave Item Permissions" width="100%">
+<br><br>
+
                         </div>
 
                         <div class="bg-light p-4 common-scroll" id="Reports">

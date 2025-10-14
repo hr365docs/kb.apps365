@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>AdventCalendar 365 | Admin Guide | Home-Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Explore the home page of Asset Management 365's Admin Guide for effective asset management, asset tracking, and management best practices.">
+    <!-- External Styles and Scripts -->
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager for tracking -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../AdventCalendar-365/">AdventCalendar 365</a></h5>
+                        <a class=back-btn href="../../admin/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Installation
+                                class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="polladmin" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               <div class="col-lg-9">
+  <div class="p-lg-4 p-4 remove-padding bg-white" id="content">
+
+    <div class="bg-light p-4 remove-padding" id="home-page">
+  <li data-nav-id="../AdventCalendar-365/home" class="sidelist" Title="Home Page">
+    <h3 id="AdventCalendar-365_homepage">
+      <a class="header-icon-link highlight" href="#">Home Page
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h3>
+  </li>
+
+
+<!-- Homepage -->
+<ul class="page-list">
+  <p>
+    The <b>Advent Calendar 365 Home Page</b> provides a visually appealing, grid-based layout where each tile represents a day in the countdown. Each numbered tile acts as a “door” that can be configured to display unique content — such as text messages, images, or videos — that reveal as the event progresses.
+  </p>
+
+  <div>
+    <img src="home.png" onclick="openModal('home.png')" alt="Advent Calendar 365 Home Page" width="100%" height="auto">
+  </div><br>
+
+  <p>Key features include:</p>
+
+  <!-- Create / Edit Calendar -->
+  <p><b>Create or Edit Calendar:</b> Click the <b>Edit</b> icon on any calendar tile (door) to open the configuration panel. From there, you can customize what content appears when the door opens.</p><br>
+
+  <div>
+    <img src="edit.png" onclick="openModal('edit.png')" alt="Edit Advent Calendar Door Example" width="100%" height="auto">
+  </div><br>
+
+  <p><b>Configure Door Content:</b> Each calendar door can display custom content like images, videos, or messages. You can easily update the content by selecting <b>Add Content Image</b>.</p><br>
+
+  <div>
+    <img src="settings.png" onclick="openModal('settings.png')" alt="Advent Calendar 365 Settings Panel" width="100%" height="auto">
+  </div><br>
+
+  <!-- Add Content -->
+  <p><b>Add Content Image:</b> When you click the <b>Add Content Image</b> button, a pop-up panel allows you to insert media using multiple options:</p>
+  <ul>
+    <li><b>Recent:</b> Choose from recently used images within your SharePoint environment.</li><br>
+    <li><b>Site:</b> Browse and select images stored in your SharePoint site libraries.</li><br>
+    <li><b>Upload:</b> Upload new images directly from your device.</li><br>
+    <li><b>From a Link:</b> Insert an image or video via a web URL.</li><br>
+  </ul>
+
+  <div>
+    <img src="add_image.png" onclick="openModal('add_image.png')" alt="Add Content Image Options Example" width="100%" height="auto">
+  </div><br>
+<p><b>Content: </b>Please add the relevant content here.</p>
+<div>
+    <img src="add_image1.png" onclick="openModal('add_image1.png')" alt="Add Content Image Options Example" width="100%" height="auto">
+  </div><br>
+  <!-- Button and Link Configuration -->
+  <p><b>Button and Link Configuration:</b> Add a custom button label (e.g., “Open Gift,” “View Message,” or “Learn More”) and link it to any internal or external page for additional interactivity.</p><br>
+
+  <div>
+    <img src="button.png" onclick="openModal('button.png')" alt="Advent Calendar 365 Button Configuration Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Content Visibility -->
+  <p><b>Content Visibility:</b> Set the date when each door becomes visible using the <b>Content visible from</b> field. The calendar automatically unlocks each door based on the configured schedule, providing a dynamic day-by-day reveal experience.</p><br>
+
+  <div>
+    <img src="visibility.png" onclick="openModal('visibility.png')" alt="Content Visibility Date Setting Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Background Customization -->
+  <p><b>Background Customization:</b> Choose how each door’s background appears by selecting from the following options:</p>
+  <ul>
+    <li><b>Transparent:</b> No background, allowing the site’s color or image to show through.</li><br>
+    <li><b>Color:</b> Apply a solid background color using the color picker.</li><br>
+    <li><b>Image:</b> Use a custom image as the background for enhanced visual appeal.</li><br>
+  </ul>
+
+  <div>
+    <img src="background.png" onclick="openModal('background.png')" alt="Background Customization Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Save Configuration -->
+  <p><b>Save Configuration:</b> Once all settings are defined, click the <b>Save</b> button to apply your updates. The door will now display the configured content when opened by users on or after the set date.</p><br>
+
+  <div>
+    <img src="save.png" onclick="openModal('save.png')" alt="Save Advent Calendar Configuration Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- View Calendar -->
+  <p><b>View Calendar:</b> As users access the Advent Calendar, doors that have reached their visibility date will appear active. Clicking a door reveals its hidden content, such as a festive image, quote, or link to a SharePoint resource.</p><br>
+
+  <div>
+    <img src="view.png" onclick="openModal('view.png')" alt="View Advent Calendar Example" width="100%" height="auto">
+  </div><br>
+    <div>
+    <img src="view1.png" onclick="openModal('view1.png')" alt="View Advent Calendar Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Manage or Update Calendar -->
+  <p><b>Manage or Update Calendar:</b> You can revisit and edit any door configuration at any time. Simply click the edit icon to modify content, background, or visibility settings.</p><br>
+
+  <div>
+    <img src="manage.png" onclick="openModal('manage.png')" alt="Manage Advent Calendar Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Settings -->
+  <p><b>Settings:</b> Administrators can configure global settings such as calendar theme (Light, Dark, or Site), visibility rules, and permission controls for who can view or edit the calendar content.</p><br>
+
+  <div>
+    <img src="global_settings.png" onclick="openModal('global_settings.png')" alt="Advent Calendar 365 Global Settings Example" width="100%" height="auto">
+  </div><br>
+
+  <!-- Help -->
+  <p><b>Help:</b> The Help panel provides license details, version information, subscription validity, and quick links to Support, Privacy Policy, FAQ, Release Notes, Product Activation, and License Validation.</p><br>
+
+  <div>
+    <img src="help.png" onclick="openModal('help.png')" alt="Advent Calendar 365 Help Section Example" width="100%" height="auto">
+  </div><br>
+</ul></div>
+
+
+
+
+      <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../introduction/" aria-label="Previous page"><i
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Introduction
+                                  </span></a>
+                            <a class="nav nav-next" href="../settings/" aria-label="Previous page"> <span
+                                    class="d-none d-md-block">Settings</span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+
+  </div>
+</div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/teStocks-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-teStocks-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://twitter.com/HR365_HStockS" aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd"
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+      <script src="../../../../js/adv-admin.js"></script>
+    
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../aside-assets/aside-assets.js"></script>
+</body>
+
+</html>
