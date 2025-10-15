@@ -41,30 +41,17 @@ $(document).ready(function () {
             "<a href='/sharepoint-employee-directory/modern/admin/dashboard/organization/'>" +
                 "Organization" +
             "</a>" +
-            "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg' class='imageIconorganization aside_dropdown_icon'>" +
-        "</li>" +
+                      "</li>" +
 
-        "<li data-nav-id='../dashboard/organization/' class='sidelist dropdown_romove_dot'>" +
-            "<ul class='sidenavSub-topics aside_dropdown_list' id='moderndashboardorganization'>" +
-
-                "<li data-nav-id='../dashboard/organization/general/' title='General' class='sidelist'>" +
-                    "<a href='/sharepoint-employee-directory/modern/admin/dashboard/organization/general/'>General</a>" +
-                "</li>" +
-
-                "<li data-nav-id='../dashboard/organization/advanced/' title='Advanced' class='sidelist'>" +
-                    "<a href='/sharepoint-employee-directory/modern/admin/dashboard/organization/advance/'>Advanced</a>" +
-                "</li>" +
-
-            "</ul>" +
-        "</li>" +
+      
+       
 
         // Analytics
-        "<li class='dropdownicon sidelist' title='Analytics'>" +
+        "<li class='sidelist' title='Analytics'>" +
             "<a href='/sharepoint-employee-directory/modern/admin/dashboard/analytics/'>" +
                 "Analytics" +
             "</a>" +
-            "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg' class='imageIconanalytics aside_dropdown_icon'>" +
-        "</li>" +
+                 "</li>" +
 
     "</ul>" +
 "</li>" +
@@ -81,31 +68,28 @@ $(document).ready(function () {
 
 
 // setting start 
-        "<li class='dropdownicon sidelist' title='Settings'>" +
+            "<li class='dropdownicon sidelist'>" +
         "<a href='/sharepoint-employee-directory/modern/admin/settings/'>" +
         "Settings" +
         "</a>" +
-        "<img src='../../down-arrow-svgrepo-com.svg' class='imageIconmainsetting aside_dropdown_icon_setting''>" +
+       "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'  class='helpdesk-img aside_dropdown_icon_setting'>" +
         "</li>" +
 
-        "<li data-nav-id='./Setting/' title='Settings' class='sidelist dropdown_romove_dot'>" +
+       "<li data-nav-id='../system-settings' title='system-settings' class='sidelist dropdown_romove_dot'>" +
+    "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
+   
+
       
-
-        "<ul class='sidenavSub-topics aside_dropdown_list_setting' value='settings'>" +
-
-        "<ul id='modernadminmainsetting'>" +
         "<li class='dropdownicon sidelist' title='General'>" +
         "<a  class='qwe' href='/sharepoint-employee-directory/modern/admin/settings/general/'>" +
         "General" +
         "</a>" +
-        "<img src='../../down-arrow-svgrepo-com.svg' class='imageIcongeneral aside_dropdown_icon''>" +
+       "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
-        "<li data-nav-id='../advanced/' class='sidelist dropdown_romove_dot' >" +
 
-  
-
-        "<ul class='sidenavSub-topics aside_dropdown_list' id='edmmoderngeneral'>" +
-        "<li data-nav-id='../advanced/' title='Auto Load Configuration' class='sidelist'>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+            "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+   "<li data-nav-id='../advanced/' title='Auto Load Configuration' class='sidelist'>" +
 "<a href='/sharepoint-employee-directory/modern/admin/settings/general/#AutoLoadConfiguration'>Auto Load Configuration</a>" +
 "</li>" +
 
@@ -181,19 +165,17 @@ $(document).ready(function () {
 
 
 
-        "<ul id='modernadminmainsetting'>" +
+        
         "<li class='dropdownicon sidelist' title='view'>" +
         "<a  class='qwe' href='/sharepoint-employee-directory/modern/admin/settings/views/'>" +
         "Views" +
         "</a>" +
         "<img src='../../down-arrow-svgrepo-com.svg' class='imageIcongeneral aside_dropdown_icon''>" +
         "</li>" +
-        "<li data-nav-id='../advanced/' class='sidelist dropdown_romove_dot' >" +
+       "<li data-nav-id='./Settings/'  class='sidelist dropdown_romove_dot'>" +
 
-  
-
-        "<ul class='sidenavSub-topics aside_dropdown_list' id='edmmoderngeneral'>" +
-        "<li data-nav-id='../advanced/' title='Align employee basic information' class='sidelist'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list active'>" +
+     "<li data-nav-id='../advanced/' title='Align employee basic information' class='sidelist'>" +
 "<a href='/sharepoint-employee-directory/modern/admin/settings/views/#Alignemployeebasicinformation'>Align employee basic information</a>" +
 "</li>" +
 
@@ -277,7 +259,7 @@ $(document).ready(function () {
 
 
 
-        "<ul id='modernadminmainsetting'>" +
+        
         "<li class='dropdownicon sidelist' title='Integration'>" +
        "<a href='/sharepoint-employee-directory/modern/admin/settings/integration/'>Integrations</a>"
       
@@ -325,6 +307,7 @@ $(document).ready(function () {
        
 
         "</ul>" +
+        "</li>"+
         
         "<li class='dropdownicon sidelist' title='Features'>" +
         "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/'>Features</a>" +
@@ -390,10 +373,10 @@ $(document).ready(function () {
         "<li data-nav-id='../../topbar-filter/' title='Topbar Filter' class='sidelist'>" +
 "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/#TopbarFilter'>Topbar Filter</a>" +
 "</li>" +
-        "</li>" +
-        "</li>" +
+       
 
         "</ul>" +
+        "</li>"+
         
 
         "</a>" +

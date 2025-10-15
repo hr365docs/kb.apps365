@@ -98,6 +98,9 @@ $(document).ready(function () {
          "<li data-nav-id='../General' title='Default Currency' class='sidelist'>" +
         "<a href='/RM365/modern/admin/settings/general-setting/#default-currency'> Default Currency </a>" +
         "</li>" +
+        "<li data-nav-id='../General' title='Currency Separator' class='sidelist'>" +
+        "<a href='/RM365/modern/admin/settings/general-setting/#_currency_separator'> Currency Separator </a>" +
+        "</li>" +
         "<li data-nav-id='../General' title='Enable Favicon' class='sidelist'>" +
         "<a href='/RM365/modern/admin/settings/general-setting/#Enable-Favicon'> Enable Favicon </a>" +
         "</li>" +

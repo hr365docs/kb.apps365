@@ -115,7 +115,7 @@ active">
   <div><img src="portal.png" onclick="openModal('portal.png')" alt="Portal Settings Preview" width="100%" height="auto"></div><br>
 </div>
 
-                        <div class="bg-light p-4 remove-padding">
+                       <div class="bg-light p-4 remove-padding">
   <h2 id="_dashboards">
     <a class="header-icon-link highlight" href="#"> Internal Job Portal Configuration
       <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
@@ -126,14 +126,30 @@ active">
 
   <div><img src="internalJob.png" onclick="openModal('internalJob.png')" alt="Internal Portal Preview" width="100%" height="auto"></div><br>
 
-  <p>Administrators can personalize the portal by defining its title, footer, description, logo, banner image, color theme, and navigational links. Additional settings allow control over referral permissions, resume size limits, and component visibility—ensuring a cohesive and user-friendly experience for employees.</p><br>
+ <p>When configuring an internal job posting, follow these steps to ensure a complete and functional setup:</p>
+<ol>
+  <li><b>Basic Details:</b> Enter the <b>title</b>, <b>footer</b>, <b>description</b>, <b>favicon icon</b>, and <b>portal logo</b>. You can also upload two related images for branding purposes.</li><br>
+  <div><img src="1a.png" onclick="openModal('1a.png')" alt="Branding Options" width="100%" height="auto"></div><br>
 
-  <div><img src="2.png" onclick="openModal('2.png')" alt="Branding Options" width="100%" height="auto"></div>
-  <div><img src="3.png" onclick="openModal('3.png')" alt="Design Customization" width="100%" height="auto"></div><br>
+  <li><b>Visual Customization:</b> Add a <b>banner image</b>, select the <b>portal color theme</b> and <b>text color</b>, specify the <b>company name</b>, and provide the <b>home page link</b> along with its associated image.</li><br>
+   <div><img src="2.png" onclick="openModal('2.png')" alt="Branding Options" width="100%" height="auto"></div><br>
 
-  <p>Once deployed to a designated tenant, the portal page generates a shareable link. This link can be distributed to users with access to view and apply for internal job openings.</p>
-  <div><img src="ReadyTemplate.png" onclick="openModal('ReadyTemplate.png')" alt="Link Generation" width="100%" height="auto"></div><br>
+  <li><b>Internal Page Link:</b> You must provide a valid internal page link. This is required to generate the live internal job posting site and its corresponding preview image.</li><br>
+  <div><img src="3.png" onclick="openModal('3.png')" alt="Branding Options" width="100%" height="auto"></div><br>
 
+  <li><b>Hide SharePoint Default Components:</b> To customize the portal view, click on <b>Configure</b> and enable the option to hide SharePoint’s default components.</li><br>
+  <div><img src="configureOption.png" onclick="openModal('configureOption.png')" alt="Configure SharePoint Settings" width="100%" height="auto"></div><br>
+  <li><b>Referral Options:</b> You can choose to <b>hide or show</b> the “Refer Candidate” / “Refer This Job” section by toggling the switch on or off.</li><br>
+  <div><img src="referToggle.png" onclick="openModal('referToggle.png')" alt="Referral Toggle Option" width="100%" height="auto"></div><br>
+  <li><b>Finalize Setup:</b> After entering all details, click on <b>Save</b>. </li><br>
+   <div><img src="3a.png" onclick="openModal('3a.png')" alt="Branding Options" width="100%" height="auto"></div><br>
+<li>Initially, the <b>Live</b> option will remain deactivated. Once you’ve added the required internal and home page links, the <b>Live</b> option will become active. Clicking this option will open the internal job posting site.</li><br>
+ <div><img src="ReadyTemplate1.png" onclick="openModal('ReadyTemplate1.png')" alt="Link Generation" width="100%" height="auto"></div><br>
+<div><img src="ReadyTemplate.png" onclick="openModal('ReadyTemplate.png')" alt="Link Generation" width="100%" height="auto"></div><br>
+
+  
+  
+  
   <p>Click on the provided icon to open the job application interface.</p>
   <div><img src="ClickonIcon.png" onclick="openModal('ClickonIcon.png')" alt="Launch Job Post" width="100%" height="auto"></div><br>
 
@@ -142,9 +158,14 @@ active">
 
   <p>Candidates can enter the required details per job criteria and upload a resume.</p>
   <div><img src="DataFill.png" onclick="openModal('DataFill.png')" alt="Application Form" width="100%" height="auto"></div><br>
-
-  <p>After completing the form, click the submit button to finalize the application.</p>
+  <p>The candidate details will be automatically extracted from the uploaded resume, eliminating the need for manual data entry.</p>
+  <div><img src="DataFill1.png" onclick="openModal('DataFill1.png')" alt="Application Form" width="100%" height="auto"></div><br>
+  <p>After completing the form, select the checkbox and click the submit button to finalize the application.</p>
   <div><img src="Submit.png" onclick="openModal('Submit.png')" alt="Submit Application" width="100%" height="auto"></div><br>
+<div class="notices note">
+  <div class="paragraph">
+  <p>When you upload a job posting, the live site and its preview image will not be immediately available. To activate the live option, ensure that the <b>Internal Portal Configuration</b> includes a valid internal page link and corresponding image. Once these are added, the live option becomes active, allowing you to click the link and view the job post with its associated image.</p><br>
+  </div></div>
 </div>
 <div class="bg-light p-4 remove-padding">
   <h2 id="_confidential_internal">
@@ -194,11 +215,14 @@ active">
   <div><img src="confidentialExternal.png" onclick="openModal('confidentialExternal.png')" alt="Confidential External Portal" width="100%" height="auto"></div><br>
 
   <p>Similar to Confidential Internal, after creating a job with <b>Confidential External</b> status, administrators can copy its URL and share it directly with chosen external candidates. Only individuals with the link can access and apply.</p><br>
+  <div><img src="1b.png" onclick="openModal('1b.png')" 
+           alt="Confidential External Publish Status" width="100%" height="auto"></div><br>
   <div><img src="external1.png" onclick="openModal('external1.png')" alt="Confidential External Settings" width="100%" height="auto"></div><br>
 </div>
 <div class="notices note">
   <div class="paragraph">
-    <p>To install the Internal/External Job Portal (IJP), customers must raise a request with the support team. The support team will deploy and configure the IGP app on the customer’s SharePoint site, enabling administrators to set up and manage job postings.</p>
+    <p>1. To install the Internal/External Job Portal (IJP), customers must raise a request with the support team. The support team will deploy and configure the IJP app on the customer’s SharePoint site, enabling administrators to set up and manage job postings.<br><br>2. 
+    For first-time RM365 installations within a tenant, once a user uploads a job posting and clicks the <b>Live</b> option, the system automatically opens the corresponding job posting site without requiring any additional configuration.
   </div>
 </div>
 
