@@ -383,6 +383,11 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/notification/#admin'>Admin</a>" +
         "</li>" +
+         "<li data-nav-id='./Add Assets/ ' title='Approver' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/notification/#approver'>Approver</a>" +
+        "</li>" +
         "</ul>" +
         "</li>" +
 
@@ -395,11 +400,18 @@ $(document).ready(function () {
         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
         "<li data-nav-id='./Assign-Assets/ ' title='Canned Responses' class='sidelist '>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#canned-responses'>Canned Responses</a>" +
+
+         "<li data-nav-id='./Add Assets/ ' title='Column Indexing' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Column_Indexing'>Column Indexing</a>" +
+        "</li>" +
         "<li data-nav-id='./Add Assets/ ' title='Customer Satisfaction' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#customer-satisfaction'>Customer Satisfaction </a>" +
         "</li>" +
+
         "<li data-nav-id='./Add Assets/ ' title='CustomvColumns'class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
