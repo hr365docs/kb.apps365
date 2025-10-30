@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Directory 365 | Admin Guide | Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description"
+        content="Admin guide for the Settings section of Page Directory 365, offering customization options for system preferences and configurations.">
+
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src='../../../../images/logo_.png' width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../Page-Directory-365/">Page Directory 365</a></h5>
+                        <a class=back-btn href="../../../../Page-Directory-365/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="polladmin">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             <div class="col-lg-9">
+   <div class="p-lg-4 p-4 bg-white remove-padding" id="content">
+<div class="bg-light p-4 remove-padding">
+  <h3 id="_settings">
+    <a class="header-icon-link highlight" href="#">Settings
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+ <p>The <b>Page Directory 365 Settings</b> panel allows administrators to customize the behavior, appearance, and accessibility of the directory. From here, you can configure the theme, control visibility of SharePoint settings, manage page display options, define page sources, and assign additional administrators.</p>
+
+<div class="sidelist active" data-nav-id="./Settings/" title="Settings">
+  <img src="settings_main.png" onclick="openModal('settings_main.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div>
+
+<!-- Theme Section -->
+<div class="bg-light p-4 common-scroll remove-padding" id="_theme_option">
+  <h3 id="_option">
+    <a class="header-icon-link highlight" href="#">Theme
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>Select a visual theme for <b>Page Directory 365</b> to match your SharePoint environment or user preference:</p>
+  <ul>
+    <li><b>Light Mode:</b> Provides a bright and clean interface ideal for standard viewing conditions.<br><br>
+      <img src="light.png" onclick="openModal('light.png')" alt="Light Mode Example" width="100%" height="auto">
+    </li><br>
+    <li><b>Dark Mode:</b> Designed for low-light environments, offering a modern and visually comfortable layout.<br><br>
+      <img src="dark.png" onclick="openModal('dark.png')" alt="Dark Mode Example" width="100%" height="auto">
+    </li><br>
+    <li><b>Site Mode:</b> Automatically applies the active SharePoint site theme for consistent branding.<br><br>
+      <img src="site.png" onclick="openModal('site.png')" alt="Site Mode Example" width="100%" height="auto">
+    </li><br>
+  </ul>
+</div>
+
+<!-- Hide SharePoint Settings -->
+<div class="bg-light p-4 common-scroll remove-padding" id="hide-sharepoint-settings">
+  <h3 id="_hide_sharepoint_settings">
+    <a class="header-icon-link highlight" href="#">Hide SharePoint Settings
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>The <b>Hide SharePoint Settings</b> option allows administrators to restrict access to the native SharePoint settings menu within the <b>Page Directory 365</b> web part. This ensures a cleaner interface and prevents users from making unintended configuration changes.</p>
+  <div>
+    <img src="hide_sharepoint_settings.png" onclick="openModal('hide_sharepoint_settings.png')" alt="Hide SharePoint Settings Example" width="100%" height="auto">
+  </div><br>
+   <div>
+  <img src="5.png" onclick="openModal('5.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+</div>
+
+<!-- Page Directory Settings -->
+<div class="bg-light p-4 common-scroll remove-padding" id="_page_directory_settings">
+  <h3 id="_settings">
+    <a class="header-icon-link highlight" href="#">Page Directory Settings
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>The <b>Page Directory Settings</b> section enables customization of the directory’s display and navigation behavior.</p><br>
+  
+<div>
+  <img src="1.png" onclick="openModal('1.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+  <ul>
+    <li><b>Show the Search Box:</b> Toggle to display or hide the search bar for quick page lookups.</li><br>
+     <div>
+  <img src="6.png" onclick="openModal('6.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Show the A–Z Filters:</b> Displays the alphabetical navigation bar for categorized browsing.</li><br>
+     <div>
+  <img src="7.png" onclick="openModal('7.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Show the Site Name:</b> Enables or hides site names beneath each page tile.</li><br>
+     <div>
+  <img src="8.png" onclick="openModal('8.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Open Links in a New Tab:</b> Allows users to open selected pages in a separate browser tab.</li><br>
+     <div>
+  <img src="9.png" onclick="openModal('9.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+ <div>
+  <img src="10.png" onclick="openModal('10.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Page Types to Display:</b> Choose which page types appear in the directory, including Home pages, News posts, Site pages, Templates, or the current page.</li><br>
+     <div>
+  <img src="11.png" onclick="openModal('11.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Layout:</b> Select between <b>Column</b> and <b>Card</b> views for displaying pages.</li>
+     <div>
+  <img src="12.png" onclick="openModal('12.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+  </ul>
+ 
+</div>
+
+<!-- Page Sources -->
+<div class="bg-light p-4 common-scroll remove-padding" id="page-sources">
+  <h3 id="_page_sources">
+    <a class="header-icon-link highlight" href="#">Page Sources
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>The <b>Page Sources</b> section allows administrators to manage which site collections or subsites are included in the directory. This provides control over where the Page Directory retrieves its data from.</p><br>
+  <div>
+  <img src="2.png" onclick="openModal('2.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+  <ul>
+    <li><b>Add New Source:</b> Type the site name and click <b>Add</b> to include a new source.</li><br>
+     <div>
+  <img src="13.png" onclick="openModal('13.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Status:</b> Activate or deactivate a site’s inclusion using the checkbox.</li><br>
+     <div>
+  <img src="14.png" onclick="openModal('14.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Remove:</b> Click the trash icon to delete a source from the directory.</li><br>
+     <div>
+  <img src="15.png" onclick="openModal('15.png')" alt="Page Directory 365 Settings Overview" width="100%" height="auto">
+</div><br>
+    <li><b>Pagination Control:</b> Navigate through multiple pages of sources using pagination options.</li>
+  </ul>
+  <div>
+    <img src="sources.png" onclick="openModal('sources.png')" alt="Page Directory Sources Example" width="100%" height="auto">
+  </div><br>
+</div>
+
+<!-- Add Additional Admins -->
+<div class="bg-light p-4 common-scroll remove-padding" id="add-admins">
+  <h3 id="_add_admins">
+    <a class="header-icon-link highlight" href="#">Add Additional Admins
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3>
+  <p>The <b>Add Additional Admins</b> option allows you to grant administrative privileges to other users who need access to manage settings or content within <b>Page Directory 365</b>.</p>
+  <div>
+    <img src="admins.png" onclick="openModal('admins.png')" alt="Add Additional Admins Example" width="100%" height="auto">
+  </div><br> <ul>
+    <li><b>User Grid:</b> Displays Name, Email, and Role (Admin/User) for each entry.</li><br>
+    <div>
+      <img src="users-grid.png" onclick="openModal('users-grid.png')" alt="Users Grid Example" width="100%" height="auto">
+    </div><br>
+    <li><b>Role Assignment:</b> Administrators can assign or update roles (Admin/User) via the dropdown.</li><br>
+    <div>
+      <img src="users-role.png" onclick="openModal('users-role.png')" alt="User Role Assignment Example" width="100%" height="auto">
+    </div><br>
+    <li><b>Search & Pagination:</b> Search by Name, Email and adjust the number of entries displayed (10, 25, or 50 per page).</li><br>
+    <div>
+      <img src="users-search.png" onclick="openModal('users-search.png')" alt="User Search Example" width="100%" height="auto">
+    </div><br>
+    
+  </ul>
+
+</div>
+</div>
+
+
+    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
+    <nav class="pagination mt-3">
+        <a class="nav nav-prev" href="../homepage/" aria-label="Previous page">
+            <i class="ti-arrow-left mr-2"></i>
+            <span class="d-none d-md-block">Home Page</span>
+        </a>
+        <a class="nav nav-next" href="../help/" aria-label="Next page">
+            <span class="d-none d-md-block">Help</span>
+            <i class="ti-arrow-right ml-2"></i>
+        </a>
+    </nav>
+</div>
+
+</div>
+
+            </div>
+    </section>
+    <div id="myModal " class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src=" " id="imageId " style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
+                            href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                        Policy.
+                        </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.facebook.com/hr365apps/ " aria-label=Facebook><i
+                                    class=ti-facebook></i></a></li>
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://twitter.com/HR365_HRMS " aria-label=Twitter><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <!-- <li class=list-inline-item><a class="text-color d-inline-block p-2 " href=# aria-label=Github><i class=ti-github></i></a></li> -->
+                        <li class=list-inline-item><a class="text-color d-inline-block p-2 "
+                                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd "
+                                aria-label=Linkedin><i class=ti-linkedin></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../../js/script.min.js"></script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/page-admin.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId ").src = src;
+            document.getElementById("myModal ").style.display = "block ";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal ").style.display = "none ";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date ").innerHTML = date;
+    </script>
+
+</body>
+
+</html>

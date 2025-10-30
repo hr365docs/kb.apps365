@@ -28,6 +28,9 @@ $(document).ready(function () {
                 "<li class='sidelist' title='AI Configure'>" +
                     "<a href='/AI-Summary-365/modern/admin/settings/#_ai_configure'>AI Configure</a>" +
                 "</li>" +
+                "<li class='sidelist' title='Sharepoint Page Configuration'>" +
+                    "<a href='/AI-Summary-365/modern/admin/settings/#hide-sharepoint-settings'>Sharepoint Page Configuration</a>" +
+                "</li>" +
             "</ul>" +
         "</li>" +
 

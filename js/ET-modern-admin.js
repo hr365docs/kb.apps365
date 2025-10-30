@@ -30,7 +30,7 @@ $(document).ready(function () {
         "</li>" +
 
 
-        "<li data-nav-id='./Settings/' title='report' class=sidelist>" +
+        "<li data-nav-id='./Settings/' title='Reports' class=sidelist>" +
 
         "<a href='/Expense-tracker/modern/admin/reports/'>" +
         "Report" +
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
 
 
-        "<li data-nav-id='./Settings/' title=Reports class=sidelist>" +
+        "<li data-nav-id='./Settings/' title=Administration class=sidelist>" +
 
         "<a href='/Expense-tracker/modern/admin/administration/'>" +
         " Administration" +
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
 
 
-        "<li class='dropdownicon sidelist'>" +
+        "<li class='dropdownicon sidelist' title='settings'>" +
         "<a class='qwe' href='/Expense-tracker/modern/admin/settings/'>" +
         "Settings" +
         "</a>" +
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
        "<li data-nav-id='../system-settings' title='system-settings' class='sidelist dropdown_romove_dot'>" +
     "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
-        "<li data-nav-id='../user' title='General' class='dropdownicon sidelist'>" +
+        "<li data-nav-id='../user' title='General Settings' class='dropdownicon sidelist'>" +
             "<a class='qwe' href='/Expense-tracker/modern/admin/settings/general-setting/'> General Settings </a>" +
             "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
@@ -146,6 +146,10 @@ $(document).ready(function () {
                 "<li data-nav-id='../General' title='Clone Multiple Expense' class='sidelist'>" +
                     "<a href='/Expense-tracker/modern/admin/settings/general-setting/#CloneMultipleExpense'>Clone Multiple Expense</a>" +
                 "</li>" +
+
+                 "<li data-nav-id='../General' title='Use Sharepoint URL for MS Teams installed application' class='sidelist'>" +
+      "<a class='qwe' href='/Expense-tracker/modern/admin/settings/general-setting/#SharepointURL'>Use Sharepoint URL for MS Teams installed application</a>" +
+    "</li>" +
 
                 "<li data-nav-id='../General' title='SharePoint Page Configuration' class='sidelist'>" +
                     "<a href='/Expense-tracker/modern/admin/settings/general-setting/#SharepointPageConfiguration'>SharePoint Page Configuration</a>" +
@@ -296,7 +300,7 @@ $(document).ready(function () {
 
 
         "<ul class='sidenavSub-topics aside_dropdown_list' id='modernsettingedm'>" +
-        "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+        "<li  data-nav-id='../advanced/' title='Product Activation' class='sidelist'>" +
         "<a href='/Expense-tracker/modern/admin/help/#product-activation'>Product Activation</a>" +
         "</li>")
 

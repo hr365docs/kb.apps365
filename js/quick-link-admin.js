@@ -25,6 +25,9 @@ $(document).ready(function () {
                 "<li class='sidelist' title='Users'>" +
                     "<a href='/Quick-Link-365/modern/admin/settings/#_users'>Users</a>" +
                 "</li>" +
+                "<li class='sidelist' title='Sharepoint Page Configuration'>" +
+                    "<a href='/Quick-Link-365/modern/admin/settings/#hide-sharepoint-settings'>Sharepoint Page Configuration</a>" +
+                "</li>" +
             "</ul>" +
         "</li>" +
 

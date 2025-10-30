@@ -76,27 +76,37 @@ window.addEventListener("load", () => {
     }
 
     dropdowmitems.forEach((element, index) => {
-        element.addEventListener("click", () => {
-            let getheight = dropdowmlist[index].scrollHeight;
-            let dropdowmlistactive = document.querySelector(".aside_dropdown_list.active")
-            if (element.classList.contains("active")) {
-                element.classList.remove("active");
-                dropdowmlistactive.setAttribute("style", "height:0px;overflow:hidden;opacity:0;")
-            } else {
-                for (let i of dropdowmitems) {
-                    i.classList.remove("active"); 
+    element.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation(); // prevent bubbling to parent
+
+        let currentDropdown = dropdowmlist[index];
+        let isNested = element.closest(".aside_dropdown_list_setting") || element.closest(".aside_dropdown_list");
+
+        // Only collapse non-nested dropdowns
+        if (!isNested) {
+            dropdowmlist.forEach((list, i) => {
+                if (i !== index) {
+                    list.classList.remove("active");
+                    list.setAttribute("style", "height:0px;overflow:hidden;opacity:0;");
+                    dropdowmitems[i].classList.remove("active");
                 }
-                for (let j of dropdowmlist) {
-                    j.classList.remove("active");
-                    j.setAttribute("style", "height:0px;overflow:hidden;opacity:0;")
-                }
-                element.classList.add("active");
-                localStorage.setItem("Dropdownstate",dropdowmlist[index])
-                dropdowmlist[index].classList.add("active")
-                dropdowmlist[index].setAttribute("style", `height:${getheight}px;opacity: 1;`)   
-            }
-        })
-    })
+            });
+        }
+
+        if (element.classList.contains("active")) {
+            element.classList.remove("active");
+            currentDropdown.classList.remove("active");
+            currentDropdown.setAttribute("style", "height:0px;overflow:hidden;opacity:0;");
+        } else {
+            element.classList.add("active");
+            currentDropdown.classList.add("active");
+            let height = currentDropdown.scrollHeight;
+            currentDropdown.setAttribute("style", `height:${height}px;opacity:1;overflow:visible;`);
+        }
+    });
+});
+
 
 
     // Setting open dropdown js code
@@ -109,4 +119,24 @@ window.addEventListener("load", () => {
         })
     }
 
+    
+
 })
+
+// General dropdown JS code
+if (document.querySelector(".aside_dropdown_icon_general")) {
+    let generalDropdownIcon = document.querySelector(".aside_dropdown_icon_general");
+    let generalDropdownList = document.querySelector(".aside_dropdown_list_general");
+
+    generalDropdownIcon.addEventListener("click", () => {
+        generalDropdownIcon.classList.toggle("active");
+        generalDropdownList.classList.toggle("active");
+
+        if (generalDropdownList.classList.contains("active")) {
+            let height = generalDropdownList.scrollHeight;
+            generalDropdownList.setAttribute("style", `height:${height}px;opacity:1;overflow:visible;`);
+        } else {
+            generalDropdownList.setAttribute("style", "height:0px;overflow:hidden;opacity:0;");
+        }
+    });
+}

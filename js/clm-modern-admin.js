@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 
 
-"<li data-nav-id='./Settings/' title=Reports class=sidelist>"+
+"<li data-nav-id='./Settings/' title=Administration class=sidelist>"+
 
 "<a href='/contract-management/modern/admin/administration/'>"+
 " Administration"+
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
     // 2) Integrations & Auto Numbering (no dropdown)
 // Integrations
-"<li data-nav-id='./integrations/' title='Integrations and Auto Numbering' class='dropdownicon sidelist'>" +
+"<li data-nav-id='./integrations/' title='Integrations' class='dropdownicon sidelist'>" +
   "<a class='qwe' href='/contract-management/modern/admin/settings/integrations/'>Integrations</a>" +
   "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg' class='helpdesk-img aside_dropdown_icon'>" +
 "</li>" +
@@ -148,10 +148,10 @@ $(document).ready(function () {
       "<a class='qwe' href='/contract-management/modern/admin/settings/integrations/#AISummary'>AI Summary</a>" +
     "</li>" +
 
-    "<li data-nav-id='../Integration' title='AI Obligation' class='sidelist'>" +
+    "<li data-nav-id='../Integration' title='AI Agent' class='sidelist'>" +
       "<a class='qwe' href='/contract-management/modern/admin/settings/integrations/#AIAgent'>AI Agent</a>" +
     "</li>" +
-    "<li data-nav-id='../Integration' title='AI Agent' class='sidelist'>" +
+    "<li data-nav-id='../Integration' title='AI Obligation' class='sidelist'>" +
       "<a class='qwe' href='/contract-management/modern/admin/settings/integrations/#_ai_obligation'>AI Obligation</a>" +
     "</li>" +
     "<li data-nav-id='../Integration' title='AI Clause' class='sidelist'>" +
@@ -218,6 +218,9 @@ $(document).ready(function () {
     "</li>" +
     "<li data-nav-id='../General' title='currency separator' class='sidelist'>" +
       "<a class='qwe' href='/contract-management/modern/admin/settings/general/#currency-separator'>Currency Separator</a>" +
+    "</li>" +
+    "<li data-nav-id='../General' title='Use Sharepoint URL for MS Teams installed application' class='sidelist'>" +
+      "<a class='qwe' href='/contract-management/modern/admin/settings/general/#SharepointURL'>Use Sharepoint URL for MS Teams installed application</a>" +
     "</li>" +
 
     "<li data-nav-id='../General' title='Sample Contract/Request Data' class='sidelist'>" +

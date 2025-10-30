@@ -1,7 +1,7 @@
 $(document).ready(function () {
-        $("#hcm-admin-guide").html("");
+        $("#hcm-admin Guide").html("");
 
-        $("#hcm-admin-guide").append("<ul>" +
+        $("#hcm-admin Guide").append("<ul>" +
                 //       intro 
                 "<li data-nav-id='./installation/requirments/' title=Introduction class=sidelist>" +
                 "<a href='/HRMS-HR365/modern/admin/introduction/'>" +

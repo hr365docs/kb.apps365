@@ -19,7 +19,7 @@ $(document).ready(function () {
             "</a>"+
             "</li>"+
         
-       "<li data-nav-id='../Home-page' title=Comp Off class=sidelist>"+
+       "<li data-nav-id='../Home-page' title='Comp Off' class=sidelist>"+
             "<a href='/employee-vacation-tracker-time-off-manager/modern/user/comp-off/'>"+
                 "Comp Off"+
             "</a>"+
@@ -35,7 +35,7 @@ $(document).ready(function () {
             "</a>"+
             "</li>"+
     
-         "<li data-nav-id='../user' title=user class='sidelist'>"+
+         "<li data-nav-id='../user' title=Help class='sidelist'>"+
                 "<a href='/employee-vacation-tracker-time-off-manager/modern/user/help/'>"+
                 "Help"+
                 "</a>"+

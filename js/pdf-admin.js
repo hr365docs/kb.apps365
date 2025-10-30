@@ -25,6 +25,9 @@ $(document).ready(function () {
                 "<li class='sidelist' title='Users'>" +
                     "<a href='/PDF-to-HTML-365/modern/admin/settings/#_users'>Users</a>" +
                 "</li>" +
+                 "<li class='sidelist' title='saved-files'>" +
+                    "<a href='/PDF-to-HTML-365/modern/admin/settings/#saved-files'>Saved Files</a>" +
+                "</li>" +
             "</ul>" +
         "</li>" +
 

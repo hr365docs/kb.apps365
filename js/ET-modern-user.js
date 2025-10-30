@@ -17,14 +17,14 @@ $(document).ready(function () {
         "</a>" +
 
         "</li>" +
-        "<li data-nav-id='./Settings/' title='Home Page' class=sidelist>" +
+        "<li data-nav-id='./Settings/' title='Report' class=sidelist>" +
 
         "<a href='/Expense-tracker/modern/user/Report/'>" +
         "Report" +
         "</a>" +
 
         "</li>" +
-        "<li data-nav-id='./Settings/' title='Home Page' class=sidelist>" +
+        "<li data-nav-id='./Settings/' title='Help' class=sidelist>" +
 
         "<a href='/Expense-tracker/modern/user/Help/'>" +
         "Help" +

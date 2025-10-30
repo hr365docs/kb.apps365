@@ -8,12 +8,12 @@ $(document).ready(function () {
         "</a>" +
         "</li>" +
 
-        "<li data-nav-id='../Home-page' title=Home-page class=sidelist>" +
+        "<li data-nav-id='../Home-page' title='Home Page' class=sidelist>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/home-page/'>" +
         "Home Page" +
         "</a>" +
         "</li>" +
-        "<li data-nav-id='../ArchitectureDiagram' title=ArchitectureDiagram class=sidelist>" +
+        "<li data-nav-id='../ArchitectureDiagram' title='Architecture Diagram' class=sidelist>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/ArchitectureDiagram/'>" +
         "Architecture Diagram" +
         "</a>" +
@@ -23,19 +23,19 @@ $(document).ready(function () {
         "Dashboard" +
         "</a>" +
         "</li>" +
-        "<li data-nav-id='../ HR-actions' title= HR-actions class=sidelist>" +
+        "<li data-nav-id='../ HR-actions' title='HR actions' class=sidelist>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/hr-actions/'>" +
         "HR actions" +
         "</a>" +
         "</li>" +
 
-        "<li data-nav-id='../holidays' title=holidays class='sidelist'>" +
+        "<li data-nav-id='../holidays' title='Public Holidays' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/holidays/'>" +
         "Public Holidays" +
         "</a>" +
         "</li>" +
 
-        "<li data-nav-id='../user' title=user class='sidelist'>" +
+        "<li data-nav-id='../user' title=Users class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/user/'>" +
         "Users" +
         "</a>" +
@@ -47,14 +47,14 @@ $(document).ready(function () {
         "</a>" +
         "</li>" +
 
-        "<li data-nav-id='../user' title=user class='sidelist'>" +
+        "<li data-nav-id='../user' title=Reports class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/reports/'>" +
         "Reports" +
         "</a>" +
         "</li>" +
 
 
-        "<li class='dropdownicon sidelist'>" +
+        "<li class='dropdownicon sidelist' title='System Settings'>" +
         "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/'>" +
         "System Settings" +
         "</a>" +
@@ -62,7 +62,7 @@ $(document).ready(function () {
         "</li>" +
 
 
-        "<li data-nav-id='../system-settings' title=system-settings class='sidelist dropdown_romove_dot'>" +
+        "<li data-nav-id='../system-settings' title='System Settings' class='sidelist dropdown_romove_dot'>" +
         // "<div class='dropdownicon'>"+   
         //     "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/'>"+
         //     "System Settings"+
@@ -110,6 +110,10 @@ $(document).ready(function () {
         "<li data-nav-id='../General' title='Leaves reordering' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/general-setting/#LeavesReordering'> Leaves reordering </a>" +
         "</li>" +
+        
+                                        "<li data-nav-id='../General' title='Use Sharepoint URL for MS Teams installed application' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/general-setting/#SharepointURL'> Use Sharepoint URL for MS Teams installed application </a>" +
+        "</li>" +
         "<li data-nav-id='../General' title='Hide SharePoint page's' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/general-setting/#HideSharePoint'> Hide SharePoint page's </a>" +
         "</li>" +
@@ -131,7 +135,7 @@ $(document).ready(function () {
         "</ul>" +
         "</li>"+
 
-        "<li data-nav-id='../user' title=Advance Settings class='dropdownicon sidelist'>" +
+        "<li data-nav-id='../user' title='Advance Settings' class='dropdownicon sidelist'>" +
         "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/advance-setting/'>  Advance Settings</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
@@ -198,7 +202,7 @@ $(document).ready(function () {
         "</li>" +
        
         "</ul>" +
-        "<li data-nav-id='../user' title=Leave Settings class='dropdownicon sidelist'>" +
+        "<li data-nav-id='../user' title='Leave Settings' class='dropdownicon sidelist'>" +
         "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/leave-setting/'>Leave Settings</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</a>" +
@@ -221,7 +225,7 @@ $(document).ready(function () {
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/leave-setting/#leaveeligibilitydelay'> Enable Leave Eligibility Delay </a>" +
         "</li>" +
         
-        "<li data-nav-id='../General' title='LeavesBasedOn' class='sidelist'>" +
+        "<li data-nav-id='../General' title='Leaves Based On' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/leave-setting/#LeavesBasedOn'> Leaves Based On </a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Tenure Based Leaves' class='sidelist'>" +
@@ -260,12 +264,11 @@ $(document).ready(function () {
 
 
         "<ul class='sidenavSub-topics aside_dropdown_list' id='modernsettingedm'>" +
-        "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+        "<li  data-nav-id='../advanced/' title='Feedback' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/help/#feedback'>Feedback</a>" +
         "</li>" +
-        "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+        "<li  data-nav-id='../advanced/' title='Product Activation' class='sidelist'>" +
         "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/help/#product-activation'>Product Activation</a>" +
         "</li>")
 
 });
-
