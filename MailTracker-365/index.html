@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Mail Tracker 365</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="description" content="Mail Tracker 365 simplifies business expense management with seamless tracking, categorization, and analysis within the Microsoft 365 ecosystem." />
+
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css" />
+  <link rel="icon" href="#" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+
+  <link href="../css/style.min.css" rel="stylesheet" media="screen" />
+
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+  </script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+
+
+<body>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                  style="display:none;visibility:hidden">
+              </iframe>
+          </noscript>
+          <!-- End Google Tag Manager (noscript) -->
+
+  <header class="banner overlay bg-cover" data-background="https://kb.apps365.com/images/banner.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+          <img style="margin-top:5px ;"  class=img-fluid src="../images/app365.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  common-header" id="navigation">
+    
+        </div>
+      </div>
+    </nav>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white mb-3 supportHeading">
+            Support Center &amp; Knowledge base
+          </h1>
+          <p class="text-white mb-4 findadviceheading">
+            Find advice and answers from our support team fast or get in touch
+          </p>
+          <div class="position-relative">
+            <form class="banner_form" action="">
+
+              <input
+                id="search"
+                class="form-control"
+                placeholder="Have a question? Just ask here or enter terms"
+              />
+              <i class="ti-search search-icon"></i>
+            </form>
+
+
+            <script>
+              $(function () {
+                var projects = [
+
+                  {
+                    value: "Installation",
+                    label: "<p>Installation</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/getting-started/installation/"
+                  },
+
+                  {
+                    value: "Installation of applications from App Catalog",
+                    label: "<p>Installation of applications from App Catalog</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/getting-started/installation/using-app-file/"
+                  },
+
+                  {
+                    value: "Upgrading",
+                    label: "<p>Upgrading</p><p></p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/getting-started/upgrading/"
+                  },
+
+                  {
+                    value: "Faq",
+                    label: "<p>Faq\n</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/faq/"
+                  },
+
+                  {
+                    value: "Release Notes",
+                    label: "<p>Release Notes</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/release-note/"
+                  },
+                  {
+                    value: "User Guide",
+                    label: "<p>User Guide</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/user/"
+                  },
+                  {
+                    value: "Introduction(User Guide)",
+                    label: "<p>Introduction(User Guide)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/user/"
+                  },
+                  {
+                    value: "Home Page(User Guide)",
+                    label: "<p>Home Page(User Guide)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/user/"
+                  },
+                  {
+                    value: "Self Review(User Guide)",
+                    label: "<p>Self Review(User Guide)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/user/self-review/"
+                  },
+                  {
+                    value: "360 Feedback(User Guide)",
+                    label: "<p>360 Feedback(User Guide)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/user/feedback/"
+                  },
+                  {
+                    value: "Admin Guide",
+                    label: "<p>Admin Guide</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/"
+                  },
+                  {
+                    value: "Introduction(Admin-365)",
+                    label: "<p>Introduction(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/introduction/"
+                  },
+                  {
+                    value: "Architecture Diagram(Admin-365)",
+                    label: "<p>Architecture Diagram(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/architecture-diagram/"
+                  },
+                  {
+                    value: "Home Page(Admin-365)",
+                    label: "<p>Home Page(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/home-page/"
+                  },
+                  {
+                    value: "Dashboard(Admin-365)",
+                    label: "<p>Dashboard(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/dashboard/"
+                  },
+                  {
+                    value: "Roles(Admin-365)",
+                    label: "<p>Roles(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/roles/"
+                  },
+                  {
+                    value: "Administration(Admin-365)",
+                    label: "<p>Administration(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/administration/"
+                  },
+                  {
+                    value: "Settings(Admin-365)",
+                    label: "<p>Settings(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/settings/"
+                  },
+                  {
+                    value: "Reports(Admin-365)",
+                    label: "<p>Reports(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/reports/"
+                  },
+                  {
+                    value: "Help(Admin-365)",
+                    label: "<p>Help(Admin-365)</p>",
+                    url: "https://kb.apps365.com/MailTracker-365/modern/admin/reports/"
+                  },
+
+                ];
+                $( "#search" ).autocomplete({
+          	source: projects
+          })
+          .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+            
+
+            
+          var input = document.querySelector('.banner_form input');
+
+            input.onkeyup = function(e) {
+            input_val = this.value; 
+            
+            let autocompleteitems= document.querySelectorAll(".autocomplete_items a");
+            for(let i=0; i<autocompleteitems.length; i++){
+                if(input_val==autocompleteitems[i].innerText){
+                  let geturl=document.querySelector('.banner_form');
+                  geturl.action=autocompleteitems[i].href
+                  document.querySelector('#search').click();
+                }
+            }
+          }
+           
+                      // variables
+        
+        
+        // events
+      
+        
+            return $( "<li class='autocomplete_items'>" )
+              .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label )
+              .appendTo( ul );
+            };
+            
+          });
+          
+        </script>          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <section class="ptb-20 section" id="performnacemanagementmodern">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center logodisplay contractmainlogo">
+          <div class="logoIcon_asset moblogo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKTWlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVN3WJP3Fj7f92UPVkLY8LGXbIEAIiOsCMgQWaIQkgBhhBASQMWFiApWFBURnEhVxILVCkidiOKgKLhnQYqIWotVXDjuH9yntX167+3t+9f7vOec5/zOec8PgBESJpHmomoAOVKFPDrYH49PSMTJvYACFUjgBCAQ5svCZwXFAADwA3l4fnSwP/wBr28AAgBw1S4kEsfh/4O6UCZXACCRAOAiEucLAZBSAMguVMgUAMgYALBTs2QKAJQAAGx5fEIiAKoNAOz0ST4FANipk9wXANiiHKkIAI0BAJkoRyQCQLsAYFWBUiwCwMIAoKxAIi4EwK4BgFm2MkcCgL0FAHaOWJAPQGAAgJlCLMwAIDgCAEMeE80DIEwDoDDSv+CpX3CFuEgBAMDLlc2XS9IzFLiV0Bp38vDg4iHiwmyxQmEXKRBmCeQinJebIxNI5wNMzgwAABr50cH+OD+Q5+bk4eZm52zv9MWi/mvwbyI+IfHf/ryMAgQAEE7P79pf5eXWA3DHAbB1v2upWwDaVgBo3/ldM9sJoFoK0Hr5i3k4/EAenqFQyDwdHAoLC+0lYqG9MOOLPv8z4W/gi372/EAe/tt68ABxmkCZrcCjg/1xYW52rlKO58sEQjFu9+cj/seFf/2OKdHiNLFcLBWK8ViJuFAiTcd5uVKRRCHJleIS6X8y8R+W/QmTdw0ArIZPwE62B7XLbMB+7gECiw5Y0nYAQH7zLYwaC5EAEGc0Mnn3AACTv/mPQCsBAM2XpOMAALzoGFyolBdMxggAAESggSqwQQcMwRSswA6cwR28wBcCYQZEQAwkwDwQQgbkgBwKoRiWQRlUwDrYBLWwAxqgEZrhELTBMTgN5+ASXIHrcBcGYBiewhi8hgkEQcgIE2EhOogRYo7YIs4IF5mOBCJhSDSSgKQg6YgUUSLFyHKkAqlCapFdSCPyLXIUOY1cQPqQ28ggMor8irxHMZSBslED1AJ1QLmoHxqKxqBz0XQ0D12AlqJr0Rq0Hj2AtqKn0UvodXQAfYqOY4DRMQ5mjNlhXIyHRWCJWBomxxZj5Vg1Vo81Yx1YN3YVG8CeYe8IJAKLgBPsCF6EEMJsgpCQR1hMWEOoJewjtBK6CFcJg4Qxwicik6hPtCV6EvnEeGI6sZBYRqwm7iEeIZ4lXicOE1+TSCQOyZLkTgohJZAySQtJa0jbSC2kU6Q+0hBpnEwm65Btyd7kCLKArCCXkbeQD5BPkvvJw+S3FDrFiOJMCaIkUqSUEko1ZT/lBKWfMkKZoKpRzame1AiqiDqfWkltoHZQL1OHqRM0dZolzZsWQ8ukLaPV0JppZ2n3aC/pdLoJ3YMeRZfQl9Jr6Afp5+mD9HcMDYYNg8dIYigZaxl7GacYtxkvmUymBdOXmchUMNcyG5lnmA+Yb1VYKvYqfBWRyhKVOpVWlX6V56pUVXNVP9V5qgtUq1UPq15WfaZGVbNQ46kJ1Bar1akdVbupNq7OUndSj1DPUV+jvl/9gvpjDbKGhUaghkijVGO3xhmNIRbGMmXxWELWclYD6yxrmE1iW7L57Ex2Bfsbdi97TFNDc6pmrGaRZp3mcc0BDsax4PA52ZxKziHODc57LQMtPy2x1mqtZq1+rTfaetq+2mLtcu0W7eva73VwnUCdLJ31Om0693UJuja6UbqFutt1z+o+02PreekJ9cr1Dund0Uf1bfSj9Rfq79bv0R83MDQINpAZbDE4Y/DMkGPoa5hpuNHwhOGoEctoupHEaKPRSaMnuCbuh2fjNXgXPmasbxxirDTeZdxrPGFiaTLbpMSkxeS+Kc2Ua5pmutG003TMzMgs3KzYrMnsjjnVnGueYb7ZvNv8jYWlRZzFSos2i8eW2pZ8ywWWTZb3rJhWPlZ5VvVW16xJ1lzrLOtt1ldsUBtXmwybOpvLtqitm63Edptt3xTiFI8p0in1U27aMez87ArsmuwG7Tn2YfYl9m32zx3MHBId1jt0O3xydHXMdmxwvOuk4TTDqcSpw+lXZxtnoXOd8zUXpkuQyxKXdpcXU22niqdun3rLleUa7rrStdP1o5u7m9yt2W3U3cw9xX2r+00umxvJXcM970H08PdY4nHM452nm6fC85DnL152Xlle+70eT7OcJp7WMG3I28Rb4L3Le2A6Pj1l+s7pAz7GPgKfep+Hvqa+It89viN+1n6Zfgf8nvs7+sv9j/i/4XnyFvFOBWABwQHlAb2BGoGzA2sDHwSZBKUHNQWNBbsGLww+FUIMCQ1ZH3KTb8AX8hv5YzPcZyya0RXKCJ0VWhv6MMwmTB7WEY6GzwjfEH5vpvlM6cy2CIjgR2yIuB9pGZkX+X0UKSoyqi7qUbRTdHF09yzWrORZ+2e9jvGPqYy5O9tqtnJ2Z6xqbFJsY+ybuIC4qriBeIf4RfGXEnQTJAntieTE2MQ9ieNzAudsmjOc5JpUlnRjruXcorkX5unOy553PFk1WZB8OIWYEpeyP+WDIEJQLxhP5aduTR0T8oSbhU9FvqKNolGxt7hKPJLmnVaV9jjdO31D+miGT0Z1xjMJT1IreZEZkrkj801WRNberM/ZcdktOZSclJyjUg1plrQr1zC3KLdPZisrkw3keeZtyhuTh8r35CP5c/PbFWyFTNGjtFKuUA4WTC+oK3hbGFt4uEi9SFrUM99m/ur5IwuCFny9kLBQuLCz2Lh4WfHgIr9FuxYji1MXdy4xXVK6ZHhp8NJ9y2jLspb9UOJYUlXyannc8o5Sg9KlpUMrglc0lamUycturvRauWMVYZVkVe9ql9VbVn8qF5VfrHCsqK74sEa45uJXTl/VfPV5bdra3kq3yu3rSOuk626s91m/r0q9akHV0IbwDa0b8Y3lG19tSt50oXpq9Y7NtM3KzQM1YTXtW8y2rNvyoTaj9nqdf13LVv2tq7e+2Sba1r/dd3vzDoMdFTve75TsvLUreFdrvUV99W7S7oLdjxpiG7q/5n7duEd3T8Wej3ulewf2Re/ranRvbNyvv7+yCW1SNo0eSDpw5ZuAb9qb7Zp3tXBaKg7CQeXBJ9+mfHvjUOihzsPcw83fmX+39QjrSHkr0jq/dawto22gPaG97+iMo50dXh1Hvrf/fu8x42N1xzWPV56gnSg98fnkgpPjp2Snnp1OPz3Umdx590z8mWtdUV29Z0PPnj8XdO5Mt1/3yfPe549d8Lxw9CL3Ytslt0utPa49R35w/eFIr1tv62X3y+1XPK509E3rO9Hv03/6asDVc9f41y5dn3m978bsG7duJt0cuCW69fh29u0XdwruTNxdeo94r/y+2v3qB/oP6n+0/rFlwG3g+GDAYM/DWQ/vDgmHnv6U/9OH4dJHzEfVI0YjjY+dHx8bDRq98mTOk+GnsqcTz8p+Vv9563Or59/94vtLz1j82PAL+YvPv655qfNy76uprzrHI8cfvM55PfGm/K3O233vuO+638e9H5ko/ED+UPPR+mPHp9BP9z7nfP78L/eE8/sl0p8zAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAABbkSURBVHja7J15lCVXfd8/v3ur3t6v92VmekaahdGMZhESAmRsyzJgOGEIJBB85iBhsExwgk2EiTkIy5YsIoQck9jYIcGKEVZIwE4E8nFksyjEktgk42hBgLbROiPNPj3db7rfUnXvL39Uvdeve3pmenqZmRZ9+9Sp6nrv1av6fe9v+/7uvU9UleV29ppZFsEyAMsALLdlAJYBWG7LACwDsNyWAfipa3Ku3dC6d/wFvT/7Xipjh3FWcIEhDgyxFZw1uMAk521zL3jT2i5T4a3A5cD5QBfggEPAY6LcjfLXRnW3dYrxinUe6zTdPDZO/g+ch8jS6UYZ0P14DRAFUTAK4tPjtr1RRVzyuvHJ1jNW5f5N5/HwthXYigKTiW/8bkPwcuhCCq9FudE4ffMJ3tUFbAD+KfAfgc8qfAI4smyC5tgUUGElnlut0/uD2L85iD2z2IIg9tcYr7uAf6Nn2QYsSQ1IhfZvrdMbrWpxjpfpBj6jwtUK16rw9WUAZiF4Fd5unN5snLtwgTrvRQpfA76iwu+qyOPtdnoZgJbgZYsotwSRf6ssDoP7ThV5p8CnVPiECjX5qQdAwAtlUW4IYv8ROTPU+cdV5D0o13vhC7rIgWJwrgpek+jmA9bpTUEc95/hOxj2mNsaan9N0I+BfvenBoCoNgoBb7ROb7JOX3u8OdbFxB0FvA9APN32wM+WzNh3PMGfA78PvPhyBKD53GS6167tXPO6mzhae3e2Fp95X+MNqoZMeIxiZoycVHHe4gjeL+iVwA3AHy4GADJDdiyLLHQDNADFhrnzfubaa1dd9uHrTFgIGvv2krHmhIm7AMi02xSZm3II4AV1BhPWyeXHyYYTADiXAcAmF84D/x74VYXrBO5cKACkTSDNvWk7v9DNpvTAOMDgxne+Z91lH7+pc/hVa2qj+4gOvUTG2BMIKwVAktsTMSCm9ZrM+pZ1UvCxQQJHUKwR5icwxuOcBRXMzJfaDHwV+Fvg4wqPyjwBMOneAhNnkPV5fe8Fv3VDz/q3X3547zFefPzriMjJk3NJhF4qZenvL2JtgGIRsSkYs0/uJTIgipRq2HINE8Z4Z1EXYGcH4Q6S7Y9IaI2jcwUgTI8nBgYGNl166aWv7ujo6FBVswhUhQKVvsFL3rB28/uuCsIS40efRn0MMnRKW2FEiGLlyV0V/vHBPQwMdNHZVUQ1QEzSl0T8ibVAQCIBD1qMkO4GFOJEE+rB3B5W+C3gPcDvKXxO5ugDatdcc81Hb7755usLhULpzLq+7XPxlnz5L3fxB596lGzcQ6lYREwWkQAjps0/tDWXCF9ziuuNoTNKcKqZ1HXMK7rqQ/gvwNUI16HcfTr2OH7b2972nttvv/0/h2GYWRKchAjbtvVifZ1v/c3T9HcXCJwQeME6CBwJvewVGynhhGJV0e4YHYqQosM0DCaWhDpeiC2hn1dJog2bRHlQlKP5esyevi72DXZgGlMf4/ptidfKPPLIIz/cvn37BUuNlBuvVHnX6+8EX6Kzs5vAZjGSSZ00mIaCQtQjRAOKKyoSg7jFJxlUcCCfHBw5dvMDG9fUf3DJMHbs+HqAsdYODQ8Pr1iKrGixI8eKPktjpEJQrxPUY8IoJjvhyI/GmFCJ1ijxakUyEI4LQT3RksXeghjbM1a7Pmj4JyvF7M4TWbhARMJGoxEtRQDiyOFqVWzksXFEGEdkIkELUB+21PsFH0BQTapWi97rARWhUIsoVRvsHuzkgdeuWrN7sPPLMq7/BHjvcQCoqvHeL8kBol4VjRoEsRKORYSZmGgwS2NVgC8YgroiNRa98NoUfCZydB2rMVLKcc/Fa3lo4xDkQCpgvP4KIiuAN82UBwhLtNlqTDDh8athYlUG7Q0JvBCOaaL1iy58wajSXakSBZYHX7GCBy5cxbGeEMYhc8Q1y6aA/hLwxTRsPYfZ0NkGQ14hEOorMlTPy5IJDdmKYowuuuQTtlbonKiTjRxPru7mu1tX8eJwCeqQOxxPY7pa7Srgf0BSgVvSAChQHwxx1hDWlEzsMRbsIhtUFcjXYzrHG7zYX+J7W1fw6IY+ECgciRBtlU1P1D4nyaiNFhe0NAEQMF4JJzxBWbGJUyMwujg9XiCMlZ6xGpVChr9/5Wq+v2WIWjGgUIkIYp8K/pQiPQ+4ArhnaZsgIIibiRcEkvAqC60Bzcv1VBoo8NCGAb6zdYh9g0VyEzE9h2p4mekTJ207lzwAAKYt+w0kZRXNwgleRSiPRxTqMU+t6uDei4b4yfk9hJGj7+BEqh0yKwJvWnv1OecDnr8Hdv0t5Lrh4g9Aoe/UKpAmPQRxwqsEfv4AKKBGyDUcXZUG+3ty3P2qlfzggj7qoaH/SDWhNk6vx0+/98FzCoAHb4WH/xxsBuqjMPo8/NIfQ5g/+VNYT0sDQknMj9W5OzYvCY/UW6lTzQTct32Q72zr52Bnjp5Kg54xN83czBFhazLnBgAK990Iu/4Ous4HmwU8HPghHHgUVr3mVCYoAcA4sPMAoGXnj0UETvnhui7u297H0ytLlKoxwwfGW47YzveZrUXG6x6KZxeA2gj8n2s9ex+CnnVJSugUaqOgoVIcOFWOqBinKf+imDQCMvb0BpOoCMVqTEc15rnBAvde1M/DGzoJnLLqYHXS4y9Qh/P5gODFowZ6zh4Ah59SvnltTOUl6NoAsQcjMHEYKnuVK343oOv8Uz/1FBOUqvRsNcALZGKlp9LgcDnk714zxP2bu5nIBfSP1Am84hc6m1awItj9Y3rWTNCz9zm++XsN1EP5PKERgQlg5EVPXIc3fjLDph2z86RNE2Rd6oQ1AVJOmT9ATyUissL3N3Xz7W09vNSTpXs8orPSQCW5iFlgc6uBQcbqsHvk7FARD36pwT3/oU62LBQHhXqU1NUP73Lky8I/+2ye4Utmf1vGJ73fpADYUwCgAp3jjkzkeWxNgfu2dfPEcJF83bP6QLVl5xdl/JFXTCmHf+Yg7qUROeMA3P0H49z/hTpdqw1hh1BPK0T7H48ZusDyL/64g541p+firJ8EoWl+7AwAeBEKdUfnhGNPX4b7tnTx4IYOVGDF4TqiuqicgCpINkCqDeqP7qbppc4IAK4Bf/WRo/z4G3X611vIKI0Y4kjZ92TE1jfnedeny2QL5rRVumWCfGIupgOgAoFTeioRo0XL3a/s4v5NZY4WA3oqDcJYW+Zm8YSvSGCwYUD1H57ReO+omM786QPw2D01uldahjaGs/7M2D7HX/zGYV54uMHQxpBYHN5DteI5+FzE5e/r4B03ds2ZjBAF69NoSNNNkt4sCt3jMYrw0Loi395SZnd/lvK4Y9XBWnPUNYs23DEdTGwyASYbUn3oBepPvCS2I9si62YFwMjemM//6wM8/1Adm4G3fayH17+/89TO9sE6X/jQASoHHf2vCKi7CGNhdJ+jcsjxjut6ecMHOuf+gDJZEG/G/9aDMdAx4ck3PLtWZPnu5g5+sjpPJlaGD9bSOoHMPYudba83gs1n0EbM+I/2aO3ZAxIUshBYmoukzAqAuz5zmIe+Ncr6V+eYGPP8t9/ZS9dKyyVvOfEIlh/87wq3//Y+xAi95wXUGhE2EA482wCFX/3sCi7d0THvqKI5Gc74RKb5SOmpxhwsZ/jW9g7+3/oCkRUGRxoYVSYzhMXirNNenw0RgfruIzrx7AGJRickKObACKqp2ZstAIcP1JBiTKQxQQeUhuA/ffB5PvG1DQxvzh73/r/5zEH+16f20zkQUOqzVBsRxsCzP67TszLkQ3+2mg2XFBaGjEtnLAYOBo45fFb57qYOHnhFgcMlS9d4TCbWtl6/uOZGAosJLdHIBBMvHtHawTHBCGG5kAg+rRU0pzrMCoBfuKqbe756iNGKIZszZLpg5GjMLb+yi0///WZypUnn+bmPvMA3Pn+IofVZwpJSa8R4rzz3kyoXXlbit7+wlt4VCzf8SFTpbHi6JhxPrMzw4AWdvDCYp1hTVh5qTOPnddF6vBiDCS2+HlHdc0Rr+0fFOSdhIQvS7PXp8Hc4PR9w8evL7LxuiNuuf4H1FyVz4rpWC8/9ZJxPve8pbrzjAlC44Zef4B++dpQ1m3NI4KjHjkbN88LjVX7xXX189PPrCQKzgMKHctWzp2B4fGuRZ9YUCaxhxeFGIvTFrgcriAgmMKjzNEaOae3QMYmqDbEZi82GieBJTJ9P4RJOUwMAdn50FY8/PMa9Xz3IhotKuLoyuCHgH+89wp/9zrPs313ne18/zJrNeWIcXmHsSMzeZ2tc+dHV/Pon1y5CLcDz2IqQ7/VkKfUH9B6LCSVOx4megVqETUa2xWM16kcntDFeE7GGbCGLZ9Lc+HQvbebntDSg2a79rxvZ9ViFp5+osHpDAe+UnjWWr9y6mzBrWLkpQ91FBNawd3eNY6MxH/7Tjbzj11ctigAiIzzVG2D3KH1jMWHosdZjjGexur+mrkSMQWsxjfE69fE6oJLNZ5OhMqoYJAEBwaCt40lt0NMHIFew3HLHVq569f28tGecvqEsLla6ViaXqTZiAivseqJCmLHc/D+38nNvWbzpXQJ01BwTDbDeY50nwGN08QBojnKIG5FG1Yao84RhkEwoVMWkWfcUECQZuuJFUZUUgjlmwsPrCnzii1v54I4fEOQhX7R4r4ktNPD4wxXWbirx6b+6mFds61hcG5AW5U1zrQfxWBJaeuH9bBLAeg8udqqxl8BY1Nqk1zMpfEnDXZX0XDJENTlOryRz0YBmu/wtA3z4lgu4+dofsXljJ0EgRJHyxJOjvO7yAf7kzkvp6jkzA61bi2y4JAO2usAmSDX1tkYRQb2KQSQMLargUYyC10TgomBQVBIqWzU1QalWCEk01AxF5uyt3v+xDTz2yFFu+/LT9JFlgph3X7mWP/zvrzqj7KrxSuAUG3sClMAsAAAC6hPBizEqQQDGiFNFrOI1AcaJYlVwJOA7FSyKF/DpiDlNhS/aZoraEsJ5hQuf/tKlrF5f4MePjnLFmwa58oPrznhtoWWCfGqG5muCVPHOYYwhyGWRMJQkctFEiGk871VTu05LqEYUr4l5Map4JrXCSvIe3wbCvAEQ4MP/7kLOZmuu+WOcx+DnZYJ87AAlV8hrUMiJ2ADvHa5JqiGpI00EryrJawIujS9n1ApJtEbSiChJxs4gHb24ADRBmOz99jQ1wMcOdY5sIUe2XMLms6JeiZ3DiLQEn/TcpFf7VBMme3+7VihGZapWTPu8WQgNOOtNk2TMuDQMJd1mFYYK6j1xIyLMZij095ApF8EY4ijCqxIaadnypuBcmkU5SXyEbws7myYn0Qo9Xisk6RwuvdaSB0BBs86Ti0XEgZHEH5iTzMaQVFhxvY4YQ2dvF8W+LkwmJI4iXOwIxOBMMp3IKakwNZ07nPZ4bdcKpoDTes9MvoLk/py+DEyQGjiQMcRAqRFjvIMweUA5AXEXNZLeXeouUx7qJdtRII4dcRQn9WRj0tByqglJQslJwWvak6eDo6m2TPcVTZPlNE3S2jRgyS6fblXlSGjYWw7Jl/KsbBjKjZhQFd+auJ1Q1lXnOCZQ7ijSPdSrxd5O8UBUbyCqBMak4WF7T01NS5rBJkKcFLzR5Px0wc/kK1yToki1Ql8WPgDIewVj2FMucNSU6IkCyg1P1nkCVepeGVGlUOhgXV8XK3o6wRpp1Buo81gxkwJs2XLahC8tQJrm60RacTJfMSWCgqkFGZElO0UAMUJWoegVCS2HcgWO2ABxymgckzWGLR1FtpdLdBvDRCMiqjeSeVkmCQrbI5OmwJvCl6ZWtAFyMq2Ybo5OBE67BphMJhMuReGHoSUMQkQMVgxhSlGPxzExsL1Q4JKOIsO5DBOxYyKKACWQZHa8pjF5s042yVy2HTcF3p7JMq33n0IrZgKnlYg5545Uq9X6UgSg0XAcG2uQzxUJjKWhQi12DOdzvKbcwcZCHqfKaBQnA5JFWiTZZGkwidFVm+cnBdScgOdpO9dGts3HVzhpJnew/9Zbb/3KUgTg/37zSZ59qkK5s8SoU/I24I29Pewc7Gdrqci4dxxzPhmLKYI1MnksghWDFSFI91bM5HvM5LnANPeGQKS1t+3Hxkxex6Qa2fxcet1kn1wvlMm1jzqA4l133fWXO3bs+IWlIvwfP7ybq3fewdGozMrh89jSvYLX9gyyMleg4qDufYtJ1tSOa8r1NM/5phnS4/d+hvO+9X+T6Zw8bkY2U66daogqLcraafN+9OAtd64bEKAfiIDCzp07r77iiisuKxQKRdrmD5/kh36q2bC8ordz0zav8WShc9E8rhDVHT96eC9fvP0RxuMCr9u2hUu6VrGp3IeXkJqX1loR2gbAcWC0QJku6KkCnHxvOwBtgDRfmwZIy2/AcSCknzt401fPHxCgBJRTgY81NQLIkIx3PVmI9Dzkfnn7qj/6XL1xFNXFXefNiCFyUImEzevW8Lq167mwPEAxLFFXizUBRoJWVHdC4bed9zNpxQnBmQmEts9OOzf1tanHHg7eeMeagSDt/ceAbApEpi0w8Kfygz0dG/zGjZup10dQdTNNTD6unDcnfl5hPHZkgpCNnT1c2D1AX66DSC1VLwTWpmsFTf06kaT21CqIt93C1Aio7f9m4bwtOtJWIVGnOPJmbqAtRy1T8go/QxibREaTYagD6uk+Ss81lzAwbc8yUxsPw1ylXBykHoT4RdAAASJVqs5xQVeRrZ3dDBVKxCrU1BCYAGssRuzk+nEzXCMZpSKTvV8mj7V53CZw2orovg0UmQLOdEAmQWjPK3R6XiFg2rgg39bbHVMX7ztlhmZtMFHM92IMeB+fpKgqcxJ+jKLec1lHB1s7OkGE8dghYshai6SL9zXtvpzie06mFe2acZxWHLfJFJ2YohXH5RWS1ozbs+2pXFBzc0xdLfGUUvM+rudyXahEeB8tsO2ByHteVSjyyo4So3FMrErGBpOrJLYtXymnCe5stYJWAWWaVsxosqZqwaRWcFxeMZ2Mm5OEYu+0VAhxPo9qOKXHtCOoMwlg2msyTV8mvOP8MGRrscgx71EJCBaBNTnTviJJ/JLJlvMm4656w5/UBJdMC1rAEWmqkBHDumwOkWQS32IzVmfKV6Q0RWPeAFzz9ru4fMvPPff9Z0awRlhITi9S6DYBZSNUnT/jK4ostq8QZd+8ANjxmht4+8/sYNdLtRcKgd1T9zocLCACMZ6iMYSSgHHW2NaF0IoZTJYgD8wZgDX9r+Q33/r7HBhR8oFSztg7D1bdhwIrC1bdCTThWM4p6nsWvkJn6SuM6JfnDMCvvenz5EPYW6uRDQxdOfnMaEM/BIJdIJlZmRxZfM7VIOavFc+B3DsnADav/nl+ccsl7BtR8mEypbQ7Z54ej/S2AxP+6vwChSnZNCuM2rLFc7IgNDdf8a9a9MrpfuEbt7+P7gIExOQCQy4whMawphz+y3LWHHCaLBcz3y00UDcJRxIugcJ1AkRCOSRjiZL6Q/O4dV7kS1bkGzY1r6cNwMrudUQxBNa0eHUFCqHxa8vhz1uRqveG+f5ZDCGGwySjHpbS6AFJBS7poK424X/birnSphW8OQFwIroh9kpgebI/by/OBvJMnK4ZKTL3LSNCVYSXxBCiS24IxzSt+GtJfmJxKsN72gCoP0lWDIGVJ3py9sKO0HxW0wRqPo40AxxGeEEsAuTQpbbK4H7gN4B/PmO0t9DfFnnIWurlrPnNouqfTkT63rrTHV45fy6MnLSBUBVDnyrFVlxxzrYI+BFwB3Ab6a+FzPh8qkt2XNbLoi3/nvAyAMsALLdlAJYBWG7LACwDsNyWAfjpa/9/AAJwQdaXneHUAAAAAElFTkSuQmCC"  class="asset-img" height="auto" 
+          style="
+            /* margin-top: -30px; */
+            height: 65px;
+            width: 65px;"/></div>
+            <div>
+            <h2 class="logotitle epmmobfontsize"> Mail Tracker 365</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-panel icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Getting Started</h3>
+            <ul>
+              <li><a href="./modern/getting-started/installation/">Installing</a></li>
+              <li><a href="./modern/getting-started/upgrading/">Upgrading</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-folder icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Guides</h3>
+            <ul>
+              <li><a href="./modern/user/">User Guide</a></li>
+              <li><a href="./modern/admin/">Admin Guide</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-cloud icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Contribute!</h3>
+            <ul>
+              <li><a href="../contribute/">Contribute!</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="./modern/release-note/">Release Notes</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>  
+  <section class="ptb-20 section over-hidd">
+    <div class="container">
+    
+    
+    <div class="home-recent">
+      <div class="home-blog-latest">
+           <h2>Latest Posts</h2>
+ <h4 class="hd">From Our Technical Blog</h4>
+ 
+ <div class="blog_wrap">
+  
+ 
+   <h3><a href="../MailTracker-365/modern/getting-started/upgrading/" class="highlight">Preparing for a Larger Upgrade</a></h3>
+ <div class="tags">
+ 
+   <a class="tag-link highlight" href="../MailTracker-365/modern/getting-started/upgrading/">Upgrade</a>
+ 
+ </div>
+ 
+ 
+   <!-- <p class="author">
+     By pgorod | July 15, 2019
+   </p> -->
+   <div class="paragraph">
+ <p>Usually upgrades are done in small iterations, and we recommend that you upgrade as often as possible.
+ But we know that if you’re many versions behind the latest, and dealing with a large instance full
+ of customisations, or having inherited the instance from a predecessor, perhaps with little
+ documentation, can make the prospect of upgrading a bit more daunting.</p>
+ </div>
+   
+   <p>
+     <a class="more highlight" href="../MailTracker-365/modern/getting-started/upgrading/">Read More &gt;</a>
+   </p>
+   
+  
+ 
+   <h3><a href="../MailTracker-365/modern/admin/" class="highlight">Admin Guide</a></h3>
+ <div class="tags">
+ 
+   <a class="tag-link highlight" href="../MailTracker-365/modern/admin/">Admin</a>
+ 
+ </div>
+ 
+ 
+   
+   <div class="paragraph">
+    <p>This admin guide provides an overview features and functionality about the Mail Tracker 365 application to administrator. Admin can do customisations as per their requirements.</p>
+ </div>
+   
+   <p>
+     <a class="more highlight" href="../MailTracker-365/modern/admin/">Read More &gt;</a>
+   </p>
+   
+   <h3><a href="/pin-Mail-Tracker-365-microsoft-teams-user/" class="highlight">How to pin Mail Tracker 365 to all Microsoft Teams users?</a></h3>
+   <div class="paragraph">
+     <p></p>
+     </div>
+       
+       <p>
+         <a class="more highlight" href="/pin-Mail-Tracker-365-microsoft-teams-user/">Read More &gt;</a>
+       </p>
+ </div>
+ 
+      </div>
+      <div class="home-recently-edited">
+           <h2>Recently Edited</h2>
+ <h4 class="hd">Documentation Pages</h4>
+ <div class="edit_wrap">
+     
+     
+     <ul>
+ 
+     <li>
+   <h4 class="">
+       <a href="./Custom-level-Permission/" class="highlight">Custom Level permissions</a>
+             <!-- <a href="https://github.com/salesagility/SuiteDocs/commits/922ba201f32a1685d73d777f9b886d15daf054c6/content/developer/api/API-4_1.adoc" target="_blank" title="File History" class="highlight"><i class="far fa-sm fa-clock"></i></a> -->
+   </h4>
+  
+     </li>
+ 
+ 
+ </ul>
+ 
+ 
+ 
+ </div>
+ 
+      </div>
+ </div>
+</div>
+
+  </section>
+
+
+
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section px-3 bg-white shadow text-center">
+            <h2 class="mb-4 fontweight questionHeading">Didn&rsquo;t find an answer to your question?</h2>
+            <!-- <p class="mb-4">Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam.</p> -->
+
+
+            <a href="https://www.apps365.com/support/" class="btn btn-primary contactbtn">Contact Support</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="section pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href="https://www.hr365.us/">HR365.</a>  <a href="https://www.hr365.us/sla/">SLA.</a><a
+              href="https://www.hr365.us/terms-and-conditions/">T&amp;C.</a> <a
+              href="https://www.hr365.us/end-user-license-agreement-eula/">EULA.</a> <a
+              href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy/">Privacy
+              Policy.</a> <a href="https://www.cubiclogics.com/">Cubic Logics.</a></p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class="list-inline">
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/"
+                aria-label="Facebook"><i class="ti-facebook"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS" aria-label="Twitter"><i
+                  class="ti-twitter-alt"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i
+                  class="ti-linkedin"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="../js/script.min.js"></script>
+  <script src="../js/header-footer.js"></script>
+
+</body>
+
+</html>

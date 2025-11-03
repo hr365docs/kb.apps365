@@ -40,7 +40,7 @@ $(document).ready(function () {
         "</li>" +
 
         // Settings with arrow
-       "<li class='dropdownicon sidelist'>" +
+       "<li class='dropdownicon sidelist' title='Settings'>" +
         "<a class='qwe' href='/Revenue365/modern/admin/settings/'>Settings</a>" +
         "<img src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'' class='helpdesk-img aside_dropdown_icon_setting'>" +
         "</li>" +
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
         "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
             "<ul class='sidenavSub-topics aside_dropdown_list'>" +
-       "<li data-nav-id='../user' title='Users' class='sidelist'>" +
+       "<li data-nav-id='../user' title='Theme' class='sidelist'>" +
         "<a class='qwe' href='/Revenue365/modern/admin/settings/generalsetting/#Theme'>Theme</a>" +
         "</li>" +
 
@@ -173,7 +173,7 @@ $(document).ready(function () {
 "</li>" +
 
 
-"<li data-nav-id='../Notification' title='Notification' class='dropdownicon sidelist'>" +
+"<li data-nav-id='../Notification' title='Notifications' class='dropdownicon sidelist'>" +
   "<a class='qwe' href='/Revenue365/modern/admin/settings/Notification/'>Notifications</a>" +
   "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
 "</li>" +

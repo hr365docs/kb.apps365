@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#revuser").html("");
 
     $("#revuser").append(
-        "<li data-nav-id='./user/' title='Customer Journey' class='sidelist'>" +
+        "<li data-nav-id='./user/' title='Introduction' class='sidelist'>" +
         "<a href='/Revenue365/modern/user/introduction/'>Introduction</a>" +
         "</li>" +
         "<li data-nav-id='./user/' title='Home Page' class='sidelist'>" +

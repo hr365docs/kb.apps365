@@ -1,7 +1,7 @@
 $(document).ready(function () {
-        $("#hcm-admin-guide").html("");
+        $("#hcm-admin-Guide").html("");
 
-        $("#hcm-admin-guide").append("<ul>" +
+        $("#hcm-admin-Guide").append("<ul>" +
                 //       intro 
                 "<li data-nav-id='./installation/requirments/' title=Introduction class=sidelist>" +
                 "<a href='/HRMS-HR365/modern/admin/introduction/'>" +
@@ -78,7 +78,7 @@ $(document).ready(function () {
                 "<li  data-nav-id='../advanced/' title='Sharepoint page components' class='sidelist '>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#Sharepoint-page'>Sharepoint page components</a>" +
                 "</li>" +
-                "<li  data-nav-id='../advanced/' title='Langauge' class='sidelist'>" +
+                "<li  data-nav-id='../advanced/' title='Modules' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/general/#_modules'>Modules</a>" +
                 "</li>" +
 
@@ -131,7 +131,7 @@ $(document).ready(function () {
                 "<li  data-nav-id='../advanced/' title='Position' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/Administration/#Position'>Position</a>" +
                 "</li>" +
-                "<li  data-nav-id='../advanced/' title='Position' class='sidelist'>" +
+                "<li  data-nav-id='../advanced/' title='Delegation' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/Administration/#_delegation'>Delegation</a>" +
                 "</li>" +
 
@@ -155,7 +155,7 @@ $(document).ready(function () {
 
 
                 "<ul id='modernadminmainsetting'>" +
-                "<li class='dropdownicon sidelist' title='User's Role Permissions'>" +
+                "<li class='dropdownicon sidelist' title='Users Role Permissions'>" +
                 "<a  class='qwe' href='/HRMS-HR365/modern/admin/settings/UserRole/'>" +
                 "User's Role Permissions" +
 
@@ -167,7 +167,7 @@ $(document).ready(function () {
 
 
                 "<ul class='sidenavSub-topics aside_dropdown_list' id='edmmoderngeneral'>" +
-                "<li  data-nav-id='../advanced/' title='Search filters' class='sidelist'>" +
+                "<li  data-nav-id='../advanced/' title='Users' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/settings/UserRole/#UserRole'>User's</a>" +
                 "</li>" +
 
@@ -445,11 +445,11 @@ $(document).ready(function () {
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/views/#GridWidth'>Grid Width</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Hide manager' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Hide manager of specific user' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/views/#Hidemanagerofspecificuser'>Hide manager of specific user</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Hide mobile number' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Hide mobile number of specific user' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/views/#Hidemobilenumberofspecificuser'>Hide mobile number of specific user</a>" +
 "</li>" +
 
@@ -481,7 +481,7 @@ $(document).ready(function () {
 
 
 
-"<li data-nav-id='../advanced/' title='Work email ID' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Work email ID/UPN ID' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/views/#Useworkemailidinsteadaccountloginid'>Work email ID/UPN ID</a>" +
 "</li>" +
 
@@ -507,57 +507,58 @@ $(document).ready(function () {
 "</ul>" +
 "</li>"+
 //____________________________________________________________________________________________________________
-               "<li class='dropdownicon sidelist' title='Exclude-Options'>" +
+          "<li class='dropdownicon sidelist' title='Exclude Options'>" +
   "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/'>" +
-    "Exclude-Options" +
+    "Exclude Options" +
   "</a>" +
   "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
 "</li>" +
 
+"<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
 
-  "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
+  "<li data-nav-id='../advanced/' title='Exclude 365 sign-in blocked users' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeO365sign-inblockedusers'>Exclude 365 sign-in blocked users</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude 365 sign-in blocked users' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeO365sign-inblockedusers'>Exclude 365 sign-in blocked users</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by department' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbydepartment'>Exclude by department</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by department' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbydepartment'>Exclude user by department</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by job title' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeusersbyjobtitle'>Exclude by job title</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by job title' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeusersbyjobtitle'>Exclude users by job title</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by name' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeusersbyName'>Exclude by name</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by name' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeusersbyName'>Exclude users by Name</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by office location' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbyofficelocation'>Exclude by office location</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by office location' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbyofficelocation'>Exclude user by Office Location</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude using CSV file' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbyusingcsvfile'>Exclude using CSV file</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude using CSV file' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbyusingcsvfile'>Exclude user by using csv file</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by UPN' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeUsersByUPN'>Exclude by UPN</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by UPN' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#ExcludeUsersByUPN'>Exclude Users By UPN</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude by contain' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbycontain'>Exclude by contain</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude by contain' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeuserbycontain'>Exclude user by contain</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Exclude hidden in address list' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeusershiddeninaddresslist'>Exclude hidden in address list</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Exclude hidden in address list' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Excludeusershiddeninaddresslist'>Exclude users hidden in address list</a>" +
-"</li>" +
+  "<li data-nav-id='../advanced/' title='Remove shared mailboxes' class='sidelist'>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Removesharedmailboxes'>Remove shared mailboxes</a>" +
+  "</li>" +
 
-"<li data-nav-id='../advanced/' title='Remove shared mailboxes' class='sidelist'>" +
-"<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/exclude-options/#Removesharedmailboxes'>Remove shared mailboxes</a>" +
-"</li>" +
 "</ul>" +
-"</li>"+
+"</li>"
++
 //_______________________________________________________________________________________________________________________
 //                 "<ul id='modernadminmainsetting'>" +
 // "<li class='dropdownicon sidelist' title='Advanced'>" +
@@ -586,19 +587,19 @@ $(document).ready(function () {
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Analytics-Report'>Analytics Report</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Auto load' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Auto load instead load more button' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Autoloadinsteadloadmorebutton'>Auto load instead load more button</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Auto fetch office data' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Auto fetch office 365 job title, location and department' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Autofetchoffice365jobtitlelocationanddepartment'>Auto fetch office 365 job title, location and department</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Filter events' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Filter upcoming birthdays & work anniversaries' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Filterupcomingbirthdaysworkanniversaries'>Filter upcoming birthdays & work anniversaries</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Configure API permissions' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Configure SharePoint API permissions class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#ConfigureSharePointAPIpermissions'>Configure SharePoint API permissions</a>" +
 "</li>" +
 
@@ -610,39 +611,39 @@ $(document).ready(function () {
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Customfunction'>Custom function</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Executive Assistant' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Executive Assistant relationship' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#ExecutiveAssistantrelationship'>Executive Assistant relationship</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Extend search' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Extend custom fields search capability' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Extendcustomfieldssearchcapability'>Extend custom fields search capability</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Export permission' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Export data permission' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Export-data-permission'>Export data permission</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Import non-M365 users' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Import non M365 users' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#ImportnonM365users'>Import non M365 users</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Extend phone search' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Extend Mobile Number and Phone number search capability' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#ExtendMobileNumberandPhonenumbersearchcapability'>Extend Mobile Number and Phone number search capability</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Restricted Access' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Restricted Access List' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#RestrictedAccess'>Restricted Access List</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Sync mobile numbers' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Sync and display mobile number from azure' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Syncanddisplaymobilenumberfromazure'>Sync and display mobile number from azure</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Sync profile info' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Sync employee profile information' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Syncemployeeprofileinformationfrom'>Sync employee profile information</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Sync user info' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Sync user information' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#Syncuserinformationfrom'>Sync user information</a>" +
 "</li>" +
 
@@ -650,7 +651,7 @@ $(document).ready(function () {
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#topbarfilters'>Topbar filters</a>" +
 "</li>" +
 
-"<li data-nav-id='../advanced/' title='Validate work email' class='sidelist'>" +
+"<li data-nav-id='../advanced/' title='Validate work email with SharePoint account name' class='sidelist'>" +
 "<a href='/HRMS-HR365/modern/admin/apps/ED365/settings/advanced/#workemail'>Validate work email with SharePoint account name</a>" +
 "</li>" +
 "</ul>" +
@@ -684,7 +685,7 @@ $(document).ready(function () {
                 "<a href='/HRMS-HR365/modern/admin/apps/TMP365/settings/#general'>General Setting</a>" +
                 "</li>" + "<li  data-nav-id='../advanced/' title='TMP365 - Advance Settings' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/apps/TMP365/settings/#advance-settings'>Advance Settings</a>" +
-                "</li>" + "<li  data-nav-id='../advanced/' title='TMP365 - Organization' class='sidelist'>" +
+                "</li>" + "<li  data-nav-id='../advanced/' title='TMP365 - Notifications' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/apps/TMP365/settings/#Notifications'>Notifications</a>" +
                
                 "</li>" +
@@ -878,7 +879,7 @@ $(document).ready(function () {
 
     
 
-    "<li class='sidelist' title='Show Fav Icon'>" +
+    "<li class='sidelist' title='comapany-Details'>" +
       "<a href='/HRMS-HR365/modern/admin/apps/EO365/setting/general-setting/#comapany-Details'>" +
         "Company Details" +
       "</a>" +
@@ -1406,7 +1407,7 @@ $(document).ready(function () {
 
   "<ul class='aside_dropdown_list' aria-labelledby='advancedDropdown'>" +
 
-    "<li class='sidelist' title='Child Item 1'>" +
+    "<li class='sidelist' title='Time-Tracking-Days'>" +
       "<a href='/HRMS-HR365/modern/admin/apps/TS365/settings/advance/#Time-Tracking-Days'>" +
         "Time Tracking Days" +
       "</a>" +
@@ -1510,7 +1511,7 @@ $(document).ready(function () {
                 +
                 
                 //general
-                "<li class='dropdownicon sidelist' title='General'>" +
+                "<li class='dropdownicon sidelist' title='General Settings'>" +
   "<a class='qwe' href='/HRMS-HR365/modern/admin/apps/ET365/settings/#General-setting'>" +
     "General Setting" +
   "</a>" +
@@ -1520,7 +1521,7 @@ $(document).ready(function () {
 
   "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
 
-        "<li data-nav-id='../General' title='Currency Seperator' class='sidelist'>" +
+        "<li data-nav-id='../General' title='Currency' class='sidelist'>" +
         "<a href='/HRMS-HR365/modern/admin/apps/ET365/settings/#Currency'>Currency</a>" +
         "</li>" +
         "<li data-nav-id='../General' title='Display Project' class='sidelist'>" +
@@ -1658,7 +1659,7 @@ $(document).ready(function () {
         
   "</ul>" +
 "</li>" +
- "<li data-nav-id='../General' title='Location' class='sidelist'>" +
+ "<li data-nav-id='../General' title='Integration' class='sidelist'>" +
         "<a href='/HRMS-HR365/modern/admin/apps/ET365/settings/#integration'>Integration</a>" +
         "</li>" +
                
@@ -1708,13 +1709,13 @@ $(document).ready(function () {
 "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
 "</li>" +
 "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-priority'>Job Priority</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-title'>Job Title</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-type'>Job Type</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-code'>Job Code</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#work-mode'>Work Mode</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a></li>" +
+    "<li title='Job Priority' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-priority'>Job Priority</a></li>" +
+    "<li title='Job Sourced From' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-sourced-from'>Job Sourced From</a></li>" +
+    "<li title='Job Title' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-title'>Job Title</a></li>" +
+    "<li  title='Job Type' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-type'>Job Type</a></li>" +
+    "<li title='Job Code' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#job-code'>Job Code</a></li>" +
+    "<li title='Work Mode' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#work-mode'>Work Mode</a></li>" +
+    "<li title='Year(s) of Experience' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/Job-Posting/#yearofexp'>Year(s) of Experience</a></li>" +
 "</ul>" +
 "</li>" +
 "<li data-nav-id='../advanced/' title='RM365 - Email Configuration' class='sidelist'>" +
@@ -1726,8 +1727,8 @@ $(document).ready(function () {
 "<img src='/js/down-arrow-avgrepo-com.svg' class='imageIconadvanced aside_dropdown_icon' />" +
 "</li>" +
 "<ul class='aside_dropdown_list' aria-labelledby='generalDropdown'>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#question-complexity-level'>Question Complexity Level</a></li>" +
-    "<li class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#score-card'>Score Card</a></li>" +
+    "<li title='Question Complexity Level' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#question-complexity-level'>Question Complexity Level</a></li>" +
+    "<li title='Score Card' class='sidelist'><a href='/HRMS-HR365/modern/admin/apps/RM365/settings/hiring-process/#score-card'>Score Card</a></li>" +
 "</ul>" +
 "</li>" +
 
@@ -2067,10 +2068,10 @@ $(document).ready(function () {
                 "</li>" +
                 "<li data-nav-id='./Setting/' title='Settings' class='sidelist dropdown_romove_dot'>" +
                 "<ul class='sidenavSub-topics aside_dropdown_list' id='modernsettingedm'>" +
-                "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+                "<li  data-nav-id='../advanced/' title='Feedback' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/help/#Feedback'>Feedback</a>" +
                 "</li>" +
-                "<li  data-nav-id='../advanced/' title='Configure SharePoint API permissions' class='sidelist'>" +
+                "<li  data-nav-id='../advanced/' title='Product Activation' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/help/#product-activation'>Product Activation</a>" +
                 "</li>" +
                 "</li>" +

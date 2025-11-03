@@ -294,8 +294,8 @@ $(document).ready(function () {
                 "<li data-nav-id='../../image-profile-tag/' title='Image Profile Tag' class='sidelist'>" +
                     "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/#ImageProfileTag'>Image Profile Tag</a>" +
                 "</li>" +
-                "<li data-nav-id='../../import-m365-users-pronouns/' title='Import M365 Users' Pronouns' class='sidelist'>" +
-                    "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/#ImportPronouns'>Import M365 Users' Pronouns</a>" +
+                "<li data-nav-id='../../import-m365-users-pronouns/' title='Import M365 Users Pronouns' class='sidelist'>" +
+                    "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/#ImportPronouns'>Import M365 Users Pronouns</a>" +
                 "</li>" +
                 "<li data-nav-id='../../import-non-m365-users/' title='Import non-M365 Users' class='sidelist'>" +
                     "<a href='/sharepoint-employee-directory/modern/admin/settings/feature/#ImportNonM365Users'>Import non-M365 Users</a>" +

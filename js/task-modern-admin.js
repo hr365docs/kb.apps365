@@ -71,7 +71,7 @@ $(document).ready(function () {
         "<li data-nav-id='../advanced/' title='Language' class='sidelist'>" +
         "<a href='/task-management-365/modern/admin/settings/generalsetting/#Language'>Language</a>" +
         "</li>" +
-        "<li data-nav-id='../advanced/' title='Hide SharePoint Components' class='sidelist'>" +
+        "<li data-nav-id='../advanced/' title='Hide SharePoint Page's Default Components' class='sidelist'>" +
         "<a href='/task-management-365/modern/admin/settings/generalsetting/#Hide-SharePoint-Components'>Hide SharePoint Page's Default Components</a>" +
         "</li>" +
         "<li data-nav-id='../advanced/' title='Brand Logo' class='sidelist'>" +

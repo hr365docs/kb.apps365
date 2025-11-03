@@ -66,7 +66,7 @@ $(document).ready(function () {
         "<a href='/employee-performance-management/modern/admin/roles/user'>User</a>" +
         "</li>" +
 
-        "<li data-nav-id='./Custom-Emails/' title=Manager class='sidelist'>" +
+        "<li data-nav-id='./Custom-Emails/' title='Manager(Employee's Manger)' class='sidelist'>" +
         " <a href='/employee-performance-management/modern/admin/roles/#manager'>Manager(Employee's Manger)</a>" +
         " </li>" +
 
@@ -130,7 +130,7 @@ $(document).ready(function () {
         "</a>" +
         "</li>" +
 
-        "<li data-nav-id='./User/' title=KRA class='sidelist'>" +
+        "<li data-nav-id='./User/' title='KRA(Key Result Area)' class='sidelist'>" +
         "<a href='/employee-performance-management/modern/admin/administration/#kra'>" +
         "KRA(Key Result Area)" +
         "</a>" +
@@ -146,7 +146,7 @@ $(document).ready(function () {
         "</a>" +
         " </li>" +
 
-        "<li data-nav-id='./General-Settings/' title='Role Template' class='sidelist'>" +
+        "<li data-nav-id='./General-Settings/' title='Template(s)' class='sidelist'>" +
         "<a href='/employee-performance-management/modern/admin/administration/#role-template'>" +
         "Template(s)" +
         " </a>" +
