@@ -22,12 +22,16 @@ $(document).ready(function () {
                 "<li class='sidelist' title='Theme'>" +
                     "<a href='/JoiningCard-365/modern/admin/settings/#_theme_option'>Theme</a>" +
                 "</li>" +
-                "<li class='sidelist' title='Users'>" +
-                    "<a href='/JoiningCard-365/modern/admin/settings/#_users'>Users</a>" +
-                "</li>" +
                 "<li class='sidelist' title='Hide SharePoint Settings'>" +
                     "<a href='/JoiningCard-365/modern/admin/settings/#_hide_sharepoint_settings'>Hide SharePoint Settings</a>" +
                 "</li>" +
+                "<li class='sidelist' title='Users'>" +
+                    "<a href='/JoiningCard-365/modern/admin/settings/#_users'>Users</a>" +
+                "</li>" +
+                "<li class='sidelist' title='Customize Card'>" +
+                    "<a href='/JoiningCard-365/modern/admin/settings/#customize-card'>Customize Card</a>" +
+                "</li>" +
+                
             "</ul>" +
         "</li>" +
 

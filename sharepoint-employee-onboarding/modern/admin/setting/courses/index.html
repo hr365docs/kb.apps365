@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Employee Onboarding 365 | Admin Guide | Settings | Courses</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Admin guide for the Courses section in Employee Onboarding 365 — Sections, Chapters, Surveys, Courses, Certificate Templates and Roles.">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+</head>
+
+<body>
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/product/">
+                    <img src="../../logo_.png" width="100%" height="auto" alt="Apps365" />
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id="navigation">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <h5 class="mbHeading" style="color:SlateBlue"><a href="../../../../../sharepoint-employee-onboarding/">Employee Onboarding 365</a></h5>
+                        <a class="back-btn" href="../../../../../sharepoint-employee-onboarding/" aria-label="back"></a>
+                        <ul class="list-styled">
+                            <li data-nav-id="https://github.com/hr365docs/My-project.git/installation/" title=" Admin Guide" class="sidelist active">
+                                <a href="../../admin/">Admin Guide</a>
+                                <ul id="obm-modern-admin" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id="content">
+                        <!-- Courses Page Content -->
+                        <div class="bg-light p-4 remove-padding">
+                            <div class="page-list">
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href="#">Courses
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+
+                                <p>
+                                    The <strong>Courses</strong> section enables administrators to design and manage structured learning programs for employees — composed of sections and chapters, supported by surveys and certificates, and governed by role-based access. <br>
+                                </p>
+
+                                <div><img src="courses-overview.png" onclick="openModal('courses-overview.png')" alt="Courses overview" width="100%" height="auto"></div>
+                            </div>
+
+                            <li title="Courses Settings">
+                                <ul class="sidenavSub-topics">
+                                    <li data-nav-id="../Courses" title="Sections" class="sidelist">
+                                        <a href="./#Sections">Sections</a>
+                                    </li>
+                                    <li data-nav-id="../Courses" title="Chapters" class="sidelist">
+                                        <a href="./#Chapters">Chapters</a>
+                                    </li>
+                                    <li data-nav-id="../Courses" title="Survey" class="sidelist">
+                                        <a href="./#Survey">Survey</a>
+                                    </li>
+                                    <li data-nav-id="../Courses" title="Courses" class="sidelist">
+                                        <a href="./#Courses">Courses</a>
+                                    </li>
+                                    <li data-nav-id="../Courses" title="Certificate Templates" class="sidelist">
+                                        <a href="./#Certificate-Templates">Certificate Templates</a>
+                                    </li>
+                                    <li data-nav-id="../Courses" title="Roles" class="sidelist">
+                                        <a href="./#Roles">Roles</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Sections -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Sections">
+                                <h2 id="_sections"><a class="header-icon-link highlight" href="#">Sections
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+                                <ul class="page-list">
+                                    <p>
+                                        Sections are top-level groupings for course content. Use sections to split a course into logical areas (for example: Company Overview, Policies, IT Setup). <br>
+                                    </p>
+                                    <li>Click the <strong>+ Section</strong> button to create a new section. This opens a panel where you provide a title, author, and a short description. <br></li><br>
+                                    <div><img src="sections-list.png" onclick="openModal('sections-list.png')" alt="Sections list" width="100%" height="auto"></div><br>
+                                    <li>In the Add Section panel, fill the required fields:<br>
+                                        <ul>
+                                            <li><strong>Title</strong> — Enter a clear section name.</li>
+                                            <li><strong>Section Author</strong> — Select the content owner.</li>
+                                            <li><strong>Description</strong> — Provide a short summary for learners.</li>
+                                            <li><strong>Active toggle</strong> — Enable to make the section visible. </li>
+                                        </ul>
+                                    </li><br>
+                                    <div><img src="add_section.png" onclick="openModal('add_section.png')" alt="Add section" width="100%" height="auto"></div><br>
+                                    <li>Click <strong>Save</strong> or <strong>Save and add more</strong> to continue adding more sections. </li>
+                                </ul>
+                            </div>
+
+                            <!-- Chapters -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Chapters">
+                                <h2 id="_chapters"><a class="header-icon-link highlight" href="#">Chapters
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+                                <ul class="page-list">
+                                    <p>
+                                        Chapters are the individual content items inside a section. Each chapter holds the learning material — text, attachments, video links, or embedded media. <br>
+                                    </p>
+                                    <li>Click the <strong>+ Chapter</strong> button to add a new chapter. <br></li><br>
+                                    <div><img src="chapters-list.png" onclick="openModal('chapters-list.png')" alt="Chapters list" width="100%" height="auto"></div><br>
+                                    <li>In the Add Chapter form, complete the fields below:<br>
+                                        <ul>
+                                            <li><strong>Title</strong> — Enter the chapter title.</li>
+                                            <li><strong>Section</strong> — Select the parent section for this chapter.</li>
+                                            <li><strong>Description</strong> — Add text, images or embed links using the rich text editor.</li>
+                                            <li><strong>Attachment Type</strong> — Choose if the chapter requires learners to download or view attached files.</li>
+                                            <li><strong>Timing</strong> — Enter an estimated time (in minutes) to complete the chapter.</li>
+                                            <li><strong>Active</strong> — Toggle to publish the chapter. </li>
+                                        </ul>
+                                    </li><br>
+                                    <div><img src="add_chapter.png" onclick="openModal('add_chapter.png')" alt="Add chapter" width="100%" height="auto"></div><br>
+                                    <li>Click <strong>Save</strong> or <strong>Save and add more</strong> to create additional chapters. </li>
+                                </ul>
+                            </div>
+
+                            <!-- Survey -->
+                            <div class="bg-light p-4 remove-padding common-scroll" id="Survey">
+                                <h2 id="_survey"><a class="header-icon-link highlight" href="#">Survey
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a></h2>
+                                <ul class="page-list">
+                                    <p>
+                                        Surveys collect feedback from learners after course completion. Use surveys to measure satisfaction, comprehension, and training effectiveness. <br>
+                                    </p>
+                                    <li>Click <strong>+ Survey</strong> to create a new survey. <br></li><br>
+                                    <div><img src="survey-list.png" onclick="openModal('survey-list.png')" alt="Survey list" width="100%" height="auto"></div><br>
+                                    <li>When adding a survey question, provide these details:<br>
+                                        <ul>
+                                            <li><strong>Question Title</strong> — Short, clear prompt for the learner.</li>
+                                            <li><strong>Question Type</strong> — Choose from Multiple Choice, Rating, Text, etc.</li>
+                                            <li><strong>Instructions</strong> — Explain how to respond to the question.</li>
+                                            <li><strong>Required</strong> — Toggle if response is mandatory.</li>
+                                            <li><strong>Active</strong> — Toggle to enable the question.</li>
+                                        </ul>
+                                    </li><br>
+                                    <div><img src="add_survey.png" onclick="openModal('add_survey.png')" alt="Add survey question" width="100%" height="auto"></div><br>
+                                    <li>After creation, preview responses and export results for analysis. </li>
+                                </ul>
+                            </div>
+
+                            <!-- Courses -->
+                   <div class="bg-light p-4 remove-padding common-scroll" id="Courses">
+  <h2 id="_courses">
+    <a class="header-icon-link highlight" href="#">Courses
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h2>
+
+  <ul class="page-list">
+    <p>
+      The <strong>Courses</strong> module allows administrators and instructors to create, manage, and publish structured learning programs. 
+      Use the guided wizard to define course details, add content, and configure publishing options.
+    </p>
+
+    <li>
+      Click <strong>+ Add Course</strong> to start creating a new course. 
+      The setup includes three simple steps: <em>Step 1 – Basic Details</em>, <em>Step 2 – Content & Chapters</em>, and <em>Step 3 – Settings & Publish</em>.
+    </li><br>
+
+    <div><img src="1a.png" onclick="openModal('1b')" alt="Add Course Step 1" width="100%" height="auto"></div><br>
+
+    <li><strong>Step-by-Step Course Creation</strong></li>
+    <ol>
+      <li>
+        <strong>Step 1 – Basic Details</strong>:  
+        Enter key information such as course title, description, activity type, roles, and thumbnail.  
+        Click <strong>Next</strong> to continue.
+      </li><br>
+      <div><img src="1.png" onclick="openModal('1.png')" alt="Course Step 1" width="100%" height="auto"></div><br>
+
+      <li>
+        <strong>Step 2 – Content & Chapters</strong>:  
+        Add course chapters, set timing, and include assessments or surveys as needed.  
+        Click <strong>Next</strong> to proceed.
+      </li><br>
+      <div><img src="2.png" onclick="openModal('2.png')" alt="Course Step 2" width="100%" height="auto"></div><br>
+
+      <li>
+        <strong>Step 3 – Settings & Publish</strong>:  
+        Review and configure course settings such as skills, tags, enrollment, approvals, and ratings.  
+        Once finalized, click <strong>Create</strong> to publish the course.
+      </li>
+    </ol><br>
+
+    <div><img src="3.png" onclick="openModal('3.png')" alt="Course Step 3" width="100%" height="auto"></div><br>
+
+    <li>
+      After publishing, the course appears in the <strong>Courses Catalog</strong> and is accessible to assigned user roles.
+    </li><br>
+
+    <p>
+      The <strong>Enrollment</strong> option allows administrators to add team members or learners to a course. 
+      It provides tools to manage participation and monitor individual progress through different learning stages.
+    </p>
+
+    <li>
+      To begin, click the <strong>Enrollment</strong> icon to access the course enrollment panel.
+    </li><br>
+    <div><img src="4.png" onclick="openModal('4.png')" alt="Enrollment Icon" width="100%" height="auto"></div><br>
+
+    <li>
+      Click <strong>+ User</strong> to add new members to the course.  
+     
+    </li><br>
+    <div><img src="5.png" onclick="openModal('5.png')" alt="Add User Step 1" width="100%" height="auto"></div><br>
+    <div><img src="6.png" onclick="openModal('6.png')" alt="Add User Step 2" width="100%" height="auto"></div><br>
+
+    <li>
+      After enrollment, you can view user progress categorized under  
+      <strong>Not Started</strong>, <strong>In Progress</strong>, and <strong>Completed</strong> statuses for easy tracking.
+    </li><br>
+    <div><img src="7.png" onclick="openModal('7.png')" alt="Enrollment Status Overview" width="100%" height="auto"></div><br>
+  </ul>
+</div>
+
+
+                            <!-- Certificate Templates -->
+                         <div class="bg-light p-4 remove-padding common-scroll" id="Certificate-Templates">
+  <h2 id="_certificates">
+    <a class="header-icon-link highlight" href="#">Certificate Templates
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h2>
+
+  <ul class="page-list">
+    <p>
+      The <strong>Certificate Templates</strong> feature allows administrators to select a predefined certificate design 
+      that will be automatically issued to learners upon course completion.  
+      Each template includes dynamic fields such as <strong>Learner Name</strong>, <strong>Course Title</strong>, and <strong>Completion Date</strong>.
+    </p><br>
+  <div><img src="8.png" onclick="openModal('8.png')" alt="Roles panel" width="100%" height="auto"></div><br>
+                                 
+    
+  </ul>
+</div>
+
+
+                            <!-- Roles -->
+                         <div class="bg-light p-4 remove-padding common-scroll" id="Roles">
+  <h2 id="_roles">
+    <a class="header-icon-link highlight" href="#">Roles
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h2>
+
+  <ul class="page-list">
+    <p>
+      The <strong>Roles</strong> section defines user permissions within the Courses module — determining who can create, manage, or access course content.  
+      Common roles include <strong>Teacher</strong> and <strong>Learner</strong>.
+    </p><br>
+
+    <div><img src="roles-panel.png" onclick="openModal('roles-panel.png')" alt="Roles Panel" width="100%" height="auto"></div><br>
+
+    <li>
+      Roles can be configured and assigned directly while creating a course.  
+      In the course creation panel, you will see a <strong>Role</strong> option where you can specify which users can view, edit, or enroll in the course.
+    </li><br>
+
+    <div><img src="roles-panel1.png" onclick="openModal('roles-panel1.png')" alt="Assign Roles in Course Creation" width="100%" height="auto"></div><br>
+
+    <li>
+      Assigning appropriate roles ensures that only authorized users have access to manage or complete courses within the Employee Self-Service portal.
+    </li>
+  </ul>
+</div>
+
+
+                        </div>
+
+                        <!-- navigation -->
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="../Notification/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Notification</span></a>
+                            <a class="nav nav-next" href="../../share-ess-url/" aria-label="Next page"> <span class="d-none d-md-block">Share ESS URL</span><i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- simple image modal used across docs -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <footer class="section pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2025-<a href="https://www.apps365.com/">Apps365.</a> <a href="https://www.apps365.com/sla/">SLA.</a> <a href="https://www.apps365.com/terms-and-conditions">T&C.</a> <a href="https://www.apps365.com/end-user-license-agreement-eula">EULA.</a> <a href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy">Privacy Policy.</a> <a href="https://www.cubiclogics.com">Cubic Logics.</a></p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/" aria-label="Facebook"><i class="ti-facebook"></i></a></li>
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://twitter.com/Apps365_HRMS" aria-label="Twitter"><i class="ti-twitter-alt"></i></a></li>
+                        <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i class="ti-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // set current date (if you use date anywhere)
+        try {
+            date = new Date().toLocaleDateString();
+            if (document.getElementById("date")) document.getElementById("date").innerHTML = date;
+        } catch (e) { /* ignore */ }
+    </script>
+
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script src="../../js-modern-admin/obm-modern-admin.js"></script>
+</body>
+
+</html>

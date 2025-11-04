@@ -56,9 +56,9 @@ $(document).ready(function() {
     $(".common-header").html(
         `<ul class='navbar-nav ml-auto headerstyle'>` +
             `<li class='nav-item dropdown'>` +
-                `<a class='nav-link dropdown-toggle text-dark' href='#' id='hr365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>HR365</a>` +
+                `<a class='nav-link dropdown-toggle text-dark' href='#' id='hr365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Apps365</a>` +
                 `<div class='dropdown-menu' aria-labelledby='hr365Dropdown'>` +
-                `<a class='dropdown-item onboardinglink' href='/HRMS-HR365'>HRMS-HR365</a>` +
+                `<a class='dropdown-item onboardinglink' href='/HRMS-Apps365'>HRMS-Apps365</a>` +
                 `<a class='dropdown-item onboardinglink' href='/sharepoint-employee-onboarding/'>Employee Onboarding 365</a>` +
    
                 `<a class='dropdown-item employeedirectorylink' href='/sharepoint-employee-directory/'>Employee Directory 365</a>` +

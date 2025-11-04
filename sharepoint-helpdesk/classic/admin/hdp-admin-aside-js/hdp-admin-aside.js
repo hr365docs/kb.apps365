@@ -223,10 +223,10 @@ $(document).ready(function () {
         "</ul>"+
         "<a href='/sharepoint-helpdesk/classic/admin/settings/integration/#graph-api'>Microsoft Graph API</a>"+
         "</li>"+
-        "<li data-nav-id='./Add Assets/ ' title='Integrate with HR365 Asset Management' class='sidelist '>"+
+        "<li data-nav-id='./Add Assets/ ' title='Integrate with Apps365 Asset Management' class='sidelist '>"+
         "<ul class='sidenavSub-topics '>"+
         "</ul>"+
-        "<a href='/sharepoint-helpdesk/classic/admin/settings/integration/#integrate'>Integrate with HR365 Asset Management</a>"+
+        "<a href='/sharepoint-helpdesk/classic/admin/settings/integration/#integrate'>Integrate with Apps365 Asset Management</a>"+
         "<li data-nav-id='./Add Assets/ ' title='Integrate Microsoft Form with Helpdesk' class='sidelist '>"+
         "<ul class='sidenavSub-topics '>"+
         "</ul>"+

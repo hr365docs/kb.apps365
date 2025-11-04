@@ -53,7 +53,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
                 <a class="navbar-brand px-2" href="https://hr365docs.github.io/product/">
-                    <img src="../../logo_.png" width="100%" height="auto" alt="HR365" />
+                    <img src="../../logo_.png" width="100%" height="auto" alt="Apps365" />
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
                     aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -79,7 +79,7 @@
                     <title>Employee Onboarding 365 | Admin | Set-up-of-application</title>
                     <meta name=viewport content="width=device-width,initial-scale=1">
                     <meta name=generator content="Hugo 0.92.2">
-                    <meta name=description content="Employee Directory - HR365 ">
+                    <meta name=description content="Employee Directory - Apps365 ">
                     <link rel=stylesheet href=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css>
                     <link rel=stylesheet href=https://kb.apps365.com/plugins/themify-icons/themify-icons.css>
                     <link rel=icon href=# type=image/x-icon>
@@ -144,103 +144,142 @@
                                 </div>
                                 <div class=col-lg-9>
                                     <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
-                                        <div class="bg-light p-4 remove-padding">
-                                            <div class=page-list>
-                                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Notifications
-                                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
-                
-                                                <p>
-                                                    In this section, you have the ability to specify the content of email notifications, enable notifications for various teams, and configure reminder notifications.
-                                                </p>
-                
-                                                <div><img src="1.png" onclick="openModal('1.png')" alt="intregation"
-                                                        width="100%" height="auto"></div>
-                                            </div>
-                                            <li title="System Setting">
-                                               
-                                                <ul class="sidenavSub-topics">
-                                                    <li data-nav-id="../General" title='Users' class=sidelist>
-                                                        <a href="./#Email">
-                                                            Email
-                                                        </a>
-                                                    </li>
-                                                    <li data-nav-id="../General" title='position' class=sidelist>
-                                                        <a href="./#Reminder-Notifications">
-                                                            Reminder-Notifications
-                                                        </a>
-                                                   </li>
-                                                  
-                
-                
-                                                </ul>
-                                            </li>
-                                            <!-- DATA  -->
-                    <!-- notification start -->
-                
-                        <!-- Email start -->
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Email">
-                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Email<i class="fas fa-link"
-                                  style="font-size:12px; color:lightgray;"></i></a> </h2>
-                         
-                            <ul class=page-list>
+                                        <!-- Notifications Section -->
+<div class="bg-light p-4 remove-padding">
+    <div class="page-list">
+        <h2 id="_dashboards">
+            <a class="header-icon-link highlight" href="#">Notifications
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
 
-                              <li>Select <b>Configure </b> to continue processing<br></li><br>
-                              <div><img src="01.png" onclick="openModal('01.png')" alt="Add users" width="100%"
-                                  height="auto"><br>
-                              </div>
-                              <li>You may add a dynamic email template. </li><br>
-                              <div><img src="02.png" onclick="openModal('02.png')" alt="Add users" width="100%"
-                                  height="auto"><br>
-                              </div>
-                          </div>
-                  
-                          <!-- Email end  -->
-                          <!-- Reminder-Notifications start -->
-                          <div class="bg-light p-4 remove-padding common-scroll" id="Reminder-Notifications">
-                            <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Reminder Notifications<i class="fas fa-link"
-                                  style="font-size:12px; color:lightgray;"></i></a> </h2>
-                           
-                            <ul class=page-list>
-                              <li>Select <b>Configure </b> to continue processing<br></li><br>
-                              <div><img src="reminder.png" onclick="openModal('reminder.png')" alt="Add users" width="100%"
-                                  height="auto"><br>
-                              </div>
-                              <li> Select the Reminder-Notifications Accordingly </li><br>
-                              <div><img src="notification.png" onclick="openModal('notification.png')" alt="Add users" width="100%"
-                                  height="auto"><br>
-                              </div>
-                              <li> Click on Save Button </li><br>
-                              <div><img src="savenov.png" onclick="openModal('savenov.png')" alt="Add users" width="100%"
-                                  height="auto"><br>
-                              </div>
-                  
-                          </div>
-                  
-                  
-                  
-                          <!-- Reminder-Notifications end  -->
-                  
-                  
-                          <!-- notification end  -->
-                
-                <!-- upr --><div class="bg-light p-4 remove-padding common-scroll" id="EnableTaskNotification">
-    <h2 id="_enable_task_notification">
-        <a class="header-icon-link highlight" href="#">Enable Task Notification with Power Automate Flow
-            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-        </a>
-    </h2>
-    <ul class="page-list">
-        <li>
-            The <b>Enable Task Notification</b> feature leverages Power Automate to send automated reminders for assigned tasks. Once configured, the flow triggers email notifications based on task due dates or status changes, ensuring timely follow-ups and improved task accountability across the organization.
-        </li><br>
+        <p>
+            The <b>Notifications</b> section enables administrators to manage automated communications throughout the onboarding process. 
+            Here, you can configure email templates, set up reminder notifications, integrate task notifications through Power Automate Flow, 
+            and define recipients for onboarding attachments and shared mailboxes.
+        </p><br>
+
         <div>
-            <img src="task-notification-flow.png" onclick="openModal('task-notification-flow.png')" alt="Task Notification Flow" width="100%" height="auto"><br>
+            <img src="notifications-overview.png" onclick="openModal('notifications-overview.png')" alt="Notifications Overview"
+                width="100%" height="auto"><br>
         </div>
-    </ul>
+    </div>
+
+    <li title="Notifications Settings">
+        <ul class="sidenavSub-topics">
+            <li data-nav-id="../General" title="Email Templates" class="sidelist">
+                <a href="./#Email-Templates">Email Templates</a>
+            </li>
+            <li data-nav-id="../General" title="Reminder Notifications" class="sidelist">
+                <a href="./#Reminder-Notifications">Reminder Notifications</a>
+            </li>
+            <li data-nav-id="../General" title="Enable Task Notification with Power Automate Flow" class="sidelist">
+                <a href="./#Enable-Task-Notification">Enable Task Notification with Power Automate Flow</a>
+            </li>
+            <li data-nav-id="../General" title="Define Onboarding Attachments Recipient" class="sidelist">
+                <a href="./#Define-Onboarding-Attachments-Recipient">Define Onboarding Attachments Recipient</a>
+            </li>
+            <li data-nav-id="../General" title="Shared Mail Box ID" class="sidelist">
+                <a href="./#Shared-Mail-Box-ID">Shared Mail Box ID</a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- Email Templates -->
+    <div class="bg-light p-4 remove-padding common-scroll" id="Email-Templates">
+        <h2 id="_email_templates">
+            <a class="header-icon-link highlight" href="#">Email Templates
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <ul class="page-list">
+            <p>
+                The <b>Email Templates</b> feature allows administrators to design and manage customized email formats used during the onboarding workflow. 
+                These templates ensure consistent communication with employees and teams.
+            </p><br>
+            <li>Click on this <b>Email Templates</b> to proceed.</li><br>
+            <div><img src="email-template-config.png" onclick="openModal('email-template-config.png')" alt="Email Template Configuration" width="100%" height="auto"><br></div>
+            <li>You can add, edit, or delete dynamic email templates that suit your organization’s onboarding communication standards.</li><br>
+            <div><img src="email-template-edit.png" onclick="openModal('email-template-edit.png')" alt="Edit Email Template" width="100%" height="auto"><br></div>
+        </ul>
+    </div>
+
+    <!-- Reminder Notifications -->
+    <div class="bg-light p-4 remove-padding common-scroll" id="Reminder-Notifications">
+        <h2 id="_reminder_notifications">
+            <a class="header-icon-link highlight" href="#">Reminder Notifications
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <ul class="page-list">
+            <p>
+                The <b>Reminder Notifications</b> feature helps ensure timely completion of onboarding tasks by sending automated reminders to responsible users.
+            </p><br>
+            <li>Click on this <b>Reminder Notifications</b> to proceed.</li><br>
+            <div><img src="reminder-config.png" onclick="openModal('reminder-config.png')" alt="Configure Reminder Notifications" width="100%" height="auto"><br></div>
+            <li>Select the appropriate reminder options and intervals based on task due dates or statuses.</li><br>
+            <div><img src="reminder-settings.png" onclick="openModal('reminder-settings.png')" alt="Reminder Options" width="100%" height="auto"><br></div>
+            <li>Click on this option to save the configuration.</li><br>
+            <div><img src="reminder-save.png" onclick="openModal('reminder-save.png')" alt="Save Reminder Settings" width="100%" height="auto"><br></div>
+        </ul>
+    </div>
+
+    <!-- Enable Task Notification with Power Automate Flow -->
+    <div class="bg-light p-4 remove-padding common-scroll" id="Enable-Task-Notification">
+        <h2 id="_enable_task_notification">
+            <a class="header-icon-link highlight" href="#">Enable Task Notification with Power Automate Flow
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <ul class="page-list">
+            <p>
+                The <b>Enable Task Notification</b> feature integrates with Microsoft Power Automate to send real-time alerts for assigned onboarding tasks. 
+                This automation ensures that users receive timely reminders based on task status or due dates, improving task tracking and compliance.
+            </p><br>
+            <li>Click on this <b>Enable Task Notification</b> to proceed.</li><br>
+            <div><img src="task-notification-flow.png" onclick="openModal('task-notification-flow.png')" alt="Power Automate Task Notification" width="100%" height="auto"><br></div>
+            <li>Once enabled, automated email alerts will be sent to assigned users when a task is created, updated, or nearing its deadline.</li><br>
+        </ul>
+    </div>
+
+    <!-- Define Onboarding Attachments Recipient -->
+    <div class="bg-light p-4 remove-padding common-scroll" id="Define-Onboarding-Attachments-Recipient">
+        <h2 id="_onboarding_attachments_recipient">
+            <a class="header-icon-link highlight" href="#">Define Onboarding Attachments Recipient
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <ul class="page-list">
+            <p>
+                This option allows administrators to define specific users or groups who should receive onboarding-related attachments via email. 
+                These may include employee documents, agreements, or compliance forms.
+            </p><br>
+            <li>Click on this option to proceed.</li><br>
+            <div><img src="define-recipient.png" onclick="openModal('define-recipient.png')" alt="Define Recipients" width="100%" height="auto"><br></div>
+            <li>Once saved, all onboarding attachments will automatically be sent to the defined recipients.</li><br>
+        </ul>
+    </div>
+
+    <!-- Shared Mail Box ID -->
+    <div class="bg-light p-4 remove-padding common-scroll" id="Shared-Mail-Box-ID">
+        <h2 id="_shared_mailbox_id">
+            <a class="header-icon-link highlight" href="#">Shared Mail Box ID
+                <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+            </a>
+        </h2>
+        <ul class="page-list">
+            <p>
+                The <b>Shared Mail Box ID</b> setting enables centralized communication by using a common mailbox for all onboarding-related emails. 
+                This ensures continuity and visibility for HR or admin teams handling employee onboarding.
+            </p><br>
+            <li>Click on this option to proceed.</li><br>
+            <div><img src="shared-mailbox.png" onclick="openModal('shared-mailbox.png')" alt="Shared Mailbox Configuration" width="100%" height="auto"><br></div>
+            <li>All notifications and reminders will now be sent using the specified shared mailbox address.</li><br>
+        </ul>
+    </div>
 </div>
 
-                
-                                        </div>
+
 
                 
                 
@@ -271,10 +310,10 @@
                         <div class=container>
                             <div class="row align-items-center">
                                 <div class="col-md-8 text-md-left text-center">
-                                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.hr365.us />HR365.</a> <a
-                                            href="https://www.hr365.us/sla/">SLA.</a>
-                                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
-                                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.apps365.com/>Apps365.</a> <a
+                                            href="https://www.apps365.com/sla/">SLA.</a>
+                                        <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
+                                            href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
                                             href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
                                         Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
                                     </p>
@@ -285,7 +324,7 @@
                                                 href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
                                                     class=ti-facebook></i></a></li>
                                         <li class=list-inline-item><a class="text-color d-inline-block p-2"
-                                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
+                                                href="https://twitter.com/Apps365_HRMS" aria-label=Twitter><i
                                                     class=ti-twitter-alt></i></a></li>
                 
                                         <li class=list-inline-item><a class="text-color d-inline-block p-2"

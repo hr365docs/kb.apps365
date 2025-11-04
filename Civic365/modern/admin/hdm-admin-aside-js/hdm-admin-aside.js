@@ -218,8 +218,8 @@ $(document).ready(function () {
                 // "<li data-nav-id='./Add Assets/ ' title='Microsoft Graph API' class='sidelist'>" +
                 //     "<a href='/Civic365/modern/admin/settings/integration/#graph-api'>Microsoft Graph API</a>" +
                 // "</li>" +
-                "<li data-nav-id='./Add Assets/ ' title='Integrate with HR365 Asset Management' class='sidelist'>" +
-                    "<a href='/Civic365/modern/admin/settings/integration/#integrateMicrosoft'>Integrate with HR365 Asset Management</a>" +
+                "<li data-nav-id='./Add Assets/ ' title='Integrate with Apps365 Asset Management' class='sidelist'>" +
+                    "<a href='/Civic365/modern/admin/settings/integration/#integrateMicrosoft'>Integrate with Apps365 Asset Management</a>" +
                 "</li>" +
                 "<li data-nav-id='./Add Assets/ ' title='Integrate Microsoft Form with Civic' class='sidelist'>" +
                     "<a href='/Civic365/modern/admin/settings/integration/#integrateMicrosoft'>Integrate Microsoft Form with Civic</a>" +
