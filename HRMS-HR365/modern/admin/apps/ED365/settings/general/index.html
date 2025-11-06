@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>HRMS-Apps365 | Admin Guide | Apps || ED365 || Settings | General</title>
+    <title>HRMS-HR365 | Admin Guide | Apps || ED365 || Settings | General</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
     <meta name="description"
-        content="Manage general settings for Employee Directory - Apps365 Admin Guide. Learn how to customize general settings to enhance your directory experience.">
+        content="Manage general settings for Employee Directory - HR365 Admin Guide. Learn how to customize general settings to enhance your directory experience.">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
     <link rel="icon" href="#" type="image/x-icon">
@@ -55,7 +55,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
                 <a class="navbar-brand px-2" href="https://kb.apps365.com/">
-                    <img class=img-fluid src="../../../../../../../images/logo_.png" alt=Apps365>
+                    <img class=img-fluid src="../../../../../../../images/logo_.png" alt=HR365>
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
                     aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -77,9 +77,9 @@
             <div class=row>
                 <div class=col-lg-3>
                     <div class=sidebar>
-                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../../../../HRMS-Apps365/">HRMS-Apps365
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="../../../../../../../HRMS-HR365/">HRMS-HR365
                         </a></h5>
-                    <a class=back-btn href="../../../../../../../HRMS-Apps365/" aria-label=back></a>
+                    <a class=back-btn href="../../../../../../../HRMS-HR365/" aria-label=back></a>
                         <ul class=list-styled>
                             <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=admin Guide
                                 class="sidelist
@@ -99,7 +99,7 @@
                         <!-- <h2 class=mb-5 id=title>General</h2> -->
                         <div class="bg-light p-4 remove-padding">
                             <ul class=page-list>
-                                <h2 id="_dashboards" ><a class="header-icon-link highlight" href=#>General
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>General
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
 
@@ -120,24 +120,40 @@
 
                             </ul>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="AzureStorageConfiguration">
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
-                                        Azure Storage Configuration
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                This toggle allows you to retrieve user information from Azure. <br> <br>
-                                <div><img src="azure.png" onclick="openModal('azure.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>When the Sync employee information from Azure Blob Storage toggle is on, it displays
-                                    the respective fields, allowing us to fill them in to retrieve information from
-                                    Azure Blob Storage.</p><br> <br>
-                                <div><img src="azureon.png" onclick="openModal('azureon.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="AutoLoadConfiguration">
+  <ul class="page-list">
+    <h2 id="_autoload">
+      <a class="header-icon-link highlight" href="#">
+        Auto Load Configuration
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    Automatically load additional records either by scrolling or by clicking the "Load More" button.
+    <br><br>
+    <div>
+      <img src="3.png" onclick="openModal('3.png')" alt="Auto Load Preview" width="100%" height="auto">
+    </div>
+    <br>
+    <p>If the 'Auto Load' toggle is turned off, the 'Load More' button will be displayed.</p>
+    <br>
+    <div>
+      <img src="LoadMore.png" onclick="openModal('LoadMore.png')" alt="Load More Button" width="100%" height="auto">
+    </div>
+    <br>
+    <p>If the toggle is on, the 'Load More' button will not be shown, and records will load automatically.</p>
+    <br>
+    <div>
+      <img src="OntoogleAuto.png" onclick="openModal('OntoogleAuto.png')" alt="Auto Load Enabled" width="100%" height="auto">
+    </div>
+    <br><br>
+    <div>
+      <img src="1a.png" onclick="openModal('1a.png')" alt="Auto Load Enabled" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
 
-                            </ul>
-
-                        </div>
+                       
                         <div class="bg-light p-4 remove-padding common-scroll" id="Birthdayandanniversarytemplates">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
@@ -198,7 +214,7 @@
                                 <div><img src="RemoveButton.png" onclick="openModal('RemoveButton.png')"
                                         alt="Update users role" width="100%" height="auto"></div><br>
                                 <p>After removing it, it will no longer be visible on the user profile card.</p>
-                                <div><img src="Removed.png" onclick="openModal('Removed.png')"
+                                <div><img src="UserCardRemoveLogo.png" onclick="openModal('UserCardRemoveLogo.png')"
                                         alt="Update users role" width="100%" height="auto"></div><br>
 
                             </ul>
@@ -217,24 +233,42 @@
                                 <br> <br>
                                 <div><img src="33.png" onclick="openModal('33.png')" alt="Update users role"
                                         width="100%" height="auto"></div><br>
-                                <p>If you select the MS Teams app on your work phone, then</p>
-                                <div><img src="workPhone.png" onclick="openModal('workPhone.png')"
-                                        alt="Update users role" width="100%" height="auto"></div><br>
-                                <p>Then clicking on a phone number will take you directly to the Teams application.</p>
-                                <div><img src="WorkNo.png" onclick="openModal('WorkNo.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>If you select the Tel app on your mobile, then</p>
-                                <div><img src="Mobile.png" onclick="openModal('Mobile.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>Then clicking on a mobile number will take you directly to the Teams application.</p>
-                                <div><img src="phone.png" onclick="openModal('phone.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>If you select the MS teams app on your Chat, then</p>
-                                <div><img src="Chat.png" onclick="openModal('Chat.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>Then clicking on a chat icon will take you directly to the Teams application.</p>
-                                <div><img src="ChatIcon.png" onclick="openModal('ChatIcon.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
+                               <p>If you select the MS Teams app on your work phone, then:</p>
+<div>
+    <img src="workPhone.png" onclick="openModal('workPhone.png')" 
+         alt="MS Teams app on work phone" width="100%" height="auto">
+</div><br>
+
+<p>Clicking on a work phone number will open the call directly in the Teams application.</p>
+<div>
+    <img src="WorkNo.png" onclick="openModal('WorkNo.png')" 
+         alt="Calling work number via Teams" width="100%" height="auto">
+</div><br>
+
+<p>If you select the Tel app on your mobile, then:</p>
+<div>
+    <img src="Mobile.png" onclick="openModal('Mobile.png')" 
+         alt="Tel app on mobile" width="100%" height="auto">
+</div><br>
+
+<p>Clicking on a mobile number will open the call directly in the phone (Tel) application.</p>
+<div>
+    <img src="PhoneNo.png" onclick="openModal('PhoneNo.png')" 
+         alt="Calling mobile number via Tel app" width="100%" height="auto">
+</div><br>
+
+<p>If you select the MS Teams app for Chat, then:</p>
+<div>
+    <img src="Chat.png" onclick="openModal('Chat.png')" 
+         alt="MS Teams chat interface" width="100%" height="auto">
+</div><br>
+
+<p>Clicking on a chat icon will open the conversation directly in the Teams application.</p>
+<div>
+    <img src="ChatIcon.png" onclick="openModal('ChatIcon.png')" 
+         alt="Opening chat in Teams" width="100%" height="auto">
+</div><br>
+
                                 <p>If you select the Action icon (Modern), you will see two options: first, Outlook, and
                                     second, Teams.</p>
                                 <div><img src="Modern.png" onclick="openModal('Modern.png')" alt="Update users role"
@@ -261,23 +295,62 @@
                                         alt="Update users role" width="100%" height="auto"></div><br>
                             </ul>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Employeeinfopage">
+<!--                        
+                          <div class="bg-light p-4 remove-padding common-scroll" id="GCCTenant">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
-                                        Employee info page
+
+
+                                        GCC Tenant
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                You can define specific url in Azure AD extension attribute column, this setting will
-                                enable employee info page. Please refer here on how to setup up extension attributes
+
+                                If your Microsoft 365 tenant is GCC (US Government Community Cloud), please ensure that
+                                the
+                                specific setting is enabled in order to ensure compatibility within the GCC environment.
                                 <br> <br>
-                                <div><img src="39.png" onclick="openModal('39.png')" alt="Update users role"
+                                <div><img src="38.png" onclick="openModal('38.png')" alt="Update users role"
                                         width="100%" height="auto"></div><br>
-                                <p>In the Employee Info section, first, provide a name for the icon in the field. Then
-                                    select AD Properties, followed by the Property Name, and finally, click Submit.</p>
-                                <div><img src="EmployeeInfoPage.png" onclick="openModal('EmployeeInfoPage.png')"
-                                        alt="Update users role" width="100%" height="auto"></div><br>
+
                             </ul>
-                        </div>
+
+                        </div> -->
+                        <div class="bg-light p-4 remove-padding common-scroll" id="ExtendMobileNumberSearch">
+  <ul class="page-list">
+    <h2 id="_extendmobilenumbersearch">
+      <a class="header-icon-link highlight" href="#">
+        Extend Mobile Number and Phone Number Search Capability
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    Please activate this feature if you want to search by 'starts with', 'ends with', or 'contains', 
+    but only if the number of employees is under 3000.
+    <br><br>
+    <div>
+      <img src="13.png" onclick="openModal('13.png')" alt="Extended Search Option" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="ExtendCustomFieldsSearch">
+  <ul class="page-list">
+    <h2 id="_extendcustomfieldssearch">
+      <a class="header-icon-link highlight" href="#">
+        Extend Custom Fields Search Capability
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    If you want to utilize the 'starts with', 'ends with', or 'contains' search functionalities, please enable this feature. 
+    Additionally, limit its use to cases where the number of employees is under 3000.
+    <br><br>
+    <div>
+      <img src="100.png" onclick="openModal('100.png')" alt="Custom Fields Search" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+
+
                       
                         <div class="bg-light p-4 remove-padding common-scroll" id="Filterattribute">
                             <ul class=page-list>
@@ -326,7 +399,7 @@
                                         Save button, the file will be uploaded.</li><br>
                                     <div><img src="uploadJobTitle.png" onclick="openModal('uploadJobTitle.png')"
                                             alt="Update users role" width="100%" height="auto"></div><br>
-                                    <p>Enter Job title and then Save button click your Job title will save.</p>
+                                    <p>Enter Job title and then click on add button to save the job title.</p>
                                     <div><img src="26.png" onclick="openModal('26.png')" alt="Update users role"
                                             width="100%" height="auto"></div><br>
                                     <li><b>Update location</b>: This setting is employed to modify the user's location..
@@ -351,66 +424,59 @@
                             </ul>
                         </div>
 
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Homepagecustomurl">
+<!--                      
+                        <div class="bg-light p-4 remove-padding common-scroll" id="language-selection-as-browser">
                             <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
-
-
-                                        Home page custom url
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language selection as
+                                        browser default language
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                In the custom URL section of the homepage, you can input the URL of your favorite
-                                website and navigate there with a single click.
-                                <br> <br>
-                                <div><img src="41.png" onclick="openModal('41.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-                                <p>Here, the user can enter their custom URL, such as https://apps365.com, and also add
-                                    an icon. After that, they can click the Save button."</p>
-                                <div><img src="HomePageURL.png" onclick="openModal('HomePageURL.png')"
-                                        alt="Update users role" width="100%" height="auto"></div><br>
-                                <p>And then, the user will see this icon on their home screen. By clicking on the icon,
-                                    they will be redirected to the site they provided in the custom link.</p>
-                                <div><img src="HomeIcon.png" onclick="openModal('HomeIcon.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
+                                <p>
 
-                            </ul>
+                                    By default, this feature is enabled. You can disable it from the toggle switch. If
+                                    this is enabled, then the language will auto change to the language used in the
+                                    browser. Employee Directory can work in Czech, Dutch, English, French, German,
+                                    Hungarian, Italian, Japanese, Polish, Portuguese, Russian, and Spanish as per your
+                                    browser language. <br><br>
+                                <div><img src="language.png" onclick="openModal('language.png')" alt="browser default"
+                                        width="100%" height="auto"></div>
+                                </p>
 
                         </div>
-
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Map-external-list">
+                        <div class="bg-light p-4 remove-padding common-scroll" id="language-selection">
                             <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Map external list
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Language selection
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2><br>
+                                </h2>
+                                <p>
+                                    From here you can change the language manually. Here the selected language will
+                                    reflect for all users, even if the browser language is different. To enable
+                                    <b>Language selection</b>, make sure that the <b>Language selection as browser
+                                        default language</b> must be in disable condition. <br><br>
+                                <div><img src="language_selection.png" onclick="openModal('language_selection.png')"
+                                        alt="Language selection" width="100%" height="auto"></div>
+                                </p><br>
+                                <p>Support for Hebrew and Arabic languages has been added to enhance multilingual accessibility within the application.</p>
+                               <div><img src="heb.png" onclick="openModal('heb.png')" alt="show projects" width="100%"
+                                        height="auto"/></div><br>
+                                         <p>When Arabic is selected as the preferred language, the application interface will automatically update to Arabic.</p>
+                               <div><img src="Heb1.png" onclick="openModal('Heb1.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                         <div><img src="Heb4.png" onclick="openModal('Heb4.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+<br>
+                                        <p>When Hebrew is selected as the preferred language, the application interface will automatically update to Hebrew.</p>
+                               <div><img src="Heb3.png" onclick="openModal('Heb3.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                         <div><img src="Heb5.png" onclick="openModal('Heb5.png')" alt="show projects" width="100%"
+                                        height="auto"></div><br>
+                                       
 
-                                In the "Map External List," there is a toggle. By default, this toggle is switched off,
-                                signifying that the data originates from the internal list of non-Microsoft 365
-                                (M365).<br> <br>
-                                <div><img src="Map.png" onclick="openModal('Map.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
 
-                                When you activate the toggle, it will request input for two fields:
+                        </div> -->
 
-                                "Enter Site URL": In this field, please input the URL of the external list.
-                                "Enter List Name": In this field, enter the list's name. <br>
-                                <div><img src="mapSave.png" onclick="openModal('mapSave.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-
-                                <p>Upon entering this information, selecting "Save" will trigger the appearance of a
-                                    "Map Attribute Link (click here)." Clicking on this link will open a panel
-                                    displaying the data sourced from the fields of the external list.</p>
-                                <p>Within this panel, specific fields are designated as mandatory. Only after completing
-                                    these obligatory fields will the data be visible in the non-M365 view. If these
-                                    necessary fields are left blank, please review the "Map Attribute Panel" to ensure
-                                    all essential information is supplied.</p>
-                                <div><img src="42.png" onclick="openModal('42.png')" alt="Update users role"
-                                        width="100%" height="auto"></div><br>
-
-
-                            </ul>
-
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="orgChart">
+                       
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="orgChart">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Organization chart
                                         type
@@ -423,13 +489,13 @@
                                     accessible. However, Microsoft 365 imposes data limits on retrieving records in a
                                     single query. If you need to view the org chart for more than 2000 employees, please
                                     opt for the dynamic org chart option labeled 'Org Chart - Three Level.'
-                                <div><img src="fullChart.png" onclick="openModal('fullChart.png')" alt="Search filters"
+                                <div><img src="Orchart.png" onclick="openModal('Orchart.png')" alt="Search filters"
                                         width="100%" height="auto"></div>
 
                                 </p>
                                 <br>
                                 <p>Click on the Org Chart icon.</p>
-                                <div><img src="orgchart.png" onclick="openModal('orgChart.png')"
+                                <div><img src="OrgChartIcon.png" onclick="openModal('orgChart.png')"
                                         alt="Search filters" width="100%" height="auto"></div>
                                 <br>
                                 <p>
@@ -470,8 +536,8 @@
                                 <div><img src="fitscreenView.png" onclick="openModal('fitscreenView.png')"
                                         alt="Search filters" width="100%" height="auto"></div>
 
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="dateofjoin">
+                        </div> -->
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="dateofjoin">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Date of Joining
                                         type
@@ -485,7 +551,7 @@
 
                                 </p>
 
-                        </div>
+                        </div> -->
                         <div class="bg-light p-4 remove-padding common-scroll" id="Organizationname">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
@@ -498,12 +564,29 @@
                                 generation
                                 and proper titling when printing the employee directory as a PDF.
                                 <br>
-                                <div><img src="Type.png" onclick="openModal('Type.png')" alt="Update users role"
+                                <div><img src="36.png" onclick="openModal('36.png')" alt="Update users role"
                                         width="100%" height="auto"></div><br>
 
                             </ul>
 
                         </div>
+
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Profilecardcustomurlicon">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+
+
+                                        Profile card custom url icon
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                You can change the icon of your profile card's custom url.
+                                <br>
+                                <div><img src="40.png" onclick="openModal('40.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+
+                            </ul>
+
+                        </div> -->
                         <div class="bg-light p-4 remove-padding common-scroll" id="Recordstoload">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
@@ -518,11 +601,13 @@
                                 <br>
                                 <div><img src="rule.png" onclick="openModal('rule.png')" alt="Update users role"
                                         width="100%" height="auto"></div><br>
+                                        <div><img src="rule1.png" onclick="openModal('rule1.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
 
                             </ul>
 
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="RoleandPermissions">
+                        <div class="bg-light p-4 remove-padding common-scroll" id="update-department">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Role and Permissions.
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
@@ -533,28 +618,37 @@
                                 <br>
                                 <div><img src="RoleAndPermissions.png" onclick="openModal('RoleAndPermissions.png')"
                                         alt="Update users role" width="100%" height="auto"></div>
-                                <br>
-                                Enter the name of the user to whom you want to grant admin access.<br>
-                                Click Add to assign admin rights.
-                                <br>
-                                <br>
-                                <div><img src="AddUser.png" onclick="openModal('AddUser.png')" alt="Update users role"
-                                        width="100%" height="auto"></div>
-                                <br>
-                                The admin will have the rights to configure the application.
-                                <br>
-                                <br>
-                                <div><img src="Added.png" onclick="openModal('Added.png')" alt="Update users role"
-                                        width="100%" height="auto"></div>
-                                <br>
-                                The admin will have the rights to configure the application.
-                                <br>
-                                <br>
-                                <div><img src="DeleteRole.png" onclick="openModal('DeleteRole.png')"
-                                        alt="Update users role" width="100%" height="auto"></div>
-                            </ul>
-                        </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="search-filter">
+                              <br>
+<p>Enter the name of the user to whom you want to grant admin access.</p>
+<p>Click <strong>Add</strong> to assign admin rights.</p>
+
+<br>
+<div>
+    <img src="AddUser.png" onclick="openModal('AddUser.png')" 
+         alt="Add user for admin access" width="100%" height="auto">
+</div>
+<br>
+
+<p>The admin will now have the rights to configure the application.</p>
+
+<br>
+<div>
+    <img src="Added.png" onclick="openModal('Added.png')" 
+         alt="User added as admin" width="100%" height="auto">
+</div>
+<br>
+
+<p>If you wish to remove admin rights from a user, you can delete their admin role.</p>
+
+<br>
+<div>
+    <img src="DeleteRole.png" onclick="openModal('DeleteRole.png')" 
+         alt="Delete admin role" width="100%" height="auto">
+</div>
+<br>
+
+                           
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="search-filter">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Search filters
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
@@ -570,8 +664,43 @@
 
                                 </p>
 
-                        </div>
+                        </div> -->
                     </div>
+                    <div class="bg-light p-4 remove-padding common-scroll" id="SyncJobTitleLocationDept">
+  <ul class="page-list">
+    <h2 id="_syncjobtitlelocationdept">
+      <a class="header-icon-link highlight" href="#">
+        Sync Job Title, Location, and Department
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    This feature allows automatic synchronization of Job Title, Location, and Department details from the Office 365. 
+    When enabled, it ensures that employee records are updated with the latest organizational structure information.
+    <br><br>
+    <div>
+      <img src="Sync1.png" onclick="openModal('Sync1.png')" alt="Sync Job Title, Location and Department" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="ValidateWorkEmail">
+  <ul class="page-list">
+    <h2 id="_validateworkemail">
+      <a class="header-icon-link highlight" href="#">
+        Validate Work Email with SharePoint Account Name
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    Enable this setting to validate the work email with the SharePoint account name. 
+    Note that enabling this setting may increase the page load time of the application, so use it judiciously.
+    <br><br>
+    <div>
+      <img src="validate.png" onclick="openModal('validate.png')" alt="Validate Work Email" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+
                     <!-- <div class="bg-light p-4 remove-padding common-scroll" id="Syncemployeeprofileimagesfrom">
                         <ul class=page-list>
                             <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
@@ -628,7 +757,7 @@
         <div class=container>
             <div class="row align-items-center">
                 <div class="col-md-8 text-md-left text-center">
-                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.apps365.com/>Apps365.</a><a
+                    <p class="mb-md-0 mb-4">© 2025-<a href=https://www.apps365.com />Apps365.</a><a
                             href="https://www.apps365.com/sla/">SLA.</a>
                         <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
                             href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
@@ -642,7 +771,7 @@
                                 href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i
                                     class=ti-facebook></i></a></li>
                         <li class=list-inline-item><a class="text-color d-inline-block p-2"
-                                href="https://twitter.com/Apps365_HRMS" aria-label=Twitter><i
+                                href="https://twitter.com/HR365_HRMS" aria-label=Twitter><i
                                     class=ti-twitter-alt></i></a></li>
 
                         <li class=list-inline-item><a class="text-color d-inline-block p-2"

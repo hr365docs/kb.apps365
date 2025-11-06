@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang=en-us>
++
+<head>
+  <meta charset="utf-8">
+  <title>HRMS-HR365 | Admin Guide | Apps | ED365 | Settings | Exclude-options</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Hugo 0.92.2">
+  <meta name="description" content="Manage exclusion options in Employee Directory - HR365 Admin Guide. Learn how to configure which elements to exclude from the directory and customize your settings.">
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+  <link rel="icon" href="#" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+  <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+  <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start': new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+                  <!-- Google Tag Manager (noscript) -->
+                  <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                        style="display:none;visibility:hidden">
+                    </iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+  <header class="shadow-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+          <img class=img-fluid src="../../../../../../../images/logo_.png" alt=HR365>
+        </a>
+        <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+          aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="single section-sm pb-0">
+    <div class="container container-padding">
+      <div class=row>
+        <div class=col-lg-3>
+          <div class=sidebar>
+            <h5 class="mbHeading" style="color:SlateBlue"> <a href="./../../../../../../../HRMS-HR365/">HRMS-HR365</a></h5>
+            <a class=back-btn href="../../../../../../../HRMS-HR365/" aria-label=back></a>
+            <ul class=list-styled>
+              <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=admin Guide class="sidelist
+    active">
+                <a href="../../../../../admin/">
+                  Admin Guide
+                </a>
+                 <ul id="hcm-admin-Guide" class="sidenavbarscrollstyle"></ul>
+                
+              </li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class=col-lg-9>
+          <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+            <!-- <h2 class=mb-5 id=title>Exclude Options</h2> -->
+            <div class="bg-light p-4 remove-padding">
+              <ul class=page-list>
+                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Integrations
+                    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                </h2>
+
+            <p> This section allows you to configure integrations with external platforms and services. 
+    You can manage connections, enable or disable specific integrations, and control data flow 
+    between systems through the integration settings.               </p>
+
+                <div><img src="01.png" onclick="openModal('01.png')" alt="Exclude" width="100%" height="auto">
+                </div>
+
+                <br>
+             <div class="bg-light p-4 remove-padding common-scroll" id="AzureStorageConfiguration">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>
+                                        Azure Storage Configuration
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                This toggle allows you to retrieve user information from Azure. <br> <br>
+                                <div><img src="azure.png" onclick="openModal('azure.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+                                <p>When the Sync employee information from Azure Blob Storage toggle is on, it displays
+                                    the respective fields, allowing us to fill them in to retrieve information from
+                                    Azure Blob Storage.</p><br> <br>
+                                <div><img src="azureon.png" onclick="openModal('azureon.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+
+                            </ul>
+
+                        </div>
+                        <div class="bg-light p-4 remove-padding common-scroll" id="ConfigureSharePointAPI">
+  <ul class="page-list">
+    <h2 id="_configuresharepointapi">
+      <a class="header-icon-link highlight" href="#">
+        Configure SharePoint API Permissions
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    For instructions on how to enable SharePoint API permissions, please visit this link.
+    <br><br>
+    <div>
+      <img src="5.png" onclick="openModal('5.png')" alt="Configure SharePoint API" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+ <div class="bg-light p-4 remove-padding common-scroll" id="Map-external-list">
+                            <ul class=page-list>
+                                <h2 id="_dashboards"><a class="header-icon-link highlight" href=#>Map external list
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                </h2><br>
+
+                                In the "Map External List," there is a toggle. By default, this toggle is switched off,
+                                signifying that the data originates from the internal list of non-Microsoft 365
+                                (M365).<br> <br>
+                                <div><img src="29.png" onclick="openModal('29.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+
+                                When you activate the toggle, it will request input for two fields:
+
+                                "Enter Site URL": In this field, please input the URL of the external list.
+                                "Enter List Name": In this field, enter the list's name. <br>
+                                <div><img src="20.png" onclick="openModal('20.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br>
+<!-- 
+                                <p>Upon entering this information, selecting "Save" will trigger the appearance of a
+                                    "Map Attribute Link (click here)." Clicking on this link will open a panel
+                                    displaying the data sourced from the fields of the external list.</p>
+                                <p>Within this panel, specific fields are designated as mandatory. Only after completing
+                                    these obligatory fields will the data be visible in the non-M365 view. If these
+                                    necessary fields are left blank, please review the "Map Attribute Panel" to ensure
+                                    all essential information is supplied.</p>
+                                <div><img src="42.png" onclick="openModal('42.png')" alt="Update users role"
+                                        width="100%" height="auto"></div><br> -->
+
+
+                            </ul>
+
+                        </div> 
+                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="SharedMailboxID">
+  <ul class="page-list">
+    <h2 id="_sharedmailboxid">
+      <a class="header-icon-link highlight" href="#">
+        Shared Mailbox ID
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    This setting allows you to configure a Shared Mailbox ID that can be used to send or receive messages on behalf of a group. 
+    Ensure that the mailbox has proper permissions set in Exchange or Microsoft 365 before using it.
+    <br><br>
+    <div>
+      <img src="SharedMailboxID.png" onclick="openModal('SharedMailboxID.png')" alt="Shared Mailbox ID Configuration" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div> -->
+<div class="bg-light p-4 remove-padding common-scroll" id="SlackIntegration">
+  <ul class="page-list">
+    <h2 id="_slackintegration">
+      <a class="header-icon-link highlight" href="#">
+        Slack
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    Use Slack to collaborate with your colleagues. Ensure the Slack application is installed, and refer to the documentation 
+    for steps to integrate it with Employee Directory 365.
+    <br><br>
+    <div>
+      <img src="Slack.png" onclick="openModal('Slack.png')" alt="Slack Integration Setting" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="SyncMobileNumberAzure">
+  <ul class="page-list">
+    <h2 id="_syncanddisplaymobilenumberfromazure">
+      <a class="header-icon-link highlight" href="#">
+        Sync and Display Mobile Number from Azure
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    This setting will be functional when the SharePoint API is activated. 
+    For instructions on enabling it, please refer to this link.
+    <br><br>
+    <div>
+      <img src="17.png" onclick="openModal('17.png')" alt="Sync Mobile Number from Azure" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="SyncEmployeeProfileImages">
+  <ul class="page-list">
+    <h2 id="_syncemployeeprofileimages">
+      <a class="header-icon-link highlight" href="#">
+        Sync Employee Profile Images From
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    This setting allows you to sync employee profile images from various sources including SharePoint, Outlook, Active Directory (AD), or a custom Employee Directory (ED) library.
+
+   
+   
+    <br><br>
+    <b>Allow user to upload profile picture:</b><br>
+    Enabling this option allows users to manually upload their profile pictures through the UI.
+
+    <br><br>
+    <div>
+      <img src="SyncProfileImages.png" onclick="openModal('SyncProfileImages.png')" alt="Sync Employee Profile Images" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+
+<div class="bg-light p-4 remove-padding common-scroll" id="SyncEmployeeProfileSource">
+  <ul class="page-list">
+    <h2 id="_syncemployeeprofileinformationfrom">
+      <a class="header-icon-link highlight" href="#">
+        Sync Employee Profile Information From
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+
+    <ol>
+      <li>
+        <b>Graph API:</b>
+        The recommended configuration for the Employee Directory app is to utilize the Microsoft 365 Graph API 
+        as the primary data source to fetch all information. It is advisable to use Microsoft 365 as the 
+        data source for the majority of attributes.
+      </li>
+      <br>
+      <li>
+        <b>SharePoint Online and Graph API:</b>
+        The Employee Directory app utilizes SharePoint Online and the Microsoft 365 Graph API as data sources 
+        to retrieve all information. It is recommended to enable this setting only if advised by the support 
+        or consulting team, particularly if there is a specific need such as sorting results by last name 
+        or other requirements that cannot be fulfilled using the Graph data source alone.
+      </li>
+    </ol>
+    <br>
+    <div>
+      <img src="18.png" onclick="openModal('18.png')" alt="Sync Employee Profile Source" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="SyncUserInformation">
+  <ul class="page-list">
+    <h2 id="_syncuserinformationfrom">
+      <a class="header-icon-link highlight" href="#">
+        Sync User Information From
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    In this feature, users have the option to synchronize user information from two different sources: 
+    Microsoft 365 (M365) and non-M365. Alternatively, they can choose to synchronize only user information 
+    from non-M365 accounts, based on organizational needs.
+    <br><br>
+    <div>
+      <img src="25.png" onclick="openModal('25.png')" alt="Sync User Information Sources" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+<div class="bg-light p-4 remove-padding common-scroll" id="TimeOffManager">
+  <ul class="page-list">
+    <h2 id="_timeoffmanager">
+      <a class="header-icon-link highlight" href="#">
+        Time Off Manager
+        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+      </a>
+    </h2>
+    Enable this option to sync Time Off Manager with Employee Directory 365. 
+    Once connected, you’ll be able to view employees' leave status directly within the Employee Directory.
+    <br><br>
+    
+    <b>Site URL:</b><br>
+    Enter the site URL where Time Off Manager is installed. This is required to establish the integration successfully.
+    <br><br>
+    <div>
+      <img src="TimeOffManager1.png" onclick="openModal('TimeOffManager1.png')" alt="Time Off Manager Configuration" width="100%" height="auto">
+    </div>
+    <br><br>
+  </ul>
+</div>
+
+
+              </ul></div>
+
+
+            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+              <nav class="pagination mt-3">
+                <a class="nav nav-prev" href="../views/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>
+                  <span class="d-none d-md-block">Views</span>
+                <a class="nav nav-next" href="../feature/" aria-label="Previous page"> <span
+                    class="d-none d-md-block">Features</span><i class="ti-arrow-right ml-2"></i></a>
+              </nav>
+     </div>     
+    
+    
+    
+    
+
+
+
+            
+           
+            <br>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
+          <br>
+
+      
+   
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+      <div class="mySlides">
+        <img src="" id="imageId" style="width:100%">
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href=https://www.apps365.com />Apps365.</a><a
+              href="https://www.apps365.com/sla/">SLA.</a>
+            <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
+              href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/HR365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../../../../../../js/script.min.js"></script>
+  <script src="../../../../../../../js/showhidefunction.js"></script>
+  
+  <script>
+    function openModal(src) {
+
+      document.getElementById("imageId").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+
+    }
+
+    date = new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML = date;
+  </script>
+  <script src="../../../../../../../js/header-footer.js"></script>
+
+  <script src="../../../../../../../js/hcm-modern-admin.js"></script>
+</body>
+
+</html>
