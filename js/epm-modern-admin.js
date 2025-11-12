@@ -263,6 +263,10 @@ $(document).ready(function () {
                     "<a href='/employee-performance-management/modern/admin/settings/notification/#KPI'>KPI</a>" +
                 "</li>" +
 
+                  "<li data-nav-id='../General' title='Welcome Notification' class='sidelist'>" +
+                    "<a href='/employee-performance-management/modern/admin/settings/notification/#Welcome_Notification'>Welcome Notification</a>" +
+                "</li>" +
+
             "</ul>" +
         "</li>" +
 
