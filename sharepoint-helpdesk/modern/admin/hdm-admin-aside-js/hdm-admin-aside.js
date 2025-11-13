@@ -40,95 +40,95 @@ $(document).ready(function () {
         "<li data-nav-id='./Settings/' title='Settings'  class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list_setting'>" +
 
-      
-"<li class='dropdownicon sidelist' title=general>" +
-    "<a class='qwe' href='/sharepoint-helpdesk/modern/admin/settings/general/'>General</a>" +
-    "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-helpdesk/modern/admin/hdm-admin-aside-js/down-arrow-svgrepo-com.svg'>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title=General class='sidelist dropdown_romove_dot'>" +
-    "<ul class='sidenavSub-topics aside_dropdown_list'>" +
-       "<li data-nav-id='./General-Settings/' title='Date Format' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#date-format'>Date Format</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Time Format' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#timeformat'>Time Format</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Theme' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#theme_id'>Theme</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Show Resolved Ticket in Selected Tabs' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#display-resolved'>Show Resolved Ticket in Selected Tabs</a>" +
-"</li>" +
-"<li data-nav-id='./Integration-Settings/' title='GCC Tenant' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#GCC-Tenant'>GCC Tenant</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Show Resolve Tab in User Home' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#resolvetabs'>Show Resolve Tab in User Home</a>" +
-"</li>" +
-"<li data-nav-id='./Notification-Settings/' title='Disable CC Notifications' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#emailcss'>Disable CC Notifications</a>" +
-"</li>" +
-"<li data-nav-id='./Notification-Settings/' title='Disable Popup Alert' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Popup-Notification'>Disable Popup Alert</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Reopen Tickets Without Adding Comment' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#reopen'>Reopen Tickets Without Adding Comment</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='New Ticket Creation for Users' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#ticket-creation'>New Ticket Creation for Users</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Show Latest Comment with Ticket Title' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#latest-comment'>Show Latest Comment with Ticket Title</a>" +
-"</li>" +
-"<li data-nav-id='./Notification-Settings/' title='Disable Default Approval Email to Admins' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#default-approval'>Disable Default Approval Email to Admins</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Display Help Page' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#DisplayHelpPage'>Display Help Page</a>" +
-"</li>" +
-"<li data-nav-id='./Language-Settings/' title='Language Translation' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Language-Translation'>Language Translation</a>" +
-"</li>" +
-"<li data-nav-id='./Language-Settings/' title='Language Selection as Browser Default Language' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#languagebrowserdefaultlanguage'>Language Selection as Browser Default Language</a>" +
-"</li>" +
-"<li data-nav-id='./Language-Settings/' title='Language Selection in Case Browser Default Language is Not Detected' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#languageisNotdetected'>Language Selection in Case Browser Default Language is Not Detected</a>" +
-"</li>" +
-"<li data-nav-id='./Integration-Settings/' title='Use SharePoint URL for MS Teams Installed Application' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#SharepointURL'>Use SharePoint URL for MS Teams Installed Application</a>" +
-"</li>" +
-"<li data-nav-id='./Language-Settings/' title='Language' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Language1'>Language</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Naming Convention' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#naming-convention'>Naming Convention</a>" +
-"</li>" +
-"<li data-nav-id='./Integration-Settings/' title='Hide SharePoint Page’s Default Components' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#update-roles'>Hide SharePoint Page’s Default Components</a>" +
-"</li>" +
-"<li data-nav-id='./Integration-Settings/' title='Configure SharePoint API Permissions' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Hide-Sharepoint-Pages-Default-Components'>Configure SharePoint API Permissions</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Recycle Bin' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#recycle-bin'>Recycle Bin</a>" +
-"</li>" +
-"<li data-nav-id='./Ticket-Settings/' title='Default Date Range of Tickets on Homepage' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#default-date-range'>Default Date Range of Tickets on Homepage</a>" +
-"</li>" +
-"<li data-nav-id='./System-Settings/' title='Enable Logs Collection' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#enable-logs'>Enable Logs Collection</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Brand Logo' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#brand-logo'>Brand Logo</a>" +
-"</li>" +
-"<li data-nav-id='./General-Settings/' title='Favicon' class='sidelist'>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Show-favicon-of-Helpdesk-365'>Favicon</a>" +
-"</li>"+
- 
-        
-    "</ul>" +
-"</li>"+
+
+        "<li class='dropdownicon sidelist' title=general>" +
+        "<a class='qwe' href='/sharepoint-helpdesk/modern/admin/settings/general/'>General</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-helpdesk/modern/admin/hdm-admin-aside-js/down-arrow-svgrepo-com.svg'>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title=General class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='./General-Settings/' title='Date Format' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#date-format'>Date Format</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Time Format' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#timeformat'>Time Format</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Theme' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#theme_id'>Theme</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Show Resolved Ticket in Selected Tabs' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#display-resolved'>Show Resolved Ticket in Selected Tabs</a>" +
+        "</li>" +
+        "<li data-nav-id='./Integration-Settings/' title='GCC Tenant' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#GCC-Tenant'>GCC Tenant</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Show Resolve Tab in User Home' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#resolvetabs'>Show Resolve Tab in User Home</a>" +
+        "</li>" +
+        "<li data-nav-id='./Notification-Settings/' title='Disable CC Notifications' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#emailcss'>Disable CC Notifications</a>" +
+        "</li>" +
+        "<li data-nav-id='./Notification-Settings/' title='Disable Popup Alert' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Popup-Notification'>Disable Popup Alert</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Reopen Tickets Without Adding Comment' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#reopen'>Reopen Tickets Without Adding Comment</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='New Ticket Creation for Users' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#ticket-creation'>New Ticket Creation for Users</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Show Latest Comment with Ticket Title' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#latest-comment'>Show Latest Comment with Ticket Title</a>" +
+        "</li>" +
+        "<li data-nav-id='./Notification-Settings/' title='Disable Default Approval Email to Admins' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#default-approval'>Disable Default Approval Email to Admins</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Display Help Page' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#DisplayHelpPage'>Display Help Page</a>" +
+        "</li>" +
+        "<li data-nav-id='./Language-Settings/' title='Language Translation' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Language-Translation'>Language Translation</a>" +
+        "</li>" +
+        "<li data-nav-id='./Language-Settings/' title='Language Selection as Browser Default Language' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#languagebrowserdefaultlanguage'>Language Selection as Browser Default Language</a>" +
+        "</li>" +
+        "<li data-nav-id='./Language-Settings/' title='Language Selection in Case Browser Default Language is Not Detected' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#languageisNotdetected'>Language Selection in Case Browser Default Language is Not Detected</a>" +
+        "</li>" +
+        "<li data-nav-id='./Integration-Settings/' title='Use SharePoint URL for MS Teams Installed Application' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#SharepointURL'>Use SharePoint URL for MS Teams Installed Application</a>" +
+        "</li>" +
+        "<li data-nav-id='./Language-Settings/' title='Language' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Language1'>Language</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Naming Convention' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#naming-convention'>Naming Convention</a>" +
+        "</li>" +
+        "<li data-nav-id='./Integration-Settings/' title='Hide SharePoint Page’s Default Components' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#update-roles'>Hide SharePoint Page’s Default Components</a>" +
+        "</li>" +
+        "<li data-nav-id='./Integration-Settings/' title='Configure SharePoint API Permissions' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Hide-Sharepoint-Pages-Default-Components'>Configure SharePoint API Permissions</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Recycle Bin' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#recycle-bin'>Recycle Bin</a>" +
+        "</li>" +
+        "<li data-nav-id='./Ticket-Settings/' title='Default Date Range of Tickets on Homepage' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#default-date-range'>Default Date Range of Tickets on Homepage</a>" +
+        "</li>" +
+        "<li data-nav-id='./System-Settings/' title='Enable Logs Collection' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#enable-logs'>Enable Logs Collection</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Brand Logo' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#brand-logo'>Brand Logo</a>" +
+        "</li>" +
+        "<li data-nav-id='./General-Settings/' title='Favicon' class='sidelist'>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/general/#Show-favicon-of-Helpdesk-365'>Favicon</a>" +
+        "</li>" +
+
+
+        "</ul>" +
+        "</li>" +
 
 
         "<li class='dropdownicon sidelist' title='Ticket Customization'>" +
@@ -151,61 +151,61 @@ $(document).ready(function () {
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-field'>Ticket Field</a>" +
         "</li>" +
         "<li data-nav-id='./modern-view-fields/' title='Modern View Fields' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#modern-view-fields'>Modern View Fields</a>" +
-"</li>" +
- "<li data-nav-id='./Assign-Assets/' title='Ticket Sequence' class='sidelist'>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#modern-view-fields'>Modern View Fields</a>" +
+        "</li>" +
+        "<li data-nav-id='./Assign-Assets/' title='Ticket Sequence' class='sidelist'>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-sequence'>Ticket Sequence</a>" +
         "</li>" +
 
-"<li data-nav-id='./transfer-ticket/' title='Transfer of Ticket' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#transfer-ticket'>Transfer of Ticket</a>" +
-"</li>" +
+        "<li data-nav-id='./transfer-ticket/' title='Transfer of Ticket' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#transfer-ticket'>Transfer of Ticket</a>" +
+        "</li>" +
 
-"<li data-nav-id='./reopen-reply/' title='Reopen Tickets on Reply' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#reopen-reply'>Reopen Tickets on Reply</a>" +
-"</li>" +
+        "<li data-nav-id='./reopen-reply/' title='Reopen Tickets on Reply' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#reopen-reply'>Reopen Tickets on Reply</a>" +
+        "</li>" +
 
-"<li data-nav-id='./hide-teams/' title='Hide Teams Option While Creating a Ticket' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-teams'>Hide Teams Option While Creating a Ticket</a>" +
-"</li>" +
+        "<li data-nav-id='./hide-teams/' title='Hide Teams Option While Creating a Ticket' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-teams'>Hide Teams Option While Creating a Ticket</a>" +
+        "</li>" +
 
-"<li data-nav-id='./ticket-properties/' title='Ticket Properties Configuration' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-properties'>Ticket Properties Configuration</a>" +
-"</li>" +
+        "<li data-nav-id='./ticket-properties/' title='Ticket Properties Configuration' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#ticket-properties'>Ticket Properties Configuration</a>" +
+        "</li>" +
 
-"<li data-nav-id='./hide-ticket-title/' title='Hide Ticket Title' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-ticket-title'>Hide Ticket Title</a>" +
-"</li>" +
+        "<li data-nav-id='./hide-ticket-title/' title='Hide Ticket Title' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-ticket-title'>Hide Ticket Title</a>" +
+        "</li>" +
 
-"<li data-nav-id='./hide-consult/' title='Hide Consult Button' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-consult'>Hide Consult Button</a>" +
-"</li>" +
- "<li data-nav-id='./Add Assets/ ' title='Enable ticket closed justification' class='sidelist '>" +
+        "<li data-nav-id='./hide-consult/' title='Hide Consult Button' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#hide-consult'>Hide Consult Button</a>" +
+        "</li>" +
+        "<li data-nav-id='./Add Assets/ ' title='Enable ticket closed justification' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#Enable-ticket-closed-justification'>Enable ticket closed justification</a>" +
         "</li>" +
-         "<li data-nav-id='./Assign-Assets/' title=Tickets Comments page class='sidelist'>" +
+        "<li data-nav-id='./Assign-Assets/' title=Tickets Comments page class='sidelist'>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#Tickets-comments-page'>Tickets Comments page</a>" +
         "</li>" +
 
-"<li data-nav-id='./custom-filters/' title='Custom Filters' class='sidelist '>" +
-    "<ul class='sidenavSub-topics '></ul>" +
-    "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#custom-filters'>Custom Filters</a>" +
-"</li>" +
+        "<li data-nav-id='./custom-filters/' title='Custom Filters' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '></ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#custom-filters'>Custom Filters</a>" +
+        "</li>" +
 
-       
+
         "<li data-nav-id='./Assign-Assets/' title='Custom Forms' class='sidelist'>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#custom-form'>Custom Forms</a>" +
         "</li>" +
-       
+
         // "<li data-nav-id='./Add Assets/ ' title='Allow Members To Edit Ticket Properties Without Reopening The Ticket.' class='sidelist '>" +
         // "<ul class='sidenavSub-topics '>" +
         // "</ul>" +
@@ -226,7 +226,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/ticket-customization/#review-tickets'>Review Tickets</a>" +
         "</li>" +
-       
+
         "<li data-nav-id='./Add Assets/ ' title='Escalate Tickets' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>"
         +
@@ -261,11 +261,11 @@ $(document).ready(function () {
         "</li>" +
 
 
-       "<li class='dropdownicon sidelist' title='Users, Roles, Permissions'>" +
+        "<li class='dropdownicon sidelist' title='Users, Roles, Permissions'>" +
         "<a class='qwe'  href='/sharepoint-helpdesk/modern/admin/settings/role/'>Users, Roles, Permissions</a>" +
         "<img  class='helpdesk-img aside_dropdown_icon' src='/sharepoint-helpdesk/modern/admin/hdm-admin-aside-js/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
-       
+
         "<li data-nav-id='./Add Assets/' title='Users/Roles/Permissions' class='sidelist dropdown_romove_dot'>" +
         "<ul class='sidenavSub-topics aside_dropdown_list'>" +
         "<li data-nav-id='./Assign-Assets/ ' title='Add/Edit Users' class='sidelist '>" +
@@ -343,7 +343,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#integrateMicrosoft'>Integrate Microsoft Form with Helpdesk</a>" +
         "</li>" +
-                "<li data-nav-id='./Assign-Assets/ ' title='Integrating Mail Tracker with Helpdesk 365' class='sidelist '>" +
+        "<li data-nav-id='./Assign-Assets/ ' title='Integrating Mail Tracker with Helpdesk 365' class='sidelist '>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#email-tracker'>Integrating Mail Tracker with Helpdesk 365</a>" +
         "</li>" +
         "<li data-nav-id='./Add Assets/ ' title='DevOps Integrations' class='sidelist '>" +
@@ -380,7 +380,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/notification/#admin'>Admin</a>" +
         "</li>" +
-         "<li data-nav-id='./Add Assets/ ' title='Approver' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Approver' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/notification/#approver'>Approver</a>" +
@@ -398,7 +398,7 @@ $(document).ready(function () {
         "<li data-nav-id='./Assign-Assets/ ' title='Canned Responses' class='sidelist '>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#canned-responses'>Canned Responses</a>" +
 
-         "<li data-nav-id='./Add Assets/ ' title='Column Indexing' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Column Indexing' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Column_Indexing'>Column Indexing</a>" +
@@ -414,9 +414,19 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#custom-column'>Custom Columns</a>" +
         "</li>" +
+
+
+        "<li data-nav-id='./Add Assets/ ' title='Analytics Report'class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#analytics-report'>Analytics Report</a>" +
+        "</li>" +
         "<li data-nav-id='./Add Assets/ ' title='Business Hours' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
+
+        
+
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#business-hours'>Business Hours</a>" +
         "</li>" +
         "<li data-nav-id='./Add Assets/ ' title='Column Setting' class='sidelist '>" +
@@ -444,7 +454,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Rules-Automation'>Rules & Automation</a>" +
         "</li>" +
-         "<li data-nav-id='./Add Assets/ ' title='Incident Module' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Incident Module' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Incident-Module'>Incident Module</a>" +
@@ -461,19 +471,19 @@ $(document).ready(function () {
 
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Chatbot-Bubble-365-setting'>Chatbot Bubble 365 setting</a>" +
         "</li>" +
-        
+
         "<li data-nav-id='./Add Assets/ ' title='Multiple Mailbox Configuration' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Configure-different-mailboxes-for-different-team'>Multiple Mailbox Configuration</a>" +
         "</li>" +
 
-         "<li data-nav-id='./Add Assets/ ' title='Service Entitlement' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Service Entitlement' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Service-Entitlement'>Service Entitlement</a>" +
         "</li>" +
-         "<li data-nav-id='./Add Assets/ ' title='Enable MS Teams live chat integration' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Enable MS Teams live chat integration' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#EnableMSTeamslivechatintegeration'>Enable MS Teams live chat integration</a>" +
@@ -497,7 +507,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#RetaindatainHelpdesk365till'>Retain data in Helpdesk 365 till days</a>" +
         "</li>" +
-         "<li data-nav-id='./Add Assets/ ' title='Time Tracking' class='sidelist '>" +
+        "<li data-nav-id='./Add Assets/ ' title='Time Tracking' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#time-tracking'>Time Tracking</a>" +
@@ -519,7 +529,7 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Knowledgebase'>Knowledgebase</a>" +
         "</li>" +
-        
+
         "<li data-nav-id='./Add Assets/ ' title='HD365 Migration' class='sidelist '>" +
         "<ul class='sidenavSub-topics '>" +
         "</ul>" +
