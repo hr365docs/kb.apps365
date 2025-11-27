@@ -113,6 +113,7 @@ $(document).ready(function() {
          `<a class='dropdown-item stocklink' href='/Expense-365/'>Expense 365 Lite </a>` +
           `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
            `<a class='dropdown-item stocklink' href='/Gauge-365/'>Gauge365</a>` +
+            `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
         `</div>` +
         `</li>` +
 
