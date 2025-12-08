@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Approvals 365 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Hugo 0.92.2" />
+  <meta name="description" content="Approvals 365" />
+
+
+
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css" />
+
+
+  <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css" />
+
+
+  <link rel="icon" href="#" type="image/x-icon" />
+
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #5637da;
+      --body-color: #f9f9f9;
+      --text-color: #636363;
+      --text-color-dark: #242738;
+      --white-color: #ffffff;
+      --light-color: #f8f9fa;
+      --font-family: Lato;
+    }
+  </style>
+
+
+
+  <link href="../css/tstyle.min.css" rel="stylesheet" media="screen" />
+
+
+
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+
+
+  <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+
+
+  <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+
+  <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+  <!-- Google Tag Manager --> 
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+    })(window,document,'script','dataLayer','GTM-TX9SKDMB');</script> 
+    <!-- End Google Tag Manager --> 
+</head>
+
+
+<body>
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" 
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+    <!-- End Google Tag Manager (noscript) --> 
+
+  <header class="banner overlay bg-cover" data-background="https://kb.apps365.com/images/banner.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container px-2 px-md-0">
+        <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+          <img style="margin-top:5px ;"  class=img-fluid src="../images/app365.png" alt=Apps365>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  common-header" id="navigation">
+    
+        </div>
+      </div>
+    </nav>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white mb-3 supportHeading">
+            Support Center &amp; Knowledge base
+          </h1>
+          <p class="text-white mb-4 findadviceheading">
+            Find advice and answers from our support team fast or get in touch
+          </p>
+          <div class="position-relative">
+            <form class="banner_form" action="">
+
+              <input
+                id="search"
+                class="form-control"
+                placeholder="Have a question? Just ask here or enter terms"
+              />
+              <i class="ti-search search-icon"></i>
+            </form>
+
+
+            <script>
+              $(function () {
+                var projects = [
+
+                  {
+                    value: "Installation",
+                    label: "<p>Installation</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/getting-started/installation/"
+                  },
+
+                  {
+                    value: "Installation of applications from App Catalog",
+                    label: "<p>Installation of applications from App Catalog</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/getting-started/installation/using-app-file/"
+                  },
+
+                  {
+                    value: "Upgrading",
+                    label: "<p>Upgrading</p><p></p>",
+                    url: "https://kb.apps365.com/Civic365/modern/getting-started/upgrading/"
+                  },
+
+                  {
+                    value: "Faq",
+                    label: "<p>Faq\n</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/faq/"
+                  },
+
+                  {
+                    value: "Release Notes",
+                    label: "<p>Release Notes</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/release-note/"
+                  },
+                  {
+                    value: "User Guide",
+                    label: "<p>User Guide</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/user/"
+                  },
+                  {
+                    value: "Introduction(User-Guide)",
+                    label: "<p>Introduction(User-Guide)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/user/"
+                  },
+                  {
+                    value: "Home Page(User-Guide)",
+                    label: "<p>Home Page(User-Guide)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/user/"
+                  },
+                  {
+                    value: "Self Review(User-Guide)",
+                    label: "<p>Self Review(User-Guide)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/user/self-review/"
+                  },
+                  {
+                    value: "360 Feedback(User-Guide)",
+                    label: "<p>360 Feedback(User-Guide)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/user/feedback/"
+                  },
+                  {
+                    value: "Admin Guide",
+                    label: "<p>Admin Guide</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/"
+                  },
+                  {
+                    value: "Introduction(Admin-365)",
+                    label: "<p>Introduction(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/introduction/"
+                  },
+                  {
+                    value: "Architecture Diagram(Admin-365)",
+                    label: "<p>Architecture Diagram(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/architecture-diagram/"
+                  },
+                  {
+                    value: "Home Page(Admin-365)",
+                    label: "<p>Home Page(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/home-page/"
+                  },
+                  {
+                    value: "Dashboard(Admin-365)",
+                    label: "<p>Dashboard(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/dashboard/"
+                  },
+                  {
+                    value: "Roles(Admin-365)",
+                    label: "<p>Roles(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/roles/"
+                  },
+                  {
+                    value: "Administration(Admin-365)",
+                    label: "<p>Administration(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/administration/"
+                  },
+                  {
+                    value: "Settings(Admin-365)",
+                    label: "<p>Settings(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/settings/"
+                  },
+                  {
+                    value: "Reports(Admin-365)",
+                    label: "<p>Reports(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/reports/"
+                  },
+                  {
+                    value: "Help(Admin-365)",
+                    label: "<p>Help(Admin-365)</p>",
+                    url: "https://kb.apps365.com/Civic365/modern/admin/reports/"
+                  },
+
+                ];
+                $( "#search" ).autocomplete({
+          	source: projects
+          })
+          .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+            
+
+            
+          var input = document.querySelector('.banner_form input');
+
+            input.onkeyup = function(e) {
+            input_val = this.value; 
+            
+            let autocompleteitems= document.querySelectorAll(".autocomplete_items a");
+            for(let i=0; i<autocompleteitems.length; i++){
+                if(input_val==autocompleteitems[i].innerText){
+                  let geturl=document.querySelector('.banner_form');
+                  geturl.action=autocompleteitems[i].href
+                  document.querySelector('#search').click();
+                }
+            }
+          }
+           
+                      // variables
+        
+        
+        // events
+      
+        
+            return $( "<li class='autocomplete_items'>" )
+              .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.value + "</a>" + item.label )
+              .appendTo( ul );
+            };
+            
+          });
+          
+        </script>          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+
+  <section class="ptb-20 section" id="performnacemanagementmodern">
+    <div class=container>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center logodisplay contractmainlogo">
+          <div class="logoIcon_asset moblogo"><img src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/Approvals365Color.png"  class="asset-img" height="auto" 
+          style="
+            /* margin-top: -30px; */
+            height: 65px;
+            width: 65px;"/></div>
+            <div>
+            <h2 class="logotitle epmmobfontsize">Approvals 365</h2>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-panel icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Getting Started</h3>
+            <ul>
+              <li><a href="./modern/getting-started/installation/">Installing</a></li>
+              <li><a href="./modern/getting-started/upgrading/">Upgrading</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-folder icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Guides</h3>
+            <ul>
+              <li><a href="./modern/user/">User Guide</a></li>
+              <li><a href="./modern/admin/">Admin Guide</a></li>
+              <li><a href="./modern/faq/">FAQs</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="px-4 py-5 bg-white shadow text-center d-block match-height">
+            <i class="ti-cloud icon text-primary d-block mb-4"></i>
+            <h3 class="mb-3 mt-0 mobgetstarted">Contribute!</h3>
+            <ul>
+              <li><a href="../contribute/">Contribute!</a></li>
+              <li><a href="../feedback/">Feedback</a></li>
+              <li><a href="./modern/release-note/">Release Notes</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>  
+  <section class="ptb-20 section over-hidd">
+    <div class="container">
+    
+    
+    <div class="home-recent">
+      <div class="home-blog-latest">
+           <h2>Latest Posts</h2>
+ <h4 class="hd">From Our Technical Blog</h4>
+ 
+
+ 
+      </div>
+      <div class="home-recently-edited">
+           <h2>Recently Edited</h2>
+ <h4 class="hd">Documentation Pages</h4>
+ <div class="edit_wrap">
+     
+     
+     <ul>
+ 
+     <li>
+    <!-- <h4 class="">
+                  <a href="./Custom-level-Permission/" class="highlight">Custom Level Permissions</a>
+                  
+                </h4> -->
+                
+  
+     </li>
+
+ 
+ </ul>
+ 
+ 
+ 
+ </div>
+ 
+      </div>
+ </div>
+</div>
+
+  </section>
+
+
+
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section px-3 bg-white shadow text-center">
+            <h2 class="mb-4 fontweight questionHeading">Didn&rsquo;t find an answer to your question?</h2>
+            <!-- <p class="mb-4">Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam.</p> -->
+
+
+            <a href="https://www.apps365.com/support/" class="btn btn-primary contactbtn">Contact Support</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="section pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2025-<a href="https://www.apps365.com/">Apps365.</a>  <a href="https://www.apps365.com/sla/">SLA.</a><a
+              href="https://www.apps365.com/terms-and-conditions/">T&amp;C.</a> <a
+              href="https://www.apps365.com/end-user-license-agreement-eula/">EULA.</a> <a
+              href="https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy/">Privacy
+              Policy.</a> <a href="https://www.cubiclogics.com/">Cubic Logics.</a></p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class="list-inline">
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://www.facebook.com/hr365apps/"
+                aria-label="Facebook"><i class="ti-facebook"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2" href="https://twitter.com/Apps365_HRMS" aria-label="Twitter"><i
+                  class="ti-twitter-alt"></i></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label="Linkedin"><i
+                  class="ti-linkedin"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="../js/script.min.js"></script>
+  <script src="../js/header-footer.js"></script>
+
+</body>
+
+</html>
