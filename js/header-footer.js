@@ -109,11 +109,13 @@ $(document).ready(function() {
              `<li class='nav-item dropdown'>` +
         `<a class='nav-link dropdown-toggle text-dark' href='#' id='webpartDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>SharePoint Add-ins</a>` +
         `<div class='dropdown-menu' aria-labelledby='webpartDropdown'>` +
-        `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
+         `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
+         `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
          `<a class='dropdown-item stocklink' href='/Expense-365/'>Expense 365 Lite </a>` +
           `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
-           `<a class='dropdown-item stocklink' href='/Gauge-365/'>Gauge365</a>` +
+           `<a class='dropdown-item stocklink' href='/Gauge365/'>Gauge 365</a>` +
             `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
+             `<a class='dropdown-item stocklink' href='/VisitorLogs-365/'>Visitor Logs 365</a>` +
         `</div>` +
         `</li>` +
 
