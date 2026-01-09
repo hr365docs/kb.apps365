@@ -69,7 +69,7 @@ $(document).ready(function() {
 
                 `<a class='dropdown-item performancelink' href='/RM365/'>Recruitment Management 365</a>` +
 
-                `<a class='dropdown-item performancelink' href='/Expense-tracker/'>Expense Tracker 365</a>` +
+                `<a class='dropdown-item performancelink' href='/Expense-tracker/'>Expense 365</a>` +
  
                 `</div>` +
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
  
                 `<a class='dropdown-item helpdesklink' href='/sharepoint-helpdesk/'>Helpdesk 365</a>` +
 
-                `<a class='dropdown-item assetmanagementlink' href='/online-asset-management-application/'>Asset Management 365</a>` +
+                `<a class='dropdown-item assetmanagementlink' href='/online-asset-management-application/'>Asset 365</a>` +
 
                 `<a class='dropdown-item contractlink' href='/contract-management/'>CLM 365</a>` +
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
                 `<a class='dropdown-item revenuelink' href='/Revenue365/'>Revenue 365</a>` +
                 // `<a class='dropdown-item revenuelink' href='/Stock365/'>Stock 365</a>` +
-                `<a class='dropdown-item tasklink' href='/task-management-365/'>Task Management 365</a>` +
+                `<a class='dropdown-item tasklink' href='/task-management-365/'>Task 365</a>` +
                
                 `</div>` +
 
