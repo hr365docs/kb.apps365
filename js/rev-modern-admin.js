@@ -204,8 +204,8 @@ $(document).ready(function () {
         "</li>" +
 
     
-"<li data-nav-id='../features' title='Features' class='dropdownicon sidelist'>" +
-  "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/'>Features</a>" +
+"<li data-nav-id='../features' title='features' class='dropdownicon sidelist'>" +
+  "<a class='qwe' href='/Revenue365/modern/admin/settings/features/'>Features</a>" +
   "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
 "</li>" +
 
@@ -215,50 +215,50 @@ $(document).ready(function () {
    
 
     "<li data-nav-id='../Organization' title='Organization' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Organization'>Organization</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Organization'>Organization</a>" +
     "</li>" +
 
     "<li data-nav-id='../Categories' title='Categories' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Categories'>Categories</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Categories'>Categories</a>" +
     "</li>" +
 
     "<li data-nav-id='../Department' title='Department' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Department'>Department</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Department'>Department</a>" +
     "</li>" +
 
     "<li data-nav-id='../CustomFields' title='Custom Fields' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#custom-fields'>Custom Fields</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#custom-fields'>Custom Fields</a>" +
     "</li>" +
 
     "<li data-nav-id='../Catalog' title='Catalog' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Catalog'>Catalog</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Catalog'>Catalog</a>" +
     "</li>" +
 
     "<li data-nav-id='../InvoiceModule' title='Invoice Module' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Invoice-Module'>Invoice Module</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Invoice-Module'>Invoice Module</a>" +
     "</li>" +
 
     "<li data-nav-id='../StageConfiguration' title='Stage Configuration' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Stage-Configuration'>Stage Configuration</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Stage-Configuration'>Stage Configuration</a>" +
     "</li>" +
 
     "<li data-nav-id='../Source' title='Source' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Source'>Source</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Source'>Source</a>" +
     "</li>" +
 
     "<li data-nav-id='../LeadSource' title='Lead Source' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Lead-Source'>Lead Source</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Lead-Source'>Lead Source</a>" +
     "</li>" +
 
     "<li data-nav-id='../PaymentTerms' title='Payment Terms' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Payment-Tearms'>Payment Terms</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Payment-Tearms'>Payment Terms</a>" +
     "</li>" +
 
     "<li data-nav-id='../PaymentMethod' title='Payment Method' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Payment-Method'>Payment Method</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Payment-Method'>Payment Method</a>" +
     "</li>" +
       "<li data-nav-id='../PaymentMethod' title='Partner Payment Method' class='sidelist'>" +
-      "<a class='qwe' href='/Revenue365/modern/admin/settings/Features/#Partner-Payment-Method'>Partner Payment Method</a>" +
+      "<a class='qwe' href='/Revenue365/modern/admin/settings/features/#Partner-Payment-Method'>Partner Payment Method</a>" +
     "</li>" +
 
   "</ul>" +
