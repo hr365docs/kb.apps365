@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Learning Management System 365 | Admin Guide | General Administration </title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description
+        content="Admin guide for creating users in Learning Management System 365, allowing customization of user roles and preferences.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://hr365docs.github.io/product/">
+                    <img src="../../logo_.png" width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"><a href="/LMS/">Learning Management
+                                System 365</a></h5>
+                        <a class=back-btn href="/LMS/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title=" Admin Guide" class="sidelist
+    active">
+                                <a href="../../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="lmsmodernadmin" class="sidenavbarscrollstyle">
+                                </ul>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <!-- <h2 class=mb-5 id=title>General Settings</h2> -->
+                        <div class="bg-light p-4 remove-padding">
+                            <div class=page-list>
+                                <!-- Section -->
+                                <div>
+                                    <h2 style="color:var(--primary-color)"   id="_dashboards">General
+                                        Administration
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                    </h2>
+                                    <p>
+                                        The General Administration section allows administrators to configure core
+                                        learning attributes such as course levels, types, categories, required skills,
+                                        and job titles. These settings help standardize and organize learning content,
+                                        ensuring consistent classification and easier management across the LMS.
+                                    </p>
+                                    <br>
+                                    <h2 style="color:var(--primary-color)"   id="_dashboards">Course Level:
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                    </h2>
+                                    <p>
+                                        Course Level defines the difficulty or stage of a course, such as Beginner,
+                                        Intermediate, or Advanced. You can add the desired type of course level you want
+                                        to categorize and organize courses effectively.
+                                    </p>
+                                    <div>
+                                        <img src="Level1.png" onclick="openModal('Level1.png')" alt="question"
+                                            width="100%" height="auto">
+                                    </div> <br>
+                                    <h2 style="color:var(--primary-color)"   id="_dashboards">Types:
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                    </h2>
+                                    <p>
+                                        Types in LMS 365 define the format or nature of a course, such as online,
+                                        classroom, or blended learning. You can add the desired type to organize courses
+                                        and align them with different learning delivery methods.
+                                    </p>
+                                    <div>
+                                        <img src="Type.png" onclick="openModal('Type.png')" alt="question" width="100%"
+                                            height="auto">
+                                    </div> <br>
+                                    <h2 style="color:var(--primary-color)"   id="_dashboards">Categories:
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                    </h2>
+                                    <p>
+                                        Categories in LMS 365 help group courses based on departments, topics, or
+                                        business areas for easy navigation. You can create and manage categories to
+                                        organize learning content and make courses easier to find.
+                                    </p>
+                                    <div>
+                                        <img src="Catagory.png" onclick="openModal('Catagory.png')" alt="question"
+                                            width="100%" height="auto">
+                                    </div> <br>
+                                    <h2 style="color:var(--primary-color)"   id="_dashboards">Required Skills:
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                    </h2>
+                                    <p>
+                                        List the technical, professional, and soft skills needed to perform this role
+                                        effectively. These skills help ensure successful task execution and alignment
+                                        with job responsibilities.
+                                    </p>
+                                    <div>
+                                        <img src="Skill.png" onclick="openModal('Skill.png')" alt="question"
+                                            width="100%" height="auto">
+                                    </div> <br>
+                                   
+                                    <!-- <ul>
+                                        <li>
+
+                                            Click on Configure to process Further.
+                                        </li><br>
+                                        <div>
+                                            <img src="2.png" onclick="openModal('2.png')" alt="question" width="100%"
+                                                height="auto">
+                                        </div> <br>
+                                        <li>
+
+                                            A new screen will be displayed.
+                                        </li><br>
+                                        <div>
+                                            <img src="3.png" onclick="openModal('3.png')" alt="question" width="100%"
+                                                height="auto">
+                                        </div> <br>
+                                        <li>
+
+                                            Click on + Add Button to create new Section.
+                                        </li><br>
+                                        <div>
+                                            <img src="4.png" onclick="openModal('4.png')" alt="question" width="100%"
+                                                height="auto">
+                                        </div> <br>
+
+                                        <li>
+
+                                            Complete all the fields in the 'Add User' , ensuring that all necessary
+                                            details are filled out accurately. Once done, click 'Save' to store the
+                                            information.
+                                        </li><br>
+                                        <div>
+                                            <img src="5.png" onclick="openModal('5.png')" alt="question" width="100%"
+                                                height="auto">
+                                        </div> <br>
+                                        <li>
+
+                                            Custom columns with various data types can be added and utilized when
+                                            creating users. These custom columns can be viewed in the settings section
+                                            of the Users module.
+                                        </li><br>
+                                        <div>
+                                            <img src="Columns.png" onclick="openModal('Columns.png')" alt="question"
+                                                width="100%" height="auto">
+                                        </div> <br>
+                                        <p>Go to the User module and click on the settings icon on the right side.</p>
+                                        <div>
+                                            <img src="SettingIcon.png" onclick="openModal('SettingIcon.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <ul>
+                                            <li><strong>Overwrite user details</strong>: If enabled, it updates existing
+                                                user
+                                                details during sync.</li>
+                                            <li><strong>Exclude Options / Sync M365 Groups</strong>: Choose to either
+                                                exclude
+                                                specific user types or sync users based on M365 groups.</li>
+                                            <li><strong>Exclude Sign in Blocked Users</strong>: Prevents blocked users
+                                                from
+                                                being synced.</li>
+                                            <li><strong>Exclude Shared Mailboxes</strong>: Shared mailboxes will not be
+                                                included
+                                                in the sync.</li>
+                                            <li><strong>Exclude Unlicensed Users</strong>: Filters out users without any
+                                                license.</li>
+                                            <li><strong>Exclude Licensed Users</strong>: Excludes users with licensed or
+                                                free
+                                                license and a valid subscription.</li>
+                                            <li><strong>Exclude Free Licensed Users</strong>: Removes users who only
+                                                have a free
+                                                license.</li>
+                                            <li><strong>Exclude User by Department</strong>: Allows filtering users by
+                                                department.</li>
+                                            <li><strong>Exclude User by Location</strong>: Lets you exclude users based
+                                                on their
+                                                location.</li>
+                                            <li><strong>Exclude User by Title</strong>: Filters users by their job
+                                                title.</li>
+                                            <li><strong>Excluded Domain</strong>: Prevents users from specific domains
+                                                from
+                                                being included.</li>
+                                            <li><strong>Exclude Users by Name</strong>: Specific user names can be
+                                                excluded from
+                                                syncing.</li>
+                                            <div><img src="Settings.png" onclick="openModal('Settings.png')"
+                                                    alt="Update users role" width="100%" height="auto"></div><br>
+                                            <p>Then, click on the Configure button</p>
+                                            <div>
+                                                <img src="Configure.png" onclick="openModal('Configure.png')"
+                                                    alt="question" width="100%" height="auto">
+                                            </div> <br>
+
+
+                                            <p>Users can now rearrange the custom columns they have created in their
+                                                preferred order and save the changes.</p>
+                                            <div>
+                                                <img src="Save.png" onclick="openModal('Save.png')" alt="question"
+                                                    width="100%" height="auto">
+                                            </div> <br>
+
+                                            <div>
+                                                <img src="UserView.png" onclick="openModal('UserView.png')"
+                                                    alt="question" width="100%" height="auto">
+                                            </div> <br>
+                                            <li>
+
+                                                You can toggle the switch to "Off," and the active users will then
+                                                appear in
+                                                the inactive users tab.
+                                            </li><br>
+                                            <div>
+                                                <img src="6.png" onclick="openModal('6.png')" alt="question"
+                                                    width="100%" height="auto">
+                                            </div> <br>
+
+                                            <li>
+
+                                                In this Inactive Users tab, only users who are currently inactive will
+                                                be
+                                                displayed.
+                                            </li><br>
+                                            <div>
+                                                <img src="7.png" onclick="openModal('7.png')" alt="question"
+                                                    width="100%" height="auto">
+                                            </div> <br>
+                                </div>
+                                </ul> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- data end  -->
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="/LMS/modern/admin/setting/App-Users/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">App Users</span></a>
+                        <a class="nav nav-next" href="/LMS/modern/admin/setting/Features/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Features </span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+    <footer class="section pb-4">
+    <div class=container>
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-left text-center">
+          <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com />Apps365.</a><a
+              href="https://www.apps365.com/sla/">SLA.</a>
+            <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
+              href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
+              href=https://www.cubiclogics.com/privacy-policy />Privacy
+            Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-right text-center">
+          <ul class=list-inline>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.facebook.com/hr365apps/" aria-label=Facebook><i class=ti-facebook></i></a></li>
+            <li class=list-inline-item><a class="text-color d-inline-block p-2" href="https://twitter.com/Apps365_HRMS"
+                aria-label=Twitter><i class=ti-twitter-alt></i></a></li>
+
+            <li class=list-inline-item><a class="text-color d-inline-block p-2"
+                href="https://www.linkedin.com/company/cubic-logics-india-pvt-ltd" aria-label=Linkedin><i
+                  class=ti-linkedin></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../../../js/header-footer.js"></script>
+    <script src="../../../../../js/showhidefunction.js"></script>
+    <script src="/js/LMS-modern-admin.js"></script>
+    <script src="/js/plus-toggle.js"></script>
+</body>
+
+</html>
