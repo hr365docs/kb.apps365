@@ -78,124 +78,249 @@
         <div class=container>
             <div class=row>
                 <div class=col-12>
-                    <h2 class="section-title text-primary faqmbHeading"><a href="/Birthday-365/">Birthday 365</a></h2>
+                    <h2 class="section-title text-primary faqmbHeading"><a href="/Birthday-365/">Birthdays 365</a></h2>
                     <h3 class="section-title text-primary mbfaq">Frequently Asked Questions</h3>
                     <div id=accordion>
 
 
 
+                        <div class="card mb-4 rounded-0 shadow border-0">
+                            <div class="card-header rounded-0 bg-white border p-0 border-0" id="headingTwo">
+                                <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
+                                    data-bs-toggle="collapse" href="#searchable" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <span>How to make Birthday user profile property searchable in SharePoint People
+                                        Search</span>
+                                    <i class="ti-plus text-primary text-right"></i>
+                                </a>
+                            </div>
+                            <div id="searchable" class="collapse" data-parent="#accordion">
+                                <div class="card-body font-secondary text-color pt-0">
 
-                     <div class="card mb-4 rounded-0 shadow border-0">
-        <div class="card-header rounded-0 bg-white border p-0 border-0" id="headingTwo">
-            <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-bs-toggle="collapse" href="#custom-level-permissions" aria-expanded="false" aria-controls="collapseTwo">
-                <span>Custom level Permission</span>
-                <i class="ti-plus text-primary text-right"></i>
-            </a>
-        </div>
-        <div id="custom-level-permissions" class="collapse" data-parent="#accordion">
-            <div class="card-body font-secondary text-color pt-0">
-                <ol>
-                    <li>Open the site where the application is deployed and click on the settings icon located in the top right corner.</li>
-                    <div><img src="1.png" onclick="openModal('1.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
+                                    <p><b>Before We Begin</b></p>
+                                    <p>a) This configuration is applicable only to <b>Office 365 environments</b>.</p>
+                                    <p>b) The logged-in user must be a <b>SharePoint Administrator</b> to access the
+                                        SharePoint Admin Center.</p>
 
-                    <li>Select "Site permissions" and then click on "Advanced permissions settings."</li>
-                    <div><img src="2.png" onclick="openModal('2.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
+                                    <p><b>Prerequisite</b></p>
 
-                    <li>Choose "Permissions Levels" and click on "Add a permission level."</li>
-                    <div><img src="3.png" onclick="openModal('3.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
+                                    <p>
+                                        <b>Step 1) Access the SharePoint Admin Center</b><br>
+                                        Navigate to the <b>SharePoint Admin Center</b>.
+                                    </p>
+                                    <div><img src="admin.png" onclick="openModal( 'admin.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>Step 2) Configure the Birthday Property</b><br>
+                                        Use the SharePoint Admin Center to configure the Birthday property.
+                                    </p>
 
-                    <li>Click on “Add a Permission Level” and provide a name for the custom permissions.</li>
-                    <div><img src="4.png" onclick="openModal('4.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
+                                    <p>
+                                        <b><i>Info</i>:</b> The Birthday property exists by default, so there is no need
+                                        to create a new property.
+                                    </p>
 
-                    <li>Select "Add items," "Edit items," "Delete items," and "View items." Then, scroll down and click on "Create."</li>
-                    <div><img src="5.png" onclick="openModal('5.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
+                                    <p>
+                                        <b>a) Locate the People: SPS-Birthday Crawled Property</b><br>
+                                        From the SharePoint Admin Center, click <b>More features</b>, then select
+                                        <b>Open</b> under the
+                                        <b>Search</b> section.
+                                    </p>
+                                    <div><img src="more.png" onclick="openModal( 'more.png') " alt="Admin" width="100% "
+                                            height="auto "></div><br><br>
+                                    <p>
+                                        <b>b) Open Manage Search Schema</b><br>
+                                        Click <b>Manage Search Schema</b> to access the search property settings.
+                                    </p>
+                                    <div><img src="manage.png" onclick="openModal( 'manage.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>c) Switch to Crawled Properties</b><br>
+                                        Navigate to the <b>Crawled Properties</b> tab.
+                                    </p>
+                                    <div><img src="crawled.png" onclick="openModal( 'crawled.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>d) Select the Birthday Crawled Property</b><br>
+                                        From the list, locate <b>People: SPS-Birthday</b> and click it to open the menu.
+                                    </p>
+                                    <div><img src="birthday.png" onclick="openModal( 'birthday.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>e) Map to a Managed Property</b><br>
+                                        Map <b>People: SPS-Birthday</b> to a managed property by clicking <b>Add a
+                                            mapping</b> and selecting
+                                        the <b>RefinableDate00</b> managed property.
+                                    </p>
+                                    <div><img src="maping.png" onclick="openModal( 'maping.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>f) Verify the Mapping</b><br>
+                                        Locate the <b>RefinableDate</b> managed property where <b>People:
+                                            SPS-Birthday</b> is mapped.
+                                        The mapping should appear under the <b>Mapped crawled properties</b> section.
+                                        Click the property name to open its settings.
+                                    </p>
+                                    <div><img src="properties.png" onclick="openModal( 'properties.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b>g) Confirm Property Settings</b><br>
+                                        In the property settings, ensure that all required options are selected.
+                                    </p>
+                                    <div><img src="Refinable.png" onclick="openModal( 'Refinable.png') " alt="Admin"
+                                            width="100% " height="auto "></div><br><br>
+                                    <p>
+                                        <b><i>Info</i>:</b> Allow up to <b>24 hours</b> for the changes to reflect in
+                                        <b>People Search</b>.
+                                    </p>
 
-                    <li>Return to the previous page and create a group.</li>
-                    <div><img src="6.png" onclick="openModal('6.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
-
-                    <li>Enter the group's name and select the custom permission created in step 3. Click "create."</li>
-                    <div><img src="7.png" onclick="openModal('7.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
-
-                    <li>Once the group is created, add users to this group.</li><br>
-
-                    <li>Click on "New," and enter the names of the users who will access the application. You can also select "Everyone except external users" to grant access to all users automatically, reducing manual additions. You can also add any SharePoint groups directly if needed.</li>
-                    <div><img src="8.png" onclick="openModal('8.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
-
-                    <li>Use the "Check permissions" feature to verify the granted permissions, ensuring only the custom permission created in step 4 is assigned.</li>
-                    <div><img src="9.png" onclick="openModal('9.png')" alt="Birthday 365" width="100%" height="auto"></div><br>
-
-                    <li>Navigate to the pages, click on the "Share" button, and enter the name of the group created in step 5. Ensure that only view access is granted to the group.</li>
-                </ol>
-                <p>These steps will help you grant custom-level permissions efficiently.</p>
-            </div>
-        </div>
-    </div>
+                                </div>
 
 
-            <div class="card mb-4 rounded-0 shadow border-0">
-              <div class="card-header rounded-0 bg-white border p-0 border-0">
-                  <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
-                      data-bs-toggle=collapse href=#uninstall>
-                      <span>How to uninstall the app?</span> <i
-                          class="ti-plus text-primary text-right"></i>
-                  </a>
-              </div>
-              <div id=uninstall class=collapse data-parent=#accordion>
-                  <div class="card-body font-secondary text-color pt-0">
-                     <ol>
-  <li>
-    <strong>Remove the application from the App Catalog.</strong><br>
-    Go to your SharePoint App Catalog and locate the app package.  
-    Right-click the package and select <strong>Delete</strong> from the context menu, as shown in the image below.
-  </li><br>
-  <div>
-    <img src="remove.png" onclick="openModal('remove.png')" alt="Remove app package from App Catalog" width="100%" height="auto">
-  </div><br>
 
-  <li>
-    <strong>Remove the web part from the Site Page.</strong><br>
-    Navigate to the site where the app is added. Open the <strong>Pages</strong> library, find the corresponding page, and delete it using the <strong>Delete</strong> option from the menu, as illustrated below.
-  </li><br>
-  <div>
-    <img src="deploy.png" onclick="openModal('deploy.png')" alt="Remove web part page from Site Pages" width="100%" height="auto">
-  </div><br>
-</ol>
+                            </div>
+                        </div>
+                        <div class="card mb-4 rounded-0 shadow border-0">
 
-                  </div>
-              </div>
-          </div>
 
-           <div class="card mb-4 rounded-0 shadow border-0">
-              <div class="card-header rounded-0 bg-white border p-0 border-0">
-                  <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
-                      data-bs-toggle=collapse href=#more-questions>
-                      <span>More questions?</span> <i
-                          class="ti-plus text-primary text-right"></i>
-                  </a>
-              </div>
-              <div id=more-questions class=collapse data-parent=#accordion>
-                  <div class="card-body font-secondary text-color pt-0">
-          
-                        <p>Our team is here to support you 24/5. <a style="text-decoration: underline;" href="https://www.apps365.com/support/" target="_blank">Feel free to reach out</a>, we’re always happy to help!</p>
-            
-                  </div>
-              </div>
-            </div>            
-</div>
+                            <div class="card-header rounded-0 bg-white border p-0 border-0" id="headingTwo">
+                                <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
+                                    data-bs-toggle="collapse" href="#custom-level-permissions" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <span>Custom level Permission</span>
+                                    <i class="ti-plus text-primary text-right"></i>
+                                </a>
+                            </div>
+                            <div id="custom-level-permissions" class="collapse" data-parent="#accordion">
+                                <div class="card-body font-secondary text-color pt-0">
+                                    <ol>
+                                        <li>Open the site where the application is deployed and click on the settings
+                                            icon located in the top right corner.</li>
+                                        <div><img src="1.png" onclick="openModal('1.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
 
-</div>
+                                        <li>Select "Site permissions" and then click on "Advanced permissions settings."
+                                        </li>
+                                        <div><img src="2.png" onclick="openModal('2.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Choose "Permissions Levels" and click on "Add a permission level."</li>
+                                        <div><img src="3.png" onclick="openModal('3.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Click on “Add a Permission Level” and provide a name for the custom
+                                            permissions.</li>
+                                        <div><img src="4.png" onclick="openModal('4.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Select "Add items," "Edit items," "Delete items," and "View items." Then,
+                                            scroll down and click on "Create."</li>
+                                        <div><img src="5.png" onclick="openModal('5.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Return to the previous page and create a group.</li>
+                                        <div><img src="6.png" onclick="openModal('6.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Enter the group's name and select the custom permission created in step 3.
+                                            Click "create."</li>
+                                        <div><img src="7.png" onclick="openModal('7.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Once the group is created, add users to this group.</li><br>
+
+                                        <li>Click on "New," and enter the names of the users who will access the
+                                            application. You can also select "Everyone except external users" to grant
+                                            access to all users automatically, reducing manual additions. You can also
+                                            add any SharePoint groups directly if needed.</li>
+                                        <div><img src="8.png" onclick="openModal('8.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Use the "Check permissions" feature to verify the granted permissions,
+                                            ensuring only the custom permission created in step 4 is assigned.</li>
+                                        <div><img src="9.png" onclick="openModal('9.png')" alt="Birthdays 365"
+                                                width="100%" height="auto"></div><br>
+
+                                        <li>Navigate to the pages, click on the "Share" button, and enter the name of
+                                            the group created in step 5. Ensure that only view access is granted to the
+                                            group.</li>
+                                    </ol>
+                                    <p>These steps will help you grant custom-level permissions efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4 rounded-0 shadow border-0">
+                            <div class="card-header rounded-0 bg-white border p-0 border-0">
+                                <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
+                                    data-bs-toggle=collapse href=#uninstall>
+                                    <span>How to uninstall the app?</span> <i
+                                        class="ti-plus text-primary text-right"></i>
+                                </a>
+                            </div>
+                            <div id=uninstall class=collapse data-parent=#accordion>
+                                <div class="card-body font-secondary text-color pt-0">
+                                    <ol>
+                                        <li>
+                                            <strong>Remove the application from the App Catalog.</strong><br>
+                                            Go to your SharePoint App Catalog and locate the app package.
+                                            Right-click the package and select <strong>Delete</strong> from the context
+                                            menu, as shown in the image below.
+                                        </li><br>
+                                        <div>
+                                            <img src="remove.png" onclick="openModal('remove.png')"
+                                                alt="Remove app package from App Catalog" width="100%" height="auto">
+                                        </div><br>
+
+                                        <li>
+                                            <strong>Remove the web part from the Site Page.</strong><br>
+                                            Navigate to the site where the app is added. Open the <strong>Pages</strong>
+                                            library, find the corresponding page, and delete it using the
+                                            <strong>Delete</strong> option from the menu, as illustrated below.
+                                        </li><br>
+                                        <div>
+                                            <img src="deploy.png" onclick="openModal('deploy.png')"
+                                                alt="Remove web part page from Site Pages" width="100%" height="auto">
+                                        </div><br>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 rounded-0 shadow border-0">
+                            <div class="card-header rounded-0 bg-white border p-0 border-0">
+                                <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between"
+                                    data-bs-toggle=collapse href=#more-questions>
+                                    <span>More questions?</span> <i class="ti-plus text-primary text-right"></i>
+                                </a>
+                            </div>
+                            <div id=more-questions class=collapse data-parent=#accordion>
+                                <div class="card-body font-secondary text-color pt-0">
+
+                                    <p>Our team is here to support you 24/5. <a style="text-decoration: underline;"
+                                            href="https://www.hr365.us/support/" target="_blank">Feel free to reach
+                                            out</a>, we’re always happy to help!</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
 
     </section>
     <footer class="section pb-4">
         <div class=container>
             <div class="row align-items-center">
                 <div class="col-md-8 text-md-left text-center">
-                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com/>Apps365.</a> <a
+                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com />Apps365.</a> <a
                             href="https://www.apps365.com/sla/">SLA.</a> <a
                             href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
                             href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a>
-                        <a
-                            href=https://www.cubiclogics.com/privacy-policy/>Privacy
+                        <a href=https://www.cubiclogics.com/privacy-policy />Privacy
                         Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
                     </p>
                 </div>
@@ -220,7 +345,8 @@
         </div>
     </footer>
     <script src="/js/script.min.js"></script>
- <script src="/js/plus-toggle.js"></script></body>
+    <script src="/js/plus-toggle.js"></script>
+</body>
 <script src="../../../js/header-footer.js">
 
 </script>
