@@ -1,150 +1,155 @@
 
 document.querySelectorAll("head link")[2].href = window.location.origin + "/images/headericon.png.ico";
 window.addEventListener("DOMContentLoaded", () => {
-    const hash = window.location.hash;
- 
-    if (hash) {
-      const target = document.querySelector(hash);
+  const hash = window.location.hash;
+
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      // Open the collapse (if using Bootstrap)
+      const collapse = new bootstrap.Collapse(target, {
+        toggle: true
+      });
+
+      // Scroll after a short delay
+      setTimeout(() => {
+        const yOffset = -100;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }, 300); // delay allows time for collapse to expand
+    }
+  }
+});
+
+
+document.querySelectorAll('.card-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+
+    if (href.startsWith('#')) {
+      e.preventDefault(); // prevent default anchor behavior
+      const target = document.querySelector(href);
+
       if (target) {
-        // Open the collapse (if using Bootstrap)
+        // Show the collapse (manually trigger Bootstrap collapse if not using data-toggle)
         const collapse = new bootstrap.Collapse(target, {
           toggle: true
         });
- 
-        // Scroll after a short delay
+
+        // Update URL hash without reloading
+        history.replaceState(null, null, href);
+
+        // Scroll to the target 100px above
+        const yOffset = -100;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
         setTimeout(() => {
-          const yOffset = -100;
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }, 300); // delay allows time for collapse to expand
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }, 300); // small delay to allow collapse animation to kick in
       }
     }
   });
- 
- 
-document.querySelectorAll('.card-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
- 
-      if (href.startsWith('#')) {
-        e.preventDefault(); // prevent default anchor behavior
-        const target = document.querySelector(href);
- 
-        if (target) {
-          // Show the collapse (manually trigger Bootstrap collapse if not using data-toggle)
-          const collapse = new bootstrap.Collapse(target, {
-            toggle: true
-          });
- 
-          // Update URL hash without reloading
-          history.replaceState(null, null, href);
- 
-          // Scroll to the target 100px above
-          const yOffset = -100;
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
- 
-          setTimeout(() => {
-            window.scrollTo({ top: y, behavior: 'smooth' });
-          }, 300); // small delay to allow collapse animation to kick in
-        }
-      }
-    });
-  });
-$(document).ready(function() {
-    document.getElementsByName("description")[0].content = document.title;
+});
+$(document).ready(function () {
+  document.getElementsByName("description")[0].content = document.title;
 
-    $(".common-header").html(
-        `<ul class='navbar-nav ml-auto headerstyle'>` +
-            `<li class='nav-item dropdown'>` +
-                `<a class='nav-link dropdown-toggle text-dark' href='#' id='hr365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Apps365</a>` +
-                `<div class='dropdown-menu' aria-labelledby='hr365Dropdown'>` +
-                `<a class='dropdown-item onboardinglink' href='/HRMS-HR365'>HRMS-HR365</a>` +
-                `<a class='dropdown-item onboardinglink' href='/sharepoint-employee-onboarding/'>Employee Onboarding 365</a>` +
-   
-                `<a class='dropdown-item employeedirectorylink' href='/sharepoint-employee-directory/'>Employee Directory 365</a>` +
+  $(".common-header").html(
+    `<ul class='navbar-nav ml-auto headerstyle'>` +
+    `<li class='nav-item dropdown'>` +
+    `<a class='nav-link dropdown-toggle text-dark' href='#' id='hr365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>HR365</a>` +
+    `<div class='dropdown-menu' aria-labelledby='hr365Dropdown'>` +
+    `<a class='dropdown-item onboardinglink' href='/HRMS-HR365'>HRMS-HR365</a>` +
+    `<a class='dropdown-item onboardinglink' href='/sharepoint-employee-onboarding/'>Employee Onboarding 365</a>` +
 
-                `<a class='dropdown-item performancelink' href='/employee-performance-management/'>Performance Management 365</a>` +
+    `<a class='dropdown-item employeedirectorylink' href='/sharepoint-employee-directory/'>Employee Directory 365</a>` +
 
-                `<a class='dropdown-item performancelink' href='/employee-vacation-tracker-time-off-manager/'>Time Off Manager 365</a>` +
+    `<a class='dropdown-item performancelink' href='/employee-performance-management/'>Performance Management 365</a>` +
 
-                `<a class='dropdown-item performancelink' href='/RM365/'>Recruitment Management 365</a>` +
+    `<a class='dropdown-item performancelink' href='/employee-vacation-tracker-time-off-manager/'>Time Off Manager 365</a>` +
 
-                `<a class='dropdown-item performancelink' href='/Expense-tracker/'>Expense 365</a>` +
- 
-                `</div>` +
+    `<a class='dropdown-item performancelink' href='/RM365/'>Recruitment Management 365</a>` +
+
+    `<a class='dropdown-item performancelink' href='/Expense-tracker/'>Expense 365</a>` +
+
+    `</div>` +
 
 
-            `</li>` +
-            `<li class='nav-item dropdown'>` +
-                `<a class='nav-link dropdown-toggle text-dark' href='#' id='bizapp365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Business Apps</a>` +
+    `</li>` +
+    `<li class='nav-item dropdown'>` +
+    `<a class='nav-link dropdown-toggle text-dark' href='#' id='bizapp365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Business Apps</a>` +
 
-                `<div class='dropdown-menu' aria-labelledby='bizapp365Dropdown'>` +
- 
-                `<a class='dropdown-item helpdesklink' href='/sharepoint-helpdesk/'>Helpdesk 365</a>` +
+    `<div class='dropdown-menu' aria-labelledby='bizapp365Dropdown'>` +
 
-                `<a class='dropdown-item assetmanagementlink' href='/online-asset-management-application/'>Asset 365</a>` +
+    `<a class='dropdown-item helpdesklink' href='/sharepoint-helpdesk/'>Helpdesk 365</a>` +
 
-                `<a class='dropdown-item contractlink' href='/contract-management/'>CLM 365</a>` +
+    `<a class='dropdown-item assetmanagementlink' href='/online-asset-management-application/'>Asset 365</a>` +
 
-
-                `<a class='dropdown-item timesheetlink' href='/online-timesheet-software/'>Timesheet 365</a>` +
-
-                `<a class='dropdown-item revenuelink' href='/Revenue365/'>Revenue 365</a>` +
-                // `<a class='dropdown-item revenuelink' href='/Stock365/'>Stock 365</a>` +
-                `<a class='dropdown-item tasklink' href='/task-management-365/'>Task 365</a>` +
-               
-                `</div>` +
+    `<a class='dropdown-item contractlink' href='/contract-management/'>CLM 365</a>` +
 
 
-            `</li>` +
-            `<li class='nav-item dropdown'>` +
-                `<a class='nav-link dropdown-toggle text-dark' href='#' id='civic365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Gov365</a>` +
-                `<div class='dropdown-menu' aria-labelledby='civic365Dropdown'>` +
-                
-                `<a class='dropdown-item Civic365link' href='/Civic365/'>Civic 365</a>` +
+    `<a class='dropdown-item timesheetlink' href='/online-timesheet-software/'>Timesheet 365</a>` +
+
+    `<a class='dropdown-item revenuelink' href='/Revenue365/'>Revenue 365</a>` +
+    // `<a class='dropdown-item revenuelink' href='/Stock365/'>Stock 365</a>` +
+    `<a class='dropdown-item tasklink' href='/task-management-365/'>Task 365</a>` +
+
+    `</div>` +
 
 
-                `</div>` +
-            `</li>` +
-             `<li class='nav-item dropdown'>` +
-        `<a class='nav-link dropdown-toggle text-dark' href='#' id='webpartDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>SharePoint Add-ins</a>` +
-        `<div class='dropdown-menu' aria-labelledby='webpartDropdown'>` +
-         `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
-         `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
-         `<a class='dropdown-item stocklink' href='/Expense-365/'>Expense 365 Lite </a>` +
-          `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
-           `<a class='dropdown-item stocklink' href='/Gauge365/'>Gauge 365</a>` +
-            `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
-             `<a class='dropdown-item stocklink' href='/VisitorLogs-365/'>Visitor Logs 365</a>` +
-        `</div>` +
-        `</li>` +
+    `</li>` +
+    `<li class='nav-item dropdown'>` +
+    `<a class='nav-link dropdown-toggle text-dark' href='#' id='civic365Dropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Gov365</a>` +
+    `<div class='dropdown-menu' aria-labelledby='civic365Dropdown'>` +
 
-        `</ul>`
-    );
+    `<a class='dropdown-item Civic365link' href='/Civic365/'>Civic 365</a>` +
+
+
+    `</div>` +
+    `</li>` +
+    `<li class='nav-item dropdown'>` +
+    `<a class='nav-link dropdown-toggle text-dark' href='#' id='webpartDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>SharePoint Add-ins</a>` +
+    `<div class='dropdown-menu newWebparts' aria-labelledby='webpartDropdown'>` +
+    `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
+    `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Expense-365/'>Expense 365 Lite </a>` +
+    `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Gauge365/'>Gauge 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
+    `<a class='dropdown-item stocklink' href='/VisitorLogs-365/'>Visitor Logs 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Accordion-365/'>Accordion 365</a>` +
+    `<a class='dropdown-item stocklink' href='/NoticeBoard-365/'>NoticeBoard 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Birthday-365/'>Birthdays 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Anniversary-365/'>Anniversary 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Survey-365/'>Survey 365</a>` +
+    `</div>` +
+    `</li>` +
+
+    `</ul>`
+  );
 });
 
 window.addEventListener("load", () => {
-    let headerItems = document.querySelectorAll(".navbar-nav .nav-item a")
-    for (let i = 0; i < headerItems.length; i++) {
-        if (window.location.pathname.split('/')[1] == headerItems[i].pathname.split('/')[1]) {
-            if(document.querySelector("header.shadow-bottom.sticky-top.bg-white")){
-               
-            }
-            else{
-                headerItems[i].classList.add("active")
-            }
-        }
+  let headerItems = document.querySelectorAll(".navbar-nav .nav-item a")
+  for (let i = 0; i < headerItems.length; i++) {
+    if (window.location.pathname.split('/')[1] == headerItems[i].pathname.split('/')[1]) {
+      if (document.querySelector("header.shadow-bottom.sticky-top.bg-white")) {
+
+      }
+      else {
+        headerItems[i].classList.add("active")
+      }
     }
+  }
 });
 // Mark submenu link as active (purple) based on current path
 window.addEventListener("load", () => {
-    const currentPath = window.location.pathname.split('/')[1];
-    document.querySelectorAll(".dropdown-menu .dropdown-item").forEach(item => {
-        const itemPath = item.getAttribute("href").split('/')[1];
-        if (itemPath === currentPath) {
-            item.classList.add("active-submenu");
-        }
-    });
+  const currentPath = window.location.pathname.split('/')[1];
+  document.querySelectorAll(".dropdown-menu .dropdown-item").forEach(item => {
+    const itemPath = item.getAttribute("href").split('/')[1];
+    if (itemPath === currentPath) {
+      item.classList.add("active-submenu");
+    }
+  });
 });
 
 // Inject required styles
@@ -172,6 +177,11 @@ style.innerHTML = `
     text-decoration: none !important;
     border: none !important;
   }
+    .newWebparts{
+      position: absolute;
+        max-height: 25vw !important;
+        overflow: auto !important;
+    }
 
   .active-submenu {
     color: var(--primary-color)!important;

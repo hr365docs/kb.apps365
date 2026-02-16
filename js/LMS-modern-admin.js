@@ -7,6 +7,11 @@ $(document).ready(function () {
     "Introduction" +
     "</a>" +
     "</li>" +
+  "<li data-nav-id='./Settings/' title='Introduction' class='sidelist'>" +
+      "<a href='/LMS/modern/admin/architecture-diagram/'>" +
+      "Architecture Diagram" +
+      "</a>" +
+      "</li>" +
 
     "<li data-nav-id='./Settings/' title='Home Page' class='sidelist'>" +
     "<a href='/LMS/modern/admin/home/'>" +
