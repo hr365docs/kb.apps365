@@ -103,337 +103,500 @@
                         <div class="bg-light p-4 remove-padding">
                             <!-- <ul class=page-list> -->
 
-                            <ul class=page-list>
-                                <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Home Page
-                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
-                                </h2>
-                                In home page, you have data of Unassigned, Teams Tickets, Teams Closed, Ticket Mailbox,
-                                My Tickets, Requested by Me, and My Closed tickets.
-                                <br><br>
-                                <p>There are Three options in Home Page to display the tickets </p>
+                            <div class="bg-light p-4 remove-padding common-scroll" id="home-page">
+                                <ul class="page-list">
 
-                                <ol type="I">
+                                    <h2 id="home-overview">
+                                        <a class="header-icon-link highlight" href="#">Home Page
+                                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                        </a>
+                                    </h2>
 
-                                    <li>Classic View</li>
-                                    <li>Kanban View</li>
-                                    <li>Modern View</li>
-                                </ol>
-                                <br>
-                                <div><img src="ViewList.png" onclick="openModal('ViewList.png')" alt="View" width="100%"
-                                        height="auto"></div>
-                                <br>
-                                <h4>Classic view</h4>
-                                <ul style="list-style-type:disc">
-                                    <li>Tickets will be highlighted with the different colours on the basis of ticket
-                                        Priority</li>
-
-                                    <li>Bell icon notification for unread tickets on the home page.</li>
-                                </ul>
-                                <br>
-                                <div><img src="tableview.png" onclick="openModal('tableview.png')" alt="View"
-                                        width="100%" height="auto"></div>
-                                <br>
-                                <h4>Kanban view</h4>
-                                <br>
-                                <!-- <p>On click of this icon kanban view will be opened</p>
-                                <div><img src="kanbanview.png" onclick="openModal('kanbanview.png')" alt="Home kanban"
-                                        width="100%" height="auto"></div>
-                                <br> -->
-
-                                <p>You can drag and drop tickets to change the status of ticket in kanban view</p>
-
-                                <div><img src="Kanban.png" onclick="openModal('Kanban.png')" alt="Home kanban"
-                                        width="100%" height="auto"></div>
-                                <br>
-
-
-                            </ul>
-                            <h4>Modern View.</h4>
-                            <div><img src="modernview.png" onclick="openModal('modernview.png')" alt="Modern View"
-                                    width="100%" height="auto"></div> <br>
-                            <br>
-                            <h4>Sort</h4>
-                            <p>Click on this button to sort data by various fields such as Teams, Services, Request
-                                Type, and more in ascending or descending order.</p>
-                            <div><img src="sorting.png" onclick="openModal('sorting.png')" alt="sorting" width="100%"
-                                    height="auto"></div> <br>
-                            <br>
-                            <p>Sorting options include Teams, Services, Sub Services, Request Type, Priority, and more,
-                                with both ascending and descending order controls.</p>
-                            <div><img src="Sort.png" onclick="openModal('Sort.png')" alt="sorting" width="100%"
-                                    height="auto"></div> <br>
-                            <br>
-
-                            <h4>Ticket Creation</h4>
-
-                            <p>From here, users can raise tickets for any service. To raise tickets, follow the below
-                                steps:</p>
-
-                            <li>Click on the <b>+ New ticket </b> on the Home page, this displays the new ticket page.
-                            </li>
-                            <br>
-                            <div><img src="NewTicket.png" onclick="openModal('NewTicket.png')" alt="Add Ticket"
-                                    width="100%" height="auto"></div>
-                            <br>
-                            <p>To create a new ticket, select the relevant fields such as Title, Teams, Services,
-                                Priority Type, and Request Type. Add a description of the issue, CC users if needed, and
-                                choose the media of communication before submitting the ticket.</p>
-                            <div><img src="Form.png" onclick="openModal('Form.png')" alt="Add Ticket" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <li>When the toggle is turned is on this is how you view the ticket form</li>
-                            <br>
-                            <div><img src="Teams.png" onclick="openModal('Teams.png')" alt="Add Ticket" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <li>When the toggle is turned off, selecting teams in the new ticket panel is no longer
-                                required. The teams will be auto-generated based on the selected services and
-                                subservices.</li>
-                            <br>
-                            <div><img src="Form.png" onclick="openModal('Form.png')" alt="Add Ticket" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <p>To create a new ticket, select the relevant fields such as Title, Teams, Services,
-                                Priority Type, and Request Type. Add a description of the issue, CC users if needed, and
-                                choose the media of communication before submitting the ticket.</p>
-                            <div><img src="helpd.png" onclick="openModal('helpd.png')" alt="Add Ticket" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <h5>Drag and Drop</h5>
-                            <p>User can attach the file(s) with the help of Drag and Drop feature</p>
-                            <div><img src="dragDrop.png" onclick="openModal('dragDrop.png')" alt="Drag Drop"
-                                    width="100%" height="auto"></div>
-                            <br>
-
-                            <h4>Custom Views</h4>
-
-                            <p>Open the select box add the custom view</p>
-
-                            <div><img src="forGoView.png" onclick="openModal('forGoView.png')" alt="Custom View"
-                                    width="100%" height="auto"></div>
-                            <br>
-                            <p>Select the <b>Configure view</b> option</p>
-
-                            <div><img src="conf.png" onclick="openModal('conf.png')" alt="Custom View" width="100%"
-                                    height="auto"></div>
-                            <br>
-
-                            <p>Now click on Add button</p>
-
-                            <div><img src="customAdd.png" onclick="openModal('customAdd.png')" alt="Custom View"
-                                    width="100%" height="auto"></div>
-                            <br>
-
-                            <p>The admin can create different views of the tabs and tables of the home page.</p>
-
-                            <div><img src="createView.png" onclick="openModal('createView.png')" alt="Create View"
-                                    width="100%" height="auto"></div>
-                            <br>
-                            <p>When a user configures a view, they can share it on the same site. The shared view will
-                                only be visible to the selected user. To share, the user needs to click the Share icon
-                                and then select the user with whom they want to share the view.</p>
-
-                            <div><img src="Configure-custom-view.png" onclick="openModal('Configure-custom-view.png')"
-                                    alt="Create View" width="100%" height="auto"></div>
-                            <br>
-                            <div><img src="Share.png" onclick="openModal('Share.png')" alt="Create View" width="100%"
-                                    height="auto"></div>
-                            <br>
-
-                            <h4>Assign tickets and update status from the home page.</h4>
-
-                            <p>Click on Status dropdown and select one option</p>
-                            <div><img src="statusUpdatehom.png" onclick="openModal('statusUpdatehom.png')"
-                                    alt="Create View" width="100%" height="auto"></div>
-                            <br>
-                            <p>Fill the required fields. then click on submit button</p>
-                            <div><img src="submithm.png" onclick="openModal('submithm.png')" alt="Create View"
-                                    width="100%" height="auto"></div>
-                            <br>
-
-                            <h4>Bulk Assign ticket</h4>
-                            <br>
-                            <p>
-                                In the 'Unassigned' tab, users can now streamline ticket management by selecting
-                                multiple unassigned tickets for bulk updates. This enhancement enables users to
-                                designate a team, assign a specific user, modify the ticket status (e.g., 'Resolved'),
-                                and finalize changes with a single 'Update' action.</p>
-                            <div><img src="UnAssignTicket.png" onclick="openModal('UnAssignTicket.png')"
-                                    alt="Create View" width="100%" height="auto"></div>
-                            <br>
-                            <p>Users can now efficiently update the status, team, and assignee for all unassigned
-                                tickets by utilizing the multi-select option.</p>
-                            <div><img src="MultipleSelect.png" onclick="openModal('MultipleSelect.png')"
-                                    alt="Create View" width="100%" height="auto"></div>
-                            <br>
-
-                            <br>
-
-                            <h4>Close ticket on behalf of ticket owner.</h4>
-                            <p>Click on Status dropdown and select close option</p>
-                            <div><img src="close.png" onclick="openModal('close.png')" alt="Create View" width="100%"
-                                    height="auto"></div> <br>
-                            <p>Choose "Close the ticket on behalf of the ticket owner" and then proceed to click the
-                                "Submit" button. </p>
-                            <div><img src="closed.png" onclick="openModal('closed.png')" alt="Create View" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <p>A new text field has been added alongside the ticket counts on the homepage, allowing
-                                users to input or view relevant information directly from the dashboard.</p>
-                            <div><img src="home.png" onclick="openModal('home.png')" alt="Create View" width="100%"
-                                    height="auto"></div>
-                            <br>
-                            <p>In this new field, you can search for tickets by either the ticket title or ticket ID.
-                                The search results will dynamically appear as you type, allowing you to quickly find the
-                                relevant tickets.
-
-                            </p>
-                            <div><img src="Searching.png" onclick="openModal('Searching.png')" alt="Create View"
-                                    width="100%" height="auto"></div>
-                            <br>
-                            <p>When you click on "All Tickets", a window will open displaying all the tickets matching
-                                your search criteria.
-                                <br>
-                                Clicking on any ticket from the list will take you directly to that ticket’s comment
-                                page.
-
-                            </p>
-                            <div><img src="SR.png" onclick="openModal('SR.png')" alt="Create View"
-                                    width="100%" height="auto"></div>
-                            <br>
-
-                            <br>
-
-                        </div>
-
-                        <!-- <div class="bg-light p-4 remove-padding common-scroll" id="kanban-view">
-                            <li data-nav-id=../Getting-started/installation/using-app-file title='Kanban View'
-                                class="sidelist">
-                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Kanban View<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-
-
-                                <p> To create new tickets in kanbal view, follow the below steps:</p>
-
-                                <ol>
-                                    <div><img src="Kanban_view.png" onclick="openModal('Kanban_view.png')" alt="Kanban view" width="100%"
-                                            height="auto"></div><br>
-                                    <li>
-                                        Go to home page and select <b>kanban</b> view.
-                                    </li>
-
-                                    <li>
-                                        Click on <b>+New Ticket</b>, this displays <b>New Ticket</b> page.
-
-                                    </li>
-
-                                    <li>
-                                        Enter <b>Title</b>, <b>Priority</b>, <b>Request type</b>, <b>Teams</b>,
-                                        <b>service</b>, <b>Requester</b> and <b>Ticket Discription.</b>
-
-                                    </li>
-                                    <li>Can also copy-paste screenshots in the ticket description.</li>
-
-                                    <li>
-                                        Click the <b>Submit</b> button.
-                                    </li>
-                                </ol>
-
-                                <p> To assign tickets in kanbal view, follow the below steps:</p>
-
-                                <ol>
-                                    <div><img src="assign_to_sub.png" onclick="openModal('assign_to_sub.png')" alt="Assign tickets" width="100%"
-                                            height="auto"></div><br>
+                                    <p>The Home Page in <b>Helpdesk 365</b> serves as the central hub for managing and
+                                        tracking tickets. It offers multiple ways to view, filter, and interact with
+                                        tickets, allowing users, agents, and team leads to monitor ongoing work
+                                        efficiently. The interface includes top-level ticket categories, powerful search
+                                        capabilities, and multiple view modes to streamline ticket management.</p>
                                     <br>
-                                    <li>
-                                        Drag the ticket from <b>Unassigned</b> column and drop it in <b>Teams
-                                            Tickets</b> column, this displays <b>Assign to</b> pop-up.
-                                    </li>
-                                    <li>
-                                        Select the <b>Teams</b>, <b>Assigned to</b> and <b>Status</b>.
-                                    </li>
-                                    <li>
-                                        Click the <b>Submit</b> button.
-                                    </li>
-                                </ol>
+                                    <div>
+                                        <img src="1.png" onclick="openModal('1.png')" alt="Home Page Tabs" width="100%"
+                                            height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <!-- TOP TABS EXPLANATION -->
+                                    <h4 id="top-tabs">Ticket Navigation Tabs</h4>
+
+                                    <p>At the top of the Home Page, users can quickly navigate between key categories of
+                                        tickets. These tabs display real-time ticket counts and act as filters to
+                                        instantly update the view.</p>
+
+
+                                    <li><b>Unassigned</b> – Displays all tickets that have not yet been assigned to any
+                                        team or agent.</li><br>
+                                    <div>
+                                        <img src="1a.png" onclick="openModal('1a.png')" alt="Home Page Tabs"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+                                    <li><b>Team Tickets</b> – Shows tickets assigned to your team, enabling team leads
+                                        to monitor workloads.</li><br>
+                                    <div>
+                                        <img src="1b.png" onclick="openModal('1b.png')" alt="Home Page Tabs"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+                                    <li><b>My Tickets</b> – Lists tickets assigned specifically to the logged-in agent
+                                        for quick task tracking.</li><br>
+                                    <div>
+                                        <img src="1c.png" onclick="openModal('1c.png')" alt="Home Page Tabs"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+                                    <li><b>My Requests</b> – Shows tickets raised by the logged-in user, helping them
+                                        track progress and updates.</li><br>
+                                    <div>
+                                        <img src="1d.png" onclick="openModal('1d.png')" alt="Home Page Tabs"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+                                    <p>The Ticket Status Tabs allow users to quickly switch between tickets based on
+                                        their current progress stage. These tabs act as instant filters that update the
+                                        ticket list in real time, enabling faster navigation and efficient ticket
+                                        monitoring.</p>
+
+
+
+                                    <li><b>Open</b> – Displays all active tickets that are currently in progress or
+                                        awaiting action. These tickets require attention from the support team.</li><br>
+
+                                    <div>
+                                        <img src="4a.png" onclick="openModal('4a.png')" alt="Open Tickets Tab"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+
+                                    <li><b>Resolved</b> – Shows tickets that have been marked as resolved by the support
+                                        team. The issue has been addressed, and the ticket awaits requester confirmation
+                                        or closure.</li><br>
+
+                                    <div>
+                                        <img src="4b.png" onclick="openModal('4b.png')" alt="Resolved Tickets Tab"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+
+                                    <li><b>Closed</b> – Displays tickets that have been fully completed and officially
+                                        closed. No further action is required on these tickets.</li><br>
+
+                                    <div>
+                                        <img src="4c.png" onclick="openModal('4c.png')" alt="Closed Tickets Tab"
+                                            width="100%" height="auto">
+                                    </div>
+
+
+
+                                    <br><br>
+                                    <h4 id="custom-views">Custom Views</h4>
+
+                                    <p>The Custom Views feature allows users to create personalized ticket layouts based
+                                        on their preferred columns, filters, and view types. These views help streamline
+                                        workflows by displaying only the most relevant ticket information.</p>
+
+                                    <ol>
+                                        <li>
+                                            <p>Open the <b>Select View</b> dropdown from the Home Page.</p>
+                                        </li>
+
+                                        <li>
+                                            <p>Select <b>Configure View</b> to open the Custom View panel.</p>
+                                        </li>
+                                        <div>
+                                            <img src="3.png" onclick="openModal('3.png')" alt="Create Custom View"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <li>
+                                            <p>Click the <b>+ Add</b> button to create a new custom view.</p>
+                                        </li>
+                                        <div>
+                                            <img src="3b.png" onclick="openModal('3b.png')" alt="Create Custom View"
+                                                width="100%" height="auto">
+                                        </div>
+                                    </ol>
+
+
+                                    <br>
+
+                                    <h5><b>Create & Customize a View</b></h5>
+                                    <p>Users can customize their view by selecting the desired options:</p>
+
+                                    <ul style="list-style-type:disc">
+                                        <li><b>Custom View Title</b> – Name your view for easy identification.</li>
+                                        <li><b>View Type</b> – Choose between <b>Modern View</b> or <b>Classic View</b>.
+                                        </li>
+                                        <li><b>Add Filters</b> – Apply filters such as Priority, Status, Teams,
+                                            Services, etc.</li>
+                                        <li><b>Select Tabs</b> – Choose which tabs (Unassigned, Teams Tickets, My
+                                            Tickets, My Requests) should appear in the view.</li>
+                                        <li><b>Customize Columns</b> – Arrange and select columns for each chosen tab.
+                                        </li>
+                                    </ul><br>
+
+                                    <p>After configuring the layout and filters, click the <b>Save</b> button to store
+                                        the custom view. The saved view will now appear in the View dropdown list for
+                                        quick access.</p>
+                                    <div>
+                                        <img src="3c.png" onclick="openModal('3c.png')" alt="Customize View"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+
+                                    <h5><b>Share Custom Views</b></h5>
+                                    <p>Users can share their custom-created views with specific team members using the
+                                        <b>Share</b> option.
+                                    </p>
+
+
+
+                                    <div>
+                                        <img src="3d.png" onclick="openModal('3d.png')" alt="Share View" width="100%"
+                                            height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <!-- CREATE TICKET -->
+                                    <h4 id="ticket-creation">Ticket Creation</h4>
+
+                                    <p>Users can create new tickets directly from the Home Page using the <b>+
+                                            Ticket</b> button. This allows them to report issues, request services, or
+                                        raise inquiries quickly and efficiently.</p>
+
+                                    <ol>
+                                        <li>
+                                            <p>Click the <b>+ New Ticket</b> button to open the ticket creation form.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Enter the required details such as <b>Title</b>, <b>Teams</b>,
+                                                <b>Services</b>, <b>Sub Services</b>, <b>Priority</b>, <b>Request
+                                                    Type</b>, and a clear <b>Description</b> of the issue.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>If enabled, the system can automatically assign Teams based on selected
+                                                Services and Sub Services.</p>
+                                        </li>
+                                        <li>
+                                            <p>Users may also add CC recipients and choose the preferred communication
+                                                method if applicable.</p>
+                                        </li>
+                                    </ol>
+
+                                    <div>
+                                        <img src="NewTicket.png" onclick="openModal('NewTicket.png')" alt="New Ticket"
+                                            width="100%" height="auto">
+                                    </div><br>
+
+                                    <div>
+                                        <img src="ticketCreate1.png" onclick="openModal('ticketCreate1.png')"
+                                            alt="Ticket Form" width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+
+
+                                    <ol start="4">
+                                        <li>Users can attach supporting documents, screenshots, or files using the
+                                            drag-and-drop feature. Simply drag files into the attachment area or use the
+                                            upload option provided in the ticket form.</li>
+                                    </ol><br>
+                                    <div>
+                                        <img src="dragDrop.png" onclick="openModal('dragDrop.png')" alt="Drag & Drop"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br>
+
+                                    <ol start="5">
+                                        <li>
+                                            <p>After reviewing the details, click <b>Submit</b> to create the ticket.
+                                            </p>
+                                        </li>
+                                    </ol>
+
+                                    <div>
+                                        <img src="save.png" onclick="openModal('save.png')" alt="Submit Ticket"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+
+
+                                    <!-- SEARCH -->
 
 
 
 
+                                    <h4 id="search-filter">Search and Filters</h4>
 
+                                    <p>The Global Search allows users to quickly locate tickets across the entire
+                                        Helpdesk 365 system. To use this feature, first select a search category such as
+                                        <b>Ticket ID</b>, <b>Assigned To</b>, or <b>Requested By</b>. Once a category is
+                                        selected, the system will search through all matching records and display the
+                                        results instantly based on the selected field.
+                                    </p>
+                                    <div>
+                                        <img src="search3.png" onclick="openModal('search3.png')" alt="Search Bar"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+
+                                    <p>The date range dropdown allows users to quickly filter tickets based on
+                                        predefined time periods. By selecting an option such as <b>Current Month</b>,
+                                        <b>Current Quarter</b>, <b>Last Month</b>, <b>Last Two Months</b>, or <b>Last
+                                            Three Months</b>, the ticket list automatically updates to display only the
+                                        records created within the chosen timeframe. This helps users easily review and
+                                        analyze tickets for specific reporting periods without manually entering dates.
+                                    </p><br>
+
+                                    <div>
+                                        <img src="dateRange.png" onclick="openModal('dateRange.png')"
+                                            alt="Date Range Filter" width="100%" height="auto">
+                                    </div><br>
+
+
+
+                                    <p><b>Search Bar:</b> Users can click the search icon to open a search field where
+                                        they can instantly look up tickets by entering keywords such as Ticket ID,
+                                        Title, Status, Priority, or any related text. As the user types, the ticket list
+                                        dynamically updates to display only the matching results.</p>
+                                    <div>
+                                        <img src="search2.png" onclick="openModal('search2.png')" alt="Search Bar"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <img src="search1.png" onclick="openModal('search1.png')" alt="Search Bar"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+
+                                    <p><b>Advanced Filter Panel:</b> By selecting the filter icon, users can apply
+                                        detailed filters including date range, teams, services, sub-services, request
+                                        type, priority, status, and assigned agent. After choosing the desired criteria,
+                                        users can click <b>Apply Filter(s)</b> to narrow the results or use <b>Clear
+                                            Filter(s)</b> to reset all selections.</p>
+
+                                    <div>
+                                        <img src="search.png" onclick="openModal('search.png')" alt="Filter Panel"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+                                    <!-- SORTING -->
+                                    <h4 id="sort-feature">Sorting Tickets</h4>
+
+                                    <p>Users can sort tickets based on fields like Teams, Services, Sub Services,
+                                        Priority, Request Type, and more.</p>
+
+                                    <div>
+                                        <img src="sorting.png" onclick="openModal('sorting.png')" alt="Sorting"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <p>Advanced sorting options allow ordering results in ascending or descending order.
+                                    </p>
+
+                                    <div>
+                                        <img src="Sort.png" onclick="openModal('Sort.png')" alt="Sorting Options"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+                                    <h2 id="view-modes"><a class="header-icon-link highlight" href="#view-modes">View
+                                            Modes
+                                            <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h2>
+
+                                    <p>The Helpdesk 365 Home Page provides three different viewing modes—Classic View,
+                                        Kanban View, and Modern View. Each mode offers a unique way to visualize and
+                                        manage tickets, allowing users to choose the layout that best suits their
+                                        workflow. These views can be switched anytime from the view selection menu.</p>
+
+
+                                    <ol>
+                                        <li><a href="#classic-view">Classic View</a></li>
+                                        <li><a href="#kanban-view">Kanban View</a></li>
+                                        <li><a href="#modern-view">Modern View</a></li>
+                                    </ol>
+                                    <br>
+                                    <!-- VIEW MODES -->
+
+                                    <h4 id="classic-view">Classic View</h4>
+
+                                    <p>Classic View displays tickets in a structured table format, making it easy to
+                                        compare and scan ticket details at a glance. It includes sortable columns such
+                                        as Ticket ID, Title, Status, Priority, Services, Sub Services, Assigned To, and
+                                        Created Date. Users can sort any column in ascending or descending order for
+                                        quick analysis.</p>
+
+                                    <ul style="list-style-type:disc">
+                                        <li>Provides a familiar spreadsheet-style layout for clear ticket overview.</li>
+                                        <li>Supports column sorting and filtering directly within the table.</li>
+                                        <li>Ideal for agents who prefer data-intensive views and quick sorting.</li>
+                                        <li>Shows all tickets in rows, enabling easy navigation across large datasets.
+                                        </li>
+                                    </ul><br>
+
+                                    <div>
+                                        <img src="ClassicView.png" onclick="openModal('ClassicView.png')"
+                                            alt="Classic View" width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <h4 id="kanban-view">Kanban View</h4>
+
+                                    <p>Kanban View presents tickets as movable cards organized into columns such as
+                                        Unassigned, Teams Tickets, Teams Closed, and My Tickets. This visual workflow
+                                        helps users manage tickets more intuitively and prioritize work based on status.
+                                    </p>
+
+                                    <ul style="list-style-type:disc">
+                                        <li>Drag and drop tickets between columns to update their status instantly.</li>
+                                        <li>Each ticket card displays essential details like Title, Priority, Created
+                                            Date, Team, and Assigned Member.</li>
+                                        <li>Offers filters at the top (Teams, Members, Status, Priority, Request Type)
+                                            to narrow ticket visibility.</li>
+                                        <li>Enhances productivity by giving a board-style overview of ongoing tasks.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <div>
+                                        <img src="Kanban.png" onclick="openModal('Kanban.png')" alt="Kanban View"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <h4 id="modern-view">Modern View</h4>
+
+                                    <p>Modern View displays tickets in a clean, card-based layout, offering a more
+                                        readable and detailed presentation compared to Classic View. Each ticket card
+                                        highlights the title, requester details, request type, priority, description,
+                                        services, and created date.</p>
+
+                                    <ul style="list-style-type:disc">
+                                        <li>Shows ticket information in compact cards for a visually appealing
+                                            experience.</li>
+                                        <li>Includes inline status and priority update options for quick modifications.
+                                        </li>
+                                        <li>Ideal for users who prefer descriptive ticket previews rather than table
+                                            rows.</li>
+                                        <li>Provides faster navigation with improved spacing and readability.</li>
+                                    </ul>
+                                    <br>
+                                    <div>
+                                        <img src="modernview.png" onclick="openModal('modernview.png')"
+                                            alt="Modern View" width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <p>The Sync button refreshes the ticket list and reloads the most recent data from
+                                        the Helpdesk 365 system. It ensures that users always view the latest ticket
+                                        updates, status changes, and newly created records without needing to reload the
+                                        entire page.</p>
+                                    <div>
+                                        <img src="sync.png" onclick="openModal('sync.png')" alt="Sorting Options"
+                                            width="100%" height="auto">
+                                    </div><br>
+
+                                    <h4 id="Notification">Notification</h4>
+
+                                    <p>The Notification feature alerts users about important updates related to their
+                                        tickets. When new comments, status changes, assignments, or actions occur, a
+                                        notification icon displays an indicator to highlight unread alerts. </p>
+                                    <div>
+                                        <img src="not.png" onclick="openModal('not.png')" alt="Sorting Options"
+                                            width="100%" height="auto">
+                                    </div><br>
+
+
+
+
+                                    <!-- ASSIGN TICKETS -->
+                                    <h4 id="assign-tickets">Assign and Update Tickets</h4>
+
+                                    <p>Users can assign or update ticket status directly from the Home Page.</p>
+
+                                    <div>
+                                        <img src="statusUpdatehom.png" onclick="openModal('statusUpdatehom.png')"
+                                            alt="Status Update" width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <!-- BULK ASSIGN -->
+                                    <h4 id="bulk-assign">Bulk Assign Tickets</h4>
+
+                                    <p>Multiple unassigned tickets can be selected at once and assigned in bulk.</p>
+
+                                    <div>
+                                        <img src="UnAssignTicket.png" onclick="openModal('UnAssignTicket.png')"
+                                            alt="Bulk Assign" width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+                                    <!-- CLOSE TICKET -->
+                                    <h4 id="close-ticket">Close the Ticket on Behalf</h4>
+
+                                    <p>Agents can close a ticket on behalf of the requester when needed by selecting the
+                                        appropriate option.</p>
+
+                                    <div>
+                                        <img src="closed.png" onclick="openModal('closed.png')" alt="Close Ticket"
+                                            width="100%" height="auto">
+                                    </div>
+                                    <br>
+                                    <h4 id="close-ticket">Ticket Export Option on Homepage</h4>
+
+                                    <p>On the homepage, we have added a Ticket Export option for each tab. Using this
+                                        option, users can export tickets based on the selected columns.</p>
+
+                                    <div>
+                                        <img src="export.png" onclick="openModal('export.png')" alt="Close Ticket"
+                                            width="100%" height="auto">
+                                    </div>
+
+                                    <br><br>
+
+
+
+                                </ul>
+                            </div>
                         </div>
-                        <div class="bg-light p-4 remove-padding common-scroll" id="table-view">
-                            <li data-nav-id=../Getting-started/installation/using-app-file title="Table View"
-                                class="sidelist">
-                                <h3 id="_dashboards"><a class="header-icon-link highlight" href="">Table View<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
 
 
-                                <p>To create new tickets in table view, follow the below steps:</p>
-
-                                <ol>
-                                    <div><img src="table.png" onclick="openModal('table.png')" alt="Table View" width="100%"
-                                            height="auto"></div><br>
-                                    <li>
-                                        Go to home page and select <b>Table</b> view.
-                                    </li>
-
-                                    <li>
-                                        Click on <b>+New Ticket</b>, this displays <b>New Ticket</b> page.
-
-                                    </li>
-
-                                    <li>
-                                        Enter <b>Title</b>, <b>Priority</b>, <b>Request type</b>, <b>Teams</b>,
-                                        <b>service</b>, <b>Requester</b> and <b>Ticket Discription</b>.
-
-
-                                    </li>
-                                    <li>Can also copy-paste screenshots in the ticket description.</li>
-
-                                    <li>
-                                        Click the <b>Submit</b> button.
-                                    </li>
-                                </ol>
-
-
-                                <p>To assign tickets in table view, follow the below steps:</p>
-
-                                <ol>
-                                    <div><img src="assigned.png" onclick="openModal('assigned.png')" alt="Assigned steps" width="100%"
-                                            height="auto"></div><br>
-                                    <li>
-                                        Click on <b>Ticket ID</b> or <b>Title</b> from home page.
-                                    </li>
-                                    <li>
-                                        Enter the <b>Assigned to</b> and <b>Status</b> in comment page under properties.
-                                    </li>
-                                    <li>
-                                        Click the <b>Update</b> button.
-                                    </li>
-                                </ol>
-
-
-
-
-
-                        </div> -->
-                      
-
-                        </ul>
-              
-                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                    <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/architecture-diagram/"
-                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
-                                class="d-none d-md-block">Architecture Diagram</span></a>
-                        <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/dashboard/"
-                            aria-label="Previous page"> <span class="d-none d-md-block">Dashboard</span><i
-                                class="ti-arrow-right ml-2"></i></a>
-                    </nav>
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/architecture-diagram/"
+                                aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                    class="d-none d-md-block">Architecture Diagram</span></a>
+                            <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/dashboard/"
+                                aria-label="Previous page"> <span class="d-none d-md-block">Dashboard</span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <div id="myModal" class="modal">
@@ -451,11 +614,11 @@
         <div class=container>
             <div class="row align-items-center">
                 <div class="col-md-8 text-md-left text-center">
-                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com/>Apps365.</a><a
+                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com />Apps365.</a><a
                             href="https://www.apps365.com/sla/">SLA.</a>
                         <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
                             href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
-                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                            href=https://www.cubiclogics.com/privacy-policy />Privacy
                         Policy.
                         </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
                     </p>
@@ -493,6 +656,7 @@
         date = new Date().toLocaleDateString();
         document.getElementById("date").innerHTML = date;
     </script>
+    <script src="/js/plus-toggle.js"></script>
 </body>
 <script src="../../../../js/header-footer.js"></script>
 <script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>

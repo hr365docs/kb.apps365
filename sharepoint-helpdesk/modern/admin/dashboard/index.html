@@ -103,24 +103,104 @@
                                 <h2 id="_dashboards"><a class="header-icon-link highlight" href="">Dashboard
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
                                 </h2>
-                                <p>On the dashboard, you would find information of tickets based on their Status,
-                                    Departments, Priority Type, Request Type, Survey.
-                                </p>
 
-
-                                <p>First line chart would exhibit the number of open tickets for the current month,
-                                    which can be filter based on teams.</p>
-
-                                <p>Second line chart would display the average time of SLA Response in selected time
-                                    frame or date.</p>
-                                <p>Third Bar chart would display the weekly average time of SLA Response in selected
-                                    time frame or date.</p>
-                                <p>Below Donught charts, would display the number of tickets created by Request Type,
-                                    Departments and Priority Type.</p>
-
+                                <p>The dashboard provides a comprehensive visual overview of ticket activity, SLA
+                                    performance, and operational trends. Each section of the dashboard displays key
+                                    metrics that help users quickly understand workload distribution and service
+                                    efficiency.</p>
                                 <div><img src="dashboard_.png" onclick="openModal('dashboard_.png')" alt="Dashboard"
                                         width="100%" height="auto"></div>
                                 <br>
+                                <h4>Ticket & SLA Charts</h4>
+
+                                <p>The first set of charts provides a high-level overview of ticket volume and SLA
+                                    performance.</p>
+
+                                <div>
+                                    <img src="TicketsThisMonth.png" alt="Tickets This Month" width="100%" height="auto">
+                                </div><br>
+                                <p><b>Tickets This Month</b> — Shows the total number of tickets logged throughout the
+                                    current month and can be filtered by team.</p>
+
+                                <p><b>SLA Response – Average</b> — Displays the overall average SLA response time for
+                                    the selected date range to track SLA compliance.</p>
+
+                                <p><b>SLA Response – Weekdays</b> — Breaks down SLA response times by weekday to help
+                                    identify performance trends across different days.</p>
+
+                                <br>
+
+
+                                <h4>Ticket Distribution Charts</h4>
+
+                                <p>This section helps users understand how tickets are categorized and distributed
+                                    across different operational groups.</p>
+
+                                <div>
+                                    <img src="TicketDistribution.png" alt="Ticket Distribution Charts" width="100%"
+                                        height="auto">
+                                </div>
+                                <br>
+                                <p><b>Tickets by Type</b> — Donut chart showing ticket counts by request category (e.g.,
+                                    hardware, software, access), used to identify common request patterns.</p>
+
+                                <p><b>Tickets by Teams</b> — Displays how tickets are distributed across
+                                    departments/teams to evaluate resource utilization and workload balance.</p>
+
+                                <p><b>Tickets by Priority</b> — Highlights the number of tickets by priority level (Low,
+                                    Medium, High), providing insight into urgency trends.</p>
+
+                                <br>
+
+
+                                <h4>Performance & Feedback Metrics</h4>
+
+                                <p>This section reflects customer experience, support quality, and ticket origination
+                                    trends.</p>
+
+                                <div>
+                                    <img src="PerformanceFeedback.png" alt="Performance and Feedback Charts"
+                                        width="100%" height="auto">
+                                </div><br>
+
+                                <p><b>Customer Satisfaction</b> — Shows the satisfaction percentage based on survey
+                                    responses; can be filtered by team for detailed evaluation.</p>
+
+                                <p><b>Knowledgebase (KB) Effectiveness</b> — Indicates how effective KB articles are in
+                                    resolving issues based on user engagement and feedback.</p>
+
+                                <p><b>Tickets by Source</b> — Shows where tickets originated (Portal, Email, Forms),
+                                    helping understand user behavior and preferred submission channels.</p>
+
+                                <br>
+
+
+                                <h4>Operational Performance Charts</h4>
+
+                                <p>The final section includes detailed charts that provide insights into operational
+                                    efficiency and SLA resolution trends.</p>
+
+                                <div>
+                                    <img src="OperationalPerformance.png" alt="Operational Performance Charts"
+                                        width="100%" height="auto">
+                                </div><br>
+
+                                <p><b>Time Track</b> — Line chart showing time spent on resolving tickets during the
+                                    selected month, helping identify workload and throughput patterns.</p>
+
+                                <p><b>SLA Resolve – Weekdays</b> — Displays the average resolution time for each weekday
+                                    to identify daily variations in performance.</p>
+
+                                <p><b>SLA Resolve – Average</b> — Provides the overall average time taken to resolve
+                                    tickets within the selected period to monitor SLA adherence and efficiency.</p>
+
+
+
+
+
+
+
+                                <h4>Expand Chart</h4>
                                 <p>User can also expand the chart with the help this expand icon</p>
                                 <br>
                                 <div><img src="expand_icon.png" onclick="openModal('expand_icon.png')" alt="expand icon"
@@ -129,6 +209,52 @@
                                 <div><img src="expand_chart.png" onclick="openModal('expand_chart.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
                                 <br>
+
+
+
+                                <h4>Status-Based Dashboard View</h4>
+                                <p>Dashboard charts can now be filtered by clicking on any ticket status, and the
+                                    dashboard results will update automatically based on the selected status.</p>
+                                <div><img src="DashBoardData.png" onclick="openModal('DashBoardData.png')"
+                                        alt="expand icon" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="OneTicket.png" onclick="openModal('OneTicket.png')" alt="expand icon"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <h4>Services Scroll View</h4>
+                                <p>Enhanced the dashboard's visual presentation to effectively display up to 50
+                                    services, ensuring a clean layout, improved readability, and seamless user
+                                    experience. Users can now view services in a scrollable format with the total number
+                                    of services displayed.</p>
+                                <div><img src="scrollService.png" onclick="openModal('scrollService.png')"
+                                        alt="expand icon" width="100%" height="auto"></div>
+                                <br>
+
+                                <h4>View Options</h4>
+                                <p>The icon highlighted in red represents a "View Options" feature. By clicking this
+                                    icon, users can access a dropdown menu with two options: Graphical View, Tabular
+                                    View
+                                </p>
+                                <div><img src="EyesIcons.png" onclick="openModal('EyesIcons.png')" alt="expand icon"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <p>When the user selects Graphical View from the dropdown, the data is displayed in a
+                                    visual chart format. This allows users to quickly analyze and understand the data
+                                    through intuitive visual representation.</p>
+                                <div><img src="GraphicalView.png" onclick="openModal('GraphicalView.png')"
+                                        alt="expand icon" width="100%" height="auto"></div>
+                                <br>
+
+                                <p>When the user selects Tabular View from the dropdown, the data is displayed in a
+                                    visual table format. This allows users to quickly analyze and understand the data
+                                    through intuitive visual representation.</p>
+                                <div><img src="TableView.png" onclick="openModal('TableView.png')" alt="expand icon"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <h4>Global Dashboard Filter</h4>
                                 <p>User can filter the Dashboard data globally with the help of this globally filter
                                     icon</p>
                                 <br>
@@ -139,123 +265,114 @@
                                 <br>
                                 <div><img src="apply_filter.png" onclick="openModal('apply_filter.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
-                                <b>
-                                    <br>
-                                    <h4>Customer Satisfaction</h4>
-                                </b>
-                                <p>You could find the information about customer satisfaction in term of percentage for
-                                    selected dates. You can filter to check for individual teams in both chart and table
-                                    format.</p> <br>
-                                <div><img src="Customer.png" onclick="openModal('Customer.png')" alt="expand icon"
-                                        width="100%" height="auto"></div>
-
-                                <!-- <div><img src="dashboard1.png" onclick="openModal('dashboard1.png')" alt="Customer satisfaction" width="100%" height="auto"></div> -->
                                 <br>
 
-                                <p>
-                                    Dashboard charts can now be filtered and viewed based on ticket statuses.</p>
-                                <div><img src="DashBoardData.png" onclick="openModal('DashBoardData.png')"
-                                        alt="expand icon" width="100%" height="auto"></div>
-                                <br>
-                                <div><img src="OneTicket.png" onclick="openModal('OneTicket.png')" alt="expand icon"
-                                        width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    Enhanced the dashboard's visual presentation to effectively display up to 50
-                                    services, ensuring a clean layout, improved readability, and seamless user
-                                    experience. Users can now view services in a scrollable format with the total number
-                                    of services displayed.</p>
-                                <div><img src="scrollService.png" onclick="openModal('scrollService.png')"
-                                        alt="expand icon" width="100%" height="auto"></div>
-                                <br>
-                                <p>The icon highlighted in red represents a "View Options" feature. By clicking this
-                                    icon, users can access a dropdown menu with two options:Graphical View, Tabular View
-                                </p>
-                                <div><img src="EyesIcons.png" onclick="openModal('EyesIcons.png')" alt="expand icon"
-                                        width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    When the user selects Graphical View from the dropdown, the data is displayed in a
-                                    visual chart format. This allows users to quickly analyze and understand the data
-                                    through intuitive visual representation.</p>
-                                <div><img src="GraphicalView.png" onclick="openModal('GraphicalView.png')"
-                                        alt="expand icon" width="100%" height="auto"></div>
-                                <br>
-                                <p>
-                                    When the user selects Tabular View from the dropdown, the data is displayed in a
-                                    visual table format. This allows users to quickly analyze and understand the data
-                                    through intuitive visual representation.</p>
-                                <div><img src="TableView.png" onclick="openModal('TableView.png')" alt="expand icon"
-                                        width="100%" height="auto"></div>
-                                <br>
+
                                 <h3>Dashboard Settings</h3>
                                 <br>
                                 <p>From here, you can customize which charts you want to display on the dashboard for
                                     each row.</p>
-                                <p><b>1. </b>Click the Configure button next to Dashboard Settings.</p>
+                                <p><b>1.</b> Click the Configure button next to Dashboard Settings.</p>
                                 <div><img src="DashboardSetting.png" onclick="openModal('DashboardSetting.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
                                 <br>
+
+                                <h4>Show SLA Charts</h4>
+
                                 <p>In Show SLA Charts, there are two options. The first is Based on Month. After
                                     selecting it the data in the dashboard will be displayed according to the selected
                                     month.</p>
                                 <div><img src="BasedonMonth.png" onclick="openModal('BasedonMonth.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
                                 <br>
+
                                 <p>Here, the user can view SLA data for any month of their choice, such as the current
                                     month, last month, or any other month.</p>
                                 <div><img src="Drop-down.png" onclick="openModal('Drop-down.png')" alt="expand icon"
                                         width="100%" height="auto"></div>
                                 <br>
+
                                 <p>The second option is 'Based on Teams,' which allows the user to select and view SLA
                                     data categorized by teams as per their preference.</p>
                                 <div><img src="BasedonTeams.png" onclick="openModal('BasedonTeams.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
                                 <br>
+
                                 <p>In this case, the data will now be displayed based on Teams, whether it’s all teams
                                     or specific other teams.</p>
                                 <div><img src="Drop-down-Teams.png" onclick="openModal('Drop-down-Teams.png')"
                                         alt="expand icon" width="100%" height="auto"></div>
                                 <br>
 
-                                <p> <b>1.</b> Dashboard Settings panel will open . There are four tabs: Row 1, Row 2,
-                                    Row 3, and
-                                    Row 4.</p>
+                                <h4>Dashboard Rows Setup</h4>
 
-                                <p> <b> 2.</b> Select the checkbox option of charts which you want to show in the
+                                <p><b>1.</b> Dashboard Settings panel will open. There are four tabs: Row 1, Row 2,
+                                    Row 3, and Row 4.</p>
+
+                                <p><b>2.</b> Select the checkbox option of charts which you want to show in the
                                     dashboard row.</p>
-                                <p><b>Top Header</b></p>
-                                <p>Here you can customize your top headers with custom Status which will easily help
-                                    that particular statues tickets in the chart</p>
+
+                                <h4>Top Header</h4>
+                                <p>In the Top Headers section, you can customize which ticket statuses appear at the top
+                                    of your dashboard. Select the statuses you want to highlight, and then click the
+                                    <b>Save</b> button to apply your changes.
+                                </p>
+
                                 <div><img src="Top-Header.png" onclick="openModal('Top-Header.png')" alt="expand icon"
                                         width="100%" height="auto"></div>
                                 <br>
+                                <p>These customized headers help you quickly identify and filter tickets based on the
+                                    selected status in the dashboard charts.</p>
                                 <div><img src="top2.png" onclick="openModal('top2.png')" alt="expand icon" width="100%"
                                         height="auto"></div>
                                 <br>
-                                <p>In this setting we can see all status. At single time you can select only 6 check
-                                    boxes. And based on this check boxes you can see header. And this headers clickable.
-                                    <br>
-                                    Above all the actions need to save 
-                                </p>
-                                <div><img src="SaveSettings.png" onclick="openModal('SaveSettings.png')" alt="expand icon"
+                                <p>
+                                    We have added **User-based** and **Team-based** filters to the dashboard, as shown
+                                    in the image below.
+
+                                <div><img src="apply.png" onclick="openModal('apply.png')" alt="expand icon"
                                         width="100%" height="auto"></div>
                                 <br>
+
+                                <div><img src="apply2.png" onclick="openModal('apply2.png')" alt="expand icon"
+                                        width="100%" height="auto"></div>
+                                <br>
+                                <p> As shown in the images, we have added two additional dropdowns.
+                                    <br>
+                                    The first dropdown is for selecting **Teams**, and the second dropdown is for
+                                    selecting
+                                    **Team-based Agents and Supervisors**.
+                                    <br>
+                                    If no team is selected, the user list will not appear. All other filters will
+                                    continue
+                                    to function as usual.
+                                </p>
+
+                                <!-- <p>In this setting we can see all status. At a single time you can select only 6 check
+    boxes. Based on these check boxes you can see headers, and these headers are clickable.
+    <br>
+    Above all the actions need to save.
+</p>
+
+<div><img src="SaveSettings.png" onclick="openModal('SaveSettings.png')" alt="expand icon"
+        width="100%" height="auto"></div>
+<br> -->
 
 
 
                         </div>
                         </ul>
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/home-page/"
+                                aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                    class="d-none d-md-block">Home Page</span></a>
+                            <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/incident/"
+                                aria-label="Previous page"> <span class="d-none d-md-block">Incident</span><i
+                                    class="ti-arrow-right ml-2"></i></a>
+                        </nav>
                     </div>
-                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                    <nav class="pagination mt-3">
-                        <a class="nav nav-prev" href="/sharepoint-helpdesk/modern/admin/home-page/"
-                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
-                                class="d-none d-md-block">Home Page</span></a>
-                        <a class="nav nav-next" href="/sharepoint-helpdesk/modern/admin/incident/"
-                            aria-label="Previous page"> <span class="d-none d-md-block">Incident</span><i
-                                class="ti-arrow-right ml-2"></i></a>
-                    </nav>
                 </div>
             </div>
         </div>
@@ -276,11 +393,11 @@
         <div class=container>
             <div class="row align-items-center">
                 <div class="col-md-8 text-md-left text-center">
-                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com/>Apps365.</a> <a
+                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.apps365.com />Apps365.</a> <a
                             href="https://www.apps365.com/sla/">SLA.</a>
                         <a href=https://www.apps365.com/terms-and-conditions />T&C.</a> <a
                             href=https://www.apps365.com/end-user-license-agreement-eula />EULA.</a> <a
-                            href=https://www.cubiclogics.com/cubiclogics-india-pvt-ltd-terms-of-service-and-privacy-policy />Privacy
+                            href=https://www.cubiclogics.com/privacy-policy />Privacy
                         Policy.
                         </a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
                     </p>
@@ -317,6 +434,7 @@
         date = new Date().toLocaleDateString();
         document.getElementById("date").innerHTML = date;
     </script>
+    <script src="/js/plus-toggle.js"></script>
 </body>
 <script src="../../../../js/header-footer.js"></script>
 <script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>
