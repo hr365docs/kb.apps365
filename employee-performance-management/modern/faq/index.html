@@ -1462,6 +1462,247 @@
                 </div>
               </div>
             </div>
+           <div class="card mb-4 rounded-0 shadow border-0">
+              <div class="card-header rounded-0 bg-white border p-0 border-0">
+                <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-bs-toggle=collapse
+                  href=#Performance-Bonus>
+                  <span>What are the steps to implement and use the Performance Bonus module in PM365?</span> <i
+                    class="ti-plus text-primary text-right"></i>
+                </a>
+              </div>
+              <div id=Performance-Bonus class=collapse data-parent=#accordion>
+                <div class="card-body font-secondary text-color pt-0">
+
+                  <h5>Overview </h5>
+                  <p>
+                    The Performance Bonus feature allows your organization to automatically calculate employee bonus
+                    amounts based on their appraisal performance ratings. Once configured, the system computes each
+                    employee's bonus using their base salary, job title bonus settings, and their appraiser's review
+                    rating.
+                  </p>
+                  <p>
+                    This guide covers everything you need to get started: enabling the module, configuring settings,
+                    entering employee salary data, setting up bonus rules per job title, reviewing bonus calculations,
+                    and generating reports.
+                  </p>
+                  <h6>Step 1: Enable the Performance Bonus Module </h6>
+                  <p>Before using the feature, you need to make sure the Performance Bonus module is turned on in your
+                    system settings. </p>
+                  <ol type="1">
+                    <li>Click the Settings (gear) icon in the left navigation bar. </li>
+                    <li>From the Settings page, under the Features section, click on Modules. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus1.png" onclick="openModal('Bonus1.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>In the Modules panel that opens, scroll down to find Performance Bonus and make sure the toggle
+                      is switched ON. </li>
+                    <div>
+                      <img style="width: 50%;" src="Bonus2.png" onclick="openModal('Bonus2.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                  </ol>
+                  <h6>Step 2: Configure Performance Bonus Settings </h6>
+                  <p>Once the module is enabled, you need to configure how the Performance Bonus behaves — including who
+                    can see it and what currency to use. </p>
+                  <ol type="1">
+                    <li>From the Settings page, click on Performance Bonus Setting under the Advanced Settings section.
+                    </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus3.png" onclick="openModal('Bonus3.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>The Performance Bonus Setting panel will open. Here you can configure the following: </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus4.png" onclick="openModal('Bonus4.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                  </ol>
+                  <h6>Step 3: Enter Employee Base Salary </h6>
+                  <p>Each employee participating in performance appraisals needs a Base Salary entered in their user
+                    profile. This value is used to calculate the actual bonus amount. </p>
+                  <ol type="1">
+                    <li>From the Settings page, click on User(s) under the User(s) section.
+                    </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus5.png" onclick="openModal('Bonus5.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>Find the employee from the list and open their profile. </li>
+                    <li>In the Edit User panel, scroll down to find the Base Salary field and enter the employee's
+                      salary. </li>
+                    <li>Also confirm that the Job Title is filled in correctly. If not, enter it now, as it will be
+                      needed for Performance bonus </li>
+                    <li>Click Update to save the changes. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus6.png" onclick="openModal('Bonus6.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                  </ol>
+                  <div class="notices note">
+                    <div class="paragraph">
+                      <p>Make sure the Base Salary and Job Title are accurate before proceeding. These values directly
+                        affect the bonus calculation.
+                      </p>
+                    </div>
+                  </div>
+                  <h6>Step 4: Configure Job Titles for Performance Bonus </h6>
+                  <p>Now you need to set up how the bonus is calculated for each job title. This is done through the Job
+                    Title(s) section under Administration. </p>
+                  <ol type="1">
+                    <li>Click on the Administration menu in the left navigation bar. </li>
+                    <li>From the dropdown, click on Job Title(s). </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus7.png" onclick="openModal('Bonus7.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>The Job Title(s) panel will open, showing all existing titles. Find the job title for the
+                      employee who is part of the appraisal cycle. </li>
+                    <li>Click the Edit (pencil) icon next to that job title. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus8.png" onclick="openModal('Bonus8.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>In the Edit Title panel, configure the following bonus rules: </li>
+                    <table border="1" cellpadding="8" cellspacing="0">
+                      <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>Salary Option</td>
+                        <td>Choose Percentage to calculate the bonus as a percentage of the salary, or choose a fixed
+                          amount option.</td>
+                      </tr>
+                      <tr>
+                        <td>Calculate Based On</td>
+                        <td>Select whether the calculation is based on Monthly or Yearly salary.</td>
+                      </tr>
+                      <tr>
+                        <td>Percentage / Amount</td>
+                        <td>Enter the percentage value (e.g., 20 for 20%) or fixed amount for this job title's bonus.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Active</td>
+                        <td>Ensure the toggle is ON so this bonus rule is active.</td>
+                      </tr>
+                    </table>
+                    <li>Click Update to save the job title bonus configuration. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus9.png" onclick="openModal('Bonus9.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                  </ol>
+                  <h6>Step 5: View the Performance Bonus in HR Review </h6>
+                  <p>Once the Self Review, Manager Review, and HR Review have all been completed, the HR user can access
+                    the Performance Bonus tab within the employee's appraisal record to see the calculated bonus.</p>
+                  <ol type="1">
+                    <li>Go to the Appraisals tab in the top navigation bar. </li>
+                    <li>In the HR Head – Admin View(Previously you have selected the users role in Performance bonus
+                      visibility in Performance bonus settings), locate the employee whose review you want to open.
+                    </li>
+                    <li>Click the Edit (pencil) icon next to the employee's appraisal record.
+                    </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus10.png" onclick="openModal('Bonus10.png')" alt="Submitted Praise"
+                        width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>The HR Review window will open. Click on the Performance Bonus tab. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus11.png" onclick="openModal('Bonus11.png')"
+                        alt="Submitted Praise" width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>The Performance Bonus tab will display the complete bonus calculation breakdown. </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus12.png" onclick="openModal('Bonus12.png')"
+                        alt="Submitted Praise" width="100%" height="auto">
+                    </div>
+                    <br>
+                  </ol>
+                  <p>The Performance Bonus breakdown includes the following information: </p>
+                  <table border="1" cellpadding="8" cellspacing="0">
+                    <tr>
+                      <th>Field</th>
+                      <th>What it means</th>
+                    </tr>
+                    <tr>
+                      <td>Base Salary</td>
+                      <td>The employee's base salary as entered in their user profile.</td>
+                    </tr>
+                    <tr>
+                      <td>Bonus Type</td>
+                      <td>The bonus calculation method configured for the job title (e.g., Percentage 20%).</td>
+                    </tr>
+                    <tr>
+                      <td>Eligible Performance Bonus</td>
+                      <td>The maximum bonus amount the employee is eligible for, calculated from their base salary and
+                        bonus type.</td>
+                    </tr>
+                    <tr>
+                      <td>Appraiser's Rating</td>
+                      <td>The final rating given by the appraiser (e.g., 80.00%).</td>
+                    </tr>
+                    <tr>
+                      <td>Bonus Amount</td>
+                      <td>The actual bonus the employee receives, calculated as: Eligible Performance Bonus ×
+                        Appraiser's Rating.</td>
+                    </tr>
+                  </table>
+                  <h6>Step 6: Access the Performance Bonus Report </h6>
+                  <p>The Performance Bonus Report gives you a consolidated view of all employees' bonus details across a
+                    selected appraisal cycle. This report can be filtered by Employee, Manager, Title and so on., </p>
+                  <ol type="1">
+                    <li>Click on the Reports icon in the left navigation bar. </li>
+                    <li>From the submenu, click on Performance Bonus Report.
+                    </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus13.png" onclick="openModal('Bonus13.png')"
+                        alt="Submitted Praise" width="100%" height="auto">
+                    </div>
+                    <br>
+                    <li>The report will open showing all employees along with their Manager's Name, Job Title,
+                      Department, Base Salary, and so on.
+                    </li>
+                    <li>Use the tabs at the top (Employee, Manager, Title, Department, Location, Company) to switch
+                      between different views of the report.
+                    </li>
+                    <li>Select the appraisal cycle year at the top right to filter the report for a specific period.
+                    </li>
+                    <li>The Total Amount at the bottom of the Employee tab shows the combined eligible bonus across all
+                      employees.
+                    </li>
+                    <br>
+                    <div>
+                      <img style="width: 50%;" src="Bonus14.png" onclick="openModal('Bonus14.png')"
+                        alt="Submitted Praise" width="100%" height="auto">
+                    </div>
+                    <br>
+                </div>
+              </div>
+            </div>
             <div class="card mb-4 rounded-0 shadow border-0">
               <div class="card-header rounded-0 bg-white border p-0 border-0">
                 <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-bs-toggle=collapse
