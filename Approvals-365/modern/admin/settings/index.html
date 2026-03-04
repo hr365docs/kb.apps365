@@ -166,10 +166,7 @@
     <div>
       <img src="users-role.png" onclick="openModal('users-role.png')" alt="User Role Assignment Example" width="100%" height="auto">
     </div><br>
-    <li><b>Search & Pagination:</b> Search by Name, Email and adjust the number of entries displayed (10, 25, or 50 per page).</li><br>
-    <div>
-      <img src="users-search.png" onclick="openModal('users-search.png')" alt="User Search Example" width="100%" height="auto">
-    </div><br>
+    
     
   </ul>
 </div>
@@ -188,6 +185,89 @@
   <div>
     <img src="hide-settings.png" onclick="openModal('hide-settings.png')" alt="Hide SharePoint Settings Example" width="100%" height="auto">
   </div><br>
+</div>
+<div class="bg-light p-4 common-scroll remove-padding" id="custom-columns">
+
+<h3 id="_custom_columns">
+  <a class="header-icon-link highlight" href="#">Custom Columns
+    <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+  </a>
+</h3>
+
+<p>The <b>Custom Columns</b> feature allows administrators to create additional reusable fields that can later be used inside approval templates.</p>
+
+<hr>
+
+<!-- 1. Custom Column List View -->
+
+<h4><b>1. Custom Columns List</b></h4>
+
+<p>This screen displays all created custom columns along with their status.</p>
+
+<ul>
+  <li><b>Name:</b> Displays the custom column name.</li>
+  <li><b>Active:</b> Shows whether the column is enabled.</li>
+  <li><b>Action:</b> Allows deletion of the column.</li>
+</ul>
+
+<div>
+  <img src="custom-columns-list.png" onclick="openModal('custom-columns-list.png')" 
+       alt="Custom Columns List View" width="100%" height="auto">
+</div>
+
+<br>
+
+<!-- 2. Add Custom Column -->
+
+<h4><b>2. Add Custom Column</b></h4>
+
+<p>Click the <b>+ Custom Column</b> button to create a new column.</p>
+
+<p>In the Add Custom Column panel:</p>
+
+<ul>
+  <li><b>Display Name:</b> Enter the name of the column (e.g., StartDate).</li>
+  <li><b>Active Toggle:</b> Enable or disable the column.</li>
+  <li><b>Save:</b> Click Save to create the new column.</li>
+</ul>
+
+<div>
+  <img src="add-custom.png" onclick="openModal('add-custom.png')" 
+       alt="Add Custom Column Panel" width="100%" height="auto">
+</div>
+
+<br>
+
+<!-- 3. Custom Column Added Successfully -->
+
+<h4><b>3. Custom Column Created</b></h4>
+
+<p>Once saved, the new custom column appears in the list and is marked as active.</p>
+
+<div>
+  <img src="custom-column-created.png" onclick="openModal('custom-column-created.png')" 
+       alt="Custom Column Created Successfully" width="100%" height="auto">
+</div>
+
+<br>
+
+<!-- 4. Custom Column in Template Form Design -->
+
+<h4><b>4. Using Custom Column in Template</b></h4>
+
+<p>After creating a custom column, it becomes available in the <b>Form Design</b> section while creating or editing a template.</p>
+
+<p>Administrators can drag and drop the newly created column (e.g., StartDate) into the form layout.</p>
+
+<div>
+  <img src="custom-column-form-design.png" onclick="openModal('custom-column-form-design.png')" 
+       alt="Custom Column Available in Form Design" width="100%" height="auto">
+</div>
+
+<br>
+
+<p>This feature allows organizations to extend the default approval form fields without modifying the core application structure.</p>
+
 </div>
 </div>
 

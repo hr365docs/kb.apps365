@@ -110,65 +110,35 @@
   <!-- Homepage Main Image -->
   <ul class="page-list">
 <!-- Introduction -->
-
 <!-- Home Page -->
-<p>The <b>Approvals 365 Home Page</b> displays all available job postings in a structured card format, including the title, description, location, experience, job type, and posting date.</p>
+<p>The <b>Approvals 365 Home Page</b> allows users to manage approval requests efficiently. 
+From this page, users can submit new approval requests, view previously submitted requests, 
+and track their approval status.</p>
 
 <!-- Step 1 -->
-<p><b>1. View Job Postings</b><br>
-All job postings are displayed in a list with details such as job title, location, required experience, and job type.</p>
+<p><b>1. View Requested Approvals</b><br>
+The <b>Requested</b> tab displays all approval requests submitted by the user. 
+Each request shows important information such as the title, creation date, last modified date, 
+approver name, request status, and the person to whom the request was sent.</p>
+
 <div>
-  <img src="1.png" onclick="openModal('1.png')" alt="Job Listings Example" width="100%" height="auto">
+  <img src="1.png" onclick="openModal('1.png')" alt="Requested Approvals List" width="100%" height="auto">
 </div><br>
+
+<p>Users can click on the request title to open and view the complete approval details.</p>
 
 <!-- Step 2 -->
-<p><b>2. Refer a Candidate (if enabled by Admin)</b><br>
-If the administrator enables the <b>Refer Candidate</b> toggle, you will see a <b>Refer Candidate</b> button on the job card.</p>
-<ul>
-  <li>Click <b>Refer Candidate</b></li>
-  <div>
-  <img src="11.png" onclick="openModal('11.png')" alt="Job Listings Example" width="100%" height="auto">
-</div><br>
-  <li>Upload the candidate’s resume (PDF only)</li>
-  <div>
-  <img src="2.png" onclick="openModal('2.png')" alt="Job Listings Example" width="100%" height="auto">
-</div><br>
-  <li>Enter required details: Candidate Name, Phone Number, Email, and Address</li>
-  <div>
-  <img src="3.png" onclick="openModal('3.png')" alt="Job Listings Example" width="100%" height="auto">
-</div><br>
-  <li>Click <b>Submit</b> to complete the referral</li>
-  <div>
-  <img src="4.png" onclick="openModal('4.png')" alt="Job Listings Example" width="100%" height="auto">
-</div><br>
-</ul>
-
-
-<!-- Step 3 -->
-<p><b>3. View Complete Job Information</b><br>
-Click the <b>arrow icon (→)</b> on a job card to open full job details. This includes role description, responsibilities, and other key information.</p>
-<div>
-  <img src="job_details.png" onclick="openModal('job_details.png')" alt="Job Details Example" width="100%" height="auto">
-</div><br>
-<div>
-  <img src="job_details2.png" onclick="openModal('job_details2.png')" alt="Job Details Example" width="100%" height="auto">
-</div><br>
-
-<!-- Step 4 -->
-<p><b>4. Apply for a Job</b><br>
-From the job details view, click the <b>Apply</b> button to submit your application.</p>
+<p><b>2. Create a New Approval Request</b><br>
+Users can create a new approval request by clicking the <b>+ New Request</b> button. 
+After selecting a template, the user fills in the required fields and submits the request. 
+The system automatically routes the request to the configured approver.</p>
 
 <div>
-  <img src="job_details1.png" onclick="openModal('job_details1.png')" alt="Job Details Example" width="100%" height="auto">
+  <img src="2.png" onclick="openModal('2.png')" alt="Create New Approval Request" width="100%" height="auto">
 </div><br>
 
-<!-- Step 5 -->
-<p><b>5. Return to Home Page</b><br>
-At any point, click on the <b>Home tab</b> to go back to the main job listings view.</p>
-<div>
-  <img src="home_tab.png" onclick="openModal('home_tab.png')" alt="Home Tab Example" width="100%" height="auto">
-</div><br>
-
+<p>If the user is assigned as an <b>Approver or Manager</b>, incoming requests will appear in the 
+<b>Received</b> tab where they can review, approve, or reject the request.</p>
 
  
 
