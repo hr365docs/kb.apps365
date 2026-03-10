@@ -122,6 +122,8 @@ $(document).ready(function () {
     `<a class='dropdown-item stocklink' href='/Anniversary-365/'>Anniversary 365</a>` +
     `<a class='dropdown-item stocklink' href='/Survey-365/'>Survey 365</a>` +
     `<a class='dropdown-item stocklink' href='/Quiz-Board-365/'>Quiz Board 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Spotlight-365/'>Spotlight 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Alert-365/'>Alert 365</a>` +
     `</div>` +
     `</li>` +
 
