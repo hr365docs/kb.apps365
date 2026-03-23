@@ -4,45 +4,45 @@ $(document).ready(function () {
     $("#aisummaryadmin").append(
         // ✅ Introduction
         "<li class='sidelist' data-nav-id='./Settings/' title='Introduction'>" +
-            "<a href='/AI-Summary-365/modern/admin/introduction/'>Introduction</a>" +
+            "<a href='/ai-summary-365/modern/admin/introduction/'>Introduction</a>" +
         "</li>" +
 
         // ✅ Home Page
         "<li class='sidelist' data-nav-id='./Settings/' title='Home Page'>" +
-            "<a href='/AI-Summary-365/modern/admin/homepage/'>Home Page</a>" +
+            "<a href='/ai-summary-365/modern/admin/homepage/'>Home Page</a>" +
         "</li>" +
 
         // ✅ Settings
         "<li class='dropdownicon sidelist' title='Settings'>" +
-            "<a href='/AI-Summary-365/modern/admin/settings/'>Settings</a>" +
+            "<a href='/ai-summary-365/modern/admin/settings/'>Settings</a>" +
               "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
         "<li class='sidelist dropdown_romove_dot'>" +
             "<ul class='sidenavSub-topics aside_dropdown_list'>" +
                 "<li class='sidelist' title='Theme'>" +
-                    "<a href='/AI-Summary-365/modern/admin/settings/#_theme_option'>Theme</a>" +
+                    "<a href='/ai-summary-365/modern/admin/settings/#_theme_option'>Theme</a>" +
                 "</li>" +
                 "<li class='sidelist' title='Users'>" +
-                    "<a href='/AI-Summary-365/modern/admin/settings/#_users'>Users</a>" +
+                    "<a href='/ai-summary-365/modern/admin/settings/#_users'>Users</a>" +
                 "</li>" +
                 "<li class='sidelist' title='AI Configure'>" +
-                    "<a href='/AI-Summary-365/modern/admin/settings/#_ai_configure'>AI Configure</a>" +
+                    "<a href='/ai-summary-365/modern/admin/settings/#_ai_configure'>AI Configure</a>" +
                 "</li>" +
                 "<li class='sidelist' title='Sharepoint Page Configuration'>" +
-                    "<a href='/AI-Summary-365/modern/admin/settings/#hide-sharepoint-settings'>Sharepoint Page Configuration</a>" +
+                    "<a href='/ai-summary-365/modern/admin/settings/#hide-sharepoint-settings'>Sharepoint Page Configuration</a>" +
                 "</li>" +
             "</ul>" +
         "</li>" +
 
         // ✅ Help
         "<li class='dropdownicon sidelist' title='Help'>" +
-            "<a href='/AI-Summary-365/modern/admin/help/'>Help</a>" +
+            "<a href='/ai-summary-365/modern/admin/help/'>Help</a>" +
               "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
         "</li>" +
         "<li class='sidelist dropdown_romove_dot'>" +
             "<ul class='sidenavSub-topics aside_dropdown_list'>" +
                 "<li class='sidelist' title='Product Activation'>" +
-                    "<a href='/AI-Summary-365/modern/admin/help/#product'>Product Activation</a>" +
+                    "<a href='/ai-summary-365/modern/admin/help/#product'>Product Activation</a>" +
                 "</li>" +
             "</ul>" +
         "</li>"
