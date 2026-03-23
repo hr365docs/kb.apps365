@@ -25,11 +25,11 @@ $(document).ready(function () {
         "<li class='sidelist' title='Hide SharePoint Settings'>" +
             "<a href='/calendar-365/modern/admin/settings/#_hide_sharepoint_settings'>Hide SharePoint Settings</a>" +
         "</li>" +
-        "<li class='sidelist' title='Calendar Sources'>" +
-            "<a href='/calendar-365/modern/admin/settings/#_sources'>Calendar Sources</a>" +
+        "<li class='sidelist' title=' Sources'>" +
+            "<a href='/calendar-365/modern/admin/settings/#_sources'> Sources</a>" +
         "</li>" +
-        "<li class='sidelist' title='Add Additional Admins'>" +
-            "<a href='/calendar-365/modern/admin/settings/#add-additional-admins'>Add Additional Admins</a>" +
+        "<li class='sidelist' title='Users'>" +
+            "<a href='/calendar-365/modern/admin/settings/#add-additional-admins'>Users</a>" +
         "</li>" +
     "</ul>" +
 "</li>" +
