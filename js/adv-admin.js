@@ -28,8 +28,8 @@ $(document).ready(function () {
                 "<li class='sidelist' title='Advent Caledar Settings'>" +
                     "<a href='/advent-calendar-365/modern/admin/settings/#_advent_calendar_settings'>Advent Caledar Settings</a>" +
                 "</li>" +
-                "<li class='sidelist' title='Add Additional Admins'>" +
-                    "<a href='/advent-calendar-365/modern/admin/settings/#add-additional-admins'>Add Additional Admins</a>" +
+                "<li class='sidelist' title='Users'>" +
+                    "<a href='/advent-calendar-365/modern/admin/settings/#add-additional-admins'>Users</a>" +
                 "</li>" +
                 
             "</ul>" +
