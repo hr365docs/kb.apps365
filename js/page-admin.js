@@ -31,8 +31,8 @@ $(document).ready(function () {
         "<li class='sidelist' title='Page Sources'>" +
             "<a href='/page-directory-365/modern/admin/settings/#_page_sources'>Page Sources</a>" +
         "</li>" +
-        "<li class='sidelist' title='Add Additional Admins'>" +
-            "<a href='/page-directory-365/modern/admin/settings/#_add_admins'>Add Additional Admins</a>" +
+        "<li class='sidelist' title='Users'>" +
+            "<a href='/page-directory-365/modern/admin/settings/#_add_admins'>Users</a>" +
         "</li>" +
     "</ul>" +
 "</li>" +
