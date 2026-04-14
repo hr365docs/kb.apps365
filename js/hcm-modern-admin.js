@@ -1431,7 +1431,7 @@ $(document).ready(function () {
     "</li>" +
 
 
-    "<a href='/HRMS-HR365/modern/admin/apps/ET365/home-page/' title='Expense Tracker 365'>Expense Tracker 365</a>" +
+    "<a href='/HRMS-HR365/modern/admin/apps/ET365/home-page/' title='Expense 365'>Expense 365</a>" +
     "</li>" +
 
     "<li data-nav-id='../advanced/' title='ET365 - Home Page' class='sidelist'>" +
