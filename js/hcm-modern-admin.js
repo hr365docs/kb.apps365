@@ -594,7 +594,7 @@ $(document).ready(function () {
 "</ul>" +
 "</li>"+ 
                
-                "<a href='/HRMS-HR365/modern/admin/apps/TMP365/home-page/' title='TMP365'>TMP365</a>" +
+                "<a href='/HRMS-HR365/modern/admin/apps/TMP365/home-page/' title='TM365'>TM365</a>" +
                 "</li>" +
                 "<li  data-nav-id='../advanced/' title='TMP365 - Home page' class='sidelist'>" +
                 "<a href='/HRMS-HR365/modern/admin/apps/TMP365/home-page/'>Home page</a>" +
