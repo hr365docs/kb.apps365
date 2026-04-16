@@ -202,6 +202,20 @@ $(document).ready(function () {
         "</li>" +
        
         "</ul>" +
+
+        "<li data-nav-id='../user' title=AI Control Panel class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/ai-control-panel'>AI Control Panel</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+        "</a>" +
+        "</li>" +
+        "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+        "<li data-nav-id='../General' title='Email Template' class='sidelist'>" +
+        "<a href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/ai-control-panel/#AI-Settings'>AI Settings</a>" +
+        "</li>" +
+      
+       
+        "</ul>" +
         "<li data-nav-id='../user' title='Leave Settings' class='dropdownicon sidelist'>" +
         "<a class='qwe' href='/employee-vacation-tracker-time-off-manager/modern/admin/settings/leave-setting/'>Leave Settings</a>" +
         "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
