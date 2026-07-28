@@ -1,21 +1,10 @@
-(async function () {
+( function () {
   "use strict";
-async function loadEnvConfig(path) {
-    try {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Fetch of ${path} failed: ${res.status}`);
-      return await res.json();
-    } catch (err) {
-      console.error("CopilotWidget: could not load app-config.json —", err);
-      return {};
-    }
-  }
 
-  const envVars = await loadEnvConfig("./app-config.json");
-  const DIRECT_LINE_SECRET = envVars.DIRECT_LINE_SECRET;
-  const tenantId = envVars.TENANT_ID;
-  const userId = envVars.USER_ID;
-  const userName = envVars.USER_NAME;
+  const DIRECT_LINE_SECRET = process.env.DIRECT_LINE_SECRET;
+  const tenantId = process.env.TENANT_ID;
+  const userId = process.env.USER_ID;
+  const userName = process.env.USER_NAME;
 
   if (!DIRECT_LINE_SECRET) {
     console.error("CopilotWidget: DIRECT_LINE_SECRET is missing. Check that .env is reachable at the configured path and contains DIRECT_LINE_SECRET=...");
