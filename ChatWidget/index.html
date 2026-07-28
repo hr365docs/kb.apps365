@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copilot Chat Widget</title>
+  <link rel="stylesheet" href="widget.css" />
+  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <div id="webchat" class="cw-webchat-host" aria-hidden="true"></div>
+
+  <div class="demo-content">
+    <h1>Copilot Chat Widget</h1>
+  </div>
+
+  <button id="cw-fab" class="cw-fab" aria-label="Open chat" aria-expanded="false">
+    <img class="cw-fab-logo cw-fab-icon-chat" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="Apps365" aria-hidden="true" />
+    <span class="cw-fluent-icon cw-icon-close cw-fab-icon-close" aria-hidden="true"></span>
+  </button>
+
+  <div id="cw-widget" class="cw-widget" role="dialog" aria-label="Copilot chat">
+
+    <div class="cw-shell">
+      <aside id="cw-sidebar" class="cw-sidebar" aria-label="Chat history">
+        <div class="cw-sidebar-top">
+
+          <button id="cw-sidebar-new-chat" class="cw-sidebar-new-btn" type="button">
+            <span class="cw-fluent-icon cw-icon-add" aria-hidden="true"></span>
+            START A NEW CONVERSATION
+          </button>
+          <div class="cw-search-wrap">
+            <span class="cw-fluent-icon cw-icon-search" aria-hidden="true"></span>
+            <input id="cw-search-input" type="search" placeholder="Search chats" autocomplete="off" />
+          </div>
+        </div>
+        <div class="cw-sidebar-label">Recent Conversations</div>
+        <ul id="cw-history-list" class="cw-history-list"></ul>
+      </aside>
+
+      <div id="cw-sidebar-backdrop" class="cw-sidebar-backdrop" aria-hidden="true"></div>
+
+      <div class="cw-chat-column">
+        <header id="cw-header" class="cw-header">
+          <div class="cw-header-left">
+            <button id="cw-sidebar-toggle" class="cw-icon-btn" type="button" aria-label="Toggle sidebar" aria-expanded="true">
+              <span class="cw-fluent-icon cw-icon-panel-open" aria-hidden="true"></span>
+              <span class="cw-fluent-icon cw-icon-panel-closed" aria-hidden="true"></span>
+            </button>
+            <button id="cw-move-btn" class="cw-icon-btn cw-move-btn cw-compact-only" type="button" aria-label="Assistant">
+              <span class="cw-fluent-icon cw-icon-sparkle" aria-hidden="true"></span>
+            </button>
+            <!-- <span class="cw-header-copy">
+              <span id="cw-header-title" class="cw-header-title">Apps 365 AI Assistant</span>
+              <span id="cw-header-subtitle" class="cw-header-subtitle">Your recent conversations</span>
+            </span> -->
+          </div>
+          <div class="cw-header-actions">
+            <button id="cw-expand-btn" class="cw-icon-btn" type="button" aria-label="Expand chat">
+              <span class="cw-fluent-icon cw-icon-expand" aria-hidden="true"></span>
+              <span class="cw-fluent-icon cw-icon-collapse" aria-hidden="true"></span>
+            </button>
+            <button id="cw-new-chat" class="cw-icon-btn" type="button" aria-label="Close chat">
+              <span class="cw-fluent-icon cw-icon-close" aria-hidden="true"></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="cw-body-scroll">
+          <div class="cw-content">
+            <div id="cw-body" class="cw-body"></div>
+          </div>
+        </div>
+
+        <footer class="cw-footer">
+          <div class="cw-content">
+            <div class="cw-quick-replies" aria-label="Suggested questions">
+            </div>
+            <div class="cw-composer" id="cw-composer">
+              <div id="cw-file-previews" class="cw-composer-previews" hidden></div>
+              <div class="cw-composer-wrap">
+  <input id="cw-input" class="cw-composer-input" type="text" placeholder="Ask anything" autocomplete="off" />
+  <button id="cw-attach-btn" class="cw-composer-btn" type="button" aria-label="Attach file">
+    <span class="cw-fluent-icon cw-icon-attach" aria-hidden="true"></span>
+  </button>
+  <input id="cw-file-input" class="cw-file-input" type="file" multiple accept="image/*,.pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx" hidden />
+</div>
+              <div class="cw-composer-toolbar">
+                <!-- <button id="cw-attach-btn" class="cw-composer-btn" type="button" aria-label="Attach file">
+                  <span class="cw-fluent-icon cw-icon-attach" aria-hidden="true"></span>
+                </button>
+                <input id="cw-file-input" class="cw-file-input" type="file" multiple accept="image/*,.pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx" hidden /> -->
+                <button id="cw-send-btn" class="cw-btn-send" type="button" aria-label="Send message">
+                  <span class="cw-fluent-icon cw-icon-send" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <p class="cw-disclaimer">AI-generated content may be incorrect</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="widget.js"></script>
+</body>
+</html>

@@ -25,10 +25,14 @@
     }
   </style>
   <link rel="stylesheet" href="css/style.min.css" media="screen">
+  <link rel="stylesheet" href="./ChatWidget/widget.css">
+<script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src=https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js></script>
   <script src=https://kb.apps365.com/plugins/jquery/jquery-ui.js></script>
   <script src=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js></script>
   <script src=https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js></script>
+
   <!-- <script src='../js\Headernavbar.js'></script> -->
 
   <!-- Google Tag Manager -->
@@ -354,7 +358,15 @@
             <h3 class="mb-3 mt-0 mobgetstarted">Task 365</h3>
           </a>
         </div>
-
+         <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="/BookTime-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
+                      style="padding-left: 1rem !important; padding-right: 1rem !important;">
+                      <img style="width:96px; height:96px; padding:12px;"
+                        src="https://ik.imagekit.io/zn4au2jftpm5/hr365/LOGO/BookTime365_RIMXh6t54.png"
+                        alt="BookTime 365" width="100%" height="auto">
+                      <h3 class="mb-3 mt-0 mobgetstarted">BookTime 365</h3>
+                    </a>
+                  </div>
 
         <div class="accordion col-12" id="appAccordion">
           <div class="card mb-4 rounded-0 shadow border-0">
@@ -372,15 +384,6 @@
 
                 <div class="row">
                   <div class="col-lg-4 col-sm-6 mb-4">
-                    <a href="/BookTime-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
-                      style="padding-left: 1rem !important; padding-right: 1rem !important;">
-                      <img style="width:96px; height:96px; padding:12px;"
-                        src="https://ik.imagekit.io/zn4au2jftpm5/hr365/LOGO/BookTime365_RIMXh6t54.png"
-                        alt="BookTime 365" width="100%" height="auto">
-                      <h3 class="mb-3 mt-0 mobgetstarted">BookTime 365</h3>
-                    </a>
-                  </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="./Stock365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;" src="Stock365/stock365.png" alt="Stock 365"
@@ -388,7 +391,7 @@
                       <h3 class="mb-3 mt-0 mobgetstarted">Stock 365</h3>
                     </a>
                   </div>
-
+                 
 
                   <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/Expense-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
@@ -515,29 +518,28 @@
                         Alert 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/praise-365" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
-                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/Praise365TeamsColor.png?updatedAt=1758625254222"
-                        alt="Alert 365" width="100%" height="auto">
+                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/Praise365TeamsColor.png?updatedAt=1758625254222" alt="Alert 365"
+                        width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
                         Praise 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/idea-box-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
-                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/IB365.png" alt="Alert 365" width="100%"
-                        height="auto">
+                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/IB365.png" alt="Alert 365"
+                        width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
                         Idea Box 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
-                    <a href="/count-down-calendar-365/"
-                      class="px-4 py-5 bg-white shadow text-center d-block match-height"
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="/count-down-calendar-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
                         src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/CountdownCalendar365.png" alt="Alert 365"
@@ -546,44 +548,44 @@
                         Countdown Calendar 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                   <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/icp-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
-                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/ICP365.png?updatedAt=1758203730436"
-                        alt="Alert 365" width="100%" height="auto">
+                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/ICP365.png?updatedAt=1758203730436" alt="Alert 365"
+                        width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
-                        ICP 365</h3>
+                       ICP 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                   <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/ms-forms-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
                         src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/MSforms365color.png" alt="Alert 365"
                         width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
-                        MS Forms 365</h3>
+                      MS Forms  365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                   <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/poll-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
-                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/PollIcon365.png" alt="Alert 365" width="100%"
-                        height="auto">
+                        src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/PollIcon365.png" alt="Alert 365"
+                        width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
-                        Poll 365</h3>
+                      Poll 365</h3>
                     </a>
                   </div>
-                  <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                     <a href="/joining-card-365/" class="px-4 py-5 bg-white shadow text-center d-block match-height"
                       style="padding-left: 1rem !important; padding-right: 1rem !important;">
                       <img style="width:96px; height:96px; padding:12px;"
                         src="https://ik.imagekit.io/zn4au2jftpm5/Webparts/JC_teams_color.png" alt="Alert 365"
                         width="100%" height="auto">
                       <h3 class="mb-3 mt-0 mobgetstarted">
-                        Joining Card 365</h3>
+                     Joining Card 365</h3>
                     </a>
                   </div>
                   <!-- 
@@ -925,6 +927,94 @@
       </div>
     </div>
   </footer>
+  
+  <div id="webchat" class="cw-webchat-host" aria-hidden="true"></div>
+  <button id="cw-fab" class="cw-fab" aria-label="Open chat" aria-expanded="false">
+    <img class="cw-fab-logo cw-fab-icon-chat" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="Apps365" aria-hidden="true" />
+    <span class="cw-fluent-icon cw-icon-close cw-fab-icon-close" aria-hidden="true"></span>
+  </button>
+
+  <div id="cw-widget" class="cw-widget" role="dialog" aria-label="Copilot chat">
+    <div class="cw-shell">
+      <aside id="cw-sidebar" class="cw-sidebar" aria-label="Chat history">
+        <div class="cw-sidebar-top">
+          <div class="cw-sidebar-brand">
+            <img class="cw-sidebar-brand-logo cw-brand-logo" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="Apps365" />
+            <span class="cw-sidebar-brand-title">Apps365 AI Assistant</span>
+          </div>
+          <button id="cw-sidebar-new-chat" class="cw-sidebar-new-btn" type="button">
+            <span class="cw-fluent-icon cw-icon-add" aria-hidden="true"></span>
+            Start a New Conversation
+          </button>
+          <div class="cw-search-wrap">
+            <span class="cw-fluent-icon cw-icon-search" aria-hidden="true"></span>
+            <input id="cw-search-input" type="search" placeholder="Search chats" autocomplete="off" />
+          </div>
+        </div>
+        <div class="cw-sidebar-label">Recent Conversations</div>
+        <ul id="cw-history-list" class="cw-history-list"></ul>
+      </aside>
+
+      <div id="cw-sidebar-backdrop" class="cw-sidebar-backdrop" aria-hidden="true"></div>
+
+      <div class="cw-chat-column">
+        <header id="cw-header" class="cw-header">
+          <div class="cw-header-left">
+            <button id="cw-sidebar-toggle" class="cw-icon-btn" type="button" aria-label="Toggle sidebar" aria-expanded="true">
+              <span class="cw-fluent-icon cw-icon-panel-open" aria-hidden="true"></span>
+              <span class="cw-fluent-icon cw-icon-panel-closed" aria-hidden="true"></span>
+            </button>
+            <button id="cw-move-btn" class="cw-my-btn" type="button" aria-label="Assistant">
+           <img class="cw-header-logo"
+         src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg"
+         alt="Apps365">
+         </button>
+            <span class="cw-header-copy">
+              <span id="cw-header-title" class="cw-header-title">Apps 365 AI Assistant</span>
+              <span id="cw-header-subtitle" class="cw-header-subtitle">Your recent conversations</span>
+            </span>
+          </div>
+          <div class="cw-header-actions">
+            <button id="cw-expand-btn" class="cw-icon-btn" type="button" aria-label="Expand chat">
+              <span class="cw-fluent-icon cw-icon-expand" aria-hidden="true"></span>
+              <span class="cw-fluent-icon cw-icon-collapse" aria-hidden="true"></span>
+            </button>
+            <button id="cw-new-chat" class="cw-icon-btn" type="button" aria-label="Close chat">
+              <span class="cw-fluent-icon cw-icon-close" aria-hidden="true"></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="cw-body-scroll">
+          <div class="cw-content">
+            <div id="cw-body" class="cw-body"></div>
+          </div>
+        </div>
+
+        <footer class="cw-footer">
+          <div class="cw-content">
+            <div class="cw-quick-replies" aria-label="Suggested questions">
+            </div>
+<div class="cw-composer" id="cw-composer">
+  <div id="cw-file-previews" class="cw-composer-previews" hidden></div>
+  <div class="cw-input-wrap">
+    <input id="cw-input" class="cw-composer-input" type="text" placeholder="Ask anything" autocomplete="off" />
+    <button id="cw-attach-btn" class="cw-composer-btn" type="button" aria-label="Attach file">
+      <span class="cw-fluent-icon cw-icon-attach" aria-hidden="true"></span>
+    </button>
+    <input id="cw-file-input" class="cw-file-input" type="file" multiple accept="image/*,.pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx" hidden />
+  </div>
+  <button id="cw-send-btn" class="cw-btn-send" type="button" aria-label="Send message">
+    <span class="cw-fluent-icon cw-icon-send" aria-hidden="true"></span>
+  </button>
+</div>
+            <p class="cw-disclaimer">AI-generated content may be incorrect</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
   <script src="./js/script.min.js "></script>
   <script src="./js/header-footer.js "></script>
   <!-- <script type="text/javascript ">
@@ -945,6 +1035,67 @@
   </script> -->
 
   <script src="/js/plus-toggle.js"></script>
+  <script src="./ChatWidget/widget.js"></script>
+  <script>
+    (function () {
+      const form = document.querySelector(".banner_form");
+      const input = document.getElementById("search");
+      if (!form || !input) return;
+
+      const panel = document.createElement("div");
+      panel.className = "ai-search-panel";
+      panel.hidden = true;
+      panel.innerHTML = `
+        <button type="button" class="ai-search-ask">
+          <span class="ai-search-icon" aria-hidden="true">✦</span>
+          <span>
+            <strong>ASK THE AI ASSISTANT</strong>
+            <span class="ai-search-query"></span>
+          </span>
+          <kbd>Enter</kbd>
+        </button>
+        <div class="ai-search-suggestions">
+          <strong>SUGGESTED ARTICLES</strong>
+          <a href="./sharepoint-helpdesk/">Configure SSO with Microsoft Entra ID</a>
+          <a href="./">Install the Apps365 add-in</a>
+          <a href="./HRMS-HR365/">Request leave in HR365</a>
+        </div>
+      `;
+      form.appendChild(panel);
+
+      const queryText = panel.querySelector(".ai-search-query");
+      function updatePanel() {
+        const value = input.value.trim();
+        panel.hidden = !value;
+        if (queryText) queryText.textContent = value ? `"${value}"` : "";
+      }
+
+      function askAssistant() {
+        const question = input.value.trim();
+        if (!question) return;
+        panel.hidden = true;
+        window.CopilotWidget?.ask(question);
+      }
+
+      input.addEventListener("input", updatePanel);
+      input.addEventListener("focus", updatePanel);
+      panel.querySelector(".ai-search-ask")?.addEventListener("click", askAssistant);
+      document.addEventListener("click", (event) => {
+        if (!form.contains(event.target)) panel.hidden = true;
+      });
+    })();
+
+    document.querySelector(".banner_form")?.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const question = document.getElementById("search")?.value.trim();
+      if (!question) return;
+      window.CopilotWidget?.ask(question);
+    });
+
+    document.querySelector(".banner_form .search-icon")?.addEventListener("click", function () {
+      document.querySelector(".banner_form")?.dispatchEvent(new Event("submit", { cancelable: true }));
+    });
+  </script>
 </body>
 
 </html>
