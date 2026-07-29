@@ -1,10 +1,10 @@
 ( function () {
   "use strict";
 
-  const DIRECT_LINE_SECRET = process.env.DIRECT_LINE_SECRET;
-  const tenantId = process.env.TENANT_ID;
-  const userId = process.env.USER_ID;
-  const userName = process.env.USER_NAME;
+  const DIRECT_LINE_SECRET = "94sSs6Vm33JKQsyFzQwwQcAMJ0oxJDY8L8H75wDwLW7463ewDmMpJQQJ99CFACrJL3JAArohAAABAZBS1xjt.3jeezJtbQlUDGbIMI3nVhGFF86M1kGOJwCDqRfYLgPkzpzv6e26oJQQJ99CFACrJL3JAArohAAABAZBS39Ve";
+  const tenantId = "apps365";
+  const userId = "currentuser";
+  const userName = "chats";
 
   if (!DIRECT_LINE_SECRET) {
     console.error("CopilotWidget: DIRECT_LINE_SECRET is missing. Check that .env is reachable at the configured path and contains DIRECT_LINE_SECRET=...");
