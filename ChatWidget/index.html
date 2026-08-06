@@ -22,7 +22,6 @@
   </button>
 
   <div id="cw-widget" class="cw-widget" role="dialog" aria-label="Copilot chat">
-
     <div class="cw-shell">
       <aside id="cw-sidebar" class="cw-sidebar" aria-label="Chat history">
         <div class="cw-sidebar-top">
@@ -36,7 +35,7 @@
             <input id="cw-search-input" type="search" placeholder="Search chats" autocomplete="off" />
           </div>
         </div>
-        <div class="cw-sidebar-label">Recent Conversations</div>
+        <label class="cw-sidebar-label">Recent Conversations</label>
         <ul id="cw-history-list" class="cw-history-list"></ul>
       </aside>
 
@@ -49,10 +48,14 @@
               <span class="cw-fluent-icon cw-icon-panel-open" aria-hidden="true"></span>
               <span class="cw-fluent-icon cw-icon-panel-closed" aria-hidden="true"></span>
             </button>
-            <button id="cw-move-btn" class="cw-icon-btn cw-move-btn cw-compact-only" type="button" aria-label="Assistant">
+            <button id="cw-move-btn" class="cw-icon-btn cw-compact-only" type="button" aria-label="Assistant">
               <span class="cw-fluent-icon cw-icon-sparkle" aria-hidden="true"></span>
             </button>
-            <!-- <span class="cw-header-copy">
+            <div class="cw-header-live-indicator" hidden>
+              <span class="cw-live-dot" aria-hidden="true"></span>
+              <span class="cw-live-text">Connected live via tawk.to</span>
+            </div>
+            <span class="cw-header-copy">
               <span id="cw-header-title" class="cw-header-title">Apps 365 AI Assistant</span>
               <span id="cw-header-subtitle" class="cw-header-subtitle">Your recent conversations</span>
             </span> -->
@@ -77,6 +80,9 @@
         <footer class="cw-footer">
           <div class="cw-content">
             <div class="cw-quick-replies" aria-label="Suggested questions">
+              <button type="button" class="cw-quick-reply" data-chip="raise-ticket">How to raise a ticket</button>
+              <button type="button" class="cw-quick-reply" data-chip="show-tickets">Show my tickets</button>
+              <button type="button" class="cw-quick-reply" data-chip="live-agent">Talk to a live agent</button>
             </div>
             <div class="cw-composer" id="cw-composer">
               <div id="cw-file-previews" class="cw-composer-previews" hidden></div>

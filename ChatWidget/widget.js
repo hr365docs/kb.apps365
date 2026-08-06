@@ -1,19 +1,40 @@
-( function () {
+(function () {
   "use strict";
 
   const DIRECT_LINE_SECRET = "94sSs6Vm33JKQsyFzQwwQcAMJ0oxJDY8L8H75wDwLW7463ewDmMpJQQJ99CFACrJL3JAArohAAABAZBS1xjt.3jeezJtbQlUDGbIMI3nVhGFF86M1kGOJwCDqRfYLgPkzpzv6e26oJQQJ99CFACrJL3JAArohAAABAZBS39Ve";
   const tenantId = "apps365";
-  const userId = "currentuser";
-  const userName = "chats";
+  const defaultUserId = "rakshitha";
+  const defaultUserName = "Rakshitha";
+  const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
+  const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1g01fv347";
+  const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
+  const SHAREPOINT_LIST_TITLE = "Apps365KBAgentPrompts";
+  const SHAREPOINT_TOKEN_URL = "https://websiteplans.apps365.com/api/token/cubiclogics";
+  const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
+  const canUseSharePointPersistence = !isLocalEnvironment;
+  const LOCAL_CONVERSATION_STORAGE_PREFIX = "cw-conversations-v1";
 
-  if (!DIRECT_LINE_SECRET) {
-    console.error("CopilotWidget: DIRECT_LINE_SECRET is missing. Check that .env is reachable at the configured path and contains DIRECT_LINE_SECRET=...");
+  function getCurrentUserProfile() {
+    const context = window._spPageContextInfo || {};
+    const email = String(context.userEmail || window.CW_USER_EMAIL || "").trim().toLowerCase();
+    const login = String(context.userLoginName || window.CW_USER_LOGIN || "").trim();
+    const name = String(context.userDisplayName || window.CW_USER_NAME || defaultUserName).trim() || defaultUserName;
+    const hasIdentity = Boolean(email || login || window.CW_USER_EMAIL || window.CW_USER_LOGIN);
+    const id = email || login || defaultUserId;
+
+    return {
+      id,
+      email,
+      name,
+      hasIdentity,
+    };
   }
 
-
-
-  const chatKey = `${tenantId}-${userId}`;
-  const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
+  const currentUser = getCurrentUserProfile();
+  const userId = currentUser.id;
+  const userName = currentUser.name;
+  const userEmail = currentUser.email;
+  const hasUserIdentity = currentUser.hasIdentity;
 
   const widget = document.getElementById("cw-widget");
   const fab = document.getElementById("cw-fab");
@@ -24,7 +45,6 @@
   const input = document.getElementById("cw-input");
   const newChatBtn = document.getElementById("cw-new-chat");
   const sidebarNewChatBtn = document.getElementById("cw-sidebar-new-chat");
-  const moveBtn = document.getElementById("cw-move-btn");
   const expandBtn = document.getElementById("cw-expand-btn");
   const sidebarToggleBtn = document.getElementById("cw-sidebar-toggle");
   const sendBtn = document.getElementById("cw-send-btn");
@@ -36,19 +56,34 @@
   const sidebarBackdrop = document.getElementById("cw-sidebar-backdrop");
   const historyList = document.getElementById("cw-history-list");
   const searchInput = document.getElementById("cw-search-input");
+  let tawkFrame = null;
+  const bodyScroll = document.querySelector(".cw-body-scroll");
+  const footer = document.querySelector(".cw-footer");
   const quickReplyBtns = document.querySelectorAll(".cw-quick-reply");
   const webchatDiv = document.getElementById("webchat");
 
   if (!widget || !fab || !header || !webchatDiv) return;
 
-  let conversations = JSON.parse(localStorage.getItem(chatKey)) || [];
+  let conversations = [];
   let currentConversation = null;
   let chatStarted = false;
   let directLine;
   let store;
+  let webChatInitPromise = null;
+  let webChatInitialized = false;
   let renderedMessageIds = new Set();
+  let conversationLoadPromise = null;
+  let conversationLoadStarted = false;
+  let sharePointToken = "";
+  let sharePointTokenExpiresAt = 0;
+  let sharePointListEntityType = "";
+  let sharePointDigest = "";
+  let sharePointDigestExpiresAt = 0;
+  let conversationSaveQueue = Promise.resolve();
+  let conversationSaveTimer = null;
 
   let isOpen = false;
+  let sessionRestored = false;
   let userPublicIp = "";
   fetch("https://api.ipify.org?format=json")
     .then((r) => r.json())
@@ -67,8 +102,457 @@
     marked.setOptions({ breaks: true, gfm: true });
   }
 
-  function saveConversations() {
-    localStorage.setItem(chatKey, JSON.stringify(conversations));
+  function getConversationKey(conv) {
+    return conv?.conversationId || conv?.spId || conv?.id || "";
+  }
+
+  function normalizeConversationTimestamp(value) {
+    if (!value) return Date.now();
+    const ts = new Date(value).getTime();
+    return Number.isNaN(ts) ? Date.now() : ts;
+  }
+
+  function escapeODataString(value) {
+    return String(value || "").replace(/'/g, "''");
+  }
+
+  function getConversationOwnerQuery() {
+    if (!hasUserIdentity) return "";
+
+    const email = userEmail || "";
+    const id = userId || "";
+    const parts = [];
+
+    if (email) parts.push(`Email eq '${escapeODataString(email)}'`);
+    if (id && id !== email) parts.push(`UserId eq '${escapeODataString(id)}'`);
+
+    return parts.length ? `&$filter=${parts.join(" or ")}` : "";
+  }
+
+  function getLocalConversationStorageKey() {
+    const scope = [tenantId, window.location.pathname || "/", userEmail || userId || "anonymous"].join(":");
+    return `${LOCAL_CONVERSATION_STORAGE_PREFIX}:${scope}`;
+  }
+
+  function cloneConversationForStorage(conv, { includeContentUrl = false } = {}) {
+    if (!conv) return null;
+
+    return {
+      ...conv,
+      messages: (conv.messages || []).map((message) => ({
+        ...message,
+        from: message.from ? { ...message.from } : message.from,
+        attachments: Array.isArray(message.attachments)
+          ? message.attachments.map((att) => ({
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
+            }))
+          : [],
+      })),
+    };
+  }
+
+  function normalizeLocalConversationItem(item) {
+    if (!item) return null;
+
+    const messages = sanitizeStoredMessages(item.messages || []);
+    const previewSource = messages[messages.length - 1] || { text: item.preview || item.title || "" };
+    const preview = getActivityPreview(previewSource);
+    const title = item.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
+
+    return {
+      spId: item.spId || null,
+      conversationId: item.conversationId || item.id || `local-${Date.now()}`,
+      title: title.slice(0, 50),
+      preview,
+      timestamp: normalizeConversationTimestamp(item.timestamp || item.modified || item.createdAt),
+      createdAt: item.createdAt || new Date().toISOString(),
+      email: item.email || userEmail || "",
+      pageUrl: item.pageUrl || window.location.href || "",
+      userIp: item.userIp || "",
+      userId: item.userId || userId || "",
+      messages,
+    };
+  }
+
+  function loadConversationsFromLocalStorage() {
+    try {
+      const raw = localStorage.getItem(getLocalConversationStorageKey());
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) return [];
+      return parsed.map(normalizeLocalConversationItem).filter(Boolean);
+    } catch {
+      return [];
+    }
+  }
+
+  function saveConversationsToLocalStorage() {
+    try {
+      const snapshot = conversations
+        .filter(isConversationForCurrentUser)
+        .map((conv) => cloneConversationForStorage(conv, { includeContentUrl: true }));
+      localStorage.setItem(getLocalConversationStorageKey(), JSON.stringify(snapshot));
+    } catch (error) {
+      console.warn("Unable to save conversations locally", error);
+    }
+  }
+
+  function decodeJwtExpiry(token) {
+    try {
+      const payload = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+      return typeof payload.exp === "number" ? payload.exp * 1000 : 0;
+    } catch {
+      return 0;
+    }
+  }
+
+  async function fetchSharePointToken() {
+    if (!canUseSharePointPersistence) {
+      throw new Error("SharePoint persistence is disabled in local development");
+    }
+
+    const response = await fetch(SHAREPOINT_TOKEN_URL);
+    if (!response.ok) {
+      throw new Error(`Token request failed (${response.status})`);
+    }
+
+    const data = await response.json();
+    const token = data.tokens || data.access_token || data.token || "";
+    if (!token) {
+      throw new Error("Token response did not include a token");
+    }
+
+    sharePointToken = token;
+    sharePointTokenExpiresAt = decodeJwtExpiry(token) || Date.now() + 45 * 60 * 1000;
+    return token;
+  }
+
+  async function getSharePointToken() {
+    if (!canUseSharePointPersistence) {
+      throw new Error("SharePoint persistence is disabled in local development");
+    }
+
+    if (sharePointToken && sharePointTokenExpiresAt > Date.now() + 60_000) {
+      return sharePointToken;
+    }
+    return fetchSharePointToken();
+  }
+
+  async function spRequest(path, options = {}, { skipDigest = false } = {}) {
+    if (!canUseSharePointPersistence) {
+      throw new Error("SharePoint persistence is disabled in local development");
+    }
+
+    const token = await getSharePointToken();
+    const headers = new Headers(options.headers || {});
+    headers.set("Authorization", `Bearer ${token}`);
+
+    const method = (options.method || "GET").toUpperCase();
+    const hasBody = options.body !== undefined && options.body !== null;
+    if (!headers.has("Accept")) headers.set("Accept", "application/json;odata=nometadata");
+    if (hasBody && !headers.has("Content-Type")) headers.set("Content-Type", "application/json;odata=nometadata");
+
+    if (!skipDigest && method !== "GET" && method !== "HEAD" && path !== "/_api/contextinfo") {
+      headers.set("X-RequestDigest", await getSharePointDigest());
+    }
+
+    return fetch(`${SHAREPOINT_SITE_URL}${path}`, {
+      ...options,
+      method,
+      headers,
+    });
+  }
+
+  async function getSharePointDigest() {
+    if (sharePointDigest && sharePointDigestExpiresAt > Date.now() + 60_000) {
+      return sharePointDigest;
+    }
+
+    const response = await spRequest(
+      "/_api/contextinfo",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json;odata=verbose",
+        },
+      },
+      { skipDigest: true }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Context info request failed (${response.status})`);
+    }
+
+    const data = await response.json();
+    const info = data?.d?.GetContextWebInformation || data?.GetContextWebInformation || {};
+    sharePointDigest = info.FormDigestValue || "";
+    const timeoutSeconds = Number(info.FormDigestTimeoutSeconds || 30);
+    sharePointDigestExpiresAt = Date.now() + Math.max(timeoutSeconds - 60, 1) * 1000;
+    return sharePointDigest;
+  }
+
+  async function ensureSharePointListMetadata() {
+    if (sharePointListEntityType) return;
+
+    const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
+    const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')?$select=ListItemEntityTypeFullName`, { method: "GET" });
+    if (!response.ok) {
+      throw new Error(`List metadata request failed (${response.status})`);
+    }
+
+    const data = await response.json();
+    sharePointListEntityType = data.ListItemEntityTypeFullName || data.d?.ListItemEntityTypeFullName || "";
+    if (!sharePointListEntityType) {
+      throw new Error("Unable to resolve SharePoint list entity type");
+    }
+  }
+
+  function sanitizeStoredMessages(rawMessages) {
+    if (!Array.isArray(rawMessages)) return [];
+
+    return rawMessages
+      .map((message, index) => {
+        if (!message) return null;
+        if (message.type && message.from) return message;
+
+        const role = message.role === "assistant" ? "bot" : message.role === "bot" ? "bot" : "user";
+        const text = message.content || message.text || "";
+        const attachments = Array.isArray(message.attachments)
+          ? message.attachments.map((att) => ({
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              contentUrl: att.contentUrl || "",
+              thumbnailUrl: att.thumbnailUrl || "",
+            }))
+          : [];
+
+        return {
+          id: message.id || `msg-${index}`,
+          type: "message",
+          text,
+          attachments,
+          from: {
+            id: role === "user" ? userId : "bot",
+            name: role === "user" ? userName : "Copilot",
+            role,
+          },
+          timestamp: message.timestamp || new Date().toISOString(),
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function serializeConversation(conv, { includeContentUrl = false } = {}) {
+    return {
+      messages: (conv.messages || []).map((message) => ({
+        role: message.from?.role === "bot" ? "assistant" : "user",
+        content: message.text || "",
+        attachments: Array.isArray(message.attachments)
+          ? message.attachments.map((att) => ({
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
+            }))
+          : [],
+        timestamp: message.timestamp || new Date().toISOString(),
+      })),
+    };
+  }
+
+  function parseSharePointConversationItem(item) {
+    const rawConversation = item.Conversation || item.ConversationJSON || item.ConversationJson || "";
+    let parsed = { messages: [] };
+    if (rawConversation) {
+      try {
+        parsed = JSON.parse(rawConversation);
+      } catch {
+        parsed = { messages: [] };
+      }
+    }
+
+    const messages = sanitizeStoredMessages(parsed.messages || []);
+    const previewSource = messages[messages.length - 1] || { text: item.Title || "" };
+    const preview = getActivityPreview(previewSource);
+    const title = item.Title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
+
+    return {
+      spId: item.Id || item.ID || null,
+      conversationId: item.ConversationId || item.ConversationID || `sp-${item.Id || item.ID || Date.now()}`,
+      title: title.slice(0, 50),
+      preview,
+      timestamp: normalizeConversationTimestamp(item.Modified || item.Created),
+      createdAt: item.Created || new Date().toISOString(),
+      email: item.Email || "",
+      pageUrl: item.PageUrl1 || item.PageURL || "",
+      userIp: item.UserIP || "",
+      userId: item.UserId || "",
+      messages,
+    };
+  }
+
+  function buildConversationFields(conv) {
+    const serialized = serializeConversation(conv);
+    return {
+      Title: conv.title || conv.preview || "New chat",
+      Email: conv.email || userEmail || "",
+      Conversation: JSON.stringify(serialized),
+      PageUrl1: conv.pageUrl || window.location.href || "",
+      UserIP: conv.userIp || userPublicIp || "",
+      ConversationId: conv.conversationId || "",
+      UserId: conv.userId || userId || "",
+    };
+  }
+
+  function isConversationForCurrentUser(conv) {
+    if (!hasUserIdentity) return true;
+
+    const ownerEmail = String(conv.email || "").trim().toLowerCase();
+    const ownerId = String(conv.userId || "").trim().toLowerCase();
+    const currentEmail = String(userEmail || "").trim().toLowerCase();
+    const currentId = String(userId || "").trim().toLowerCase();
+
+    if (currentEmail && ownerEmail) return ownerEmail === currentEmail;
+    if (currentId && ownerId) return ownerId === currentId;
+    return true;
+  }
+
+  async function persistConversation(conv) {
+    if (!conv) return;
+    if (!canUseSharePointPersistence) {
+      saveConversationsToLocalStorage();
+      return conv;
+    }
+    await ensureSharePointListMetadata();
+
+    const fields = buildConversationFields(conv);
+    const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
+    const payload = {
+      __metadata: {
+        type: sharePointListEntityType,
+      },
+      ...fields,
+    };
+
+    if (conv.spId) {
+      const response = await spRequest(
+        `/_api/web/lists/getbytitle('${safeTitle}')/items(${conv.spId})`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json;odata=verbose",
+            "Content-Type": "application/json;odata=verbose",
+            "If-Match": "*",
+            "X-HTTP-Method": "MERGE",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Conversation update failed (${response.status})`);
+      }
+      return;
+    }
+
+    const response = await spRequest(
+      `/_api/web/lists/getbytitle('${safeTitle}')/items`,
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json;odata=verbose",
+          "Content-Type": "application/json;odata=verbose",
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Conversation create failed (${response.status})`);
+    }
+
+    const data = await response.json();
+    conv.spId = data?.d?.Id || data?.d?.ID || data?.Id || data?.ID || conv.spId || null;
+    return conv;
+  }
+
+  function queueConversationSave(conv, immediate = false) {
+    if (!conv) return;
+    clearTimeout(conversationSaveTimer);
+
+    if (!canUseSharePointPersistence) {
+      conversationSaveTimer = setTimeout(() => {
+        saveConversationsToLocalStorage();
+      }, immediate ? 0 : 150);
+      return;
+    }
+
+    if (immediate) {
+      conversationSaveQueue = conversationSaveQueue
+        .then(() => persistConversation(conv))
+        .catch((error) => {
+          console.error("Unable to save conversation", error);
+        });
+      return;
+    }
+
+    conversationSaveTimer = setTimeout(() => {
+      conversationSaveQueue = conversationSaveQueue
+        .then(() => persistConversation(conv))
+        .catch((error) => {
+          console.error("Unable to save conversation", error);
+        });
+    }, 500);
+  }
+
+  async function loadConversationsFromSharePoint() {
+    if (conversationLoadPromise) return conversationLoadPromise;
+
+    conversationLoadPromise = (async () => {
+      try {
+        if (canUseSharePointPersistence) {
+          await ensureSharePointListMetadata();
+          const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
+          const response = await spRequest(
+            `/_api/web/lists/getbytitle('${safeTitle}')/items?$select=Id,Title,Conversation,Email,PageUrl1,UserIP,ConversationId,UserId,Created,Modified&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
+            { method: "GET" }
+          );
+
+          if (!response.ok) {
+            throw new Error(`Conversation list request failed (${response.status})`);
+          }
+
+          const data = await response.json();
+          const items = Array.isArray(data?.value) ? data.value : [];
+          conversations = items
+            .map(parseSharePointConversationItem)
+            .filter(isConversationForCurrentUser);
+
+          if (!hasUserIdentity && !conversations.length && items.length) {
+            conversations = items.map(parseSharePointConversationItem);
+          }
+        } else {
+          conversations = loadConversationsFromLocalStorage();
+        }
+
+        conversationLoadStarted = true;
+        renderHistoryList(searchInput?.value || "");
+        return conversations;
+      } catch (error) {
+        if (canUseSharePointPersistence) {
+          console.warn("Unable to load conversations from SharePoint, using local cache", error);
+        }
+        conversations = loadConversationsFromLocalStorage();
+        conversationLoadStarted = true;
+        renderHistoryList(searchInput?.value || "");
+        return conversations;
+      } finally {
+        conversationLoadPromise = null;
+      }
+    })();
+
+    return conversationLoadPromise;
   }
 
   function formatDate(ts) {
@@ -86,9 +570,11 @@
       d.getMonth() === yesterday.getMonth() &&
       d.getFullYear() === yesterday.getFullYear()
     ) {
-      return "Yesterday";
+      return `Yesterday, ${d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`;
     }
-    return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+    const dateOptions = { month: "short", day: "numeric" };
+    if (d.getFullYear() !== now.getFullYear()) dateOptions.year = "numeric";
+    return `${d.toLocaleDateString(undefined, dateOptions)}, ${d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`;
   }
 
   function escapeHtml(str) {
@@ -104,8 +590,10 @@
   }
 
   function scrollToBottom() {
-    const scrollEl = widget.querySelector(".cw-body-scroll");
-    if (scrollEl) scrollEl.scrollTop = scrollEl.scrollHeight;
+    if (!bodyScroll) return;
+    requestAnimationFrame(() => {
+      bodyScroll.scrollTop = bodyScroll.scrollHeight;
+    });
   }
 
   function clearMessages() {
@@ -122,7 +610,7 @@
         <img class="cw-brand-logo" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="" />
       </div>
       <div class="cw-empty-bubble">
-        Hi ${escapeHtml(userName)} <span aria-hidden="true">&#128075;</span> I'm your Apps365 AI assistant.I'm here to answer using the official Apps365 KB.
+        Hi ${escapeHtml(userName)} <span aria-hidden="true">&#128075;</span> I'm your Apps365 AI assistant. I'm here to answer using the official Apps365 KB.
       </div>
     `;
     body.appendChild(empty);
@@ -423,7 +911,7 @@
     filtered.forEach((conv) => {
       const li = document.createElement("li");
       li.className = "cw-history-item";
-      if (currentConversation && conv.id === currentConversation.id) {
+      if (currentConversation && getConversationKey(conv) === getConversationKey(currentConversation)) {
         li.classList.add("active");
       }
 
@@ -437,7 +925,7 @@
 
       li.addEventListener("click", () => {
         loadConversation(conv);
-        closeSidebar();
+        if (!isExpanded) closeSidebar();
       });
 
       historyList.appendChild(li);
@@ -530,17 +1018,29 @@
     });
   }
 
-  function initWebChat() {
-    if (!window.WebChat) {
-      console.error("BotFramework WebChat is not loaded.");
-      return;
-    }
+  function ensureWebChatInitialized() {
+    if (webChatInitialized) return Promise.resolve();
+    if (webChatInitPromise) return webChatInitPromise;
 
-    webchatDiv.innerHTML = "";
-    directLine = window.WebChat.createDirectLine({ secret: DIRECT_LINE_SECRET });
-    // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
-    store = createStore();
-    window.WebChat.renderWebChat({ directLine, store, userID: userId, username: userName }, webchatDiv);
+    webChatInitPromise = Promise.resolve().then(() => {
+      if (webChatInitialized) return;
+      if (!window.WebChat) {
+        throw new Error("BotFramework WebChat is not loaded.");
+      }
+
+      webchatDiv.innerHTML = "";
+      directLine = window.WebChat.createDirectLine({ secret: DIRECT_LINE_SECRET });
+      // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
+      store = createStore();
+      window.WebChat.renderWebChat({ directLine, store, userID: userId, username: userName }, webchatDiv);
+      webChatInitialized = true;
+    }).catch((error) => {
+      webChatInitPromise = null;
+      console.error(error);
+      throw error;
+    });
+
+    return webChatInitPromise;
   }
 
   function handleNewMessage(activity) {
@@ -550,12 +1050,17 @@
 
     if (!currentConversation) {
       const preview = getActivityPreview(activity);
+      const conversationId = `conv-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
       currentConversation = {
-        id: "conv-" + Date.now(),
+        id: conversationId,
+        conversationId,
         title: preview.slice(0, 50),
         preview,
         timestamp: Date.now(),
         messages: [],
+        pageUrl: window.location.href,
+        userIp: userPublicIp || "",
+        userId,
       };
       conversations.unshift(currentConversation);
     }
@@ -586,11 +1091,11 @@
       hideLoading();
     }
 
-    saveConversations();
+    queueConversationSave(currentConversation, true);
     renderHistoryList(searchInput?.value || "");
   }
 
-  function loadConversation(conv) {
+  async function loadConversation(conv) {
     hideLoading();
     currentConversation = conv;
     chatStarted = conv.messages.length > 0;
@@ -608,7 +1113,7 @@
     }
 
     beginReplayGuard();
-    initWebChat();
+    await ensureWebChatInitialized();
 
     setTimeout(() => {
       if (!store) return;
@@ -624,12 +1129,13 @@
   }
 
   function startNewConversation() {
+    closeLiveAgent();
     hideLoading();
     currentConversation = null;
     chatStarted = false;
     updateHeaderForCurrentView();
     showEmptyState();
-    initWebChat();
+    void ensureWebChatInitialized();
     renderHistoryList(searchInput?.value || "");
     if (input) {
       input.value = "";
@@ -639,18 +1145,25 @@
     updateSendButton();
   }
 
-  function restoreSession() {
+  async function restoreSession() {
+    closeLiveAgent();
+    await loadConversationsFromSharePoint();
     renderHistoryList();
+    if (currentConversation || chatStarted || body.querySelector(".cw-user-msg, .cw-copilot-msg")) {
+      return;
+    }
     if (conversations.length > 0) {
-      loadConversation(conversations[0]);
+      await loadConversation(conversations[0]);
     } else {
       updateHeaderForCurrentView();
       showEmptyState();
-      initWebChat();
+      void ensureWebChatInitialized();
     }
   }
+
 function sendMessage(text) {
     if (!store || !text) return;
+
     store.dispatch({
       type: "WEB_CHAT/SEND_MESSAGE",
       payload: {
@@ -701,6 +1214,70 @@ function sendMessage(text) {
     pendingFiles = [];
     renderFilePreviews();
     updateSendButton();
+  }
+
+  function fileToDataUrl(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result || ""));
+      reader.onerror = () => reject(reader.error || new Error("Could not read file"));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function getDirectLineConversationId() {
+    return (
+      directLine?.conversationId ||
+      directLine?.conversation?.conversationId ||
+      directLine?._conversationId ||
+      directLine?._conversation?.conversationId ||
+      ""
+    );
+  }
+
+  async function uploadFilesToDirectLine(filesToSend, text) {
+    const conversationId = getDirectLineConversationId();
+    if (!conversationId) {
+      throw new Error("Direct Line conversation is not ready");
+    }
+
+    const formData = new FormData();
+    filesToSend.forEach((item) => {
+      formData.append("file", item.file, item.file.name);
+    });
+
+    if (text) {
+      formData.append(
+        "activity",
+        new Blob(
+          [
+            JSON.stringify({
+              type: "message",
+              from: { id: userId, name: userName, role: "user" },
+              text,
+            }),
+          ],
+          { type: "application/vnd.microsoft.activity" }
+        )
+      );
+    }
+
+    const response = await fetch(
+      `https://directline.botframework.com/v3/directline/conversations/${encodeURIComponent(conversationId)}/upload?userId=${encodeURIComponent(userId)}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${DIRECT_LINE_SECRET}`,
+        },
+        body: formData,
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Direct Line upload failed (${response.status})`);
+    }
+
+    return response.json().catch(() => ({}));
   }
 
   function renderFilePreviews() {
@@ -767,25 +1344,46 @@ function sendMessage(text) {
     const filesToSend = [...pendingFiles];
     if (!text && !filesToSend.length) return;
 
+    try {
+      await ensureWebChatInitialized();
+    } catch {
+      showToast("Chat is still loading. Please try again.");
+      return;
+    }
+
     input.value = "";
     clearPendingFiles();
 
     try {
       if (filesToSend.length) {
-        const attachments = filesToSend.map((item) => ({
-          contentType: item.file.type || "application/octet-stream",
-          contentUrl: URL.createObjectURL(item.file),
-          name: item.file.name,
-        }));
+        const attachments = await Promise.all(
+          filesToSend.map(async (item) => ({
+            contentType: item.file.type || "application/octet-stream",
+            contentUrl: await fileToDataUrl(item.file),
+            name: item.file.name,
+          }))
+        );
 
-        const activity = await uploadActivity({
-          type: "message",
-          text,
-          from: { id: userId, name: userName, role: "user" },
-          attachments,
-        });
+        try {
+          await uploadFilesToDirectLine(filesToSend, text);
+          handleNewMessage({
+            id: `local-${Date.now()}`,
+            type: "message",
+            text,
+            attachments,
+            from: { id: userId, name: userName, role: "user" },
+            timestamp: new Date().toISOString(),
+          });
+        } catch {
+          const activity = await uploadActivity({
+            type: "message",
+            text,
+            from: { id: userId, name: userName, role: "user" },
+            attachments,
+          });
 
-        handleNewMessage(activity);
+          handleNewMessage(activity);
+        }
       } else if (text) {
         sendMessage(text);
       }
@@ -840,22 +1438,75 @@ function sendMessage(text) {
   }
 
   function openWidget() {
+    closeLiveAgent();
     isOpen = true;
     widget.classList.add("is-visible");
     fab.classList.add("is-open");
     fab.setAttribute("aria-label", "Close chat");
     fab.setAttribute("aria-expanded", "true");
     updateHeaderForCurrentView();
+    void ensureWebChatInitialized();
+    if (!sessionRestored) {
+      sessionRestored = true;
+      void restoreSession();
+    }
     setTimeout(() => input && input.focus(), 300);
   }
 
   function closeWidget() {
+    closeLiveAgent();
     isOpen = false;
     closeSidebar();
     widget.classList.remove("is-visible");
     fab.classList.remove("is-open");
     fab.setAttribute("aria-label", "Open chat");
     fab.setAttribute("aria-expanded", "false");
+  }
+
+  function openLiveAgent() {
+    if (document.querySelector(".cw-live-agent-card")) return;
+    appendCopilotMessage("Connecting to a live agent...");
+    scrollToBottom();
+
+    let liveCard = document.querySelector(".cw-live-agent-card");
+    if (!liveCard) {
+      liveCard = document.createElement("div");
+      liveCard.className = "cw-live-agent-card";
+      liveCard.innerHTML = `
+        <div class="cw-live-agent-card-header">
+          <span class="cw-live-dot" aria-hidden="true"></span>
+          <span class="cw-live-text">Connected live via tawk.to</span>
+          <button class="cw-live-agent-close cw-icon-btn" type="button" aria-label="Close live agent">
+            <span class="cw-fluent-icon cw-icon-close" aria-hidden="true"></span>
+          </button>
+        </div>
+        <iframe class="cw-tawk-frame" title="Live agent chat" allow="microphone"></iframe>
+      `;
+      body.appendChild(liveCard);
+      liveCard.querySelector(".cw-live-agent-close")?.addEventListener("click", closeLiveAgent);
+    }
+
+    tawkFrame = liveCard.querySelector(".cw-tawk-frame");
+    if (tawkFrame) tawkFrame.src = TAWK_CHAT_URL;
+
+    const headerIndicator = document.querySelector(".cw-header-live-indicator");
+    if (headerIndicator) headerIndicator.hidden = false;
+
+    scrollToBottom();
+  }
+
+  function closeLiveAgent() {
+    const liveCard = document.querySelector(".cw-live-agent-card");
+    if (liveCard) {
+      const frame = liveCard.querySelector(".cw-tawk-frame");
+      if (frame) frame.src = "about:blank";
+      liveCard.remove();
+    }
+
+    tawkFrame = null;
+
+    const headerIndicator = document.querySelector(".cw-header-live-indicator");
+    if (headerIndicator) headerIndicator.hidden = true;
   }
 
   function toggleWidget() {
@@ -934,9 +1585,51 @@ function sendMessage(text) {
 
   searchInput?.addEventListener("input", () => renderHistoryList(searchInput.value));
   quickReplyBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
+      const chip = btn.dataset.chip;
+
+      if (chip === "raise-ticket") {
+        try {
+          await ensureWebChatInitialized();
+        } catch {
+          showToast("Chat is still loading. Please try again.");
+          return;
+        }
+        if (!input) return;
+        input.value = "How to raise a ticket";
+        updateSendButton();
+        handleSend();
+        return;
+      }
+
+      if (chip === "live-agent") {
+        openLiveAgent();
+        return;
+      }
+
+      if (chip === "show-tickets") {
+        if (!input) return;
+        try {
+          await ensureWebChatInitialized();
+        } catch {
+          showToast("Chat is still loading. Please try again.");
+          return;
+        }
+        input.value = "Show my tickets";
+        updateSendButton();
+        handleSend();
+        return;
+      }
+
+      // fallback for any other quick-reply button using data-question
       const question = btn.dataset.question || btn.textContent || "";
       if (!input || !question.trim()) return;
+      try {
+        await ensureWebChatInitialized();
+      } catch {
+        showToast("Chat is still loading. Please try again.");
+        return;
+      }
       input.value = question.trim();
       updateSendButton();
       handleSend();
@@ -988,9 +1681,17 @@ function sendMessage(text) {
 
 updateSendButton();
   updateSidebarToggleState();
-  restoreSession();
-
-  // Public API lets an external page control the widget.
+  void loadConversationsFromSharePoint();
+  if (window.requestIdleCallback) {
+    window.requestIdleCallback(() => {
+      void ensureWebChatInitialized().catch(() => {});
+    });
+  } else {
+    setTimeout(() => {
+      void ensureWebChatInitialized().catch(() => {});
+    }, 1000);
+  }
+  // Public API lets an external page control the widget.  
   window.CopilotWidget = {
     open() {
       openWidget();
@@ -1013,3 +1714,5 @@ updateSendButton();
     },
   };
 })();
+
+
