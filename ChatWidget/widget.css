@@ -27,7 +27,12 @@
     --cw-font: "Segoe UI", -apple-system, BlinkMacSystemFont, "Inter", Roboto, Helvetica, Arial, sans-serif;
 }
 #cw-widget-root {
-  --text-color: #353535;
+  --text-color: #353535 !important;
+}
+ 
+.cw-markdown,
+.cw-markdown * {
+  color: #353535 !important;
 }
 *,
 *::before,
@@ -60,7 +65,7 @@ body {
 .banner_form {
     position: relative;
 }
-
+ 
 /* FAB */
 .cw-fab {
     position: fixed;
@@ -97,24 +102,7 @@ body {
     height: 30px;
     object-fit: contain;
 }
-.cw-icon-close::before {
-    content: "\E711 ";
-}
-.cw-icon-add::before {
-    content: "\E710 ";
-}
-.cw-icon-search::before {
-    content: "\E721 ";
-}
-.cw-icon-panel-open::before {
-    content: "\E700 ";
-}
-.cw-icon-panel-closed::before {
-    content: "\E72B ";
-}
-.cw-icon-move::before {
-    content: "\E7C2 ";
-}
+ 
 .cw-brand-logo {
     display: block;
     object-fit: contain;
@@ -134,24 +122,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.cw-icon-expand::before {
-    content: "\E740";
-}
-.cw-icon-collapse::before {
-    content: "\E73F";
-}
-.cw-icon-attach::before {
-    content: "\E723";
-}
-.cw-icon-send::before {
-    content: "\E724";
-}
-.cw-icon-copy::before {
-    content: "\E8C8";
-}
-.cw-icon-edit::before {
-    content: "\E70F";
-}
+ 
 .cw-fab .cw-fluent-icon {
     width: 26px;
     height: 26px;
@@ -163,7 +134,7 @@ body {
 .cw-fab:not(.is-open) .cw-fab-icon-close {
     display: none;
 }
-
+ 
 /* Widget shell */
 .cw-widget {
     position: fixed;
@@ -244,7 +215,7 @@ body {
 .cw-widget.is-expanded .cw-compact-only {
     display: none;
 }
-
+ 
 /* Sidebar toggle icons */
 #cw-sidebar-toggle .cw-icon-panel-closed[data-hydrated] {
     display: none;
@@ -257,7 +228,7 @@ body {
 .cw-widget:not(.is-expanded):not(.sidebar-open) #cw-sidebar-toggle .cw-icon-panel-closed[data-hydrated] {
     display: inline-flex;
 }
-
+ 
 /* Header */
 .cw-header {
     display: flex;
@@ -344,8 +315,8 @@ body {
     border-radius: 10px;
     color: #fff;
     flex-shrink: 0;
-} 
-
+}
+ 
 /*.cw-icon-btn {
   display: inline-flex;
   align-items: center;
@@ -353,7 +324,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: white; 
+  color: white;
 }*/
 .cw-icon-btn svg {
   width: 20px;
@@ -385,12 +356,12 @@ body {
     color: #fff;
     flex-shrink: 0;
         background: #3844ec;
-
+ 
 }
 .cw-header-logo{
     height:34px;
 }
-
+ 
 .cw-widget.is-expanded .cw-header-logo{
     display:none;
 }
@@ -447,12 +418,12 @@ body {
 .cw-widget:not(.is-expanded) .cw-btn-new-chat .cw-btn-label {
     display: none;
 }
-
+ 
 /* Main layout */
 .cw-main {
     display: none;
 }
-
+ 
 /* Sidebar */
 .cw-sidebar {
     width: var(--cw-sidebar-w);
@@ -617,7 +588,7 @@ body {
     margin-bottom: 4px;
     padding: 4px;
     margin-left: 5px;
-    
+   
 }
 .cw-history-meta {
     display: flex;
@@ -647,7 +618,7 @@ body {
     color: var(--cw-text-muted);
     text-align: center;
 }
-
+ 
 /* Chat area */
 .cw-body-scroll {
     flex: 1;
@@ -664,7 +635,7 @@ body {
     background: #cfd4dc;
     border-radius: 4px;
 }
-
+ 
 /* Centered content column */
 .cw-content {
     width: 100%;
@@ -676,7 +647,7 @@ body {
 .cw-body {
     padding: 24px 0 16px;
 }
-
+ 
 /* Date separator */
 .cw-date-sep {
     display: flex;
@@ -695,7 +666,7 @@ body {
     font-size: 12px;
     color: var(--cw-text-muted);
 }
-
+ 
 /* User message — Copilot style */
 .cw-user-msg {
     display: flex;
@@ -842,7 +813,7 @@ body {
 .cw-widget.is-expanded .cw-toast {
     bottom: 100px;
 }
-
+ 
 /* Copilot response card */
 .cw-copilot-msg {
     margin-bottom: 20px;
@@ -862,7 +833,7 @@ body {
     line-height: 1.55;
     color: #07162f;
 }
-
+ 
 /* Loading / typing indicator */
 .cw-loading-msg {
     margin-bottom: 16px;
@@ -909,7 +880,7 @@ body {
         opacity: 1;
     }
 }
-
+ 
 /* Markdown */
 .cw-markdown h1,
 .cw-markdown h2,
@@ -978,7 +949,7 @@ body {
     color: var(--cw-text-secondary);
     margin: 12px 0;
 }
-
+ 
 /* Empty state */
 .cw-empty-state {
     display: grid;
@@ -999,7 +970,7 @@ body {
     font-size: 16px;
     line-height: 1.55;
 }
-
+ 
 /* Footer composer */
 .cw-footer {
     padding: 12px 0 14px;
@@ -1080,17 +1051,17 @@ body {
     flex: 0 0 auto;
     height: 38px;
     padding: 0 16px;
-    border: 1px solid rgb(150 203 248);
+    border: 1px solid rgb(19, 88, 200);
     border-radius: 999px;
-    background: rgb(211 231 248);
-    color: #3844ec;
+    background: #3c48ed;
+    color: #fff;
     font: 600 14px var(--cw-font);
     cursor: pointer;
     white-space: nowrap;
 }
 .cw-quick-reply:hover {
-    background: rgb(211, 231, 248);
-    border-color: rgb(199 201 253);
+    background: #3844ec;
+    border-color: #3844ec;
 }
 .cw-composer {
     display: flex;
@@ -1242,7 +1213,8 @@ body {
     transform: scale(1.05);
 }
 .cw-btn-send:disabled {
-    opacity: 0.35;
+    opacity: 1;        
+    background: #3844ec;
     cursor: not-allowed;
     box-shadow: none;
 }
@@ -1267,7 +1239,7 @@ body {
     pointer-events: none;
     z-index: -1;
 }
-
+ 
 /* Expanded workspace + compact polish */
 .cw-widget.is-expanded {
     background: #f4f7fd;
@@ -1450,9 +1422,10 @@ body {
     width: 52px;
 }
 .cw-btn-send:disabled {
-    opacity: 0.72;
+    opacity: 1;            
+    background: #3844ec;
 }
-
+ 
 .ai-search-panel {
     position: absolute;
     left: 0;
@@ -1531,7 +1504,7 @@ body {
 .ai-search-suggestions a:hover {
     color: #6422c5;
 }
-
+ 
 /* Responsive */
 @media (max-width: 768px) {
     #kb-chatbot-root {
@@ -1610,9 +1583,10 @@ body {
   color: #007bff !important;
   text-decoration: none;
 }
-
+ 
 @media (max-width: 768px) {
   #cw-expand-btn {
     display: none;
   }
 }
+ 
