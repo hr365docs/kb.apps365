@@ -1,10 +1,12 @@
+import { hydrateIcons } from './icons.js';
+
 (function () {
   "use strict";
 
   const DIRECT_LINE_SECRET = "94sSs6Vm33JKQsyFzQwwQcAMJ0oxJDY8L8H75wDwLW7463ewDmMpJQQJ99CFACrJL3JAArohAAABAZBS1xjt.3jeezJtbQlUDGbIMI3nVhGFF86M1kGOJwCDqRfYLgPkzpzv6e26oJQQJ99CFACrJL3JAArohAAABAZBS39Ve";
   const tenantId = "apps365";
-  const defaultUserId = "rakshitha";
-  const defaultUserName = "Rakshitha";
+  const defaultUserId = "";
+  const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
   const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1g01fv347";
   const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
@@ -12,29 +14,53 @@
   const SHAREPOINT_TOKEN_URL = "https://websiteplans.apps365.com/api/token/cubiclogics";
   const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
   const canUseSharePointPersistence = !isLocalEnvironment;
+  const USER_EMAIL_STORAGE_KEY = "kb_user_email";
   const LOCAL_CONVERSATION_STORAGE_PREFIX = "cw-conversations-v1";
+
+  function normalizeEmail(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function getStoredUserEmail() {
+    try {
+      return normalizeEmail(localStorage.getItem(USER_EMAIL_STORAGE_KEY));
+    } catch {
+      return "";
+    }
+  }
+
+  function setStoredUserEmail(email) {
+    const normalized = normalizeEmail(email);
+    try {
+      if (normalized) {
+        localStorage.setItem(USER_EMAIL_STORAGE_KEY, normalized);
+      } else {
+        localStorage.removeItem(USER_EMAIL_STORAGE_KEY);
+      }
+    } catch {
+      // Ignore storage failures so the widget keeps working without persistence.
+    }
+    return normalized;
+  }
 
   function getCurrentUserProfile() {
     const context = window._spPageContextInfo || {};
-    const email = String(context.userEmail || window.CW_USER_EMAIL || "").trim().toLowerCase();
+    const email = normalizeEmail(context.userEmail || window.CW_USER_EMAIL || getStoredUserEmail());
     const login = String(context.userLoginName || window.CW_USER_LOGIN || "").trim();
     const name = String(context.userDisplayName || window.CW_USER_NAME || defaultUserName).trim() || defaultUserName;
-    const hasIdentity = Boolean(email || login || window.CW_USER_EMAIL || window.CW_USER_LOGIN);
     const id = email || login || defaultUserId;
 
     return {
       id,
       email,
       name,
-      hasIdentity,
     };
   }
 
   const currentUser = getCurrentUserProfile();
-  const userId = currentUser.id;
+  let userId = currentUser.id;
   const userName = currentUser.name;
-  const userEmail = currentUser.email;
-  const hasUserIdentity = currentUser.hasIdentity;
+  let currentUserEmail = currentUser.email;
 
   const widget = document.getElementById("cw-widget");
   const fab = document.getElementById("cw-fab");
@@ -64,6 +90,10 @@
 
   if (!widget || !fab || !header || !webchatDiv) return;
 
+  // Fill in every static icon span (expand, collapse, close, search, add,
+  // panel-open/closed, sparkle, attach, send) now that the DOM is ready.
+  hydrateIcons(document);
+
   let conversations = [];
   let currentConversation = null;
   let chatStarted = false;
@@ -74,6 +104,7 @@
   let renderedMessageIds = new Set();
   let conversationLoadPromise = null;
   let conversationLoadStarted = false;
+  let conversationLoadVersion = 0;
   let sharePointToken = "";
   let sharePointTokenExpiresAt = 0;
   let sharePointListEntityType = "";
@@ -96,6 +127,7 @@
   let dragOffsetX = 0;
   let dragOffsetY = 0;
   let pendingFiles = [];
+  let lastUserMsgEl = null;
   let isReplayingHistory = false;
   let replayGuardTimer = null;
   if (window.marked) {
@@ -117,20 +149,13 @@
   }
 
   function getConversationOwnerQuery() {
-    if (!hasUserIdentity) return "";
-
-    const email = userEmail || "";
-    const id = userId || "";
-    const parts = [];
-
-    if (email) parts.push(`Email eq '${escapeODataString(email)}'`);
-    if (id && id !== email) parts.push(`UserId eq '${escapeODataString(id)}'`);
-
-    return parts.length ? `&$filter=${parts.join(" or ")}` : "";
+    const email = normalizeEmail(currentUserEmail);
+    //return email ? `&$filter=Email eq '${escapeODataString(email)}'` : "";
+    return email ? `&$filter=tolower(Email) eq '${escapeODataString(email.toLowerCase())}'` : "";
   }
 
   function getLocalConversationStorageKey() {
-    const scope = [tenantId, window.location.pathname || "/", userEmail || userId || "anonymous"].join(":");
+    const scope = [tenantId, window.location.pathname || "/", currentUserEmail || "anonymous"].join(":");
     return `${LOCAL_CONVERSATION_STORAGE_PREFIX}:${scope}`;
   }
 
@@ -168,7 +193,7 @@
       preview,
       timestamp: normalizeConversationTimestamp(item.timestamp || item.modified || item.createdAt),
       createdAt: item.createdAt || new Date().toISOString(),
-      email: item.email || userEmail || "",
+      email: item.email || currentUserEmail || "",
       pageUrl: item.pageUrl || window.location.href || "",
       userIp: item.userIp || "",
       userId: item.userId || userId || "",
@@ -396,7 +421,7 @@
     const serialized = serializeConversation(conv);
     return {
       Title: conv.title || conv.preview || "New chat",
-      Email: conv.email || userEmail || "",
+      Email: conv.email || currentUserEmail || "",
       Conversation: JSON.stringify(serialized),
       PageUrl1: conv.pageUrl || window.location.href || "",
       UserIP: conv.userIp || userPublicIp || "",
@@ -406,15 +431,38 @@
   }
 
   function isConversationForCurrentUser(conv) {
-    if (!hasUserIdentity) return true;
-
     const ownerEmail = String(conv.email || "").trim().toLowerCase();
-    const ownerId = String(conv.userId || "").trim().toLowerCase();
-    const currentEmail = String(userEmail || "").trim().toLowerCase();
-    const currentId = String(userId || "").trim().toLowerCase();
+    const currentEmail = String(currentUserEmail || "").trim().toLowerCase();
 
-    if (currentEmail && ownerEmail) return ownerEmail === currentEmail;
-    if (currentId && ownerId) return ownerId === currentId;
+    if (!currentEmail || !ownerEmail) return false;
+    return ownerEmail === currentEmail;
+  }
+
+  function extractEmailFromText(text) {
+    const match = String(text || "").match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i);
+    return match ? normalizeEmail(match[0]) : "";
+  }
+
+  function applyUserEmailIdentity(email, { persist = true, reloadHistory = true } = {}) {
+    const normalized = normalizeEmail(email);
+    if (!normalized || normalized === normalizeEmail(currentUserEmail)) return false;
+
+    currentUserEmail = normalized;
+    userId = normalized;
+
+    if (persist) {
+      setStoredUserEmail(normalized);
+    }
+
+    conversationLoadPromise = null;
+    if (reloadHistory) {
+      void conversationSaveQueue
+        .then(() => loadConversationsFromSharePoint(true))
+        .then(() => {
+          renderHistoryList(searchInput?.value || "");
+        });
+    }
+
     return true;
   }
 
@@ -506,11 +554,30 @@
     }, 500);
   }
 
-  async function loadConversationsFromSharePoint() {
-    if (conversationLoadPromise) return conversationLoadPromise;
+  async function loadConversationsFromSharePoint(forceReload = false) {
+    if (forceReload) {
+      conversationLoadPromise = null;
+    } else if (conversationLoadPromise) {
+      return conversationLoadPromise;
+    }
+
+    if (forceReload) {
+      conversationLoadStarted = false;
+    }
+
+    const loadVersion = ++conversationLoadVersion;
 
     conversationLoadPromise = (async () => {
       try {
+        if (!currentUserEmail) {
+          conversations = [];
+          if (loadVersion === conversationLoadVersion) {
+            conversationLoadStarted = true;
+            renderHistoryList(searchInput?.value || "");
+          }
+          return conversations;
+        }
+
         if (canUseSharePointPersistence) {
           await ensureSharePointListMetadata();
           const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
@@ -528,12 +595,18 @@
           conversations = items
             .map(parseSharePointConversationItem)
             .filter(isConversationForCurrentUser);
-
-          if (!hasUserIdentity && !conversations.length && items.length) {
-            conversations = items.map(parseSharePointConversationItem);
-          }
         } else {
           conversations = loadConversationsFromLocalStorage();
+        }
+if (loadVersion !== conversationLoadVersion) {
+          return conversations;
+        }
+        if (currentConversation) {
+          const key = getConversationKey(currentConversation);
+          const stillPresent = conversations.some((c) => getConversationKey(c) === key);
+          if (!stillPresent) {
+            conversations.unshift(currentConversation);
+          }
         }
 
         conversationLoadStarted = true;
@@ -544,11 +617,16 @@
           console.warn("Unable to load conversations from SharePoint, using local cache", error);
         }
         conversations = loadConversationsFromLocalStorage();
+        if (loadVersion !== conversationLoadVersion) {
+          return conversations;
+        }
         conversationLoadStarted = true;
         renderHistoryList(searchInput?.value || "");
         return conversations;
       } finally {
-        conversationLoadPromise = null;
+        if (loadVersion === conversationLoadVersion) {
+          conversationLoadPromise = null;
+        }
       }
     })();
 
@@ -593,6 +671,15 @@
     if (!bodyScroll) return;
     requestAnimationFrame(() => {
       bodyScroll.scrollTop = bodyScroll.scrollHeight;
+    });
+  }
+  function scrollToMessageStart(msgEl) {
+    if (!bodyScroll || !msgEl) return;
+    requestAnimationFrame(() => {
+      const containerTop = bodyScroll.getBoundingClientRect().top;
+      const msgTop = msgEl.getBoundingClientRect().top;
+      const offset = msgTop - containerTop;
+      bodyScroll.scrollTop += offset - 10;
     });
   }
 
@@ -688,10 +775,13 @@
     `;
   }
 
-  function copilotActionsHtml() {
+  function copilotActionsHtml(messageId) {
     return `
       <div class="cw-copilot-actions">
         <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy response">${fluentIconHtml("copy")}</button>
+        <span class="cw-action-divider" aria-hidden="true"></span>
+        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-up" data-message-id="${escapeHtml(messageId || "")}" aria-label="Good response" aria-pressed="false">${fluentIconHtml("thumb-like")}</button>
+        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-down" data-message-id="${escapeHtml(messageId || "")}" aria-label="Bad response" aria-pressed="false">${fluentIconHtml("thumb-dislike")}</button>
       </div>
     `;
   }
@@ -723,9 +813,36 @@
     }
   }
 
-  function bindCopilotMessageActions(container, text) {
+  function bindCopilotMessageActions(container, text, messageId) {
     const copyBtn = container.querySelector('.cw-copilot-actions [data-action="copy"]');
     bindCopyButton(copyBtn, text);
+
+    const upBtn = container.querySelector('.cw-copilot-actions [data-action="feedback-up"]');
+    const downBtn = container.querySelector('.cw-copilot-actions [data-action="feedback-down"]');
+    bindFeedbackButtons(upBtn, downBtn, messageId, text);
+  }
+
+  function bindFeedbackButtons(upBtn, downBtn, messageId, answerText) {
+    if (!upBtn || !downBtn) return;
+
+    function setState(rating) {
+      const isUp = rating === "up";
+      const isDown = rating === "down";
+      upBtn.classList.toggle("is-selected", isUp);
+      downBtn.classList.toggle("is-selected", isDown);
+      upBtn.setAttribute("aria-pressed", String(isUp));
+      downBtn.setAttribute("aria-pressed", String(isDown));
+    }
+
+    upBtn.addEventListener("click", () => {
+      const alreadyUp = upBtn.classList.contains("is-selected");
+      setState(alreadyUp ? null : "up");
+    });
+
+    downBtn.addEventListener("click", () => {
+      const alreadyDown = downBtn.classList.contains("is-selected");
+      setState(alreadyDown ? null : "down");
+    });
   }
 
   function appendUserMessage(activity) {
@@ -759,12 +876,13 @@
     inner.innerHTML = html;
     wrap.appendChild(inner);
     body.appendChild(wrap);
+    hydrateIcons(inner);
 
     bindUserMessageActions(inner, text, attachments, includeEdit);
     scrollToBottom();
   }
 
-  function appendCopilotMessage(text) {
+ function appendCopilotMessage(text, messageId) {
     hideLoading();
     hideEmptyState();
     const msg = document.createElement("article");
@@ -773,11 +891,12 @@
       <div class="cw-copilot-card">
         <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
       </div>
-      ${text?.trim() ? copilotActionsHtml() : ""}
+      ${text?.trim() ? copilotActionsHtml(messageId) : ""}
     `;
     body.appendChild(msg);
-    bindCopilotMessageActions(msg, text || "");
-    scrollToBottom();
+    hydrateIcons(msg);
+    bindCopilotMessageActions(msg, text || "", messageId);
+    scrollToMessageStart(lastUserMsgEl || msg);
   }
 
   function renderActivity(activity) {
@@ -792,11 +911,11 @@
       `${activity.text || ""}-${activity.attachments?.[0]?.name || ""}-${activity.timestamp}`;
     if (renderedMessageIds.has(id)) return;
     renderedMessageIds.add(id);
-
+    
     if (activity.from && activity.from.role === "user") {
       appendUserMessage(activity);
     } else if (hasText) {
-      appendCopilotMessage(activity.text);
+      appendCopilotMessage(activity.text, activity.id || id);
     }
   }
 
@@ -940,7 +1059,7 @@
       visible ? "Hide sidebar" : "Show sidebar"
     );
   }
-
+  
   function openSidebar() {
     if (isExpanded) {
       isSidebarCollapsed = false;
@@ -1048,6 +1167,13 @@
       if (!currentConversation || shouldIgnoreBotMessage(activity)) return;
     }
 
+    if (activity.from.role === "user") {
+      const capturedEmail = extractEmailFromText(activity.text);
+      if (capturedEmail) {
+        applyUserEmailIdentity(capturedEmail, { persist: true, reloadHistory: true });
+      }
+    }
+
     if (!currentConversation) {
       const preview = getActivityPreview(activity);
       const conversationId = `conv-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
@@ -1061,6 +1187,7 @@
         pageUrl: window.location.href,
         userIp: userPublicIp || "",
         userId,
+        email: currentUserEmail || "",
       };
       conversations.unshift(currentConversation);
     }
@@ -1071,6 +1198,7 @@
     if (activity.from.role === "user") {
       const preview = getActivityPreview(activity);
       currentConversation.title = preview.slice(0, 50);
+      currentConversation.email = currentUserEmail || currentConversation.email || "";
     }
     updateHeaderForCurrentView();
 
@@ -1087,6 +1215,7 @@
 
     if (activity.from.role === "user") {
       showLoading();
+      lastUserMsgEl = body.querySelector(".cw-user-msg:last-of-type");
     } else {
       hideLoading();
     }
@@ -1465,7 +1594,6 @@ function sendMessage(text) {
 
   function openLiveAgent() {
     if (document.querySelector(".cw-live-agent-card")) return;
-    appendCopilotMessage("Connecting to a live agent...");
     scrollToBottom();
 
     let liveCard = document.querySelector(".cw-live-agent-card");
@@ -1483,6 +1611,7 @@ function sendMessage(text) {
         <iframe class="cw-tawk-frame" title="Live agent chat" allow="microphone"></iframe>
       `;
       body.appendChild(liveCard);
+      hydrateIcons(liveCard);
       liveCard.querySelector(".cw-live-agent-close")?.addEventListener("click", closeLiveAgent);
     }
 
@@ -1588,6 +1717,11 @@ function sendMessage(text) {
     btn.addEventListener("click", async () => {
       const chip = btn.dataset.chip;
 
+      if (chip === "contact-support") {
+        window.open("https://www.apps365.com/support/", "_blank", "noopener");
+        return;
+      }
+
       if (chip === "raise-ticket") {
         try {
           await ensureWebChatInitialized();
@@ -1607,19 +1741,19 @@ function sendMessage(text) {
         return;
       }
 
-      if (chip === "show-tickets") {
-        if (!input) return;
-        try {
-          await ensureWebChatInitialized();
-        } catch {
-          showToast("Chat is still loading. Please try again.");
-          return;
-        }
-        input.value = "Show my tickets";
-        updateSendButton();
-        handleSend();
-        return;
-      }
+      // if (chip === "show-tickets") {
+      //   if (!input) return;
+      //   try {
+      //     await ensureWebChatInitialized();
+      //   } catch {
+      //     showToast("Chat is still loading. Please try again.");
+      //     return;
+      //   }
+      //   input.value = "Show my tickets";
+      //   updateSendButton();
+      //   handleSend();
+      //   return;
+      // }
 
       // fallback for any other quick-reply button using data-question
       const question = btn.dataset.question || btn.textContent || "";
@@ -1714,5 +1848,3 @@ updateSendButton();
     },
   };
 })();
-
-
