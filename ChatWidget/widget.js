@@ -708,6 +708,28 @@ if (loadVersion !== conversationLoadVersion) {
     renderedMessageIds.clear();
   }
 
+   function bindSupportSelectButtons(container) {
+    const techBtn = container.querySelector('[data-support="technical"]');
+    const salesBtn = container.querySelector('[data-support="sales"]');
+
+    techBtn?.addEventListener("click", () => {
+      window.open("https://www.apps365.com/support/", "_blank", "noopener");
+    });
+
+    salesBtn?.addEventListener("click", async () => {
+      try {
+        await ensureWebChatInitialized();
+      } catch {
+        showToast("Chat is still loading. Please try again.");
+        return;
+      }
+      if (!input) return;
+      input.value = "I have a question about pricing";
+      updateSendButton();
+      handleSend();
+    });
+  }
+
   function showEmptyState() {
     clearMessages();
     const empty = document.createElement("div");
@@ -721,10 +743,23 @@ if (loadVersion !== conversationLoadVersion) {
       </div>
     `;
     body.appendChild(empty);
+
+    const supportCard = document.createElement("div");
+    supportCard.className = "cw-support-select";
+    supportCard.innerHTML = `
+      <div class="cw-support-select-subtitle">Please select the type of support you need.</div>
+      <div class="cw-support-select-actions">
+        <button type="button" class="cw-support-select-btn" data-support="technical">Technical Support</button>
+        <button type="button" class="cw-support-select-btn" data-support="sales">Sales Support</button>
+      </div>
+    `;
+    body.appendChild(supportCard);
+    bindSupportSelectButtons(supportCard);
   }
 
   function hideEmptyState() {
     body.querySelector(".cw-empty-state")?.remove();
+    body.querySelector(".cw-support-select")?.remove();
   }
 
   function showToast(message) {
