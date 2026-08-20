@@ -13,7 +13,8 @@ import { hydrateIcons } from './icons.js';
   const SHAREPOINT_LIST_TITLE = "Apps365KBAgentPrompts";
   const SHAREPOINT_TOKEN_URL = "https://websiteplans.apps365.com/api/token/cubiclogics";
   const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
-  const canUseSharePointPersistence = !isLocalEnvironment;
+  const forceSharePointLocally = new URLSearchParams(location.search).get("forceSp") === "1";
+  const canUseSharePointPersistence = !isLocalEnvironment || forceSharePointLocally;
   const USER_EMAIL_STORAGE_KEY = "kb_user_email";
   const LOCAL_CONVERSATION_STORAGE_PREFIX = "cw-conversations-v1";
 
@@ -91,7 +92,7 @@ import { hydrateIcons } from './icons.js';
   if (!widget || !fab || !header || !webchatDiv) return;
 
   // Fill in every static icon span (expand, collapse, close, search, add,
-  // panel-open/closed, sparkle, attach, send) now that the DOM is ready.
+  // panel-open/closed, sparkle, attach, send)
   hydrateIcons(document);
 
   let conversations = [];
@@ -102,6 +103,7 @@ import { hydrateIcons } from './icons.js';
   let webChatInitPromise = null;
   let webChatInitialized = false;
   let renderedMessageIds = new Set();
+  const feedbackCache = {}; 
   let conversationLoadPromise = null;
   let conversationLoadStarted = false;
   let conversationLoadVersion = 0;
@@ -130,6 +132,7 @@ import { hydrateIcons } from './icons.js';
   let lastUserMsgEl = null;
   let isReplayingHistory = false;
   let replayGuardTimer = null;
+  let isWaitingForResponse = false;
   if (window.marked) {
     marked.setOptions({ breaks: true, gfm: true });
   }
@@ -149,9 +152,13 @@ import { hydrateIcons } from './icons.js';
   }
 
   function getConversationOwnerQuery() {
+    // SharePoint's classic list REST API does not support the tolower() OData
+    // function (400 Bad Request), which silently broke this filter and made
+    // every load fall back to the local per-browser cache instead of SharePoint.
+    // Email is already normalized to lowercase everywhere it's written, so a
+    // plain eq comparison is sufficient and SharePoint-supported.
     const email = normalizeEmail(currentUserEmail);
-    //return email ? `&$filter=Email eq '${escapeODataString(email)}'` : "";
-    return email ? `&$filter=tolower(Email) eq '${escapeODataString(email.toLowerCase())}'` : "";
+    return email ? `&$filter=Email eq '${escapeODataString(email)}'` : "";
   }
 
   function getLocalConversationStorageKey() {
@@ -186,7 +193,7 @@ import { hydrateIcons } from './icons.js';
     const preview = getActivityPreview(previewSource);
     const title = item.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
 
-    return {
+      return {
       spId: item.spId || null,
       conversationId: item.conversationId || item.id || `local-${Date.now()}`,
       title: title.slice(0, 50),
@@ -197,6 +204,7 @@ import { hydrateIcons } from './icons.js';
       pageUrl: item.pageUrl || window.location.href || "",
       userIp: item.userIp || "",
       userId: item.userId || userId || "",
+      feedback: item.feedback || {},
       messages,
     };
   }
@@ -402,6 +410,15 @@ import { hydrateIcons } from './icons.js';
     const preview = getActivityPreview(previewSource);
     const title = item.Title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
 
+        let feedback = {};
+    if (item.Feedback) {
+      try {
+        feedback = JSON.parse(item.Feedback);
+      } catch {
+        feedback = {};
+      }
+    }
+
     return {
       spId: item.Id || item.ID || null,
       conversationId: item.ConversationId || item.ConversationID || `sp-${item.Id || item.ID || Date.now()}`,
@@ -413,16 +430,17 @@ import { hydrateIcons } from './icons.js';
       pageUrl: item.PageUrl1 || item.PageURL || "",
       userIp: item.UserIP || "",
       userId: item.UserId || "",
+      feedback,
       messages,
     };
   }
-
   function buildConversationFields(conv) {
     const serialized = serializeConversation(conv);
     return {
       Title: conv.title || conv.preview || "New chat",
       Email: conv.email || currentUserEmail || "",
       Conversation: JSON.stringify(serialized),
+      Feedback: JSON.stringify(conv.feedback || {}),
       PageUrl1: conv.pageUrl || window.location.href || "",
       UserIP: conv.userIp || userPublicIp || "",
       ConversationId: conv.conversationId || "",
@@ -454,13 +472,15 @@ import { hydrateIcons } from './icons.js';
       setStoredUserEmail(normalized);
     }
 
-    conversationLoadPromise = null;
+        conversationLoadPromise = null;
     if (reloadHistory) {
-      void conversationSaveQueue
-        .then(() => loadConversationsFromSharePoint(true))
-        .then(() => {
-          renderHistoryList(searchInput?.value || "");
-        });
+      Promise.resolve().then(() => {
+        void conversationSaveQueue
+          .then(() => loadConversationsFromSharePoint(true))
+          .then(() => {
+            renderHistoryList(searchInput?.value || "");
+          });
+      });
     }
 
     return true;
@@ -581,8 +601,8 @@ import { hydrateIcons } from './icons.js';
         if (canUseSharePointPersistence) {
           await ensureSharePointListMetadata();
           const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
-          const response = await spRequest(
-            `/_api/web/lists/getbytitle('${safeTitle}')/items?$select=Id,Title,Conversation,Email,PageUrl1,UserIP,ConversationId,UserId,Created,Modified&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
+          const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')/items?$select=Id,Title,Conversation,Feedback,Email,PageUrl1,UserIP,ConversationId,UserId,Created,Modified&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
+            
             { method: "GET" }
           );
 
@@ -763,14 +783,27 @@ if (loadVersion !== conversationLoadVersion) {
     return `<span class="cw-fluent-icon cw-icon-${name}" aria-hidden="true"></span>`;
   }
 
-  function userActionsHtml(includeEdit) {
+   function userActionsHtml(includeEdit) {
     const editBtn = includeEdit
-      ? `<button type="button" class="cw-msg-action" data-action="edit" aria-label="Edit message">${fluentIconHtml("edit")}</button>`
+      ? `<button type="button" class="cw-msg-action" data-action="edit" aria-label="Edit message" title="Edit message">${fluentIconHtml("edit")}</button>`
       : "";
     return `
       <div class="cw-user-actions">
-        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message">${fluentIconHtml("copy")}</button>
+        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message" title="Copy message">${fluentIconHtml("copy")}</button>
         ${editBtn}
+      </div>
+    `;
+  }
+
+  function feedbackFormHtml() {
+    return `
+      <div class="cw-feedback-form" hidden>
+        <label class="cw-feedback-label">Tell us about your experience</label>
+        <textarea class="cw-feedback-textarea" rows="2"></textarea>
+        <div class="cw-feedback-form-actions">
+          <button type="button" class="cw-feedback-submit">Submit</button>
+          <button type="button" class="cw-feedback-cancel">Cancel</button>
+        </div>
       </div>
     `;
   }
@@ -778,10 +811,10 @@ if (loadVersion !== conversationLoadVersion) {
   function copilotActionsHtml(messageId) {
     return `
       <div class="cw-copilot-actions">
-        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy response">${fluentIconHtml("copy")}</button>
+        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy response" title="Copy response">${fluentIconHtml("copy")}</button>
         <span class="cw-action-divider" aria-hidden="true"></span>
-        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-up" data-message-id="${escapeHtml(messageId || "")}" aria-label="Good response" aria-pressed="false">${fluentIconHtml("thumb-like")}</button>
-        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-down" data-message-id="${escapeHtml(messageId || "")}" aria-label="Bad response" aria-pressed="false">${fluentIconHtml("thumb-dislike")}</button>
+        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-up" data-message-id="${escapeHtml(messageId || "")}" aria-label="Good response" title="Good response" aria-pressed="false">${fluentIconHtml("thumb-like")}</button>
+        <button type="button" class="cw-msg-action cw-feedback-btn" data-action="feedback-down" data-message-id="${escapeHtml(messageId || "")}" aria-label="Bad response" title="Bad response" aria-pressed="false">${fluentIconHtml("thumb-dislike")}</button>
       </div>
     `;
   }
@@ -813,35 +846,87 @@ if (loadVersion !== conversationLoadVersion) {
     }
   }
 
-  function bindCopilotMessageActions(container, text, messageId) {
+   function bindCopilotMessageActions(container, text, messageId) {
     const copyBtn = container.querySelector('.cw-copilot-actions [data-action="copy"]');
     bindCopyButton(copyBtn, text);
-
-    const upBtn = container.querySelector('.cw-copilot-actions [data-action="feedback-up"]');
-    const downBtn = container.querySelector('.cw-copilot-actions [data-action="feedback-down"]');
-    bindFeedbackButtons(upBtn, downBtn, messageId, text);
+    bindFeedbackButtons(container, messageId);
   }
 
-  function bindFeedbackButtons(upBtn, downBtn, messageId, answerText) {
-    if (!upBtn || !downBtn) return;
+  function saveFeedback(messageId, rating, comment) {
+    if (!currentConversation || !messageId) return;
+    if (!currentConversation.feedback) currentConversation.feedback = {};
+    currentConversation.feedback[messageId] = {
+      rating,
+      comment: comment || "",
+      timestamp: new Date().toISOString(),
+    };
+      queueConversationSave(currentConversation, true);
+  }
 
-    function setState(rating) {
-      const isUp = rating === "up";
-      const isDown = rating === "down";
-      upBtn.classList.toggle("is-selected", isUp);
-      downBtn.classList.toggle("is-selected", isDown);
-      upBtn.setAttribute("aria-pressed", String(isUp));
-      downBtn.setAttribute("aria-pressed", String(isDown));
+  function bindFeedbackButtons(container, messageId) {
+    const upBtn = container.querySelector('[data-action="feedback-up"]');
+    const downBtn = container.querySelector('[data-action="feedback-down"]');
+    const form = container.querySelector(".cw-feedback-form");
+    const textarea = form?.querySelector(".cw-feedback-textarea");
+    const cancelBtn = form?.querySelector(".cw-feedback-cancel");
+    const submitBtn = form?.querySelector(".cw-feedback-submit");
+
+    if (!upBtn || !downBtn || !form || !textarea || !cancelBtn || !submitBtn) return;
+
+    function setSelected(rating) {
+      upBtn.classList.toggle("is-selected", rating === "up");
+      downBtn.classList.toggle("is-selected", rating === "down");
+      upBtn.setAttribute("aria-pressed", String(rating === "up"));
+      downBtn.setAttribute("aria-pressed", String(rating === "down"));
+    }
+
+    function openForm(rating) {
+      form.dataset.rating = rating;
+      const existing = feedbackCache[messageId];
+      textarea.value = existing && existing.rating === rating ? existing.comment || "" : "";
+      form.hidden = false;
+      textarea.focus();
+    }
+
+    function closeForm() {
+      form.hidden = true;
+    }
+
+    // Restore existing feedback state (e.g. re-opening a saved conversation)
+    const existingFeedback = currentConversation?.feedback?.[messageId];
+    if (existingFeedback) {
+      feedbackCache[messageId] = existingFeedback;
+      setSelected(existingFeedback.rating);
     }
 
     upBtn.addEventListener("click", () => {
-      const alreadyUp = upBtn.classList.contains("is-selected");
-      setState(alreadyUp ? null : "up");
+      if (!form.hidden && form.dataset.rating === "up") {
+        closeForm();
+        return;
+      }
+      openForm("up");
     });
 
     downBtn.addEventListener("click", () => {
-      const alreadyDown = downBtn.classList.contains("is-selected");
-      setState(alreadyDown ? null : "down");
+      if (!form.hidden && form.dataset.rating === "down") {
+        closeForm();
+        return;
+      }
+      openForm("down");
+    });
+
+    cancelBtn.addEventListener("click", closeForm);
+
+    submitBtn.addEventListener("click", () => {
+      const rating = form.dataset.rating;
+      if (!rating) return;
+      const comment = textarea.value.trim();
+
+      feedbackCache[messageId] = { rating, comment, timestamp: new Date().toISOString() };
+      setSelected(rating);
+      closeForm();
+      saveFeedback(messageId, rating, comment);
+      showToast(rating === "up" ? "Thanks for your feedback!" : "Thanks, we'll use this to improve.");
     });
   }
 
@@ -882,7 +967,7 @@ if (loadVersion !== conversationLoadVersion) {
     scrollToBottom();
   }
 
- function appendCopilotMessage(text, messageId) {
+  function appendCopilotMessage(text, messageId) {
     hideLoading();
     hideEmptyState();
     const msg = document.createElement("article");
@@ -892,6 +977,7 @@ if (loadVersion !== conversationLoadVersion) {
         <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
       </div>
       ${text?.trim() ? copilotActionsHtml(messageId) : ""}
+      ${text?.trim() ? feedbackFormHtml() : ""}
     `;
     body.appendChild(msg);
     hydrateIcons(msg);
@@ -984,8 +1070,15 @@ if (loadVersion !== conversationLoadVersion) {
     updateHeaderTitle("Apps365 AI Assistant");
   }
 
-  function showLoading() {
-    if (body.querySelector("#cw-loading")) return;
+   function showLoading() {
+    isWaitingForResponse = true;
+    if (input) input.disabled = true;
+    if (attachBtn) attachBtn.disabled = true;
+
+    if (body.querySelector("#cw-loading")) {
+      if (sendBtn) sendBtn.disabled = true;
+      return;
+    }
 
     const el = document.createElement("article");
     el.id = "cw-loading";
@@ -1006,6 +1099,17 @@ if (loadVersion !== conversationLoadVersion) {
 
   function hideLoading() {
     body.querySelector("#cw-loading")?.remove();
+    isWaitingForResponse = false;
+    if (input) input.disabled = false;
+    if (attachBtn) attachBtn.disabled = false;
+    updateSendButton();
+  }
+
+  function hideLoading() {
+    body.querySelector("#cw-loading")?.remove();
+    isWaitingForResponse = false;
+    if (input) input.disabled = false;
+    if (attachBtn) attachBtn.disabled = false;
     updateSendButton();
   }
 
@@ -1192,13 +1296,13 @@ if (loadVersion !== conversationLoadVersion) {
       conversations.unshift(currentConversation);
     }
 
-    currentConversation.messages.push(activity);
-    currentConversation.preview = getActivityPreview(activity);
+       currentConversation.messages.push(activity);
     currentConversation.timestamp = Date.now();
     if (activity.from.role === "user") {
-      const preview = getActivityPreview(activity);
-      currentConversation.title = preview.slice(0, 50);
       currentConversation.email = currentUserEmail || currentConversation.email || "";
+    } else if (!currentConversation.previewSet) {
+      currentConversation.preview = getActivityPreview(activity);
+      currentConversation.previewSet = true;
     }
     updateHeaderForCurrentView();
 
@@ -1467,8 +1571,12 @@ function sendMessage(text) {
     });
   }
 
-  async function handleSend() {
+    async function handleSend() {
     if (!input) return;
+    if (isWaitingForResponse) {
+      showToast("Please wait for the current response to finish.");
+      return;
+    }
     const text = input.value.trim();
     const filesToSend = [...pendingFiles];
     if (!text && !filesToSend.length) return;
@@ -1529,9 +1637,9 @@ function sendMessage(text) {
     fileInput?.click();
   }
 
-  function updateSendButton() {
+   function updateSendButton() {
     if (!sendBtn || !input) return;
-    const canSend = input.value.trim().length > 0 || pendingFiles.length > 0;
+    const canSend = !isWaitingForResponse && (input.value.trim().length > 0 || pendingFiles.length > 0);
     sendBtn.disabled = !canSend;
   }
 
