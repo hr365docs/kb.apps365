@@ -11,7 +11,7 @@ import { hydrateIcons } from './icons.js';
   const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1g01fv347";
   const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
   const SHAREPOINT_LIST_TITLE = "Apps365KBAgentPrompts";
-  const SHAREPOINT_TOKEN_URL = "https://websiteplans.apps365.com/api/token/cubiclogics";
+  const SHAREPOINT_TOKEN_URL = "https://mt365token.azurewebsites.net/api/token/cubiclogics";
   const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
   const forceSharePointLocally = new URLSearchParams(location.search).get("forceSp") === "1";
   const canUseSharePointPersistence = !isLocalEnvironment || forceSharePointLocally;
