@@ -8,10 +8,10 @@ import { hydrateIcons } from './icons.js';
   const defaultUserId = "";
   const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
-  const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1g01fv347";
+  const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1jvqen11n";
   const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
   const SHAREPOINT_LIST_TITLE = "Apps365KBAgentPrompts";
-  const SHAREPOINT_TOKEN_URL = "https://websiteplans.apps365.com/api/token/cubiclogics";
+  const SHAREPOINT_TOKEN_URL = "https://mt365token.azurewebsites.net/api/token/cubiclogics";
   const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
   const forceSharePointLocally = new URLSearchParams(location.search).get("forceSp") === "1";
   const canUseSharePointPersistence = !isLocalEnvironment || forceSharePointLocally;
@@ -708,12 +708,33 @@ if (loadVersion !== conversationLoadVersion) {
     renderedMessageIds.clear();
   }
 
-   function bindSupportSelectButtons(container) {
+     function appendLocalBotMessage(text) {
+    hideEmptyState();
+    const msg = document.createElement("article");
+    msg.className = "cw-copilot-msg";
+    msg.innerHTML = `
+      <div class="cw-copilot-card">
+        <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
+      </div>
+    `;
+    body.appendChild(msg);
+    scrollToBottom();
+  }
+
+  function bindSupportSelectButtons(container) {
     const techBtn = container.querySelector('[data-support="technical"]');
     const salesBtn = container.querySelector('[data-support="sales"]');
 
-    techBtn?.addEventListener("click", () => {
-      window.open("https://www.apps365.com/support/", "_blank", "noopener");
+    techBtn?.addEventListener("click", async () => {
+      container.remove();
+      try {
+        await ensureWebChatInitialized();
+      } catch {
+      }
+      appendLocalBotMessage(
+        "Sure! What would you like help with? You can ask me anything about Apps365 products — features, setup, troubleshooting, and more."
+      );
+      input?.focus();
     });
 
     salesBtn?.addEventListener("click", async () => {
