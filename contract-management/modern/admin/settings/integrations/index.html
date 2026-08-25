@@ -563,6 +563,442 @@ Toggle between available services to configure your preferred e-signature provid
   <p>Only when you accept the changes will the updated text be applied in the contract template.</p>
   <div>
     <img src="45.png" onclick="openModal('45.png')" alt="Final Risk Update in Template" width="100%" height="auto">
+  </div><br><br>
+
+  <h2 id="_ai_risk">
+    <a class="header-icon-link highlight" href="#">How to Integrate Copilot with CLM 365
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h2>
+  <p>Step-by-Step Configuration Guide</p>
+  <h3 id="_ai_risk">
+    <a class="header-icon-link highlight" href="#">Prerequisites
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3><hr />
+  <p>The following licenses and subscriptions are required before proceeding with the configuration:</p>
+   <ul class="page-list" style="list-style-type:decimal; list-style-position: inside;">
+        <li>Power Automate Premium license</li>
+        <li>Copilot License for the user who is configuring and publishing the Copilot</li>
+        <li>Azure Pay As You Go subscription for Copilot credits</li>
+   </ul><br>  
+   <h3 id="_ai_risk">
+    <a class="header-icon-link highlight" href="#">Part 1: Create the Copilot Agent & Azure App Registration
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3><hr/>
+  <p>These steps cover creating the Copilot agent in Microsoft Copilot Studio and registering the application in Azure.</p>
+  <p><strong>Step 1.</strong> Enter https://copilotstudio.microsoft.com/ in any browser.</p>
+  <div>
+    <img src="46.png" onclick="openModal('46.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 2.</strong> Click on "Agents" in the left navigation panel.</p>
+  <div>
+    <img src="47.png" onclick="openModal('47.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 3.</strong> Click on "+ Create blank agent" button at the top right.</p>
+  <div>
+    <img src="48.png" onclick="openModal('48.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 4.</strong> Enter the name of the agent (e.g., "CLM 365") and click "Create".</p>
+  <div>
+    <img src="49.png" onclick="openModal('49.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 5.</strong> Once the agent is created, click on "Settings" in the top right.</p>
+  <div>
+    <img src="50.png" onclick="openModal('50.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 6.</strong> Open https://portal.azure.com/ in a new browser tab.</p>
+  <div>
+    <img src="51.png" onclick="openModal('51.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 7.</strong> In the Azure portal, click on "Microsoft Entra ID" in the left navigation panel.</p>
+  <div>
+    <img src="52.png" onclick="openModal('52.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 8.</strong> Under Manage, click on "App registrations".</p>
+  <div>
+    <img src="53.png" onclick="openModal('53.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 9.</strong> Click on the "+ New registration" button at the top of the App registrations page.</p>
+  <div>
+    <img src="54.png" onclick="openModal('54.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 10.</strong> Enter a Name for your application, and then click the "Register" button.</p>
+  <div>
+    <img src="55.png" onclick="openModal('55.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 11.</strong> After registration, copy the Application (client) ID from the overview page — you will need this for authentication.</p>
+  <div>
+    <img src="56.png" onclick="openModal('56.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 12.</strong> Click on "Add a certificate or secret" link under Client credentials.</p>
+  <div>
+    <img src="57.png" onclick="openModal('57.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 13.</strong> On the Certificates & secrets page, click "+ New client secret"./p>
+  <div>
+    <img src="58.png" onclick="openModal('58.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 14.</strong> Add a description and choose an expiration period, then click "Add".</p>
+  <div>
+    <img src="59.png" onclick="openModal('59.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 15.</strong> Once created, copy the Value of the client secret immediately — it will only be shown once.</p>
+  <div>
+    <img src="60.png" onclick="openModal('60.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 16.</strong> Click on "Overview" to return to the application overview page.</p>
+  <div>
+    <img src="61.png" onclick="openModal('61.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 17.</strong> Click on "Add a Redirect URI" in the application overview under Redirect URIs.</p>
+  <div>
+    <img src="62.png" onclick="openModal('62.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 18.</strong> On the Authentication page, click "+ Add Redirect URI".</p>
+  <div>
+    <img src="63.png" onclick="openModal('63.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 19.</strong> Select "Web" as the platform to add the redirect URI.</p>
+  <div>
+    <img src="64.png" onclick="openModal('64.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 20.</strong> Enter the Redirect URI for that go back to copilot studio</p>
+  <div>
+    <img src="65.png" onclick="openModal('65.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <br>
+  <h3 id="_ai_risk">
+    <a class="header-icon-link highlight" href="#">Part 2: Configure Security, Authentication & API Permissions
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3><hr/>
+  <p>These steps configure the authentication settings in Copilot Studio and assign all required API permissions in Azure.</p>
+   <p><strong>Step 21.</strong> Go back to Copilot Studio Settings, click on "Security" in the left panel.</p>
+  <div>
+    <img src="66.png" onclick="openModal('66.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 22.</strong> Click on "Authentication" to configure the authentication settings.</p>
+  <div>
+    <img src="67.png" onclick="openModal('67.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 23.</strong> Select "Authenticate manually", enable "Require users to sign in", and copy the Redirect URL shown.</p>
+  <div>
+    <img src="68.png" onclick="openModal('68.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 24.</strong> Back in Azure, paste the copied Redirect URL into the Redirect URI field and click "Configure".</p>
+  <div>
+    <img src="69.png" onclick="openModal('69.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 25.</strong> Now click on "API permissions" in the left navigation panel.</p>
+  <div>
+    <img src="70.png" onclick="openModal('70.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 26.</strong> Click "+ Add a permission" on the API permissions page.</p>
+  <div>
+    <img src="71.png" onclick="openModal('71.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 27.</strong> In the Request API permissions panel, select "SharePoint".</p>
+  <div>
+    <img src="72.png" onclick="openModal('72.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 28.</strong> Select "Application permissions" for SharePoint.</p>
+  <div>
+    <img src="73.png" onclick="openModal('73.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 29.</strong> Search for sites under sites, select "Sites.Read.All" and click "Add permissions".</p>
+  <div>
+    <img src="74.png" onclick="openModal('74.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 30.</strong> Click "+ Add a permission" again, then select "Microsoft Graph".</p>
+  <div>
+    <img src="75.png" onclick="openModal('75.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 31.</strong> Select "Microsoft Graph" from the API list.</p>
+  <div>
+    <img src="76.png" onclick="openModal('76.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 32.</strong> Select "Delegated permissions" for Microsoft Graph.</p>
+  <div>
+    <img src="77.png" onclick="openModal('77.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 33.</strong> Search for files under Files, select "Files.Read.All" and click "Add permissions".</p>
+  <div>
+    <img src="78.png" onclick="openModal('78.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+ <div>
+    <img src="78(a).png" onclick="openModal('78(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="78(b).png" onclick="openModal('78(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 34.</strong> Click + Add a permission, select Microsoft Graph, choose Delegated permissions, search for openid, select the openid permission, and then click Add permissions.</p>
+  <div>
+    <img src="79.png" onclick="openModal('79.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="79(a).png" onclick="openModal('79(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="79(b).png" onclick="openModal('79(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 35.</strong>Click + Add a permission, select Microsoft Graph, choose Delegated permissions, search for profile, select the profile permission, and then click Add permissions.</p>
+  <div>
+    <img src="80.png" onclick="openModal('80.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="80(a).png" onclick="openModal('80(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="80(b).png" onclick="openModal('80(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 36.</strong> Click + Add a permission, select Microsoft Graph, choose Delegated permissions, search for Sites, under sites select the Sites.Read.All permission, and then click Add permissions.</p>
+  <div>
+    <img src="81.png" onclick="openModal('81.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+   <img src="81(a).png" onclick="openModal('81(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="81(b).png" onclick="openModal('81(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 37.</strong> Click + Add a permission, select Microsoft Graph, choose Delegated permissions, search for User, select the User.Read and User.Read.All permissions, and then click Add permissions.</p>
+  <div>
+    <img src="82.png" onclick="openModal('82.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+   <img src="82(a).png" onclick="openModal('82(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="82(b).png" onclick="openModal('82(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 38.</strong> Click + Add a permission, select Microsoft Graph, choose Application permissions, search for Files, select the Files.Read.All permission, and then click Add permissions.</p>
+  <div>
+    <img src="83.png" onclick="openModal('83.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+   <img src="83(a).png" onclick="openModal('83(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="83(b).png" onclick="openModal('83(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 39.</strong> Click + Add a permission, select Microsoft Graph, choose Application permissions, search for Sites, select the Sites.Read.All permission, and then click Add permissions.</p>
+  <div>
+    <img src="84.png" onclick="openModal('84.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+   <img src="84(a).png" onclick="openModal('84(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <div>
+    <img src="84(b).png" onclick="openModal('84(b).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br><br>
+
+  <h3 id="_ai_risk">
+    <a class="header-icon-link highlight" href="#">Part 3: Grant Admin Consent & Configure Power Automate Flow
+      <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+    </a>
+  </h3><hr/>
+  <p>These steps complete the admin consent process in Azure, configure authentication and Web Channel Security in Copilot Studio, and update the Power Automate flow with the required secrets.</p>
+  <p><strong>Step 40.</strong> After adding all permissions, click "Grant admin consent for bitzap" (or your tenant name) on the API permissions page.</p>
+  <div>
+    <img src="85.png" onclick="openModal('85.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 41.</strong> A confirmation dialog will appear. Click "Yes" to grant admin consent for all configured permissions.</p>
+  <div>
+    <img src="86.png" onclick="openModal('86.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 42.</strong> Go back to Copilot Studio and open the agent Settings. Click on "Security" in the left panel.</p>
+  <div>
+    <img src="87.png" onclick="openModal('87.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 43.</strong> Under Security, click on "Authentication" to configure how users will sign in.</p>
+  <div>
+    <img src="88.png" onclick="openModal('88.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 44.</strong>Select "Authenticate manually", then enable "Require users to sign in". Note the Redirect URL shown.</p>
+  <div>
+    <img src="89.png" onclick="openModal('89.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 45.</strong>In the Service provider dropdown, select "Microsoft Entra ID V2 with client secrets".</p>
+  <div>
+    <img src="90.png" onclick="openModal('90.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 46.</strong> Enter the Client ID (Application (client) ID from Azure) and Client Secret (Value you copied earlier). In the Scopes field, enter : profile openid Files.Read.All Sites.Read.All</p>
+  <div>
+    <img src="91.png" onclick="openModal('91.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 47.</strong> Review the Scopes field to confirm it contains "profile openid Files.Read.All Sites.Read.All", then click "Save" to apply.</p>
+  <div>
+    <img src="92.png" onclick="openModal('92.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 48.</strong> After saving, click on Security.</p>
+  <div>
+    <img src="93.png" onclick="openModal('93.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 49.</strong> Go back to Security settings and click on "Web channel security".</p>
+  <div>
+    <img src="94.png" onclick="openModal('94.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 50.</strong> Under Web channel security, copy the "Secret 1" key — you will need this for the Power Automate flow. Then close the page.</p>
+  <div>
+    <img src="95.png" onclick="openModal('95.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 51.</strong>Open Power Automate (make.powerautomate.com) and navigate to "Solutions" in the left navigation panel.</p>
+  <div>
+    <img src="96.png" onclick="openModal('96.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 52.</strong> In Solutions, click on "HR365 Contract Management Premium" to open the solution.</p>
+  <div>
+    <img src="97.png" onclick="openModal('97.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 53.</strong>  Inside the solution, click "Objects" in the left panel to browse its components.</p>
+  <div>
+    <img src="98.png" onclick="openModal('98.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 54.</strong> Click on "Cloud flows (3)" to view the available flows, then click on "CLM365 Copilot" to open it.</p>
+  <div>
+    <img src="99.png" onclick="openModal('99.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 55.</strong>Click the "Edit" button at the top to open the flow editor. Then disable the "New designer" toggle to switch to the classic view.</p>
+  <div>
+    <img src="100.png" onclick="openModal('100.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <div>
+    <img src="100(a).png" onclick="openModal('100(a).png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 56.</strong> In the classic flow editor, you will see the flow with "When a HTTP request is received", "Compose", and "Switch" action steps.</p>
+  <div>
+    <img src="101.png" onclick="openModal('101.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 57.</strong> Inside the Switch block, click on the "Get Access Token" case to expand and configure it.</p>
+  <div>
+    <img src="102.png" onclick="openModal('102.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 58.</strong> Inside the "Get Access Token" case, expand the "Scope" block and click on the "HTTP" action. The HTTP action uses Method: POST and URI: https://directline.botframework.com/v3/directline/tokens/generate.</p>
+  <div>
+    <img src="103.png" onclick="openModal('103.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 59.</strong> In the HTTP action Headers field, replace the existing Authorization value with "Bearer " followed by the Secret 1 key you copied from Web channel security in Copilot Studio.</p>
+  <div>
+    <img src="104.png" onclick="openModal('104.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 60.</strong> Scroll back to the top of the flow and click on the "When a HTTP request is received" trigger step to expand it.</p>
+  <div>
+    <img src="105.png" onclick="openModal('105.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 61.</strong> Copy the "HTTP POST URL" shown in the trigger — this is the endpoint URL that CLM 365 will use to communicate with the Copilot flow.</p>
+  <div>
+    <img src="106.png" onclick="openModal('106.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 62.</strong> Click "Save" at the top of the flow editor to save all changes to the CLM365 Copilot flow.</p>
+  <div>
+    <img src="107.png" onclick="openModal('107.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 63.</strong> Return to Copilot Studio and click "Publish" at the top right of the CLM 365 agent overview page to publish the final configuration.</p>
+  <div>
+    <img src="108.png" onclick="openModal('108.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 64.</strong> Click on Tools in the top navigation of your agent.</p>
+  <div>
+    <img src="109.png" onclick="openModal('109.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 65.</strong> Click Add a tool.</p>
+  <div>
+    <img src="110.png" onclick="openModal('110.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 66.</strong> Select Connector from the tool type options.</p>
+  <div>
+    <img src="111.png" onclick="openModal('111.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 67.</strong> Click SharePoint from the list of connectors.</p>
+  <div>
+    <img src="112.png" onclick="openModal('112.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 68.</strong> Select Get items from the SharePoint actions.</p>
+  <div>
+    <img src="113.png" onclick="openModal('113.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 69.</strong> Click Add and configure to add the action to your agent.</p>
+  <div>
+    <img src="114.png" onclick="openModal('114.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 70.</strong> If needed, update the tool's Name and Description, or leave the defaults as-is.</p>
+  <div>
+    <img src="115.png" onclick="openModal('115.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 71.</strong> Select the Site Address for your SharePoint site.</p>
+  <div>
+    <img src="116.png" onclick="openModal('116.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 72.</strong> For List Name, change the Fill using option to Custom value.</p>
+  <div>
+    <img src="117.png" onclick="openModal('117.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 73.</strong> Choose Enter custom value and type CLM365Contract as the value.</p>
+  <div>
+    <img src="118.png" onclick="openModal('118.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 74.</strong> Click Add input to add another parameter to the tool.</p>
+  <div>
+    <img src="119.png" onclick="openModal('119.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 75.</strong>Select Top Count from the list of available inputs.</p>
+  <div>
+    <img src="120.png" onclick="openModal('120.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 76.</strong> Set Top Count to Custom value and enter 5.</p>
+  <div>
+    <img src="121.png" onclick="openModal('121.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 77.</strong> Click Add input again and select Filter Query.</p>
+  <div>
+    <img src="122.png" onclick="openModal('122.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 78.</strong> Set Filter Query to Custom value and enter SampleContract ne's.</p>
+  <div>
+    <img src="123.png" onclick="openModal('123.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 79.</strong>Click Save to save the tool configuration.</p>
+  <div>
+    <img src="124.png" onclick="openModal('124.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 80.</strong> Click Test to open the test panel and try out the agent.</p>
+  <div>
+    <img src="125.png" onclick="openModal('125.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+   <p><strong>Step 81.</strong> Click Login and copy the sign-in code shown.</p>
+  <div>
+    <img src="126.png" onclick="openModal('126.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 82.</strong> Enter the code to complete login — your agent is now ready to use.</p>
+  <div>
+    <img src="127.png" onclick="openModal('127.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+  <p><strong>Step 83.</strong> Open CLM 365, go to Settings > Integrations > AI Integration. Enable "Copilot AI Integration", paste the HTTP POST URL into the "Copilot URL" field, and click "Save".</p>
+  <div>
+    <img src="128.png" onclick="openModal('128.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br><br>
+
+  <p><strong>Contract Summary Generation Using Copilot</strong></p>
+  <p>Once Copilot has been configured and enabled, users can generate AI-powered contract summaries directly from the contract details page.</p><br>
+  <div>
+    <img src="129.png" onclick="openModal('129.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+
+  <p>Once Copilot has been successfully configured, a Copilot icon will appear on the Home page, as highlighted below.</p><br>
+  <div>
+    <img src="130.png" onclick="openModal('130.png')" alt="View Risk in Contract" width="100%" height="auto">
+  </div><br>
+
+  <ul style="list-style-position: inside; list-style-type: disc;">
+    <li>Click the Copilot icon located at the bottom-right corner of the screen.</li>
+    <li>The Copilot panel will open on the right side of the page.</li>
+    <li>Users can then ask questions related to contracts and quickly retrieve relevant information from the Contract Management system.</li>
+    <li>Copilot helps users access contract details, statuses, approvals, obligations, and other contract-related information through a conversational interface.</li>
+  </ul><br>
+  <div>
+    <img src="131.png" onclick="openModal('131.png')" alt="View Risk in Contract" width="100%" height="auto">
   </div><br>
 </div>
 
