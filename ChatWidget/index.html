@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copilot Chat Widget</title>
   <link rel="stylesheet" href="widget.css" />
-  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 </head>
 <body>
 
@@ -80,7 +80,7 @@
         <footer class="cw-footer">
           <div class="cw-content">
             <div class="cw-quick-replies" aria-label="Suggested questions">
-              <button type="button" class="cw-quick-reply" data-chip="raise-ticket">How to raise a ticket</button>
+              <!-- <button type="button" class="cw-quick-reply" data-chip="raise-ticket">How to raise a ticket</button> -->
               <!---- <button type="button" class="cw-quick-reply" data-chip="show-tickets">Show my tickets</button> -->
               <button type="button" class="cw-quick-reply" data-chip="live-agent">Talk to a live agent</button>
             </div>

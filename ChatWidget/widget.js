@@ -133,6 +133,8 @@ import { hydrateIcons } from './icons.js';
   let isReplayingHistory = false;
   let replayGuardTimer = null;
   let isWaitingForResponse = false;
+  let responseTimeoutTimer = null;
+  const BOT_RESPONSE_TIMEOUT_MS = 30000;
   if (window.marked) {
     marked.setOptions({ breaks: true, gfm: true });
   }
@@ -1131,6 +1133,13 @@ if (loadVersion !== conversationLoadVersion) {
     if (input) input.disabled = true;
     if (attachBtn) attachBtn.disabled = true;
 
+    clearTimeout(responseTimeoutTimer);
+    responseTimeoutTimer = setTimeout(() => {
+      if (!isWaitingForResponse) return;
+      hideLoading();
+      showToast("The assistant is taking longer than expected. Please try again.");
+    }, BOT_RESPONSE_TIMEOUT_MS);
+
     if (body.querySelector("#cw-loading")) {
       if (sendBtn) sendBtn.disabled = true;
       return;
@@ -1154,14 +1163,7 @@ if (loadVersion !== conversationLoadVersion) {
   }
 
   function hideLoading() {
-    body.querySelector("#cw-loading")?.remove();
-    isWaitingForResponse = false;
-    if (input) input.disabled = false;
-    if (attachBtn) attachBtn.disabled = false;
-    updateSendButton();
-  }
-
-  function hideLoading() {
+    clearTimeout(responseTimeoutTimer);
     body.querySelector("#cw-loading")?.remove();
     isWaitingForResponse = false;
     if (input) input.disabled = false;
@@ -1193,7 +1195,7 @@ if (loadVersion !== conversationLoadVersion) {
       if (currentConversation && getConversationKey(conv) === getConversationKey(currentConversation)) {
         li.classList.add("active");
       }
-
+      
       li.innerHTML = `
         <div class="cw-history-title">${escapeHtml(conv.title || "New chat")}</div>
         <div class="cw-history-meta">
@@ -1297,6 +1299,19 @@ if (loadVersion !== conversationLoadVersion) {
     });
   }
 
+  function bindConnectionStatus(dl) {
+    if (!dl?.connectionStatus$?.subscribe) return;
+    dl.connectionStatus$.subscribe((status) => {
+      // 0 Uninitialized, 1 Connecting, 2 Online, 3 ExpiredToken, 4 FailedToConnect, 5 Ended
+      if (status === 3 || status === 4) {
+        if (isWaitingForResponse) hideLoading();
+        showToast("Connection to the assistant was lost. Please try sending your message again.");
+      } else if (status === 5) {
+        if (isWaitingForResponse) hideLoading();
+      }
+    });
+  }
+
   function ensureWebChatInitialized() {
     if (webChatInitialized) return Promise.resolve();
     if (webChatInitPromise) return webChatInitPromise;
@@ -1312,6 +1327,7 @@ if (loadVersion !== conversationLoadVersion) {
       // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
       store = createStore();
       window.WebChat.renderWebChat({ directLine, store, userID: userId, username: userName }, webchatDiv);
+      bindConnectionStatus(directLine);
       webChatInitialized = true;
     }).catch((error) => {
       webChatInitPromise = null;
@@ -1886,19 +1902,19 @@ function sendMessage(text) {
         return;
       }
 
-      if (chip === "raise-ticket") {
-        try {
-          await ensureWebChatInitialized();
-        } catch {
-          showToast("Chat is still loading. Please try again.");
-          return;
-        }
-        if (!input) return;
-        input.value = "How to raise a ticket";
-        updateSendButton();
-        handleSend();
-        return;
-      }
+      // if (chip === "raise-ticket") {
+      //   try {
+      //     await ensureWebChatInitialized();
+      //   } catch {
+      //     showToast("Chat is still loading. Please try again.");
+      //     return;
+      //   }
+      //   if (!input) return;
+      //   input.value = "How to raise a ticket";
+      //   updateSendButton();
+      //   handleSend();
+      //   return;
+      // }
 
       if (chip === "live-agent") {
         openLiveAgent();
