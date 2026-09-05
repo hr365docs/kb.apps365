@@ -111,7 +111,7 @@ $(document).ready(function () {
     `<div class='dropdown-menu newWebparts' aria-labelledby='webpartDropdown'>` +
     `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
     `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
-    `<a class='dropdown-item stocklink' href='/Expense-365/'>Expense 365 Lite </a>` +
+    `<a class='dropdown-item stocklink' href='/expense-365-lite/'>Expense 365 Lite </a>` +
     `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
     `<a class='dropdown-item stocklink' href='/Gauge365/'>Gauge 365</a>` +
     `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
