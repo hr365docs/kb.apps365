@@ -185,7 +185,9 @@ style.innerHTML = `
         max-height: 25vw !important;
         overflow: auto !important;
     }
-
+  .fa-chain:before, .fa-link:before{
+  display: none;
+  }
   .active-submenu {
     color: var(--primary-color)!important;
     font-weight: 500 !important;
