@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
     <style>
         :root {
-            --primary-color: #5637da;
+           
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
@@ -422,8 +422,7 @@
         </div><br>
 </div>
 
-
-                        <div class="bg-light p-4 remove-padding common-scroll" id="Copilot-Integeration">
+ <div class="bg-light p-4 remove-padding common-scroll" id="Copilot-Integeration">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight " href=#>Copilot Integration
                                         <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
@@ -431,121 +430,140 @@
 
 
                                 <p>
-                                    Use this toggle to enable or disable Copilot integration. Enter the configured Power
-                                    Automate (PA) URL and click Save to activate the feature.
+                                    Use this setting to enable or disable Copilot integration. To activate the feature, enter the required credentials and then select <strong>Save.</strong>
 
                                 </p>
 
 
-                                <div><img src="copilot.png" onclick="openModal( 'copilot.png') " alt="Copilot"
+                                <div><img src="copilot1.png" onclick="openModal( 'copilot1.png') " alt="Copilot"
                                         width="100% " height="auto"></div>
                                 <br>
-                                 <p>
-            To integrate <strong>Copilot</strong> with <strong>Helpdesk 365</strong>, begin by creating your Copilot agent in 
-            <a href="https://copilotstudio.microsoft.com/" target="_blank">Copilot Studio</a>.
-        </p>
-        <p>Ensure that you have a <strong>Premium Power Automate license</strong> to proceed with the configuration.</p>
+                                <p>
+                                    To integrate <strong>Copilot</strong> with <strong>Helpdesk 365</strong>, first create your Copilot agent in Copilot Studio.
+                                </p>
+                                <p>
+                                    Ensure that you have the required permissions and administrative access before proceeding with the configuration.
+                                </p>
+                                <p>
+                                    In the left navigation pane, select <strong>Agents.</strong>
+                                </p>
+                               
+                                <div>
+                                    <img src="copilot2.png" onclick="openModal('copilot2.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                              <p>
+                                If you do not already have an agent, select <strong>+ New Agent</strong> to create one, and then configure it as needed.
+                              </p>
+                                <div>
+                                    <img src="copilot3.png" onclick="openModal('copilot3.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+<p>If you already have an agent, select it to open its settings.</p>
 
-<p>In the left-hand sidebar, select <strong>Agents</strong>.</p>
-<div>
-    <img src="age.png" onclick="openModal('age.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-<p>
-     If you don’t already have an agent, click on <strong>+ New Agent</strong> to create one, then configure it as required.<br>
-</p>
-<div>
-    <img src="age1.png" onclick="openModal('age1.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-<p>If you already have an existing agent, simply click on that agent to open it.</p>
+                                <div>
+                                    <img src="copilot4.png" onclick="openModal('copilot4.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
 
-       
-<div>
-    <img src="copilot_settings1.png" onclick="openModal('copilot_settings1.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-
-<p>In the <strong>Knowledge</strong> section, add your Knowledge Base.</p>
-<div>
-    <img src="copilot_settings3.png" onclick="openModal('copilot_settings3.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-
-
-
-
-<p>Then go to <strong>Settings</strong>. Under <strong>Security</strong>, select <strong>Web Channel Security</strong> and copy the <strong>Secret 1</strong> key.</p>
-<div>
-    <img src="copilot_settings2.png" onclick="openModal('copilot_settings2.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-<div>
-    <img src="copilot_settings.png" onclick="openModal('copilot_settings.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
+                                <p>In the <strong>Knowledge</strong> section, add your Knowledge Base.</p>
+                                <div>
+                                    <img src="copilot5.png" onclick="openModal('copilot5.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
 
 
-<div>
-    <img src="copilot_settings4.png" onclick="openModal('copilot_settings4.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-
-<p>Next, in <strong>Power Automate</strong>, go to <strong>My Flows</strong> and import the <strong>Copilot server solution</strong>.</p>
-<div>
-    <img src="copilot_settings5.png" onclick="openModal('copilot_settings5.png')" 
-         alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
-</div><br>
-
-        <p>
-            Open the flow and click <strong>Edit</strong>. 
-        </p>
-        <div>
-            <img src="powerautomate_flows.png" onclick="openModal('powerautomate_flows.png')" 
-                 alt="Power Automate Flow Configuration" width="100%" height="auto">
-        </div><br>
-        <p>Disable the <strong>New Designer</strong> toggle 
-            and paste the previously copied <strong>Secret 1</strong> value into the <strong>Headers</strong> field.</p>
-<div>
-            <img src="powerautomate_flows1.png" onclick="openModal('powerautomate_flows1.png')" 
-                 alt="Power Automate Flow Configuration" width="100%" height="auto">
-        </div><br>
-        <p>
-            Save the flow and copy the <strong>HTTP GET URL</strong> generated under the 
-            <em>When an HTTP request is received</em> trigger.
-        </p>
-        <div>
-            <img src="powerautomate_flows2.png" onclick="openModal('powerautomate_flows2.png')" 
-                 alt="Power Automate Flow Configuration" width="100%" height="auto">
-        </div><br>
-        <p>
-            Return to the application, enable the <strong>Copilot integration</strong> toggle, 
-            and paste this URL into the configuration field.
-        </p>
-        <div>
-            <img src="powerautomate_httpurl.png" onclick="openModal('powerautomate_httpurl.png')" 
-                 alt="Power Automate HTTP GET URL" width="100%" height="auto">
-        </div><br>
-
-        
-                                <p> Once configured, Copilot will appear on the Comment page.</p>
-
-                                <div><img src="commentpage-copilot.png" onclick="openModal( 'commentpage-copilot.png') "
-                                        alt="Copilot" width="100% " height="auto"></div>
-                                <p>When you click on <b>Helpdesk Copilot</b>, the Copilot section will be displayed,
-                                    where you
-                                    can enter your questions.</p>
-
-                                <div><img src="copilot-ques.png" onclick="openModal( 'copilot-ques.png') " alt="Copilot"
-                                        width="100% " height="auto"></div>
-                                <p>Copilot will then be ready to assist you, and you can access it from the function
-                                    bar.</p>
-
-                                <div><img src="SendMessage.png" onclick="openModal( 'SendMessage.png') " alt="Copilot"
-                                        width="100% " height="auto"></div>
 
 
+                               <p>Return to the application, enable the <strong>Copilot integration</strong> toggle, and provide the required configuration details below.</p>
+                                <div>
+                                    <img src="copilot6.png" onclick="openModal('copilot6.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                                 <h4 id="_dashboards"><a class="header-icon-link highlight " href=#>App Registration Configuration
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <ol style="list-style-type:decimal">
+                                   <li>Navigate to <strong>Microsoft Azure Portal→ App Registrations → Overview </strong></li>
+                                   <li>Create a new <strong>App Registration </strong></li>
+                                   <li>Add the following <strong>Redirect URL</strong> for your site:</li>
+                                </ol><br>
+                                <p><strong>Example Redirect URL: </strong></p>
+                                <p>https://<yourtenant>.sharepoint.com/sites/Helpdesk365/SitePages/Helpdesk-365.aspx</p>
+                                <div>
+                                    <img src="copilot7.png" onclick="openModal('copilot7.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+<p>Next, configure the required API permissions:</p>
+<ol style="list-style-type:decimal">
+    <li><strong>API Permissions </strong></li>
+    <li>Click on <strong>Add a Permission</strong> </li>
+    <li>Select <strong>APIs my organization uses</strong> </li>
+</ol><br>
+<p>Search for <strong>Power Platform APIs,</strong> and then add the following permission:</p>
+<ul style="list-style-type:disc">
+    <li>CopilotStudio.Copilots.Invoke </li>
+</ul><br>
+<p>This permission is required to enable Copilot integration and allow the application to invoke Copilot features successfully.</p>
+
+                                <div>
+                                    <img src="copilot8.png" onclick="openModal('copilot8.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+
+                                <p>After adding the required API permission, select <strong>Grant admin consent</strong> for your organization to approve and enable the permission.</p>
+                                  <h4 id="_dashboards"><a class="header-icon-link highlight " href=#>Tenant ID
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <ol style="list-style-type:decimal">
+                                    <li>Navigate to <strong>Microsoft Entra → Overview</strong> </li>
+                                    <li>Copy the <strong>Tenant ID</strong> from the overview page and use it in the required configuration settings.</li>
+                                </ol><br>
+                             <div>
+                                    <img src="copilot9.png" onclick="openModal('copilot9.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                             <h2 id="_dashboards"><a class="header-icon-link highlight " href=#>Environment ID
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <ol style="list-style-type:decimal">
+                                    <li>Navigate to <strong>Microsoft Copilot Studio</strong> → Select Agents</li>
+                                    <li>Agents <strong>Settings</strong> </li>
+                                    <li>Go to <strong>Advanced </strong></li>
+                                    <li>Open <strong>Metadata</strong> </li>
+                                    <li>Copy the <strong>Environment ID</strong> and use it in the required configuration settings.</li>
+                                </ol><br>
+                                 <div>
+                                    <img src="copilot10.png" onclick="openModal('copilot10.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                                 <div>
+                                    <img src="copilot11.png" onclick="openModal('copilot11.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                                  <h4 id="_dashboards"><a class="header-icon-link highlight " href=#>Direct Connect URL
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p>For the <strong>Direct Connect URL:</strong></p>
+                                <ol style="list-style-type: decimal;">
+                                    <li>Navigate to <strong>Microsoft Copilot Studio → Channels </strong></li>
+                                    <li>Open <strong>Web App</strong> </li>
+                                    <li>Copy the <strong>Direct Connect URL </strong>and use it in the required configuration settings. </li>
+                                </ol><br>
+                                 <div>
+                                    <img src="copilot12.png" onclick="openModal('copilot12.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
+                                 <h4 id="_dashboards"><a class="header-icon-link highlight " href=#>Base URL
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p><strong>Base URL: </strong>Use the base URL defined in your custom solution settings.</p>
+   <div>
+                                    <img src="copilot13.png" onclick="openModal('copilot13.png')"
+                                        alt="Copilot Settings and Knowledge Base" width="100%" height="auto">
+                                </div><br>
                         </div>
+                       
                         <div class="bg-light p-4 remove-padding common-scroll" id="integrateMicrosoft">
                             <ul class=page-list>
                                 <h2 id="_dashboards"><a class="header-icon-link highlight " href=#>Integrate Microsoft

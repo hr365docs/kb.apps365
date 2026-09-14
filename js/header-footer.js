@@ -109,6 +109,7 @@ $(document).ready(function () {
     `<li class='nav-item dropdown'>` +
     `<a class='nav-link dropdown-toggle text-dark' href='#' id='webpartDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>SharePoint Add-ins</a>` +
     `<div class='dropdown-menu newWebparts' aria-labelledby='webpartDropdown'>` +
+    `<a class='dropdown-item stocklink' href='/IApps-365/'>IApps 365</a>` +
     `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
     `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
     `<a class='dropdown-item stocklink' href='/expense-365-lite/'>Expense 365 Lite </a>` +
@@ -195,6 +196,151 @@ style.innerHTML = `
     text-decoration: none !important;
     border: none !important;
   }
+  a,
+a:hover,
+a:focus {
+     text-decoration: none !important;
+    color: #5637da 
+}
+    .bug{
+    color:var(--front--) !important 
+    }
+a:hover i{
+color:#fff !important 
+}   
+.text-primary i:hover {
+color:#0b1020 !important;
+}
+.side{
+background-color:var(--back--) !important;
+color:var(--front--) !important
+
+}
+.myReleaseNotes ol li{
+color: var(--release--) !important;
+}
+.myReleaseNotes .releasenotepadding p{
+color: var(--release--) !important;
+}
+.original li{
+color:#a5a5a5
+}
+.release {
+background:var(--back--) !important ;
+margin-bottom:58px;
+}
+.side h5{
+color:#var(--front--)
+}
+.mb a,.side a{
+color:var(--front--) !important
+}
+.bg-black{
+margin-bottom:100px;
+background-color:var(--back--);
+}
+.bg-li{
+
+background-color:#1f1f1f !important;
+
+
+}
+.card-header a{
+color:#0b1020 !important;
+}
+  .back::before{
+  background-color:#1f1f1f !important;
+  color:#fff !important;
+  }
+.list-inline-item a{
+        color:#fff !important
+    }
+     .list-inline-item a:hover{
+        color:#fff !important;
+        text-decoration:none !important;
+    }
+  .head{
+  color:#0b1020 !important;
+
+  }
+  .highlight{
+  color:#0b1020 !important;
+  }
+  .high a{
+  color:var(--front--) !important }
+  .highlight:hover{
+  color:#0b1020;
+  }
+  .sidel a{
+  color:#fff !important
+  }
+  .neww{
+  color:var(--release--) !important
+  }
+  .back-btn::before{
+  background:none !important;}
+ .backk{
+  background-color:#1f1f1f !important;
+ color:white;
+ height:100vh;
+ overflow-y:scroll
+ }
+  .pagination a{
+  color:#0b1020
+  } 
+  .mbHeading a {
+  color:#0b1020 !important
+ }
+  .back-btn{
+  color:#0b1020 !important
+ }
+  .sidelist a{
+  color:#0b1020 !important
+ }
+  .btn-primary {
+    background:#5637da;
+    color: #fff !important
+}
+    .btn-primary:active {
+    background: #5637da;
+}
+    .btn-primary:hover {
+    background: #5637da;
+}
+  .sidelist li.sidelist.active a {
+    color:black !important;
+    font-weight: 600 !important;
+}
+    .ti-panel:before,.ti-folder:before,.ti-cloud:before{
+    color: #5637da !important
+}
+    .text-primary,.text-primary a{
+    color:#0b1020 !important;
+    }
+    
+    .list-styled li::before {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background:rgb(11,16,32) !important;
+    opacity: .3;
+    left: 0;
+    top: 12px
+}
+    h1,
+h2,
+h3,
+h4,
+h5,
+h6
+ {
+   color: rgb(11,16,32) !important;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 700;
+    line-height: 1.2
+}
 `;
 document.head.appendChild(style);
 

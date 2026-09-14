@@ -17,7 +17,10 @@
 
     <style>
         :root {
-            --primary-color: #5637da;
+             --back--:black;
+           --front--:white;
+           --release--:#a5a5a5;
+           
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
@@ -79,19 +82,19 @@
             </div>
         </nav>
     </header>
-
+<div class="backk">
     <section class="single section-sm pb-0">
         <div class="container container-padding">
             <div class=row>
-                <div class=col-lg-3>
-                    <div class=sidebar>
-                        <h5 class="mbHeading" style="color:SlateBlue"> <a href="/faq-365/index.html">FAQ 365</a></h5>
+                <div class="col-lg-3 release">
+                    <div class="sidebar side">
+                        <h5 class="mb" style="color:SlateBlue"> <a href="/faq-365/index.html">FAQ 365</a></h5>
                         <a class=back-btn href="/faq-365/index.html" aria-label=back></a>
 
                         <ul class=list-styled>
                             <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title=Release-Notes class="sidelist">
-                                <a style="font-size:17px ;" href="../release-note/">
+                                title=Release-Notes class="side">
+                                <a style="font-size:17px ;margin-left:25px" href="../release-note/">
                                     Release Notes
                                 </a>
                                 <ul>
@@ -108,8 +111,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="mar-0px-auto col-lg-9" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
+                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                    <div class="p-lg-4 p-4 bg-black remove-padding" id=content>
                         <!-- <div class="bg-light p-4 releasenotepadding remove-padding" id="releasenote1">
                             <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
                                 class="sidelist">
@@ -184,7 +187,7 @@
 
         </div>
     </div>
-
+</div>
    <div id="footer-container"></div>
   <script src="/footer/index.js"></script>
     <script src="../../../../../js/script.min.js"></script>
