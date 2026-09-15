@@ -178,18 +178,164 @@
             consistent, and tailored to each scenario.
         </p>
                             </ul> <br>
-                            <ul class=page-list id="Manager">
-                                <h2 id="_dashboards"><a class="header-icon-link highlight " href=#> Manager
+                             <ul class=page-list id="Manager">
+                               <h2 id="_dashboards"><a class="header-icon-link highlight " href=#> Manager
                                         <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h2>
-                             <li>
-                                In the "Template Type" dropdown, Manager can choose the template type.</li>
-                                <li>In the "Email Subject" field, Manager can either change the subject or use the default text.</li>
-                                <li>In the "Email Body" field, Manager can either change the Body or use the default body.</li> <br>
-                                <div><img src="04.png " onclick="openModal( '04.png') "
-                                    alt="Notifications" width="100% " height="auto"></div>
-                            </ul>
+                            <p>The Notification module lets an administrator control every automated email the system sends. All templates live under Settings → Email Template, and are grouped into three categories based on who receives the email: Manager, User, and System. This guide walks through each category, what it's for, and how to configure a template.</p>
+                         <h4 id="_dashboards"><a class="header-icon-link highlight " href=#> Where to find it
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4>  
+                                        <p>
+                                            From the Timesheet Settings screen, open the Email Template section in the left-hand list. Three entries appear: Manager, User, and System. Selecting any one of them opens the list of templates in that category.
+                                        </p> 
+                                        <ol style="list-style-type:decimal">
+                                            <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Manager Templates</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>
+                                        <p>Manager templates are the emails sent to a project or reporting manager — for example, reminding them that a timesheet is waiting for their approval. Click Manager under Email Template to open this category.</p>
+                                        <ul style="list-style-type:disc">
+                                             <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Opening the Manager template</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li><br>
+                                         <div>
+            <img src="open.png" onclick="openModal('open.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Settings → Email Template → Manager opens the manager-facing template list.</p>
+         <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Editing the template and using Placeholders</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>
+                                        <p>Each template has an Email Subject and an Email Body, both of which support rich-text formatting, an Active toggle to enable/disable the email, and an optional Cc list. The Placeholder button inserts dynamic tags (e.g. [WeekNumber], [WeekRange], [Table]) directly into the subject or body — these are replaced with real data when the email is sent.</p>
+                                          <div>
+            <img src="edit.png" onclick="openModal('edit.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>The Placeholder panel lists the dynamic tags available for this template, such as Week Number, Week Range, Table, and Approval.</p>
+         <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Configuring the summary table</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>
+                                        <p>The [Table] placeholder renders a summary grid inside the email. Table configure controls exactly which columns appear in that grid.</p>
+                                         <div>
+            <img src="configure.png" onclick="openModal('configure.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Selecting Table configure opens the Column View panel used to choose the table's columns.</p>
+           <div>
+            <img src="configure2.png" onclick="openModal('configure2.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>
+            For the Manager template, available columns include Employee Name, Client:Project, Week No, Email, and Department — tick or untick a column and Save to update the table.
+        </p>
+                                        </ul>
+                <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>User Templates</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>   
+                                        <p>User templates are the emails sent to the employee themselves — submission confirmations, approval/rejection notices, and pending-timesheet reminders. Click User under Email Template to open this category.</p>                      
+                                    <ul style="list-style-type:disc">
+                                         <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Opening the User template list</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li> 
+                                         <div>
+            <img src="open1.png" onclick="openModal('open1.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Settings → Email Template → User opens the user-facing template list.</p>
+         <div>
+            <img src="open2.png" onclick="openModal('open2.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Five user templates are available: Weekly Timesheet Submissions, Daily Timesheet Submission, Timesheet Approved, Timesheet Rejected, and Pending Weekly Timesheet. The Is Active column shows which ones are currently switched on; the pencil icon opens a template for editing.</p>
+          <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Editing the template and using Placeholders</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>  
+                                        <p>As with Manager templates, the subject and body can be edited freely, and Placeholder inserts dynamic tags relevant to the user context — User Name, Project Name, Task Name, Activity Name, Week Range, and Table.</p> 
+                                        <div>
+            <img src="edit1.png" onclick="openModal('edit1.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>The Weekly Timesheet Submissions template with its Placeholder panel open, showing the tags available for user emails.</p>
+        <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Configuring the summary table</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li>  
+                                        <p>User templates also support Table configure, but the column set is oriented around the employee's own weekly entries rather than manager-level roll-ups.</p>
+                                            <div>
+            <img src="sample.png" onclick="openModal('sample.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Table configure for the User template opens its own Column View panel.</p>
+        <div>
+            <img src="sample2.png" onclick="openModal('sample2.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Available columns include Client:Project, Task, Activity, Task Tracked Hours, each weekday (Mon–Fri), Total, Timesheet Status, and optional fields such as Client Satisfaction Indicator, Learning Activity, and Task Outcome.</p>
+                                    </ul>   
+               <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>System Templates</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li> 
+                                        <p>
+                                            System templates cover administrative and operational notifications not tied to a single manager or employee — project creation/updates, invoices, access requests, missing-approver alerts, delegation changes, and app-update notices. Click System under Email Template to open this category.
+                                        </p>    
+                                        <ul style="list-style-type:disc">
+                                            <li>Opening the System template list</li><br>
+                                             <div>
+            <img src="template.png" onclick="openModal('template.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>Settings → Email Template → System opens the system template list.</p>
+              <div>
+            <img src="template2.png" onclick="openModal('template2.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>System has the largest set — 11 templates in total, including Project Creation, Project Updation, Invoice Sent, AccessRequest, missing-approver notifications, Weekly Timesheet edited, Request to Assign User Manager, Delegation Removed, and app update emails for users and admins.</p>
+          <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Editing a System template</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li> 
+                                        <p>
+                                            System templates follow the same editing pattern: subject, rich-text body, Cc, an Active toggle, and a Placeholder panel with tags specific to that event (e.g. User Name, Client Name, Project Name for Project Creation). Note that System templates do not expose a Table configure option, since these notifications describe a single event rather than a set of timesheet rows.
+                                        </p>
+                                        <div>
+            <img src="system.png" onclick="openModal('system.png')" 
+                 alt="Template Types" width="100%" height="auto">
+        </div><br>
+        <p>The Project Creation template with its Placeholder panel open, showing the User Name, Client Name, and Project Name tags.</p>
+                                        </ul>    
+                             <h4 id="_dashboards"><a class="header-icon-link highlight " href=#><li>Quick Reference</li> 
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h4></li> 
+                                        <p>
+                                            The table below summarizes the three categories at a glance.
+                                        </p>    
+                                        <table> 
+                                            <tr>
+                                                <td style="background-color: rgb(23,54,93);color:white">
+                                                    Category
+                                                </td>
+                                                 <td style="background-color: rgb(23,54,93);color:white">
+                                                   Recipient
+                                                </td>
+                                                 <td style="background-color: rgb(23,54,93);color:white">
+                                                    Typical Use
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Manager
+                                                </td>
+                                                <td>Project / reporting manager</td>
+                                                <td>Pending timesheet approval reminders</td>
+                                            </tr>
+                                            <tr>
+                                                <td>User</td>
+                                                <td>The employee themselves</td>
+                                                <td>Submission, approval, rejection, and pending reminders</td>
+                                            </tr>
+                                            <tr>
+                                                <td>System</td>
+                                                <td>Admins / operational events</td>
+                                                <td>Project changes, invoices, access requests, delegation, app updates</td>
+                                            </tr>
+                                        </table>                         
+                                    </ol>
+                                    <p><strong>Common controls across all templates</strong></p>
+                                    <ul style="list-style-type:disc">
+                                        <li>Email Subject / Email Body – the text sent, editable with rich-text formatting (bold, italic, lists, links, images).</li>
+                                        <li>Placeholder – inserts dynamic tags (e.g. [UserName], [ProjectName]) that are auto-filled with real values at send time.</li>
+                                        <li>Table configure – (Manager and User templates only) controls which columns appear in the [Table] placeholder's summary grid.</li>
+                                        <li>Cc – optional additional recipients for the email.</li>
+                                        <li>Active toggle – turns the notification on or off without deleting the template.</li>
+                                    </ul>
+                        </ul>
                             <br>
-                            <ul class=page-list id="System">
+ <ul class=page-list id="System">
                                 <h2 id="_dashboards"><a class="header-icon-link highlight " href=#> System
                                         <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a> </h2>
                                         <li>In the "System View," you can find additional placeholders.</li> 

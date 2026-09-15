@@ -354,6 +354,11 @@ $(document).ready(function () {
         "</ul>" +
         "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#DevOps-Integrations'>DevOps Integrations</a>" +
         "</li>" +
+          "<li data-nav-id='./Add Assets/ ' title='Dataverse Integration' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/integration/#Data'>Dataverse Integration</a>" +
+        "</li>" +
         "</ul>" +
         "</li>" +
 
@@ -538,6 +543,12 @@ $(document).ready(function () {
         "</ul>" +
 
         "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#HD365Migration'>HD365 Migration</a>" +
+        "</li>" +
+         "<li data-nav-id='./Add Assets/ ' title='Automatic Task Configuration' class='sidelist '>" +
+        "<ul class='sidenavSub-topics '>" +
+        "</ul>" +
+
+        "<a href='/sharepoint-helpdesk/modern/admin/settings/features/#Auto'>Automatic Task Configuration</a>" +
         "</li>" +
 
 

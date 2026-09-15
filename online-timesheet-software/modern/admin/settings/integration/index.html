@@ -160,7 +160,230 @@
                                 
 <br>
                            
-
+  <h2 id="Excel"><a class="header-icon-link highlight " href=#>Excel Migration
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h2>
+                                <p>
+                                    Excel Migration is used to import bulk submitted-timesheet data from an Excel or CSV file into Timesheet. After the import is completed, the migrated information can be verified in Weekly Timesheet and in Reports. This document follows the exact order of the screenshots supplied and places every screenshot directly below the feature or step that it demonstrates.
+                                </p>
+                                <ol style="list-style-type:decimal">
+                                    <li>
+                                      <p><strong>Open Excel Migration from Integration</strong></p>  
+                                      <p>Open Timesheet Settings and locate the Integration section. The Integration section contains several connectivity and migration options, including Excel Migration. Select Excel Migration to open the dedicated Excel Migration panel.</p>   
+                                       <div>
+                                    <img src="first.png" onclick="openModal('first.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>
+                                <p>Screenshot 1 – Integration section with Excel Migration option.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Excel Migration – Two Available Operations</strong></p>
+                                        <p>The Excel Migration panel provides two separate operations: Configure Column Mapping and Import Bulk Timesheet. Configure Column Mapping is used first when the source Excel structure needs to be defined or mapped. Import Bulk Timesheet is then used to upload the actual bulk timesheet file and perform the migration.</p>
+                                         <div>
+                                    <img src="second.png" onclick="openModal('second.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>
+                                <p>Screenshot 2 – Excel Migration panel showing Configure Column Mapping and Import Bulk Timesheet.</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>Configure Column Mapping – Standard Sample Format OFF</strong></p>
+                                        <p>When Use Standard Sample Format is switched OFF, the system uses the manual mapping approach. The administrator can attach the source Excel/CSV file and map its columns to the corresponding Timesheet fields. The screen also provides the User Identifier setting and the instructions needed to prepare the file correctly.</p>
+                                   <div>
+                                    <img src="third.png" onclick="openModal('third.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>
+                                <p>Screenshot 3 – Manual Column Mapping with Standard Sample Format OFF: uploaded Excel file, mandatory fields, column mappings, and field-selection dropdown.</p>
+                                 <h4 id="Excel"><a class="header-icon-link highlight " href=#>Manual Mapping – How It Works
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p>With Use Standard Sample Format set to No, the system reads the columns from the uploaded Excel file and displays them in the Column Mapping Configuration table. Each Excel column must be associated with the corresponding Timesheet field so the imported values are stored in the correct place.</p>
+                        <h4 id="Excel"><a class="header-icon-link highlight " href=#>Mandatory Fields
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p>The yellow notification identifies Client, Project, Date, and User Email as mandatory fields for this configuration. These required mappings must be completed before the migration can proceed; the screenshot also shows the current mapping count as 2 / 9.</p>
+  <h4 id="Excel"><a class="header-icon-link highlight " href=#>Mapping the Columns
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p>The left side lists the Excel columns, while the right side provides the Timesheet Field Mapping selector. In the screenshot, Client is mapped to Client and Project is mapped to Project, while fields such as User Email, Task, Activity, Date, Status, Billable Hours, and Non Billable Hours remain available for mapping.</p>
+                     <h4 id="Excel"><a class="header-icon-link highlight " href=#>Selecting a Field
+                                        <i class="fas fa-link " style="font-size:12px; color:lightgray;"></i></a>
+                                </h4>
+                                <p>
+                                    Clicking a mapping selector opens the available Timesheet fields, including Client, Project, User Email, Task, Activity, and Date. Select the field that represents the meaning of the source Excel column, then continue mapping the remaining columns until all required fields are correctly configured.
+                                </p>
+                                 <div>
+                                    <img src="fourth.png" onclick="openModal('fourth.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>
+                                <p>Screenshot 4 – Configure Column Mapping with Use Standard Sample Format set to No.</p>
+                            
+                                    </li>
+<li>
+    <p><strong>Standard Sample Format OFF – What the Instructions Require</strong></p>
+    <p>With the standard format disabled, the administrator works with the source file's existing column structure. The displayed instructions state that .xlsx, .xls, and .csv files are accepted and that the first row must contain column headers. The instructions also explain that each Excel column can be mapped to a Timesheet field and that at least one mapping is required before saving.</p>
+    <p>The same instructions describe Client and Project handling, Week and User fields, saved mappings, Status values, and Date formatting. When Client and Project are separate columns, the corresponding option should be enabled; otherwise the combined Client : Project field can be used.</p>
+  <div>
+                                    <img src="fifth.png" onclick="openModal('fifth.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 5 – Standard Sample Format OFF showing Import File and the mapping instructions.</p>
+</li>
+<li>
+    <p><strong>Configure Column Mapping – Standard Sample Format ON</strong></p>
+    <p>When Use Standard Sample Format is switched ON, the workflow changes from manual mapping to the standard sample workflow. The application displays a Download Sample File button. The administrator downloads this sample, fills in the data, and keeps the supplied column names unchanged so that the application can recognize the standard structure.</p>
+     <div>
+                                    <img src="sixth.png" onclick="openModal('sixth.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 6 – Standard Sample Format ON with Download Sample File and automatic mapping confirmation.</p>
+                                <p>The screen also confirms that standard sample mapping is applied automatically. This means the administrator does not need to manually map every standard column when the file follows the application's sample format.</p>
+</li>
+<li>
+    <p><strong>Standard Sample Format – Download and Automatic Mapping</strong></p>
+    <p>The Download Sample File option provides the standard workbook structure expected by the application. The instructions specifically state that the downloaded sample should be filled without renaming the columns. After the standard format is enabled, the system applies the predefined mapping automatically and displays the mapping status.</p>
+    <p>The standard-format route is therefore intended to simplify migration when the source data can be prepared using the application's sample structure. The manual mapping route remains available when the source file does not follow that structure.</p>
+</li>
+<li>
+    <p><strong>Configure Column Mapping – Save the Mapping</strong></p>
+    <p>Once the mapping is prepared, save the configuration so that the selected relationships between Excel columns and Timesheet fields are retained. The supplied instructions state that saved mappings can be pre-filled automatically the next time a file with the same column names is uploaded.</p>
+<p>This step is especially useful for recurring migrations because the administrator can reuse the same column structure instead of configuring the mapping from the beginning each time.</p>
+</li>
+<li>
+    <p><strong>Open Import Bulk Timesheet</strong></p>
+    <p>After the mapping stage, select Configure for Import Bulk Timesheet. This opens the Import Bulk Timesheet panel. The migration instructions shown on this screen describe the complete process as: configure mapping, upload the data file, preview and verify the rows, and then import the transformed data.</p>
+     <div>
+                                    <img src="seventh.png" onclick="openModal('seventh.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 7 – Excel Migration panel with Import Bulk Timesheet Configure action highlighted.</p>
+</li>
+<li>
+    <p><strong>Import Bulk Timesheet – Upload the Data File</strong></p>
+    <p>Inside Import Bulk Timesheet, use Import File to attach the actual bulk timesheet workbook containing the submitted-timesheet records. The instructions state that the supported file formats are .xlsx, .xls, and .csv.</p>
+<p>Before proceeding, make sure the required mapping has already been configured. The displayed instructions identify Client/Project, Year, Week, and User as mandatory information that must be mapped before migration is allowed.</p>
+<div>
+                                    <img src="eight.png" onclick="openModal('eight.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 8 – Import Bulk Timesheet with the Import File control and migration instructions.</p>
+</li>
+<li>
+    <p><strong>Migration Preview – Review the Uploaded Data</strong></p>
+    <p>After the file is uploaded, the system displays a Migration Preview before the records are committed. The supplied example shows 51 rows ready for migration and displays columns including Client, Project, Date, Task, Activity, and Billable Hours.</p>
+    <p>Review the preview carefully to confirm that the imported values have been interpreted correctly. This is the final review stage before selecting the import action, so incorrect mappings or source data should be corrected before continuing.</p>
+   <div>
+                                    <img src="nine.png" onclick="openModal('nine.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 9 – Migration Preview showing 51 rows ready and the Import 51 Row(s) button.</p> 
+</li>
+<li>
+    <p><strong>Start the Import</strong></p>
+    <p>After reviewing the Migration Preview, select Import 51 Row(s) or the corresponding Import action displayed for the number of rows in the uploaded file. The system then begins processing the transformed rows for Timesheet.</p>
+</li>
+<li>
+    <p><strong>Validation and Processing</strong></p>
+    <p>After the import is started, the application validates the uploaded rows before completing the migration. The supplied screenshot shows the Migration Preview together with a Validating rows progress area and a completion percentage.</p>
+    <p>Wait for the validation process to finish before checking the final Timesheet result. The Change File and Cancel actions remain available while the operation is in progress, as shown in the screenshot.</p>
+     <div>
+                                    <img src="ten.png" onclick="openModal('ten.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br> 
+                                <p>Screenshot 10 – Imported rows undergoing validation.</p>
+</li>
+<li>
+    <p><strong>Verify Imported Data in Weekly Timesheet</strong></p>
+    <p>After the migration is completed successfully, open Weekly Timesheet and verify the imported submitted-hours data. The supplied screenshot shows multiple Client : Project rows, submitted hours, tracked hours, daily hours, and weekly totals.</p>
+    <p>The migrated records therefore become part of the Weekly Timesheet data instead of remaining only in the uploaded Excel file. Verify that the expected client/project rows, dates, daily hours, and totals match the source data.</p>
+   <div>
+                                    <img src="eleven.png" onclick="openModal('eleven.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>  
+                                <p>Screenshot 11 – Weekly Timesheet showing the migrated submitted-hours records.</p>
+</li>
+<li>
+    <p><strong>Verify Imported Data in Reports</strong></p>
+    <p>The migrated information can also be reviewed through Timesheet Reports. The supplied report screenshot shows reporting views such as Daily, Weekly, Monthly, Custom, and Itemized, along with Client, Project, Project ID, Department, Project Manager, and daily hour columns.</p>
+<p>Use the report as a second verification point after migration. Confirm that the migrated records and their hours are available in the reporting data and that the displayed totals correspond to the imported Timesheet information.</p>
+ <div>
+                                    <img src="twelve.png" onclick="openModal('twelve.png')"
+                                        alt="Power Automate Flow Configuration" width="100%" height="auto">
+                                </div><br>  
+                                <p>Screenshot 12 – Reports showing the imported timesheet data.</p>
+</li>
+<li>
+    <p><strong>Standard Sample Format – ON vs OFF</strong></p>
+    <p>The two modes are intentionally different. ON is designed for files prepared using the application's standard sample, while OFF is designed for files whose columns need to be mapped manually. Selecting the correct mode is important because it determines how the system interprets the source workbook.</p>
+    <table>
+        <tr>
+            <td style="background-color: rgb(198,217,241);">Area</td>
+            <td style="background-color: rgb(198,217,241);">Standard Sample Format ON</td>
+            <td style="background-color: rgb(198,217,241);">Standard Sample Format OFF</td>
+        </tr>
+        <tr>
+            <td>Source structure</td>
+            <td>Use the application's downloaded sample structure.</td>
+            <td>Use an existing/custom Excel or CSV structure.</td>
+        </tr>
+        <tr>
+            <td>Column names</td>
+            <td>Do not rename the sample columns.</td>
+<td>Existing column names can be mapped manually.</td>
+        </tr>
+        <tr>
+            <td>Mapping</td>
+            <td>Standard mapping is applied automatically.</td>
+            <td>Administrator maps columns to Timesheet fields.</td>
+        </tr>
+        <tr>
+            <td>Sample download</td>
+            <td>Download Sample File is available.</td>
+            <td>Manual mapping/upload flow is used.</td>
+        </tr>
+        <tr>
+            <td>Best suited for</td>
+            <td>Data that can follow the standard sample.</td>
+            <td>Data that already exists in another column structure.</td>
+        </tr>
+    </table>
+</li>
+<li>
+    <p><strong>Complete End-to-End Process</strong></p>
+    <ol style="list-style-type:decimal">
+        <li>Open Timesheet Settings and go to Integration.</li>
+        <li>Open Excel Migration.</li>
+        <li>Open Configure Column Mapping.</li>
+        <li>Choose Standard Sample Format ON if the source data will use the application's sample structure; choose OFF if the source file requires manual mapping.</li>
+  <li>If ON, download the sample, populate it without renaming columns, and use the automatically applied mapping.</li>
+<li>If OFF, attach/use the source file and manually map its columns to the appropriate Timesheet fields.</li>    
+<li>Confirm the mandatory Client/Project, Year, Week, and User information is mapped.</li>
+<li>Save the mapping configuration.</li>
+<li>Open Import Bulk Timesheet.</li>
+<li>Attach the bulk Excel/CSV data file.</li>
+<li>Review the Migration Preview and verify the displayed records.</li>
+<li>Start the import and wait for validation to complete.</li>
+<li>Open Weekly Timesheet and verify the imported daily hours and totals.</li>
+<li>Open Reports and verify that the migrated information is available there as well.</li>
+</ol>
+</li>
+<li>
+    <p><strong>File Preparation and Verification Rules</strong></p>
+    <ul style="list-style-type:disc">
+        <li>The supplied instructions list .xlsx, .xls, and .csv as accepted file types.</li>
+        <li>The first row of the source file must contain column headers.</li>
+        <li>At least one mapping is required before a mapping configuration can be saved.</li>
+        <li>Client and Project may be supplied as separate columns when the corresponding option is enabled.</li>
+        <li>Week and User are mandatory fields according to the displayed migration instructions.</li>
+        <li>Status values should follow the supported values shown in the instructions.</li>
+        <li>Dates should use MM/DD/YYYY when a Date column is present.</li>
+        <li>Review the Migration Preview before importing.</li>
+        <li>Verify the final records in both Weekly Timesheet and Reports.</li>
+    </ul>
+</li>
+                                </ol>
+                                  
+                            </div>
+                    
                         </div>
                         <!-- <div class="bg-light p-4 remove-padding common-scroll" id="integrate">
                             <ul class=page-list>

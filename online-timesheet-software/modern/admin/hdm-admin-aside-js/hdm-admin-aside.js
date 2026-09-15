@@ -218,6 +218,9 @@ $(document).ready(function () {
                 "<li data-nav-id='../General' title='Integrate with Time-Off Manager' class='sidelist'>"+
                     "<a href='/online-timesheet-software/modern/admin/settings/integration/#Integrate-with-Time-Off-Manager'>Integrate with Time-Off Manager</a>"+
                 "</li>"+
+                 "<li data-nav-id='../General' title='Excel Migration' class='sidelist'>"+
+                    "<a href='/online-timesheet-software/modern/admin/settings/integration/#Excel'>Excel Migration</a>"+
+                "</li>"+
             "</ul>"+
         "</li>"+
         "</ul>"+

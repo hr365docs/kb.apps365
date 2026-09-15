@@ -895,6 +895,110 @@
                                             width="100%" height="auto"></div><br>
                                 </ul>
                             </div>
+                              <h2 id="Auto"><a class="header-icon-link highlight" href="#">Automatic Task Configuration<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h2>
+                                    <p>Overview</p>
+                                    <p>
+                                        Automatic Task Configuration is a setting that creates tasks on a ticket for you, based on the values the ticket already holds. You choose which ticket columns to watch, state the values they must have, and list the tasks that should be created when those values match.
+                                    </p>
+                                    <p>
+                                        From then on, whenever someone raises a ticket that matches your rule, Helpdesk 365 creates the tasks and assigns them to the right person, team, department, or group —with no manual step needed.
+                                    </p>
+                                    <p>
+                                        This guide is split into two simple parts:
+                                    </p>
+                                    <ul style="list-style-type:disc">
+                                        <li>Part 1 – Creating an Automatic Task Rule</li>
+                                        <li>Part 2 – Seeing It Work Automatically</li>
+                                    </ul><br>
+                                    <div style="background-color:rgb(246,197,172);padding:1px">
+                                        <p>
+                                           <Strong> Note:</Strong> Automatic Task Configuration applies only to new tickets created through the application. Tasks are not added to tickets that already exist, and the rule is not checked again if a ticket is edited later.
+                                        </p>
+                                    </div><br>
+                                    <p><strong>Part 1: Creating an Automatic Task Rule</strong></p>
+                                    <p><strong>Step 1 — Open the Automatic Task Configuration settings</strong></p>
+                                    <p>Log in to Helpdesk 365 admin settings. On the left-hand menu, click the gear (Settings) icon. Then, under Features, click Automatic Task Configuration.</p>
+                                    <div><img src="auto.png" onclick="openModal('auto.png')" alt="Rule Automation"
+                                            width="100%" height="auto"></div><br> 
+                                            <p><strong>
+                                                Step 2 — Start a new rule
+                                            </strong></p>
+                                            <p>
+                                                An Automatic Task Configuration window opens, listing any rules you already have. Click the + Add button in the top-left corner to start building a new one. A panel called Configure rule opens.
+                                            </p>
+                                            <div><img src="auto1.png" onclick="openModal('auto1.png')" alt="Rule Automation"
+                                            width="100%" height="auto"></div><br> 
+                                            <p><strong>Step 3 — Name the rule and choose how conditions are matched</strong></p>
+                                            <p>Here is what each option means:</p>
+                                            <ul style="list-style-type:disc">
+                                                <li>Rule name — type a name for your rule, e.g. “Hardware Request”.</li>
+                                                <li>Match all — every condition you add must match before the tasks are created (AND).</li>
+                                                <li>Match any — the rule applies as soon as any one condition matches (OR).</li>
+                                            </ul><br>
+                                            <p><strong>Step 4 — Add your conditions</strong></p>
+                                            <p>Click Add condition. A condition row appears with three boxes:</p>
+                                            <ul style="list-style-type:disc">
+                                                <li>First box — the column to check, e.g. Teams or Request Type.</li>
+                                                <li>Second box — leave this set to is.</li>
+                                                <li>Third box — the value the column must hold, e.g. Information Technology.</li>
+                                            </ul><br>
+                                            <p>Add as many conditions as you need. To remove one, click the × at the end of that row.</p>
+                                              <div style="background-color:rgb(246,197,172);padding:1px">
+                                        <p>
+                                           <Strong> Note:</Strong> Only option-type columns can be used in a condition — that is, columns where the value is picked from a list. This includes your own custom columns, both Single Choice and Multiple Choice. Free-text, number, date, and people columns are not available here.                                        </p>
+                                    </div><br>
+                                    <p><strong>Step 5 — Add the tasks</strong></p>
+                                    <p>
+                                        Underneath the conditions is the section “Then create these tasks on the ticket”. Click Add task to open the Add Task panel, then fill in the details:
+                                    </p>
+                                    <ul style="list-style-type:disc">
+                                        <li>Title — a short name for the task, e.g. “Laptop”.</li>
+                                        <li>Teams — the team this task relates to.</li>
+                                        <li>Priority — how urgent the task is (Low, Medium, High, Urgent).</li>
+                                        <li>Status — leave this as “Not Initiated” for a brand-new task.</li>
+                                        <li>Assignment Type — choose who the task should go to: User, Teams, Department, or Group.</li>
+                                        <li>Assigned To — pick the exact person, team, department, or group. The label changes to match the Assignment Type you chose.</li>
+                                   <li>Due Date (Days) — how many days the assignee gets to finish the task, counted from when the ticket is created.
+</li> </ul><br>
+<p>Click Submit to save the task. Repeat this to add as many tasks as you need to a single rule. Each saved task is listed under the conditions with its assignee and due date, along with a pencil icon to edit it and a trash icon to remove it.</p>
+ <div><img src="auto2.png" onclick="openModal('auto2.png')" alt="Rule Automation"
+                                            width="100%" height="auto"></div><br> 
+                                             <div><img src="auto3.png" onclick="openModal('auto3.png')" alt="Rule Automation"
+                                            width="100%" height="auto"></div><br> 
+                                            <p>
+                                                <strong>
+                                                    Step 6 — Save the rule
+                                                </strong>
+                                            </p>
+                                            <p>Click Save rule. The rule now appears in the Automatic Task Configuration list, showing how many tasks it will create, when it was created, and by whom.</p>
+                                <p><strong>Step 7 — Edit or delete a rule later</strong></p>   
+                                <p>In the rules list, use the Action column to manage a rule at any time:</p>
+                                <ul style="list-style-type:disc">
+                                    <li>Pencil icon — reopens the Configure rule panel so you can change the name, conditions, or tasks. Click Save rule when you are done.</li>
+                              <li>Trash icon — deletes the rule completely.</li>
+                                </ul><br>
+                                 <div style="background-color:rgb(246,197,172);padding:1px">
+                                        <p>
+                                           <Strong> Note:</Strong>Editing or deleting a rule affects future tickets only. Tasks already created on existing tickets stay where they are and must be updated or closed manually.                                        </p>
+                                    </div><br>
+                                    <p><strong>Part 2: Seeing It Work Automatically</strong></p>
+                                    <p>From now on, every time someone creates a ticket whose values match your rule, the task(s) you configured are created and assigned automatically no manual step required.</p>
+                     <ul style="list-style-type:disc">
+                        <li>The tasks appear in the To Do panel on the ticket itself, each with its own status dropdown.</li>
+                    <li>If a task is assigned to you personally, it also appears under the My Tasks tab.</li> 
+                    <li>If it is assigned to your team, it appears under the Teams Tasks tab.</li>
+                    </ul><br>
+                    <p>Task status can be updated from either place the ticket and the task views always stay in step.</p>
+                <div><img src="auto4.png" onclick="openModal('auto4.png')" alt="Rule Automation"
+                                            width="100%" height="auto"></div><br>    
+                                            <p>
+                                                In the example above, ticket SR#1106-IT was raised with Teams set to Information Technology, which matches the single condition of the “Hardware Request” rule. The task “Laptop” was created on the ticket automatically and is now In Progress.
+
+
+                                            </p>            
+                </div>
                         </div>
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                         <nav class="pagination mt-3">
