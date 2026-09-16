@@ -112,7 +112,7 @@ $(document).ready(function () {
     `<a class='dropdown-item stocklink' href='/IApps-365/'>IApps 365</a>` +
     `<a class='dropdown-item stocklink' href='/Stock365/'>Stock 365</a>` +
     `<a class='dropdown-item stocklink' href='/BookTime-365/'>BookTime 365</a>` +
-    `<a class='dropdown-item stocklink' href='/expense-365-lite/'>Expense 365 Lite </a>` +
+    `<a class='dropdown-item stocklink' href='/expense-365-Lite/'>Expense 365 Lite </a>` +
     `<a class='dropdown-item stocklink' href='/FAQ-365/'>FAQ 365</a>` +
     `<a class='dropdown-item stocklink' href='/Gauge365/'>Gauge 365</a>` +
     `<a class='dropdown-item stocklink' href='/Carousel-365/'>Carousel 365</a>` +
@@ -181,6 +181,12 @@ style.innerHTML = `
     text-decoration: none !important;
     border: none !important;
   }
+    .pagination a:hover i{
+    color:black !important
+    }
+     .card-header a:hover i{
+    color:black !important 
+    }
     .newWebparts{
       position: absolute;
         max-height: 25vw !important;
@@ -202,6 +208,7 @@ a:focus {
      text-decoration: none !important;
     color: #5637da 
 }
+    
     .bug{
     color:var(--front--) !important 
     }
@@ -341,6 +348,12 @@ h6
     font-weight: 700;
     line-height: 1.2
 }
+     .dropdown-item{
+   color:black !important;
+   }
+   .active-submenu{
+   font-weight:800 !important;
+   }
 `;
 document.head.appendChild(style);
 
