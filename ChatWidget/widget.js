@@ -1,4 +1,4 @@
-import { hydrateIcons } from './icons.js';
+import { hydrateIcons } from './Icons.js';
 
 (function () {
   "use strict";
@@ -382,6 +382,7 @@ import { hydrateIcons } from './icons.js';
   function serializeConversation(conv, { includeContentUrl = false } = {}) {
     return {
       messages: (conv.messages || []).map((message) => ({
+        id: message.id || "",
         role: message.from?.role === "bot" ? "assistant" : "user",
         content: message.text || "",
         attachments: Array.isArray(message.attachments)
@@ -437,7 +438,7 @@ import { hydrateIcons } from './icons.js';
     };
   }
   function buildConversationFields(conv) {
-    const serialized = serializeConversation(conv);
+    const serialized = serializeConversation(conv, { includeContentUrl: true });
     return {
       Title: conv.title || conv.preview || "New chat",
       Email: conv.email || currentUserEmail || "",
@@ -710,47 +711,38 @@ if (loadVersion !== conversationLoadVersion) {
     renderedMessageIds.clear();
   }
 
-     function appendLocalBotMessage(text) {
-    hideEmptyState();
-    const msg = document.createElement("article");
-    msg.className = "cw-copilot-msg";
-    msg.innerHTML = `
-      <div class="cw-copilot-card">
-        <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
-      </div>
-    `;
-    body.appendChild(msg);
-    scrollToBottom();
-  }
-
   function bindSupportSelectButtons(container) {
     const techBtn = container.querySelector('[data-support="technical"]');
     const salesBtn = container.querySelector('[data-support="sales"]');
 
-    techBtn?.addEventListener("click", async () => {
-      container.remove();
-      try {
-        await ensureWebChatInitialized();
-      } catch {
-      }
-      appendLocalBotMessage(
-        "Sure! What would you like help with? You can ask me anything about Apps365 products — features, setup, troubleshooting, and more."
-      );
-      input?.focus();
-    });
+    function selectSupportButton(selectedButton) {
+      container.querySelectorAll(".cw-support-select-btn").forEach((button) => {
+        const isSelected = button === selectedButton;
+        button.classList.toggle("is-selected", isSelected);
+        button.setAttribute("aria-pressed", String(isSelected));
+      });
+    }
 
-    salesBtn?.addEventListener("click", async () => {
+    async function sendSupportSelection(button, supportType, label) {
+      selectSupportButton(button);
       try {
         await ensureWebChatInitialized();
       } catch {
         showToast("Chat is still loading. Please try again.");
         return;
       }
-      if (!input) return;
-      input.value = "I have a question about pricing";
-      updateSendButton();
-      handleSend();
+      sendMessage(label, { supportType });
+      input?.focus();
+    }
+
+    techBtn?.addEventListener("click", () => {
+      void sendSupportSelection(techBtn, "technical", "Technical Support");
     });
+
+    salesBtn?.addEventListener("click", () => {
+      void sendSupportSelection(salesBtn, "sales", "Sales Support");
+    });
+
   }
 
   function showEmptyState() {
@@ -772,8 +764,8 @@ if (loadVersion !== conversationLoadVersion) {
     supportCard.innerHTML = `
       <div class="cw-support-select-subtitle">Please select the type of support you need.</div>
       <div class="cw-support-select-actions">
-        <button type="button" class="cw-support-select-btn" data-support="technical">Technical Support</button>
-        <button type="button" class="cw-support-select-btn" data-support="sales">Sales Support</button>
+        <button type="button" class="cw-support-select-btn" data-support="technical" aria-pressed="false">Technical Support</button>
+        <button type="button" class="cw-support-select-btn" data-support="sales" aria-pressed="false">Sales Support</button>
       </div>
     `;
     body.appendChild(supportCard);
@@ -782,7 +774,6 @@ if (loadVersion !== conversationLoadVersion) {
 
   function hideEmptyState() {
     body.querySelector(".cw-empty-state")?.remove();
-    body.querySelector(".cw-support-select")?.remove();
   }
 
   function showToast(message) {
@@ -909,9 +900,18 @@ if (loadVersion !== conversationLoadVersion) {
     bindCopyButton(copyBtn, text);
     bindFeedbackButtons(container, messageId);
   }
-
+//debugger;
   function saveFeedback(messageId, rating, comment) {
-    if (!currentConversation || !messageId) return;
+    // if (!currentConversation || !messageId) return;
+    if (!messageId) return;
+
+if (!currentConversation) {
+  currentConversation = {
+    id: "temp-" + Date.now(),
+    messages: [],
+    feedback: {}
+  };
+}
     if (!currentConversation.feedback) currentConversation.feedback = {};
     currentConversation.feedback[messageId] = {
       rating,
@@ -1265,21 +1265,18 @@ if (loadVersion !== conversationLoadVersion) {
 
       if (!isReplay && action.type === "DIRECT_LINE/POST_ACTIVITY") {
         const activity = action.payload.activity;
-        const hasAttachments = activity.attachments && activity.attachments.length > 0;
-        // File uploads are handled in sendFiles() after postActivity resolves
-        if (hasAttachments) return next(action);
-
         const hasText = activity.text && activity.text.trim();
-        if (hasText) {
-          handleNewMessage({
-            id: activity.id || "local-" + Date.now(),
-            type: "message",
-            text: activity.text,
-            attachments: [],
-            from: { id: userId, name: userName, role: "user" },
-            timestamp: new Date().toISOString(),
-          });
-        }
+        const attachments = Array.isArray(activity.attachments) ? activity.attachments : [];
+        if (!hasText && attachments.length === 0) return next(action);
+
+        handleNewMessage({
+          id: activity.id || "local-" + Date.now(),
+          type: "message",
+          text: activity.text || "",
+          attachments,
+          from: { id: userId, name: userName, role: "user" },
+          timestamp: new Date().toISOString(),
+        });
       }
 
       if (!isReplay && action.type === "DIRECT_LINE/INCOMING_ACTIVITY") {
@@ -1288,7 +1285,8 @@ if (loadVersion !== conversationLoadVersion) {
           handleNewMessage({
             id: activity.id || "bot-" + Date.now(),
             type: "message",
-            text: activity.text,
+            text: activity.text || "",
+            attachments: Array.isArray(activity.attachments) ? activity.attachments : [],
             from: { id: "bot", name: activity.from.name || "Copilot", role: "bot" },
             timestamp: activity.timestamp || new Date().toISOString(),
           });
@@ -1466,7 +1464,7 @@ if (loadVersion !== conversationLoadVersion) {
     }
   }
 
-function sendMessage(text) {
+function sendMessage(text, additionalChannelData = {}) {
     if (!store || !text) return;
 
     store.dispatch({
@@ -1476,6 +1474,7 @@ function sendMessage(text) {
         channelData: {
           pageUrl: window.location.href,
           userIp: userPublicIp,
+          ...additionalChannelData,
         },
       },
     });
@@ -1519,70 +1518,6 @@ function sendMessage(text) {
     pendingFiles = [];
     renderFilePreviews();
     updateSendButton();
-  }
-
-  function fileToDataUrl(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(String(reader.result || ""));
-      reader.onerror = () => reject(reader.error || new Error("Could not read file"));
-      reader.readAsDataURL(file);
-    });
-  }
-
-  function getDirectLineConversationId() {
-    return (
-      directLine?.conversationId ||
-      directLine?.conversation?.conversationId ||
-      directLine?._conversationId ||
-      directLine?._conversation?.conversationId ||
-      ""
-    );
-  }
-
-  async function uploadFilesToDirectLine(filesToSend, text) {
-    const conversationId = getDirectLineConversationId();
-    if (!conversationId) {
-      throw new Error("Direct Line conversation is not ready");
-    }
-
-    const formData = new FormData();
-    filesToSend.forEach((item) => {
-      formData.append("file", item.file, item.file.name);
-    });
-
-    if (text) {
-      formData.append(
-        "activity",
-        new Blob(
-          [
-            JSON.stringify({
-              type: "message",
-              from: { id: userId, name: userName, role: "user" },
-              text,
-            }),
-          ],
-          { type: "application/vnd.microsoft.activity" }
-        )
-      );
-    }
-
-    const response = await fetch(
-      `https://directline.botframework.com/v3/directline/conversations/${encodeURIComponent(conversationId)}/upload?userId=${encodeURIComponent(userId)}`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${DIRECT_LINE_SECRET}`,
-        },
-        body: formData,
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`Direct Line upload failed (${response.status})`);
-    }
-
-    return response.json().catch(() => ({}));
   }
 
   function renderFilePreviews() {
@@ -1630,21 +1565,7 @@ function sendMessage(text) {
     });
   }
 
-  function uploadActivity(activity) {
-    return new Promise((resolve, reject) => {
-      if (!directLine) {
-        reject(new Error("not ready"));
-        return;
-      }
-      directLine.postActivity(activity).subscribe({
-        next: (id) => resolve({ ...activity, id, timestamp: new Date().toISOString() }),
-        error: reject,
-      });
-    });
-  }
-
     async function handleSend() {
-    if (!input) return;
     if (isWaitingForResponse) {
       showToast("Please wait for the current response to finish.");
       return;
@@ -1665,34 +1586,23 @@ function sendMessage(text) {
 
     try {
       if (filesToSend.length) {
-        const attachments = await Promise.all(
-          filesToSend.map(async (item) => ({
-            contentType: item.file.type || "application/octet-stream",
-            contentUrl: await fileToDataUrl(item.file),
-            name: item.file.name,
-          }))
-        );
-
-        try {
-          await uploadFilesToDirectLine(filesToSend, text);
-          handleNewMessage({
-            id: `local-${Date.now()}`,
-            type: "message",
-            text,
-            attachments,
-            from: { id: userId, name: userName, role: "user" },
-            timestamp: new Date().toISOString(),
+        if (text) {
+          store.dispatch({
+            type: "WEB_CHAT/SEND_MESSAGE",
+            payload: {
+              text,
+              channelData: {
+                pageUrl: window.location.href,
+                userIp: userPublicIp,
+              },
+            },
           });
-        } catch {
-          const activity = await uploadActivity({
-            type: "message",
-            text,
-            from: { id: userId, name: userName, role: "user" },
-            attachments,
-          });
-
-          handleNewMessage(activity);
         }
+
+        store.dispatch({
+          type: "WEB_CHAT/SEND_FILES",
+          payload: filesToSend.map((item) => item.file),
+        });
       } else if (text) {
         sendMessage(text);
       }

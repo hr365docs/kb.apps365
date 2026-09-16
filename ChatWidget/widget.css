@@ -40,7 +40,7 @@
 .cw-markdown * {
   color: #353535 !important;
   font-size: 14px;
-  /* font-weight: 400; */
+  /* font-weight: 400;  */
 }
 *,
 *::before,
@@ -1040,10 +1040,9 @@ body {
     padding: 4px 0 4px 14px;
     color: var(--cw-text-secondary);
     margin: 12px 0;
+    font-size:10px !important;
     font-weight: 400;
-    font-size:10px;
 }
- 
 /* Empty state */
 .cw-empty-state {
     display: grid;
@@ -1110,6 +1109,16 @@ body {
   background: var(--cw-primary-fill-light);
   border-color: var(--cw-primary);
 }
+.cw-support-select-btn.is-selected,
+.cw-support-select-btn[aria-pressed="true"] {
+  background: var(--cw-primary);
+  border-color: var(--cw-primary);
+  color: #fff;
+}
+.cw-support-select-btn:focus-visible {
+  outline: 2px solid var(--cw-primary);
+  outline-offset: 2px;
+}
 
 .cw-widget.is-expanded .cw-support-select {
   max-width: 340px;
@@ -1117,7 +1126,7 @@ body {
 }
 /* Footer composer */
 .cw-footer {
-    padding: 12px 0 14px;
+    padding: 12px 0;
     border-top: 1px solid #dfe6f1;
     background: #fff;
     flex-shrink: 0;
@@ -1176,14 +1185,15 @@ body {
     background: rgba(15, 23, 42, 0.06);
     color: var(--cw-text-secondary);
 }
-.cw-quick-replies {
+ .cw-quick-replies {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    padding: 2px 0 1px;
+    padding: 0;
+    margin: 0 0 10px;
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 transparent;
-    margin-left: 16px;
+    justify-content: center;
 }
 .cw-quick-replies::-webkit-scrollbar {
     height: 6px;
@@ -1374,7 +1384,7 @@ body {
     font-size: 11px;
     color: #a9b6d0;
     margin-top: 5px;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
 }
 .cw-webchat-host {
     position: fixed;
@@ -1506,7 +1516,6 @@ body {
 }
 .cw-widget.is-expanded .cw-quick-replies {
     justify-content: center;
-    padding-bottom: 14px;
 }
 .cw-widget.is-expanded .cw-composer {
     grid-template-columns: 0 minmax(0, 1fr) 60px;
@@ -1551,6 +1560,7 @@ body {
 }
 .cw-widget:not(.is-expanded) .cw-body {
     padding-top: 22px;
+    padding-bottom: 0;
 }
 .cw-widget:not(.is-expanded) .cw-footer {
     padding: 7px 0 7px;
