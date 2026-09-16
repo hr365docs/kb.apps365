@@ -1,7 +1,7 @@
 $(document).ready(function () {
 if (!$("#fa-stylesheet").length) {         $("<link>", {             id: "fa-stylesheet",             rel: "stylesheet",             href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"        }).appendTo("head");     }
     $("#footer-container").html(
-        "<div style='position:relative;width:100%;bottom:0;margin-top:50px;top:1vw'>"+
+        "<div style='position:relative;width:100%;bottom:0;'>"+
         "<footer class='section footer' style='padding:1vw 0 0 0;background-color:black;position:absolute;bottom:0;width:100%'>" +
             "<div class='container' style='margin:0;width:100%;max-width:100%'>" +
                 "<div class='row'style='display:flex;justify-content:space-between;width:100%'>" +

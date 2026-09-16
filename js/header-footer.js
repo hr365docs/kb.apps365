@@ -183,7 +183,8 @@ style.innerHTML = `
  }
  ::selection{
  background-color:#5637DA !important;
- color:white !important }
+ color:white !important
+  }
   /* Submenu items base style */
   .dropdown-menu .dropdown-item {
     background-color: transparent !important;
