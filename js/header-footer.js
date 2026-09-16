@@ -125,6 +125,13 @@ $(document).ready(function () {
     `<a class='dropdown-item stocklink' href='/Quiz-Board-365/'>Quiz Board 365</a>` +
     `<a class='dropdown-item stocklink' href='/Spotlight-365/'>Spotlight 365</a>` +
     `<a class='dropdown-item stocklink' href='/Alert-365/'>Alert 365</a>` +
+     `<a class='dropdown-item stocklink' href='/Praise-365/'>Praise 365</a>` +
+      `<a class='dropdown-item stocklink' href='/idea-box-365/'>Idea Box 365</a>` +
+       `<a class='dropdown-item stocklink' href='/Count-Down-Calendar-365/'>Countdown Calendar 365</a>` +
+         `<a class='dropdown-item stocklink' href='/ICP-365/'>ICP 365</a>` +
+         `<a class='dropdown-item stocklink' href='/MS-Forms-365/'>MS Forms 365</a>` +
+          `<a class='dropdown-item stocklink' href='/Poll-365/'>Poll 365</a>` +
+          `<a class='dropdown-item stocklink' href='/joining-card-365/'>Joining Card 365</a>` +
     `</div>` +
     `</li>` +
 
@@ -171,7 +178,12 @@ style.innerHTML = `
     outline: none !important;
     background-image: none !important;
   }
-
+ .navbar{
+ width:97vw;
+ }
+ ::selection{
+ background-color:#5637DA !important;
+ color:white !important }
   /* Submenu items base style */
   .dropdown-menu .dropdown-item {
     background-color: transparent !important;

@@ -53,8 +53,8 @@
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
-                <a class="navbar-brand px-2" href="https://hr365docs.github.io/product/">
-                    <img src="../../logo_.png" width="100%" height="auto" alt="HR365" />
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img src="../../../../../images/logo_.png" width="100%" height="auto" alt="HR365" />
                 </a>
                 <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
                     aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
@@ -112,6 +112,572 @@
                                     
                                 </div>
                                 </ul>
+                            <h2 id="game"> Gamification — Configuration & User Guide
+                                    </h2>
+
+                                    <hr style="border: 0; height: 1px; background: #ddd; margin: 20px 0;">
+
+                                    <!-- SECTION 1 -->
+                                    <h3 style="color: #333; margin-top: 20px;">1. Overview</h3>
+                                    <p> The Gamification feature in LMS 365 is designed to boost learner engagement and
+                                        motivation by rewarding users for their learning activities. It introduces a
+                                        points-based reward system, achievement badges, and redeemable prizes — all
+                                        visible through a dedicated Gamification Dashboard with leaderboards and
+                                        analytics.
+                                    </p>
+                                    <p>
+                                        This document covers how to enable and configure Gamification in LMS 365,
+                                        explains each component in detail, and provides a walkthrough of the
+                                        Gamification Dashboard.
+                                    </p>
+                                    <p>Gamification in LMS 365 consists of three core components:</p>
+                                    <ul>
+                                        <li><strong>Reward Points</strong> — Points awarded to learners for completing
+                                            learning activities.</li>
+                                        <li><strong>Badges</strong> — Digital achievements unlocked when learners meet
+                                            specific milestones.</li>
+                                        <li><strong>Prizes</strong> — Redeemable rewards that learners can claim using
+                                            their earned points.</li>
+                                    </ul>
+
+                                    <!-- SECTION 2 -->
+                                    <h3 style="color: #333; margin-top: 20px;">2. Enabling Gamification</h3>
+                                    <p>
+                                        Gamification is accessed and enabled from the LMS 365 Settings panel. Only Admin
+                                        users can enable and configure this feature.
+                                    </p>
+
+                                    <div>
+                                        <!-- Replace 'src' attribute value with your real image link or path -->
+                                        <div>
+                                            <img src="image.png" onclick="openModal('gamification.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 1 – LMS 365 Settings Panel with Gamification highlighted</p>
+                                    </div>
+
+                                    <p><strong>Steps to Enable Gamification:</strong></p>
+                                    <ol>
+                                        <li>Click the Settings icon (⚙) from the left-side navigation bar.</li>
+                                        <li>The Settings page opens showing multiple sections including General
+                                            Settings, Features, and Notifications.</li>
+                                        <li>Under the Features section (right column), click
+                                            <strong>Gamification</strong>.
+                                        </li>
+                                        <li>The Gamification panel opens — enable the toggle to activate the feature.
+                                        </li>
+                                        <li>Once enabled, three sub-sections become available: <strong>Reward
+                                                Points</strong>, <strong>Badges</strong>, and <strong>Prizes</strong>.
+                                        </li>
+                                    </ol>
+
+                                    <div
+                                        style="background-color: #f9f9f9; border-left: 4px solid #0056b3; padding: 12px; margin: 15px 0;">
+                                        <strong>📌 Note:</strong> Learners and Managers will see their points, badges,
+                                        and leaderboard rankings on the Gamification Dashboard once the feature is
+                                        enabled.
+                                    </div>
+
+                                    <!-- SECTION 3 -->
+                                    <h3 style="color: #333; margin-top: 20px;">3. Reward Points</h3>
+                                    <p>
+                                        Reward Points are automatically awarded to learners when they complete specific
+                                        learning activities. Admins can configure the point value for each activity by
+                                        clicking the edit (✏) icon next to it.
+                                    </p>
+
+                                    <div>
+                                        <div>
+                                            <img src="Reward-points.png" onclick="openModal('Reward-points.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 2 – Reward Points Configuration Panel</p>
+                                    </div>
+
+                                    <p>Reward Points are grouped into two categories:</p>
+
+                                    <h4 style="color: #555;">3.1 Learning Activity Points</h4>
+                                    <p>These points are awarded based on direct learning interactions within a course or
+                                        assessment.</p>
+
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; text-align: left;">
+                                        <thead>
+                                            <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Activity</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Course
+                                                        Enrollment</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner enrolls in a course.</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Watching a
+                                                        video (100%)</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner watches a video to full completion (100%).</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Completing a
+                                                        chapter</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded for
+                                                    each chapter completed within a course.</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Completing
+                                                        full course</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner successfully completes an entire course.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Completing
+                                                        assessment</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner submits a course assessment.</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Passing
+                                                        quiz</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner passes a quiz.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Perfect quiz
+                                                        score</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Bonus points awarded
+                                                    for achieving a perfect score on any quiz.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h4 style="color: #555;">3.2 Engagement Based Points</h4>
+                                    <p>These points are awarded based on learner engagement and participation beyond
+                                        core course content.</p>
+
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; text-align: left;">
+                                        <thead>
+                                            <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Activity</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Course rating
+                                                        submitted</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner submits a rating for a completed course.</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Detailed
+                                                        review (min chars)</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded when a
+                                                    learner writes a detailed course review meeting the minimum
+                                                    character count.</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Daily login
+                                                        streak (per day)</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded for
+                                                    each consecutive day a learner logs in to LMS 365.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div
+                                        style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 12px; margin: 15px 0;">
+                                        <strong>💡 Tip:</strong> To edit point values, click the pencil (✏) icon next to
+                                        each activity row. Assign higher points to high-value activities like completing
+                                        a full course to encourage deeper engagement.
+                                    </div>
+
+                                    <!-- SECTION 4 -->
+                                    <h3 style="color: #333; margin-top: 20px;">4. Badges</h3>
+                                    <p>
+                                        Badges are digital achievement awards automatically earned by learners when they
+                                        reach specific milestones. They are displayed on the learner's profile and the
+                                        Gamification Dashboard to publicly celebrate accomplishments.
+                                    </p>
+
+                                    <div>
+                                        <div>
+                                            <img src="badge.png" onclick="openModal('badge.png')" alt="question"
+                                                width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 3 – Badges Configuration Panel</p>
+                                    </div>
+
+                                    <p>LMS 365 includes the following default badges:</p>
+
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; text-align: left;">
+                                        <thead>
+                                            <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Name</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Earning Criteria</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Course
+                                                        Finisher</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">1st course completed
+                                                    — awarded when the learner finishes their very first course.</td>
+                                                <td
+                                                    style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">
+                                                    Active</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Quiz
+                                                        Master</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">5 quizzes passed — a
+                                                    minimum of 5 quizzes must be passed across all courses.</td>
+                                                <td
+                                                    style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">
+                                                    Active</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Fast
+                                                        Learner</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Course completed in
+                                                    less than 3 days — recognizes early course completion.</td>
+                                                <td
+                                                    style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">
+                                                    Active</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Consistency
+                                                        Champ</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">7-day learning streak
+                                                    — learner must engage in daily learning for 7 consecutive days.</td>
+                                                <td
+                                                    style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">
+                                                    Active</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div
+                                        style="background-color: #f9f9f9; border-left: 4px solid #0056b3; padding: 12px; margin: 15px 0;">
+                                        <strong>📌 Note:</strong> Badges are awarded automatically once the criteria is
+                                        met. Admins can view and edit badge details using the pencil (✏) icon. Badge
+                                        status can be toggled Active or Inactive.
+                                    </div>
+
+                                    <!-- SECTION 5 -->
+                                    <h3 style="color: #333; margin-top: 20px;">5. Prizes</h3>
+                                    <p>
+                                        Prizes are redeemable rewards that learners can claim by spending their
+                                        accumulated Reward Points. Admins build and manage the prize catalogue, setting
+                                        the number of points required to redeem each prize.
+                                    </p>
+
+                                    <h4 style="color: #555;">5.1 Prizes List</h4>
+                                    <div>
+                                        <div>
+                                            <img src="Prize.png" onclick="openModal('Prize.png')" alt="question"
+                                                width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 4 – Prizes List Panel</p>
+                                    </div>
+                                    <p>The Prizes panel displays all available prizes. Each row shows:</p>
+                                    <ul>
+                                        <li><strong>Image</strong> — A thumbnail representing the prize.</li>
+                                        <li><strong>Prize Name</strong> — The title of the prize.</li>
+                                        <li><strong>Description</strong> — A short description of what the prize
+                                            includes.</li>
+                                        <li><strong>Required Points To Claim</strong> — Total points the learner must
+                                            spend to redeem the prize.</li>
+                                        <li><strong>Action</strong> — Edit existing prizes using the pencil (✏) icon.
+                                        </li>
+                                    </ul>
+
+                                    <h4 style="color: #555;">5.2 Adding a New Prize</h4>
+                                    <div>
+                                        <div>
+                                            <img src="Add-prize.png" onclick="openModal('Add-prize.png')" alt="question"
+                                                width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 5 – Add Prize Form</p>
+                                    </div>
+                                    <p><strong>To add a new prize to the catalogue:</strong></p>
+                                    <ol>
+                                        <li>From the Prizes panel, click the <strong>+ Add Prize</strong> button at the
+                                            top-left.</li>
+                                        <li>The Add Prizes form opens on the right side of the screen.</li>
+                                        <li>Fill in all the required fields:</li>
+                                        <ul>
+                                            <li><strong>Prize Name*</strong> — Enter the name of the prize (e.g.,
+                                                "Amazon Gift Card", "Extra Leave Day").</li>
+                                            <li><strong>Description*</strong> — Provide a brief explanation of the
+                                                prize.</li>
+                                            <li><strong>Points Required To Claim*</strong> — Set the points a learner
+                                                needs to redeem this prize.</li>
+                                            <li><strong>Action*</strong> — Choose what happens when the prize is claimed
+                                                (e.g., notify admin for manual fulfilment).</li>
+                                            <li><strong>Thumbnail*</strong> — Select or upload a representative image
+                                                for the prize.</li>
+                                            <li><strong>Terms & Conditions*</strong> — Review and customize the
+                                                pre-filled terms. Add new lines with + or remove with the delete icon.
+                                            </li>
+                                        </ul>
+                                        <li>Click <strong>Save</strong> to publish the prize to the learner-facing
+                                            Rewards Store.</li>
+                                    </ol>
+
+                                    <p><strong>Default Terms & Conditions pre-filled in the form:</strong></p>
+                                    <ul>
+                                        <li>Points are deducted immediately on confirmation.</li>
+                                        <li>Redemptions cannot be reversed or refunded.</li>
+                                        <li>Reward is processed within 5–7 working days.</li>
+                                        <li>You will be contacted via email once ready.</li>
+                                    </ul>
+
+                                    <div
+                                        style="background-color: #f9f9f9; border-left: 4px solid #0056b3; padding: 12px; margin: 15px 0;">
+                                        <strong>📌 Note:</strong> All fields marked with * are mandatory. Prizes appear
+                                        in the learner-facing Rewards Store immediately after saving.
+                                    </div>
+
+                                    <!-- SECTION 6 -->
+                                    <h3 style="color: #333; margin-top: 20px;">6. Gamification Dashboard</h3>
+                                    <p>
+                                        The Gamification Dashboard gives a real-time visual overview of learner
+                                        performance, leaderboard rankings, badge achievements, and point activity. It is
+                                        accessible to Admins and learners from the left navigation bar.
+                                    </p>
+
+                                    <div>
+                                        <div>
+                                            <img src="dashboard.png" onclick="openModal('dashboard.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+                                            Figure 6 – Gamification Dashboard</p>
+                                    </div>
+
+                                    <p><strong>6.1 Top Learners Banner</strong><br>
+                                        The top section displays the top 3 learners in a podium-style layout, showing
+                                        each learner's name, profile picture, and total accumulated points. The
+                                        <strong>#1 ranked learner</strong> is highlighted in the center.
+                                    </p>
+
+                                    <p><strong>6.2 Leaderboard</strong><br>
+                                        The leaderboard ranks all learners by total points and shows the following
+                                        columns:</p>
+                                    <ul>
+                                        <li><strong>Rank</strong> — The learner's current position in the overall
+                                            standings.</li>
+                                        <li><strong>Name & Designation</strong> — The learner's name and job title.</li>
+                                        <li><strong>Points</strong> — Total reward points accumulated.</li>
+                                        <li><strong>Courses</strong> — Number of courses completed.</li>
+                                        <li><strong>Badges</strong> — Number of badges earned.</li>
+                                    </ul>
+                                    <div
+                                        style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 12px; margin: 15px 0;">
+                                        <strong>💡 Tip:</strong> Use the filter icon at the top-right of the leaderboard
+                                        to filter rankings by department, location, or time period.
+                                    </div>
+
+                                    <p><strong>6.3 Learner Profile Card</strong><br>
+                                        The right panel displays a summary card for the selected learner, showing:</p>
+                                    <ul>
+                                        <li><strong>Total Points</strong> accumulated.</li>
+                                        <li><strong>Number of Badges</strong> earned.</li>
+                                        <li><strong>Number of Courses Completed</strong>.</li>
+                                        <li><strong>Top Activity</strong> — The activity that earned the most points.
+                                        </li>
+                                        <li><strong>Second Best</strong> — The second highest point-earning activity.
+                                        </li>
+                                        <li><strong>Quizzes Passed</strong> count and <strong>Current Login
+                                                Streak</strong> (in days).</li>
+                                    </ul>
+
+                                    <p><strong>6.4 User Activity Points Chart</strong><br>
+                                        A donut chart showing the breakdown of how a learner's total points were earned
+                                        across different activity types: Completing a chapter, Completing assessment,
+                                        Watching a video (100%), Completing full course, Daily login streak, and Others.
+                                    </p>
+
+                                    <p><strong>6.5 Badges Achieved</strong><br>
+                                        A bar chart displaying how many of each badge type the learner has earned —
+                                        Course Finisher, Quiz Master, Fast Learner, and Consistency Champ.</p>
+
+                                    <p><strong>6.6 Monthly Activity Trend</strong><br>
+                                        A line chart showing the total number of learning activities completed each
+                                        month across the year. Useful for identifying peak engagement months and periods
+                                        of low activity.</p>
+
+                                    <p><strong>6.7 Points Earned by Activity</strong><br>
+                                        A donut chart showing the distribution of total points earned across all
+                                        activity types, helping admins understand which activities drive the most
+                                        learner engagement.</p>
+
+                                    <!-- SECTION 7 -->
+                                    <h3 style="color: #333; margin-top: 20px;">7. Quick Reference Summary</h3>
+
+                                    <table
+                                        style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; text-align: left;">
+                                        <thead>
+                                            <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Component</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Purpose</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Who Configures</th>
+                                                <th style="padding: 10px; border: 1px solid #ddd;">Who Benefits</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Reward
+                                                        Points</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Points awarded for
+                                                    completing learning activities</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Admin</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">All Learners</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                                    <strong>Badges</strong>
+                                                </td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Achievement
+                                                    milestones unlocked automatically</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Admin (view/edit)
+                                                </td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">All Learners</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                                    <strong>Prizes</strong>
+                                                </td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Redeemable rewards
+                                                    using earned points</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Admin</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">All Learners</td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                                    <strong>Leaderboard</strong>
+                                                </td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Ranks learners by
+                                                    total accumulated points</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Auto-generated</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">All Users</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Activity
+                                                        Points Chart</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Breakdown of points
+                                                    by activity type</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Auto-generated</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Learners & Admins
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color: #fafafa;">
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Monthly
+                                                        Activity Trend</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Learning activity
+                                                    volume tracked over time</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Auto-generated</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Admins</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Badges
+                                                        Achieved Chart</strong></td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Visual count of
+                                                    badges earned per type</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Auto-generated</td>
+                                                <td style="padding: 10px; border: 1px solid #ddd;">Learners & Admins
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+
+                                </div>
+                                  <h2 id="course"> LMS 365 – Course Workflow
+                                    </h2>
+                                    <p>Setting Up and Using the Course Approval Workflow </p>
+                                     <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+ <h3 style="color: #333; margin-top: 20px;">Overview</h3>
+ <p>The Course Workflow feature in LMS 365 allows administrators to configure an approval process for courses. Once a workflow is set up, courses linked to it must be approved by the designated approver(s) before they become available for users to complete. This document walks through the end-to-end process: locating the Course Workflow setting, creating a new workflow, assigning approvers, and approving a course request.</p>
+ <h3 style="color: #333; margin-top: 20px;">Workflow Steps</h3>
+   <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+ <h5 style="color: #333; margin-top: 20px;">Step 1: Navigate to Settings and Select Course Workflow</h5>
+ <p>From the left-hand navigation, click the Settings (gear) icon. Under the Features section, locate and select Course Workflow to open the workflow management screen. </p>
+ <div>
+                                            <img src="course.png" onclick="openModal('course.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+<h5 style="color: #333; margin-top: 20px;">Step 2: Open the Approval Workflow Screen and Click Add</h5>
+<p>The Approval Workflow screen lists all existing workflows along with their associated courses, creation date, creator, and status. To create a new workflow, click the Add button in the top-left corner.</p>
+ <div>
+                                            <img src="course2.png" onclick="openModal('course2.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <h5 style="color: #333; margin-top: 20px;">Step 3: Add the Mandatory Fields</h5>
+<p>In the Add Workflow panel, fill in the required fields: Workflow Name and Description. Select the courses this workflow will apply to from the Available Courses dropdown, and toggle Active to enable the workflow. On the right, the flow diagram shows the approval level (L1) — click the ellipsis (…) next to it to add approvers, or use Add Next Course Level to add further approval levels before the workflow reaches Complete.</p>
+ <div>
+                                            <img src="course3.png" onclick="openModal('course3.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+   <h5 style="color: #333; margin-top: 20px;">Step 4: Add Task Name and Approvers, then Save the Workflow</h5>
+<p>In the New Workflow panel, enter a Task Name and set the number of days within which the task must be approved (Approve within). Select the approver(s) by choosing one or more of the following options, then save the workflow:</p>
+<ul style="list-style-type:disc;margin:20px">
+    <li>Employee's Manager</li>
+    <li>Employee's Manager's Manager</li>
+    <li>Department</li>
+    <li>Job Title</li>
+</ul> 
+<div>
+                                            <img src="course4.png" onclick="openModal('course4.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+ <h5 style="color: #333; margin-top: 20px;">Step 5: Approve the Course Request</h5>
+<p>Once a workflow is linked to a course, any request for that course appears under the Course Approval tab for the designated approver, and under My Requests for the requester with a Pending status. The approver reviews the request under Pending Approvals and approves it. Once approved, the course becomes available for the user to complete.</p>
+<div>
+                                            <img src="course5.png" onclick="openModal('course5.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+                                        <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+<p><strong>Note:</strong> A course will remain unavailable to end users until it has passed all configured approval levels in its linked workflow.</p>
+       <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;"> 
+<h2 id="section"> How to Add Section Acknowledgement
+                                    </h2>
+<h5 style="color: #333; margin-top: 20px;">Steps to Add Section Acknowledgement</h5>
+<hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;"> 
+<p><strong>Step 1:</strong> Click Section Acknowledgement. In Settings, under Features, click Section Acknowledgement to open its configuration panel.</p>                                   
+<div>
+                                            <img src="step1.png" onclick="openModal('step1.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+<p><strong>Step 2:</strong> Click Add. In the Section Acknowledgement panel, click the + Add button to create a new acknowledgement entry.</p>        
+<div>
+                                            <img src="step2.png" onclick="openModal('step2.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+<p><strong>Step 3:</strong> Add the details. Enter a Title and add the required Checkbox Data conditions (mark them Mandatory as needed), then click Save.</p>                                        
+<div>
+                                            <img src="step3.png" onclick="openModal('step3.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+<p><strong>Step 4:</strong> View it on the course. Once saved, the acknowledgement is displayed to users when they complete the corresponding section in the course.</p>        
+<div>
+                                            <img src="step4.png" onclick="openModal('step4.png')"
+                                                alt="question" width="100%" height="auto">
+                                        </div> <br>
+</ul>
                             </div>
                         </div>
 
