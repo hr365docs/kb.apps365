@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset="utf-8">
+    <title>Timesheet 365 | Admin Guide | Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.92.2">
+    <meta name="description" content="Apps365 Helpdesk">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <style>
+        :root {
+            
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
+    <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
+    <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
+    <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.apps365.com/">
+                    <img class=img-fluid src="../../../../../images/logo_.png" alt=Apps365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"> <a
+                                href="../../../../online-timesheet-software/">Timesheet 365</a></h5>
+                        <a class=back-btn href="../../../../online-timesheet-software/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist
+    active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="hdm-admin-aside" class="sidenavbarscrollstyle" class="sidenavbarscrollstyle">
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+  <div class="bg-light p-4 remove-padding">
+    <ul class=page-list>
+
+      <h2 id="_dashboards">
+        <a class="header-icon-link highlight" href="">Activity Creation Module
+          <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+        </a>
+      </h2>
+      <hr/>
+      <h4>Creating activities across all supported activity types</h4>
+      <p>This document explains how to create activities from the Activities module, covering the four activity types shown in the provided screenshots: Global, Project Specific, Task Specific, and Global Task Specific. It also explains the Add and Add Bulk entry points and the fields visible in the creation forms.</p>
+<p><strong>Source and screenshot scope: </strong>The procedures and terminology below are based on the screenshots provided for this KB. No behavior not demonstrated in those screenshots is assumed.</p>
+<h4>1. Activity Types</h4>
+<table style="color:black">
+    <tr>
+        <td style="background-color:rgb(219,229,241)">
+            Activity Type
+        </td>
+         <td style="background-color:rgb(219,229,241)">
+           Where it applies
+        </td>
+         <td style="background-color:rgb(219,229,241)">
+           Add form
+        </td>
+         <td style="background-color:rgb(219,229,241)">
+           Bulk creation
+        </td>
+    </tr>
+    <tr>
+        <td>Global</td>
+        <td>Activities not tied to a project or task in the displayed form.</td>
+        <td>Activity + allocated hours + assignment.</td>
+        <td>Download sample, complete the file, then upload it.</td>
+        </tr>
+        <tr>
+<td>Project Specific</td>
+<td>Activities associated with a selected project.</td>
+<td>Project + activity + allocated hours + assignment.</td>
+<td>Download sample, complete the file, then upload it.</td>
+        </tr>
+        <tr>
+            <td>Task Specific</td>
+            <td>Activities associated with a selected project and task.</td>
+            <td>Project + task + activity + allocated hours + assignment.</td>
+            <td>Download sample, complete the file, then upload it.</td>
+        </tr>
+<tr>
+    <td>Global Task Specific</td>
+    <td>Activities associated with a selected global task.</td>
+    <td>Global task + activity + allocated hours + assignment.</td>
+    <td>Add Bulk entry point is shown; a bulk form is not included in the supplied screenshots.</td>
+</tr>
+    
+</table>
+<h4>2. Common Activity-Creation Concepts</h4>
+<ul style="list-style-type:disc">
+    <li>Add: Opens the individual activity creation form for the currently selected activity type.</li>
+    <li>Add Bulk: Opens the bulk activity workflow, where a sample file can be downloaded, populated, and uploaded.</li>
+    <li>Activity Allocated Hours: The creation forms display this field for planned/allocated time.</li>
+    <li>Assign Activity to: The forms display an assignment control. In the supplied examples it is shown as “All User are selected”.</li>
+    <li>Save and Add More: Saves the current activity and keeps the creation workflow available for another activity.</li>
+    <li>Cancel: Exits the creation form without saving the current entry.</li>
+</ul>
+<br>
+<h4>3. Global Activities</h4>
+     <p>Use the Global tab when creating an activity at the global level. The supplied screenshots show both individual creation and bulk creation.</p>
+<p><strong>Screenshot 1 – Global Activities – Add button</strong></p>
+<div><img src="1.png" onclick="openModal('1.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 1 – Global Activities – Add button.</p>
+      <p>The Activities window is open on the Global tab. The Add button is highlighted at the top of the list. Selecting Add starts individual Global activity creation.</p>
+      <ul style="list-style-type:disc">
+        <li>Global is the active activity scope.</li>
+<li>The activity list displays existing global activities.</li>
+<li>Add Bulk is available beside Add for bulk creation.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 2 – Global – Add Activity form</strong></p>
+      <div><img src="2.png" onclick="openModal('2.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 2 – Global – Add Activity form.</p>
+      <p>The Add Activity panel for a Global activity is displayed. The form contains Activity, Activity Allocated Hours, and Assign Activity to. The example uses “Demo Session” as the activity and “80:00” as allocated hours.</p>
+      <ul style="list-style-type:disc">
+        <li>Activity is shown as a required field.</li>
+<li>Activity Allocated Hours is displayed in hh:mm-style notation.</li>
+<li>Assign Activity to is shown as a required assignment control.</li>
+<li>Use Save and Add More to save and continue, or Cancel to exit.
+</li>
+      </ul><br>
+      <p><strong>Screenshot 3 – Global Activities – Add Bulk button</strong></p>
+       <div><img src="3.png" onclick="openModal('3.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 3 – Global Activities – Add Bulk button.</p>
+      <p>The Global tab is displayed with Add Bulk highlighted. This entry point starts the bulk activity workflow for Global activities.</p>
+      <ul style="list-style-type:disc">
+        <li>Use Add Bulk when multiple activity records need to be prepared through the upload workflow.</li>
+<li>The Global tab remains selected while starting the bulk operation.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 4 – Global – Add Bulk Activity form</strong></p>
+        <div><img src="4.png" onclick="openModal('4.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 4 – Global – Add Bulk Activity form.</p>
+      <p>The Add Bulk Activity panel is displayed for Global activities. It provides Download Sample File and an Import File upload control. The instructions identify Activity Name and Assign Activity as mandatory, while Activity Allocated Hours and Activity Tracked Hours are described as optional.</p>
+      <ul style="list-style-type:disc">
+        <li>Download the sample file before preparing the bulk data.</li>
+<li>Upload the completed file using the Import File control.</li>
+<li>The displayed instructions state that up to 1,000 activity records can be imported in a single upload.</li>
+<li>The screenshot shows Activity Name and Assign Activity as mandatory fields in the Global bulk template guidance.</li>
+
+      </ul><br>
+      <h4>4. Project Specific Activities</h4>
+      <p>Use the Project Specific tab when an activity must be associated with a particular project. The screenshots show individual creation and bulk creation.</p>
+      <p><strong>Screenshot 5 – Project Specific Activities – Add button</strong></p>
+        <div><img src="5.png" onclick="openModal('5.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 5 – Project Specific Activities – Add button.</p>
+      <p>The Project Specific tab is selected and the Add button is highlighted. The grid includes a Project column, which distinguishes this activity type from Global activities.</p>
+      <ul style="list-style-type:disc">
+        <li>Project Specific is the active tab.</li>
+<li>Existing activities show their associated project.</li>
+<li>Add starts individual Project Specific activity creation.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 6 – Project Specific – Add Activity form</strong></p>
+        <div><img src="6.png" onclick="openModal('6.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 6 – Project Specific – Add Activity form.</p>
+      <p>The Add Activity panel shows Project as a required field, followed by Activity, Activity Allocated Hours, and Assign Activity to. The example selects a project and enters “CSJ” as the activity with “90:00” allocated hours.</p>
+      <ul style="list-style-type:disc">
+        <li>Select the Project first.</li>
+<li>Enter the Activity name.</li>
+<li>Enter Activity Allocated Hours.</li>
+<li>Select the users to whom the activity should be assigned.</li>
+<li>Save and Add More saves the entry and allows another activity to be added.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 7 – Project Specific Activities – Add Bulk button</strong></p>
+         <div><img src="7.png" onclick="openModal('7.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 7 – Project Specific Activities – Add Bulk button.</p>
+      <p>The Project Specific tab is displayed with Add Bulk highlighted. This starts the bulk-upload workflow for project-associated activities.</p>
+      <ul style="list-style-type:disc">
+        <li>Use this option for multiple Project Specific activity records.</li>
+         <li>The activity list contains Project information, confirming the project-level context.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 8 – Project Specific – Add Bulk Activity form</strong></p>
+       <div><img src="8.png" onclick="openModal('8.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 8 – Project Specific – Add Bulk Activity form.</p>
+      <p>The Add Bulk Activity panel for Project Specific activities provides Download Sample File and Upload controls. The displayed instructions list Activity Name, Project, and Assign Activity as mandatory, with allocated and tracked hours described as optional.</p>
+      <ul style="list-style-type:disc">
+        <li>Download and complete the supplied sample file.</li>
+<li>Project must be provided for Project Specific bulk records.</li>
+<li>Assign Activity uses a comma-separated list of user email addresses according to the displayed instructions.</li>
+<li>The displayed bulk upload limit is up to 1,000 activity records in one upload.</li>
+
+      </ul><br>
+      <h4>5. Task Specific Activities</h4>
+      <p>Use the Task Specific tab when an activity is associated with both a project and a task. The screenshots show individual and bulk creation.</p>
+      <p><strong>Screenshot 9 – Task Specific Activities – Add button</strong></p>
+       <div><img src="9.png" onclick="openModal('9.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 9 – Task Specific Activities – Add button.</p>
+      <p>The Task Specific tab is selected and Add is highlighted. The list contains separate Project and Task columns, showing that the activity is tied to a task within a project.</p>
+      <ul style="list-style-type:disc">
+        <li>Task Specific is the active tab.</li>
+<li>The displayed grid contains Activity, Project, Task, assignment, and hour-related columns.</li>
+<li>Add opens the Task Specific activity form.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 10 – Task Specific – Add Activity form</strong></p>
+      <div><img src="10.png" onclick="openModal('10.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 10 – Task Specific – Add Activity form.</p>
+      <p>The Add Activity panel contains Project, Task, Activity, Activity Allocated Hours, and Assign Activity to. The example selects a project and task, enters “API gateway modification”, and sets allocated hours to “85:00”.</p>
+      <ul style="list-style-type:disc">
+        <li>Select the Project.</li>
+<li>Select the Task associated with that project.</li>
+<li>Enter the Activity.</li>
+<li>Enter Activity Allocated Hours.</li>
+<li>Assign the activity to the required users.</li>
+<li>Save and Add More or Cancel as appropriate.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 11 – Task Specific Activities – Add Bulk button</strong></p>
+        <div><img src="11.png" onclick="openModal('11.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 11 – Task Specific Activities – Add Bulk button.</p>
+      <p>The Task Specific tab is shown with Add Bulk highlighted. This begins the bulk-upload workflow for activities associated with tasks.</p>
+      <ul style="list-style-type:Disc">
+        <li>Use Add Bulk to prepare multiple Task Specific activity records.</li>
+<li>The Task Specific grid retains Project and Task context.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 12 – Task Specific – Add Bulk Activity form</strong></p>
+       <div><img src="12.png" onclick="openModal('12.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 12 – Task Specific – Add Bulk Activity form.</p>
+      <p>The Add Bulk Activity panel is shown for Task Specific activities. The instructions identify Activity Name, Task, and Assign Activity as mandatory, while Activity Allocated Hours and Activity Tracked Hours are described as optional.</p>
+      <ul style="list-style-type:Disc">
+        <li>Download the sample file and enter the activity details.</li>
+<li>Task must be supplied for Task Specific bulk records.</li>
+<li>The displayed instructions require the assignment field and describe it as a comma-separated list of user email addresses.</li>
+<li>The displayed bulk upload limit is up to 1,000 activity records.</li>
+
+      </ul><br>
+      <h4>6. Global Task Specific Activities</h4>
+      <p>Use the Global Task Specific tab when the activity is associated with a Global Task. The supplied screenshots show the individual Add workflow and the Add Bulk entry point.</p>
+      <p><strong>Screenshot 13 – Global Task Specific Activities – Add button</strong></p>
+       <div><img src="13.png" onclick="openModal('13.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 13 – Global Task Specific Activities – Add button.</p>
+      <p>The Global Task Specific tab is selected and Add is highlighted. The grid contains Activity and Task-related columns, indicating the global-task context.</p>
+      <ul style="list-style-type:Disc">
+        <li>Global Task Specific is the active tab.</li>
+<li>Existing records show a Task association.</li>
+<li>Add starts individual Global Task Specific activity creation.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 14 – Global Task Specific – Add Activity form</strong></p>
+         <div><img src="14.png" onclick="openModal('14.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 14 – Global Task Specific – Add Activity form.</p>
+      <p>The Add Activity panel shows Global Task as a required field, followed by Activity, Activity Allocated Hours, and Assign Activity to. The example selects a Global Task, enters “Inspection”, and uses “90:00” allocated hours.</p>
+      <ul style="list-style-type:disc">
+<li>Select the Global Task.</li>
+<li>Enter the Activity.</li>
+<li>Enter Activity Allocated Hours.</li>
+<li>Assign the activity to the required users.</li>
+<li>Use Save and Add More to save and continue, or Cancel to exit.</li>
+
+      </ul><br>
+      <p><strong>Screenshot 15 – Global Task Specific Activities – Add Bulk button</strong></p>
+          <div><img src="15.png" onclick="openModal('15.png')" alt="Dashboard" width="100%" height="auto"></div>
+      <br>
+      <p>Screenshot 15 – Global Task Specific Activities – Add Bulk button.</p>
+      <p>The Global Task Specific tab is displayed with Add Bulk highlighted. This confirms that a bulk-creation entry point is available for this activity type.</p>
+      <ul style="list-style-type:Disc">
+<li>Select Global Task Specific before using Add Bulk.</li>
+<li>The supplied screenshot demonstrates the Add Bulk entry point.</li>
+<li>A separate Global Task Specific bulk-upload panel screenshot was not provided, so this KB does not infer its fields or instructions.</li>
+
+      </ul><br>
+      <h4>7. Bulk Activity Creation – General Workflow</h4>
+      <p>The supplied Global, Project Specific, and Task Specific bulk screenshots show the same general workflow: open Add Bulk, download the sample file, populate the required activity information, save the file, and upload it.</p>
+      <ul style="list-style-type:Disc">
+        <li>Open the required activity-type tab.</li>
+<li>Select Add Bulk.</li>
+<li>Select Download Sample File.</li>
+<li>Populate the downloaded template using the fields and instructions displayed in the corresponding bulk panel.</li>
+<li>Save the completed file.</li>
+<li>Use the Import File / Upload control to upload the completed file.</li>
+<li>Follow any validation or import result shown by the application.</li>
+
+      </ul><br>
+      <h4>
+        8. Field Summary by Activity Type
+      </h4>
+      <table style="color:black">
+        <tr>
+ <td style="background-color:rgb(219,229,241)">
+    Type
+ </td>
+ <td style="background-color:rgb(219,229,241)">
+   Context field
+ </td>
+ <td style="background-color:rgb(219,229,241)">
+   Activity
+ </td>
+ <td style="background-color:rgb(219,229,241)">
+   Allocated Hours
+ </td>
+ <td style="background-color:rgb(219,229,241)">
+  Assign Activity to
+ </td>
+        </tr>
+        <tr>
+            <td>
+                Global
+            </td>
+            <td>
+                —
+            </td>
+            <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Project Specific
+            </td>
+            <td>
+                Project
+            </td>
+             <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Task Specific
+            </td>
+            <td>
+                Project+Task
+            </td>
+              <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Global Task Specific
+            </td>
+            <td>
+                Global Task
+            </td>
+             <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+            <td>
+                Shown
+            </td>
+        </tr>
+      </table>
+      <br>
+      <h4>9. Important Notes</h4>
+      <ul style="list-style-type:disc">
+        <li>The screenshots use different example activity names, projects, tasks, and hour values; these are examples shown in the UI and should not be treated as required values.</li>
+<li>The exact fields shown depend on the selected activity type. In particular, Project, Task, and Global Task appear only where their respective scope requires them.</li>
+<li>The bulk instruction screenshots explicitly describe which fields are mandatory/optional for Global, Project Specific, and Task Specific bulk uploads.</li>
+<li>For Global Task Specific bulk creation, only the Add Bulk entry point is shown in the supplied material; the corresponding bulk form and its field rules are not included.</li>
+<li>Do not reuse a screenshot from one activity type as an explanation for another type. Each screenshot in this KB is paired with the activity type and screen state it actually demonstrates.</li>
+
+      </ul>
+                    <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                    <nav class="pagination mt-3">
+                        <a class="nav nav-prev" href="../administration/"
+                            aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                class="d-none d-md-block">Administration</span></a>
+                        <a class="nav nav-next" href="../settings/"
+                            aria-label="Previous page"> <span class="d-none d-md-block">Settings</span><i
+                                class="ti-arrow-right ml-2"></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+ <script src="/footer/index.js"></script>
+    <script src="../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+
+        }
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+ <script src="/js/plus-toggle.js"></script></body>
+<script src="../../../../js/header-footer.js"></script>
+<script src="../../admin/hdm-admin-aside-js/hdm-admin-aside.js"></script>
+<script src="../../../../js/showhidefunction.js"></script>
+
+</html>

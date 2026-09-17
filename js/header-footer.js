@@ -200,6 +200,26 @@ style.innerHTML = `
      .card-header a:hover i{
     color:black !important 
     }
+  .backk::-webkit-scrollbar {
+   width: 0.5vw;
+}
+   .backk::-webkit-scrollbar-track{
+   background-color: none;
+   }
+
+  .section-sm{
+  padding-bottom:60px !important}
+
+/* Thumb */
+.backk::-webkit-scrollbar-thumb {
+    background: grey;
+  
+}
+
+/* Hover */
+.backk::-webkit-scrollbar-thumb:hover {
+    background:grey;
+}
     .newWebparts{
       position: absolute;
         max-height: 25vw !important;
