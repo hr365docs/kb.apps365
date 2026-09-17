@@ -22,6 +22,9 @@ $(document).ready(function () {
         "<li data-nav-id='./Adminstration' title=Introduction class='sidelist'>"+
         "<a href='/online-timesheet-software/modern/admin/administration/'>Administration</a>"+
         "</li>"+
+         "<li data-nav-id='./Activity' title=Activity class='sidelist'>"+
+        "<a href='/online-timesheet-software/modern/admin/Activity/'>Activity</a>"+
+        "</li>"+
 
 
        "<li class='dropdownicon sidelist' title='Settings'>"+
