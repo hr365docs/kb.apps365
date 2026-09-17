@@ -1,4 +1,4 @@
-import { hydrateIcons } from './Icons.js';
+import { hydrateIcons } from './icons.js';
 
 (function () {
   "use strict";
