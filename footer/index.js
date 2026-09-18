@@ -50,7 +50,7 @@ $(document).ready(function () {
                                 "</a>" +
                             "</li>" +
                         "</ul>" +
-                    "</div>" +
+                    "</div>" + 
                 "</div>" +
             "</div>" +
         "</footer>" +
