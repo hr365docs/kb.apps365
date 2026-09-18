@@ -1,7 +1,14 @@
 $(document).ready(function () {
-if (!$("#fa-stylesheet").length) {         $("<link>", {             id: "fa-stylesheet",             rel: "stylesheet",             href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"        }).appendTo("head");     }
+    if (!$("#fa-stylesheet").length) {
+        $("<link>", {
+            id: "fa-stylesheet",
+            rel: "stylesheet",
+            href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        }).appendTo("head");
+    }
+
     $("#footer-container").html(
-        "<div style='position:relative;width:100%;bottom:0;'>"+
+        "<div style='position:relative;width:100%;bottom:0;'>" +
         "<footer class='section footer' style='padding:1vw 0 0 0;background-color:black;position:absolute;bottom:0;width:100%'>" +
             "<div class='container' style='margin:0;width:100%;max-width:100%'>" +
                 "<div class='row'style='display:flex;justify-content:space-between;width:100%'>" +
@@ -19,35 +26,34 @@ if (!$("#fa-stylesheet").length) {         $("<link>", {             id: "fa-sty
                         "<ul class='list-inline' style='display:flex;gap:10px'>" +
                             "<li class='list-inline-item'>" +
                                 "<a class='text' href='https://www.facebook.com/hr365apps/' aria-label='Facebook' style='color:white'>" +
-                                    "<i class='ti-facebook'></i>" +
+                                    "<i class='fa-brands fa-facebook-f'></i>" +
                                 "</a>" +
                             "</li>" +
                             "<li class='list-inline-item'>" +
                                 "<a class='text' href='https://twitter.com/HR365_HRMS' aria-label='Twitter' style='color:white'>" +
-                                    "<i class='ti-twitter-alt'></i>" +
+                                    "<i class='fa-brands fa-x-twitter'></i>" +
                                 "</a>" +
                             "</li>" +
                             "<li class='list-inline-item'>" +
                                 "<a class='text' href='https://www.linkedin.com/company/cubic-logics-india-pvt-ltd' aria-label='Linkedin' style='color:white'>" +
-                                    "<i class='ti-linkedin'></i>" +
+                                    "<i class='fa-brands fa-linkedin-in'></i>" +
                                 "</a>" +
                             "</li>" +
-                         "<li class='list-inline-item'>" +               
-                                           "<a class='text' href='https://www.youtube.com/@HR365' aria-label='YouTube' style='color:white'>" +  
-
-                                                            "<i class='fa-brands fa-youtube'></i>" +        
-                                                                                     "</a>" +     
-                                                 "</li>" + 
-"<li class='list-inline-item'>" +
-    "<a class='text' href='https://www.instagram.com/hr365apps/' aria-label='Instagram' style='color:white'>" +
-        "<i class='fa-brands fa-instagram'></i>" +
-    "</a>" +
-"</li>" +
+                            "<li class='list-inline-item'>" +
+                                "<a class='text' href='https://www.youtube.com/@HR365' aria-label='YouTube' style='color:white'>" +
+                                    "<i class='fa-brands fa-youtube'></i>" +
+                                "</a>" +
+                            "</li>" +
+                            "<li class='list-inline-item'>" +
+                                "<a class='text' href='https://www.instagram.com/hr365apps/' aria-label='Instagram' style='color:white'>" +
+                                    "<i class='fa-brands fa-instagram'></i>" +
+                                "</a>" +
+                            "</li>" +
                         "</ul>" +
                     "</div>" +
                 "</div>" +
             "</div>" +
-        "</footer>"+
-        "</div>"    
+        "</footer>" +
+        "</div>"
     );
 });
