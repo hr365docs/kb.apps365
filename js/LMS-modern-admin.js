@@ -75,9 +75,26 @@ $(document).ready(function () {
     "<li data-nav-id='../General' title='General Administration' class='sidelist'>" +
     "<a class='qwe' href='/LMS/modern/admin/setting/General-administration/'>General Administration</a>" +
     "</li>" +
-    "<li data-nav-id='../General' title='Features' class='sidelist'>" +
-    "<a class='qwe' href='/LMS/modern/admin/setting/Features/'>Features</a>" +
-    "</li>" +
+"<li data-nav-id='../user' title='General Settings' class='dropdownicon sidelist'>" +
+        "<a class='qwe' href='/LMS/modern/admin/setting/Features/'>Features</a>" +
+        "<img class='helpdesk-img aside_dropdown_icon' src='/sharepoint-employee-onboarding/modern/admin/js-modern-admin/down-arrow-svgrepo-com.svg'>" +
+      "</li>" +
+       "<li data-nav-id='./Setting/' title='System Setting' class='sidelist dropdown_romove_dot'>" +
+        "<ul class='sidenavSub-topics aside_dropdown_list'>" +
+          "<li data-nav-id='../General' title='Custom Column' class='sidelist'>" +
+            "<a href='/LMS/modern/admin/setting/Features/#Custom'>Custom Column</a>" +
+          "</li>" +
+           "<li data-nav-id='../General' title='Gamification' class='sidelist'>" +
+            "<a href='/LMS/modern/admin/setting/Features/#Game'>Gamification</a>" +
+          "</li>" +
+           "<li data-nav-id='../General' title='Course Workflow' class='sidelist'>" +
+            "<a href='/LMS/modern/admin/setting/Features/#Approve'>Approval Workflow</a>" +
+          "</li>" +
+           "<li data-nav-id='../General' title='Section Acknowledgement' class='sidelist'>" +
+            "<a href='/LMS/modern/admin/setting/Features/#Section'>Section Acknowledgement</a>" +
+          "</li>" +
+      "</ul>"+
+     
     "<li data-nav-id='../General' title='AI Control Panel' class='sidelist'>" +
     "<a class='qwe' href='/LMS/modern/admin/setting/AI-Control-Panel/'>AI Control Panel</a>" +
     "</li>" +
