@@ -98,7 +98,7 @@
                             <div class=page-list>
                                 <!-- Section -->
                                 <div>
-                                   <h2 id="_dashboards">Custom Column:
+                                   <h2 id="Custom">Custom Column:
                                         <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
                                     </h2>
                                     <p>
@@ -112,7 +112,7 @@
                                     
                                 </div>
                                 </ul>
-                            <h2 id="game"> Gamification — Configuration & User Guide
+                            <h2 id="Game"> Gamification — Configuration & User Guide
                                     </h2>
 
                                     <hr style="border: 0; height: 1px; background: #ddd; margin: 20px 0;">
@@ -606,54 +606,55 @@
                                     <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
 
                                 </div>
-                                  <h2 id="course"> LMS 365 – Course Workflow
-                                    </h2>
-                                    <p>Setting Up and Using the Course Approval Workflow </p>
-                                     <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
- <h3 style="color: #333; margin-top: 20px;">Overview</h3>
- <p>The Course Workflow feature in LMS 365 allows administrators to configure an approval process for courses. Once a workflow is set up, courses linked to it must be approved by the designated approver(s) before they become available for users to complete. This document walks through the end-to-end process: locating the Course Workflow setting, creating a new workflow, assigning approvers, and approving a course request.</p>
- <h3 style="color: #333; margin-top: 20px;">Workflow Steps</h3>
-   <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
- <h5 style="color: #333; margin-top: 20px;">Step 1: Navigate to Settings and Select Course Workflow</h5>
- <p>From the left-hand navigation, click the Settings (gear) icon. Under the Features section, locate and select Course Workflow to open the workflow management screen. </p>
- <div>
-                                            <img src="course.png" onclick="openModal('course.png')"
+                                  <h2 id="Approve">LMS 365 - Approval Workflow Configuration</h2>
+                                  <p>The Approval Workflow feature in LMS 365 allows administrators to create approval processes for both Courses and Assessments. Once configured, users who enroll in a course or assessment with an approval requirement must receive approval from the configured approvers before gaining access.</p>
+                                  <h4>1. Add a New Approval Workflow</h4>
+                                  <div>
+                                            <img src="steps.png" onclick="openModal('steps.png')"
                                                 alt="question" width="100%" height="auto">
                                         </div> <br>
-<h5 style="color: #333; margin-top: 20px;">Step 2: Open the Approval Workflow Screen and Click Add</h5>
-<p>The Approval Workflow screen lists all existing workflows along with their associated courses, creation date, creator, and status. To create a new workflow, click the Add button in the top-left corner.</p>
- <div>
-                                            <img src="course2.png" onclick="openModal('course2.png')"
+                                        <p>To create a new approval workflow:</p>
+                                        <ol style="list-style-type:decimal">
+                                            <li>Navigate to the Approval Workflow section.</li>
+<li>Click the Add button to create a new workflow.</li>
+<li>The Add Workflow screen will open where the required workflow details can be configured.</li>
+
+                                        </ol><br>
+                                        <p>Approval workflows can be created for both:</p>
+                                        <ul style="list-style-type:Disc">
+                                            <li>Course</li>
+<li>Assessment</li>
+
+                                        </ul><br>
+                                     <h4>2. Add Required Workflow Details</h4> 
+                                      <div>
+                                            <img src="steps2.png" onclick="openModal('steps2.png')"
                                                 alt="question" width="100%" height="auto">
-                                        </div> <br>
-                                        <h5 style="color: #333; margin-top: 20px;">Step 3: Add the Mandatory Fields</h5>
-<p>In the Add Workflow panel, fill in the required fields: Workflow Name and Description. Select the courses this workflow will apply to from the Available Courses dropdown, and toggle Active to enable the workflow. On the right, the flow diagram shows the approval level (L1) — click the ellipsis (…) next to it to add approvers, or use Add Next Course Level to add further approval levels before the workflow reaches Complete.</p>
- <div>
-                                            <img src="course3.png" onclick="openModal('course3.png')"
+                                        </div> <br>  
+                                        <p>Enter all the required workflow information:</p>
+                                        <ul style="list-style-type:disc">
+<li>Workflow Name - Enter a unique name for the approval workflow.</li>
+<li>Description - Provide a brief description of the workflow.</li>
+<li>Type - Select whether the workflow applies to a Course or Assessment.</li>
+<li>Active - Enable or disable the workflow status.</li>
+
+                                        </ul><br>
+                                        <p>After adding the basic workflow details, configure the approval levels based on the organization's approval process.</p>
+                                        <h4>3. Add Approvers and Save Workflow</h4>
+                                         <div>
+                                            <img src="add.png" onclick="openModal('add.png')"
                                                 alt="question" width="100%" height="auto">
-                                        </div> <br>
-   <h5 style="color: #333; margin-top: 20px;">Step 4: Add Task Name and Approvers, then Save the Workflow</h5>
-<p>In the New Workflow panel, enter a Task Name and set the number of days within which the task must be approved (Approve within). Select the approver(s) by choosing one or more of the following options, then save the workflow:</p>
-<ul style="list-style-type:disc;margin:20px">
-    <li>Employee's Manager</li>
-    <li>Employee's Manager's Manager</li>
-    <li>Department</li>
-    <li>Job Title</li>
-</ul> 
-<div>
-                                            <img src="course4.png" onclick="openModal('course4.png')"
-                                                alt="question" width="100%" height="auto">
-                                        </div> <br>
- <h5 style="color: #333; margin-top: 20px;">Step 5: Approve the Course Request</h5>
-<p>Once a workflow is linked to a course, any request for that course appears under the Course Approval tab for the designated approver, and under My Requests for the requester with a Pending status. The approver reviews the request under Pending Approvals and approves it. Once approved, the course becomes available for the user to complete.</p>
-<div>
-                                            <img src="course5.png" onclick="openModal('course5.png')"
-                                                alt="question" width="100%" height="auto">
-                                        </div> <br>
-                                        <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
-<p><strong>Note:</strong> A course will remain unavailable to end users until it has passed all configured approval levels in its linked workflow.</p>
-       <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;"> 
-<h2 id="section"> How to Add Section Acknowledgement
+                                        </div> <br>  
+                                        <p>Add the required approvers for the workflow:</p>
+                                        <ol style="list-style-type:decimal">
+                                            <li>Select the approver type or users who should approve the request.</li>
+<li>Configure approval settings such as approval timeline and approval levels.</li>
+<li>Add additional approval levels if required.</li>
+<li>Review the workflow configuration.</li>
+<li>Click Save to create the approval workflow.</li>
+                                        </ol><br>
+                                        <p>Once saved, the workflow will be available for use with the selected Course or Assessment approval process.</p>
+<h2 id="Section"> How to Add Section Acknowledgement
                                     </h2>
 <h5 style="color: #333; margin-top: 20px;">Steps to Add Section Acknowledgement</h5>
 <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;"> 
