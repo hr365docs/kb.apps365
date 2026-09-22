@@ -1,10 +1,16 @@
-const favicon = document.createElement("link");
-favicon.rel = "icon";
+
+
+let favicon = document.querySelector("link[rel='icon']");
+
+if (!favicon) {
+    favicon = document.createElement("link");
+    favicon.rel = "icon";
+    document.head.appendChild(favicon);
+}
+
 favicon.href = "/apps.webp";
 favicon.type = "image/webp";
-
 document.head.appendChild(favicon);
-document.querySelectorAll("head link")[2].href = window.location.origin + "/images/headericon.png.ico";
 window.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash;
 
