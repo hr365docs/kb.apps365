@@ -9,7 +9,7 @@
     <meta name="description" content="Asset Management">
     <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
-    <link rel="icon" href="#" type="image/x-icon">
+     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
@@ -425,7 +425,158 @@
                                         </div>
                                         <br>
                                     </div>
-
+<h4>
+                                        360 Feedback – Feedback Settings
+                                    </h4>
+<p>Feedback Settings control how the 360 Feedback module behaves for all users in your organization. These settings are managed by the administrator and can be accessed from the 360 Feedback section in Admin Settings.</p>
+<div>
+                                            <img src="feedback.png" onclick="openModal('feedback.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p><strong>Feedback Settings panel</strong></p>
+                                        <h5>Settings Reference</h5>
+                                        <p>The table below describes each setting, what it does when enabled, and what users see as a result.</p>
+                                          <table>
+                                        <tr>
+                                            <td style="background-color:rgb(47,84,150);color:white">
+                                                Setting
+                                            </td>
+                                              <td style="background-color:rgb(47,84,150);color:white">
+                                              What it does
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                                Show Received Feedback
+                                            </td>
+                                            <td>
+                                              Controls whether feedback received by a user is visible to them on the Received tab. Set to Yes to allow users to see all feedback given to them.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                              <td style="color:rgb(47,84,150)">
+                                               Notify Manager by Email
+                                            </td>
+                                            <td>
+                                                When enabled, the user's direct manager receives an email notification whenever the user is sent a 360 Feedback request.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                              Enable Anonymous Feedback
+                                            </td>
+                                            <td>
+                                                When enabled, the Give Feedback form displays a 'Keep my feedback anonymous' checkbox. If checked by the respondent, their name is hidden from the feedback recipient.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="color:rgb(47,84,150)">
+                                              Allow User to Opt-Out from 360 Feedback
+                                            </td>  
+                                            <td>
+                                                When enabled, users who receive a feedback request can choose to opt out of responding. An Opt-Out option appears in the action menu on the Action tab.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                           Allow User to Enable Remarks
+                                            </td>  
+                                            <td>
+                                                When enabled, a Remarks field appears in both the Self and My Team feedback request panels, letting the requestor add context or instructions for the respondent.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                              <td style="color:rgb(47,84,150)">
+                                           Allow User to Enable Due Date
+                                            </td>  
+                                            <td>
+                                                When enabled, a Select Due Date field appears in both the Self and My Team feedback request panels. The due date is shown to the respondent on the Give Feedback form.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="color:rgb(47,84,150)">
+                                           Who Can Request Resubmission
+                                            </td>  
+                                            <td>
+                                                Defines which roles (HR and/or User) can request that a respondent resubmit their feedback. When selected, a 'Request Resubmission' option appears in the action menu on the Received tab.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                          <td style="color:rgb(47,84,150)">
+                                           Feedback Rating Scale
+                                            </td>  
+                                            <td>
+                                                Allows administrators to configure custom rating scales (e.g., 5-star, 10-star) that can be assigned to feedback templates. Click Configure to add or manage scales. Once a scale is added, it must be selected on the relevant template in Administration before it takes effect during feedback requests.
+                                            </td>  
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                          Select Roles That Can View Feedback Submitted by This User
+                                            </td>  
+                                            <td>
+                                                Controls which roles (HR, Employee, Manager) can view the feedback a user has submitted. Restricting this protects respondent confidentiality where needed.
+                                            </td>
+                                        </tr>
+                                        </table>
+                                        <br>
+                                        <h5>Enable Anonymous Feedback</h5>
+                                        <p>When this setting is on, the Give Feedback form shows a 'Keep my feedback anonymous' checkbox. If the respondent checks it before submitting, their identity is hidden from the person who requested the feedback.</p>
+                    <div>
+                                            <img src="feedback1.png" onclick="openModal('feedback1.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>Give Feedback form — 'Keep my feedback anonymous' checkbox</p>
+                                        <h5>Allow User to Opt-Out from 360 Feedback</h5>
+                                        <p>
+                                            When enabled, users who have been sent a feedback request can choose not to respond by selecting Opt-Out from the action menu (⋮) on the Action tab. This removes the request from their queue without submitting any feedback.
+                                        </p>
+                                          <div>
+                                            <img src="feedback2.png" onclick="openModal('feedback2.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>Action tab — Opt-Out option in the row action menu</p>
+                                        <h5>Allow User to Enable Due Date / Remarks</h5>
+                                        <p>
+                                            When either of these settings is on, the corresponding field becomes visible in the Request Feedback panel for both Self and My Team requests. The Due Date is displayed to the respondent on the Give Feedback form; Remarks let the requestor add instructions or context for the respondent.
+                                        </p>
+                                         <div>
+                                            <img src="feedback3.png" onclick="openModal('feedback3.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>Self Feedback Request panel — Due Date and Remarks fields</p>
+                                         <div>
+                                            <img src="feedback4.png" onclick="openModal('feedback4.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>My Team Feedback Request panel — Due Date and Remarks fields</p>
+                                        <h5>Who Can Request Resubmission</h5>
+                                        <p>
+                                            Selecting HR and/or User enables those roles to request that a respondent redo their feedback submission. The 'Request Resubmission' option then appears in the action menu (⋮) on the Received tab for any completed feedback entry.
+                                        </p>
+                                         <div>
+                                            <img src="feedback5.png" onclick="openModal('feedback5.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>Received tab — Request Resubmission option in the row action menu</p>
+                                        <h5>Feedback Rating Scale</h5>
+                                        <p>
+                                            This option lets administrators define custom rating scales — such as a 5-point or 10-point scale — that can be applied to feedback templates. Each scale has a name and a numeric range, and rating labels (e.g., Poor, Satisfactory, Outstanding) can be configured per scale.
+                                        </p>
+                                        <p>
+                                            Once a rating scale is created here, it must be assigned to the relevant feedback template in Administration. When a user selects that template while requesting feedback, the configured rating scale is automatically applied to the Give Feedback form.
+                                        </p>
+                                         <div>
+                                            <img src="feedback6.png" onclick="openModal('feedback6.png')" alt="PDF Settings"
+                                                width="100%" height="auto">
+                                        </div><br>
+                                        <p>Feedback Rating Scale — Configure panel with scale options and labels</p>
+                                        <h5>Select Roles That Can View Feedback Submitted by This User</h5>
+                                        <p>This setting controls which roles can see the feedback a user has given to others. Checking HR, Employee, and/or Manager restricts or grants visibility accordingly. This is useful for maintaining respondent confidentiality in sensitive feedback scenarios.</p>
+                                         <div style="background-color:rgb(217,226,243);border:2px solid rgb(68,114,196);padding:3px">
+<p style="color:rgb(68,114,196)"><strong>ℹ Note</strong></p>
+<p>All Feedback Settings apply organization-wide. Changes take effect immediately for all users.</p>
+</div>
+                                    </div>
 
                         </div>
 

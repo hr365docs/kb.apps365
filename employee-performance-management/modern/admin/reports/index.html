@@ -9,7 +9,7 @@
     <meta name="description" content="Performance Management 365 Admin Guide - Reports. Learn how to generate and manage reports to analyze performance and track progress within the platform.">
     <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css">
-    <link rel="icon" href="#" type="image/x-icon">
+     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
@@ -142,7 +142,172 @@ active">
                             <div><img src="feedbackreport.png" onclick="openModal('feedbackreport.png')" alt="Report data"
                                     width="100%" height="auto"></div>
                             <br>
-
+ <p><strong>360 Feedback – Feedback Report</strong></p>
+  <p><strong>Overview: </strong>The 360 Feedback Report is available to managers and HR roles. It provides a consolidated, filterable view of all feedback activity across the organization — showing each request's status, the employees involved, the template used, average ratings, and completion counts. The report can be accessed from the Reports icon in the left navigation panel within the 360 Feedback module.</p>
+      <div><img src="report1.png" onclick="openModal('report1.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>360 Feedback Report — manager and HR view</p>
+                            <p><strong>Report Columns</strong></p>
+                            <p>The report displays the following columns for each feedback record:</p>
+                             <table>
+                                        <tr>
+                                            <td style="background-color:rgb(47,84,150);color:white">
+                                                Column
+                                            </td>
+                                              <td style="background-color:rgb(47,84,150);color:white">
+                                              Description
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                                Employee Name
+                                            </td>
+                                            <td>
+                                               The employee for whom the feedback was requested.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                               Department
+                                            </td>
+                                            <td>
+                                                The employee's department.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                              <td style="color:rgb(47,84,150)">
+                                               Template Name
+                                            </td>
+                                            <td>
+                                                The feedback template used for the request.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                               Manager's Name
+                                            </td>
+                                            <td>
+                                                The employee's direct manager.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                              Status
+                                            </td>
+                                            <td>
+                                                Current status of the feedback request — Completed or Pending.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                              Requested By
+                                            </td>
+                                            <td>
+                                                The person who initiated the feedback request.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                              Requested To
+                                            </td>
+                                            <td>
+                                                The respondent(s) who were asked to provide feedback.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td style="color:rgb(47,84,150)">
+                                              Requested On
+                                            </td>
+                                            <td>
+                                                Date the feedback request was sent.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                             Average Rating
+                                            </td>
+                                            <td>
+                                                The average score across all completed responses for this request.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                             Completed Requests
+                                            </td> 
+                                            <td>
+                                                Number of respondents who have submitted their feedback.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                           <td style="color:rgb(47,84,150)">
+                                           Pending Requests
+                                            </td>  
+                                            <td>
+                                                Number of respondents who have not yet submitted their feedback.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                          Opted-Out Request(s)
+                                            </td> 
+                                            <td>
+                                                Number of respondents who chose to opt out of the feedback request and did not submit a response.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:rgb(47,84,150)">
+                                          Average Feedback
+                                            </td> 
+                                            <td>
+                                                A star-rating visual representing the overall average feedback score for the request, shown alongside the numeric average rating.
+                                            </td>
+                                        </tr>
+                                        </table><br>
+                                        <h5>Filtering the Report</h5>
+                                        <p>The report supports filtering by date range (From / To) and by Template. Use these controls at the top of the report page to focus on a specific period or a specific type of feedback. The report can also be exported to Excel using the export icon in the top-right toolbar.</p>
+                                         <div style="background-color:rgb(217,226,243);border:2px solid rgb(68,114,196);padding:3px">
+<p style="color:rgb(68,114,196)"><strong>ℹ Access</strong></p>
+<p>
+    The Feedback Report is accessible only to managers and HR roles. Regular employees do not have access to the report view.
+</p>
+                        </div><br>
+                        <h5>Heatmap View</h5>
+                        <p>The Feedback Report includes a Heatmap — a visual analytics tool that represents feedback scores across employees and competency categories using a color-coded spectrum. It allows managers and HR to quickly identify organizational strengths, skill gaps, and blind spots at a glance without reading through individual records.</p>
+                        <p>Each cell in the heatmap corresponds to a specific employee and competency (e.g., Deliverables, Leadership, Teamwork). The color indicates the score level: green represents high scores, amber indicates moderate performance, and red flags areas that may need attention. A dash (–) means no feedback data is available for that combination.</p>
+  <div><img src="report3.png" onclick="openModal('report3.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>360 Feedback Heatmap — color-coded scores by employee and competency</p>
+                                <div style="background-color:rgb(217,226,243);border:2px solid rgb(68,114,196);padding:3px">
+<p style="color:rgb(68,114,196)"><strong>💡 How to read the heatmap</strong></p>
+<p>Green  — high score (strong performance in this area).</p>
+<p>Amber  — moderate score (room for development).</p>
+<p>Red    — low score (attention recommended).</p>
+<p>–      — no feedback submitted for this competency yet.</p>
+</div><br>
+<h4>Viewing Feedback Details</h4>
+<p>From the report, you can open any feedback record to view the full Feedback Details panel. It shows each respondent's scores broken down by competency category, their individual average rating, and a total average row across all respondents.</p>
+ <div><img src="view.png" onclick="openModal('view.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>Feedback Details — completed responses with ratings per category</p>
+                            <h5>Sharing Feedback via Email (Email To)</h5>
+                            <p>From the Feedback Details panel, click the Email To button (top-right) to send the full feedback summary to a chosen recipient. This is useful for sharing results directly with the employee or another stakeholder without them needing to access the report themselves.</p>
+                            <div><img src="share.png" onclick="openModal('share.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>Feedback Details — Email To button (top-right)</p>
+                            <p>Clicking Email To opens a panel where you can select the recipient, optionally add a CC, and enter remarks before sending. The email is sent using the Request Feedback (Email To) notification template.</p>
+                             <div><img src="mail.png" onclick="openModal('mail.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>Email To notification template — sends full feedback summary</p>
+                            <div><img src="mail2.png" onclick="openModal('mail2.png')" alt="Report data"
+                                    width="100%" height="auto"></div>
+                            <br>
+                            <p>Email To panel — recipient, CC, and remarks before sending</p>
+ 
                         </div>
                         <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
                         <nav class="pagination mt-3">
