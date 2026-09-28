@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     `<a class='dropdown-item employeedirectorylink' href='/sharepoint-employee-directory/'>Employee Directory 365</a>` +
 
-    `<a class='dropdown-item performancelink' href='/employee-performance-management/'>Performance Management 365</a>` +
+    `<a class='dropdown-item performancelink' href='/employee-performance-management/'>Performance 365</a>` +
 
     `<a class='dropdown-item performancelink' href='/employee-vacation-tracker-time-off-manager/'>Time Off Manager 365</a>` +
 

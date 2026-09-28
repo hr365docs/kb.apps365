@@ -1772,7 +1772,7 @@ $(document).ready(function () {
                  
 
                 "</li>" +
-                "<a href='/HRMS-HR365/modern/admin/apps/PM365/home-page/' title='Performance Management 365'>Performance Management 365</a>" +
+                "<a href='/HRMS-HR365/modern/admin/apps/PM365/home-page/' title='Performance 365'>Performance 365</a>" +
                 "</li>" +
 
                 "<li data-nav-id='../advanced/' title='PM365 - Home Page' class='sidelist'>" +
