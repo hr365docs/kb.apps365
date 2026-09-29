@@ -3,9 +3,9 @@ import { hydrateIcons } from './icons.js';
 (function () {
   "use strict";
 
-  const DIRECT_LINE_SECRET = "BqVXXf2JsEbXvtUekWGmb6AEvjIIFizBMqf9pCYCqih5rm6iw48tJQQJ99CIACZoyfiAArohAAABAZBS3mhr.1qqsTQzvYpzTbjFyIKFy6e4Pcm6S6Jmyi4ew9vpj0vDQmCraOoLhJQQJ99CIACZoyfiAArohAAABAZBSghWu";
+  const DIRECT_LINE_SECRET = "BXL4er0v2wFIRHETqOl8VMQJoPrs7yeQTCki3SSGgp2NiqcZ2hZrJQQJ99CIACZoyfiAArohAAABAZBS416k.BAjlRhj9N4J1O5n0Jr0CfbkOaYhKxECX483tOh0Ep2GpUJl3QpOSJQQJ99CIACZoyfiAArohAAABAZBS4Vu0";
   const tenantId = "apps365";
-  const defaultUserId = "";
+  const defaultUserId = ""; 
   const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
   const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1jvqen11n";
