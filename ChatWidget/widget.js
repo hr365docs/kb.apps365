@@ -3,7 +3,7 @@ import { hydrateIcons } from './icons.js';
 (function () {
   "use strict";
 
-  const DIRECT_LINE_SECRET = "94sSs6Vm33JKQsyFzQwwQcAMJ0oxJDY8L8H75wDwLW7463ewDmMpJQQJ99CFACrJL3JAArohAAABAZBS1xjt.3jeezJtbQlUDGbIMI3nVhGFF86M1kGOJwCDqRfYLgPkzpzv6e26oJQQJ99CFACrJL3JAArohAAABAZBS39Ve";
+  const DIRECT_LINE_SECRET = "BqVXXf2JsEbXvtUekWGmb6AEvjIIFizBMqf9pCYCqih5rm6iw48tJQQJ99CIACZoyfiAArohAAABAZBS3mhr.1qqsTQzvYpzTbjFyIKFy6e4Pcm6S6Jmyi4ew9vpj0vDQmCraOoLhJQQJ99CIACZoyfiAArohAAABAZBSghWu";
   const tenantId = "apps365";
   const defaultUserId = "";
   const defaultUserName = "";
