@@ -5,12 +5,32 @@ import { hydrateIcons } from './icons.js';
 
   const DIRECT_LINE_SECRET = "BXL4er0v2wFIRHETqOl8VMQJoPrs7yeQTCki3SSGgp2NiqcZ2hZrJQQJ99CIACZoyfiAArohAAABAZBS416k.BAjlRhj9N4J1O5n0Jr0CfbkOaYhKxECX483tOh0Ep2GpUJl3QpOSJQQJ99CIACZoyfiAArohAAABAZBS4Vu0";
   const tenantId = "apps365";
-  const defaultUserId = ""; 
+  const defaultUserId = "";
   const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
-  const TAWK_CHAT_URL = window.TAWK_CHAT_URL || "https://tawk.to/chat/5c4f037d51410568a108fd36/1jvqen11n";
+  // Live chat API (Node/Express + Azure SignalR), deployed on Azure App Service.
+  const API_BASE_URL = "https://knowledgebaseagentr-azhkdfendtachngp.westus3-01.azurewebsites.net";
+  // sessionStorage key prefix for the customer session token (per conversationId).
+  const LIVE_SESSION_STORAGE_PREFIX = "cw-live-session:";
+  // Fallback loader for host pages that don't include the SignalR <script> tag themselves.
+  const SIGNALR_CDN_URL = "https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js";
+  const SIGNALR_CDN_INTEGRITY = "sha384-mU1xC5yC2LldSW74Rj1Ax8wPiLw/28V5eh51uKJMlBbRVsOtUYd4xyzNsgIAJARB";
   const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
-  const SHAREPOINT_LIST_TITLE = "Apps365KBAgentPrompts";
+  const SHAREPOINT_LIST_TITLE = "HR365CAChats";
+  // HR365CAChats has no UserGUID column yet (checked against the list schema). Writing or
+  // selecting a field that doesn't exist makes SharePoint reject the whole request, so this
+  // stays off until the column is created.
+  const SHAREPOINT_HAS_USER_GUID_COLUMN = false;
+  const SHAREPOINT_CONVERSATION_SELECT = [
+    "Id",
+    ...(SHAREPOINT_HAS_USER_GUID_COLUMN ? ["UserGUID"] : []),
+    "ConversationId",
+    "UserEmail",
+    "ConversationDetails",
+    "LiveAgentEscalated",
+    "Created",
+    "Modified",
+  ].join(",");
   const SHAREPOINT_TOKEN_URL = "https://mt365token.azurewebsites.net/api/token/cubiclogics";
   const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
   const forceSharePointLocally = new URLSearchParams(location.search).get("forceSp") === "1";
@@ -50,11 +70,14 @@ import { hydrateIcons } from './icons.js';
     const login = String(context.userLoginName || window.CW_USER_LOGIN || "").trim();
     const name = String(context.userDisplayName || window.CW_USER_NAME || defaultUserName).trim() || defaultUserName;
     const id = email || login || defaultUserId;
+    // Only a real directory GUID (signed-in SharePoint page); anonymous visitors get none.
+    const guid = String(context.aadUserId || window.CW_USER_GUID || "").trim();
 
     return {
       id,
       email,
       name,
+      guid,
     };
   }
 
@@ -83,11 +106,10 @@ import { hydrateIcons } from './icons.js';
   const sidebarBackdrop = document.getElementById("cw-sidebar-backdrop");
   const historyList = document.getElementById("cw-history-list");
   const searchInput = document.getElementById("cw-search-input");
-  let tawkFrame = null;
   const bodyScroll = document.querySelector(".cw-body-scroll");
   const footer = document.querySelector(".cw-footer");
   const quickReplyBtns = document.querySelectorAll(".cw-quick-reply");
-  const webchatDiv = document.getElementById("webchat");
+  let webchatDiv = document.getElementById("webchat");
 
   if (!widget || !fab || !header || !webchatDiv) return;
 
@@ -102,6 +124,15 @@ import { hydrateIcons } from './icons.js';
   let store;
   let webChatInitPromise = null;
   let webChatInitialized = false;
+  // True once a stored conversation has taken directLine.conversationId, so "New chat"
+  // knows it needs a fresh Direct Line conversation (and therefore a fresh id).
+  let directLineConversationClaimed = false;
+  let customerSessionToken = null;
+  let customerSessionConversationId = "";
+  let customerSessionPromise = null;
+  let liveAgentActive = false;
+  let liveSession = null;
+  let signalRLoadPromise = null;
   let renderedMessageIds = new Set();
   const feedbackCache = {}; 
   let conversationLoadPromise = null;
@@ -160,7 +191,7 @@ import { hydrateIcons } from './icons.js';
     // Email is already normalized to lowercase everywhere it's written, so a
     // plain eq comparison is sufficient and SharePoint-supported.
     const email = normalizeEmail(currentUserEmail);
-    return email ? `&$filter=Email eq '${escapeODataString(email)}'` : "";
+    return email ? `&$filter=UserEmail eq '${escapeODataString(email)}'` : "";
   }
 
   function getLocalConversationStorageKey() {
@@ -206,7 +237,9 @@ import { hydrateIcons } from './icons.js';
       pageUrl: item.pageUrl || window.location.href || "",
       userIp: item.userIp || "",
       userId: item.userId || userId || "",
+      userGuid: item.userGuid || "",
       feedback: item.feedback || {},
+      liveAgent: normalizeLiveAgent(item.liveAgent),
       messages,
     };
   }
@@ -352,7 +385,11 @@ import { hydrateIcons } from './icons.js';
         if (!message) return null;
         if (message.type && message.from) return message;
 
-        const role = message.role === "assistant" ? "bot" : message.role === "bot" ? "bot" : "user";
+        const role =
+          message.role === "assistant" ? "bot"
+          : message.role === "bot" ? "bot"
+          : message.role === "agent" ? "agent"
+          : "user";
         const text = message.content || message.text || "";
         const attachments = Array.isArray(message.attachments)
           ? message.attachments.map((att) => ({
@@ -363,15 +400,17 @@ import { hydrateIcons } from './icons.js';
             }))
           : [];
 
+        const isAgent = role === "agent";
         return {
           id: message.id || `msg-${index}`,
           type: "message",
           text,
           attachments,
           from: {
-            id: role === "user" ? userId : "bot",
-            name: role === "user" ? userName : "Copilot",
+            id: role === "user" ? userId : isAgent ? message.senderEmail || "agent" : "bot",
+            name: role === "user" ? userName : isAgent ? message.senderName || "Support agent" : "Copilot",
             role,
+            ...(isAgent && message.senderEmail ? { email: message.senderEmail } : {}),
           },
           timestamp: message.timestamp || new Date().toISOString(),
         };
@@ -379,48 +418,71 @@ import { hydrateIcons } from './icons.js';
       .filter(Boolean);
   }
 
+  const LIVE_AGENT_STATUSES = ["none", "pending", "assigned", "fallback", "closed"];
+
+  function normalizeLiveAgent(value) {
+    const status = LIVE_AGENT_STATUSES.includes(value?.status) ? value.status : "none";
+    return {
+      status,
+      ...(value?.assignedAgentEmail ? { assignedAgentEmail: value.assignedAgentEmail } : {}),
+      ...(value?.assignedAgentName ? { assignedAgentName: value.assignedAgentName } : {}),
+    };
+  }
+
+  function serializeMessageRole(message) {
+    const role = message.from?.role;
+    if (role === "bot") return "assistant";
+    if (role === "agent") return "agent";
+    return "user";
+  }
+
+  // Builds the whole ConversationDetails object: everything that used to live in
+  // separate list columns, plus the message transcript.
   function serializeConversation(conv, { includeContentUrl = false } = {}) {
     return {
-      messages: (conv.messages || []).map((message) => ({
-        id: message.id || "",
-        role: message.from?.role === "bot" ? "assistant" : "user",
-        content: message.text || "",
-        attachments: Array.isArray(message.attachments)
-          ? message.attachments.map((att) => ({
-              name: att.name || "Attachment",
-              contentType: att.contentType || "",
-              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
-            }))
-          : [],
-        timestamp: message.timestamp || new Date().toISOString(),
-      })),
+      title: conv.title || conv.preview || "New chat",
+      pageUrl: conv.pageUrl || window.location.href || "",
+      userIp: conv.userIp || userPublicIp || "",
+      feedback: conv.feedback || {},
+      messages: (conv.messages || []).map((message) => {
+        const role = serializeMessageRole(message);
+        return {
+          id: message.id || "",
+          role,
+          content: message.text || "",
+          ...(role === "agent" && message.from?.email ? { senderEmail: message.from.email } : {}),
+          ...(role === "agent" && message.from?.name ? { senderName: message.from.name } : {}),
+          attachments: Array.isArray(message.attachments)
+            ? message.attachments.map((att) => ({
+                name: att.name || "Attachment",
+                contentType: att.contentType || "",
+                ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
+              }))
+            : [],
+          timestamp: message.timestamp || new Date().toISOString(),
+        };
+      }),
+      liveAgent: normalizeLiveAgent(conv.liveAgent),
     };
   }
 
   function parseSharePointConversationItem(item) {
-    const rawConversation = item.Conversation || item.ConversationJSON || item.ConversationJson || "";
-    let parsed = { messages: [] };
-    if (rawConversation) {
+    const rawDetails = item.ConversationDetails || "";
+    let parsed = {};
+    if (rawDetails) {
       try {
-        parsed = JSON.parse(rawConversation);
+        parsed = JSON.parse(rawDetails) || {};
       } catch {
-        parsed = { messages: [] };
+        parsed = {};
       }
     }
 
     const messages = sanitizeStoredMessages(parsed.messages || []);
-    const previewSource = messages[messages.length - 1] || { text: item.Title || "" };
+    const previewSource = messages[messages.length - 1] || { text: parsed.title || "" };
     const preview = getActivityPreview(previewSource);
-    const title = item.Title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
-
-        let feedback = {};
-    if (item.Feedback) {
-      try {
-        feedback = JSON.parse(item.Feedback);
-      } catch {
-        feedback = {};
-      }
-    }
+    const title = parsed.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
+    const feedback = parsed.feedback && typeof parsed.feedback === "object" ? parsed.feedback : {};
+    const liveAgent = normalizeLiveAgent(parsed.liveAgent || { status: item.LiveAgentEscalated });
 
     return {
       spId: item.Id || item.ID || null,
@@ -429,26 +491,63 @@ import { hydrateIcons } from './icons.js';
       preview,
       timestamp: normalizeConversationTimestamp(item.Modified || item.Created),
       createdAt: item.Created || new Date().toISOString(),
-      email: item.Email || "",
-      pageUrl: item.PageUrl1 || item.PageURL || "",
-      userIp: item.UserIP || "",
-      userId: item.UserId || "",
+      email: item.UserEmail || "",
+      pageUrl: parsed.pageUrl || "",
+      userIp: parsed.userIp || "",
+      userId: item.UserEmail || "",
+      userGuid: item.UserGUID || "",
       feedback,
+      liveAgent,
       messages,
     };
   }
   function buildConversationFields(conv) {
-    const serialized = serializeConversation(conv, { includeContentUrl: true });
+    const details = serializeConversation(conv, { includeContentUrl: true });
     return {
-      Title: conv.title || conv.preview || "New chat",
-      Email: conv.email || currentUserEmail || "",
-      Conversation: JSON.stringify(serialized),
-      Feedback: JSON.stringify(conv.feedback || {}),
-      PageUrl1: conv.pageUrl || window.location.href || "",
-      UserIP: conv.userIp || userPublicIp || "",
       ConversationId: conv.conversationId || "",
-      UserId: conv.userId || userId || "",
+      UserEmail: conv.email || currentUserEmail || "",
+      ...(SHAREPOINT_HAS_USER_GUID_COLUMN ? { UserGUID: conv.userGuid || currentUser.guid || "" } : {}),
+      ConversationDetails: JSON.stringify(details),
+      // Top-level mirror of liveAgent.status so it can be queried without parsing JSON.
+      LiveAgentEscalated: details.liveAgent.status,
     };
+  }
+
+  // Later statuses written by the API (agent joined, chat closed) must not be rolled
+  // back by a widget save built from an older in-memory copy.
+  const LIVE_AGENT_STATUS_RANK = { none: 0, pending: 1, fallback: 1, assigned: 2, closed: 3 };
+
+  // widgetDetails: serializeConversation() output. rawCurrent: the item's stored JSON.
+  // Keeps keys the widget doesn't model (session, fallback, ...), liveAgent extras
+  // (assignedAgentId), and agent messages the widget hasn't received yet.
+  function mergeServerOwnedDetails(widgetDetails, rawCurrent) {
+    let current = null;
+    try {
+      current = JSON.parse(rawCurrent || "null");
+    } catch {
+      current = null;
+    }
+    if (!current || typeof current !== "object" || Array.isArray(current)) return widgetDetails;
+
+    const serverLive = current.liveAgent && typeof current.liveAgent === "object" ? current.liveAgent : {};
+    const widgetStatus = widgetDetails.liveAgent.status;
+    const serverStatus = LIVE_AGENT_STATUSES.includes(serverLive.status) ? serverLive.status : "none";
+    const liveAgent = {
+      ...serverLive,
+      ...widgetDetails.liveAgent,
+      status: LIVE_AGENT_STATUS_RANK[serverStatus] > LIVE_AGENT_STATUS_RANK[widgetStatus] ? serverStatus : widgetStatus,
+    };
+
+    const knownIds = new Set(widgetDetails.messages.map((m) => m.id));
+    const missingAgentMessages = (Array.isArray(current.messages) ? current.messages : []).filter(
+      (m) => m?.role === "agent" && m.id && !knownIds.has(m.id) && !knownIds.has(`agent-${m.id}`)
+    );
+    const time = (m) => Date.parse(m.timestamp) || 0;
+    const messages = missingAgentMessages.length
+      ? [...widgetDetails.messages, ...missingAgentMessages].sort((a, b) => time(a) - time(b))
+      : widgetDetails.messages;
+
+    return { ...current, ...widgetDetails, liveAgent, messages };
   }
 
   function isConversationForCurrentUser(conv) {
@@ -475,6 +574,12 @@ import { hydrateIcons } from './icons.js';
       setStoredUserEmail(normalized);
     }
 
+    // Identity reaches the live-chat server as soon as it's known, but only if a
+    // customer session already exists (bot-only chats never create one).
+    if (customerSessionToken) {
+      void bindCustomerSession();
+    }
+
         conversationLoadPromise = null;
     if (reloadHistory) {
       Promise.resolve().then(() => {
@@ -491,6 +596,9 @@ import { hydrateIcons } from './icons.js';
 
   async function persistConversation(conv) {
     if (!conv) return;
+    // Don't write the item until its ConversationId (directLine.conversationId) is known,
+    // so the create carries the real id instead of an empty one.
+    if (conv.conversationIdPending) await conv.conversationIdPending;
     if (!canUseSharePointPersistence) {
       saveConversationsToLocalStorage();
       return conv;
@@ -507,24 +615,42 @@ import { hydrateIcons } from './icons.js';
     };
 
     if (conv.spId) {
-      const response = await spRequest(
-        `/_api/web/lists/getbytitle('${safeTitle}')/items(${conv.spId})`,
-        {
+      const itemPath = `/_api/web/lists/getbytitle('${safeTitle}')/items(${conv.spId})`;
+      // The live chat API writes into the same ConversationDetails JSON (session binding,
+      // fallback, assignedAgentId, agent messages). Re-read and merge before every write,
+      // guarded by the item's ETag, so a widget save never erases what the server wrote.
+      for (let attempt = 1; ; attempt++) {
+        const current = await spRequest(`${itemPath}?$select=ConversationDetails`, {
+          method: "GET",
+          headers: { Accept: "application/json;odata=verbose" },
+        });
+        if (!current.ok) {
+          throw new Error(`Conversation read before update failed (${current.status})`);
+        }
+        const currentItem = (await current.json())?.d || {};
+        const details = mergeServerOwnedDetails(JSON.parse(fields.ConversationDetails), currentItem.ConversationDetails);
+
+        const response = await spRequest(itemPath, {
           method: "POST",
           headers: {
             Accept: "application/json;odata=verbose",
             "Content-Type": "application/json;odata=verbose",
-            "If-Match": "*",
+            "If-Match": currentItem.__metadata?.etag || "*",
             "X-HTTP-Method": "MERGE",
           },
-          body: JSON.stringify(payload),
-        }
-      );
+          body: JSON.stringify({
+            ...payload,
+            ConversationDetails: JSON.stringify(details),
+            LiveAgentEscalated: details.liveAgent.status,
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error(`Conversation update failed (${response.status})`);
+        if (response.status === 412 && attempt < 3) continue;
+        if (!response.ok) {
+          throw new Error(`Conversation update failed (${response.status})`);
+        }
+        return;
       }
-      return;
     }
 
     const response = await spRequest(
@@ -604,7 +730,7 @@ import { hydrateIcons } from './icons.js';
         if (canUseSharePointPersistence) {
           await ensureSharePointListMetadata();
           const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
-          const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')/items?$select=Id,Title,Conversation,Feedback,Email,PageUrl1,UserIP,ConversationId,UserId,Created,Modified&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
+          const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')/items?$select=${SHAREPOINT_CONVERSATION_SELECT}&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
             
             { method: "GET" }
           );
@@ -902,16 +1028,9 @@ if (loadVersion !== conversationLoadVersion) {
   }
 //debugger;
   function saveFeedback(messageId, rating, comment) {
-    // if (!currentConversation || !messageId) return;
-    if (!messageId) return;
-
-if (!currentConversation) {
-  currentConversation = {
-    id: "temp-" + Date.now(),
-    messages: [],
-    feedback: {}
-  };
-}
+    // Feedback always belongs to the conversation on screen. Never create a stand-in
+    // conversation here: it would become an extra SharePoint item with no ConversationId.
+    if (!currentConversation || !messageId) return;
     if (!currentConversation.feedback) currentConversation.feedback = {};
     currentConversation.feedback[messageId] = {
       rating,
@@ -1043,6 +1162,27 @@ if (!currentConversation) {
     scrollToMessageStart(lastUserMsgEl || msg);
   }
 
+  // Same structure as a Copilot reply, labelled with the agent's name. No feedback
+  // thumbs: those rate AI answers.
+  function appendAgentMessage(text, agentName) {
+    hideEmptyState();
+    const msg = document.createElement("article");
+    msg.className = "cw-copilot-msg cw-agent-msg";
+    msg.innerHTML = `
+      <div class="cw-agent-label">${escapeHtml(agentName || "Support agent")}</div>
+      <div class="cw-copilot-card">
+        <div class="cw-copilot-text cw-markdown">${escapeHtml(text || "").replace(/\n/g, "<br>")}</div>
+      </div>
+      <div class="cw-copilot-actions">
+        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message" title="Copy message">${fluentIconHtml("copy")}</button>
+      </div>
+    `;
+    body.appendChild(msg);
+    hydrateIcons(msg);
+    bindCopyButton(msg.querySelector('[data-action="copy"]'), text || "");
+    scrollToBottom();
+  }
+
   function renderActivity(activity) {
     if (!activity || activity.type !== "message") return;
 
@@ -1058,6 +1198,8 @@ if (!currentConversation) {
     
     if (activity.from && activity.from.role === "user") {
       appendUserMessage(activity);
+    } else if (activity.from && activity.from.role === "agent") {
+      if (hasText) appendAgentMessage(activity.text, activity.from.name);
     } else if (hasText) {
       appendCopilotMessage(activity.text, activity.id || id);
     }
@@ -1320,6 +1462,13 @@ if (!currentConversation) {
         throw new Error("BotFramework WebChat is not loaded.");
       }
 
+      if (directLine) {
+        // Re-initialising after resetDirectLineConversation(): render into a fresh host
+        // node so the previous WebChat React tree is detached rather than re-rendered.
+        const freshHost = webchatDiv.cloneNode(false);
+        webchatDiv.replaceWith(freshHost);
+        webchatDiv = freshHost;
+      }
       webchatDiv.innerHTML = "";
       directLine = window.WebChat.createDirectLine({ secret: DIRECT_LINE_SECRET });
       // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
@@ -1336,12 +1485,92 @@ if (!currentConversation) {
     return webChatInitPromise;
   }
 
+  // Ends the current Direct Line conversation so the next ensureWebChatInitialized()
+  // starts a new one with a new conversationId. The secret/auth path is unchanged.
+  function resetDirectLineConversation() {
+    const previous = directLine;
+    webChatInitialized = false;
+    webChatInitPromise = null;
+    directLineConversationClaimed = false;
+    store = null;
+    try {
+      previous?.end?.();
+    } catch (error) {
+      console.warn("Unable to end previous Direct Line conversation", error);
+    }
+  }
+
+  // Resolves with directLine.conversationId. It is only populated once the connection
+  // reaches Online (connectionStatus$ === 2), so wait for that when it isn't set yet.
+  function waitForDirectLineConversationId(timeoutMs = 20000) {
+    const dl = directLine;
+    if (dl?.conversationId) return Promise.resolve(dl.conversationId);
+    if (!dl?.connectionStatus$?.subscribe) return Promise.resolve("");
+
+    return new Promise((resolve) => {
+      let subscription = null;
+      let settled = false;
+      const finish = (value) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        // subscribe() can emit synchronously, before `subscription` is assigned.
+        Promise.resolve().then(() => subscription?.unsubscribe?.());
+        resolve(value || "");
+      };
+      const timer = setTimeout(() => finish(dl.conversationId), timeoutMs);
+      subscription = dl.connectionStatus$.subscribe((status) => {
+        if (status === 2 && dl.conversationId) finish(dl.conversationId);
+        else if (status === 4 || status === 5) finish(dl.conversationId);
+      });
+    });
+  }
+
+  // The only place a conversation record is created. It runs when currentConversation is
+  // null, which only happens on first load or after startNewConversation().
+  function createCurrentConversation(preview) {
+    const conversationId = directLine?.conversationId || "";
+    const conv = {
+      id: conversationId || `pending-${Date.now()}`,
+      conversationId,
+      title: preview.slice(0, 50),
+      preview,
+      timestamp: Date.now(),
+      messages: [],
+      pageUrl: window.location.href,
+      userIp: userPublicIp || "",
+      userId,
+      userGuid: currentUser.guid || "",
+      email: currentUserEmail || "",
+      feedback: {},
+      liveAgent: { status: "none" },
+    };
+
+    if (!conversationId) {
+      conv.conversationIdPending = waitForDirectLineConversationId().then((id) => {
+        if (id && !conv.conversationId) {
+          conv.conversationId = id;
+          conv.id = id;
+        }
+        delete conv.conversationIdPending;
+        return conv.conversationId;
+      });
+    }
+
+    directLineConversationClaimed = true;
+    currentConversation = conv;
+    conversations.unshift(conv);
+    return conv;
+  }
+
   function handleNewMessage(activity) {
     if (activity.from.role !== "user") {
       if (!currentConversation || shouldIgnoreBotMessage(activity)) return;
     }
 
     if (activity.from.role === "user") {
+      // This Direct Line conversation now carries user traffic; "New chat" must not reuse it.
+      directLineConversationClaimed = true;
       const capturedEmail = extractEmailFromText(activity.text);
       if (capturedEmail) {
         applyUserEmailIdentity(capturedEmail, { persist: true, reloadHistory: true });
@@ -1349,21 +1578,7 @@ if (!currentConversation) {
     }
 
     if (!currentConversation) {
-      const preview = getActivityPreview(activity);
-      const conversationId = `conv-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
-      currentConversation = {
-        id: conversationId,
-        conversationId,
-        title: preview.slice(0, 50),
-        preview,
-        timestamp: Date.now(),
-        messages: [],
-        pageUrl: window.location.href,
-        userIp: userPublicIp || "",
-        userId,
-        email: currentUserEmail || "",
-      };
-      conversations.unshift(currentConversation);
+      createCurrentConversation(getActivityPreview(activity));
     }
 
        currentConversation.messages.push(activity);
@@ -1399,6 +1614,14 @@ if (!currentConversation) {
   }
 
   async function loadConversation(conv) {
+    if (liveSession) {
+      if (getConversationKey(conv) === getConversationKey(liveSession.conversation)) {
+        // Same conversation (possibly a reloaded copy): keep the live object and session.
+        conv = liveSession.conversation;
+      } else {
+        endLiveAgentSession();
+      }
+    }
     hideLoading();
     currentConversation = conv;
     chatStarted = conv.messages.length > 0;
@@ -1414,6 +1637,7 @@ if (!currentConversation) {
     } else {
       showEmptyState();
     }
+    if (liveSession && liveStatusEl) body.appendChild(liveStatusEl);
 
     beginReplayGuard();
     await ensureWebChatInitialized();
@@ -1434,7 +1658,11 @@ if (!currentConversation) {
   function startNewConversation() {
     closeLiveAgent();
     hideLoading();
+    // The one deliberate reset: the next message creates a new conversation (and a new
+    // SharePoint item). It gets a fresh Direct Line conversation so its id is new too.
     currentConversation = null;
+    if (directLineConversationClaimed) resetDirectLineConversation();
+    resetCustomerSession();
     chatStarted = false;
     updateHeaderForCurrentView();
     showEmptyState();
@@ -1566,6 +1794,11 @@ function sendMessage(text, additionalChannelData = {}) {
   }
 
     async function handleSend() {
+    if (liveAgentActive) {
+      await handleLiveAgentSend();
+      return;
+    }
+    // ---- Direct Line (AI bot) path below: unchanged ----
     if (isWaitingForResponse) {
       showToast("Please wait for the current response to finish.");
       return;
@@ -1682,50 +1915,651 @@ function sendMessage(text, additionalChannelData = {}) {
     fab.setAttribute("aria-expanded", "false");
   }
 
-  function openLiveAgent() {
-    if (document.querySelector(".cw-live-agent-card")) return;
-    scrollToBottom();
+  /* ================= Live agent (Node API + Azure SignalR) ================= */
 
-    let liveCard = document.querySelector(".cw-live-agent-card");
-    if (!liveCard) {
-      liveCard = document.createElement("div");
-      liveCard.className = "cw-live-agent-card";
-      liveCard.innerHTML = `
+  let liveStatusEl = null;
+
+  async function liveApiFetch(path, { method = "GET", body: payload, token = customerSessionToken, keepalive = false } = {}) {
+    const headers = { Accept: "application/json" };
+    if (payload !== undefined) headers["Content-Type"] = "application/json";
+    if (token) headers.Authorization = `Bearer ${token}`;
+
+    const response = await fetch(`${API_BASE_URL}${path}`, {
+      method,
+      headers,
+      body: payload !== undefined ? JSON.stringify(payload) : undefined,
+      keepalive,
+    });
+    const data = await response.json().catch(() => null);
+    if (!response.ok) {
+      const error = new Error(data?.error || `Request failed (${response.status})`);
+      error.status = response.status;
+      throw error;
+    }
+    return data;
+  }
+
+  function resetCustomerSession() {
+    customerSessionToken = null;
+    customerSessionConversationId = "";
+    customerSessionPromise = null;
+  }
+
+  // POST /api/chat/session never refuses: every call mints a new sessionId. But the first
+  // sessionId to bind/escalate is stored on the conversation's HR365CAChats item, and any
+  // other session then gets 403 on escalate/message/end. So the token must survive a page
+  // reload; sessionStorage keeps it for the life of the tab only.
+  function readStoredCustomerSession(conversationId) {
+    try {
+      const stored = JSON.parse(sessionStorage.getItem(LIVE_SESSION_STORAGE_PREFIX + conversationId) || "null");
+      const token = stored?.conversationId === conversationId ? stored.customerSessionToken : "";
+      if (token && decodeJwtExpiry(token) > Date.now() + 60_000) return token;
+    } catch {
+      // Storage blocked or unparseable: fall through to a fresh session.
+    }
+    return "";
+  }
+
+  function storeCustomerSession(conversationId, token) {
+    try {
+      sessionStorage.setItem(
+        LIVE_SESSION_STORAGE_PREFIX + conversationId,
+        JSON.stringify({ conversationId, customerSessionToken: token })
+      );
+    } catch {
+      // Ignore storage failures; the in-memory token still works until reload.
+    }
+  }
+
+  // Created lazily (first live-agent use), never on page load, so bot-only chats make no
+  // calls to the live chat API. The token is tied to one conversationId.
+  function ensureCustomerSession(conversationId) {
+    if (!conversationId) return Promise.reject(new Error("conversationId is not available yet"));
+    if (customerSessionToken && customerSessionConversationId === conversationId) {
+      return Promise.resolve(customerSessionToken);
+    }
+    if (customerSessionPromise && customerSessionPromise.conversationId === conversationId) {
+      return customerSessionPromise;
+    }
+
+    const storedToken = readStoredCustomerSession(conversationId);
+    if (storedToken) {
+      customerSessionToken = storedToken;
+      customerSessionConversationId = conversationId;
+      return Promise.resolve(storedToken);
+    }
+
+    const promise = liveApiFetch("/api/chat/session", {
+      method: "POST",
+      body: { conversationId },
+      token: null,
+    })
+      .then(async (data) => {
+        if (!data?.token) throw new Error("Session response did not include a token");
+        customerSessionToken = data.token;
+        customerSessionConversationId = conversationId;
+        storeCustomerSession(conversationId, data.token);
+        if (currentUserEmail || userName) await bindCustomerSession();
+        return customerSessionToken;
+      })
+      .finally(() => {
+        if (customerSessionPromise === promise) customerSessionPromise = null;
+      });
+    promise.conversationId = conversationId;
+    customerSessionPromise = promise;
+    return promise;
+  }
+
+  // Bind returns { bound: false } when the HR365CAChats item doesn't exist yet. That's
+  // expected (the widget creates the item); POST /escalate claims the session then.
+  // A 409 means the conversation is bound to a different session.
+  async function bindCustomerSession() {
+    if (!customerSessionToken) return;
+    try {
+      await liveApiFetch("/api/chat/bind", {
+        method: "POST",
+        body: { displayName: userName || null, email: currentUserEmail || null },
+      });
+    } catch (error) {
+      console.warn("Unable to bind live chat session", error);
+    }
+  }
+
+  function ensureSignalRLoaded() {
+    if (window.signalR?.HubConnectionBuilder) return Promise.resolve(window.signalR);
+    if (signalRLoadPromise) return signalRLoadPromise;
+
+    signalRLoadPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = SIGNALR_CDN_URL;
+      script.integrity = SIGNALR_CDN_INTEGRITY;
+      script.crossOrigin = "anonymous";
+      script.async = true;
+      script.onload = () =>
+        window.signalR?.HubConnectionBuilder
+          ? resolve(window.signalR)
+          : reject(new Error("SignalR client failed to initialise"));
+      script.onerror = () => reject(new Error("Unable to load the SignalR client"));
+      document.head.appendChild(script);
+    }).catch((error) => {
+      signalRLoadPromise = null;
+      throw error;
+    });
+    return signalRLoadPromise;
+  }
+
+  function setLiveAgentStatus(conv, status, extra = {}) {
+    if (!conv) return;
+    const base = status === "pending" ? {} : conv.liveAgent || {};
+    conv.liveAgent = normalizeLiveAgent({ ...base, ...extra, status });
+    queueConversationSave(conv, true);
+  }
+
+  function getLastUserMessageText(conv) {
+    const messages = conv?.messages || [];
+    for (let i = messages.length - 1; i >= 0; i--) {
+      const text = messages[i]?.from?.role === "user" ? (messages[i].text || "").trim() : "";
+      if (text) return text;
+    }
+    return "";
+  }
+
+  function setHeaderLiveIndicator(visible, text = "Live agent") {
+    const headerIndicator = document.querySelector(".cw-header-live-indicator");
+    if (!headerIndicator) return;
+    headerIndicator.hidden = !visible;
+    const label = headerIndicator.querySelector(".cw-live-text");
+    if (label) label.textContent = text;
+  }
+
+  // Plain in-thread status indicator (replaces the old tawk.to iframe card).
+  function showLiveStatus(text) {
+    if (!liveStatusEl) {
+      liveStatusEl = document.createElement("div");
+      liveStatusEl.className = "cw-live-agent-card";
+      liveStatusEl.setAttribute("role", "status");
+      liveStatusEl.innerHTML = `
         <div class="cw-live-agent-card-header">
           <span class="cw-live-dot" aria-hidden="true"></span>
-          <span class="cw-live-text">Connected live via tawk.to</span>
-          <button class="cw-live-agent-close cw-icon-btn" type="button" aria-label="Close live agent">
+          <span class="cw-live-text"></span>
+          <button class="cw-live-agent-close cw-icon-btn" type="button" aria-label="End live chat" title="End live chat">
             <span class="cw-fluent-icon cw-icon-close" aria-hidden="true"></span>
           </button>
         </div>
-        <iframe class="cw-tawk-frame" title="Live agent chat" allow="microphone"></iframe>
       `;
-      body.appendChild(liveCard);
-      hydrateIcons(liveCard);
-      liveCard.querySelector(".cw-live-agent-close")?.addEventListener("click", closeLiveAgent);
+      hydrateIcons(liveStatusEl);
+      liveStatusEl.querySelector(".cw-live-agent-close")?.addEventListener("click", closeLiveAgent);
     }
-
-    tawkFrame = liveCard.querySelector(".cw-tawk-frame");
-    if (tawkFrame) tawkFrame.src = TAWK_CHAT_URL;
-
-    const headerIndicator = document.querySelector(".cw-header-live-indicator");
-    if (headerIndicator) headerIndicator.hidden = false;
-
+    liveStatusEl.querySelector(".cw-live-text").textContent = text;
+    if (!liveStatusEl.isConnected) {
+      hideEmptyState();
+      body.appendChild(liveStatusEl);
+    }
+    setHeaderLiveIndicator(true);
     scrollToBottom();
   }
 
-  function closeLiveAgent() {
-    const liveCard = document.querySelector(".cw-live-agent-card");
-    if (liveCard) {
-      const frame = liveCard.querySelector(".cw-tawk-frame");
-      if (frame) frame.src = "about:blank";
-      liveCard.remove();
+  function removeLiveStatusUi() {
+    liveStatusEl?.remove();
+    liveStatusEl = null;
+    setHeaderLiveIndicator(false);
+  }
+
+  function appendLiveNotice(text) {
+    const note = document.createElement("div");
+    note.className = "cw-live-notice";
+    note.textContent = text;
+    body.appendChild(note);
+    scrollToBottom();
+  }
+
+  function isLiveSessionCurrent(session) {
+    return liveSession === session && !session.ended;
+  }
+
+  // Accepts both shapes the API produces: the ReceiveMessage broadcast
+  // ({ id, text, createdAt, senderName }) and a stored ConversationDetails message from
+  // GET /conversations/:id ({ id, role, content, timestamp, senderName }).
+  function recordAgentMessage(session, message) {
+    if (!isLiveSessionCurrent(session) || !message) return;
+    const text = String(message.text ?? message.content ?? "");
+    if (!text.trim()) return;
+
+    const createdAt = message.createdAt || message.timestamp || "";
+    // Transcripts the widget saved already carry the "agent-" prefixed id.
+    const rawId = String(message.id || `${createdAt}-${text}`);
+    const key = rawId.startsWith("agent-") ? rawId : `agent-${rawId}`;
+    if (session.seenMessageIds.has(key)) return;
+    session.seenMessageIds.add(key);
+
+    const conv = session.conversation;
+    if (conv.messages.some((m) => m.id === key)) return;
+    if (conv.liveAgent?.status === "pending") {
+      setLiveAgentStatus(conv, "assigned", { assignedAgentName: message.senderName || undefined });
+    }
+    const agentEmail = conv.liveAgent?.assignedAgentEmail || "";
+    const activity = {
+      id: key,
+      type: "message",
+      text,
+      attachments: [],
+      from: {
+        id: agentEmail || "agent",
+        name: message.senderName || conv.liveAgent?.assignedAgentName || "Support agent",
+        role: "agent",
+        ...(agentEmail ? { email: agentEmail } : {}),
+      },
+      timestamp: createdAt || new Date().toISOString(),
+    };
+
+    conv.messages.push(activity);
+    conv.timestamp = Date.now();
+    if (currentConversation === conv) renderActivity(activity);
+    queueConversationSave(conv, true);
+    renderHistoryList(searchInput?.value || "");
+  }
+
+  function markAgentAssigned(session, { agentName, agentEmail, announce }) {
+    if (!isLiveSessionCurrent(session)) return;
+    const conv = session.conversation;
+    const alreadyAssigned = conv.liveAgent?.status === "assigned";
+    const name = agentName || conv.liveAgent?.assignedAgentName || "";
+
+    if (!alreadyAssigned || (agentEmail && conv.liveAgent?.assignedAgentEmail !== agentEmail)) {
+      setLiveAgentStatus(conv, "assigned", {
+        assignedAgentName: name || undefined,
+        assignedAgentEmail: agentEmail || conv.liveAgent?.assignedAgentEmail || undefined,
+      });
+    }
+    showLiveStatus(name ? `Connected to ${name}` : "Connected to a support agent");
+    if (announce && !alreadyAssigned && currentConversation === conv) {
+      appendLiveNotice(`${name || "A support agent"} joined the chat.`);
+    }
+  }
+
+  // Catch-up read from the server: picks up an agent who joined before our SignalR
+  // connection was up, the agent's email (AgentJoined only carries the name), and any
+  // agent messages missed while reconnecting. Best-effort only.
+  async function syncLiveConversation(session) {
+    try {
+      const data = await liveApiFetch(
+        `/api/escalation/conversations/${encodeURIComponent(session.conversationId)}`,
+        { token: session.token }
+      );
+      if (!isLiveSessionCurrent(session)) return;
+      const record = data?.conversation;
+      if (record?.status === "closed") {
+        handleServerChatEnded(session);
+        return;
+      }
+      if (record?.status === "claimed" && record.agent) {
+        markAgentAssigned(session, {
+          agentName: record.agent.agentName,
+          agentEmail: record.agent.agentEmail,
+          announce: true,
+        });
+      }
+      // Stored messages have no senderType; the API saves role "agent" | "user".
+      (data?.messages || [])
+        .filter((m) => m.role === "agent")
+        .forEach((m) => recordAgentMessage(session, m));
+    } catch (error) {
+      console.warn("Unable to sync live conversation", error);
+    }
+  }
+
+  async function connectLiveAgent(session) {
+    const signalR = await ensureSignalRLoaded();
+
+    // The API's negotiate route is GET, so negotiate manually and hand the SignalR client
+    // the service URL + access token (withUrl(API_BASE_URL) would POST /negotiate).
+    const negotiate = () => liveApiFetch("/api/chat/negotiate?role=customer", { token: session.token });
+    let negotiated = await negotiate();
+    let accessTokenExpiresAt = decodeJwtExpiry(negotiated.accessToken);
+
+    const connection = new signalR.HubConnectionBuilder()
+      .withUrl(negotiated.url, {
+        // The service token lasts 1 hour; renegotiate before a reconnect uses a stale one.
+        accessTokenFactory: async () => {
+          if (accessTokenExpiresAt && accessTokenExpiresAt < Date.now() + 60_000) {
+            negotiated = await negotiate();
+            accessTokenExpiresAt = decodeJwtExpiry(negotiated.accessToken);
+          }
+          return negotiated.accessToken;
+        },
+      })
+      .withAutomaticReconnect()
+      .configureLogging(signalR.LogLevel.Warning)
+      .build();
+
+    // Event names/payloads as emitted by the API (escalationController + signalrRest).
+    connection.on("AgentJoined", (payload) => {
+      markAgentAssigned(session, { agentName: payload?.agentName, announce: true });
+      void syncLiveConversation(session);
+    });
+    connection.on("ReceiveMessage", (message) => {
+      // The server echoes the customer's own messages to the group; those are already
+      // rendered locally.
+      if (message?.senderType !== "agent") return;
+      recordAgentMessage(session, message);
+    });
+    connection.on("Typing", (payload) => {
+      if (payload?.senderType !== "agent" || !isLiveSessionCurrent(session) || !liveStatusEl) return;
+      const name = session.conversation.liveAgent?.assignedAgentName || "Agent";
+      const label = liveStatusEl.querySelector(".cw-live-text");
+      const previous = label.textContent;
+      label.textContent = `${name} is typing…`;
+      clearTimeout(session.typingTimer);
+      session.typingTimer = setTimeout(() => {
+        if (liveStatusEl && label.textContent === `${name} is typing…`) label.textContent = previous;
+      }, 3000);
+    });
+    connection.on("ChatEnded", () => handleServerChatEnded(session));
+    connection.onreconnecting(() => {
+      if (isLiveSessionCurrent(session)) showLiveStatus("Reconnecting to live chat…");
+    });
+    connection.onreconnected(() => {
+      if (!isLiveSessionCurrent(session)) return;
+      const name = session.conversation.liveAgent?.assignedAgentName;
+      showLiveStatus(
+        session.conversation.liveAgent?.status === "assigned"
+          ? `Connected to ${name || "a support agent"}`
+          : "Waiting for an agent to join…"
+      );
+      void syncLiveConversation(session);
+    });
+    connection.onclose(() => {
+      if (isLiveSessionCurrent(session)) {
+        showLiveStatus("Live chat connection lost. Close and try again if the agent doesn't reply.");
+      }
+    });
+
+    session.connection = connection;
+    await connection.start();
+  }
+
+  function postLiveEnd(session) {
+    if (!session?.conversationId || !session.token) return Promise.resolve();
+    return liveApiFetch(`/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/end`, {
+      method: "POST",
+      token: session.token,
+      keepalive: true,
+    }).catch((error) => {
+      console.warn("Unable to end live chat", error);
+    });
+  }
+
+  // notifyServer is false when the server already closed the chat (ChatEnded): calling
+  // /end again would run releaseChat() twice and undercount the agent's load.
+  function endLiveAgentSession({ notifyServer = true } = {}) {
+    const session = liveSession;
+    if (!session) return;
+
+    session.ended = true;
+    liveSession = null;
+    liveAgentActive = false;
+    clearTimeout(session.typingTimer);
+
+    if (notifyServer && session.escalated) void postLiveEnd(session);
+
+    const connection = session.connection;
+    session.connection = null;
+    if (connection) void connection.stop().catch(() => {});
+
+    removeLiveStatusUi();
+    if (session.escalated) setLiveAgentStatus(session.conversation, "closed");
+  }
+
+  function handleServerChatEnded(session) {
+    if (!isLiveSessionCurrent(session)) return;
+    if (currentConversation === session.conversation) appendLiveNotice("The live chat has ended.");
+    endLiveAgentSession({ notifyServer: false });
+  }
+
+  function showFallbackForm(conv, token, lastMessage) {
+    body.querySelector(".cw-live-fallback")?.remove();
+    hideEmptyState();
+
+    const form = document.createElement("form");
+    form.className = "cw-live-fallback";
+    form.noValidate = true;
+    form.innerHTML = `
+      <div class="cw-live-fallback-title">No agents are available right now</div>
+      <p class="cw-live-fallback-subtitle">Leave your details and our support team will get back to you.</p>
+      <label class="cw-live-fallback-field">
+        <span>Name</span>
+        <input name="name" type="text" autocomplete="name" maxlength="200" />
+      </label>
+      <label class="cw-live-fallback-field">
+        <span>Email</span>
+        <input name="email" type="email" autocomplete="email" maxlength="254" required />
+      </label>
+      <label class="cw-live-fallback-field">
+        <span>How can we help?</span>
+        <textarea name="query" rows="3" maxlength="4000"></textarea>
+      </label>
+      <div class="cw-live-fallback-error" role="alert" hidden></div>
+      <div class="cw-live-fallback-actions">
+        <button type="submit" class="cw-live-fallback-submit">Submit</button>
+        <button type="button" class="cw-live-fallback-cancel">Cancel</button>
+      </div>
+    `;
+
+    form.elements.name.value = userName || "";
+    form.elements.email.value = currentUserEmail || "";
+    form.elements.query.value = lastMessage || "";
+
+    const errorEl = form.querySelector(".cw-live-fallback-error");
+    const submitBtn = form.querySelector(".cw-live-fallback-submit");
+    const showError = (message) => {
+      errorEl.textContent = message;
+      errorEl.hidden = !message;
+    };
+
+    form.querySelector(".cw-live-fallback-cancel").addEventListener("click", () => form.remove());
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const name = form.elements.name.value.trim();
+      const rawEmail = form.elements.email.value.trim();
+      const query = form.elements.query.value.trim();
+      const email = extractEmailFromText(rawEmail);
+
+      if (!email || email !== normalizeEmail(rawEmail)) {
+        showError("Please enter a valid email address.");
+        form.elements.email.focus();
+        return;
+      }
+
+      showError("");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      try {
+        await liveApiFetch("/api/escalation/escalate/fallback-contact", {
+          method: "POST",
+          body: { name, email, query },
+          token,
+        });
+        form.remove();
+        if (currentConversation === conv) {
+          appendLiveNotice(`Thanks${name ? `, ${name}` : ""}. We've received your details and will contact you at ${email}.`);
+        }
+        setLiveAgentStatus(conv, "fallback");
+        applyUserEmailIdentity(email, { persist: true, reloadHistory: true });
+      } catch (error) {
+        console.error("Fallback contact failed", error);
+        showError("We couldn't send your details. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
+    });
+
+    body.appendChild(form);
+    scrollToBottom();
+    form.elements[form.elements.email.value ? "query" : "email"].focus();
+  }
+
+  async function startLiveAgentEscalation() {
+    if (liveSession) {
+      liveStatusEl?.scrollIntoView({ block: "nearest" });
+      return;
+    }
+    const existingForm = body.querySelector(".cw-live-fallback");
+    if (existingForm) {
+      existingForm.scrollIntoView({ block: "nearest" });
+      return;
+    }
+    if (currentConversation?.liveAgent?.status === "closed") {
+      appendLiveNotice("The live chat for this conversation has ended. Start a new conversation to talk to an agent again.");
+      return;
     }
 
-    tawkFrame = null;
+    try {
+      await ensureWebChatInitialized();
+    } catch {
+      showToast("Chat is still loading. Please try again.");
+      return;
+    }
 
-    const headerIndicator = document.querySelector(".cw-header-live-indicator");
-    if (headerIndicator) headerIndicator.hidden = true;
+    const conv = currentConversation || createCurrentConversation("Live agent request");
+    const session = {
+      conversation: conv,
+      conversationId: "",
+      token: null,
+      connection: null,
+      escalated: false,
+      ended: false,
+      seenMessageIds: new Set(),
+      typingTimer: null,
+    };
+    liveSession = session;
+    showLiveStatus("Connecting you to a live agent…");
+
+    try {
+      const conversationId = conv.conversationIdPending ? await conv.conversationIdPending : conv.conversationId;
+      if (!conversationId) throw new Error("Direct Line conversation id is not available");
+      session.conversationId = conversationId;
+      // escalate() creates the HR365CAChats item if it's missing; write ours first so
+      // there is exactly one item per ConversationId (and bind finds it).
+      if (canUseSharePointPersistence && !conv.spId) {
+        queueConversationSave(conv, true);
+        await conversationSaveQueue;
+      }
+      session.token = await ensureCustomerSession(conversationId);
+      if (session.ended) return;
+
+      const lastMessage = getLastUserMessageText(conv);
+      const result = await liveApiFetch("/api/escalation/escalate", {
+        method: "POST",
+        body: { lastMessage },
+        token: session.token,
+      });
+
+      if (result?.status === "no_agent_available") {
+        const wasEnded = session.ended;
+        if (liveSession === session) liveSession = null;
+        session.ended = true;
+        removeLiveStatusUi();
+        if (!wasEnded && currentConversation === conv) {
+          showFallbackForm(conv, session.token, lastMessage);
+        }
+        return;
+      }
+
+      if (result?.status !== "queued") {
+        throw new Error(`Unexpected escalate status: ${result?.status}`);
+      }
+      // "queued": the agent must still accept it (POST /join -> AgentJoined).
+      session.escalated = true;
+      if (session.ended) {
+        // Closed while the escalate request was in flight.
+        void postLiveEnd(session);
+        setLiveAgentStatus(conv, "closed");
+        return;
+      }
+      setLiveAgentStatus(conv, "pending");
+
+      await connectLiveAgent(session);
+      if (!isLiveSessionCurrent(session)) return;
+
+      liveAgentActive = true;
+      hideLoading();
+      showLiveStatus("Waiting for an agent to join…");
+      await syncLiveConversation(session);
+    } catch (error) {
+      console.error("Live agent escalation failed", error);
+      if (liveSession !== session) return;
+
+      if (session.escalated) {
+        endLiveAgentSession();
+      } else {
+        liveSession = null;
+        session.ended = true;
+        removeLiveStatusUi();
+      }
+      appendLiveNotice(
+        error.status === 409
+          ? "The live chat for this conversation has ended. Start a new conversation to talk to an agent again."
+          : "We couldn't reach a live agent right now. Please try again in a moment."
+      );
+    }
+  }
+
+  // Composer path while a live session is active. Mirrors the Direct Line path's local
+  // rendering, persistence and email capture, but delivers the text to the agent.
+  async function handleLiveAgentSend() {
+    const session = liveSession;
+    if (!session || !input) return;
+
+    if (pendingFiles.length) {
+      showToast("Files can't be sent to a live agent. Please remove the attachment and describe it instead.");
+      return;
+    }
+    const text = input.value.trim();
+    if (!text) return;
+
+    const capturedEmail = extractEmailFromText(text);
+    if (capturedEmail) {
+      applyUserEmailIdentity(capturedEmail, { persist: true, reloadHistory: true });
+    }
+
+    input.value = "";
+    updateSendButton();
+
+    const conv = session.conversation;
+    const clientMessageId = `cm-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+    const activity = {
+      id: clientMessageId,
+      type: "message",
+      text,
+      attachments: [],
+      from: { id: userId, name: userName, role: "user" },
+      timestamp: new Date().toISOString(),
+    };
+
+    conv.messages.push(activity);
+    conv.timestamp = Date.now();
+    conv.email = currentUserEmail || conv.email || "";
+    renderedMessageIds.add(activity.id);
+    appendUserMessage(activity);
+    queueConversationSave(conv, true);
+    renderHistoryList(searchInput?.value || "");
+
+    try {
+      await liveApiFetch(`/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/message`, {
+        method: "POST",
+        body: { text, clientMessageId },
+        token: session.token,
+      });
+    } catch (error) {
+      console.error("Live agent message failed", error);
+      showToast("Your message couldn't be delivered to the agent. Please try again.");
+    }
+    input.focus();
+  }
+
+  function closeLiveAgent() {
+    if (liveSession) endLiveAgentSession();
+    removeLiveStatusUi();
   }
 
   function toggleWidget() {
@@ -1791,7 +2625,7 @@ function sendMessage(text, additionalChannelData = {}) {
   fileInput?.addEventListener("change", () => {
     if (fileInput.files?.length) addPendingFiles(fileInput.files);
   });
-  newChatBtn?.addEventListener("click", closeWidget);
+  newChatBtn?.addEventListener("click", () => startNewConversation());
   sidebarNewChatBtn?.addEventListener("click", () => {
     startNewConversation();
 
@@ -1827,7 +2661,7 @@ function sendMessage(text, additionalChannelData = {}) {
       // }
 
       if (chip === "live-agent") {
-        openLiveAgent();
+        void startLiveAgentEscalation();
         return;
       }
 
@@ -1880,6 +2714,12 @@ function sendMessage(text, additionalChannelData = {}) {
     { passive: true }
   );
   document.addEventListener("touchend", onDragEnd);
+
+  // Tab closed / navigated away mid live chat: end it so the agent isn't left with an
+  // orphaned chat. The /end fetch uses keepalive so it survives the unload. No-op otherwise.
+  window.addEventListener("pagehide", () => {
+    if (liveSession) endLiveAgentSession();
+  });
 
   window.addEventListener("resize", () => {
     if (isExpanded || !widget.style.left) return;

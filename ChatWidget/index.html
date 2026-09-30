@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="widget.css" />
   <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <!-- Live agent chat: SignalR browser client (must load before widget.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js" integrity="sha384-mU1xC5yC2LldSW74Rj1Ax8wPiLw/28V5eh51uKJMlBbRVsOtUYd4xyzNsgIAJARB" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
@@ -53,7 +55,7 @@
             </button>
             <div class="cw-header-live-indicator" hidden>
               <span class="cw-live-dot" aria-hidden="true"></span>
-              <span class="cw-live-text">Connected live via tawk.to</span>
+              <span class="cw-live-text">Live agent</span>
             </div>
             <span class="cw-header-copy">
               <span id="cw-header-title" class="cw-header-title">Apps 365 AI Assistant</span>
