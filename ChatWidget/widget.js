@@ -134,7 +134,7 @@ import { hydrateIcons } from './icons.js';
   let liveSession = null;
   let signalRLoadPromise = null;
   let renderedMessageIds = new Set();
-  const feedbackCache = {}; 
+  const feedbackCache = {};
   let conversationLoadPromise = null;
   let conversationLoadStarted = false;
   let conversationLoadVersion = 0;
@@ -209,10 +209,10 @@ import { hydrateIcons } from './icons.js';
         from: message.from ? { ...message.from } : message.from,
         attachments: Array.isArray(message.attachments)
           ? message.attachments.map((att) => ({
-              name: att.name || "Attachment",
-              contentType: att.contentType || "",
-              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
-            }))
+            name: att.name || "Attachment",
+            contentType: att.contentType || "",
+            ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
+          }))
           : [],
       })),
     };
@@ -226,7 +226,7 @@ import { hydrateIcons } from './icons.js';
     const preview = getActivityPreview(previewSource);
     const title = item.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
 
-      return {
+    return {
       spId: item.spId || null,
       conversationId: item.conversationId || item.id || `local-${Date.now()}`,
       title: title.slice(0, 50),
@@ -387,17 +387,17 @@ import { hydrateIcons } from './icons.js';
 
         const role =
           message.role === "assistant" ? "bot"
-          : message.role === "bot" ? "bot"
-          : message.role === "agent" ? "agent"
-          : "user";
+            : message.role === "bot" ? "bot"
+              : message.role === "agent" ? "agent"
+                : "user";
         const text = message.content || message.text || "";
         const attachments = Array.isArray(message.attachments)
           ? message.attachments.map((att) => ({
-              name: att.name || "Attachment",
-              contentType: att.contentType || "",
-              contentUrl: att.contentUrl || "",
-              thumbnailUrl: att.thumbnailUrl || "",
-            }))
+            name: att.name || "Attachment",
+            contentType: att.contentType || "",
+            contentUrl: att.contentUrl || "",
+            thumbnailUrl: att.thumbnailUrl || "",
+          }))
           : [];
 
         const isAgent = role === "agent";
@@ -454,10 +454,10 @@ import { hydrateIcons } from './icons.js';
           ...(role === "agent" && message.from?.name ? { senderName: message.from.name } : {}),
           attachments: Array.isArray(message.attachments)
             ? message.attachments.map((att) => ({
-                name: att.name || "Attachment",
-                contentType: att.contentType || "",
-                ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
-              }))
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
+            }))
             : [],
           timestamp: message.timestamp || new Date().toISOString(),
         };
@@ -580,7 +580,7 @@ import { hydrateIcons } from './icons.js';
       void bindCustomerSession();
     }
 
-        conversationLoadPromise = null;
+    conversationLoadPromise = null;
     if (reloadHistory) {
       Promise.resolve().then(() => {
         void conversationSaveQueue
@@ -731,7 +731,7 @@ import { hydrateIcons } from './icons.js';
           await ensureSharePointListMetadata();
           const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
           const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')/items?$select=${SHAREPOINT_CONVERSATION_SELECT}&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
-            
+
             { method: "GET" }
           );
 
@@ -747,7 +747,7 @@ import { hydrateIcons } from './icons.js';
         } else {
           conversations = loadConversationsFromLocalStorage();
         }
-if (loadVersion !== conversationLoadVersion) {
+        if (loadVersion !== conversationLoadVersion) {
           return conversations;
         }
         if (currentConversation) {
@@ -958,7 +958,7 @@ if (loadVersion !== conversationLoadVersion) {
     return `<span class="cw-fluent-icon cw-icon-${name}" aria-hidden="true"></span>`;
   }
 
-   function userActionsHtml(includeEdit) {
+  function userActionsHtml(includeEdit) {
     const editBtn = includeEdit
       ? `<button type="button" class="cw-msg-action" data-action="edit" aria-label="Edit message" title="Edit message">${fluentIconHtml("edit")}</button>`
       : "";
@@ -1021,12 +1021,12 @@ if (loadVersion !== conversationLoadVersion) {
     }
   }
 
-   function bindCopilotMessageActions(container, text, messageId) {
+  function bindCopilotMessageActions(container, text, messageId) {
     const copyBtn = container.querySelector('.cw-copilot-actions [data-action="copy"]');
     bindCopyButton(copyBtn, text);
     bindFeedbackButtons(container, messageId);
   }
-//debugger;
+  //debugger;
   function saveFeedback(messageId, rating, comment) {
     // Feedback always belongs to the conversation on screen. Never create a stand-in
     // conversation here: it would become an extra SharePoint item with no ConversationId.
@@ -1037,7 +1037,7 @@ if (loadVersion !== conversationLoadVersion) {
       comment: comment || "",
       timestamp: new Date().toISOString(),
     };
-      queueConversationSave(currentConversation, true);
+    queueConversationSave(currentConversation, true);
   }
 
   function bindFeedbackButtons(container, messageId) {
@@ -1195,7 +1195,7 @@ if (loadVersion !== conversationLoadVersion) {
       `${activity.text || ""}-${activity.attachments?.[0]?.name || ""}-${activity.timestamp}`;
     if (renderedMessageIds.has(id)) return;
     renderedMessageIds.add(id);
-    
+
     if (activity.from && activity.from.role === "user") {
       appendUserMessage(activity);
     } else if (activity.from && activity.from.role === "agent") {
@@ -1270,7 +1270,7 @@ if (loadVersion !== conversationLoadVersion) {
     updateHeaderTitle("Apps365 AI Assistant");
   }
 
-   function showLoading() {
+  function showLoading() {
     isWaitingForResponse = true;
     if (input) input.disabled = true;
     if (attachBtn) attachBtn.disabled = true;
@@ -1337,7 +1337,7 @@ if (loadVersion !== conversationLoadVersion) {
       if (currentConversation && getConversationKey(conv) === getConversationKey(currentConversation)) {
         li.classList.add("active");
       }
-      
+
       li.innerHTML = `
         <div class="cw-history-title">${escapeHtml(conv.title || "New chat")}</div>
         <div class="cw-history-meta">
@@ -1363,7 +1363,7 @@ if (loadVersion !== conversationLoadVersion) {
       visible ? "Hide sidebar" : "Show sidebar"
     );
   }
-  
+
   function openSidebar() {
     if (isExpanded) {
       isSidebarCollapsed = false;
@@ -1581,7 +1581,7 @@ if (loadVersion !== conversationLoadVersion) {
       createCurrentConversation(getActivityPreview(activity));
     }
 
-       currentConversation.messages.push(activity);
+    currentConversation.messages.push(activity);
     currentConversation.timestamp = Date.now();
     if (activity.from.role === "user") {
       currentConversation.email = currentUserEmail || currentConversation.email || "";
@@ -1692,7 +1692,7 @@ if (loadVersion !== conversationLoadVersion) {
     }
   }
 
-function sendMessage(text, additionalChannelData = {}) {
+  function sendMessage(text, additionalChannelData = {}) {
     if (!store || !text) return;
 
     store.dispatch({
@@ -1793,7 +1793,7 @@ function sendMessage(text, additionalChannelData = {}) {
     });
   }
 
-    async function handleSend() {
+  async function handleSend() {
     if (liveAgentActive) {
       await handleLiveAgentSend();
       return;
@@ -1852,7 +1852,7 @@ function sendMessage(text, additionalChannelData = {}) {
     fileInput?.click();
   }
 
-   function updateSendButton() {
+  function updateSendButton() {
     if (!sendBtn || !input) return;
     const canSend = !isWaitingForResponse && (input.value.trim().length > 0 || pendingFiles.length > 0);
     sendBtn.disabled = !canSend;
@@ -2304,7 +2304,7 @@ function sendMessage(text, additionalChannelData = {}) {
 
     const connection = session.connection;
     session.connection = null;
-    if (connection) void connection.stop().catch(() => {});
+    if (connection) void connection.stop().catch(() => { });
 
     removeLiveStatusUi();
     if (session.escalated) setLiveAgentStatus(session.conversation, "closed");
@@ -2625,16 +2625,16 @@ function sendMessage(text, additionalChannelData = {}) {
   fileInput?.addEventListener("change", () => {
     if (fileInput.files?.length) addPendingFiles(fileInput.files);
   });
-  newChatBtn?.addEventListener("click", () => startNewConversation());
+  newChatBtn?.addEventListener("click", closeWidget);
   sidebarNewChatBtn?.addEventListener("click", () => {
     startNewConversation();
 
     if (isExpanded) {
-        openSidebar();
+      openSidebar();
     } else {
-        closeSidebar();
+      closeSidebar();
     }
-});
+  });
 
   searchInput?.addEventListener("input", () => renderHistoryList(searchInput.value));
   quickReplyBtns.forEach((btn) => {
@@ -2741,18 +2741,18 @@ function sendMessage(text, additionalChannelData = {}) {
   //updateSendButton();
   //updateSidebarToggleState();
   //restoreSession();
-//})();
+  //})();
 
-updateSendButton();
+  updateSendButton();
   updateSidebarToggleState();
   void loadConversationsFromSharePoint();
   if (window.requestIdleCallback) {
     window.requestIdleCallback(() => {
-      void ensureWebChatInitialized().catch(() => {});
+      void ensureWebChatInitialized().catch(() => { });
     });
   } else {
     setTimeout(() => {
-      void ensureWebChatInitialized().catch(() => {});
+      void ensureWebChatInitialized().catch(() => { });
     }, 1000);
   }
   // Public API lets an external page control the widget.  
@@ -2774,7 +2774,7 @@ updateSendButton();
         input.value = question;
         updateSendButton();
         handleSend();
-      }, 320); 
+      }, 320);
     },
   };
 })();
