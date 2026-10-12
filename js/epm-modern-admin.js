@@ -52,7 +52,7 @@ $(document).ready(function () {
         "</li>" +
 
         "<li class='dropdownicon sidelist' title='Roles'>" +
-        "<a  class='qwe' href='/employee-performance-management/modern/admin/roles/'>" +
+        "<a  class='qwe' href='/employee-performance-management/modern/admin/reports/roles/#users'>" +
         " Roles" +
         " </a>" +
         " <img src='/down-arrow-svgrepo-com.svg'  class='imageIconmodernuser aside_dropdown_icon'>" +
@@ -63,31 +63,31 @@ $(document).ready(function () {
 
 
         "<li data-nav-id='./Email-Notification/' title=users class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/user'>User</a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#users'>User</a>" +
         "</li>" +
 
         "<li data-nav-id='./Custom-Emails/' title='Manager(Employee's Manger)' class='sidelist'>" +
-        " <a href='/employee-performance-management/modern/admin/roles/#manager'>Manager(Employee's Manger)</a>" +
+        " <a href='/employee-performance-management/modern/admin/reports/roles/#manager'>Manager(Employee's Manger)</a>" +
         " </li>" +
 
         " <li data-nav-id='./User/' title='HR Executive' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#hr-executive-dashboard'>HR Executive</a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#hr-executive-dashboard'>HR Executive</a>" +
         "</li>" +
 
         "<li data-nav-id='./General-Settings/' title='HR Manager' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#hr-manager-dashboard'>HR Manager </a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#hr-manager-dashboard'>HR Manager </a>" +
         "</li>" +
         "<li data-nav-id='./General-Settings/' title='HR Head' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#hr-head-dashboard'>HR Head </a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#hr-head-dashboard'>HR Head </a>" +
         " </li>" +
         "<li data-nav-id='./General-Settings/' title='HR Manager Admin' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#hr-manager-admin-dashboard'>HR Manager Admin </a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#hr-manager-admin-dashboard'>HR Manager Admin </a>" +
         "</li>" +
         "<li data-nav-id='./General-Settings/' title='HR Head Admin' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#hr-head-admin'>HR Head–Admin </a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#hr-head-admin'>HR Head–Admin </a>" +
         "</li>" +
         "<li data-nav-id='./General-Settings/' title='Admin' class='sidelist'>" +
-        "<a href='/employee-performance-management/modern/admin/roles/#admin'>Admin </a>" +
+        "<a href='/employee-performance-management/modern/admin/reports/roles/#admin'>Admin </a>" +
         "</li>" +
         "</ul>" +
         "</ul>" +
@@ -219,6 +219,9 @@ $(document).ready(function () {
                 "<li data-nav-id='../General' title='Brand Logo' class='sidelist'>" +
                     "<a href='/employee-performance-management/modern/admin/settings/general-setting/#Brand-Logo'>Brand Logo</a>" +
                 "</li>" +
+                
+
+                
 
             "</ul>" +
         "</li>" +
@@ -300,9 +303,10 @@ $(document).ready(function () {
 
             "</ul>" +
         "</li>" +
-      "<li data-nav-id='../General' title='Email Templates' class='sidelist'>" +
-                    "<a href='/employee-performance-management/modern/admin/settings/Emailtemplates'>Email Templates</a>" +
+         "<li data-nav-id='../General' title='Email Templates' class='sidelist'>" +
+                    "<a href='/employee-performance-management/modern/admin/settings/emailtemplates'>Email Templates</a>" +
                 "</li>" +
+
     "</ul>" +
 "</li>"+
 

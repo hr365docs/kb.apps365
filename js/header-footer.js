@@ -331,7 +331,7 @@ color:#0b1020 !important;
   .back-btn::before{
   background:none !important;}
  .backk{
-  background-color:#1f1f1f !important;
+  background-color:var(--body-color)!important;
  color:white;
  height:100vh;
  overflow-y:scroll
