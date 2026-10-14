@@ -1,0 +1,1676 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Learning Management System 365 | Admin Guide | Administration</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description
+        content="Comprehensive admin guide for Learning Management System 365 covering Sections, Chapters, Quiz Questions, Quizzes, Courses, Training, Roles, and Delegations.">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+
+        .custom-doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+        }
+
+        .custom-doc-table th,
+        .custom-doc-table td {
+            border: 1px solid #d8e2ed;
+            padding: 10px 14px;
+            vertical-align: middle;
+        }
+
+        .custom-doc-table thead tr {
+            background-color: #eaf2fa;
+            color: #000;
+        }
+
+        .custom-doc-table thead th {
+            color: #000 !important;
+            font-weight: 700;
+            border-color: #eaf2fa;
+        }
+
+        .custom-doc-table tbody tr:nth-child(even) {
+            background-color: #f8fafd;
+        }
+
+        .custom-doc-table tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .custom-doc-table tbody th {
+            color: #173860;
+            font-weight: 700;
+            width: 25%;
+        }
+
+        .custom-callout-note {
+            background-color: #eaf2fa;
+            border-left: 4px solid #1f6497;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .custom-callout-note p {
+            margin: 0;
+        }
+
+        .custom-callout-caution {
+            background-color: #fdf5e6;
+            border-left: 4px solid #d9534f;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .custom-callout-caution p {
+            margin: 0;
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img src="../../../../images/logo_.png" width="100%" height="auto" alt="HR365" />
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                    <span class=navbar-toggler-icon></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="single section-sm pb-0">
+        <div class="container container-padding" style="padding-bottom: 1vw;">
+            <div class=row>
+                <div class=col-lg-3>
+                    <div class=sidebar>
+                        <h5 class="mbHeading" style="color:SlateBlue"><a href="../../../../LMS/">Learning Management
+                                System 365</a></h5>
+                        <a class=back-btn href="../../../../LMS/" aria-label=back></a>
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title="Admin Guide" class="sidelist active">
+                                <a href="../../admin/">
+                                    Admin Guide
+                                </a>
+                                <ul id="lmsmodernadmin">
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=col-lg-9>
+                    <div class="p-lg-4 p-4 remove-padding bg-white" id=content>
+                        <div class="bg-light p-4 remove-padding">
+                            <li data-nav-id=../Getting-started/installation/using-app-file
+                                title="Administration" class="sidelist">
+
+                                <!-- ========================================================================= -->
+                                <!-- 1. SECTIONS -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="Section"><a class="header-icon-link highlight" href="">
+                                        Managing Sections
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>Use this guide to view, create, edit, and delete sections within a course. Sections
+                                    organize course material into structured modules and are added one at a time using
+                                    the Add Section form.</p>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Applies to</th>
+                                            <td>LMS 365 Administration (course content)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Audience</th>
+                                            <td>LMS administrators, course administrators</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="view-section-list"><a class="header-icon-link highlight" href="">1.1 View the
+                                        Section list
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Open the Section panel for the course. It lists every section with its author, number
+                                    of chapters, and status.</p>
+
+                                <div><img src="Figure1_Section_list.png" onclick="openModal('Figure1_Section_list.png')"
+                                        alt="Section list" width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column / Control</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Section</th>
+                                            <td>Name of the section. Click the header to sort.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Author</th>
+                                            <td>Person responsible for the section, shown with photo, name, and job
+                                                title.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Chapters</th>
+                                            <td>Number of chapters currently in the section.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>A tick means the section is active. A blank value means it is inactive.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Pencil icon edits the section. Bin icon deletes it.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Filter boxes</th>
+                                            <td>Type in the box under any column heading to filter the list.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Search icon</th>
+                                            <td>Opens search across the list (top right).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>+ Section</th>
+                                            <td>Opens the Add Section form (see 1.2).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="add-section-manually"><a class="header-icon-link highlight" href="">1.2 Add a
+                                        Section Manually
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>Open the Section panel for the course.</li>
+                                    <li>Select <strong>+ Section</strong>. The Add Section panel opens on the right.</li>
+                                    <li>Enter the <strong>Title</strong>.</li>
+                                    <li>Choose the <strong>Section Author</strong> from the Select Author list.</li>
+                                    <li>Enter the <strong>Description</strong> in the rich-text editor.</li>
+                                    <li>Leave <strong>Active</strong> switched on if the section should be available, or
+                                        switch it off to keep it hidden.</li>
+                                    <li>Select <strong>Save</strong> to save and close, or <strong>Save and add
+                                            more</strong> to save and immediately create another section.</li>
+                                </ul>
+
+                                <div><img src="Figure2_Add_Section_form.png"
+                                        onclick="openModal('Figure2_Add_Section_form.png')" alt="Add Section form"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Required</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Title</th>
+                                            <td>Yes</td>
+                                            <td>Short, descriptive name, for example "Compliance" or "Regulatory".</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section Author</th>
+                                            <td>Yes</td>
+                                            <td>Select an existing user from the list.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Description</th>
+                                            <td>Yes</td>
+                                            <td>Supports bold, italic, underline, strikethrough, text colour,
+                                                sub/superscript, quotes, code, numbered and bulleted lists, indentation,
+                                                alignment, links, and images.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>No</td>
+                                            <td>On by default. Controls whether the section is active.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Expected result:</strong> The new section appears in the Section list
+                                        with the chapter count showing 0.</p>
+                                </div>
+
+                                <h5 id="edit-delete-section"><a class="header-icon-link highlight" href="">1.3 Edit or
+                                        Delete a Section
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Section list, find the section (use the filter boxes if needed).</li>
+                                    <li>Select the pencil icon in the Action column to edit, change the fields, and
+                                        save.</li>
+                                    <li>To remove it, select the bin icon and confirm.</li>
+                                </ul>
+
+                                <div class="custom-callout-caution">
+                                    <p><strong>Caution:</strong> Before deleting a section, check its Chapters count.
+                                        Sections that contain chapters may affect those chapters. Move or export the
+                                        chapters first if you still need them.</p>
+                                </div>
+
+                                <h5 id="troubleshooting-sections"><a class="header-icon-link highlight" href="">1.4
+                                        Troubleshooting: Sections
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Issue</th>
+                                            <th>What to check</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Cannot save the section</th>
+                                            <td>Title, Section Author, and Description are all mandatory. Fill in every
+                                                field marked with a red asterisk.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Author not found in the list</th>
+                                            <td>The person must exist as a user in LMS 365. Confirm their account is
+                                                created and active.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section is not visible to learners</th>
+                                            <td>Check that the Active switch is on. Sections with no tick in the Active
+                                                column are inactive.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section shows 0 chapters</th>
+                                            <td>Chapters have not been added yet. See Chapters management below.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 2. CHAPTERS -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="managing-chapters"><a class="header-icon-link highlight" href="">
+                                        Managing Chapters
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>Use this guide to view, add, bulk add, bulk delete, and AI-generate chapters. Create
+                                    the section the chapter belongs to before you begin.</p>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Applies to</th>
+                                            <td>LMS 365 Administration (course content)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Audience</th>
+                                            <td>LMS administrators, course administrators</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="view-chapter-list"><a class="header-icon-link highlight" href="">2.1 View the
+                                        Chapter list
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Open the Chapters panel for the course to see all chapters and the section each
+                                    belongs to.</p>
+
+                                <div><img src="Figure3_Chapter_list.png" onclick="openModal('Figure3_Chapter_list.png')"
+                                        alt="Chapter list" width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column / Control</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Title</th>
+                                            <td>Chapter name. Click the header to sort.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section</th>
+                                            <td>The section the chapter belongs to.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Timing (mins)</th>
+                                            <td>Expected duration of the chapter in minutes.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Type</th>
+                                            <td>Attachment type, for example Video, DOCX, Link, or Not Applicable.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>A tick means the chapter is active.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Pencil icon edits the chapter. Bin icon deletes it.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>+ Chapter</th>
+                                            <td>Adds a single chapter (see 2.2).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bulk Add Chapter</th>
+                                            <td>Uploads multiple chapters from a file (see 2.3).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Delete</th>
+                                            <td>Deletes all selected chapters at once (see 2.4).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Generate Chapters using AI</th>
+                                            <td>Creates chapters from a prompt (see 2.5).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="add-chapter-manually"><a class="header-icon-link highlight" href="">2.2 Add a
+                                        Chapter Manually
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Chapters panel, select <strong>+ Chapter</strong>. The Add Chapter panel
+                                        opens.</li>
+                                    <li>Enter the <strong>Title</strong>.</li>
+                                    <li>Select the <strong>Section</strong> the chapter belongs to.</li>
+                                    <li>Enter the <strong>Description</strong>.</li>
+                                    <li>Choose the <strong>Attachment Type</strong> (the default is Not Applicable).</li>
+                                    <li>Enter the <strong>Timing</strong> in minutes.</li>
+                                    <li>Leave <strong>Active</strong> on if the chapter should be available.</li>
+                                    <li>Select <strong>Save</strong>, or <strong>Save and add more</strong> to continue
+                                        adding chapters.</li>
+                                </ul>
+
+                                <div><img src="Figure4_Add_Chapter_form.png"
+                                        onclick="openModal('Figure4_Add_Chapter_form.png')" alt="Add Chapter form"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Required</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Title</th>
+                                            <td>Yes</td>
+                                            <td>Name of the chapter.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section</th>
+                                            <td>Yes</td>
+                                            <td>Select from the list of existing sections.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Description</th>
+                                            <td>Yes</td>
+                                            <td>Rich-text editor, same options as the section description.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Attachment Type</th>
+                                            <td>No</td>
+                                            <td>Defaults to Not Applicable. Other types seen in the list include Video,
+                                                DOCX, and Link.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Timing</th>
+                                            <td>Yes</td>
+                                            <td>Duration in minutes.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>No</td>
+                                            <td>On by default.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Expected result:</strong> The chapter appears in the Chapters list under
+                                        the selected section, and that section’s chapter count increases by one.</p>
+                                </div>
+
+                                <h5 id="bulk-add-chapters"><a class="header-icon-link highlight" href="">2.3 Bulk Add
+                                        Chapters from a File
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Use Bulk Add Chapter to create many chapters in one upload.</p>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Chapters panel, select <strong>Bulk Add Chapter</strong>. The Bulk Import
+                                        panel opens.</li>
+                                    <li>Select <strong>Download sample file</strong> and open it.</li>
+                                    <li>Complete the sample file, one row per chapter, adhering to the import rules
+                                        below.</li>
+                                    <li>Drag the completed file into the <strong>Attachments</strong> box (mandatory).</li>
+                                    <li>If chapters have attached files, put them in one zip folder and drop it into the
+                                        <strong>Zip Folder</strong> box.</li>
+                                    <li>Select <strong>Upload</strong>.</li>
+                                    <li>Return to the Chapters list and confirm the new chapters appear.</li>
+                                </ul>
+
+                                <div><img src="Figure5_Bulk_Import_panel.png"
+                                        onclick="openModal('Figure5_Bulk_Import_panel.png')" alt="Bulk Import panel"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Rules for the import file:</strong></p>
+                                    <ul style="padding-left: 20px; margin-top: 6px;">
+                                        <li>Mandatory fields: Chapter Title, Chapter Section, Chapter Description,
+                                            Section Author, Section Description, Timing, Attachment Type, and File Name.</li>
+                                        <li>Section Author must be a valid email address.</li>
+                                        <li>Timing is entered in <strong>seconds</strong> in the import file (note that
+                                            the Add Chapter form uses minutes).</li>
+                                        <li>The zip folder must contain all files, named exactly as they appear in the
+                                            Attachment (file name) column.</li>
+                                        <li><strong>Tip:</strong> Always start from the downloaded sample file rather
+                                            than building your own so column headings match what the system expects.</li>
+                                    </ul>
+                                </div>
+
+                                <h5 id="delete-chapters-bulk"><a class="header-icon-link highlight" href="">2.4 Delete
+                                        Chapters in Bulk
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Chapters list, tick the checkbox beside each chapter to remove. To select
+                                        every chapter, tick the checkbox in the header row next to Title.</li>
+                                    <li>The Delete button shows the number selected (e.g., <strong>Delete (10)</strong>).</li>
+                                    <li>Select the <strong>Delete</strong> button and confirm.</li>
+                                </ul>
+
+                                <div><img src="Figure6_Delete_bulk.png" onclick="openModal('Figure6_Delete_bulk.png')"
+                                        alt="Delete chapters bulk" width="100%" height="auto"></div>
+                                <br>
+
+                                <div class="custom-callout-caution">
+                                    <p><strong>Caution:</strong> Selecting the header checkbox selects all chapters in
+                                        the list. Check the count on the Delete button before confirming, because
+                                        deleted chapters may not be recoverable. To delete a single chapter, use the bin
+                                        icon in its Action column instead.</p>
+                                </div>
+
+                                <h5 id="generate-chapters-ai"><a class="header-icon-link highlight" href="">2.5 Generate
+                                        Chapters using AI
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Generate Chapters using AI drafts chapters from a topic prompt, saving time when
+                                    planning a new course.</p>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Chapters panel, select <strong>Generate Chapters using AI</strong>.</li>
+                                    <li>In <strong>Chapter Type Prompt</strong>, describe the topic (e.g., "Introduction
+                                        to JavaScript").</li>
+                                    <li>Choose the <strong>Chapter Section</strong> the new chapters will be added to.</li>
+                                    <li>Set the <strong>Difficulty Level</strong> (default is Beginner).</li>
+                                    <li>Enter the <strong>Number of Chapters</strong> to generate (default 1).</li>
+                                    <li>Enter the <strong>Time Limit (Min)</strong> (default 5).</li>
+                                    <li>Select <strong>Generate Chapters</strong>.</li>
+                                    <li>Review the generated chapters in the list and edit titles, descriptions, and
+                                        timing as needed.</li>
+                                </ul>
+
+                                <div><img src="Figure7_Generate_Chapters_AI_button.png"
+                                        onclick="openModal('Figure7_Generate_Chapters_AI_button.png')"
+                                        alt="Generate Chapters using AI button" width="100%" height="auto"></div>
+                                <br>
+                                <div><img src="Figure8_AI_Assistant_Response.png"
+                                        onclick="openModal('Figure8_AI_Assistant_Response.png')"
+                                        alt="AI Assistant Response form" width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Chapter Type Prompt</th>
+                                            <td>Free-text description of the topic or subject of the chapters.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Chapter Section</th>
+                                            <td>Existing section that will hold the generated chapters.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Difficulty Level</th>
+                                            <td>Level of the content. Beginner is the default.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Number of Chapters</th>
+                                            <td>How many chapters to generate.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Time Limit (Min)</th>
+                                            <td>Time limit in minutes applied to the generated chapters.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Best practice:</strong> AI output is a draft. Always review generated
+                                        chapters for accuracy and tone before making them available to learners.</p>
+                                </div>
+
+                                <h5 id="edit-chapter"><a class="header-icon-link highlight" href="">2.6 Edit a Chapter
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>Find the chapter in the list.</li>
+                                    <li>Select the pencil icon in the Action column.</li>
+                                    <li>Update the fields and save.</li>
+                                </ul>
+
+                                <h5 id="troubleshooting-chapters"><a class="header-icon-link highlight" href="">2.7
+                                        Troubleshooting: Chapters
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Issue</th>
+                                            <th>What to check</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Cannot save a chapter</th>
+                                            <td>Title, Section, Description, and Timing are mandatory.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Section not available in the dropdown</th>
+                                            <td>Create the section first.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bulk upload fails or rows are rejected</th>
+                                            <td>Confirm all mandatory columns are filled, Section Author is a valid
+                                                email, and the zip folder file names match the file name column exactly.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Chapter durations look wrong after import</th>
+                                            <td>The import file uses seconds, while the form uses minutes. Check the
+                                                unit used.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Wrong number of chapters deleted</th>
+                                            <td>Check the number on the Delete button, and whether the header checkbox
+                                                selected the whole list.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>AI chapters not relevant</th>
+                                            <td>Make the prompt more specific, and set the difficulty level, number of
+                                                chapters, and time limit appropriately.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 3. QUIZ QUESTIONS -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="quiz-question"><a class="header-icon-link highlight" href="">
+                                        Managing Quiz Questions
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>Use this article to create, bulk import, edit, and delete quiz questions. Quiz
+                                    questions are the building blocks of a quiz, so create them first and then add them
+                                    to a quiz.</p>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Applies to</th>
+                                            <td>LMS 365 Administration (assessments)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Audience</th>
+                                            <td>LMS administrators, course administrators</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="view-quiz-questions-list"><a class="header-icon-link highlight" href="">3.1 View
+                                        the Quiz Questions list
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Open the Quiz Questions panel to see every question available for use in quizzes.</p>
+
+                                <div><img src="Figure1_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure1_Quiz_Questions_list.png')" alt="Quiz Questions list"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column / Control</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Question Title</th>
+                                            <td>The text of the question. Click the header to sort.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Question Type</th>
+                                            <td>The type of question, for example Choice Type.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>A tick means the question is active.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Pencil icon edits the question. Bin icon deletes it.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Filter boxes</th>
+                                            <td>Type in the box under any column heading to filter the list.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Search icon</th>
+                                            <td>Opens search across the list (top right).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>+ Quiz Question</th>
+                                            <td>Adds a single question (see 3.2).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>+ Bulk Import Questions</th>
+                                            <td>Uploads many questions from a file (see 3.3).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Delete</th>
+                                            <td>Deletes all selected questions at once (see 3.4).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="add-quiz-question-manually"><a class="header-icon-link highlight" href="">3.2
+                                        Add a Quiz Question Manually
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Quiz Questions panel, select <strong>+ Quiz Question</strong>. The Add
+                                        Quiz Question panel opens on the right.</li>
+                                    <li>Enter the question text in the <strong>Quiz Title</strong> field. This appears
+                                        as the Question Title in the list.</li>
+                                    <li>Under <strong>Answer Option’s</strong>, type the first option next to the letter
+                                        A.</li>
+                                    <li>Select the <strong>+</strong> icon to add another answer option (B, C, and so
+                                        on). Repeat until all options are added.</li>
+                                    <li>Enter the <strong>Instructions</strong> that learners should see for this
+                                        question.</li>
+                                    <li>Switch <strong>Required</strong> on if learners must answer this question (off
+                                        by default).</li>
+                                    <li>Leave <strong>Active</strong> on if the question should be available (on by
+                                        default).</li>
+                                    <li>Select <strong>Save</strong>, or <strong>Save and add more</strong> to save and
+                                        create another question straight away.</li>
+                                </ul>
+
+                                <div><img src="Figure2_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure2_Quiz_Questions_list.png')"
+                                        alt="Add Quiz Question form" width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Required</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Quiz Title</th>
+                                            <td>Yes</td>
+                                            <td>The question text. Write it as a clear, complete question.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Answer Option’s</th>
+                                            <td>Yes</td>
+                                            <td>Starts with option A. Use the + icon to add more options.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Instructions</th>
+                                            <td>Yes</td>
+                                            <td>Guidance shown to the learner, for example "Select one answer".</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Required</th>
+                                            <td>No</td>
+                                            <td>Off by default. Turn on to make the question mandatory.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>No</td>
+                                            <td>On by default.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Expected result:</strong> The question appears in the Quiz Questions list
+                                        and can now be added to a quiz.</p>
+                                </div>
+
+                                <h5 id="bulk-import-quiz-questions"><a class="header-icon-link highlight" href="">3.3
+                                        Bulk Import Quiz Questions
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Use Bulk Import Questions to add many questions in a single upload.</p>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Quiz Questions panel, select <strong>+ Bulk Import Questions</strong>.
+                                        The Bulk Import panel opens.</li>
+                                    <li>Select <strong>Download sample file</strong> and open it.</li>
+                                    <li>Complete the sample file with one row per question, following the rules below.</li>
+                                    <li>Drag the completed file into the <strong>Attachments</strong> box.</li>
+                                    <li>Select <strong>Upload</strong>.</li>
+                                    <li>Return to the Quiz Questions list and confirm the new questions appear.</li>
+                                </ul>
+
+                                <div><img src="Figure3_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure3_Quiz_Questions_list.png')"
+                                        alt="Bulk Import panel for quiz questions" width="100%" height="auto"></div>
+                                <br>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Rules for the import file:</strong></p>
+                                    <ul style="padding-left: 20px; margin-top: 6px;">
+                                        <li>In the <strong>Question Type</strong> column, enter either Choice Type or
+                                            Input Type.</li>
+                                        <li>For Choice Type questions, use the <strong>Answer Type</strong> column to
+                                            state whether the question is Single choice of answer or Multiple choice of
+                                            answer.</li>
+                                        <li>For Choice Type questions, enter the number of answer options in the
+                                            <strong>Number of options</strong> column.</li>
+                                        <li><strong>Tip:</strong> Always start from the downloaded sample file so the
+                                            column headings match what the system expects.</li>
+                                    </ul>
+                                </div>
+
+                                <h5 id="delete-quiz-questions"><a class="header-icon-link highlight" href="">3.4 Delete
+                                        Quiz Questions
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p><strong>Delete several questions at once:</strong></p>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Quiz Questions list, tick the checkbox beside each question to remove. To
+                                        select every question, tick the checkbox in the header row next to Question
+                                        Title.</li>
+                                    <li>The Delete button now shows how many are selected, for example Delete (22).</li>
+                                    <li>Select the <strong>Delete</strong> button and confirm.</li>
+                                </ul>
+
+                                <div><img src="Figure4_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure4_Quiz_Questions_list.png')"
+                                        alt="Twenty-two questions selected for deletion" width="100%" height="auto">
+                                </div>
+                                <br>
+
+                                <div class="custom-callout-caution">
+                                    <p><strong>Caution:</strong> Selecting the header checkbox selects every question in
+                                        the list. Check the number on the Delete button before confirming. Also check
+                                        whether any of the questions are used in a quiz, because removing them may
+                                        affect that quiz.</p>
+                                </div>
+
+                                <p><strong>Delete a single question:</strong></p>
+                                <ul style="list-style-type:disc">
+                                    <li>Select the bin icon in the Action column for that question and confirm.</li>
+                                </ul>
+
+                                <h5 id="edit-quiz-question"><a class="header-icon-link highlight" href="">3.5 Edit a
+                                        Quiz Question
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>Find the question in the list (use the filter boxes if needed).</li>
+                                    <li>Select the pencil icon in the Action column.</li>
+                                    <li>Update the details and save.</li>
+                                </ul>
+
+                                <h5 id="troubleshooting-quiz-questions"><a class="header-icon-link highlight"
+                                        href="">3.6 Troubleshooting: Quiz Questions
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Issue</th>
+                                            <th>What to check</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Cannot save a question</th>
+                                            <td>Quiz Title, at least one Answer Option, and Instructions are mandatory.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Bulk upload fails or rows are rejected</th>
+                                            <td>Check that Question Type is exactly Choice Type or Input Type, and that
+                                                Answer Type and Number of options are filled in for every Choice Type row.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Question is missing when building a quiz</th>
+                                            <td>Check that the question exists in the list and that its Active tick is
+                                                present.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Wrong number of questions deleted</th>
+                                            <td>Check the number on the Delete button, and whether the header checkbox
+                                                selected the whole list.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 4. QUIZZES -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="Quiz"><a class="header-icon-link highlight" href="">
+                                        Managing Quizzes
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>A quiz groups a set of quiz questions under a title and description. Create your quiz
+                                    questions first, then build the quiz and link the questions to it.</p>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Applies to</th>
+                                            <td>LMS 365 Administration (assessments)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Audience</th>
+                                            <td>LMS administrators, course administrators</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="view-quiz-list"><a class="header-icon-link highlight" href="">4.1 View the Quiz list
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+
+                                <div><img src="Figure5_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure5_Quiz_Questions_list.png')" alt="Quiz list"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column / Control</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Quiz Title</th>
+                                            <td>Name of the quiz. Click the header to sort.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quiz Description</th>
+                                            <td>Short description of what the quiz covers.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>No. Of Questions</th>
+                                            <td>Number of questions currently linked to the quiz.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Pencil icon edits the quiz. Bin icon deletes it.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Filter boxes</th>
+                                            <td>Type in the box under any column heading to filter the list.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>+ Quiz</th>
+                                            <td>Opens the Add Quiz form (see 4.2).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="add-quiz"><a class="header-icon-link highlight" href="">4.2 Add a Quiz
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Quiz panel, select <strong>+ Quiz</strong>. The Add Quiz panel opens on
+                                        the right.</li>
+                                    <li>Enter the <strong>Quiz Title</strong>.</li>
+                                    <li>Enter the <strong>Quiz Description</strong>.</li>
+                                    <li>Under <strong>Quiz Questions</strong>, select <strong>+ Add</strong> and choose
+                                        the questions to include in this quiz.</li>
+                                    <li>Check that the selected questions appear in the Quiz Questions table, which
+                                        shows each Question Title and Type.</li>
+                                    <li>Select <strong>Save</strong>.</li>
+                                </ul>
+
+                                <div><img src="Figure6_Quiz_Questions_list.png"
+                                        onclick="openModal('Figure6_Quiz_Questions_list.png')" alt="Add Quiz form"
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Required</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Quiz Title</th>
+                                            <td>Yes</td>
+                                            <td>Name of the quiz, for example "Compliance & Regulatory Awareness".</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quiz Description</th>
+                                            <td>Yes</td>
+                                            <td>Explains the purpose or topic of the quiz.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Quiz Questions</th>
+                                            <td>Yes</td>
+                                            <td>Questions linked to this quiz. Use + Add to link them. Before any are
+                                                added, the table shows "No Data Available".</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Expected result:</strong> The quiz appears in the Quiz list, and the No.
+                                        Of Questions column shows how many questions were linked.</p>
+                                </div>
+
+                                <h5 id="edit-delete-quiz"><a class="header-icon-link highlight" href="">4.3 Edit or
+                                        Delete a Quiz
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <ul style="list-style-type:disc">
+                                    <li>In the Quiz list, find the quiz.</li>
+                                    <li>Select the pencil icon in the Action column to edit it, then save your changes.</li>
+                                    <li>To remove a quiz, select the bin icon and confirm.</li>
+                                </ul>
+
+                                <div class="custom-callout-caution">
+                                    <p><strong>Caution:</strong> Check that a quiz is not in use before deleting it, as
+                                        deleting it may affect any course content that uses it.</p>
+                                </div>
+
+                                <h5 id="linking-questions-and-quizzes"><a class="header-icon-link highlight" href="">4.4
+                                        How Quiz Questions and Quizzes are Linked
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Quiz questions and quizzes depend on each other. Keep these points in mind:</p>
+                                <ul style="list-style-type:disc">
+                                    <li>A quiz needs at least one linked question. The Quiz Questions field is mandatory
+                                        when you save a quiz.</li>
+                                    <li>Questions must exist in the Quiz Questions list before they can be linked to a quiz.</li>
+                                    <li>The No. Of Questions value in the Quiz list shows how many questions are linked
+                                        to each quiz.</li>
+                                    <li>If you change or remove a question that is used in a quiz, check the quiz
+                                        afterwards to make sure it still has the questions you expect.</li>
+                                </ul>
+                                <p><strong>Recommended order of work:</strong></p>
+                                <ol>
+                                    <li>Create the quiz questions, one by one or by bulk import.</li>
+                                    <li>Create the quiz and link the questions to it.</li>
+                                    <li>Open the quiz and confirm the question count and question list are correct.</li>
+                                </ol>
+
+                                <h5 id="troubleshooting-quizzes"><a class="header-icon-link highlight" href="">4.5
+                                        Troubleshooting: Quizzes
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Issue</th>
+                                            <th>What to check</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Cannot save the quiz</th>
+                                            <td>Quiz Title, Quiz Description, and at least one linked question are mandatory.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>No questions to choose from</th>
+                                            <td>Create quiz questions first. Also check that the questions you expect are in the list and active.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>No. Of Questions shows the wrong number</th>
+                                            <td>Open the quiz and check which questions are linked. Questions may have been removed or not added.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>A quiz no longer shows a question</th>
+                                            <td>The question may have been deleted from the Quiz Questions list. Re-create it and link it again.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 5. COURSES -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="course-creation"><a class="header-icon-link highlight" href="">
+                                        Managing Courses
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <h3 id="accessing-courses-list"><a class="header-icon-link highlight" href="">5.1
+                                        Accessing the Courses List
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>The Courses list is the starting point for all course administration. It shows
+                                    every course created in the portal, along with its enrollment type, owner,
+                                    creation date, type, publish status, and whether it is active.</p>
+
+                                <div><img src="Figure1_Courses_list.png"
+                                        onclick="openModal('Figure1_Courses_list.png')"
+                                        alt="The Courses list, showing existing courses and their status."
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Course Title</th>
+                                            <td>The course name. Click it to open the course for editing.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Enrollment</th>
+                                            <td>Icon indicating the enrollment method configured for the course
+                                                (e.g., manual, self-enroll).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created By</th>
+                                            <td>The admin or author who created the course.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created On</th>
+                                            <td>The date the course was created.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Type</th>
+                                            <td>The course type, e.g. Course.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>Draft or Published.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>Whether the course is currently active and available to learners.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Inline icons to edit, assign/manage, or delete the course.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Tip:</strong> Use the search boxes under each column header to filter
+                                        the list — for example, type a name into Created By to find all courses
+                                        authored by a specific person.</p>
+                                </div>
+
+                                <p>To begin building a new course, click <strong>+ Course</strong> at the top left
+                                    of the list. This opens the Add Course wizard.</p>
+
+                                <h3 id="course-overview-tab"><a class="header-icon-link highlight" href="">5.2
+                                        Overview Tab
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>The Add Course wizard opens on the Overview tab, where you define the course's
+                                    title, description, and classification. The wizard has six tabs across the top —
+                                    Overview, Content, Assessment, Quiz, Preview, and Publish — completed in order.</p>
+
+                                <div><img src="Figure2_Courses_list.png"
+                                        onclick="openModal('Figure2_Courses_list.png')"
+                                        alt="The Overview tab of the Add Course wizard." width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Course Title *</th>
+                                            <td>The name learners will see in the catalog. Required.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Short Description</th>
+                                            <td>A brief summary shown on the course card. Use Write with AI to draft
+                                                it from the title.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Long Description *</th>
+                                            <td>The full course description shown on the course detail page.
+                                                Required; also supports Write with AI.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Course Level / Department / Roles</th>
+                                            <td>Classification dropdowns used for catalog filtering and targeting.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Skills / #Tags</th>
+                                            <td>Free-text skill and tag entries used for search and recommendations.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>Toggle controlling whether the course is enabled once published.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Attachment Type</th>
+                                            <td>Defines whether supporting files can be attached to the course
+                                                (default: Not Applicable).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>AI assist:</strong> Once a Title and Description are entered, click
+                                        <strong>Suggest</strong> next to “AI can complete this form” to have the
+                                        system recommend Level, Department, Skills, and Tags automatically.</p>
+                                </div>
+
+                                <p>Click <strong>Draft</strong> at any point to save your progress without
+                                    publishing, or <strong>Next</strong> to move on to the Content tab.</p>
+
+                                <h3 id="course-content-tab"><a class="header-icon-link highlight" href="">5.3
+                                        Content Tab — Assembling Sections
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>The Content tab is where the course's Section Blocks are assembled. There are three
+                                    ways to populate this tab: reuse an existing section, generate sections with AI,
+                                    or create a brand-new section.</p>
+
+                                <div><img src="Figure3_Courses_list.png"
+                                        onclick="openModal('Figure3_Courses_list.png')"
+                                        alt="The Content tab before any sections have been added." width="100%"
+                                        height="auto"></div>
+                                <br>
+
+                                <h5 id="reusing-existing-section"><a class="header-icon-link highlight" href="">5.3.1
+                                        Reusing an Existing Section
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Click <strong>+ Add</strong> to open the section library, which lists every
+                                    section already created across courses, with its chapter count and author.</p>
+
+                                <div><img src="Figure4_Courses_list.png"
+                                        onclick="openModal('Figure4_Courses_list.png')"
+                                        alt="The Add Section library of previously created sections." width="100%"
+                                        height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Section Title</th>
+                                            <td>The name of the existing section.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Number of Chapters</th>
+                                            <td>How many chapters the section currently contains.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Author</th>
+                                            <td>Who created the section.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="generating-sections-ai"><a class="header-icon-link highlight" href="">5.3.2
+                                        Generating Sections with AI
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>Click <strong>Generate with AI</strong> to have the system draft one or more
+                                    sections automatically based on guidance, difficulty, section count, chapters per section, and time per chapter.</p>
+
+                                <div><img src="Figure5_Courses_list.png"
+                                        onclick="openModal('Figure5_Courses_list.png')"
+                                        alt="Generate Sections with AI panel." width="100%" height="auto"></div>
+                                <br>
+
+                                <h5 id="creating-new-section-manually"><a class="header-icon-link highlight" href="">5.3.3
+                                        Creating a New Section Manually
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <p>From the section library, click <strong>+ Section</strong> to open a blank Add
+                                    Section form, configure Title, Author, Description, and Active switch, then save.</p>
+
+                                <div><img src="Figure6_Courses_list.png"
+                                        onclick="openModal('Figure6_Courses_list.png')"
+                                        alt="The Add Section form, with the rich-text description editor."
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <h3 id="course-assessment-tab"><a class="header-icon-link highlight" href="">5.4
+                                        Assessment Tab
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>The Assessment tab follows the same pattern: reuse an existing assessment from the library (+ Add), generate one with AI, or add a new one from scratch.</p>
+
+                                <div><img src="Figure7_Courses_list.png"
+                                        onclick="openModal('Figure7_Courses_list.png')"
+                                        alt="The Assessment tab before any assessments have been added."
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <h3 id="course-quiz-tab"><a class="header-link highlight" href="">5.5
+                                        Quiz Tab
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>The Quiz tab works the same way: reuse an existing quiz, generate one with AI, or add a new one.</p>
+
+                                <div><img src="Figure9_Courses_list.png"
+                                        onclick="openModal('Figure9_Courses_list.png')"
+                                        alt="The Quiz tab before any quizzes have been added." width="100%"
+                                        height="auto"></div>
+                                <br>
+
+                                <h3 id="course-preview-tab"><a class="header-icon-link highlight" href="">5.6
+                                        Preview Tab
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Configure Thumbnail Image (200 × 200 px), Banner Image (1,100 × 150 px), Card Theme Color, and Thumbnail Border while reviewing the live card preview.</p>
+
+                                <div><img src="Figure12_Courses_list.png"
+                                        onclick="openModal('Figure12_Courses_list.png')"
+                                        alt="The Preview tab, with thumbnail/banner upload and the live course card."
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <h3 id="course-publish-tab"><a class="header-icon-link highlight" href="">5.7
+                                        Publish Tab
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Review the full course recap, set enrollment units, completion deadlines, expiry dates, author assignment, certification, and course rating options before publishing.</p>
+
+                                <div><img src="Figure13_Courses_list.png"
+                                        onclick="openModal('Figure13_Courses_list.png')"
+                                        alt="The Publish tab, with course summary and publishing options."
+                                        width="100%" height="auto"></div>
+                                <br>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 6. TRAINING -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="training"><a class="header-icon-link highlight" href="">
+                                        Managing Training
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>The Training module allows administrators to bundle multiple standalone courses into unified, trackable Training programs or schedule live virtual/onsite events.</p>
+
+                                <h5 id="training-grid-overview"><a class="header-icon-link highlight" href="">6.1 Training Management Grid
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <div><img src="2.png" onclick="openModal('2.png')" alt="Training Grid" width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Grid Column</th>
+                                            <th>What It Shows</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Training Title</th>
+                                            <td>The name of the training. Click the title to open it.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Enrollment</th>
+                                            <td>Icon showing/managing who is enrolled in the training.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created By</th>
+                                            <td>The author's name, photo, and role.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Created On</th>
+                                            <td>The date the training record was created.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Type</th>
+                                            <td>Digital Course Training, Live Online Training, or Onsite Training.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>Draft or Published.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>Whether the training is currently assignable/visible to learners.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Per-row Edit, Archive, and Delete icons.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h5 id="training-types-summary"><a class="header-icon-link highlight" href="">6.2 Training Delivery Types
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h5>
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Digital Course Training</th>
+                                            <td>Fully self-paced, e-learning delivery. Combines multiple courses into sequential Course Blocks.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Live Online Training</th>
+                                            <td>Instructor-led training delivered virtually at a scheduled date and time (e.g., MS Teams).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Onsite Training</th>
+                                            <td>Instructor-led training delivered in person at a physical location.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div><img src="3.png" onclick="openModal('3.png')" alt="Add Training Overview" width="100%" height="auto"></div>
+                                <br>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 7. ROLES -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="Roles"><a class="header-icon-link highlight" href="">
+                                        Managing Roles
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>Roles classify learners and content for targeting — the same Roles values offered in the Course Level / Department / Roles dropdowns on the Overview tab are managed here. Open this list from the Roles tab alongside Departments and Levels at the top of the Catalog.</p>
+
+                                <div><img src="Role1.png" onclick="openModal('Role1.png')"
+                                        alt="The Roles list, showing the roles currently defined." width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Role</th>
+                                            <td>The role name, used to target content and assign permissions (e.g., Employee, Student).</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Active</th>
+                                            <td>Whether the role is currently enabled for use.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Inline icons to edit or delete the role.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="custom-callout-note">
+                                    <p><strong>Tip:</strong> Select the checkboxes next to one or more roles to enable the Delete button at the top of the list — the number in parentheses shows how many roles are currently selected for bulk deletion.</p>
+                                </div>
+
+                                <p>Click <strong>+ Role</strong> to create a new role, or use the pencil icon to edit an existing one.</p>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 8. CERTIFICATE TEMPLATES -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="certificate-templates"><a class="header-icon-link highlight" href="">
+                                        Certificate Templates
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+                                <p>Certificate Templates provide standardized completion awards automatically issued to learners upon completing certified courses or training programs. Select a template design from the global template repository or configure custom branding.</p>
+
+                                <br><br>
+
+                                <!-- ========================================================================= -->
+                                <!-- 9. DELEGATIONS -->
+                                <!-- ========================================================================= -->
+
+                                <h2 id="Delegations"><a class="header-icon-link highlight" href="">
+                                        Managing Delegations
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h2>
+
+                                <p>Delegation lets one user (the Delegator) temporarily hand off their course-related responsibilities — such as approvals — to another user (the Delegatee) for a defined date range.</p>
+
+                                <div><img src="Delegation1.png" onclick="openModal('Delegation1.png')"
+                                        alt="The Delegation list, showing an active delegation." width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Column</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Delegator</th>
+                                            <td>The user handing off their responsibilities.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Delegatee</th>
+                                            <td>The user receiving the delegated responsibilities.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Start Date</th>
+                                            <td>The date the delegation takes effect.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>End Date</th>
+                                            <td>The date the delegation ends.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>Active or Inactive, based on the toggle set when the delegation was created.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Action</th>
+                                            <td>Inline icons to edit or delete the delegation.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3 id="adding-delegation"><a class="header-icon-link highlight" href="">Adding a Delegation
+                                        <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Click <strong>+ Delegation</strong> to open the Add Delegation form.</p>
+
+                                <div><img src="Delegation2.png" onclick="openModal('Delegation2.png')"
+                                        alt="The Add Delegation form." width="100%" height="auto"></div>
+                                <br>
+
+                                <table class="custom-doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Field</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Delegator *</th>
+                                            <td>The user delegating their responsibilities. Required.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Delegatee *</th>
+                                            <td>The user who will receive the delegated responsibilities. Required.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Start Date *</th>
+                                            <td>The date the delegation becomes effective. Required.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>End Date *</th>
+                                            <td>The date the delegation ends. Required.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Status</th>
+                                            <td>Toggle controlling whether the delegation is active once saved.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p>Click <strong>Save</strong> to create the delegation, or <strong>Cancel</strong> to discard it.</p>
+
+                            </li>
+                        </div>
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
+                        <nav class="pagination mt-3">
+                            <a class="nav nav-prev" href="/LMS/modern/admin/setting/Courses"
+                                aria-label="Previous page"><i class="ti-arrow-left mr-2"></i> <span
+                                    class="d-none d-md-block">Courses</span></a>
+                            <a class="nav nav-next" href="/LMS/modern/admin/setting/Quiz" aria-label="Next page"><span
+                                    class="d-none d-md-block">Quiz</span> <i class="ti-arrow-right ml-2"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+            <div class="mySlides">
+                <img src="" id="imageId" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
+    <script src="../../../../../js/script.min.js"></script>
+    <script>
+        function openModal(src) {
+            document.getElementById("imageId").src = src;
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        date = new Date().toLocaleDateString();
+        document.getElementById("date").innerHTML = date;
+    </script>
+    <script src="../../../../js/header-footer.js"></script>
+    <script src="../../../../js/showhidefunction.js"></script>
+    <script src="/js/LMS-modern-admin.js"></script>
+    <script src="/js/plus-toggle.js"></script>
+</body>
+
+</html>
