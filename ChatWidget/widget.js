@@ -1,25 +1,26 @@
-import { hydrateIcons } from './icons.js';
+import { hydrateIcons } from "./icons.js";
 
 (function () {
   "use strict";
 
-  const DIRECT_LINE_SECRET = "BXL4er0v2wFIRHETqOl8VMQJoPrs7yeQTCki3SSGgp2NiqcZ2hZrJQQJ99CIACZoyfiAArohAAABAZBS416k.BAjlRhj9N4J1O5n0Jr0CfbkOaYhKxECX483tOh0Ep2GpUJl3QpOSJQQJ99CIACZoyfiAArohAAABAZBS4Vu0";
+  const DIRECT_LINE_SECRET =
+    "BXL4er0v2wFIRHETqOl8VMQJoPrs7yeQTCki3SSGgp2NiqcZ2hZrJQQJ99CIACZoyfiAArohAAABAZBS416k.BAjlRhj9N4J1O5n0Jr0CfbkOaYhKxECX483tOh0Ep2GpUJl3QpOSJQQJ99CIACZoyfiAArohAAABAZBS4Vu0";
   const tenantId = "apps365";
   const defaultUserId = "";
   const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
-  // Live chat API (Node/Express + Azure SignalR), deployed on Azure App Service.
-  const API_BASE_URL = "https://knowledgebaseagentr-azhkdfendtachngp.westus3-01.azurewebsites.net";
+  // Live chat API (node.js) deployed on Azure App Service.
+  const API_BASE_URL =
+    "https://knowledgebaseagentr-azhkdfendtachngp.westus3-01.azurewebsites.net";
   // sessionStorage key prefix for the customer session token (per conversationId).
   const LIVE_SESSION_STORAGE_PREFIX = "cw-live-session:";
-  // Fallback loader for host pages that don't include the SignalR <script> tag themselves.
-  const SIGNALR_CDN_URL = "https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js";
-  const SIGNALR_CDN_INTEGRITY = "sha384-mU1xC5yC2LldSW74Rj1Ax8wPiLw/28V5eh51uKJMlBbRVsOtUYd4xyzNsgIAJARB";
-  const SHAREPOINT_SITE_URL = "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
+  const SIGNALR_CDN_URL =
+    "https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js";
+  const SIGNALR_CDN_INTEGRITY =
+    "sha384-mU1xC5yC2LldSW74Rj1Ax8wPiLw/28V5eh51uKJMlBbRVsOtUYd4xyzNsgIAJARB";
+  const SHAREPOINT_SITE_URL =
+    "https://cubiclogics.sharepoint.com/sites/Apps365KBAgent";
   const SHAREPOINT_LIST_TITLE = "HR365CAChats";
-  // HR365CAChats has no UserGUID column yet (checked against the list schema). Writing or
-  // selecting a field that doesn't exist makes SharePoint reject the whole request, so this
-  // stays off until the column is created.
   const SHAREPOINT_HAS_USER_GUID_COLUMN = false;
   const SHAREPOINT_CONVERSATION_SELECT = [
     "Id",
@@ -28,18 +29,27 @@ import { hydrateIcons } from './icons.js';
     "UserEmail",
     "ConversationDetails",
     "LiveAgentEscalated",
+    "Rating",
+    "FeedbackComment",
     "Created",
     "Modified",
   ].join(",");
-  const SHAREPOINT_TOKEN_URL = "https://mt365token.azurewebsites.net/api/token/cubiclogics";
-  const isLocalEnvironment = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
-  const forceSharePointLocally = new URLSearchParams(location.search).get("forceSp") === "1";
-  const canUseSharePointPersistence = !isLocalEnvironment || forceSharePointLocally;
+  const SHAREPOINT_TOKEN_URL =
+    "https://mt365token.azurewebsites.net/api/token/cubiclogics";
+  const isLocalEnvironment =
+    location.protocol === "file:" ||
+    /^(localhost|127\.0\.0\.1)$/i.test(location.hostname);
+  const forceSharePointLocally =
+    new URLSearchParams(location.search).get("forceSp") === "1";
+  const canUseSharePointPersistence =
+    !isLocalEnvironment || forceSharePointLocally;
   const USER_EMAIL_STORAGE_KEY = "kb_user_email";
   const LOCAL_CONVERSATION_STORAGE_PREFIX = "cw-conversations-v1";
 
   function normalizeEmail(value) {
-    return String(value || "").trim().toLowerCase();
+    return String(value || "")
+      .trim()
+      .toLowerCase();
   }
 
   function getStoredUserEmail() {
@@ -66,9 +76,16 @@ import { hydrateIcons } from './icons.js';
 
   function getCurrentUserProfile() {
     const context = window._spPageContextInfo || {};
-    const email = normalizeEmail(context.userEmail || window.CW_USER_EMAIL || getStoredUserEmail());
-    const login = String(context.userLoginName || window.CW_USER_LOGIN || "").trim();
-    const name = String(context.userDisplayName || window.CW_USER_NAME || defaultUserName).trim() || defaultUserName;
+    const email = normalizeEmail(
+      context.userEmail || window.CW_USER_EMAIL || getStoredUserEmail(),
+    );
+    const login = String(
+      context.userLoginName || window.CW_USER_LOGIN || "",
+    ).trim();
+    const name =
+      String(
+        context.userDisplayName || window.CW_USER_NAME || defaultUserName,
+      ).trim() || defaultUserName;
     const id = email || login || defaultUserId;
     // Only a real directory GUID (signed-in SharePoint page); anonymous visitors get none.
     const guid = String(context.aadUserId || window.CW_USER_GUID || "").trim();
@@ -96,6 +113,7 @@ import { hydrateIcons } from './icons.js';
   const newChatBtn = document.getElementById("cw-new-chat");
   const sidebarNewChatBtn = document.getElementById("cw-sidebar-new-chat");
   const expandBtn = document.getElementById("cw-expand-btn");
+  const endLiveBtn = document.getElementById("cw-end-live-btn");
   const sidebarToggleBtn = document.getElementById("cw-sidebar-toggle");
   const sendBtn = document.getElementById("cw-send-btn");
   const attachBtn = document.getElementById("cw-attach-btn");
@@ -151,8 +169,12 @@ import { hydrateIcons } from './icons.js';
   let userPublicIp = "";
   fetch("https://api.ipify.org?format=json")
     .then((r) => r.json())
-    .then((data) => { userPublicIp = data.ip || ""; })
-    .catch(() => { userPublicIp = ""; });
+    .then((data) => {
+      userPublicIp = data.ip || "";
+    })
+    .catch(() => {
+      userPublicIp = "";
+    });
   let isExpanded = false;
   let isSidebarOpen = false;
   let isSidebarCollapsed = false;
@@ -166,6 +188,8 @@ import { hydrateIcons } from './icons.js';
   let isWaitingForResponse = false;
   let responseTimeoutTimer = null;
   const BOT_RESPONSE_TIMEOUT_MS = 30000;
+  const RATING_IDLE_MS = 4 * 60 * 1000;
+  let ratingIdleTimer = null;
   if (window.marked) {
     marked.setOptions({ breaks: true, gfm: true });
   }
@@ -195,11 +219,18 @@ import { hydrateIcons } from './icons.js';
   }
 
   function getLocalConversationStorageKey() {
-    const scope = [tenantId, window.location.pathname || "/", currentUserEmail || "anonymous"].join(":");
+    const scope = [
+      tenantId,
+      window.location.pathname || "/",
+      currentUserEmail || "anonymous",
+    ].join(":");
     return `${LOCAL_CONVERSATION_STORAGE_PREFIX}:${scope}`;
   }
 
-  function cloneConversationForStorage(conv, { includeContentUrl = false } = {}) {
+  function cloneConversationForStorage(
+    conv,
+    { includeContentUrl = false } = {},
+  ) {
     if (!conv) return null;
 
     return {
@@ -209,10 +240,15 @@ import { hydrateIcons } from './icons.js';
         from: message.from ? { ...message.from } : message.from,
         attachments: Array.isArray(message.attachments)
           ? message.attachments.map((att) => ({
-            name: att.name || "Attachment",
-            contentType: att.contentType || "",
-            ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
-          }))
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              ...(includeContentUrl
+                ? {
+                    contentUrl: att.contentUrl || "",
+                    thumbnailUrl: att.thumbnailUrl || "",
+                  }
+                : {}),
+            }))
           : [],
       })),
     };
@@ -222,16 +258,24 @@ import { hydrateIcons } from './icons.js';
     if (!item) return null;
 
     const messages = sanitizeStoredMessages(item.messages || []);
-    const previewSource = messages[messages.length - 1] || { text: item.preview || item.title || "" };
+    const previewSource = messages[messages.length - 1] || {
+      text: item.preview || item.title || "",
+    };
     const preview = getActivityPreview(previewSource);
-    const title = item.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
+    const title =
+      item.title ||
+      messages.find((m) => m.from?.role === "user")?.text?.trim() ||
+      preview ||
+      "New chat";
 
     return {
       spId: item.spId || null,
       conversationId: item.conversationId || item.id || `local-${Date.now()}`,
       title: title.slice(0, 50),
       preview,
-      timestamp: normalizeConversationTimestamp(item.timestamp || item.modified || item.createdAt),
+      timestamp: normalizeConversationTimestamp(
+        item.timestamp || item.modified || item.createdAt,
+      ),
       createdAt: item.createdAt || new Date().toISOString(),
       email: item.email || currentUserEmail || "",
       pageUrl: item.pageUrl || window.location.href || "",
@@ -239,6 +283,8 @@ import { hydrateIcons } from './icons.js';
       userId: item.userId || userId || "",
       userGuid: item.userGuid || "",
       feedback: item.feedback || {},
+      rating: item.rating || null,
+      ratingCardShown: Boolean(item.ratingCardShown || item.rating),
       liveAgent: normalizeLiveAgent(item.liveAgent),
       messages,
     };
@@ -260,8 +306,13 @@ import { hydrateIcons } from './icons.js';
     try {
       const snapshot = conversations
         .filter(isConversationForCurrentUser)
-        .map((conv) => cloneConversationForStorage(conv, { includeContentUrl: true }));
-      localStorage.setItem(getLocalConversationStorageKey(), JSON.stringify(snapshot));
+        .map((conv) =>
+          cloneConversationForStorage(conv, { includeContentUrl: true }),
+        );
+      localStorage.setItem(
+        getLocalConversationStorageKey(),
+        JSON.stringify(snapshot),
+      );
     } catch (error) {
       console.warn("Unable to save conversations locally", error);
     }
@@ -269,7 +320,9 @@ import { hydrateIcons } from './icons.js';
 
   function decodeJwtExpiry(token) {
     try {
-      const payload = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+      const payload = JSON.parse(
+        atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")),
+      );
       return typeof payload.exp === "number" ? payload.exp * 1000 : 0;
     } catch {
       return 0;
@@ -278,7 +331,9 @@ import { hydrateIcons } from './icons.js';
 
   async function fetchSharePointToken() {
     if (!canUseSharePointPersistence) {
-      throw new Error("SharePoint persistence is disabled in local development");
+      throw new Error(
+        "SharePoint persistence is disabled in local development",
+      );
     }
 
     const response = await fetch(SHAREPOINT_TOKEN_URL);
@@ -293,13 +348,16 @@ import { hydrateIcons } from './icons.js';
     }
 
     sharePointToken = token;
-    sharePointTokenExpiresAt = decodeJwtExpiry(token) || Date.now() + 45 * 60 * 1000;
+    sharePointTokenExpiresAt =
+      decodeJwtExpiry(token) || Date.now() + 45 * 60 * 1000;
     return token;
   }
 
   async function getSharePointToken() {
     if (!canUseSharePointPersistence) {
-      throw new Error("SharePoint persistence is disabled in local development");
+      throw new Error(
+        "SharePoint persistence is disabled in local development",
+      );
     }
 
     if (sharePointToken && sharePointTokenExpiresAt > Date.now() + 60_000) {
@@ -310,7 +368,9 @@ import { hydrateIcons } from './icons.js';
 
   async function spRequest(path, options = {}, { skipDigest = false } = {}) {
     if (!canUseSharePointPersistence) {
-      throw new Error("SharePoint persistence is disabled in local development");
+      throw new Error(
+        "SharePoint persistence is disabled in local development",
+      );
     }
 
     const token = await getSharePointToken();
@@ -319,10 +379,17 @@ import { hydrateIcons } from './icons.js';
 
     const method = (options.method || "GET").toUpperCase();
     const hasBody = options.body !== undefined && options.body !== null;
-    if (!headers.has("Accept")) headers.set("Accept", "application/json;odata=nometadata");
-    if (hasBody && !headers.has("Content-Type")) headers.set("Content-Type", "application/json;odata=nometadata");
+    if (!headers.has("Accept"))
+      headers.set("Accept", "application/json;odata=nometadata");
+    if (hasBody && !headers.has("Content-Type"))
+      headers.set("Content-Type", "application/json;odata=nometadata");
 
-    if (!skipDigest && method !== "GET" && method !== "HEAD" && path !== "/_api/contextinfo") {
+    if (
+      !skipDigest &&
+      method !== "GET" &&
+      method !== "HEAD" &&
+      path !== "/_api/contextinfo"
+    ) {
       headers.set("X-RequestDigest", await getSharePointDigest());
     }
 
@@ -346,7 +413,7 @@ import { hydrateIcons } from './icons.js';
           Accept: "application/json;odata=verbose",
         },
       },
-      { skipDigest: true }
+      { skipDigest: true },
     );
 
     if (!response.ok) {
@@ -354,10 +421,12 @@ import { hydrateIcons } from './icons.js';
     }
 
     const data = await response.json();
-    const info = data?.d?.GetContextWebInformation || data?.GetContextWebInformation || {};
+    const info =
+      data?.d?.GetContextWebInformation || data?.GetContextWebInformation || {};
     sharePointDigest = info.FormDigestValue || "";
     const timeoutSeconds = Number(info.FormDigestTimeoutSeconds || 30);
-    sharePointDigestExpiresAt = Date.now() + Math.max(timeoutSeconds - 60, 1) * 1000;
+    sharePointDigestExpiresAt =
+      Date.now() + Math.max(timeoutSeconds - 60, 1) * 1000;
     return sharePointDigest;
   }
 
@@ -365,13 +434,19 @@ import { hydrateIcons } from './icons.js';
     if (sharePointListEntityType) return;
 
     const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
-    const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')?$select=ListItemEntityTypeFullName`, { method: "GET" });
+    const response = await spRequest(
+      `/_api/web/lists/getbytitle('${safeTitle}')?$select=ListItemEntityTypeFullName`,
+      { method: "GET" },
+    );
     if (!response.ok) {
       throw new Error(`List metadata request failed (${response.status})`);
     }
 
     const data = await response.json();
-    sharePointListEntityType = data.ListItemEntityTypeFullName || data.d?.ListItemEntityTypeFullName || "";
+    sharePointListEntityType =
+      data.ListItemEntityTypeFullName ||
+      data.d?.ListItemEntityTypeFullName ||
+      "";
     if (!sharePointListEntityType) {
       throw new Error("Unable to resolve SharePoint list entity type");
     }
@@ -386,18 +461,21 @@ import { hydrateIcons } from './icons.js';
         if (message.type && message.from) return message;
 
         const role =
-          message.role === "assistant" ? "bot"
-            : message.role === "bot" ? "bot"
-              : message.role === "agent" ? "agent"
+          message.role === "assistant"
+            ? "bot"
+            : message.role === "bot"
+              ? "bot"
+              : message.role === "agent"
+                ? "agent"
                 : "user";
         const text = message.content || message.text || "";
         const attachments = Array.isArray(message.attachments)
           ? message.attachments.map((att) => ({
-            name: att.name || "Attachment",
-            contentType: att.contentType || "",
-            contentUrl: att.contentUrl || "",
-            thumbnailUrl: att.thumbnailUrl || "",
-          }))
+              name: att.name || "Attachment",
+              contentType: att.contentType || "",
+              contentUrl: att.contentUrl || "",
+              thumbnailUrl: att.thumbnailUrl || "",
+            }))
           : [];
 
         const isAgent = role === "agent";
@@ -407,10 +485,22 @@ import { hydrateIcons } from './icons.js';
           text,
           attachments,
           from: {
-            id: role === "user" ? userId : isAgent ? message.senderEmail || "agent" : "bot",
-            name: role === "user" ? userName : isAgent ? message.senderName || "Support agent" : "Copilot",
+            id:
+              role === "user"
+                ? userId
+                : isAgent
+                  ? message.senderEmail || "agent"
+                  : "bot",
+            name:
+              role === "user"
+                ? userName
+                : isAgent
+                  ? message.senderName || "Support agent"
+                  : "Copilot",
             role,
-            ...(isAgent && message.senderEmail ? { email: message.senderEmail } : {}),
+            ...(isAgent && message.senderEmail
+              ? { email: message.senderEmail }
+              : {}),
           },
           timestamp: message.timestamp || new Date().toISOString(),
         };
@@ -418,14 +508,26 @@ import { hydrateIcons } from './icons.js';
       .filter(Boolean);
   }
 
-  const LIVE_AGENT_STATUSES = ["none", "pending", "assigned", "fallback", "closed"];
+  const LIVE_AGENT_STATUSES = [
+    "none",
+    "pending",
+    "assigned",
+    "fallback",
+    "closed",
+  ];
 
   function normalizeLiveAgent(value) {
-    const status = LIVE_AGENT_STATUSES.includes(value?.status) ? value.status : "none";
+    const status = LIVE_AGENT_STATUSES.includes(value?.status)
+      ? value.status
+      : "none";
     return {
       status,
-      ...(value?.assignedAgentEmail ? { assignedAgentEmail: value.assignedAgentEmail } : {}),
-      ...(value?.assignedAgentName ? { assignedAgentName: value.assignedAgentName } : {}),
+      ...(value?.assignedAgentEmail
+        ? { assignedAgentEmail: value.assignedAgentEmail }
+        : {}),
+      ...(value?.assignedAgentName
+        ? { assignedAgentName: value.assignedAgentName }
+        : {}),
     };
   }
 
@@ -450,18 +552,29 @@ import { hydrateIcons } from './icons.js';
           id: message.id || "",
           role,
           content: message.text || "",
-          ...(role === "agent" && message.from?.email ? { senderEmail: message.from.email } : {}),
-          ...(role === "agent" && message.from?.name ? { senderName: message.from.name } : {}),
+          ...(role === "agent" && message.from?.email
+            ? { senderEmail: message.from.email }
+            : {}),
+          ...(role === "agent" && message.from?.name
+            ? { senderName: message.from.name }
+            : {}),
           attachments: Array.isArray(message.attachments)
             ? message.attachments.map((att) => ({
-              name: att.name || "Attachment",
-              contentType: att.contentType || "",
-              ...(includeContentUrl ? { contentUrl: att.contentUrl || "", thumbnailUrl: att.thumbnailUrl || "" } : {}),
-            }))
+                name: att.name || "Attachment",
+                contentType: att.contentType || "",
+                ...(includeContentUrl
+                  ? {
+                      contentUrl: att.contentUrl || "",
+                      thumbnailUrl: att.thumbnailUrl || "",
+                    }
+                  : {}),
+              }))
             : [],
           timestamp: message.timestamp || new Date().toISOString(),
         };
       }),
+      ratingPrompted: Boolean(conv.ratingCardShown || conv.rating),
+      rating: conv.rating || null,
       liveAgent: normalizeLiveAgent(conv.liveAgent),
     };
   }
@@ -478,15 +591,29 @@ import { hydrateIcons } from './icons.js';
     }
 
     const messages = sanitizeStoredMessages(parsed.messages || []);
-    const previewSource = messages[messages.length - 1] || { text: parsed.title || "" };
+    const previewSource = messages[messages.length - 1] || {
+      text: parsed.title || "",
+    };
     const preview = getActivityPreview(previewSource);
-    const title = parsed.title || messages.find((m) => m.from?.role === "user")?.text?.trim() || preview || "New chat";
-    const feedback = parsed.feedback && typeof parsed.feedback === "object" ? parsed.feedback : {};
-    const liveAgent = normalizeLiveAgent(parsed.liveAgent || { status: item.LiveAgentEscalated });
+    const title =
+      parsed.title ||
+      messages.find((m) => m.from?.role === "user")?.text?.trim() ||
+      preview ||
+      "New chat";
+    const feedback =
+      parsed.feedback && typeof parsed.feedback === "object"
+        ? parsed.feedback
+        : {};
+    const liveAgent = normalizeLiveAgent(
+      parsed.liveAgent || { status: item.LiveAgentEscalated },
+    );
 
     return {
       spId: item.Id || item.ID || null,
-      conversationId: item.ConversationId || item.ConversationID || `sp-${item.Id || item.ID || Date.now()}`,
+      conversationId:
+        item.ConversationId ||
+        item.ConversationID ||
+        `sp-${item.Id || item.ID || Date.now()}`,
       title: title.slice(0, 50),
       preview,
       timestamp: normalizeConversationTimestamp(item.Modified || item.Created),
@@ -496,6 +623,10 @@ import { hydrateIcons } from './icons.js';
       userIp: parsed.userIp || "",
       userId: item.UserEmail || "",
       userGuid: item.UserGUID || "",
+      rating: item.Rating
+        ? { value: Number(item.Rating), comment: item.FeedbackComment || "" }
+        : null,
+      ratingCardShown: parsed.ratingPrompted === true || Boolean(item.Rating),
       feedback,
       liveAgent,
       messages,
@@ -504,18 +635,28 @@ import { hydrateIcons } from './icons.js';
   function buildConversationFields(conv) {
     const details = serializeConversation(conv, { includeContentUrl: true });
     return {
+      Title: String(details.title || "New chat").slice(0, 255),
       ConversationId: conv.conversationId || "",
       UserEmail: conv.email || currentUserEmail || "",
-      ...(SHAREPOINT_HAS_USER_GUID_COLUMN ? { UserGUID: conv.userGuid || currentUser.guid || "" } : {}),
+      ...(SHAREPOINT_HAS_USER_GUID_COLUMN
+        ? { UserGUID: conv.userGuid || currentUser.guid || "" }
+        : {}),
       ConversationDetails: JSON.stringify(details),
-      // Top-level mirror of liveAgent.status so it can be queried without parsing JSON.
       LiveAgentEscalated: details.liveAgent.status,
+      Rating: conv.rating?.value ?? null,
+      FeedbackComment: conv.rating?.comment || "",
     };
   }
 
   // Later statuses written by the API (agent joined, chat closed) must not be rolled
   // back by a widget save built from an older in-memory copy.
-  const LIVE_AGENT_STATUS_RANK = { none: 0, pending: 1, fallback: 1, assigned: 2, closed: 3 };
+  const LIVE_AGENT_STATUS_RANK = {
+    none: 0,
+    pending: 1,
+    fallback: 1,
+    assigned: 2,
+    closed: 3,
+  };
 
   // widgetDetails: serializeConversation() output. rawCurrent: the item's stored JSON.
   // Keeps keys the widget doesn't model (session, fallback, ...), liveAgent extras
@@ -527,45 +668,73 @@ import { hydrateIcons } from './icons.js';
     } catch {
       current = null;
     }
-    if (!current || typeof current !== "object" || Array.isArray(current)) return widgetDetails;
+    if (!current || typeof current !== "object" || Array.isArray(current))
+      return widgetDetails;
 
-    const serverLive = current.liveAgent && typeof current.liveAgent === "object" ? current.liveAgent : {};
+    const serverLive =
+      current.liveAgent && typeof current.liveAgent === "object"
+        ? current.liveAgent
+        : {};
     const widgetStatus = widgetDetails.liveAgent.status;
-    const serverStatus = LIVE_AGENT_STATUSES.includes(serverLive.status) ? serverLive.status : "none";
+    const serverStatus = LIVE_AGENT_STATUSES.includes(serverLive.status)
+      ? serverLive.status
+      : "none";
     const liveAgent = {
       ...serverLive,
       ...widgetDetails.liveAgent,
-      status: LIVE_AGENT_STATUS_RANK[serverStatus] > LIVE_AGENT_STATUS_RANK[widgetStatus] ? serverStatus : widgetStatus,
+      status:
+        LIVE_AGENT_STATUS_RANK[serverStatus] >
+        LIVE_AGENT_STATUS_RANK[widgetStatus]
+          ? serverStatus
+          : widgetStatus,
     };
 
     const knownIds = new Set(widgetDetails.messages.map((m) => m.id));
-    const missingAgentMessages = (Array.isArray(current.messages) ? current.messages : []).filter(
-      (m) => m?.role === "agent" && m.id && !knownIds.has(m.id) && !knownIds.has(`agent-${m.id}`)
+    const missingAgentMessages = (
+      Array.isArray(current.messages) ? current.messages : []
+    ).filter(
+      (m) =>
+        m?.role === "agent" &&
+        m.id &&
+        !knownIds.has(m.id) &&
+        !knownIds.has(`agent-${m.id}`),
     );
     const time = (m) => Date.parse(m.timestamp) || 0;
     const messages = missingAgentMessages.length
-      ? [...widgetDetails.messages, ...missingAgentMessages].sort((a, b) => time(a) - time(b))
+      ? [...widgetDetails.messages, ...missingAgentMessages].sort(
+          (a, b) => time(a) - time(b),
+        )
       : widgetDetails.messages;
 
     return { ...current, ...widgetDetails, liveAgent, messages };
   }
 
   function isConversationForCurrentUser(conv) {
-    const ownerEmail = String(conv.email || "").trim().toLowerCase();
-    const currentEmail = String(currentUserEmail || "").trim().toLowerCase();
+    const ownerEmail = String(conv.email || "")
+      .trim()
+      .toLowerCase();
+    const currentEmail = String(currentUserEmail || "")
+      .trim()
+      .toLowerCase();
 
     if (!currentEmail || !ownerEmail) return false;
     return ownerEmail === currentEmail;
   }
 
   function extractEmailFromText(text) {
-    const match = String(text || "").match(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i);
+    const match = String(text || "").match(
+      /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i,
+    );
     return match ? normalizeEmail(match[0]) : "";
   }
 
-  function applyUserEmailIdentity(email, { persist = true, reloadHistory = true } = {}) {
+  function applyUserEmailIdentity(
+    email,
+    { persist = true, reloadHistory = true } = {},
+  ) {
     const normalized = normalizeEmail(email);
-    if (!normalized || normalized === normalizeEmail(currentUserEmail)) return false;
+    if (!normalized || normalized === normalizeEmail(currentUserEmail))
+      return false;
 
     currentUserEmail = normalized;
     userId = normalized;
@@ -620,15 +789,23 @@ import { hydrateIcons } from './icons.js';
       // fallback, assignedAgentId, agent messages). Re-read and merge before every write,
       // guarded by the item's ETag, so a widget save never erases what the server wrote.
       for (let attempt = 1; ; attempt++) {
-        const current = await spRequest(`${itemPath}?$select=ConversationDetails`, {
-          method: "GET",
-          headers: { Accept: "application/json;odata=verbose" },
-        });
+        const current = await spRequest(
+          `${itemPath}?$select=ConversationDetails`,
+          {
+            method: "GET",
+            headers: { Accept: "application/json;odata=verbose" },
+          },
+        );
         if (!current.ok) {
-          throw new Error(`Conversation read before update failed (${current.status})`);
+          throw new Error(
+            `Conversation read before update failed (${current.status})`,
+          );
         }
         const currentItem = (await current.json())?.d || {};
-        const details = mergeServerOwnedDetails(JSON.parse(fields.ConversationDetails), currentItem.ConversationDetails);
+        const details = mergeServerOwnedDetails(
+          JSON.parse(fields.ConversationDetails),
+          currentItem.ConversationDetails,
+        );
 
         const response = await spRequest(itemPath, {
           method: "POST",
@@ -662,7 +839,7 @@ import { hydrateIcons } from './icons.js';
           "Content-Type": "application/json;odata=verbose",
         },
         body: JSON.stringify(payload),
-      }
+      },
     );
 
     if (!response.ok) {
@@ -670,7 +847,8 @@ import { hydrateIcons } from './icons.js';
     }
 
     const data = await response.json();
-    conv.spId = data?.d?.Id || data?.d?.ID || data?.Id || data?.ID || conv.spId || null;
+    conv.spId =
+      data?.d?.Id || data?.d?.ID || data?.Id || data?.ID || conv.spId || null;
     return conv;
   }
 
@@ -679,9 +857,12 @@ import { hydrateIcons } from './icons.js';
     clearTimeout(conversationSaveTimer);
 
     if (!canUseSharePointPersistence) {
-      conversationSaveTimer = setTimeout(() => {
-        saveConversationsToLocalStorage();
-      }, immediate ? 0 : 150);
+      conversationSaveTimer = setTimeout(
+        () => {
+          saveConversationsToLocalStorage();
+        },
+        immediate ? 0 : 150,
+      );
       return;
     }
 
@@ -730,13 +911,16 @@ import { hydrateIcons } from './icons.js';
         if (canUseSharePointPersistence) {
           await ensureSharePointListMetadata();
           const safeTitle = SHAREPOINT_LIST_TITLE.replace(/'/g, "''");
-          const response = await spRequest(`/_api/web/lists/getbytitle('${safeTitle}')/items?$select=${SHAREPOINT_CONVERSATION_SELECT}&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
+          const response = await spRequest(
+            `/_api/web/lists/getbytitle('${safeTitle}')/items?$select=${SHAREPOINT_CONVERSATION_SELECT}&$orderby=Modified desc&$top=25${getConversationOwnerQuery()}`,
 
-            { method: "GET" }
+            { method: "GET" },
           );
 
           if (!response.ok) {
-            throw new Error(`Conversation list request failed (${response.status})`);
+            throw new Error(
+              `Conversation list request failed (${response.status})`,
+            );
           }
 
           const data = await response.json();
@@ -752,7 +936,9 @@ import { hydrateIcons } from './icons.js';
         }
         if (currentConversation) {
           const key = getConversationKey(currentConversation);
-          const stillPresent = conversations.some((c) => getConversationKey(c) === key);
+          const stillPresent = conversations.some(
+            (c) => getConversationKey(c) === key,
+          );
           if (!stillPresent) {
             conversations.unshift(currentConversation);
           }
@@ -763,7 +949,10 @@ import { hydrateIcons } from './icons.js';
         return conversations;
       } catch (error) {
         if (canUseSharePointPersistence) {
-          console.warn("Unable to load conversations from SharePoint, using local cache", error);
+          console.warn(
+            "Unable to load conversations from SharePoint, using local cache",
+            error,
+          );
         }
         conversations = loadConversationsFromLocalStorage();
         if (loadVersion !== conversationLoadVersion) {
@@ -813,7 +1002,9 @@ import { hydrateIcons } from './icons.js';
   function renderMarkdown(text) {
     if (!text) return "";
     if (window.marked) return marked.parse(text);
-    return escapeHtml(text).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>");
+    return escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\n/g, "<br>");
   }
 
   function scrollToBottom() {
@@ -868,7 +1059,6 @@ import { hydrateIcons } from './icons.js';
     salesBtn?.addEventListener("click", () => {
       void sendSupportSelection(salesBtn, "sales", "Sales Support");
     });
-
   }
 
   function showEmptyState() {
@@ -999,14 +1189,18 @@ import { hydrateIcons } from './icons.js';
       if (!value) return;
       navigator.clipboard.writeText(value).then(
         () => showToast("Copied to clipboard"),
-        () => showToast("Could not copy")
+        () => showToast("Could not copy"),
       );
     });
   }
 
   function bindUserMessageActions(container, text, attachments, includeEdit) {
-    const copyBtn = container.querySelector('.cw-user-actions [data-action="copy"]');
-    const editBtn = container.querySelector('.cw-user-actions [data-action="edit"]');
+    const copyBtn = container.querySelector(
+      '.cw-user-actions [data-action="copy"]',
+    );
+    const editBtn = container.querySelector(
+      '.cw-user-actions [data-action="edit"]',
+    );
     const copyValue = (text || "").trim() || attachments?.[0]?.name || "";
 
     bindCopyButton(copyBtn, copyValue);
@@ -1022,7 +1216,9 @@ import { hydrateIcons } from './icons.js';
   }
 
   function bindCopilotMessageActions(container, text, messageId) {
-    const copyBtn = container.querySelector('.cw-copilot-actions [data-action="copy"]');
+    const copyBtn = container.querySelector(
+      '.cw-copilot-actions [data-action="copy"]',
+    );
     bindCopyButton(copyBtn, text);
     bindFeedbackButtons(container, messageId);
   }
@@ -1048,7 +1244,8 @@ import { hydrateIcons } from './icons.js';
     const cancelBtn = form?.querySelector(".cw-feedback-cancel");
     const submitBtn = form?.querySelector(".cw-feedback-submit");
 
-    if (!upBtn || !downBtn || !form || !textarea || !cancelBtn || !submitBtn) return;
+    if (!upBtn || !downBtn || !form || !textarea || !cancelBtn || !submitBtn)
+      return;
 
     function setSelected(rating) {
       upBtn.classList.toggle("is-selected", rating === "up");
@@ -1060,7 +1257,8 @@ import { hydrateIcons } from './icons.js';
     function openForm(rating) {
       form.dataset.rating = rating;
       const existing = feedbackCache[messageId];
-      textarea.value = existing && existing.rating === rating ? existing.comment || "" : "";
+      textarea.value =
+        existing && existing.rating === rating ? existing.comment || "" : "";
       form.hidden = false;
       textarea.focus();
     }
@@ -1099,11 +1297,19 @@ import { hydrateIcons } from './icons.js';
       if (!rating) return;
       const comment = textarea.value.trim();
 
-      feedbackCache[messageId] = { rating, comment, timestamp: new Date().toISOString() };
+      feedbackCache[messageId] = {
+        rating,
+        comment,
+        timestamp: new Date().toISOString(),
+      };
       setSelected(rating);
       closeForm();
       saveFeedback(messageId, rating, comment);
-      showToast(rating === "up" ? "Thanks for your feedback!" : "Thanks, we'll use this to improve.");
+      showToast(
+        rating === "up"
+          ? "Thanks for your feedback!"
+          : "Thanks, we'll use this to improve.",
+      );
     });
   }
 
@@ -1113,7 +1319,8 @@ import { hydrateIcons } from './icons.js';
     wrap.className = "cw-user-msg";
 
     const text = typeof activity === "string" ? activity : activity.text || "";
-    const attachments = typeof activity === "string" ? [] : activity.attachments || [];
+    const attachments =
+      typeof activity === "string" ? [] : activity.attachments || [];
     const hasText = Boolean(text && text.trim());
     const hasAttachments = attachments.length > 0;
     const includeEdit = hasText && !hasAttachments;
@@ -1187,7 +1394,8 @@ import { hydrateIcons } from './icons.js';
     if (!activity || activity.type !== "message") return;
 
     const hasText = activity.text && activity.text.trim();
-    const hasAttachments = activity.attachments && activity.attachments.length > 0;
+    const hasAttachments =
+      activity.attachments && activity.attachments.length > 0;
     if (!hasText && !hasAttachments) return;
 
     const id =
@@ -1208,7 +1416,9 @@ import { hydrateIcons } from './icons.js';
   function getActivityPreview(activity) {
     if (activity.text && activity.text.trim()) return activity.text;
     if (activity.attachments?.length) {
-      const names = activity.attachments.map((a) => a.name || "file").join(", ");
+      const names = activity.attachments
+        .map((a) => a.name || "file")
+        .join(", ");
       return `📎 ${names}`;
     }
     return "Message";
@@ -1232,7 +1442,9 @@ import { hydrateIcons } from './icons.js';
     if (!currentConversation) return false;
     const text = normalizeMsgText(activity.text);
     return currentConversation.messages.some(
-      (m) => normalizeMsgText(m.text) === text && m.from?.role === activity.from?.role
+      (m) =>
+        normalizeMsgText(m.text) === text &&
+        m.from?.role === activity.from?.role,
     );
   }
 
@@ -1244,8 +1456,12 @@ import { hydrateIcons } from './icons.js';
     const text = activity.text || "";
     if (!isProactiveWelcome(text) || !currentConversation) return false;
 
-    const hasUserMsg = currentConversation.messages.some((m) => m.from?.role === "user");
-    const hasBotMsg = currentConversation.messages.some((m) => m.from?.role !== "user");
+    const hasUserMsg = currentConversation.messages.some(
+      (m) => m.from?.role === "user",
+    );
+    const hasBotMsg = currentConversation.messages.some(
+      (m) => m.from?.role !== "user",
+    );
     return hasUserMsg || hasBotMsg;
   }
 
@@ -1279,7 +1495,9 @@ import { hydrateIcons } from './icons.js';
     responseTimeoutTimer = setTimeout(() => {
       if (!isWaitingForResponse) return;
       hideLoading();
-      showToast("The assistant is taking longer than expected. Please try again.");
+      showToast(
+        "The assistant is taking longer than expected. Please try again.",
+      );
     }, BOT_RESPONSE_TIMEOUT_MS);
 
     if (body.querySelector("#cw-loading")) {
@@ -1326,7 +1544,9 @@ import { hydrateIcons } from './icons.js';
     if (!filtered.length) {
       const empty = document.createElement("li");
       empty.className = "cw-history-empty";
-      empty.textContent = filterText ? "No chats found" : "No conversations yet";
+      empty.textContent = filterText
+        ? "No chats found"
+        : "No conversations yet";
       historyList.appendChild(empty);
       return;
     }
@@ -1334,7 +1554,10 @@ import { hydrateIcons } from './icons.js';
     filtered.forEach((conv) => {
       const li = document.createElement("li");
       li.className = "cw-history-item";
-      if (currentConversation && getConversationKey(conv) === getConversationKey(currentConversation)) {
+      if (
+        currentConversation &&
+        getConversationKey(conv) === getConversationKey(currentConversation)
+      ) {
         li.classList.add("active");
       }
 
@@ -1360,7 +1583,7 @@ import { hydrateIcons } from './icons.js';
     sidebarToggleBtn?.setAttribute("aria-expanded", String(visible));
     sidebarToggleBtn?.setAttribute(
       "aria-label",
-      visible ? "Hide sidebar" : "Show sidebar"
+      visible ? "Hide sidebar" : "Show sidebar",
     );
   }
 
@@ -1408,7 +1631,9 @@ import { hydrateIcons } from './icons.js';
       if (!isReplay && action.type === "DIRECT_LINE/POST_ACTIVITY") {
         const activity = action.payload.activity;
         const hasText = activity.text && activity.text.trim();
-        const attachments = Array.isArray(activity.attachments) ? activity.attachments : [];
+        const attachments = Array.isArray(activity.attachments)
+          ? activity.attachments
+          : [];
         if (!hasText && attachments.length === 0) return next(action);
 
         handleNewMessage({
@@ -1423,15 +1648,42 @@ import { hydrateIcons } from './icons.js';
 
       if (!isReplay && action.type === "DIRECT_LINE/INCOMING_ACTIVITY") {
         const activity = action.payload.activity;
-        if (activity.type === "message" && activity.from && activity.from.role !== "user") {
+        if (
+          activity.type === "event" &&
+          activity.name === "conversation/ratingRequest"
+        ) {
+          handleRatingRequest(activity.value);
+        } else if (
+          activity.type === "event" &&
+          activity.name === "liveAgent/emailAccepted"
+        ) {
+          // The bot accepted an email that isn't a registered customer for live chat.
+          handleBotEmailAccepted(activity.value?.email);
+        } else if (
+          activity.type === "event" &&
+          activity.name === "conversation/emailIdentity"
+        ) {
+          handleConversationEmailIdentity(activity.value);
+        } else if (
+          activity.type === "message" &&
+          activity.from &&
+          activity.from.role !== "user"
+        ) {
           handleNewMessage({
             id: activity.id || "bot-" + Date.now(),
             type: "message",
             text: activity.text || "",
-            attachments: Array.isArray(activity.attachments) ? activity.attachments : [],
-            from: { id: "bot", name: activity.from.name || "Copilot", role: "bot" },
+            attachments: Array.isArray(activity.attachments)
+              ? activity.attachments
+              : [],
+            from: {
+              id: "bot",
+              name: activity.from.name || "Copilot",
+              role: "bot",
+            },
             timestamp: activity.timestamp || new Date().toISOString(),
           });
+          if (isBotEmailVerifiedReply(activity.text)) handleBotEmailVerified();
         }
       }
 
@@ -1445,7 +1697,9 @@ import { hydrateIcons } from './icons.js';
       // 0 Uninitialized, 1 Connecting, 2 Online, 3 ExpiredToken, 4 FailedToConnect, 5 Ended
       if (status === 3 || status === 4) {
         if (isWaitingForResponse) hideLoading();
-        showToast("Connection to the assistant was lost. Please try sending your message again.");
+        showToast(
+          "Connection to the assistant was lost. Please try sending your message again.",
+        );
       } else if (status === 5) {
         if (isWaitingForResponse) hideLoading();
       }
@@ -1456,31 +1710,38 @@ import { hydrateIcons } from './icons.js';
     if (webChatInitialized) return Promise.resolve();
     if (webChatInitPromise) return webChatInitPromise;
 
-    webChatInitPromise = Promise.resolve().then(() => {
-      if (webChatInitialized) return;
-      if (!window.WebChat) {
-        throw new Error("BotFramework WebChat is not loaded.");
-      }
+    webChatInitPromise = Promise.resolve()
+      .then(() => {
+        if (webChatInitialized) return;
+        if (!window.WebChat) {
+          throw new Error("BotFramework WebChat is not loaded.");
+        }
 
-      if (directLine) {
-        // Re-initialising after resetDirectLineConversation(): render into a fresh host
-        // node so the previous WebChat React tree is detached rather than re-rendered.
-        const freshHost = webchatDiv.cloneNode(false);
-        webchatDiv.replaceWith(freshHost);
-        webchatDiv = freshHost;
-      }
-      webchatDiv.innerHTML = "";
-      directLine = window.WebChat.createDirectLine({ secret: DIRECT_LINE_SECRET });
-      // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
-      store = createStore();
-      window.WebChat.renderWebChat({ directLine, store, userID: userId, username: userName }, webchatDiv);
-      bindConnectionStatus(directLine);
-      webChatInitialized = true;
-    }).catch((error) => {
-      webChatInitPromise = null;
-      console.error(error);
-      throw error;
-    });
+        if (directLine) {
+          // Re-initialising after resetDirectLineConversation(): render into a fresh host
+          // node so the previous WebChat React tree is detached rather than re-rendered.
+          const freshHost = webchatDiv.cloneNode(false);
+          webchatDiv.replaceWith(freshHost);
+          webchatDiv = freshHost;
+        }
+        webchatDiv.innerHTML = "";
+        directLine = window.WebChat.createDirectLine({
+          secret: DIRECT_LINE_SECRET,
+        });
+        // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
+        store = createStore();
+        window.WebChat.renderWebChat(
+          { directLine, store, userID: userId, username: userName },
+          webchatDiv,
+        );
+        bindConnectionStatus(directLine);
+        webChatInitialized = true;
+      })
+      .catch((error) => {
+        webChatInitPromise = null;
+        console.error(error);
+        throw error;
+      });
 
     return webChatInitPromise;
   }
@@ -1547,14 +1808,16 @@ import { hydrateIcons } from './icons.js';
     };
 
     if (!conversationId) {
-      conv.conversationIdPending = waitForDirectLineConversationId().then((id) => {
-        if (id && !conv.conversationId) {
-          conv.conversationId = id;
-          conv.id = id;
-        }
-        delete conv.conversationIdPending;
-        return conv.conversationId;
-      });
+      conv.conversationIdPending = waitForDirectLineConversationId().then(
+        (id) => {
+          if (id && !conv.conversationId) {
+            conv.conversationId = id;
+            conv.id = id;
+          }
+          delete conv.conversationIdPending;
+          return conv.conversationId;
+        },
+      );
     }
 
     directLineConversationClaimed = true;
@@ -1573,7 +1836,10 @@ import { hydrateIcons } from './icons.js';
       directLineConversationClaimed = true;
       const capturedEmail = extractEmailFromText(activity.text);
       if (capturedEmail) {
-        applyUserEmailIdentity(capturedEmail, { persist: true, reloadHistory: true });
+        applyUserEmailIdentity(capturedEmail, {
+          persist: true,
+          reloadHistory: true,
+        });
       }
     }
 
@@ -1584,14 +1850,18 @@ import { hydrateIcons } from './icons.js';
     currentConversation.messages.push(activity);
     currentConversation.timestamp = Date.now();
     if (activity.from.role === "user") {
-      currentConversation.email = currentUserEmail || currentConversation.email || "";
+      currentConversation.email =
+        currentUserEmail || currentConversation.email || "";
     } else if (!currentConversation.previewSet) {
       currentConversation.preview = getActivityPreview(activity);
       currentConversation.previewSet = true;
     }
     updateHeaderForCurrentView();
 
-    if (currentConversation.messages.length === 1 && !body.querySelector(".cw-date-sep")) {
+    if (
+      currentConversation.messages.length === 1 &&
+      !body.querySelector(".cw-date-sep")
+    ) {
       const dateSep = document.createElement("div");
       dateSep.className = "cw-date-sep";
       dateSep.innerHTML = "<span>Today</span>";
@@ -1605,8 +1875,10 @@ import { hydrateIcons } from './icons.js';
     if (activity.from.role === "user") {
       showLoading();
       lastUserMsgEl = body.querySelector(".cw-user-msg:last-of-type");
+      clearRatingIdleTimer();
     } else {
       hideLoading();
+      scheduleRatingIdle();
     }
 
     queueConversationSave(currentConversation, true);
@@ -1614,8 +1886,13 @@ import { hydrateIcons } from './icons.js';
   }
 
   async function loadConversation(conv) {
+    clearRatingIdleTimer();
+    if (conv !== currentConversation) clearLiveAgentEmailGate();
     if (liveSession) {
-      if (getConversationKey(conv) === getConversationKey(liveSession.conversation)) {
+      if (
+        getConversationKey(conv) ===
+        getConversationKey(liveSession.conversation)
+      ) {
         // Same conversation (possibly a reloaded copy): keep the live object and session.
         conv = liveSession.conversation;
       } else {
@@ -1627,6 +1904,15 @@ import { hydrateIcons } from './icons.js';
     chatStarted = conv.messages.length > 0;
     clearMessages();
     updateHeaderForCurrentView();
+
+    // Restore live agent session if this conversation has an active live chat
+    const liveStatus = conv.liveAgent?.status;
+    if ((liveStatus === "pending" || liveStatus === "assigned") && !liveSession) {
+      // Small delay to ensure UI is ready, then restore the live session
+      setTimeout(() => {
+        void restoreLiveAgentSession(conv);
+      }, 100);
+    }
 
     if (conv.messages.length) {
       const dateSep = document.createElement("div");
@@ -1647,7 +1933,9 @@ import { hydrateIcons } from './icons.js';
       conv.messages.forEach((activity) => {
         store.dispatch({
           type: "DIRECT_LINE/INCOMING_ACTIVITY",
-          payload: { activity: { ...activity, channelData: { isReplay: true } } },
+          payload: {
+            activity: { ...activity, channelData: { isReplay: true } },
+          },
         });
       });
     }, 300);
@@ -1656,6 +1944,8 @@ import { hydrateIcons } from './icons.js';
   }
 
   function startNewConversation() {
+    clearRatingIdleTimer();
+    clearLiveAgentEmailGate();
     closeLiveAgent();
     hideLoading();
     // The one deliberate reset: the next message creates a new conversation (and a new
@@ -1680,7 +1970,11 @@ import { hydrateIcons } from './icons.js';
     closeLiveAgent();
     await loadConversationsFromSharePoint();
     renderHistoryList();
-    if (currentConversation || chatStarted || body.querySelector(".cw-user-msg, .cw-copilot-msg")) {
+    if (
+      currentConversation ||
+      chatStarted ||
+      body.querySelector(".cw-user-msg, .cw-copilot-msg")
+    ) {
       return;
     }
     if (conversations.length > 0) {
@@ -1713,7 +2007,9 @@ import { hydrateIcons } from './icons.js';
 
     Array.from(fileList).forEach((file) => {
       if (file.size > MAX_FILE_SIZE) {
-        showToast(`"${file.name}" is too large (${formatFileSize(file.size)}). Max 4 MB.`);
+        showToast(
+          `"${file.name}" is too large (${formatFileSize(file.size)}). Max 4 MB.`,
+        );
         return;
       }
 
@@ -1798,6 +2094,34 @@ import { hydrateIcons } from './icons.js';
       await handleLiveAgentSend();
       return;
     }
+
+    // LIVE AGENT EMAIL GATE: the email goes to the bot, which checks the customer and
+    // runs OTP verification. Escalation starts once it replies "Welcome back!".
+    const emailGate = getActiveLiveAgentEmailGate();
+    if (emailGate?.step === "email") {
+      const text = input.value.trim();
+
+      if (!text) return;
+
+      if (!extractEmailFromText(text)) {
+        appendLiveNotice("Please enter a valid email address.");
+        input.focus();
+        return;
+      }
+      if (isWaitingForResponse) {
+        showToast("Please wait for the current response to finish.");
+        return;
+      }
+
+      emailGate.step = "verifying";
+      input.value = "";
+      input.placeholder = defaultInputPlaceholder;
+      // handleNewMessage picks the email up from the outgoing message.
+      sendMessage(text, { liveAgentEmailGate: true });
+      updateSendButton();
+      input.focus();
+      return;
+    }
     // ---- Direct Line (AI bot) path below: unchanged ----
     if (isWaitingForResponse) {
       showToast("Please wait for the current response to finish.");
@@ -1837,7 +2161,12 @@ import { hydrateIcons } from './icons.js';
           payload: filesToSend.map((item) => item.file),
         });
       } else if (text) {
-        sendMessage(text);
+        // While a live-agent email check is in progress (OTP, resend, re-entered email),
+        // keep telling the bot the request came from "Talk to a live agent".
+        sendMessage(
+          text,
+          getActiveLiveAgentEmailGate() ? { liveAgentEmailGate: true } : {},
+        );
       }
     } catch {
       hideLoading();
@@ -1854,7 +2183,9 @@ import { hydrateIcons } from './icons.js';
 
   function updateSendButton() {
     if (!sendBtn || !input) return;
-    const canSend = !isWaitingForResponse && (input.value.trim().length > 0 || pendingFiles.length > 0);
+    const canSend =
+      !isWaitingForResponse &&
+      (input.value.trim().length > 0 || pendingFiles.length > 0);
     sendBtn.disabled = !canSend;
   }
 
@@ -1890,7 +2221,6 @@ import { hydrateIcons } from './icons.js';
   }
 
   function openWidget() {
-    closeLiveAgent();
     isOpen = true;
     widget.classList.add("is-visible");
     fab.classList.add("is-open");
@@ -1906,7 +2236,6 @@ import { hydrateIcons } from './icons.js';
   }
 
   function closeWidget() {
-    closeLiveAgent();
     isOpen = false;
     closeSidebar();
     widget.classList.remove("is-visible");
@@ -1915,11 +2244,281 @@ import { hydrateIcons } from './icons.js';
     fab.setAttribute("aria-expanded", "false");
   }
 
+  /* ================= Conversation rating ================= */
+
+  function countRealUserMessages(conv) {
+    return (conv?.messages || []).filter((m) => {
+      const text = (m.text || "").trim();
+      return (
+        m.from?.role === "user" &&
+        text &&
+        text !== "Technical Support" &&
+        text !== "Sales Support"
+      );
+    }).length;
+  }
+
+  function canOfferRating(conv) {
+    return (
+      Boolean(conv) &&
+      !conv.rating &&
+      !conv.ratingCardShown &&
+      countRealUserMessages(conv) >= 2
+    );
+  }
+
+  function clearRatingIdleTimer() {
+    clearTimeout(ratingIdleTimer);
+    ratingIdleTimer = null;
+  }
+
+  // Soft fallback: no activity after a bot reply, so offer the rating inline once.
+  function scheduleRatingIdle() {
+    clearRatingIdleTimer();
+    const conv = currentConversation;
+    if (!canOfferRating(conv)) return;
+    ratingIdleTimer = setTimeout(() => {
+      if (
+        conv === currentConversation &&
+        isOpen &&
+        !liveAgentActive &&
+        canOfferRating(conv)
+      ) {
+        showRatingCard(conv, "idle");
+      }
+    }, RATING_IDLE_MS);
+  }
+
+  function handleRatingRequest(value) {
+    if (isReplayingHistory || liveAgentActive) return;
+    showRatingCard(
+      currentConversation,
+      "bot",
+      typeof value?.prompt === "string" ? value.prompt : "",
+    );
+  }
+
+  // Hidden Direct Line event. The bot writes Rating / FeedbackComment on the item.
+  function sendRatingEvent(conv, rating, comment) {
+    if (!store) return false;
+    const value = { rating };
+    if (comment) value.comment = comment;
+    if (conv.conversationId) value.conversationId = conv.conversationId;
+    store.dispatch({
+      type: "WEB_CHAT/SEND_EVENT",
+      payload: { name: "conversation/rating", value },
+    });
+    return true;
+  }
+
+  function submitRating(conv, rating, comment) {
+    if (!sendRatingEvent(conv, rating, comment)) {
+      showToast("Could not send your rating. Please try again.");
+      return false;
+    }
+    conv.rating = {
+      value: rating,
+      comment: comment || (conv.rating && conv.rating.comment) || "",
+      timestamp: new Date().toISOString(),
+    };
+    queueConversationSave(conv, true);
+    return true;
+  }
+
+  function showRatingCard(conv, reason, promptText) {
+    if (
+      !conv ||
+      conv !== currentConversation ||
+      conv.rating ||
+      conv.ratingCardShown
+    )
+      return;
+    if (body.querySelector(".cw-rating-card")) return;
+
+    conv.ratingCardShown = true;
+    queueConversationSave(conv, true); // persists ratingPrompted so it is never asked again
+    clearRatingIdleTimer();
+    hideEmptyState();
+
+    const prompt =
+      (promptText || "").trim() ||
+      (reason === "live-ended"
+        ? "How was your chat with our support team?"
+        : "How was your experience today?");
+
+    const card = document.createElement("div");
+    card.className = "cw-rating-card";
+    card.setAttribute("role", "group");
+    card.setAttribute("aria-label", "Rate this conversation");
+    card.innerHTML = `
+      <div class="cw-rating-title">${escapeHtml(prompt)}</div>
+      <div class="cw-rating-stars" role="radiogroup" aria-label="Star rating">
+        ${[1, 2, 3, 4, 5]
+          .map(
+            (n) =>
+              `<button type="button" class="cw-rating-star" role="radio" aria-checked="false" aria-label="${n} star${n > 1 ? "s" : ""}" data-value="${n}">&#9733;</button>`,
+          )
+          .join("")}
+      </div>
+      <div class="cw-rating-labels"><span>Poor</span><span>Excellent</span></div>
+      <div class="cw-rating-comment" hidden>
+        <label class="cw-rating-comment-label">What could we improve? (optional)</label>
+        <textarea class="cw-rating-textarea" rows="2" maxlength="1000"></textarea>
+        <div class="cw-rating-actions">
+          <button type="button" class="cw-rating-submit">Send</button>
+          <button type="button" class="cw-rating-skip">Skip</button>
+        </div>
+      </div>
+    `;
+
+    const stars = Array.from(card.querySelectorAll(".cw-rating-star"));
+    const commentBox = card.querySelector(".cw-rating-comment");
+    const textarea = card.querySelector(".cw-rating-textarea");
+    let selected = 0;
+
+    const paint = (n) =>
+      stars.forEach((s, i) => s.classList.toggle("is-active", i < n));
+    const finish = () => {
+      card.innerHTML = `<div class="cw-rating-thanks">Thanks for your feedback!</div>`;
+    };
+
+    stars.forEach((star) => {
+      const value = Number(star.dataset.value);
+      star.addEventListener("mouseenter", () => paint(value));
+      star.addEventListener("mouseleave", () => paint(selected));
+      star.addEventListener("click", () => {
+        if (!submitRating(conv, value)) return; // saved right away, even if no comment follows
+        selected = value;
+        stars.forEach((s, i) =>
+          s.setAttribute("aria-checked", String(i + 1 === selected)),
+        );
+        paint(selected);
+        commentBox.hidden = false;
+        textarea.focus();
+        scrollToBottom();
+      });
+    });
+
+    card.querySelector(".cw-rating-submit").addEventListener("click", () => {
+      const comment = textarea.value.trim();
+      if (comment && !submitRating(conv, selected, comment)) return;
+      finish();
+    });
+    card.querySelector(".cw-rating-skip").addEventListener("click", finish);
+
+    body.appendChild(card);
+    scrollToBottom();
+  }
+
   /* ================= Live agent (Node API + Azure SignalR) ================= */
 
   let liveStatusEl = null;
 
-  async function liveApiFetch(path, { method = "GET", body: payload, token = customerSessionToken, keepalive = false } = {}) {
+  // Email verification before a live-agent request. The bot owns the check (known
+  // customer + OTP) and keeps that state per Direct Line conversation, so ours is keyed
+  // by the Direct Line conversation id too.
+  //   step "email":     waiting for the user to type their email (validated locally)
+  //   step "verifying": the email went to the bot; the user answers its prompts (OTP,
+  //                     resend, another email) through the normal bot path
+  let liveAgentEmailGate = null; // { conversationId, step }
+  let verifiedBotConversationId = "";
+  let acceptedNewCustomerConversationId = "";
+  const defaultInputPlaceholder = input?.placeholder || "Ask anything";
+
+  function isEmailVerifiedForLiveAgent() {
+    if (!currentUserEmail) return false;
+    const dlId = directLine?.conversationId;
+    return !!dlId && dlId === verifiedBotConversationId;
+  }
+
+  function hasAcceptedNewCustomerEmailForLiveAgent() {
+    const dlId = directLine?.conversationId;
+    return !!dlId && dlId === acceptedNewCustomerConversationId && !!currentUserEmail;
+  }
+
+  function applyBotEmailIdentity(email, { verified, knownCustomer } = {}) {
+    const normalized = normalizeEmail(email);
+    const dlId = directLine?.conversationId;
+    if (!normalized || !dlId) return;
+
+    // Persist the candidate email for recent-conversation lookup, independently
+    // of whether the bot verified it with OTP.
+    applyUserEmailIdentity(normalized, { persist: true, reloadHistory: true });
+    setStoredUserEmail(normalized);
+    if (currentConversation) {
+      currentConversation.email = normalized;
+      queueConversationSave(currentConversation, true);
+    }
+
+    if (verified === true && knownCustomer === true) {
+      verifiedBotConversationId = dlId;
+      acceptedNewCustomerConversationId = "";
+    } else if (verified === false && knownCustomer === false) {
+      acceptedNewCustomerConversationId = dlId;
+      verifiedBotConversationId = "";
+    }
+  }
+
+  function handleConversationEmailIdentity(value) {
+    if (!value || typeof value !== "object") return;
+    applyBotEmailIdentity(value.email, {
+      verified: value.verified === true,
+      knownCustomer: value.knownCustomer === true,
+    });
+  }
+
+  function getActiveLiveAgentEmailGate() {
+    const dlId = directLine?.conversationId;
+    if (!liveAgentEmailGate || !dlId) return null;
+    return liveAgentEmailGate.conversationId === dlId ? liveAgentEmailGate : null;
+  }
+
+  function clearLiveAgentEmailGate() {
+    liveAgentEmailGate = null;
+    if (input) input.placeholder = defaultInputPlaceholder;
+  }
+
+  // The bot replies "Welcome back!" or "Welcome back, <name>!" once the OTP is verified.
+  function isBotEmailVerifiedReply(text) {
+    return /^welcome back(?:,[^!\n]{1,100})?!?$/i.test(String(text || "").trim());
+  }
+
+  // Runs when the bot clears the email for live chat: OTP verified ("Welcome back!",
+  // including the bot's own 5-message gate) or a new, unregistered email accepted
+  // ("liveAgent/emailAccepted" event, which carries the email). A later
+  // "Talk to a live agent" in the same conversation doesn't ask again.
+  function handleBotEmailAccepted(email) {
+    const dlId = directLine?.conversationId;
+    if (email) {
+      applyBotEmailIdentity(email, { verified: false, knownCustomer: false });
+    }
+    if (!dlId || !currentUserEmail) return;
+
+    if (!getActiveLiveAgentEmailGate()) return;
+    clearLiveAgentEmailGate();
+    void startLiveAgentEscalation();
+  }
+
+  function handleBotEmailVerified() {
+    const dlId = directLine?.conversationId;
+    if (!dlId || !currentUserEmail) return;
+    verifiedBotConversationId = dlId;
+    acceptedNewCustomerConversationId = "";
+
+    if (!getActiveLiveAgentEmailGate()) return;
+    clearLiveAgentEmailGate();
+    void startLiveAgentEscalation();
+  }
+
+  async function liveApiFetch(
+    path,
+    {
+      method = "GET",
+      body: payload,
+      token = customerSessionToken,
+      keepalive = false,
+    } = {},
+  ) {
     const headers = { Accept: "application/json" };
     if (payload !== undefined) headers["Content-Type"] = "application/json";
     if (token) headers.Authorization = `Bearer ${token}`;
@@ -1932,7 +2531,9 @@ import { hydrateIcons } from './icons.js';
     });
     const data = await response.json().catch(() => null);
     if (!response.ok) {
-      const error = new Error(data?.error || `Request failed (${response.status})`);
+      const error = new Error(
+        data?.error || `Request failed (${response.status})`,
+      );
       error.status = response.status;
       throw error;
     }
@@ -1951,8 +2552,14 @@ import { hydrateIcons } from './icons.js';
   // reload; sessionStorage keeps it for the life of the tab only.
   function readStoredCustomerSession(conversationId) {
     try {
-      const stored = JSON.parse(sessionStorage.getItem(LIVE_SESSION_STORAGE_PREFIX + conversationId) || "null");
-      const token = stored?.conversationId === conversationId ? stored.customerSessionToken : "";
+      const stored = JSON.parse(
+        sessionStorage.getItem(LIVE_SESSION_STORAGE_PREFIX + conversationId) ||
+          "null",
+      );
+      const token =
+        stored?.conversationId === conversationId
+          ? stored.customerSessionToken
+          : "";
       if (token && decodeJwtExpiry(token) > Date.now() + 60_000) return token;
     } catch {
       // Storage blocked or unparseable: fall through to a fresh session.
@@ -1964,7 +2571,7 @@ import { hydrateIcons } from './icons.js';
     try {
       sessionStorage.setItem(
         LIVE_SESSION_STORAGE_PREFIX + conversationId,
-        JSON.stringify({ conversationId, customerSessionToken: token })
+        JSON.stringify({ conversationId, customerSessionToken: token }),
       );
     } catch {
       // Ignore storage failures; the in-memory token still works until reload.
@@ -1974,11 +2581,18 @@ import { hydrateIcons } from './icons.js';
   // Created lazily (first live-agent use), never on page load, so bot-only chats make no
   // calls to the live chat API. The token is tied to one conversationId.
   function ensureCustomerSession(conversationId) {
-    if (!conversationId) return Promise.reject(new Error("conversationId is not available yet"));
-    if (customerSessionToken && customerSessionConversationId === conversationId) {
+    if (!conversationId)
+      return Promise.reject(new Error("conversationId is not available yet"));
+    if (
+      customerSessionToken &&
+      customerSessionConversationId === conversationId
+    ) {
       return Promise.resolve(customerSessionToken);
     }
-    if (customerSessionPromise && customerSessionPromise.conversationId === conversationId) {
+    if (
+      customerSessionPromise &&
+      customerSessionPromise.conversationId === conversationId
+    ) {
       return customerSessionPromise;
     }
 
@@ -1995,7 +2609,8 @@ import { hydrateIcons } from './icons.js';
       token: null,
     })
       .then(async (data) => {
-        if (!data?.token) throw new Error("Session response did not include a token");
+        if (!data?.token)
+          throw new Error("Session response did not include a token");
         customerSessionToken = data.token;
         customerSessionConversationId = conversationId;
         storeCustomerSession(conversationId, data.token);
@@ -2018,7 +2633,10 @@ import { hydrateIcons } from './icons.js';
     try {
       await liveApiFetch("/api/chat/bind", {
         method: "POST",
-        body: { displayName: userName || null, email: currentUserEmail || null },
+        body: {
+          displayName: userName || null,
+          email: currentUserEmail || null,
+        },
       });
     } catch (error) {
       console.warn("Unable to bind live chat session", error);
@@ -2026,7 +2644,8 @@ import { hydrateIcons } from './icons.js';
   }
 
   function ensureSignalRLoaded() {
-    if (window.signalR?.HubConnectionBuilder) return Promise.resolve(window.signalR);
+    if (window.signalR?.HubConnectionBuilder)
+      return Promise.resolve(window.signalR);
     if (signalRLoadPromise) return signalRLoadPromise;
 
     signalRLoadPromise = new Promise((resolve, reject) => {
@@ -2039,7 +2658,8 @@ import { hydrateIcons } from './icons.js';
         window.signalR?.HubConnectionBuilder
           ? resolve(window.signalR)
           : reject(new Error("SignalR client failed to initialise"));
-      script.onerror = () => reject(new Error("Unable to load the SignalR client"));
+      script.onerror = () =>
+        reject(new Error("Unable to load the SignalR client"));
       document.head.appendChild(script);
     }).catch((error) => {
       signalRLoadPromise = null;
@@ -2058,13 +2678,17 @@ import { hydrateIcons } from './icons.js';
   function getLastUserMessageText(conv) {
     const messages = conv?.messages || [];
     for (let i = messages.length - 1; i >= 0; i--) {
-      const text = messages[i]?.from?.role === "user" ? (messages[i].text || "").trim() : "";
+      const text =
+        messages[i]?.from?.role === "user"
+          ? (messages[i].text || "").trim()
+          : "";
       if (text) return text;
     }
     return "";
   }
 
   function setHeaderLiveIndicator(visible, text = "Live agent") {
+    if (endLiveBtn) endLiveBtn.hidden = !visible;
     const headerIndicator = document.querySelector(".cw-header-live-indicator");
     if (!headerIndicator) return;
     headerIndicator.hidden = !visible;
@@ -2082,27 +2706,73 @@ import { hydrateIcons } from './icons.js';
         <div class="cw-live-agent-card-header">
           <span class="cw-live-dot" aria-hidden="true"></span>
           <span class="cw-live-text"></span>
-          <button class="cw-live-agent-close cw-icon-btn" type="button" aria-label="End live chat" title="End live chat">
-            <span class="cw-fluent-icon cw-icon-close" aria-hidden="true"></span>
-          </button>
         </div>
       `;
-      hydrateIcons(liveStatusEl);
-      liveStatusEl.querySelector(".cw-live-agent-close")?.addEventListener("click", closeLiveAgent);
     }
     liveStatusEl.querySelector(".cw-live-text").textContent = text;
-    if (!liveStatusEl.isConnected) {
-      hideEmptyState();
-      body.appendChild(liveStatusEl);
-    }
+    if (!liveStatusEl.isConnected) hideEmptyState();
+    // Keep the status as the latest item in the thread.
+    if (body.lastElementChild !== liveStatusEl) body.appendChild(liveStatusEl);
     setHeaderLiveIndicator(true);
     scrollToBottom();
   }
 
-  function removeLiveStatusUi() {
+  // Removes only the in-thread card; the header indicator and End button stay for the session.
+  function hideLiveStatusCard() {
     liveStatusEl?.remove();
     liveStatusEl = null;
+  }
+
+  function removeLiveStatusUi() {
+    hideLiveStatusCard();
     setHeaderLiveIndicator(false);
+  }
+
+  const LIVE_CONNECTED_STATUS_MS = 3000;
+  const LIVE_TYPING_IDLE_MS = 3000;
+
+  // Typing beats the session status; with neither, the card is hidden.
+  function renderLiveStatus(session) {
+    if (!isLiveSessionCurrent(session)) return;
+    if (session.typingName) {
+      showLiveStatus(`${session.typingName} is typing…`);
+    } else if (session.statusText) {
+      showLiveStatus(session.statusText);
+    } else {
+      hideLiveStatusCard();
+      setHeaderLiveIndicator(true);
+    }
+  }
+
+  // transient statuses (e.g. "Connected to …") disappear after a short delay.
+  function setLiveStatus(session, text, { transient = false } = {}) {
+    if (!isLiveSessionCurrent(session)) return;
+    clearTimeout(session.statusHideTimer);
+    session.statusHideTimer = null;
+    session.statusText = text;
+    if (transient) {
+      session.statusHideTimer = setTimeout(() => {
+        session.statusHideTimer = null;
+        if (session.statusText !== text) return;
+        session.statusText = null;
+        renderLiveStatus(session);
+      }, LIVE_CONNECTED_STATUS_MS);
+    }
+    renderLiveStatus(session);
+  }
+
+  function setAgentTyping(session, name) {
+    clearTimeout(session.typingTimer);
+    session.typingTimer = null;
+    session.typingName = name || null;
+    if (name) {
+      session.typingTimer = setTimeout(() => {
+        session.typingTimer = null;
+        session.typingName = null;
+        renderLiveStatus(session);
+      }, LIVE_TYPING_IDLE_MS);
+    }
+    renderLiveStatus(session);
   }
 
   function appendLiveNotice(text) {
@@ -2134,8 +2804,14 @@ import { hydrateIcons } from './icons.js';
 
     const conv = session.conversation;
     if (conv.messages.some((m) => m.id === key)) return;
+    // The agent stopped typing once the message arrives.
+    if (session.typingName) setAgentTyping(session, null);
     if (conv.liveAgent?.status === "pending") {
-      setLiveAgentStatus(conv, "assigned", { assignedAgentName: message.senderName || undefined });
+      // A message can beat AgentJoined; treat it as the join so the "waiting" status clears.
+      markAgentAssigned(session, {
+        agentName: message.senderName,
+        announce: false,
+      });
     }
     const agentEmail = conv.liveAgent?.assignedAgentEmail || "";
     const activity = {
@@ -2145,7 +2821,10 @@ import { hydrateIcons } from './icons.js';
       attachments: [],
       from: {
         id: agentEmail || "agent",
-        name: message.senderName || conv.liveAgent?.assignedAgentName || "Support agent",
+        name:
+          message.senderName ||
+          conv.liveAgent?.assignedAgentName ||
+          "Support agent",
         role: "agent",
         ...(agentEmail ? { email: agentEmail } : {}),
       },
@@ -2165,13 +2844,24 @@ import { hydrateIcons } from './icons.js';
     const alreadyAssigned = conv.liveAgent?.status === "assigned";
     const name = agentName || conv.liveAgent?.assignedAgentName || "";
 
-    if (!alreadyAssigned || (agentEmail && conv.liveAgent?.assignedAgentEmail !== agentEmail)) {
+    if (
+      !alreadyAssigned ||
+      (agentEmail && conv.liveAgent?.assignedAgentEmail !== agentEmail)
+    ) {
       setLiveAgentStatus(conv, "assigned", {
         assignedAgentName: name || undefined,
-        assignedAgentEmail: agentEmail || conv.liveAgent?.assignedAgentEmail || undefined,
+        assignedAgentEmail:
+          agentEmail || conv.liveAgent?.assignedAgentEmail || undefined,
       });
     }
-    showLiveStatus(name ? `Connected to ${name}` : "Connected to a support agent");
+    // Only on the actual join: later syncs must not re-show the "connected" status.
+    if (!alreadyAssigned) {
+      setLiveStatus(
+        session,
+        name ? `Connected to ${name}` : "Connected to a support agent",
+        { transient: true },
+      );
+    }
     if (announce && !alreadyAssigned && currentConversation === conv) {
       appendLiveNotice(`${name || "A support agent"} joined the chat.`);
     }
@@ -2184,7 +2874,7 @@ import { hydrateIcons } from './icons.js';
     try {
       const data = await liveApiFetch(
         `/api/escalation/conversations/${encodeURIComponent(session.conversationId)}`,
-        { token: session.token }
+        { token: session.token },
       );
       if (!isLiveSessionCurrent(session)) return;
       const record = data?.conversation;
@@ -2213,7 +2903,10 @@ import { hydrateIcons } from './icons.js';
 
     // The API's negotiate route is GET, so negotiate manually and hand the SignalR client
     // the service URL + access token (withUrl(API_BASE_URL) would POST /negotiate).
-    const negotiate = () => liveApiFetch("/api/chat/negotiate?role=customer", { token: session.token });
+    const negotiate = () =>
+      liveApiFetch("/api/chat/negotiate?role=customer", {
+        token: session.token,
+      });
     let negotiated = await negotiate();
     let accessTokenExpiresAt = decodeJwtExpiry(negotiated.accessToken);
 
@@ -2221,7 +2914,10 @@ import { hydrateIcons } from './icons.js';
       .withUrl(negotiated.url, {
         // The service token lasts 1 hour; renegotiate before a reconnect uses a stale one.
         accessTokenFactory: async () => {
-          if (accessTokenExpiresAt && accessTokenExpiresAt < Date.now() + 60_000) {
+          if (
+            accessTokenExpiresAt &&
+            accessTokenExpiresAt < Date.now() + 60_000
+          ) {
             negotiated = await negotiate();
             accessTokenExpiresAt = decodeJwtExpiry(negotiated.accessToken);
           }
@@ -2234,44 +2930,55 @@ import { hydrateIcons } from './icons.js';
 
     // Event names/payloads as emitted by the API (escalationController + signalrRest).
     connection.on("AgentJoined", (payload) => {
-      markAgentAssigned(session, { agentName: payload?.agentName, announce: true });
+      markAgentAssigned(session, {
+        agentName: payload?.agentName,
+        announce: true,
+      });
       void syncLiveConversation(session);
     });
-    connection.on("ReceiveMessage", (message) => {
+    connection.on("ReceiveMessage", async (message) => {
       // The server echoes the customer's own messages to the group; those are already
       // rendered locally.
       if (message?.senderType !== "agent") return;
+
+      const ringtone = new Audio("./chatwidget/chatRecieved.mp3");
+      ringtone.volume = 0.7;
       recordAgentMessage(session, message);
+      ringtone.play();
+      ringtone.stop();
     });
+
+    // Each Typing event keeps the indicator up; it clears after a quiet period
+    // or as soon as the agent's message arrives.
     connection.on("Typing", (payload) => {
-      if (payload?.senderType !== "agent" || !isLiveSessionCurrent(session) || !liveStatusEl) return;
+      if (payload?.senderType !== "agent" || !isLiveSessionCurrent(session))
+        return;
       const name = session.conversation.liveAgent?.assignedAgentName || "Agent";
-      const label = liveStatusEl.querySelector(".cw-live-text");
-      const previous = label.textContent;
-      label.textContent = `${name} is typing…`;
-      clearTimeout(session.typingTimer);
-      session.typingTimer = setTimeout(() => {
-        if (liveStatusEl && label.textContent === `${name} is typing…`) label.textContent = previous;
-      }, 3000);
+      setAgentTyping(session, name);
     });
     connection.on("ChatEnded", () => handleServerChatEnded(session));
     connection.onreconnecting(() => {
-      if (isLiveSessionCurrent(session)) showLiveStatus("Reconnecting to live chat…");
+      setAgentTyping(session, null);
+      setLiveStatus(session, "Reconnecting to live chat…");
     });
     connection.onreconnected(() => {
       if (!isLiveSessionCurrent(session)) return;
       const name = session.conversation.liveAgent?.assignedAgentName;
-      showLiveStatus(
-        session.conversation.liveAgent?.status === "assigned"
-          ? `Connected to ${name || "a support agent"}`
-          : "Waiting for an agent to join…"
-      );
+      if (session.conversation.liveAgent?.status === "assigned") {
+        setLiveStatus(session, `Connected to ${name || "a support agent"}`, {
+          transient: true,
+        });
+      } else {
+        setLiveStatus(session, "Waiting for an agent to join…");
+      }
       void syncLiveConversation(session);
     });
     connection.onclose(() => {
-      if (isLiveSessionCurrent(session)) {
-        showLiveStatus("Live chat connection lost. Close and try again if the agent doesn't reply.");
-      }
+      setAgentTyping(session, null);
+      setLiveStatus(
+        session,
+        "Live chat connection lost. Close and try again if the agent doesn't reply.",
+      );
     });
 
     session.connection = connection;
@@ -2280,11 +2987,14 @@ import { hydrateIcons } from './icons.js';
 
   function postLiveEnd(session) {
     if (!session?.conversationId || !session.token) return Promise.resolve();
-    return liveApiFetch(`/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/end`, {
-      method: "POST",
-      token: session.token,
-      keepalive: true,
-    }).catch((error) => {
+    return liveApiFetch(
+      `/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/end`,
+      {
+        method: "POST",
+        token: session.token,
+        keepalive: true,
+      },
+    ).catch((error) => {
       console.warn("Unable to end live chat", error);
     });
   }
@@ -2299,12 +3009,13 @@ import { hydrateIcons } from './icons.js';
     liveSession = null;
     liveAgentActive = false;
     clearTimeout(session.typingTimer);
+    clearTimeout(session.statusHideTimer);
 
     if (notifyServer && session.escalated) void postLiveEnd(session);
 
     const connection = session.connection;
     session.connection = null;
-    if (connection) void connection.stop().catch(() => { });
+    if (connection) void connection.stop().catch(() => {});
 
     removeLiveStatusUi();
     if (session.escalated) setLiveAgentStatus(session.conversation, "closed");
@@ -2312,8 +3023,12 @@ import { hydrateIcons } from './icons.js';
 
   function handleServerChatEnded(session) {
     if (!isLiveSessionCurrent(session)) return;
-    if (currentConversation === session.conversation) appendLiveNotice("The live chat has ended.");
+    const conv = session.conversation;
+    const hadAgent = conv.liveAgent?.status === "assigned"; // read before it flips to "closed"
+    if (currentConversation === conv)
+      appendLiveNotice("The live chat has ended.");
     endLiveAgentSession({ notifyServer: false });
+    if (hadAgent) showRatingCard(conv, "live-ended");
   }
 
   function showFallbackForm(conv, token, lastMessage) {
@@ -2356,7 +3071,9 @@ import { hydrateIcons } from './icons.js';
       errorEl.hidden = !message;
     };
 
-    form.querySelector(".cw-live-fallback-cancel").addEventListener("click", () => form.remove());
+    form
+      .querySelector(".cw-live-fallback-cancel")
+      .addEventListener("click", () => form.remove());
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const name = form.elements.name.value.trim();
@@ -2381,7 +3098,9 @@ import { hydrateIcons } from './icons.js';
         });
         form.remove();
         if (currentConversation === conv) {
-          appendLiveNotice(`Thanks${name ? `, ${name}` : ""}. We've received your details and will contact you at ${email}.`);
+          appendLiveNotice(
+            `Thanks${name ? `, ${name}` : ""}. We've received your details and will contact you at ${email}.`,
+          );
         }
         setLiveAgentStatus(conv, "fallback");
         applyUserEmailIdentity(email, { persist: true, reloadHistory: true });
@@ -2398,7 +3117,53 @@ import { hydrateIcons } from './icons.js';
     form.elements[form.elements.email.value ? "query" : "email"].focus();
   }
 
+  async function requestLiveAgentEmail() {
+    // The email is sent to the bot, so Direct Line must be up and its id known.
+    try {
+      await ensureWebChatInitialized();
+    } catch {
+      showToast("Chat is still loading. Please try again.");
+      return;
+    }
+    const conversationId =
+      directLine?.conversationId || (await waitForDirectLineConversationId());
+    if (!conversationId) {
+      showToast("Chat is still loading. Please try again.");
+      return;
+    }
+
+    if (getActiveLiveAgentEmailGate()?.step === "verifying") {
+      appendLiveNotice(
+        "Please complete the email verification above to connect with a live agent.",
+      );
+      input?.focus();
+      return;
+    }
+
+    liveAgentEmailGate = { conversationId, step: "email" };
+    appendLiveNotice(
+      "Before I connect you with a live agent, please enter your work email address.",
+    );
+
+    if (input) {
+      input.placeholder = "Enter your email address...";
+      input.focus();
+    }
+
+    updateSendButton();
+  }
+
   async function startLiveAgentEscalation() {
+    // Existing customers need OTP verification. A bot-accepted new-customer
+    // email is sufficient for live-agent escalation without OTP.
+    if (
+      !liveSession &&
+      !isEmailVerifiedForLiveAgent() &&
+      !hasAcceptedNewCustomerEmailForLiveAgent()
+    ) {
+      await requestLiveAgentEmail();
+      return;
+    }
     if (liveSession) {
       liveStatusEl?.scrollIntoView({ block: "nearest" });
       return;
@@ -2409,7 +3174,9 @@ import { hydrateIcons } from './icons.js';
       return;
     }
     if (currentConversation?.liveAgent?.status === "closed") {
-      appendLiveNotice("The live chat for this conversation has ended. Start a new conversation to talk to an agent again.");
+      appendLiveNotice(
+        "The live chat for this conversation has ended. Start a new conversation to talk to an agent again.",
+      );
       return;
     }
 
@@ -2420,7 +3187,8 @@ import { hydrateIcons } from './icons.js';
       return;
     }
 
-    const conv = currentConversation || createCurrentConversation("Live agent request");
+    const conv =
+      currentConversation || createCurrentConversation("Live agent request");
     const session = {
       conversation: conv,
       conversationId: "",
@@ -2430,13 +3198,19 @@ import { hydrateIcons } from './icons.js';
       ended: false,
       seenMessageIds: new Set(),
       typingTimer: null,
+      typingName: null,
+      statusText: null,
+      statusHideTimer: null,
     };
     liveSession = session;
-    showLiveStatus("Connecting you to a live agent…");
+    setLiveStatus(session, "Connecting you to a live agent…");
 
     try {
-      const conversationId = conv.conversationIdPending ? await conv.conversationIdPending : conv.conversationId;
-      if (!conversationId) throw new Error("Direct Line conversation id is not available");
+      const conversationId = conv.conversationIdPending
+        ? await conv.conversationIdPending
+        : conv.conversationId;
+      if (!conversationId)
+        throw new Error("Direct Line conversation id is not available");
       session.conversationId = conversationId;
       // escalate() creates the HR365CAChats item if it's missing; write ours first so
       // there is exactly one item per ConversationId (and bind finds it).
@@ -2450,7 +3224,14 @@ import { hydrateIcons } from './icons.js';
       const lastMessage = getLastUserMessageText(conv);
       const result = await liveApiFetch("/api/escalation/escalate", {
         method: "POST",
-        body: { lastMessage },
+        // Identity travels with the escalation too: bind may have run before the
+        // email was known, and the agent should see the email, not "Guest User".
+        body: {
+          lastMessage,
+          displayName: userName || null,
+          email: currentUserEmail || null,
+          isAnonymous: !currentUserEmail,
+        },
         token: session.token,
       });
 
@@ -2483,7 +3264,11 @@ import { hydrateIcons } from './icons.js';
 
       liveAgentActive = true;
       hideLoading();
-      showLiveStatus("Waiting for an agent to join…");
+      // syncLiveConversation (or an AgentJoined that already fired) may have shown
+      // "Connected to …"; don't overwrite it with "waiting".
+      if (session.conversation.liveAgent?.status !== "assigned") {
+        setLiveStatus(session, "Waiting for an agent to join…");
+      }
       await syncLiveConversation(session);
     } catch (error) {
       console.error("Live agent escalation failed", error);
@@ -2499,7 +3284,69 @@ import { hydrateIcons } from './icons.js';
       appendLiveNotice(
         error.status === 409
           ? "The live chat for this conversation has ended. Start a new conversation to talk to an agent again."
-          : "We couldn't reach a live agent right now. Please try again in a moment."
+          : "We couldn't reach a live agent right now. Please try again in a moment.",
+      );
+    }
+  }
+
+  // Restore an existing live agent session (on page refresh or conversation switch)
+  // without re-escalating. Used when conversation has liveAgent status "pending" or "assigned".
+  async function restoreLiveAgentSession(conv) {
+    if (liveSession) return; // Already have an active session
+
+    try {
+      await ensureWebChatInitialized();
+    } catch {
+      showToast("Chat is still loading. Please try again.");
+      return;
+    }
+
+    const conversationId = conv.conversationId;
+    if (!conversationId) {
+      console.warn("Cannot restore live session: no conversationId");
+      return;
+    }
+
+    const token = await ensureCustomerSession(conversationId);
+    if (!token) {
+      console.warn("Cannot restore live session: no customer session token");
+      return;
+    }
+
+    const session = {
+      conversation: conv,
+      conversationId,
+      token,
+      connection: null,
+      escalated: true, // Already escalated on server
+      ended: false,
+      seenMessageIds: new Set(),
+      typingTimer: null,
+      typingName: null,
+      statusText: null,
+      statusHideTimer: null,
+    };
+
+    liveSession = session;
+    setLiveStatus(session, "Restoring live chat connection…");
+
+    try {
+      await connectLiveAgent(session);
+      if (!isLiveSessionCurrent(session)) return;
+
+      liveAgentActive = true;
+      hideLoading();
+      // syncLiveConversation will update status to "Connected to ..." or "Waiting..."
+      await syncLiveConversation(session);
+    } catch (error) {
+      console.error("Failed to restore live agent session", error);
+      if (liveSession !== session) return;
+
+      liveSession = null;
+      session.ended = true;
+      removeLiveStatusUi();
+      appendLiveNotice(
+        "Could not restore live chat connection. Please try again.",
       );
     }
   }
@@ -2511,7 +3358,9 @@ import { hydrateIcons } from './icons.js';
     if (!session || !input) return;
 
     if (pendingFiles.length) {
-      showToast("Files can't be sent to a live agent. Please remove the attachment and describe it instead.");
+      showToast(
+        "Files can't be sent to a live agent. Please remove the attachment and describe it instead.",
+      );
       return;
     }
     const text = input.value.trim();
@@ -2519,7 +3368,10 @@ import { hydrateIcons } from './icons.js';
 
     const capturedEmail = extractEmailFromText(text);
     if (capturedEmail) {
-      applyUserEmailIdentity(capturedEmail, { persist: true, reloadHistory: true });
+      applyUserEmailIdentity(capturedEmail, {
+        persist: true,
+        reloadHistory: true,
+      });
     }
 
     input.value = "";
@@ -2545,14 +3397,19 @@ import { hydrateIcons } from './icons.js';
     renderHistoryList(searchInput?.value || "");
 
     try {
-      await liveApiFetch(`/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/message`, {
-        method: "POST",
-        body: { text, clientMessageId },
-        token: session.token,
-      });
+      await liveApiFetch(
+        `/api/escalation/escalate/${encodeURIComponent(session.conversationId)}/message`,
+        {
+          method: "POST",
+          body: { text, clientMessageId },
+          token: session.token,
+        },
+      );
     } catch (error) {
       console.error("Live agent message failed", error);
-      showToast("Your message couldn't be delivered to the agent. Please try again.");
+      showToast(
+        "Your message couldn't be delivered to the agent. Please try again.",
+      );
     }
     input.focus();
   }
@@ -2560,6 +3417,13 @@ import { hydrateIcons } from './icons.js';
   function closeLiveAgent() {
     if (liveSession) endLiveAgentSession();
     removeLiveStatusUi();
+  }
+  // The user clicked "End live chat" in the header.
+  function endLiveChatByUser() {
+    const conv = liveSession?.conversation;
+    const hadAgent = conv?.liveAgent?.status === "assigned";
+    closeLiveAgent();
+    if (conv && hadAgent) showRatingCard(conv, "live-ended");
   }
 
   function toggleWidget() {
@@ -2612,12 +3476,13 @@ import { hydrateIcons } from './icons.js';
         const touch = e.touches[0];
         onDragStart(touch.clientX, touch.clientY);
       },
-      { passive: true }
+      { passive: true },
     );
   }
 
   fab.addEventListener("click", toggleWidget);
   expandBtn?.addEventListener("click", toggleExpand);
+  endLiveBtn?.addEventListener("click", endLiveChatByUser);
   sidebarToggleBtn?.addEventListener("click", toggleSidebar);
   sidebarBackdrop?.addEventListener("click", closeSidebar);
   sendBtn?.addEventListener("click", handleSend);
@@ -2625,7 +3490,7 @@ import { hydrateIcons } from './icons.js';
   fileInput?.addEventListener("change", () => {
     if (fileInput.files?.length) addPendingFiles(fileInput.files);
   });
-  newChatBtn?.addEventListener("click", closeWidget);
+  newChatBtn?.addEventListener("click", () => closeWidget());
   sidebarNewChatBtn?.addEventListener("click", () => {
     startNewConversation();
 
@@ -2636,7 +3501,9 @@ import { hydrateIcons } from './icons.js';
     }
   });
 
-  searchInput?.addEventListener("input", () => renderHistoryList(searchInput.value));
+  searchInput?.addEventListener("input", () =>
+    renderHistoryList(searchInput.value),
+  );
   quickReplyBtns.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const chip = btn.dataset.chip;
@@ -2702,7 +3569,9 @@ import { hydrateIcons } from './icons.js';
     }
   });
 
-  document.addEventListener("mousemove", (e) => onDragMove(e.clientX, e.clientY));
+  document.addEventListener("mousemove", (e) =>
+    onDragMove(e.clientX, e.clientY),
+  );
   document.addEventListener("mouseup", onDragEnd);
   document.addEventListener(
     "touchmove",
@@ -2711,7 +3580,7 @@ import { hydrateIcons } from './icons.js';
       const touch = e.touches[0];
       onDragMove(touch.clientX, touch.clientY);
     },
-    { passive: true }
+    { passive: true },
   );
   document.addEventListener("touchend", onDragEnd);
 
@@ -2748,14 +3617,14 @@ import { hydrateIcons } from './icons.js';
   void loadConversationsFromSharePoint();
   if (window.requestIdleCallback) {
     window.requestIdleCallback(() => {
-      void ensureWebChatInitialized().catch(() => { });
+      void ensureWebChatInitialized().catch(() => {});
     });
   } else {
     setTimeout(() => {
-      void ensureWebChatInitialized().catch(() => { });
+      void ensureWebChatInitialized().catch(() => {});
     }, 1000);
   }
-  // Public API lets an external page control the widget.  
+  // Public API lets an external page control the widget.
   window.CopilotWidget = {
     open() {
       openWidget();

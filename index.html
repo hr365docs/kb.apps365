@@ -946,13 +946,13 @@
             <button id="cw-move-btn" class="cw-my-btn cw-compact-only" type="button" aria-label="Assistant">
               <img class="cw-header-logo" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="Apps365">
             </button>
-            <div class="cw-header-live-indicator" hidden>
-              <span class="cw-live-dot" aria-hidden="true"></span>
-              <span class="cw-live-text">Connected to live agent</span>
-            </div>
             <span class="cw-header-copy">
               <span id="cw-header-title" class="cw-header-title">Apps 365 AI Assistant</span>
               <span id="cw-header-subtitle" class="cw-header-subtitle">Your recent conversations</span>
+              <div class="cw-header-live-indicator" hidden>
+                <span class="cw-live-dot" aria-hidden="true"></span>
+                <span class="cw-live-text">Connected to live agent</span>
+              </div>
             </span>
           </div>
           <!-- <div class="cw-header-actions">
@@ -965,6 +965,14 @@
             </button>
           </div> -->
 <div class="cw-header-actions">
+  <button id="cw-end-live-btn" class="cw-live-agent-end-btn" type="button" aria-label="End live chat" hidden>
+    <span class="cw-end-label-short" aria-hidden="true">End</span>
+    <span class="cw-end-label-full" aria-hidden="true">End Live Chat</span>
+  </button>
+  <div class="cw-header-live-indicator cw-expanded-live-indicator" hidden>
+    <span class="cw-live-dot" aria-hidden="true"></span>
+    <span class="cw-live-text">Connected to live agent</span>
+  </div>
   <button id="cw-expand-btn" class="cw-icon-btn" type="button" aria-label="Expand chat">
     <span class="cw-fluent-icon cw-icon-expand" aria-hidden="true"></span>
     <span class="cw-fluent-icon cw-icon-collapse" aria-hidden="true"></span>

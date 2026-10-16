@@ -299,7 +299,17 @@ body {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
-    margin-left: 8px;
+    margin-top: 4px;
+    align-self: flex-start;
+}
+
+/* Expanded view live indicator - positioned in header actions */
+.cw-expanded-live-indicator {
+    display: none;
+}
+.cw-widget.is-expanded .cw-expanded-live-indicator {
+    display: inline-flex;
+    margin-right: 8px;
 }
 .cw-live-dot {
     width: 8px;
@@ -311,6 +321,52 @@ body {
 .cw-live-text {
     white-space: nowrap;
 }
+
+/* Matches the header Minimize/Expand button (.cw-icon-btn + expanded #cw-expand-btn) */
+.cw-live-agent-end-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border-radius: 4px;
+  height: 30px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: 500 12px var(--cw-font);
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+
+.cw-live-agent-end-btn[hidden] {
+  display: none;
+}
+
+/* Shows "End" by default and "End Live Chat" on hover/keyboard focus */
+.cw-live-agent-end-btn .cw-end-label-full {
+  display: none;
+}
+.cw-live-agent-end-btn:hover .cw-end-label-short,
+.cw-live-agent-end-btn:focus-visible .cw-end-label-short {
+  display: none;
+}
+.cw-live-agent-end-btn:hover .cw-end-label-full,
+.cw-live-agent-end-btn:focus-visible .cw-end-label-full {
+  display: inline;
+}
+
+.cw-live-agent-end-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.cw-live-agent-end-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
  .cw-icon-btn {
     width: 30px;
     height: 30px;
@@ -683,13 +739,12 @@ body {
 .cw-user-msg {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 24px;
 }
 .cw-user-msg-inner {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;
+    gap: 2px;
     max-width: min(90%, 85%);
 }
 .cw-user-attach-card {
@@ -833,14 +888,25 @@ body {
 
 .cw-user-actions,
 .cw-copilot-actions {
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   transition: opacity 0.15s ease;
+}
+.cw-user-msg-inner .cw-user-actions,
+.cw-copilot-msg .cw-copilot-actions {
+  opacity: 1;
+  pointer-events: auto;
+}
+.cw-user-msg-inner .cw-user-actions,
+.cw-copilot-msg .cw-copilot-actions :hover{
+  color: var(--cw-primary)
+
 }
 .cw-user-msg-inner:hover .cw-user-actions,
 .cw-copilot-msg:hover .cw-copilot-actions {
   opacity: 1;
   pointer-events: auto;
+  color: var(--cw-primary)
 }
 .cw-copilot-msg:has(.cw-feedback-form:not([hidden])) .cw-copilot-actions {
   opacity: 1;
@@ -851,7 +917,7 @@ body {
     height: 28px;
     border: none;
     background: transparent;
-    color: var(--cw-text-muted);
+    color: var(--cw-text-secondary);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1141,6 +1207,7 @@ body {
     background: #fff;
     overflow: hidden;
     margin-bottom: 20px;
+    width:100%;
 }
 .cw-live-agent-card-header {
     display: flex;
@@ -1190,7 +1257,7 @@ body {
 }
 .cw-live-notice {
     text-align: center;
-    font-size: 12.5px;
+    font-size: 14px;
     color: var(--cw-text-muted);
     margin: 0 0 16px;
 }
@@ -1828,7 +1895,40 @@ body {
 .cw-widget a:focus {
   color: var(--cw-primary) !important;
   text-decoration: none;
+  word-break: break-word;
 }
+
+/* Conversation rating card */
+/* .cw-rating-card { margin: 0 0 20px; padding: 14px 16px; border: 1px solid #dfe6f1; border-radius: 18px; background: #fff; text-align: center; } */
+.cw-rating-card {
+    margin: 0 0 20px;
+    padding: 14px 16px;
+    border: 1px solid #dfe6f1;
+    border-radius: 18px;
+    background: #fff;
+    text-align: center;
+    width: max-content;
+    padding: 6px 50px;
+    align-items: center;
+    display: grid;
+    justify-self: center;
+}
+.cw-rating-title { font-size: 14px; font-weight: 600; color: var(--cw-text); margin-bottom: 8px; }
+.cw-rating-stars { display: flex; justify-content: center; gap: 6px; }
+.cw-rating-star { background: none; border: 0; cursor: pointer; font-size: 30px; line-height: 1; color: #c5c9d3; padding: 2px; font-family: inherit; }
+.cw-rating-star.is-active { color: #f5b301; }
+.cw-rating-star:focus-visible { outline: 2px solid var(--cw-primary); border-radius: 6px; }
+.cw-rating-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--cw-text-muted); padding: 0 8px; margin-top: 2px; }
+.cw-rating-comment { margin-top: 10px; text-align: left; }
+.cw-rating-comment[hidden] { display: none; }
+.cw-rating-comment-label { display: block; font-size: 14px; font-weight: 600; color: var(--cw-text-secondary); margin-bottom: 4px; }
+.cw-rating-textarea { width: 100%; resize: none; border: 1px solid var(--cw-border); border-radius: 10px; background: #fff; color: var(--cw-text); padding: 8px 12px; font: 13.5px var(--cw-font); line-height: 1.4; }
+.cw-rating-textarea:focus { outline: none; border-color: var(--cw-primary); }
+.cw-rating-actions { display: flex; gap: 8px; margin-top: 8px; }
+.cw-rating-submit, .cw-rating-skip { border-radius: 8px; padding: 7px 16px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; }
+.cw-rating-submit { border: none; background: var(--cw-primary); color: #fff; }
+.cw-rating-skip { border: 1px solid var(--cw-border); background: #fff; color: var(--cw-text-secondary); }
+.cw-rating-thanks { font-size: 14px; font-weight: 600; color: var(--cw-text); padding: 6px 0; }
  
 @media (max-width: 768px) {
   #cw-expand-btn {
