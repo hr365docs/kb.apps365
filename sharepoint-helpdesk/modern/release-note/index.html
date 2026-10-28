@@ -20,7 +20,44 @@
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+    <style>
+        :root {
+            --back--: black;
+            --front--: white;
+            --release--: #a5a5a5;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
+        }
+    </style>
 
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -112,7 +149,7 @@
                                         Release Notes
                                     </a>
                                     <ul>
-                                       
+
                                         <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                             F title=26.0924.1803.0000 class="side versiononclick">
                                             <a href="#releasenote71">

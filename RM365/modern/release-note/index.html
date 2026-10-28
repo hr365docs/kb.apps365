@@ -11,7 +11,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
@@ -21,10 +21,9 @@
     <!-- Custom Styles -->
     <style>
         :root {
-             --back--:black;
-           --front--:white;
-           --release--:#a5a5a5;
-            
+            --back--: black;
+            --front--: white;
+            --release--: #a5a5a5;
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
@@ -33,6 +32,31 @@
             --font-family: Lato;
         }
     </style>
+
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
 
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
 
@@ -86,164 +110,168 @@
             </div>
         </nav>
     </header>
-<div class="backk">
-    <section class="single section-sm pb-0">
-        <div class=row style="width:99vw">
-            <div class="col-lg-3 release">
-                <div class="sidebar side">
-                    <h5 class="mb" style="color:SlateBlue"> <a href="../../../RM365/">Recruitment Management
-                            365</a></h5>
-                    <a class=back-btn href="../../../RM365/" aria-label=back></a>
+    <div class="backk">
+        <section class="single section-sm pb-0">
+            <div class=row style="width:99vw">
+                <div class="col-lg-3 release">
+                    <div class="sidebar side">
+                        <h5 class="mb" style="color:SlateBlue"> <a href="../../../RM365/">Recruitment Management
+                                365</a></h5>
+                        <a class=back-btn href="../../../RM365/" aria-label=back></a>
 
-                    <ul class=list-styled>
-                        <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/ title=Release-Notes
-                            class="side">
-                            <a style="font-size:17px ;margin-left:25px" href="../release-note/">
-                                Release Notes
-                            </a>
-                            <ul>
-                                <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                    title=26.0225.1750.0000 class="side versiononclick">
-                                    <a href="#releasenote2">
-                                        Version 26.0225.1750.0000
-                                    </a>
-                                </li>
-                                <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                    title=26.0105.1611.0000 class="side versiononclick">
-                                    <a href="#releasenote3">
-                                        Version 26.0105.1611.0000
-                                    </a>
-                                </li>
-                                 <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
+                        <ul class=list-styled>
+                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                title=Release-Notes class="side">
+                                <a style="font-size:17px ;margin-left:25px" href="../release-note/">
+                                    Release Notes
+                                </a>
+                                <ul>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=26.0225.1750.0000 class="side versiononclick">
+                                        <a href="#releasenote2">
+                                            Version 26.0225.1750.0000
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                        title=26.0105.1611.0000 class="side versiononclick">
+                                        <a href="#releasenote3">
+                                            Version 26.0105.1611.0000
+                                        </a>
+                                    </li>
+                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
                                         title=24.1204.505.0 class="side versiononclick">
                                         <a href="#releasenote1">
                                             Version 24.1204.505.0
                                         </a>
                                     </li>
-                            </ul>
-                        </li>
-                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                <div class="p-lg-4 p-4 bg-black remove-padding" id=content>
+                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                    <div class="p-lg-4 p-4 bg-black remove-padding" id=content>
 
-                    <div class=" p-4 releasenotepadding remove-padding" id="releasenote2">
-                        <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
-                            class="side">
-                            <h3 id="_dashboards"><a class="header-icon-link high">Release Note<i
-                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <p>Version 26.0225.1750.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 02-Mar-2026</p>
+                        <div class=" p-4 releasenotepadding remove-padding" id="releasenote2">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
+                                class="side">
+                                <h3 id="_dashboards"><a class="header-icon-link high">Release Note<i class="fas fa-link"
+                                            style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 26.0225.1750.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 02-Mar-2026</p>
 
-                            <div>
-                                <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                    <div class="sc-gkCoMD enpFfZ">
-                                        <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                    class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                        class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                    style="display: inline-flex;"><span
-                                                        class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
                                 </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                            </div>
 
 
 
-                            <ol>
-                                <li>Introduced a new setting that allows controlled editing of feedback from
-                                    completed rounds. When enabled, users can update previous remarks, and the
-                                    system will label them as <b> “Remarks Edited”</b> for admin visibility while
-                                    maintaining a version history of the changes.</li>
-                                <li>Added a new pivot titled <b> “All Applicants” </b> in the Hiring Pipeline,
-                                    providing a
-                                    consolidated view of all candidates across different stages.</li>
-                                <li>Implemented a centralized view that enables <b> Admins and Hiring Managers</b>
-                                    to track
-                                    all pending feedback requests sent to selector users.</li>
-                            </ol>
+                                <ol>
+                                    <li>Introduced a new setting that allows controlled editing of feedback from
+                                        completed rounds. When enabled, users can update previous remarks, and the
+                                        system will label them as <b> “Remarks Edited”</b> for admin visibility while
+                                        maintaining a version history of the changes.</li>
+                                    <li>Added a new pivot titled <b> “All Applicants” </b> in the Hiring Pipeline,
+                                        providing a
+                                        consolidated view of all candidates across different stages.</li>
+                                    <li>Implemented a centralized view that enables <b> Admins and Hiring Managers</b>
+                                        to track
+                                        all pending feedback requests sent to selector users.</li>
+                                </ol>
 
 
-                            <br>
-                            <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                        data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
 
 
-                            <ol>
-                                <li>Fixed an issue where data was missing after adding an internal link.</li>
-                                <li>Resolved a bug in the <b> User Module </b> where the active status and manager
-                                    name were not visible.</li>
-                                <li>Added a <b> Cancel option</b> to the Getting Started panel for users who do not wish
-                                    to
-                                    complete the setup process.</li>
-                            </ol>
+                                <ol>
+                                    <li>Fixed an issue where data was missing after adding an internal link.</li>
+                                    <li>Resolved a bug in the <b> User Module </b> where the active status and manager
+                                        name were not visible.</li>
+                                    <li>Added a <b> Cancel option</b> to the Getting Started panel for users who do not
+                                        wish
+                                        to
+                                        complete the setup process.</li>
+                                </ol>
 
 
+                                </ul>
+
+
+                                </ul>
+                            </li>
                             </ul>
+                        </div>
+                        <div class=" p-4 releasenotepadding remove-padding" id="releasenote3">
+                            <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
+                                class="side">
+                                <h3 id="_dashboards"><a class="header-icon-link high">Release Note<i class="fas fa-link"
+                                            style="font-size:12px; color:lightgray;"></i></a> </h3>
+                                <p>Version 26.0105.1611.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 06-Jan-2024</p>
 
-
-                            </ul>
-                        </li>
-                        </ul>
-                    </div>
-                    <div class=" p-4 releasenotepadding remove-padding" id="releasenote3">
-                        <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
-                            class="side">
-                            <h3 id="_dashboards"><a class="header-icon-link high">Release Note<i
-                                        class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                            <p>Version 26.0105.1611.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 06-Jan-2024</p>
-
-                            <div>
-                                <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                    <div class="sc-gkCoMD enpFfZ">
-                                        <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                    class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                        class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                    style="display: inline-flex;"><span
-                                                        class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                <div>
+                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                        <div class="sc-gkCoMD enpFfZ">
+                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                        style="display: inline-flex;"><span
+                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
                                 </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                            </div>
 
 
 
-                            <ol>
-                                <li>Introduced a required interview decision option, ensuring interviewers select a
-                                    decision along with their feedback. When disabled, feedback can be submitted without
-                                    selecting a decision.</li>
+                                <ol>
+                                    <li>Introduced a required interview decision option, ensuring interviewers select a
+                                        decision along with their feedback. When disabled, feedback can be submitted
+                                        without
+                                        selecting a decision.</li>
 
-                            </ol>
-
-
-                            <br>
-                            <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                        data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                </ol>
 
 
-                            <ol>
-                                <li>Resolved issues that prevented approval flow creation.</li>
-                                <li>Fixed an issue where toggled job codes were not reflected on the job post creation
-                                    page.</li>
-                                <li>Resolved overlapping settings and dropdown buttons in the Arabic (Teams) interface.
-                                </li>
-                            </ol>
+                                <br>
+                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
 
 
+                                <ol>
+                                    <li>Resolved issues that prevented approval flow creation.</li>
+                                    <li>Fixed an issue where toggled job codes were not reflected on the job post
+                                        creation
+                                        page.</li>
+                                    <li>Resolved overlapping settings and dropdown buttons in the Arabic (Teams)
+                                        interface.
+                                    </li>
+                                </ol>
+
+
+                                </ul>
+
+
+                                </ul>
+                            </li>
                             </ul>
-
-
-                            </ul>
-                        </li>
-                        </ul>
-                    </div>
- <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
+                        </div>
+                        <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
                             <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
                                 class="side">
                                 <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
@@ -304,25 +332,25 @@
 
 
 
+                    </div>
                 </div>
             </div>
-        </div>
 
-    
-       </section>
-    <div id="myModal" class="modal">
 
-        <div class="modal-content">
-            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
-            <div class="mySlides">
-                <img src="" id="imageId" style="width:100%">
+        </section>
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+                <div class="mySlides">
+                    <img src="" id="imageId" style="width:100%">
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
- <div id="footer-container"></div>
-  <script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../../../js/script.min.js"></script>
     <script src="../../../js/header-footer.js"></script>
     <script src="../../../js/releasenote.js"></script>

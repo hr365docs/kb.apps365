@@ -27,6 +27,31 @@
             --font-family: Lato;
         }
     </style>
+
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>

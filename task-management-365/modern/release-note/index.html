@@ -11,7 +11,7 @@
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
     <!-- External Scripts -->
@@ -21,10 +21,9 @@
     <!-- Custom Styles -->
     <style>
         :root {
-             --back--:black;
-           --front--:white;
-           --release--:#a5a5a5;
-            
+            --back--: black;
+            --front--: white;
+            --release--: #a5a5a5;
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
@@ -33,6 +32,31 @@
             --font-family: Lato;
         }
     </style>
+
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
 
     <!-- Additional Stylesheet -->
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
@@ -67,143 +91,153 @@
         </nav>
     </header>
     <div class="backk">
-    <section class="single section-sm pb-0">
-        <div class="container container-padding">
-            <div class=row>
-                <div class="col-lg-3 release">
-                    <div class="sidebar side">
-                        <h5 class="mb" style="color:SlateBlue"> <a href="../../../task-management-365/">Task
-                                365</a></h5>
-                        <a class=back-btn href="../../../task-management-365/" aria-label=back></a>
+        <section class="single section-sm pb-0">
+            <div class="container container-padding">
+                <div class=row>
+                    <div class="col-lg-3 release">
+                        <div class="sidebar side">
+                            <h5 class="mb" style="color:SlateBlue"> <a href="../../../task-management-365/">Task
+                                    365</a></h5>
+                            <a class=back-btn href="../../../task-management-365/" aria-label=back></a>
 
-                        <ul class=list-styled>
-                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title='Release Notes' class="side">
-                                <a href="../../../task-management-365/modern/release-note/" style="margin-left:25px">
-                                    Release Notes
-                                </a>
-                                <ul>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
-                                        title=26.0724.1230.0000 class="side versiononclick">
-                                        <a href="#releasenote1">
-                                            Version 26.0724.1230.0000
-                                        </a>
-                                    </li>
-                                </ul>
+                            <ul class=list-styled>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title='Release Notes' class="side">
+                                    <a href="../../../task-management-365/modern/release-note/"
+                                        style="margin-left:25px">
+                                        Release Notes
+                                    </a>
+                                    <ul>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            F title=26.0724.1230.0000 class="side versiononclick">
+                                            <a href="#releasenote1">
+                                                Version 26.0724.1230.0000
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
-                        <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0724.1230.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-July-2026</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                    <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                        <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
+                            <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0724.1230.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-July-2026
+                                    </p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>
-                                            <strong>AI Integration:</strong> Introduced AI integration, enabling users
-                                            to interact with an intelligent assistant to quickly access task
-                                            information, team member details, pending tasks, and assign tasks using
-                                            natural language queries.
-                                        </li>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>
+                                                <strong>AI Integration:</strong> Introduced AI integration, enabling
+                                                users
+                                                to interact with an intelligent assistant to quickly access task
+                                                information, team member details, pending tasks, and assign tasks using
+                                                natural language queries.
+                                            </li>
 
-                                        <li>
-                                            <strong>Timesheet Integration:</strong> Added Timesheet integration,
-                                            allowing users to seamlessly access timesheets, tasks, and approval
-                                            information directly within <strong>Task365</strong>.
-                                        </li>
-                                    </ol>
-                                    <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                    <ol>
-                                        <li>
-                                            Fixed an issue where users synchronized from Microsoft 365 were incorrectly
-                                            displayed under the <strong>Inactive</strong> tab instead of the
-                                            <strong>Active</strong> tab.
-                                        </li>
+                                            <li>
+                                                <strong>Timesheet Integration:</strong> Added Timesheet integration,
+                                                allowing users to seamlessly access timesheets, tasks, and approval
+                                                information directly within <strong>Task365</strong>.
+                                            </li>
+                                        </ol>
+                                        <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                    data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                        <ol>
+                                            <li>
+                                                Fixed an issue where users synchronized from Microsoft 365 were
+                                                incorrectly
+                                                displayed under the <strong>Inactive</strong> tab instead of the
+                                                <strong>Active</strong> tab.
+                                            </li>
 
-                                        <li>
-                                            Resolved an issue where invalid user records appeared in the <strong>Team
-                                                Member</strong> selection drop-down.
-                                        </li>
+                                            <li>
+                                                Resolved an issue where invalid user records appeared in the
+                                                <strong>Team
+                                                    Member</strong> selection drop-down.
+                                            </li>
 
-                                        <li>
-                                            Fixed an issue that prevented <strong>RM365</strong> approvals from being
-                                            synchronized and displayed in <strong>Task365</strong> after integration.
-                                        </li>
+                                            <li>
+                                                Fixed an issue that prevented <strong>RM365</strong> approvals from
+                                                being
+                                                synchronized and displayed in <strong>Task365</strong> after
+                                                integration.
+                                            </li>
 
-                                        <li>
-                                            Resolved an issue where <strong>Project</strong> and <strong>Bucket</strong>
-                                            information was missing for tasks created using the <strong>Sample
-                                                Project</strong>.
-                                        </li>
+                                            <li>
+                                                Resolved an issue where <strong>Project</strong> and
+                                                <strong>Bucket</strong>
+                                                information was missing for tasks created using the <strong>Sample
+                                                    Project</strong>.
+                                            </li>
 
-                                        <li>
-                                            Fixed an issue where the <strong>Select All</strong> option selected all
-                                            users instead of only the filtered results in the <strong>Project
-                                                Members</strong> panel.
-                                        </li>
+                                            <li>
+                                                Fixed an issue where the <strong>Select All</strong> option selected all
+                                                users instead of only the filtered results in the <strong>Project
+                                                    Members</strong> panel.
+                                            </li>
 
-                                        <li>
-                                            Resolved an issue where <strong>Task Report</strong> filters did not return
-                                            data on the first attempt.
-                                        </li>
-                                    </ol>
-                                </div>
+                                            <li>
+                                                Resolved an issue where <strong>Task Report</strong> filters did not
+                                                return
+                                                data on the first attempt.
+                                            </li>
+                                        </ol>
+                                    </div>
 
 
 
+                            </div>
+                            <br>
+
+                            </ul>
+                            </ul>
+                            </li>
+                            </ul>
                         </div>
-                        <br>
 
-                        </ul>
-                        </ul>
-                        </li>
-                        </ul>
+
+
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
+
                     </div>
-
-
-
-
-                    <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
-
                 </div>
             </div>
-        </div>
-    </section>
-    <div id="myModal" class="modal">
+        </section>
+        <div id="myModal" class="modal">
 
-        <div class="modal-content">
-            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
-            <div class="mySlides">
-                <img src="" id="imageId" style="width:100%">
+            <div class="modal-content">
+                <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+                <div class="mySlides">
+                    <img src="" id="imageId" style="width:100%">
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
-   <div id="footer-container"></div>
-<script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../js/script.min.js"></script>
     <script src="../../../js/header-footer.js"></script>
     <script src="../../classic/release-note/"></script>

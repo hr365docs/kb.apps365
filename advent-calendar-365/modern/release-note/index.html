@@ -15,17 +15,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
 
-    <style>
-        :root {
-            --primary-color: #5637da;
-            --body-color: #f9f9f9;
-            --text-color: #636363;
-            --text-color-dark: #242738;
-            --white-color: #ffffff;
-            --light-color: #f8f9fa;
-            --font-family: Lato;
-        }
-    </style>
+   <style>
+            :root {
+                --back--: black;
+                --front--: white;
+                --release--: #a5a5a5;
+                --body-color: #f9f9f9;
+                --text-color: #636363;
+                --text-color-dark: #242738;
+                --white-color: #ffffff;
+                --light-color: #f8f9fa;
+                --font-family: Lato;
+            }
+        </style>
+
+        <!-- Dynamic Theme Overrides -->
+        <script>
+            (function () {
+                var host = window.location.host;
+                var targetDomains = [
+                    'apps365.com',
+                    'hr365.us',
+                    'cubiclogics.com',
+                    'kb.apps365.com'
+                ];
+
+                // Checks if current host matches or contains any of the domains
+                var isMatched = targetDomains.some(function (domain) {
+                    return host.includes(domain);
+                });
+
+                if (isMatched) {
+                    var root = document.documentElement;
+                    root.style.setProperty('--back--', '#ffffff');
+                    root.style.setProperty('--release--', '#636363');
+                    root.style.setProperty('--front--', '#0b1020', 'important');
+                }
+            })();
+        </script>
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>

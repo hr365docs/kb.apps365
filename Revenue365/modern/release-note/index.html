@@ -10,15 +10,15 @@
         content="Release notes for Helpdesk 365. Learn about the latest features, improvements, and fixes in the Apps365 Helpdesk Upgrade for SharePoint Store.">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
     <style>
         :root {
-          --back--:black;
-           --front--:white;
-           --release--:#a5a5a5;
+            --back--: black;
+            --front--: white;
+            --release--: #a5a5a5;
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
@@ -27,6 +27,31 @@
             --font-family: Lato;
         }
     </style>
+
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
@@ -79,274 +104,307 @@
         </nav>
     </header>
     <div class="backk">
-    <section class="single section-sm pb-0">
-        <div class="container container-padding">
-            <div class=row>
-                <div class="col-lg-3 release">
-                    <div class="sidebar side">
-                        <h5 class="mb" style="color:SlateBlue"> <a href="../../../Revenue365/">Revenue
-                                365</a></h5>
-                        <a class=back-btn href="../../../Revenue365/" aria-label=back></a>
-                        <ul class=list-styled>
-                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title="Release Notes" class="side">
-                                <a href="../release-note/" style="margin-left:25px">
-                                    Release Notes
-                                </a>
-                                <ul>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
-                                        title=26.0518.2310.0000 class="side versiononclick">
-                                        <a href="#releasenote4">
-                                            Version 26.825.1110.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
-                                        title=26.0518.2310.0000 class="side versiononclick">
-                                        <a href="#releasenote3">
-                                            Version 26.0518.2310.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
-                                        title=25.1222.1206.000 class="side versiononclick">
-                                        <a href="#releasenote2">
-                                            Version 25.1222.1206.000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html F
-                                        title=25.619.1841.0 class="side versiononclick">
-                                        <a href="#releasenote1">
-                                            Version 25.619.1841.0
-                                        </a>
-                                    </li>
+        <section class="single section-sm pb-0">
+            <div class="container container-padding">
+                <div class=row>
+                    <div class="col-lg-3 release">
+                        <div class="sidebar side">
+                            <h5 class="mb" style="color:SlateBlue"> <a href="../../../Revenue365/">Revenue
+                                    365</a></h5>
+                            <a class=back-btn href="../../../Revenue365/" aria-label=back></a>
+                            <ul class=list-styled>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title="Release Notes" class="side">
+                                    <a href="../release-note/" style="margin-left:25px">
+                                        Release Notes
+                                    </a>
+                                    <ul>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            F title=26.0518.2310.0000 class="side versiononclick">
+                                            <a href="#releasenote4">
+                                                Version 26.825.1110.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            F title=26.0518.2310.0000 class="side versiononclick">
+                                            <a href="#releasenote3">
+                                                Version 26.0518.2310.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            F title=25.1222.1206.000 class="side versiononclick">
+                                            <a href="#releasenote2">
+                                                Version 25.1222.1206.000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            F title=25.619.1841.0 class="side versiononclick">
+                                            <a href="#releasenote1">
+                                                Version 25.619.1841.0
+                                            </a>
+                                        </li>
 
-                                </ul>
-                            </li>
-                        </ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
-                         <div class=" p-4 remove-padding releasenotepadding" id="releasenote4">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.825.1110.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 31-Aug-2026</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                    <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                        <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
+                            <div class=" p-4 remove-padding releasenotepadding" id="releasenote4">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.825.1110.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 31-Aug-2026</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>
-                                           <strong>AI Integration: </strong>
-                                           Revenue 365 now includes AI-powered capabilities designed to enhance the user experience. These features help users analyze data, generate actionable insights, and access meaningful information with reduced manual effort.
-                                        </li>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>
+                                                <strong>AI Integration: </strong>
+                                                Revenue 365 now includes AI-powered capabilities designed to enhance the
+                                                user experience. These features help users analyze data, generate
+                                                actionable insights, and access meaningful information with reduced
+                                                manual effort.
+                                            </li>
 
-                                        <li>
-                                            <strong>Customer Success Agent Analysis: </strong>
-                                            Added new analysis capabilities for the <strong>Customer Success Agent </strong>to assist Customer Success Managers (CSMs) in reviewing customer-related information, identifying key insights, and gaining a better understanding of customer status and performance.
-                                        </li>
+                                            <li>
+                                                <strong>Customer Success Agent Analysis: </strong>
+                                                Added new analysis capabilities for the <strong>Customer Success Agent
+                                                </strong>to assist Customer Success Managers (CSMs) in reviewing
+                                                customer-related information, identifying key insights, and gaining a
+                                                better understanding of customer status and performance.
+                                            </li>
 
-                                        <li>
-                                            <strong>Customer Journey:</strong> Introduced the <strong>Customer Journey</strong> feature, which provides a consolidated view of customer interactions and lifecycle progress. This feature enables CSM teams to track important activities and milestones, understand the customer’s current stage, and take appropriate actions to improve engagement and outcomes.
-                                        </li>
+                                            <li>
+                                                <strong>Customer Journey:</strong> Introduced the <strong>Customer
+                                                    Journey</strong> feature, which provides a consolidated view of
+                                                customer interactions and lifecycle progress. This feature enables CSM
+                                                teams to track important activities and milestones, understand the
+                                                customer’s current stage, and take appropriate actions to improve
+                                                engagement and outcomes.
+                                            </li>
                                         </ol>
 
                                         <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
+                                                    data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                        <ol>
 
 
-                                   <li>Resolved an issue where the amount was incorrectly deducted from the total amount during the conversion process.</li>
-<li>Resolved an issue where exported Excel reports displayed empty data under certain conditions.</li>
-                                </ol>
+                                            <li>Resolved an issue where the amount was incorrectly deducted from the
+                                                total amount during the conversion process.</li>
+                                            <li>Resolved an issue where exported Excel reports displayed empty data
+                                                under certain conditions.</li>
+                                        </ol>
 
 
 
-                                      
-                                    </ol>
-                                </div>
+
+                                        </ol>
+                                    </div>
 
 
-                        <div class=" p-4 remove-padding releasenotepadding" id="releasenote3">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0518.2310.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 18-May-2026</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div class=" p-4 remove-padding releasenotepadding" id="releasenote3">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0518.2310.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 18-May-2026</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>
-                                            <strong>E-Signature:</strong> Introduced e-signature functionality within
-                                            the Revenue application to support secure digital approval of invoices,
-                                            agreements, and order forms.
-                                        </li>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>
+                                                <strong>E-Signature:</strong> Introduced e-signature functionality
+                                                within
+                                                the Revenue application to support secure digital approval of invoices,
+                                                agreements, and order forms.
+                                            </li>
 
-                                        <li>
-                                            <strong>Tax Identifier:</strong> Added tax identifier configuration to
-                                            manage tax-related information and improve invoice processing accuracy.
-                                        </li>
+                                            <li>
+                                                <strong>Tax Identifier:</strong> Added tax identifier configuration to
+                                                manage tax-related information and improve invoice processing accuracy.
+                                            </li>
 
-                                        <li>
-                                            <strong>Order Form:</strong> Implemented order form management functionality
-                                            to create, track, and maintain customer order details directly within the
-                                            application.
-                                        </li>
+                                            <li>
+                                                <strong>Order Form:</strong> Implemented order form management
+                                                functionality
+                                                to create, track, and maintain customer order details directly within
+                                                the
+                                                application.
+                                            </li>
 
-                                        <li>
-                                            <strong>Agreement Templates:</strong> Added configurable agreement templates
-                                            for generating standardized customer agreements and contracts.
-                                        </li>
+                                            <li>
+                                                <strong>Agreement Templates:</strong> Added configurable agreement
+                                                templates
+                                                for generating standardized customer agreements and contracts.
+                                            </li>
 
-                                        <li>
-                                            <strong>Reminder Notifications:</strong> Implemented automated reminder
-                                            notifications for pending approvals, invoice due dates, and other important
-                                            actions.
-                                        </li>
-                                    </ol>
-                                </div>
+                                            <li>
+                                                <strong>Reminder Notifications:</strong> Implemented automated reminder
+                                                notifications for pending approvals, invoice due dates, and other
+                                                important
+                                                actions.
+                                            </li>
+                                        </ol>
+                                    </div>
 
 
 
-                        </div>
-                        <div class=" p-4 remove-padding releasenotepadding" id="releasenote2">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.1222.1206.000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 23-Dec-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                            </div>
+                            <div class=" p-4 remove-padding releasenotepadding" id="releasenote2">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.1222.1206.000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 23-Dec-2025</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Introduced a Delegation feature that allows users to delegate tasks
+                                                during
+                                                periods of absence.</li>
+                                            <li>Implemented a “Get Started” panel during application installation to
+                                                assist
+                                                with the initial configuration of required prerequisites.</li>
+
+                                        </ol>
+
+                                    </div>
+                                    <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
-                                        <li>Introduced a Delegation feature that allows users to delegate tasks during
-                                            periods of absence.</li>
-                                        <li>Implemented a “Get Started” panel during application installation to assist
-                                            with the initial configuration of required prerequisites.</li>
+
+
+                                        <li>Corrected an issue where partial-day leave calculations were inaccurate.
+                                        </li>
+                                        <li>Resolved a bug where next-year leave balances were incorrectly deducted from
+                                            the
+                                            current year.</li>
+                                        <li>Fixed an issue where email notifications were not delivered as expected.
+                                        </li>
 
                                     </ol>
 
-                                </div>
-                                <h3 id="0e8056ca" class="sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
 
-
-                                    <li>Corrected an issue where partial-day leave calculations were inaccurate.</li>
-                                    <li>Resolved a bug where next-year leave balances were incorrectly deducted from the
-                                        current year.</li>
-                                    <li>Fixed an issue where email notifications were not delivered as expected.</li>
-
-                                </ol>
-
-
-                        </div>
-                        <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.619.1841.0 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 19-June-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                            </div>
+                            <div class=" p-4 remove-padding releasenotepadding" id="releasenote1">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.619.1841.0 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 19-June-2025</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>You can now create <b> Partner Invoices</b> directly within the application.
-                                        </li>
-                                        <li><b>Bulk upload errors</b> are now clearly displayed in the upload panel for
-                                            easier identification and correction.</li>
-                                        <li><b>View all invoices by status—</b>including Paid, Approved, Sent, and
-                                            Overdue—with new filtering options.</li>
-                                        <li>Revenue Summary Reports are now available, offering insights across catalog
-                                            items such as Products, Services, and Subscriptions.</li>
-                                        <li>Sample data has been added for demonstration and testing purposes.</li>
-                                        <li>A Refresh icon has been introduced on the Home Page, allowing users to
-                                            update specific dashboard sections without reloading the entire application.
-                                        </li>
-                                        <li>Zoho Books Integration: Users can now sync or post records directly to Zoho
-                                            Books, ensuring seamless data consistency between RevOps and Zoho.</li>
-                                        <li>Users can now delete individual list items directly from the interface for
-                                            better data management.</li>
-                                        <li>Generate a new invoice from an existing paid invoice, simplifying the
-                                            process of renewals and recurring transactions.</li>
-                                        <li>Audit logs have been implemented to track all user actions, enhancing
-                                            transparency, security, and accountability.</li>
-                                    </ol>
+                                    <h3 id="49409fa4" class="sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>You can now create <b> Partner Invoices</b> directly within the
+                                                application.
+                                            </li>
+                                            <li><b>Bulk upload errors</b> are now clearly displayed in the upload panel
+                                                for
+                                                easier identification and correction.</li>
+                                            <li><b>View all invoices by status—</b>including Paid, Approved, Sent, and
+                                                Overdue—with new filtering options.</li>
+                                            <li>Revenue Summary Reports are now available, offering insights across
+                                                catalog
+                                                items such as Products, Services, and Subscriptions.</li>
+                                            <li>Sample data has been added for demonstration and testing purposes.</li>
+                                            <li>A Refresh icon has been introduced on the Home Page, allowing users to
+                                                update specific dashboard sections without reloading the entire
+                                                application.
+                                            </li>
+                                            <li>Zoho Books Integration: Users can now sync or post records directly to
+                                                Zoho
+                                                Books, ensuring seamless data consistency between RevOps and Zoho.</li>
+                                            <li>Users can now delete individual list items directly from the interface
+                                                for
+                                                better data management.</li>
+                                            <li>Generate a new invoice from an existing paid invoice, simplifying the
+                                                process of renewals and recurring transactions.</li>
+                                            <li>Audit logs have been implemented to track all user actions, enhancing
+                                                transparency, security, and accountability.</li>
+                                        </ol>
 
-                                </div>
+                                    </div>
 
+                            </div>
+
+                            <br>
+
+                            </ul>
+                            </ul>
+                            </li>
+                            </ul>
                         </div>
 
-                        <br>
 
-                        </ul>
-                        </ul>
-                        </li>
-                        </ul>
+
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
+
                     </div>
-
-
-
-
-                    <p class="post-meta border-bottom pb-3 mb-0 mt-3 " id="date">
-
                 </div>
             </div>
-        </div>
-        </div>
+    </div>
     </section>
     <div id="myModal " class="modal">
 
@@ -358,9 +416,9 @@
 
         </div>
     </div>
-</div>
-<div id="footer-container"></div>
-  <script src="/footer/index.js"></script>
+    </div>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../js/script.min.js"></script>
     <script>
         function openModal(src) {

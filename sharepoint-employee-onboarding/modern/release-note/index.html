@@ -10,23 +10,48 @@
         content="Release notes for Employee Onboarding 365, providing details on new features, improvements, and bug fixes in the latest version of the application.">
     <link rel=stylesheet href=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css>
     <link rel=stylesheet href=https://kb.apps365.com/plugins/themify-icons/themify-icons.css>
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
     <style>
         :root {
-            --back--:black;
-           --front--:white;
-           --release--:#a5a5a5;
+            --back--: black;
+            --front--: white;
+            --release--: #a5a5a5;
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
             --white-color: #ffffff;
             --light-color: #f8f9fa;
-            --font-family: Lato
+            --font-family: Lato;
         }
     </style>
+
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
+
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
     <link href=https://kb.apps365.com/css/style.min.css rel=stylesheet media=screen>
     <script src=https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js></script>
     <script src=https://kb.apps365.com/plugins/jquery/jquery-ui.js></script>
@@ -73,1248 +98,1312 @@
             </div>
         </nav>
     </header>
-<div class="backk">
-    <section class="single section-sm pb-0">
-        <div class="container container-padding">
-            <div class=row>
-                <div class="col-lg-3 release">
-                    <div class="sidebar side">
-                        <h5 class="mb" style="color:SlateBlue"> <a
-                                href="../../../sharepoint-employee-onboarding/">Employee Onboarding 365</a></h5>
-                        <a class=back-btn href="../../../sharepoint-employee-onboarding/" aria-label=back></a>
+    <div class="backk">
+        <section class="single section-sm pb-0">
+            <div class="container container-padding">
+                <div class=row>
+                    <div class="col-lg-3 release">
+                        <div class="sidebar side">
+                            <h5 class="mb" style="color:SlateBlue"> <a
+                                    href="../../../sharepoint-employee-onboarding/">Employee Onboarding 365</a></h5>
+                            <a class=back-btn href="../../../sharepoint-employee-onboarding/" aria-label=back></a>
 
-                        <ul class=list-styled>
-                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title=Release-Notes class=" side">
-                                <a style="font-size:17px ;margin-left:25px" href="../release-note/">
-                                    Release Notes
-                                </a>
-                                <ul>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=26.0708.2241.0000 class=" side versiononclick">
-                                        <a href="#releasenote19">
-                                            Version 26.0708.2241.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=26.0617.1314.0000 class=" side versiononclick">
-                                        <a href="#releasenote18">
-                                            Version 26.0617.1314.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=26.0508.1041.0000 class=" side versiononclick">
-                                        <a href="#releasenote17">
-                                            Version 26.0508.1041.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=26.0212.2132.0000 class=" side versiononclick">
-                                        <a href="#releasenote16">
-                                            Version 26.0212.2132.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.0815.2048.0000 class=" side versiononclick">
-                                        <a href="#releasenote15">
-                                            Version 25.0815.2048.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.804.1753.0000 class=" side versiononclick">
-                                        <a href="#releasenote14">
-                                            Version 25.804.1753.0000
-                                        </a>
-                                    </li>
+                            <ul class=list-styled>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title=Release-Notes class=" side">
+                                    <a style="font-size:17px ;margin-left:25px" href="../release-note/">
+                                        Release Notes
+                                    </a>
+                                    <ul>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=26.0708.2241.0000 class=" side versiononclick">
+                                            <a href="#releasenote19">
+                                                Version 26.0708.2241.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=26.0617.1314.0000 class=" side versiononclick">
+                                            <a href="#releasenote18">
+                                                Version 26.0617.1314.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=26.0508.1041.0000 class=" side versiononclick">
+                                            <a href="#releasenote17">
+                                                Version 26.0508.1041.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=26.0212.2132.0000 class=" side versiononclick">
+                                            <a href="#releasenote16">
+                                                Version 26.0212.2132.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.0815.2048.0000 class=" side versiononclick">
+                                            <a href="#releasenote15">
+                                                Version 25.0815.2048.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.804.1753.0000 class=" side versiononclick">
+                                            <a href="#releasenote14">
+                                                Version 25.804.1753.0000
+                                            </a>
+                                        </li>
 
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.0714.1947.0000 class=" side versiononclick">
-                                        <a href="#releasenote13">
-                                            Version 25.0714.1947.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.0221.1840.0000 class=" side versiononclick">
-                                        <a href="#releasenote12">
-                                            Version 25.0221.1840.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0830.1744.0000 class=" side versiononclick">
-                                        <a href="#releasenote11">
-                                            Version 24.0830.1744.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0724.1713.0000 class=" side versiononclick">
-                                        <a href="#releasenote10">
-                                            Version 24.0724.1713.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0628.1540.0000 class=" side versiononclick">
-                                        <a href="#releasenote9">
-                                            Version 24.0628.1540.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.612.1950.0000 class=" side versiononclick">
-                                        <a href="#releasenote8">
-                                            Version 24.612.1950.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0312.2355.0000 class=" side versiononclick">
-                                        <a href="#releasenote7">
-                                            Version 24.0312.2355.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0112.1916.0000 class=" side versiononclick">
-                                        <a href="#releasenote6">
-                                            Version 24.0112.1916.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=23.1109.2015.0000 class=" side versiononclick">
-                                        <a href="#releasenote5">
-                                            Version 23.1109.2015.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=12.23.0803.1125 class=" side versiononclick">
-                                        <a href="#releasenote4">
-                                            Version 12.23.0803.1125
-                                        </a>
-                                    </li>
-
-
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=12.23.126.1625 class=" side versiononclick">
-                                        <a href="#releasenote3">
-                                            Version 12.23.505.1435
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=12.23.126.1625 class=" side versiononclick">
-                                        <a href="#releasenote2">
-                                            Version 12.23.126.1625
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=1.0.925.1725 class=" side versiononclick">
-                                        <a href="#releasenote1">
-                                            Version 1.0.925.1725
-                                        </a>
-                                    </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.0714.1947.0000 class=" side versiononclick">
+                                            <a href="#releasenote13">
+                                                Version 25.0714.1947.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.0221.1840.0000 class=" side versiononclick">
+                                            <a href="#releasenote12">
+                                                Version 25.0221.1840.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0830.1744.0000 class=" side versiononclick">
+                                            <a href="#releasenote11">
+                                                Version 24.0830.1744.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0724.1713.0000 class=" side versiononclick">
+                                            <a href="#releasenote10">
+                                                Version 24.0724.1713.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0628.1540.0000 class=" side versiononclick">
+                                            <a href="#releasenote9">
+                                                Version 24.0628.1540.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.612.1950.0000 class=" side versiononclick">
+                                            <a href="#releasenote8">
+                                                Version 24.612.1950.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0312.2355.0000 class=" side versiononclick">
+                                            <a href="#releasenote7">
+                                                Version 24.0312.2355.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0112.1916.0000 class=" side versiononclick">
+                                            <a href="#releasenote6">
+                                                Version 24.0112.1916.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=23.1109.2015.0000 class=" side versiononclick">
+                                            <a href="#releasenote5">
+                                                Version 23.1109.2015.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=12.23.0803.1125 class=" side versiononclick">
+                                            <a href="#releasenote4">
+                                                Version 12.23.0803.1125
+                                            </a>
+                                        </li>
 
 
-                                </ul>
-                            </li>
-                        </ul>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=12.23.126.1625 class=" side versiononclick">
+                                            <a href="#releasenote3">
+                                                Version 12.23.505.1435
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=12.23.126.1625 class=" side versiononclick">
+                                            <a href="#releasenote2">
+                                                Version 12.23.126.1625
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=1.0.925.1725 class=" side versiononclick">
+                                            <a href="#releasenote1">
+                                                Version 1.0.925.1725
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote19">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0708.2241.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 8-July-2026</p>
+                    <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                        <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote19">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0708.2241.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 8-July-2026</p>
 
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>
+                                                Added a <strong>Default Email Format</strong> option to simplify email
+                                                format selection when entering employee onboarding details.
+                                            </li>
+
+                                            <li>
+                                                Introduced a <strong>Revoke</strong> option for software and licenses,
+                                                enabling easier management of assigned resources.
+                                            </li>
+
+                                            <li>
+                                                Added <strong>Task Placeholders</strong> during task creation, allowing
+                                                dynamic employee information from the <strong>Employee Details</strong>
+                                                form
+                                                to be automatically inserted into task descriptions.
+                                            </li>
+                                        </ol>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
                                         <li>
-                                            Added a <strong>Default Email Format</strong> option to simplify email
-                                            format selection when entering employee onboarding details.
+                                            Resolved an issue where condition-based custom fields in custom forms were
+                                            not
+                                            hidden when the configured condition value did not match.
                                         </li>
 
                                         <li>
-                                            Introduced a <strong>Revoke</strong> option for software and licenses,
-                                            enabling easier management of assigned resources.
+                                            Fixed an issue where inactive tasks continued to appear in the <strong>Task
+                                                Assignment</strong> list.
                                         </li>
 
                                         <li>
-                                            Added <strong>Task Placeholders</strong> during task creation, allowing
-                                            dynamic employee information from the <strong>Employee Details</strong> form
-                                            to be automatically inserted into task descriptions.
-                                        </li>
-                                    </ol>
-                                </div>
-
-
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>
-                                        Resolved an issue where condition-based custom fields in custom forms were not
-                                        hidden when the configured condition value did not match.
-                                    </li>
-
-                                    <li>
-                                        Fixed an issue where inactive tasks continued to appear in the <strong>Task
-                                            Assignment</strong> list.
-                                    </li>
-
-                                    <li>
-                                        Corrected an issue where the <strong>Assign Date</strong> was not displayed for
-                                        assets and licenses after submitting the <strong>Employee Details</strong> form.
-                                    </li>
-
-                                    <li>
-                                        Addressed an issue where selected licenses were not assigned to newly created
-                                        Microsoft 365 users.
-                                    </li>
-
-                                    <li>
-                                        Fixed an issue where employee first and last names were not correctly separated
-                                        and populated in <strong>Azure AD</strong> and <strong>SharePoint</strong>
-                                        during user creation.
-                                    </li>
-
-                                    <li>
-                                        Resolved an issue where the employee's department, position, and email address
-                                        were not displayed on the <strong>Task Details</strong> page.
-                                    </li>
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote18">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0617.1314.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 17-June-2026</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
-                                    <ol>
-                                        <li>Added Active and Inactive tabs across all Settings modules for improved
-                                            navigation and management.</li>
-                                        <li>Enabled editing of the Manager field directly from the Onboarded Users page.
-                                        </li>
-                                        <li>Introduced an activation/deactivation toggle for the Email Tracker option
-                                            within the side navigation menu.</li>
-                                        <li>Added visibility of Group Owners and Group Members within the Onboarded User
-                                            details section on the homepage.</li>
-                                    </ol>
-                                </div>
-
-
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Fixed an issue that prevented custom fields added through custom forms from
-                                        being deleted.</li>
-                                    <li>Resolved an issue causing duplicate onboarded user records to be displayed.</li>
-                                    <li>Fixed an issue where updates made in Language Configuration were not reflected
-                                        across the application.</li>
-                                    <li>Corrected the display of manager information on the task page to ensure the full
-                                        name and email address are shown.</li>
-                                    <li>Resolved an issue where deleted tasks were reappearing unexpectedly.</li>
-                                    <li>Fixed an issue where filter values for onboarded users were displayed under
-                                        incorrect filter categories.</li>
-                                    <li>Resolved an issue where selecting or clearing checkboxes in custom form fields
-                                        caused unintended page scrolling.</li>
-                                    <li>Fixed an issue that prevented deleted custom form fields (Position, Department,
-                                        Employee ID, and Location) from being added again.</li>
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote17">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0508.1041.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-May-2026</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
-                                    <ol>
-                                        <li>Introduced a toggle option to enable or disable notifications for task
-                                            status updates.</li>
-
-                                        <li>Enhanced dashboard filtering capabilities to improve usability and
-                                            navigation.</li>
-
-                                        <li>Implemented color-coded task indicators based on selected priority levels.
+                                            Corrected an issue where the <strong>Assign Date</strong> was not displayed
+                                            for
+                                            assets and licenses after submitting the <strong>Employee Details</strong>
+                                            form.
                                         </li>
 
-                                        <li>Added an <strong>"Assigned To"</strong> field on the Dashboard for improved
-                                            task ownership visibility.</li>
+                                        <li>
+                                            Addressed an issue where selected licenses were not assigned to newly
+                                            created
+                                            Microsoft 365 users.
+                                        </li>
 
-                                        <li>Introduced task dependency functionality on the Task Creation page to
-                                            improve workflow management.</li>
+                                        <li>
+                                            Fixed an issue where employee first and last names were not correctly
+                                            separated
+                                            and populated in <strong>Azure AD</strong> and <strong>SharePoint</strong>
+                                            during user creation.
+                                        </li>
 
-                                        <li>Added a <strong>"Default Device &amp; Software by Position"</strong> feature
-                                            to simplify onboarding configuration.</li>
+                                        <li>
+                                            Resolved an issue where the employee's department, position, and email
+                                            address
+                                            were not displayed on the <strong>Task Details</strong> page.
+                                        </li>
                                     </ol>
-                                </div>
+
+                                    </ul>
 
 
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Resolved an issue where updated task names were not reflected on the homepage
-                                        after modifications were made on the Task page.</li>
-
-                                    <li>Fixed an issue preventing software and license details from being displayed for
-                                        users on the <strong>Onboarded</strong> page.</li>
-
-                                    <li>Addressed an issue that prevented newly created teams from being assigned as
-                                        task owners.</li>
-
-                                    <li>Fixed an issue where task descriptions were displayed incompletely on the Task
-                                        page.</li>
-
-                                    <li>Resolved an issue where task priority changes made on the Task page were not
-                                        synchronized with the homepage.</li>
-
-                                    <li>Fixed an issue where assigned tasks were incorrectly displayed as
-                                        <strong>"Unassigned"</strong>.
-                                    </li>
-
-                                    <li>Removed the task limitation from the <strong>Task Template</strong> page.</li>
-
-                                    <li>Resolved a restriction on the character limit in the task description field.
-                                    </li>
-                                </ol>
-
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote18">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0617.1314.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 17-June-2026
+                                    </p>
 
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote16">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 26.0212.2132.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-Feb-2026</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Added Active and Inactive tabs across all Settings modules for improved
+                                                navigation and management.</li>
+                                            <li>Enabled editing of the Manager field directly from the Onboarded Users
+                                                page.
+                                            </li>
+                                            <li>Introduced an activation/deactivation toggle for the Email Tracker
+                                                option
+                                                within the side navigation menu.</li>
+                                            <li>Added visibility of Group Owners and Group Members within the Onboarded
+                                                User
+                                                details section on the homepage.</li>
+                                        </ol>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
-                                        <li>Implemented the Assignment action on the Tasks page, enabling users to
-                                            assign tasks to other users or self-assign as needed.</li>
-                                        <li>Enhanced filtering options on the Tasks page to improve usability and task
-                                            management efficiency.</li>
-                                        <li>Added a new “Offboard on Task Completion” setting, allowing automatic
-                                            offboarding once all assigned tasks are completed.</li>
-                                        <li>Introduced the ability to set task priority while creating new tasks.</li>
-
+                                        <li>Fixed an issue that prevented custom fields added through custom forms from
+                                            being deleted.</li>
+                                        <li>Resolved an issue causing duplicate onboarded user records to be displayed.
+                                        </li>
+                                        <li>Fixed an issue where updates made in Language Configuration were not
+                                            reflected
+                                            across the application.</li>
+                                        <li>Corrected the display of manager information on the task page to ensure the
+                                            full
+                                            name and email address are shown.</li>
+                                        <li>Resolved an issue where deleted tasks were reappearing unexpectedly.</li>
+                                        <li>Fixed an issue where filter values for onboarded users were displayed under
+                                            incorrect filter categories.</li>
+                                        <li>Resolved an issue where selecting or clearing checkboxes in custom form
+                                            fields
+                                            caused unintended page scrolling.</li>
+                                        <li>Fixed an issue that prevented deleted custom form fields (Position,
+                                            Department,
+                                            Employee ID, and Location) from being added again.</li>
                                     </ol>
-                                </div>
+
+                                    </ul>
 
 
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Fixed an issue where custom columns were not displaying correctly on the ESS
-                                        page.</li>
-                                    <li>Resolved an issue where inactive tasks were appearing in the Task Template.</li>
-                                    <li>Corrected a UI alignment issue in the Position tab.</li>
-                                    <li>Fixed an issue where users who were not added to onboarding were incorrectly
-                                        appearing in the Onboarded Users tab.</li>
-
-                                </ol>
-
-
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote17">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0508.1041.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-May-2026</p>
 
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote15">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.0815.2048.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 15-Aug-2025</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Introduced a toggle option to enable or disable notifications for task
+                                                status updates.</li>
+
+                                            <li>Enhanced dashboard filtering capabilities to improve usability and
+                                                navigation.</li>
+
+                                            <li>Implemented color-coded task indicators based on selected priority
+                                                levels.
+                                            </li>
+
+                                            <li>Added an <strong>"Assigned To"</strong> field on the Dashboard for
+                                                improved
+                                                task ownership visibility.</li>
+
+                                            <li>Introduced task dependency functionality on the Task Creation page to
+                                                improve workflow management.</li>
+
+                                            <li>Added a <strong>"Default Device &amp; Software by Position"</strong>
+                                                feature
+                                                to simplify onboarding configuration.</li>
+                                        </ol>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
-                                        <li>Introduced an <strong>Attachments toggle</strong> for custom forms, now
-                                            available across all onboarding sections.</li>
+                                        <li>Resolved an issue where updated task names were not reflected on the
+                                            homepage
+                                            after modifications were made on the Task page.</li>
 
+                                        <li>Fixed an issue preventing software and license details from being displayed
+                                            for
+                                            users on the <strong>Onboarded</strong> page.</li>
+
+                                        <li>Addressed an issue that prevented newly created teams from being assigned as
+                                            task owners.</li>
+
+                                        <li>Fixed an issue where task descriptions were displayed incompletely on the
+                                            Task
+                                            page.</li>
+
+                                        <li>Resolved an issue where task priority changes made on the Task page were not
+                                            synchronized with the homepage.</li>
+
+                                        <li>Fixed an issue where assigned tasks were incorrectly displayed as
+                                            <strong>"Unassigned"</strong>.
+                                        </li>
+
+                                        <li>Removed the task limitation from the <strong>Task Template</strong> page.
+                                        </li>
+
+                                        <li>Resolved a restriction on the character limit in the task description field.
+                                        </li>
                                     </ol>
-                                </div>
+
+                                    </ul>
 
 
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Resolved an issue that prevented managers from approving approval tasks.</li>
-                                    <li>Fixed a bug that displayed incorrect dates during task approvals.</li>
-
-                                </ol>
-
-
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote16">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 26.0212.2132.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-Feb-2026</p>
 
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote14">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.804.1753.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 04-Aug-2025</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Implemented the Assignment action on the Tasks page, enabling users to
+                                                assign tasks to other users or self-assign as needed.</li>
+                                            <li>Enhanced filtering options on the Tasks page to improve usability and
+                                                task
+                                                management efficiency.</li>
+                                            <li>Added a new “Offboard on Task Completion” setting, allowing automatic
+                                                offboarding once all assigned tasks are completed.</li>
+                                            <li>Introduced the ability to set task priority while creating new tasks.
+                                            </li>
+
+                                        </ol>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
-                                        <li>Introduced an <b>approval workflow</b> for the Pre-Onboarding process.</li>
-                                        <li>Enabled <b>automatic transition</b> from Pre-Onboarding to Onboarding upon
-                                            approval.</li>
+                                        <li>Fixed an issue where custom columns were not displaying correctly on the ESS
+                                            page.</li>
+                                        <li>Resolved an issue where inactive tasks were appearing in the Task Template.
+                                        </li>
+                                        <li>Corrected a UI alignment issue in the Position tab.</li>
+                                        <li>Fixed an issue where users who were not added to onboarding were incorrectly
+                                            appearing in the Onboarded Users tab.</li>
 
                                     </ol>
-                                </div>
 
 
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Resolved an issue where the<b> Attachments</b> option was not visible during
-                                        form filling, even when added to a custom section.
-
-                                    </li>
-                                    <li>Fixed a bug where the status was incorrectly displayed as <b>'Rejected'</b>
-                                        during the approval of positions.</li>
-
-                                </ol>
+                                    </ul>
 
 
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote15">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.0815.2048.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 15-Aug-2025</p>
 
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote13">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.0714.1947.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 14-July-2025</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Introduced an <strong>Attachments toggle</strong> for custom forms, now
+                                                available across all onboarding sections.</li>
+
+                                        </ol>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                    <b>New features:</b>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
                                     <ol>
-                                        <li>Added sample data display on the Home page for improved onboarding and
-                                            testing.</li>
-                                        <li>Introduced a Mail Tracker accessible from the navigation bar.</li>
-                                        <li>Enabled task notifications through integration with Power Automate flows.
+                                        <li>Resolved an issue that prevented managers from approving approval tasks.
+                                        </li>
+                                        <li>Fixed a bug that displayed incorrect dates during task approvals.</li>
+
+                                    </ol>
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote14">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.804.1753.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 04-Aug-2025</p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Introduced an <b>approval workflow</b> for the Pre-Onboarding process.
+                                            </li>
+                                            <li>Enabled <b>automatic transition</b> from Pre-Onboarding to Onboarding
+                                                upon
+                                                approval.</li>
+
+                                        </ol>
+                                    </div>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <ol>
+                                        <li>Resolved an issue where the<b> Attachments</b> option was not visible during
+                                            form filling, even when added to a custom section.
+
+                                        </li>
+                                        <li>Fixed a bug where the status was incorrectly displayed as <b>'Rejected'</b>
+                                            during the approval of positions.</li>
+
+                                    </ol>
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote13">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.0714.1947.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 14-July-2025
+                                    </p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Added sample data display on the Home page for improved onboarding and
+                                                testing.</li>
+                                            <li>Introduced a Mail Tracker accessible from the navigation bar.</li>
+                                            <li>Enabled task notifications through integration with Power Automate
+                                                flows.
+                                            </li>
+
+                                        </ol>
+                                    </div>
+
+
+
+                                    <br>
+
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote12">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.0221.1840.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 21-feb-2025</p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Integrated Webhook functionality for seamless data synchronization.</li>
+                                            <li>Implemented SharePoint Hook integration for improved document
+                                                management.
+                                            </li>
+                                            <li>Added Probation Task with defined probationary timelines.</li>
+                                            <li>Enhanced filtering options in Reports for better data refinement.</li>
+                                        </ol>
+                                    </div>
+
+
+
+                                    <br>
+
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote11">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.0830.1744.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 02-Sept-2024
+                                    </p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                        <b>New features:</b>
+                                        <ol>
+                                            <li>Side Navigation User Permission. </li>
+                                            <li>PreOnboarding Reports in reports section. </li>
+                                            <li>Onboarded Users can now be Synced with Excluding Dept, Title, Contains
+                                                etc.
+                                            </li>
+                                        </ol>
+                                    </div>
+
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <ol>
+                                        <li>Attachment added while adding preonboarding was NOT showing in Edit which is
+                                            fixed.</li>
+
+                                    </ol>
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote10">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.0724.1713.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 24-July-2024
+                                    </p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    </div>
+
+                                    <b>New features:</b>
+
+                                    <ol>
+                                        <li>New toggle has been added in Settings>> Users, Teams and Permission for
+                                            accessing My Profile in ESS.</li>
+                                    </ol>
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <ol>
+                                        <li>Duplicate data in Onboarding filters is working fine.</li>
+                                        <li>Date format in task reports has been fixed which was displaying as NaaN.
+                                        </li>
+                                    </ol>
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote9">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.0628.1540.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-June-2024
+                                    </p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    </div>
+
+                                    <b>New features:</b>
+
+                                    <ol>
+                                        <li>Teams Permission allows Admin to Restrict access to the tab’s in Onboarding
+                                        </li>
+                                        <li>Assets and Licenses can be added in the Preonboarding stage.</li>
+                                        <li>The Users Synced in Onboarded Section do appear in Users Sections where
+                                            User's
+                                            activation w.r.to can be modified </li>
+                                    </ol>
+
+
+                                    <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <ol>
+                                        <li>Offboarding clear filter which was NOT working fine has been fixed now.</li>
+                                    </ol>
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+
+
+
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote8">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.612.1950.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-June-2024</p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    </div>
+
+                                    <b>New features:</b>
+
+                                    <ol>
+                                        <li>In Organization Reports the category can be filtered and viewed.</li>
+                                        <li>The custom form can be selected when moving employee from Preonboarding to
+                                            Onboarding.</li>
+                                    </ol>
+
+
+                                    <br>
+
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote7">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.0312.2355.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 13-Mar-2024</p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    </div>
+
+                                    <b>New features:</b>
+
+                                    <ol>
+                                        <li>Position Tab has been added </li>
+                                        <li>Approval Tracking is made visible for Position</li>
+                                        <li>Candidate can be moved from Pre-Onboarding to Onboarding by Directly
+                                            clicking on
+                                            Link Move To Onboarding </li>
+                                    </ol>
+
+
+                                    <br>
+
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>Offboarding Approval Workflow is working fine now</li>
+                                        <li>Start and End date from app to mail was varying has been fixed</li>
+
+                                    </ol>
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote6">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 24.0112.1916.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-01-2024</p>
+
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    </div>
+
+                                    <b>New features:</b>
+
+                                    <ol>
+                                        <li>MultiChoice column can be added.</li>
+                                        <li>ESS is connected with Approval Flow.</li>
+                                        <li>Teams and Groups can be added</li>
+                                    </ol>
+
+
+                                    <br>
+
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>The Approval Mail which was NOT triggering is fixed</li>
+                                        <li> Necessary Loaders are Added</li>
+                                        <li>After completing the Offboarding tasks the Emp was NOT getting Offboarded.
                                         </li>
 
                                     </ol>
-                                </div>
+
+                                    </ul>
 
 
-
-                                <br>
-
-
-
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
 
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote5">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 12.23.0803.1125 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Aug-2024</p>
 
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote12">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.0221.1840.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 21-feb-2025</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+
                                     <b>New features:</b>
+
                                     <ol>
-                                        <li>Integrated Webhook functionality for seamless data synchronization.</li>
-                                        <li>Implemented SharePoint Hook integration for improved document management.
-                                        </li>
-                                        <li>Added Probation Task with defined probationary timelines.</li>
-                                        <li>Enhanced filtering options in Reports for better data refinement.</li>
+                                        <li>Introduced a new status module.</li>
+                                        <li>Implemented the ability to enable and disable positions in the
+                                            pre-onboarding
+                                            process.</li>
+                                        <li> Added audit logs functionality.</li>
+                                        <li> Introduced custom form capabilities for onboarding, offboarding, and the
+                                            employee self-service (ESS) Page.</li>
+                                        <li> Implemented an approval workflow for custom forms.</li>
+                                        <li> Enabled the ability to update multiple tasks in both the active tasks and
+                                            all
+                                            overdue tasks sections.</li>
+                                        <li> Added condition-based fields for the onboarding form in custom columns</li>
                                     </ol>
-                                </div>
 
 
+                                    <br>
 
-                                <br>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>Enhanced the language change functionality without needing to refresh the
+                                            page.
+                                        </li>
+                                        <li>Implemented improvements in the Training Panel.</li>
+                                        <li>Introduced the capability to upload multiple documents on the ESS page and
+                                            added
+                                            pagination for documents.</li>
+                                        <li>Enhanced task updates without the need for a page refresh.</li>
+                                        <li> Improved the process of adding tasks and task templates.</li>
+
+                                    </ol>
+
+                                    </ul>
 
 
-
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
 
 
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote11">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.0830.1744.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 02-Sept-2024</p>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote4">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 12.23.0803.1125 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Aug-2024</p>
 
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+
                                     <b>New features:</b>
+
                                     <ol>
-                                        <li>Side Navigation User Permission. </li>
-                                        <li>PreOnboarding Reports in reports section. </li>
-                                        <li>Onboarded Users can now be Synced with Excluding Dept, Title, Contains etc.
+                                        <li>
+                                            The administration panel has been shifted to the settings section
                                         </li>
+                                        <li>GCC Tenant settings have been included in the general settings for GCC (US
+                                            Government Community Cloud)</li>
+                                        <li>The dynamic teams feature has been added, where teams added will also appear
+                                            under pre-onboarding approval.</li>
+                                        <li> An email template for "Notify all admins on addition of new admin" has been
+                                            introduced.</li>
+                                        <li> The IT section in pre-onboarding enables changing the status of devices and
+                                            software.</li>
+                                        <li>Offboarding no longer requires power automate configuration.</li>
+                                        <li> Employee images can be uploaded under pre-onboarding.</li>
                                     </ol>
-                                </div>
 
 
+                                    <br>
 
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Attachment added while adding preonboarding was NOT showing in Edit which is
-                                        fixed.</li>
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>
+                                            The updated task status of Guest Users is not getting reflected at the Admin
+                                            End.
+                                        </li>
+                                        <li>
+                                            Task Owner Name is not being displayed in Offboarding Tasks.
+                                        </li>
+                                        <li>Pre-onboarding dropdowns for filtering are not functioning.</li>
+                                        <li>Task details are not showing in mail notifications.</li>
 
-                                </ol>
+                                    </ol>
+
+                                    </ul>
 
 
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
 
 
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote10">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.0724.1713.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 24-July-2024</p>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote3">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 12.23.505.1435 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 05-May-2024</p>
 
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
 
-                                <b>New features:</b>
+                                    <b>New features:</b>
 
-                                <ol>
-                                    <li>New toggle has been added in Settings>> Users, Teams and Permission for
-                                        accessing My Profile in ESS.</li>
-                                </ol>
-
-
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Duplicate data in Onboarding filters is working fine.</li>
-                                    <li>Date format in task reports has been fixed which was displaying as NaaN.</li>
-                                </ol>
+                                    <ol>
+                                        <li>
+                                            Added dynamic teams
+                                        </li>
+                                        <li>Added a toggle for the guest users.</li>
+                                    </ol>
 
 
+                                    <br>
+
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>
+                                            Issues in the dashboard page are fixed.
+                                        </li>
+                                        <li>
+                                            Email notifications are now working fine.
+                                        </li>
+
+                                    </ol>
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
 
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote2">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 12.23.126.1625 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 27-Jan-2024</p>
 
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote9">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.0628.1540.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 28-June-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>Teams Permission allows Admin to Restrict access to the tab’s in Onboarding</li>
-                                    <li>Assets and Licenses can be added in the Preonboarding stage.</li>
-                                    <li>The Users Synced in Onboarded Section do appear in Users Sections where User's
-                                        activation w.r.to can be modified </li>
-                                </ol>
 
 
-                                <br>
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <ol>
-                                    <li>Offboarding clear filter which was NOT working fine has been fixed now.</li>
-                                </ol>
+
+                                    <ol>
+                                        <li>
+                                            Added default option in task templates.
+                                        </li>
+                                        <li> Added settings for active and mandatory fields.</li>
+                                    </ol>
 
 
+                                    <br>
+
+                                    <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
+                                                data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
+                                    <!-- <b> Updated team icon for EDM application</b> -->
+                                    <ol>
+                                        <li>
+                                            Data not populating when we edit the task templates.
+                                        </li>
+
+
+                                    </ol>
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
                                 </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
+                            </div>
 
 
 
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote8">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.612.1950.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-June-2024</p>
+                            <div class="   p-4 remove-padding releasenotepadding" id="releasenote1">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class=" side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 1.0.925.1725 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 25-Sep-2022</p>
 
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
                                             </div>
                                         </div>
+                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>In Organization Reports the category can be filtered and viewed.</li>
-                                    <li>The custom form can be selected when moving employee from Preonboarding to
-                                        Onboarding.</li>
-                                </ol>
-
-
-                                <br>
 
 
 
+                                    <ol>
+                                        <li>
+                                            Add Custom fields for the pre-joining process page and ESS page.
+                                        </li>
+
+                                        <li>
+                                            Document settings.
+                                        </li>
+
+                                    </ol>
+
+
+
+
+
+                                    </ul>
+
+
+                                    </ul>
+                                </li>
                                 </ul>
+                            </div>
 
 
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
 
 
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote7">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.0312.2355.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 13-Mar-2024</p>
 
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
 
-                                <b>New features:</b>
 
-                                <ol>
-                                    <li>Position Tab has been added </li>
-                                    <li>Approval Tracking is made visible for Position</li>
-                                    <li>Candidate can be moved from Pre-Onboarding to Onboarding by Directly clicking on
-                                        Link Move To Onboarding </li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>Offboarding Approval Workflow is working fine now</li>
-                                    <li>Start and End date from app to mail was varying has been fixed</li>
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote6">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 24.0112.1916.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 12-01-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>MultiChoice column can be added.</li>
-                                    <li>ESS is connected with Approval Flow.</li>
-                                    <li>Teams and Groups can be added</li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>The Approval Mail which was NOT triggering is fixed</li>
-                                    <li> Necessary Loaders are Added</li>
-                                    <li>After completing the Offboarding tasks the Emp was NOT getting Offboarded.</li>
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote5">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 12.23.0803.1125 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Aug-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>Introduced a new status module.</li>
-                                    <li>Implemented the ability to enable and disable positions in the pre-onboarding
-                                        process.</li>
-                                    <li> Added audit logs functionality.</li>
-                                    <li> Introduced custom form capabilities for onboarding, offboarding, and the
-                                        employee self-service (ESS) Page.</li>
-                                    <li> Implemented an approval workflow for custom forms.</li>
-                                    <li> Enabled the ability to update multiple tasks in both the active tasks and all
-                                        overdue tasks sections.</li>
-                                    <li> Added condition-based fields for the onboarding form in custom columns</li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>Enhanced the language change functionality without needing to refresh the page.
-                                    </li>
-                                    <li>Implemented improvements in the Training Panel.</li>
-                                    <li>Introduced the capability to upload multiple documents on the ESS page and added
-                                        pagination for documents.</li>
-                                    <li>Enhanced task updates without the need for a page refresh.</li>
-                                    <li> Improved the process of adding tasks and task templates.</li>
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote4">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 12.23.0803.1125 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Aug-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>
-                                        The administration panel has been shifted to the settings section
-                                    </li>
-                                    <li>GCC Tenant settings have been included in the general settings for GCC (US
-                                        Government Community Cloud)</li>
-                                    <li>The dynamic teams feature has been added, where teams added will also appear
-                                        under pre-onboarding approval.</li>
-                                    <li> An email template for "Notify all admins on addition of new admin" has been
-                                        introduced.</li>
-                                    <li> The IT section in pre-onboarding enables changing the status of devices and
-                                        software.</li>
-                                    <li>Offboarding no longer requires power automate configuration.</li>
-                                    <li> Employee images can be uploaded under pre-onboarding.</li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>
-                                        The updated task status of Guest Users is not getting reflected at the Admin
-                                        End.
-                                    </li>
-                                    <li>
-                                        Task Owner Name is not being displayed in Offboarding Tasks.
-                                    </li>
-                                    <li>Pre-onboarding dropdowns for filtering are not functioning.</li>
-                                    <li>Task details are not showing in mail notifications.</li>
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote3">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 12.23.505.1435 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 05-May-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-                                <b>New features:</b>
-
-                                <ol>
-                                    <li>
-                                        Added dynamic teams
-                                    </li>
-                                    <li>Added a toggle for the guest users.</li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>
-                                        Issues in the dashboard page are fixed.
-                                    </li>
-                                    <li>
-                                        Email notifications are now working fine.
-                                    </li>
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote2">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 12.23.126.1625 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 27-Jan-2024</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-
-
-                                <ol>
-                                    <li>
-                                        Added default option in task templates.
-                                    </li>
-                                    <li> Added settings for active and mandatory fields.</li>
-                                </ol>
-
-
-                                <br>
-
-                                <h3 id="0e8056ca" class=" sc-jtiXyc YVppW bug"><span data-key="30"><span
-                                            data-offset-key="30:0">🔧 Bug Fixes </span></span></h3>
-                                <!-- <b> Updated team icon for EDM application</b> -->
-                                <ol>
-                                    <li>
-                                        Data not populating when we edit the task templates.
-                                    </li>
-
-
-                                </ol>
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-
-
-                        <div class="   p-4 remove-padding releasenotepadding" id="releasenote1">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class=" side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 1.0.925.1725 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 25-Sep-2022</p>
-
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                </div>
-
-
-
-                                <ol>
-                                    <li>
-                                        Add Custom fields for the pre-joining process page and ESS page.
-                                    </li>
-
-                                    <li>
-                                        Document settings.
-                                    </li>
-
-                                </ol>
-
-
-
-
-
-                                </ul>
-
-
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-
-
-
-
-
-
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
-                            <!-- <nav class="pagination mt-3">
+                            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                                <!-- <nav class="pagination mt-3">
     <a class="nav nav-prev" href="../../../../sharepoint-employee-onboarding/" aria-label="Previous page"><i class="ti-arrow-left mr-2"></i>
     <span class="d-none d-md-block">Employee Directory</span></a>
     <a class="nav nav-next" href="../installation/using-app-file/"aria-label="Previous page">
     <span class="d-none d-md-block">App catalog</span><i class="ti-arrow-right ml-2"></i></a>
     </nav> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div id="myModal" class="modal">
+        </section>
+        <div id="myModal" class="modal">
 
-        <div class="modal-content">
-            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
-            <div class="mySlides">
-                <img src="" id="imageId" style="width:100%">
+            <div class="modal-content">
+                <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+                <div class="mySlides">
+                    <img src="" id="imageId" style="width:100%">
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
-  <div id="footer-container"></div>
- <script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../../../js/script.min.js"></script>
     <script src="../../../js/header-footer.js"></script>
     <script src="../../../js/releasenote.js"></script>
