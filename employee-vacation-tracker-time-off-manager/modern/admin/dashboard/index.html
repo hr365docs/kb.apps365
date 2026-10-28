@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Time-Off Manager 365 | Admin Guide | Help</title>
+    <title>Time-Off Manager 365 | Admin Guide | Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.92.2">
-    <meta name="description" content="Time-Off Manager 365 - Admin Guide Help section for configuring and managing the Time-Off Manager system.">
+    <meta name="description"
+        content="Time-Off Manager 365 - Admin Guide Help section for configuring and managing the Time-Off Manager system.">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
@@ -20,13 +21,63 @@
 
     <style>
         :root {
-            
             --body-color: #f9f9f9;
             --text-color: #636363;
             --text-color-dark: #242738;
             --white-color: #ffffff;
             --light-color: #f8f9fa;
             --font-family: Lato;
+        }
+
+        .custom-doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+        }
+
+        .custom-doc-table th,
+        .custom-doc-table td {
+            border: 1px solid #d8e2ed;
+            padding: 10px 14px;
+            vertical-align: middle;
+        }
+
+        .custom-doc-table thead tr {
+            background-color: #eaf2fa;
+            color: #000;
+        }
+
+        .custom-doc-table thead th {
+            color: #000 !important;
+            font-weight: 700;
+            border-color: #eaf2fa;
+        }
+
+        .custom-doc-table tbody tr:nth-child(even) {
+            background-color: #f8fafd;
+        }
+
+        .custom-doc-table tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .custom-doc-table tbody th {
+            color: #173860;
+            font-weight: 700;
+            width: 25%;
+        }
+
+        .custom-callout-note {
+            background-color: #eaf2fa;
+            border-left: 4px solid #1f6497;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .custom-callout-note p {
+            margin: 0;
         }
     </style>
 
@@ -59,13 +110,13 @@
 
 
 <body>
-            <!-- Google Tag Manager (noscript) -->
-            <noscript>
-                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
-                    style="display:none;visibility:hidden">
-                </iframe>
-            </noscript>
-            <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="shadow-bottom sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container px-2 px-md-0">
@@ -116,80 +167,338 @@
 
                 <div class=col-lg-9>
                     <div class="p-lg-4 p-4 bg-white remove-padding" id=content>
-                        <!-- <h2 class=mb-5 id=title> Help</h2> -->
                         <div class="bg-light p-4 remove-padding">
-                           <h2 id="_dashboards">
-  <a class="header-icon-link highlight" href="#">
-    Dashboard <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
-  </a>
-</h2>
-<p>
-  This dashboard serves as a centralized hub for monitoring and analyzing employee time-off patterns across departments and locations in real-time.
-</p>
-<br>
- <div>
-    <img src="01.png" onclick="openModal('01.png')" alt="Time-off Type by Department" width="100%">
-  </div>
-<br>
-<div>
-  <h2>Time-off Type by Department</h2>
-  <p>
-    Illustrates the distribution of different types of time-off (Comp Off, Out of Office, Professional Leave, PTO, Sick, Vacation) across various departments. Helps identify trends in absence behavior and supports better workforce planning.
-  </p>
-  <div>
-    <img src="1.png" onclick="openModal('1.png')" alt="Time-off Type by Department" width="100%">
-  </div>
-</div>
-<br>
+                            <h2 id="_dashboards">
+                                <a class="header-icon-link highlight" href="#">
+                                    Dashboard <i class="fas fa-link" style="font-size:12px; color:lightgray;"></i>
+                                </a>
+                            </h2>
+                            <p>
+                                The Dashboard gives administrators a single view of leave activity across the
+                                organization: how many days are being taken, by whom, when, and what is still waiting
+                                for approval.
+                            </p>
+                            <br>
 
-<div>
-  <h2>Time-off Type by Location</h2>
-  <p>
-    Shows how different types of time-off are distributed across organizational locations. Facilitates location-based workforce management and identifies regions with higher absence rates.
-  </p>
-  <div>
-    <img src="2.png" onclick="openModal('2.png')" alt="Time-off Type by Location" width="100%">
-  </div>
-</div>
-<br>
+                            <div>
+                                <img src="1.png" onclick="openModal('1.png')" alt="Dashboard overview" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
 
-<div>
-  <h2>Absence Rate by Department</h2>
-  <p>
-    Displays the overall absence rate percentage for each department, providing insight into department-level attendance trends and potential areas for intervention.
-  </p>
-  <div>
-    <img src="4.png" onclick="openModal('4.png')" alt="Absence Rate by Department" width="100%">
-  </div>
-</div>
-<br>
 
-<div>
-  <h2>Absence Rate by Location</h2>
-  <p>
-    Shows the overall absence rate percentage for each location. Enables targeted management strategies for locations with higher absenteeism.
-  </p>
-  <div>
-    <img src="5.png" onclick="openModal('5.png')" alt="Absence Rate by Location" width="100%">
-  </div>
-</div>
-<br>
-<div>
-  <h2>Weekdays Time-off by Location</h2>
-  <p>
-    Displays the number of time-off occurrences for each weekday by location. Supports scheduling decisions and helps minimize operational disruptions during peak absence days.
-  </p>
-  <div>
-    <img src="6.png" onclick="openModal('6.png')" alt="Weekdays Time-off by Location" width="100%">
-  </div>
-</div></div>
+                            <h3>Open the Dashboard</h3>
+                            <ol>
+                                <li>Open Time-off Manager in SharePoint.</li>
+                                <li>Select the <b>Dashboard</b> icon (chart) in the left navigation.</li>
+                            </ol>
+                            <br>
 
-                            
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                            <h3>Filters</h3>
+                            <p>The filter bar at the top applies to every card, chart and table on the page.</p>
+
+                            <table class="custom-doc-table">
+                                <thead>
+                                    <tr>
+                                        <th>Filter</th>
+                                        <th>What it does</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Year</th>
+                                        <td>Selects the leave year to report on.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Department</th>
+                                        <td>Limits data to one or more departments.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Location</th>
+                                        <td>Limits data to one or more office locations.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave type</th>
+                                        <td>Limits data to specific leave types (e.g. PTO, Vacation, Sick).</td>
+                                    </tr>
+                                    <tr>
+                                        <th>User</th>
+                                        <td>Shows data for selected employees only.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>Two actions sit at the right of the filter bar:</p>
+                            <ul style="list-style-type:disc">
+                                <li><b>Download:</b> Exports the dashboard data for the current filters.</li>
+                                <li><b>Settings:</b> Configures the dashboard.</li>
+                            </ul>
+
+                            <div class="custom-callout-note">
+                                <p><strong>Tip:</strong> Many charts are also filters. Clicking a slice in Leave days by
+                                    type, department or location filters the whole dashboard to that value.</p>
+                            </div>
+                            <br>
+
+                            <h3>Summary cards</h3>
+                            <p>Six cards below the filters show the key numbers for the filtered view.</p>
+
+                            <table class="custom-doc-table">
+                                <thead>
+                                    <tr>
+                                        <th>Card</th>
+                                        <th>Shows</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Leave days</th>
+                                        <td>Total leave days for the selected year and filters.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Requests</th>
+                                        <td>Number of requests, approved and pending.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Off today</th>
+                                        <td>Employees on approved leave today.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Next 14 days</th>
+                                        <td>Approved requests starting in the next 14 days.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pending approval</th>
+                                        <td>Requests awaiting a decision.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Avg. days / request</th>
+                                        <td>Average length of a request across the filtered requests.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+                            <h3>Chart controls</h3>
+                            <p>Each chart has a toolbar in its top-right corner. Hover an icon to see its name.</p>
+
+                            <table class="custom-doc-table">
+                                <thead>
+                                    <tr>
+                                        <th>Control</th>
+                                        <th>What it does</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Show / hide values</th>
+                                        <td>Turns the data labels on the chart on or off.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Chart type</th>
+                                        <td>Switches the chart style, e.g. Bar or Line.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Time range</th>
+                                        <td>Changes the period for that chart: Full year, Current month, Last quarter,
+                                            Last 6 months or Rolling 12 months.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Expand</th>
+                                        <td>Opens the chart in a large view. Select Collapse to return.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+                            <div>
+                                <img src="2.png" onclick="openModal('2.png')" alt="Show / hide values" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+
+                            <div>
+                                <img src="3.png" onclick="openModal('3.png')" alt="Chart type menu" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="4.png" onclick="openModal('4.png')" alt="Line chart view" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="5.png" onclick="openModal('5.png')" alt="Time range options" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="6.png" onclick="openModal('6.png')" alt="Expanded chart view" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <h3>Charts</h3>
+                            <table class="custom-doc-table">
+                                <thead>
+                                    <tr>
+                                        <th>Chart</th>
+                                        <th>Shows</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Leave days taken</th>
+                                        <td>Leave days per month, by start date.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave days by weekday</th>
+                                        <td>Leave days grouped by the weekday the leave starts.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave days by type</th>
+                                        <td>Split by leave type. Click a type to filter.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave days by department</th>
+                                        <td>Split by department, with the total in the centre. Click a department to
+                                            filter.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave days by location</th>
+                                        <td>Split by location. Click a location to filter.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave days by employee</th>
+                                        <td>Top 8 employees; the rest are grouped as Others. Click a person for details.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Leave request status</th>
+                                        <td>Number of requests by status (Approved, Pending).</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Upcoming leave by week</th>
+                                        <td>Approved leave days for each of the next 6 weeks.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Daily Absence Outlook (Next 30 Days)</th>
+                                        <td>Number of employees on approved leave for each of the next 30 days.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+                            <div>
+                                <img src="7.png" onclick="openModal('7.png')" alt="Breakdown and outlook charts"
+                                    width="100%" height="auto">
+                            </div>
+                            <br>
+
+                            <h3>Most leave taken</h3>
+                            <p>Ranks employees by leave days taken, with a bar showing each person's share. Click a name
+                                to see that person's details. Use the arrows at the bottom to page through the list.</p>
+
+                            <h5>Charts view</h5>
+                            <p>Select Switch to charts view (chart icon, top right) to see the top 10 employees by leave
+                                days as a chart. In charts view:</p>
+                            <ul style="list-style-type:disc">
+                                <li><b>Chart type:</b> Choose Bar, Line, Doughnut or Pie. Doughnut shows the total days
+                                    in the centre; Doughnut and Pie group the remaining employees as Others.</li>
+                                <li><b>Table view (grid icon):</b> Returns to the list.</li>
+                            </ul>
+                            <br>
+
+                            <div>
+                                <img src="8.png" onclick="openModal('8.png')" alt="Switch to charts view" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="9.png" onclick="openModal('9.png')" alt="Top 10 employees as a bar chart"
+                                    width="100%" height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="10.png" onclick="openModal('10.png')" alt="Chart type menu with Line selected"
+                                    width="100%" height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="11.png" onclick="openModal('11.png')" alt="Doughnut view with total days"
+                                    width="100%" height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="12.png" onclick="openModal('12.png')" alt="Pie view" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <h3>Who is off today</h3>
+                            <p>A table of employees on leave, with three tabs:</p>
+                            <ul style="list-style-type:disc">
+                                <li><b>Off today:</b> Employees on approved leave today.</li>
+                                <li><b>Next 14 days:</b> Approved leave starting in the next 14 days.</li>
+                                <li><b>Pending:</b> Requests awaiting approval.</li>
+                            </ul>
+                            <p>The card title and summary line change with the tab: Who is off today, Upcoming leave or
+                                Pending approval.</p>
+                            <p>Columns are Employee (with department and location), Leave Type, Start Date, End Date and
+                                Days. Type in the box under a column heading to filter by it. Use Show Entries to set
+                                the number of rows per page and the arrows to move between pages.</p>
+                            <br>
+
+                            <div>
+                                <img src="13.png" onclick="openModal('13.png')" alt="Off today tab" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="14.png" onclick="openModal('14.png')" alt="Next 14 days tab" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <div>
+                                <img src="15.png" onclick="openModal('15.png')" alt="Pending tab" width="100%"
+                                    height="auto">
+                            </div>
+                            <br>
+
+                            <h5>Charts view</h5>
+                            <p>Select the chart icon next to the tabs to show the current tab's data as a chart:</p>
+                            <ul style="list-style-type:disc">
+                                <li><b>Group by:</b> Choose the field to group by, e.g. Leave Type.</li>
+                                <li><b>Chart type:</b> Bar, Line, Doughnut or Pie.</li>
+                                <li><b>Table view (grid icon):</b> Returns to the table.</li>
+                            </ul>
+                            <br>
+
+                            <div>
+                                <img src="16.png" onclick="openModal('16.png')" alt="Pending approval in charts view"
+                                    width="100%" height="auto">
+                            </div>
+                            <br>
+
+
+                        </div>
+
+                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date"></p>
                         <nav class="pagination mt-3">
                             <a class="nav nav-prev" href="../ArchitectureDiagram/" aria-label="Previous page"><i
-                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Architecture Diagram</span></a>
-                            <a class="nav nav-next" href="../hr-actions/" aria-label="Previous page"> <span
+                                    class="ti-arrow-left mr-2"></i> <span class="d-none d-md-block">Architecture
+                                    Diagram</span></a>
+                            <a class="nav nav-next" href="../hr-actions/" aria-label="Next page"> <span
                                     class="d-none d-md-block">HR Actions</span><i class="ti-arrow-right ml-2"></i></a>
                         </nav>
                     </div>
@@ -208,8 +517,8 @@
         </div>
     </div>
 
-     <div id="footer-container"></div>
-     <script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../../../js/script.min.js"></script>
     <script src="../../../../js/header-footer.js"></script>
     <script src="../../../../js/tmp-modern-adminguide.js"></script>
@@ -230,6 +539,7 @@
         document.getElementById("date").innerHTML = date;
     </script>
 
- <script src="/js/plus-toggle.js"></script></body>
+    <script src="/js/plus-toggle.js"></script>
+</body>
 
 </html>
