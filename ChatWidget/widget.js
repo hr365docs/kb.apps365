@@ -1,10 +1,20 @@
 import { hydrateIcons } from "./icons.js";
+import {
+  FLOATING_WIDGET_SOURCE,
+  KB_SITE_SEARCH_SOURCE,
+  conversationSourceDetails,
+  normalizeConversationSource,
+  persistConversationItem,
+  readConversationSource,
+} from "./conversation-persistence.mjs";
+import {
+  DEFAULT_ASSISTANT_DISPLAY_NAME,
+  createBrandingController,
+} from "./branding.mjs";
 
 (function () {
   "use strict";
 
-  const DIRECT_LINE_SECRET =
-    "BXL4er0v2wFIRHETqOl8VMQJoPrs7yeQTCki3SSGgp2NiqcZ2hZrJQQJ99CIACZoyfiAArohAAABAZBS416k.BAjlRhj9N4J1O5n0Jr0CfbkOaYhKxECX483tOh0Ep2GpUJl3QpOSJQQJ99CIACZoyfiAArohAAABAZBS4Vu0";
   const tenantId = "apps365";
   const defaultUserId = "";
   const defaultUserName = "";
@@ -12,6 +22,10 @@ import { hydrateIcons } from "./icons.js";
   // Live chat API (node.js) deployed on Azure App Service.
   const API_BASE_URL =
     "https://knowledgebaseagentr-azhkdfendtachngp.westus3-01.azurewebsites.net";
+  const BRANDING_REFRESH_COOLDOWN_MS = 15_000;
+  const DEFAULT_BRAND_LOGO_URL =
+    "https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg";
+
   // sessionStorage key prefix for the customer session token (per conversationId).
   const LIVE_SESSION_STORAGE_PREFIX = "cw-live-session:";
   const SIGNALR_CDN_URL =
@@ -107,6 +121,7 @@ import { hydrateIcons } from "./icons.js";
   const fab = document.getElementById("cw-fab");
   const header = document.getElementById("cw-header");
   const headerTitle = document.getElementById("cw-header-title");
+  const sidebarBrandTitle = document.getElementById("cw-sidebar-brand-title");
   const headerSubtitle = document.getElementById("cw-header-subtitle");
   const body = document.getElementById("cw-body");
   const input = document.getElementById("cw-input");
@@ -137,11 +152,14 @@ import { hydrateIcons } from "./icons.js";
 
   let conversations = [];
   let currentConversation = null;
+  let nextConversationSource = FLOATING_WIDGET_SOURCE;
   let chatStarted = false;
   let directLine;
   let store;
   let webChatInitPromise = null;
   let webChatInitialized = false;
+  let assistantDisplayName = DEFAULT_ASSISTANT_DISPLAY_NAME;
+  let currentBrandLogoUrl = DEFAULT_BRAND_LOGO_URL;
   // True once a stored conversation has taken directLine.conversationId, so "New chat"
   // knows it needs a fresh Direct Line conversation (and therefore a fresh id).
   let directLineConversationClaimed = false;
@@ -282,6 +300,7 @@ import { hydrateIcons } from "./icons.js";
       userIp: item.userIp || "",
       userId: item.userId || userId || "",
       userGuid: item.userGuid || "",
+      source: readConversationSource(item),
       feedback: item.feedback || {},
       rating: item.rating || null,
       ratingCardShown: Boolean(item.ratingCardShown || item.rating),
@@ -576,6 +595,7 @@ import { hydrateIcons } from "./icons.js";
       ratingPrompted: Boolean(conv.ratingCardShown || conv.rating),
       rating: conv.rating || null,
       liveAgent: normalizeLiveAgent(conv.liveAgent),
+      ...conversationSourceDetails(conv.source),
     };
   }
 
@@ -623,6 +643,7 @@ import { hydrateIcons } from "./icons.js";
       userIp: parsed.userIp || "",
       userId: item.UserEmail || "",
       userGuid: item.UserGUID || "",
+      source: readConversationSource(parsed),
       rating: item.Rating
         ? { value: Number(item.Rating), comment: item.FeedbackComment || "" }
         : null,
@@ -638,6 +659,8 @@ import { hydrateIcons } from "./icons.js";
       Title: String(details.title || "New chat").slice(0, 255),
       ConversationId: conv.conversationId || "",
       UserEmail: conv.email || currentUserEmail || "",
+      PageUrl: String(details.pageUrl || "").slice(0, 255),   // ← add
+      UserIP: String(details.userIp || ""),      
       ...(SHAREPOINT_HAS_USER_GUID_COLUMN
         ? { UserGUID: conv.userGuid || currentUser.guid || "" }
         : {}),
@@ -783,8 +806,8 @@ import { hydrateIcons } from "./icons.js";
       ...fields,
     };
 
-    if (conv.spId) {
-      const itemPath = `/_api/web/lists/getbytitle('${safeTitle}')/items(${conv.spId})`;
+    const update = async (itemId) => {
+      const itemPath = `/_api/web/lists/getbytitle('${safeTitle}')/items(${itemId})`;
       // The live chat API writes into the same ConversationDetails JSON (session binding,
       // fallback, assignedAgentId, agent messages). Re-read and merge before every write,
       // guarded by the item's ETag, so a widget save never erases what the server wrote.
@@ -826,29 +849,52 @@ import { hydrateIcons } from "./icons.js";
         if (!response.ok) {
           throw new Error(`Conversation update failed (${response.status})`);
         }
-        return;
+        return conv;
       }
-    }
+    };
 
-    const response = await spRequest(
-      `/_api/web/lists/getbytitle('${safeTitle}')/items`,
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json;odata=verbose",
-          "Content-Type": "application/json;odata=verbose",
+    const create = async () => {
+      const response = await spRequest(
+        `/_api/web/lists/getbytitle('${safeTitle}')/items`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json;odata=verbose",
+            "Content-Type": "application/json;odata=verbose",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
+      );
+
+      if (!response.ok) {
+        throw new Error(`Conversation create failed (${response.status})`);
+      }
+
+      const data = await response.json();
+      return data?.d?.Id || data?.d?.ID || data?.Id || data?.ID || null;
+    };
+
+    await persistConversationItem(conv, {
+      findExisting: async (conversationId) => {
+        const response = await spRequest(
+          `/_api/web/lists/getbytitle('${safeTitle}')/items?$select=Id&$filter=ConversationId eq '${escapeODataString(conversationId)}'&$top=1`,
+          {
+            method: "GET",
+            headers: { Accept: "application/json;odata=verbose" },
+          },
+        );
+        if (!response.ok) {
+          throw new Error(
+            `Conversation lookup failed (${response.status})`,
+          );
+        }
+        const data = await response.json();
+        const item = data?.d?.results?.[0] || data?.value?.[0];
+        return item?.Id || item?.ID || null;
       },
-    );
-
-    if (!response.ok) {
-      throw new Error(`Conversation create failed (${response.status})`);
-    }
-
-    const data = await response.json();
-    conv.spId =
-      data?.d?.Id || data?.d?.ID || data?.Id || data?.ID || conv.spId || null;
+      update,
+      create,
+    });
     return conv;
   }
 
@@ -1067,13 +1113,15 @@ import { hydrateIcons } from "./icons.js";
     empty.className = "cw-empty-state";
     empty.innerHTML = `
       <div class="cw-assistant-avatar" aria-hidden="true">
-        <img class="cw-brand-logo" src="https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg" alt="" />
+        <img class="cw-brand-logo" data-brand-logo src="${escapeHtml(DEFAULT_BRAND_LOGO_URL)}" alt="" />
       </div>
       <div class="cw-empty-bubble">
-        Hi ${escapeHtml(userName)} <span aria-hidden="true">&#128075;</span> I'm your Apps365 AI assistant. I'm here to answer using the official Apps365 KB.
+        <span class="cw-empty-greeting"></span>
       </div>
     `;
     body.appendChild(empty);
+    syncBrandLogos(empty);
+    updateEmptyStateGreeting();
 
     const supportCard = document.createElement("div");
     supportCard.className = "cw-support-select";
@@ -1148,12 +1196,14 @@ import { hydrateIcons } from "./icons.js";
     return `<span class="cw-fluent-icon cw-icon-${name}" aria-hidden="true"></span>`;
   }
 
-  function userActionsHtml(includeEdit) {
+  function userActionsHtml(includeEdit, timestamp = "") {
     const editBtn = includeEdit
       ? `<button type="button" class="cw-msg-action" data-action="edit" aria-label="Edit message" title="Edit message">${fluentIconHtml("edit")}</button>`
       : "";
+    const formattedTime = formatAgentTimestamp(timestamp);
     return `
-      <div class="cw-user-actions">
+      <div class="cw-user-actions${formattedTime ? " cw-live-message-meta" : ""}">
+        ${formattedTime ? `<time class="cw-live-message-timestamp" datetime="${escapeHtml(timestamp)}">${escapeHtml(formattedTime)}</time>` : ""}
         <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message" title="Copy message">${fluentIconHtml("copy")}</button>
         ${editBtn}
       </div>
@@ -1324,6 +1374,10 @@ import { hydrateIcons } from "./icons.js";
     const hasText = Boolean(text && text.trim());
     const hasAttachments = attachments.length > 0;
     const includeEdit = hasText && !hasAttachments;
+    const isLiveCustomerMessage =
+      typeof activity === "object" &&
+      activity !== null &&
+      String(activity.id || "").startsWith("cm-");
 
     const inner = document.createElement("div");
     inner.className = "cw-user-msg-inner";
@@ -1339,7 +1393,10 @@ import { hydrateIcons } from "./icons.js";
     }
 
     if (hasText || hasAttachments) {
-      html += userActionsHtml(includeEdit);
+      html += userActionsHtml(
+        includeEdit,
+        isLiveCustomerMessage ? activity.timestamp : "",
+      );
     }
 
     inner.innerHTML = html;
@@ -1369,19 +1426,57 @@ import { hydrateIcons } from "./icons.js";
     scrollToMessageStart(lastUserMsgEl || msg);
   }
 
-  // Same structure as a Copilot reply, labelled with the agent's name. No feedback
-  // thumbs: those rate AI answers.
-  function appendAgentMessage(text, agentName) {
+  function getAgentInitials(name) {
+    const parts = String(name || "Support agent")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+    if (!parts.length) return "SA";
+    if (parts.length === 1) return Array.from(parts[0]).slice(0, 2).join("").toUpperCase();
+    return `${Array.from(parts[0])[0]}${Array.from(parts[parts.length - 1])[0]}`.toUpperCase();
+  }
+
+  function getAgentAvatarColor(name) {
+    let hash = 0;
+    for (const character of String(name || "Support agent").trim().toLowerCase()) {
+      hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+    }
+    return `hsl(${hash % 360} 58% 42%)`;
+  }
+
+  function formatAgentTimestamp(timestamp) {
+    if (!timestamp) return "";
+    const date = new Date(timestamp);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat(undefined, {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    }).format(date);
+  }
+
+  // Live-agent replies use the assigned agent identity; no feedback thumbs.
+  function appendAgentMessage(text, agentName, timestamp) {
     hideEmptyState();
     const msg = document.createElement("article");
     msg.className = "cw-copilot-msg cw-agent-msg";
+    const displayName =
+      currentConversation?.liveAgent?.assignedAgentName ||
+      agentName ||
+      "Support agent";
+    const displayTime = formatAgentTimestamp(timestamp);
     msg.innerHTML = `
-      <div class="cw-agent-label">${escapeHtml(agentName || "Support agent")}</div>
-      <div class="cw-copilot-card">
-        <div class="cw-copilot-text cw-markdown">${escapeHtml(text || "").replace(/\n/g, "<br>")}</div>
-      </div>
-      <div class="cw-copilot-actions">
-        <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message" title="Copy message">${fluentIconHtml("copy")}</button>
+      <div class="cw-agent-row">
+        <div class="cw-agent-avatar" style="--cw-agent-avatar-color: ${getAgentAvatarColor(displayName)}" aria-label="${escapeHtml(displayName)}">${escapeHtml(getAgentInitials(displayName))}</div>
+        <div class="cw-agent-content">
+          <div class="cw-copilot-card">
+            <div class="cw-copilot-text cw-markdown">${escapeHtml(text || "").replace(/\n/g, "<br>")}</div>
+          </div>
+          <div class="cw-copilot-actions">
+            <button type="button" class="cw-msg-action" data-action="copy" aria-label="Copy message" title="Copy message">${fluentIconHtml("copy")}</button>
+            ${displayTime ? `<time class="cw-agent-timestamp" datetime="${escapeHtml(timestamp)}">${escapeHtml(displayTime)}</time>` : ""}
+          </div>
+        </div>
       </div>
     `;
     body.appendChild(msg);
@@ -1407,7 +1502,13 @@ import { hydrateIcons } from "./icons.js";
     if (activity.from && activity.from.role === "user") {
       appendUserMessage(activity);
     } else if (activity.from && activity.from.role === "agent") {
-      if (hasText) appendAgentMessage(activity.text, activity.from.name);
+      if (hasText) {
+        appendAgentMessage(
+          activity.text,
+          activity.from.name,
+          activity.timestamp,
+        );
+      }
     } else if (hasText) {
       appendCopilotMessage(activity.text, activity.id || id);
     }
@@ -1483,8 +1584,61 @@ import { hydrateIcons } from "./icons.js";
       updateHeaderTitle("Support", "Your recent conversations");
       return;
     }
-    updateHeaderTitle("Apps365 AI Assistant");
+    updateHeaderTitle(assistantDisplayName);
   }
+
+  function updateEmptyStateGreeting() {
+    const greeting = body.querySelector(".cw-empty-greeting");
+    if (greeting) {
+      const greetingName = userName ? `Hi ${userName},` : "Hi,";
+      greeting.textContent =
+        `${greetingName} I'm your ${assistantDisplayName}. ` +
+        "I'm here to answer using the official Apps365 KB.";
+    }
+  }
+
+  function syncBrandLogos(root = document) {
+    root.querySelectorAll("[data-brand-logo]").forEach((image) => {
+      image.onerror = () => {
+        if (
+          image.getAttribute("src") !== currentBrandLogoUrl ||
+          currentBrandLogoUrl === DEFAULT_BRAND_LOGO_URL
+        ) {
+          return;
+        }
+        applyBrandLogo(DEFAULT_BRAND_LOGO_URL);
+      };
+      image.src = currentBrandLogoUrl;
+    });
+  }
+
+  function applyBrandLogo(source) {
+    currentBrandLogoUrl = source || DEFAULT_BRAND_LOGO_URL;
+    syncBrandLogos();
+  }
+
+  function applyBranding({ assistantName, logoUrl }) {
+    if (assistantName) {
+      assistantDisplayName = assistantName;
+      if (sidebarBrandTitle) sidebarBrandTitle.textContent = assistantName;
+      updateHeaderForCurrentView();
+      updateEmptyStateGreeting();
+      body
+        .querySelector("#cw-loading")
+        ?.setAttribute("aria-label", `${assistantName} is typing`);
+    }
+    if (logoUrl) applyBrandLogo(logoUrl);
+  }
+
+  // Never blocks init or chat: failures are logged and default branding stays.
+  const branding = createBrandingController({
+    spRequest,
+    siteUrl: SHAREPOINT_SITE_URL,
+    defaultLogoUrl: DEFAULT_BRAND_LOGO_URL,
+    onApply: applyBranding,
+    cooldownMs: BRANDING_REFRESH_COOLDOWN_MS,
+  });
+  const refreshBranding = (options) => branding.refresh(options);
 
   function showLoading() {
     isWaitingForResponse = true;
@@ -1578,7 +1732,7 @@ import { hydrateIcons } from "./icons.js";
     });
   }
 
-  function updateSidebarToggleState() {
+  function updateSidebarToggleState() {                     
     const visible = isExpanded ? !isSidebarCollapsed : isSidebarOpen;
     sidebarToggleBtn?.setAttribute("aria-expanded", String(visible));
     sidebarToggleBtn?.setAttribute(
@@ -1711,7 +1865,7 @@ import { hydrateIcons } from "./icons.js";
     if (webChatInitPromise) return webChatInitPromise;
 
     webChatInitPromise = Promise.resolve()
-      .then(() => {
+      .then(async () => {
         if (webChatInitialized) return;
         if (!window.WebChat) {
           throw new Error("BotFramework WebChat is not loaded.");
@@ -1725,13 +1879,47 @@ import { hydrateIcons } from "./icons.js";
           webchatDiv = freshHost;
         }
         webchatDiv.innerHTML = "";
+        const tokenResponse = await fetch(
+          `${API_BASE_URL}/api/chat/directline/token`,
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+          },
+        ).then(async (response) => {
+          let responseBody = null;
+          try {
+            responseBody = await response.json();
+          } catch {
+            // Keep the status-based error when the response is not valid JSON.
+          }
+
+          const apiErrorMessage =
+            (typeof responseBody?.message === "string" &&
+              responseBody.message) ||
+            (typeof responseBody?.error === "string" && responseBody.error) ||
+            (typeof responseBody?.error?.message === "string" &&
+              responseBody.error.message);
+          if (!response.ok || !responseBody?.token) {
+            throw new Error(
+              apiErrorMessage ||
+                (response.ok
+                  ? "Direct Line token response did not contain a token."
+                  : `Direct Line token request failed (${response.status}).`),
+            );
+          }
+          return responseBody;
+        });
         directLine = window.WebChat.createDirectLine({
-          secret: DIRECT_LINE_SECRET,
+          token: tokenResponse.token,
         });
         // directLine = window.WebChat.createDirectLine({ domain: "http://localhost:56150/v3/directline",});
         store = createStore();
         window.WebChat.renderWebChat(
-          { directLine, store, userID: userId, username: userName },
+          { directLine, store, username: userName },
           webchatDiv,
         );
         bindConnectionStatus(directLine);
@@ -1747,7 +1935,7 @@ import { hydrateIcons } from "./icons.js";
   }
 
   // Ends the current Direct Line conversation so the next ensureWebChatInitialized()
-  // starts a new one with a new conversationId. The secret/auth path is unchanged.
+  // starts a new one with a new conversationId and a freshly requested token.
   function resetDirectLineConversation() {
     const previous = directLine;
     webChatInitialized = false;
@@ -1789,7 +1977,7 @@ import { hydrateIcons } from "./icons.js";
 
   // The only place a conversation record is created. It runs when currentConversation is
   // null, which only happens on first load or after startNewConversation().
-  function createCurrentConversation(preview) {
+  function createCurrentConversation(preview, source = nextConversationSource) {
     const conversationId = directLine?.conversationId || "";
     const conv = {
       id: conversationId || `pending-${Date.now()}`,
@@ -1803,9 +1991,11 @@ import { hydrateIcons } from "./icons.js";
       userId,
       userGuid: currentUser.guid || "",
       email: currentUserEmail || "",
+      source: normalizeConversationSource(source),
       feedback: {},
       liveAgent: { status: "none" },
     };
+    nextConversationSource = FLOATING_WIDGET_SOURCE;
 
     if (!conversationId) {
       conv.conversationIdPending = waitForDirectLineConversationId().then(
@@ -1951,6 +2141,7 @@ import { hydrateIcons } from "./icons.js";
     // The one deliberate reset: the next message creates a new conversation (and a new
     // SharePoint item). It gets a fresh Direct Line conversation so its id is new too.
     currentConversation = null;
+    nextConversationSource = FLOATING_WIDGET_SOURCE;
     if (directLineConversationClaimed) resetDirectLineConversation();
     resetCustomerSession();
     chatStarted = false;
@@ -2089,7 +2280,7 @@ import { hydrateIcons } from "./icons.js";
     });
   }
 
-  async function handleSend() {
+  async function handleSend(source = FLOATING_WIDGET_SOURCE) {
     if (liveAgentActive) {
       await handleLiveAgentSend();
       return;
@@ -2117,6 +2308,9 @@ import { hydrateIcons } from "./icons.js";
       input.value = "";
       input.placeholder = defaultInputPlaceholder;
       // handleNewMessage picks the email up from the outgoing message.
+      if (!currentConversation) {
+        nextConversationSource = normalizeConversationSource(source);
+      }
       sendMessage(text, { liveAgentEmailGate: true });
       updateSendButton();
       input.focus();
@@ -2140,25 +2334,29 @@ import { hydrateIcons } from "./icons.js";
 
     input.value = "";
     clearPendingFiles();
+    if (!currentConversation) {
+      nextConversationSource = normalizeConversationSource(source);
+    }
 
     try {
       if (filesToSend.length) {
-        if (text) {
-          store.dispatch({
-            type: "WEB_CHAT/SEND_MESSAGE",
-            payload: {
-              text,
-              channelData: {
-                pageUrl: window.location.href,
-                userIp: userPublicIp,
-              },
-            },
-          });
-        }
-
+        // One activity carries the text and the files, so the agent answers the user's
+        // question about the files in the same turn. (WEB_CHAT/SEND_FILES expects
+        // { files: [{ name, url, size }] }, not raw File objects, so it is not used.)
+        // Direct Line uploads each blob and the agent receives it as an attachment.
         store.dispatch({
-          type: "WEB_CHAT/SEND_FILES",
-          payload: filesToSend.map((item) => item.file),
+          type: "WEB_CHAT/SEND_MESSAGE",
+          payload: {
+            ...(text ? { text } : {}),
+            attachments: filesToSend.map((item) => ({ blob: item.file })),
+            channelData: {
+              pageUrl: window.location.href,
+              userIp: userPublicIp,
+              ...(getActiveLiveAgentEmailGate()
+                ? { liveAgentEmailGate: true }
+                : {}),
+            },
+          },
         });
       } else if (text) {
         // While a live-agent email check is in progress (OTP, resend, re-entered email),
@@ -2169,6 +2367,9 @@ import { hydrateIcons } from "./icons.js";
         );
       }
     } catch {
+      if (!currentConversation) {
+        nextConversationSource = FLOATING_WIDGET_SOURCE;
+      }
       hideLoading();
       showToast("Could not send your message. Try again.");
     }
@@ -2822,13 +3023,13 @@ import { hydrateIcons } from "./icons.js";
       from: {
         id: agentEmail || "agent",
         name:
-          message.senderName ||
           conv.liveAgent?.assignedAgentName ||
+          message.senderName ||
           "Support agent",
         role: "agent",
         ...(agentEmail ? { email: agentEmail } : {}),
       },
-      timestamp: createdAt || new Date().toISOString(),
+      timestamp: createdAt,
     };
 
     conv.messages.push(activity);
@@ -3587,6 +3788,7 @@ import { hydrateIcons } from "./icons.js";
   // Tab closed / navigated away mid live chat: end it so the agent isn't left with an
   // orphaned chat. The /end fetch uses keepalive so it survives the unload. No-op otherwise.
   window.addEventListener("pagehide", () => {
+    branding.cleanup({ revive: true });
     if (liveSession) endLiveAgentSession();
   });
 
@@ -3614,6 +3816,17 @@ import { hydrateIcons } from "./icons.js";
 
   updateSendButton();
   updateSidebarToggleState();
+  void refreshBranding({ force: true });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") void refreshBranding();
+  });
+  window.addEventListener("focus", () => void refreshBranding());
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      branding.cleanup({ revive: true });
+      void refreshBranding({ force: true });
+    }
+  });
   void loadConversationsFromSharePoint();
   if (window.requestIdleCallback) {
     window.requestIdleCallback(() => {
@@ -3635,14 +3848,14 @@ import { hydrateIcons } from "./icons.js";
     isOpen() {
       return isOpen;
     },
-    ask(question) {
+    ask(question, source = KB_SITE_SEARCH_SOURCE) {
       if (!question || !question.trim()) return;
       openWidget();
       closeSidebar();
       setTimeout(() => {
         input.value = question;
         updateSendButton();
-        handleSend();
+        handleSend(normalizeConversationSource(source));
       }, 320);
     },
   };

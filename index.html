@@ -1075,7 +1075,7 @@
         const question = input.value.trim();
         if (!question) return;
         panel.hidden = true;
-        window.CopilotWidget?.ask(question);
+        window.CopilotWidget?.ask(question, "kb-site-search");
       }
 
       input.addEventListener("input", updatePanel);
@@ -1090,7 +1090,7 @@
       event.preventDefault();
       const question = document.getElementById("search")?.value.trim();
       if (!question) return;
-      window.CopilotWidget?.ask(question);
+      window.CopilotWidget?.ask(question, "kb-site-search");
     });
 
     document.querySelector(".banner_form .search-icon")?.addEventListener("click", function () {
