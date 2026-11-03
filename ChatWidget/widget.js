@@ -3150,7 +3150,7 @@ import {
       // rendered locally.
       if (message?.senderType !== "agent") return;
 
-      const ringtone = new Audio("./chatwidget/chatRecieved.mp3");
+      const ringtone = new Audio("./ChatWidget/chatRecieved.mp3");
       ringtone.volume = 0.7;
       recordAgentMessage(session, message);
       ringtone.play();
