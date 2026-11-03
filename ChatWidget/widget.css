@@ -982,7 +982,7 @@ body {
 .cw-copilot-card {
     background: #fff;
     border: 1px solid #dfe6f1;
-    border-radius: 18px;
+    border-radius: 10px 10px 10px 0;
     padding: 16px 18px;
     max-width: max-content;
     box-shadow: none;
@@ -1258,16 +1258,38 @@ body {
 }
 .cw-agent-avatar {
     display: flex;
-    flex: 0 0 30px;
+    flex: 0 0 42px;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: 42px;
+    /* Centre the avatar on the 55px message card (row is top-aligned) */
+    margin-top: 6.5px;
     border-radius: 50%;
     background: var(--cw-agent-avatar-color);
     color: #fff;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
+}
+/* AI bot reply avatar (brand logo), same size/position as the live-agent persona */
+.cw-bot-avatar {
+    display: flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-top: 6.5px;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.cw-bot-avatar .cw-brand-logo {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
 }
 .cw-agent-content {
     flex: 1;
@@ -1275,6 +1297,15 @@ body {
 }
 .cw-agent-msg .cw-copilot-card {
     border-left: 3px solid var(--cw-green);
+    /* Mirror of the user bubble (10px 10px 0 10px): square bottom-left corner */
+    border-radius: 10px 10px 10px 0;
+    /* Agent card measured 58.44px vs 55.34px for the bot card; trim 3.1px so both match */
+    padding-top: 14.45px;
+    padding-bottom: 14.45px;
+    min-height: 55.34px;
+}
+.cw-agent-msg .cw-copilot-text {
+    line-height: 1.55;
 }
 .cw-agent-timestamp,
 .cw-live-message-timestamp {

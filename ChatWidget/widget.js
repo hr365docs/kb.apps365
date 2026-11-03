@@ -1414,11 +1414,16 @@ import {
     const msg = document.createElement("article");
     msg.className = "cw-copilot-msg";
     msg.innerHTML = `
-      <div class="cw-copilot-card">
-        <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
+      <div class="cw-agent-row">
+        <div class="cw-bot-avatar" aria-hidden="true"><img class="cw-brand-logo" src="${escapeHtml(DEFAULT_BRAND_LOGO_URL)}" alt="" /></div>
+        <div class="cw-agent-content">
+          <div class="cw-copilot-card">
+            <div class="cw-copilot-text cw-markdown">${renderMarkdown(text)}</div>
+          </div>
+          ${text?.trim() ? copilotActionsHtml(messageId) : ""}
+          ${text?.trim() ? feedbackFormHtml() : ""}
+        </div>
       </div>
-      ${text?.trim() ? copilotActionsHtml(messageId) : ""}
-      ${text?.trim() ? feedbackFormHtml() : ""}
     `;
     body.appendChild(msg);
     hydrateIcons(msg);
@@ -2168,7 +2173,10 @@ import {
     ) {
       return;
     }
-    if (conversations.length > 0) {
+    // A refresh opens a new Direct Line connection, so open the new-chat UI too instead of
+    // the last conversation. Only an active live-agent chat is still resumed.
+    const lastLiveStatus = conversations[0]?.liveAgent?.status;
+    if (lastLiveStatus === "pending" || lastLiveStatus === "assigned") {
       await loadConversation(conversations[0]);
     } else {
       updateHeaderForCurrentView();
