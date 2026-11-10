@@ -16,6 +16,25 @@ import {
   "use strict";
 
   const tenantId = "apps365";
+  // currentScript is only available while the script first runs, so capture it now.
+  const WIDGET_SCRIPT_SRC = document.currentScript?.src || "";
+  let agentRingtone = null;
+  function playAgentRingtone() {
+    try {
+      if (!agentRingtone) {
+        agentRingtone = new Audio(
+          new URL("ChatWidget/chatRecieved.mp3", WIDGET_SCRIPT_SRC || location.href)
+            .href,
+        );
+        agentRingtone.volume = 0.7;
+      }
+      agentRingtone.currentTime = 0;
+      const playing = agentRingtone.play();
+      if (playing?.catch) playing.catch(() => {});
+    } catch {
+      // Sound is optional; never block message handling.
+    }
+  }
   const defaultUserId = "";
   const defaultUserName = "";
   const MAX_FILE_SIZE = 4 * 1024 * 1024; // Direct Line channel limit
@@ -25,6 +44,10 @@ import {
   const BRANDING_REFRESH_COOLDOWN_MS = 15_000;
   const DEFAULT_BRAND_LOGO_URL =
     "https://ik.imagekit.io/zn4au2jftpm5/CLAILogo.svg";
+  const ENABLE_FALLBACK_FORM = false;
+  const LIVE_OUTCOME_NOTICE_DELAY_MS = 8000;
+  const LIVE_OUTCOME_NOTICE =
+    "No agents are available right now. Please try again in a little while.";
 
   // sessionStorage key prefix for the customer session token (per conversationId).
   const LIVE_SESSION_STORAGE_PREFIX = "cw-live-session:";
@@ -204,6 +227,9 @@ import {
   let isReplayingHistory = false;
   let replayGuardTimer = null;
   let isWaitingForResponse = false;
+  let pendingHandoffSummary = "";
+  let liveOutcomeNoticeTimer = null;
+  let liveOutcomeNoticePending = false;
   let responseTimeoutTimer = null;
   const BOT_RESPONSE_TIMEOUT_MS = 30000;
   const RATING_IDLE_MS = 4 * 60 * 1000;
@@ -1047,7 +1073,30 @@ import {
 
   function renderMarkdown(text) {
     if (!text) return "";
-    if (window.marked) return marked.parse(text);
+    if (window.marked) {
+      const renderer = new marked.Renderer();
+      renderer.link = function (tokenOrHref, legacyTitle, legacyText) {
+        const token =
+          tokenOrHref && typeof tokenOrHref === "object" ? tokenOrHref : null;
+        const href = token ? token.href : tokenOrHref;
+        const title = token ? token.title : legacyTitle;
+        const linkText = token
+          ? token.text ?? this.parser.parseInline(token.tokens || [])
+          : legacyText;
+        let safeHref = "#";
+        try {
+          const parsedHref = new URL(href || "", window.location.href);
+          if (["http:", "https:", "mailto:", "tel:"].includes(parsedHref.protocol)) {
+            safeHref = escapeHtml(href || "");
+          }
+        } catch {
+          // Keep malformed or unsafe destinations inert.
+        }
+        const safeTitle = title ? ` title="${escapeHtml(title)}"` : "";
+        return `<a href="${safeHref}"${safeTitle} target="_blank" rel="noopener">${linkText}</a>`;
+      };
+      return marked.parse(text, { renderer });
+    }
     return escapeHtml(text)
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/\n/g, "<br>");
@@ -1530,45 +1579,14 @@ import {
     return "Message";
   }
 
-  function normalizeMsgText(text) {
-    return (text || "").trim().replace(/\s+/g, " ");
-  }
-
-  function isProactiveWelcome(text) {
-    if (!text) return false;
-    const t = text.toLowerCase();
-    return (
-      (t.includes("welcome") && t.includes("apps365")) ||
-      t.includes("ask me anything you need") ||
-      t.includes("!help to manage kb")
-    );
-  }
-
   function isDuplicateMessage(activity) {
-    if (!currentConversation) return false;
-    const text = normalizeMsgText(activity.text);
-    return currentConversation.messages.some(
-      (m) =>
-        normalizeMsgText(m.text) === text &&
-        m.from?.role === activity.from?.role,
-    );
+    if (!isReplayingHistory || !currentConversation || !activity.id) return false;
+    return currentConversation.messages.some((m) => m.id === activity.id);
   }
 
   function shouldIgnoreBotMessage(activity) {
     if (activity.from?.role === "user") return false;
-    if (isReplayingHistory) return true;
-    if (isDuplicateMessage(activity)) return true;
-
-    const text = activity.text || "";
-    if (!isProactiveWelcome(text) || !currentConversation) return false;
-
-    const hasUserMsg = currentConversation.messages.some(
-      (m) => m.from?.role === "user",
-    );
-    const hasBotMsg = currentConversation.messages.some(
-      (m) => m.from?.role !== "user",
-    );
-    return hasUserMsg || hasBotMsg;
+    return isDuplicateMessage(activity);
   }
 
   function beginReplayGuard() {
@@ -1786,6 +1804,33 @@ import {
   function createStore() {
     return window.WebChat.createStore({}, () => (next) => (action) => {
       const isReplay = action.payload?.activity?.channelData?.isReplay;
+      if (action.type === "DIRECT_LINE/INCOMING_ACTIVITY") {
+        const activity = action.payload?.activity;
+        if (
+          currentConversation &&
+          activity?.type === "message" &&
+          activity.from?.role !== "user"
+        ) {
+          hideLoading();
+        }
+        if (
+          activity?.type === "event" &&
+          activity.name === "liveAgent/connectRequest"
+        ) {
+          hideLoading();
+          if (
+            !isReplay &&
+            !isReplayingHistory &&
+            !liveSession
+          ) {
+            pendingHandoffSummary = String(activity.value?.summary || "").trim();
+            void startLiveAgentEscalation({
+              needsVerification: activity.value?.needsVerification,
+            });
+          }
+          return next(action);
+        }
+      }
 
       if (!isReplay && action.type === "DIRECT_LINE/POST_ACTIVITY") {
         const activity = action.payload.activity;
@@ -1820,14 +1865,25 @@ import {
           handleBotEmailAccepted(activity.value?.email);
         } else if (
           activity.type === "event" &&
+          activity.name === "liveAgent/emailVerified"
+        ) {
+          handleBotEmailVerified(activity.value?.email);
+        } else if (
+          activity.type === "event" &&
           activity.name === "conversation/emailIdentity"
         ) {
           handleConversationEmailIdentity(activity.value);
+        } else if (
+          activity.type === "event" &&
+          activity.name === "liveAgent/outcome"
+        ) {
+          // This is an outbound-only protocol event.
         } else if (
           activity.type === "message" &&
           activity.from &&
           activity.from.role !== "user"
         ) {
+          clearLiveOutcomeNotice();
           handleNewMessage({
             id: activity.id || "bot-" + Date.now(),
             type: "message",
@@ -1842,6 +1898,7 @@ import {
             },
             timestamp: activity.timestamp || new Date().toISOString(),
           });
+          // Fallback only; the liveAgent/emailVerified event is the primary signal.
           if (isBotEmailVerifiedReply(activity.text)) handleBotEmailVerified();
         }
       }
@@ -2031,6 +2088,15 @@ import {
       directLineConversationClaimed = true;
       const capturedEmail = extractEmailFromText(activity.text);
       if (capturedEmail) {
+        // A different email than the bot accepted must not inherit that acceptance;
+        // it stays cleared until the bot confirms the new one.
+        if (
+          acceptedNewCustomerConversationId &&
+          capturedEmail !== acceptedNewCustomerEmail
+        ) {
+          acceptedNewCustomerConversationId = "";
+          acceptedNewCustomerEmail = "";
+        }
         applyUserEmailIdentity(capturedEmail, {
           persist: true,
           reloadHistory: true,
@@ -2073,6 +2139,7 @@ import {
       clearRatingIdleTimer();
     } else {
       hideLoading();
+      clearLiveOutcomeNotice();
       scheduleRatingIdle();
     }
 
@@ -2082,7 +2149,10 @@ import {
 
   async function loadConversation(conv) {
     clearRatingIdleTimer();
-    if (conv !== currentConversation) clearLiveAgentEmailGate();
+    if (conv !== currentConversation) {
+      clearLiveAgentEmailGate();
+      pendingHandoffSummary = "";
+    }
     if (liveSession) {
       if (
         getConversationKey(conv) ===
@@ -2141,6 +2211,7 @@ import {
   function startNewConversation() {
     clearRatingIdleTimer();
     clearLiveAgentEmailGate();
+    pendingHandoffSummary = "";
     closeLiveAgent();
     hideLoading();
     // The one deliberate reset: the next message creates a new conversation (and a new
@@ -2314,7 +2385,7 @@ import {
 
       emailGate.step = "verifying";
       input.value = "";
-      input.placeholder = defaultInputPlaceholder;
+      input.placeholder = VERIFYING_INPUT_PLACEHOLDER;
       // handleNewMessage picks the email up from the outgoing message.
       if (!currentConversation) {
         nextConversationSource = normalizeConversationSource(source);
@@ -2520,6 +2591,34 @@ import {
     return true;
   }
 
+  function clearLiveOutcomeNotice() {
+    liveOutcomeNoticePending = false;
+    clearTimeout(liveOutcomeNoticeTimer);
+    liveOutcomeNoticeTimer = null;
+  }
+
+  function sendLiveOutcome(status) {
+    if (!store) return false;
+    store.dispatch({
+      type: "WEB_CHAT/SEND_EVENT",
+      payload: { name: "liveAgent/outcome", value: { status } },
+    });
+    if (status === "no_agent_available" || status === "error") {
+      clearLiveOutcomeNotice();
+      liveOutcomeNoticePending = true;
+      const noticeConversation = currentConversation;
+      liveOutcomeNoticeTimer = setTimeout(() => {
+        liveOutcomeNoticeTimer = null;
+        if (!liveOutcomeNoticePending) return;
+        liveOutcomeNoticePending = false;
+        if (currentConversation === noticeConversation) {
+          appendLiveNotice(LIVE_OUTCOME_NOTICE);
+        }
+      }, LIVE_OUTCOME_NOTICE_DELAY_MS);
+    }
+    return true;
+  }
+
   function submitRating(conv, rating, comment) {
     if (!sendRatingEvent(conv, rating, comment)) {
       showToast("Could not send your rating. Please try again.");
@@ -2632,6 +2731,9 @@ import {
   let liveAgentEmailGate = null; // { conversationId, step }
   let verifiedBotConversationId = "";
   let acceptedNewCustomerConversationId = "";
+  let acceptedNewCustomerEmail = "";
+  const VERIFYING_INPUT_PLACEHOLDER =
+    "Enter the 6-digit code, 'resend', or a different email";
   const defaultInputPlaceholder = input?.placeholder || "Ask anything";
 
   function isEmailVerifiedForLiveAgent() {
@@ -2662,8 +2764,10 @@ import {
     if (verified === true && knownCustomer === true) {
       verifiedBotConversationId = dlId;
       acceptedNewCustomerConversationId = "";
+      acceptedNewCustomerEmail = "";
     } else if (verified === false && knownCustomer === false) {
       acceptedNewCustomerConversationId = dlId;
+      acceptedNewCustomerEmail = normalized;
       verifiedBotConversationId = "";
     }
   }
@@ -2708,11 +2812,18 @@ import {
     void startLiveAgentEscalation();
   }
 
-  function handleBotEmailVerified() {
+  function handleBotEmailVerified(email) {
     const dlId = directLine?.conversationId;
-    if (!dlId || !currentUserEmail) return;
+    if (!dlId) return;
+    // Idempotent: the event and the "Welcome back" text can both arrive.
+    const alreadyVerified = verifiedBotConversationId === dlId;
+    if (email && !alreadyVerified) {
+      applyBotEmailIdentity(email, { verified: true, knownCustomer: true });
+    }
+    if (!currentUserEmail) return;
     verifiedBotConversationId = dlId;
     acceptedNewCustomerConversationId = "";
+    acceptedNewCustomerEmail = "";
 
     if (!getActiveLiveAgentEmailGate()) return;
     clearLiveAgentEmailGate();
@@ -2892,6 +3003,19 @@ import {
           ? (messages[i].text || "").trim()
           : "";
       if (text) return text;
+    }
+    return "";
+  }
+
+  function getLastSubstantiveUserMessageText(conv) {
+    const confirmation = /^(?:yes|yeah|yep|ok|okay|sure|right|correct|confirmed|please do|go ahead)[.!\s]*$/i;
+    const messages = conv?.messages || [];
+    for (let i = messages.length - 1; i >= 0; i--) {
+      const text =
+        messages[i]?.from?.role === "user"
+          ? String(messages[i].text || "").trim()
+          : "";
+      if (text && !confirmation.test(text)) return text;
     }
     return "";
   }
@@ -3150,11 +3274,8 @@ import {
       // rendered locally.
       if (message?.senderType !== "agent") return;
 
-      const ringtone = new Audio("./ChatWidget/chatRecieved.mp3");
-      ringtone.volume = 0.7;
       recordAgentMessage(session, message);
-      ringtone.play();
-      ringtone.stop();
+      playAgentRingtone();
     });
 
     // Each Typing event keeps the indicator up; it clears after a quiet period
@@ -3232,6 +3353,7 @@ import {
 
   function handleServerChatEnded(session) {
     if (!isLiveSessionCurrent(session)) return;
+    sendLiveOutcome("ended");
     const conv = session.conversation;
     const hadAgent = conv.liveAgent?.status === "assigned"; // read before it flips to "closed"
     if (currentConversation === conv)
@@ -3362,13 +3484,24 @@ import {
     updateSendButton();
   }
 
-  async function startLiveAgentEscalation() {
+  // needsVerification comes from the bot's liveAgent/connectRequest. It is only
+  // passed for that event; resumes after emailVerified/emailAccepted omit it.
+  async function startLiveAgentEscalation({ needsVerification } = {}) {
+    if (currentConversation?.liveAgent?.status === "closed") {
+      pendingHandoffSummary = "";
+      sendLiveOutcome("session_closed");
+      appendLiveNotice(
+        "The live chat for this conversation has ended. Start a new conversation to talk to an agent again.",
+      );
+      return;
+    }
+
     // Existing customers need OTP verification. A bot-accepted new-customer
     // email is sufficient for live-agent escalation without OTP.
     if (
       !liveSession &&
       !isEmailVerifiedForLiveAgent() &&
-      !hasAcceptedNewCustomerEmailForLiveAgent()
+      (needsVerification === true || !hasAcceptedNewCustomerEmailForLiveAgent())
     ) {
       await requestLiveAgentEmail();
       return;
@@ -3382,13 +3515,6 @@ import {
       existingForm.scrollIntoView({ block: "nearest" });
       return;
     }
-    if (currentConversation?.liveAgent?.status === "closed") {
-      appendLiveNotice(
-        "The live chat for this conversation has ended. Start a new conversation to talk to an agent again.",
-      );
-      return;
-    }
-
     try {
       await ensureWebChatInitialized();
     } catch {
@@ -3430,7 +3556,9 @@ import {
       session.token = await ensureCustomerSession(conversationId);
       if (session.ended) return;
 
-      const lastMessage = getLastUserMessageText(conv);
+      const lastMessage =
+        pendingHandoffSummary || getLastSubstantiveUserMessageText(conv);
+      pendingHandoffSummary = "";
       const result = await liveApiFetch("/api/escalation/escalate", {
         method: "POST",
         // Identity travels with the escalation too: bind may have run before the
@@ -3445,13 +3573,23 @@ import {
       });
 
       if (result?.status === "no_agent_available") {
+        sendLiveOutcome("no_agent_available");
         const wasEnded = session.ended;
         if (liveSession === session) liveSession = null;
         session.ended = true;
         removeLiveStatusUi();
-        if (!wasEnded && currentConversation === conv) {
+        if (ENABLE_FALLBACK_FORM && !wasEnded && currentConversation === conv) {
           showFallbackForm(conv, session.token, lastMessage);
         }
+        return;
+      }
+
+      if (result?.status === "session_closed") {
+        sendLiveOutcome("session_closed");
+        if (liveSession === session) liveSession = null;
+        session.ended = true;
+        removeLiveStatusUi();
+        setLiveAgentStatus(conv, "closed");
         return;
       }
 
@@ -3483,6 +3621,9 @@ import {
       console.error("Live agent escalation failed", error);
       if (liveSession !== session) return;
 
+      pendingHandoffSummary = "";
+      sendLiveOutcome(error.status === 409 ? "session_closed" : "error");
+
       if (session.escalated) {
         endLiveAgentSession();
       } else {
@@ -3490,11 +3631,11 @@ import {
         session.ended = true;
         removeLiveStatusUi();
       }
-      appendLiveNotice(
-        error.status === 409
-          ? "The live chat for this conversation has ended. Start a new conversation to talk to an agent again."
-          : "We couldn't reach a live agent right now. Please try again in a moment.",
-      );
+      if (error.status === 409) {
+        appendLiveNotice(
+          "The live chat for this conversation has ended. Start a new conversation to talk to an agent again.",
+        );
+      }
     }
   }
 
@@ -3631,6 +3772,8 @@ import {
   function endLiveChatByUser() {
     const conv = liveSession?.conversation;
     const hadAgent = conv?.liveAgent?.status === "assigned";
+    pendingHandoffSummary = "";
+    if (liveSession) sendLiveOutcome("ended");
     closeLiveAgent();
     if (conv && hadAgent) showRatingCard(conv, "live-ended");
   }
@@ -3717,11 +3860,6 @@ import {
     btn.addEventListener("click", async () => {
       const chip = btn.dataset.chip;
 
-      if (chip === "contact-support") {
-        window.open("https://www.apps365.com/support/", "_blank", "noopener");
-        return;
-      }
-
       // if (chip === "raise-ticket") {
       //   try {
       //     await ensureWebChatInitialized();
@@ -3735,11 +3873,6 @@ import {
       //   handleSend();
       //   return;
       // }
-
-      if (chip === "live-agent") {
-        void startLiveAgentEscalation();
-        return;
-      }
 
       // if (chip === "show-tickets") {
       //   if (!input) return;
