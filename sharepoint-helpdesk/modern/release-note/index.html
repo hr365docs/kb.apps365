@@ -20,16 +20,21 @@
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
-    <style>
+   <style>
+        /* DEFAULT: Full Dark Theme (when domain does NOT match) */
         :root {
-            --back--: black;
-            --front--: white;
+            --back--: #000;
+            /* Dark panel background */
+            --front--: #ffffff;
+            /* White text */
             --release--: #a5a5a5;
-            --body-color: #f9f9f9;
-            --text-color: #636363;
-            --text-color-dark: #242738;
-            --white-color: #ffffff;
-            --light-color: #f8f9fa;
+            /* Muted gray release text */
+            --body-color: #0a080a;
+            /* Dark outer page/gap background */
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
             --font-family: Lato;
         }
     </style>
@@ -42,19 +47,26 @@
                 'apps365.com',
                 'hr365.us',
                 'cubiclogics.com',
-                'kb.apps365.com'
+                'kb.apps365.com',
+                '127.0.0.1', // Remove before production if you only want live domains white
+                'localhost'
             ];
 
-            // Checks if current host matches or contains any of the domains
             var isMatched = targetDomains.some(function (domain) {
                 return host.includes(domain);
             });
 
+            // OVERRIDE: Full White/Light Theme (when domain MATCHES)
             if (isMatched) {
                 var root = document.documentElement;
-                root.style.setProperty('--back--', '#ffffff');
-                root.style.setProperty('--release--', '#636363');
-                root.style.setProperty('--front--', '#0b1020', 'important');
+                root.style.setProperty('--back--', '#ffffff');        /* White panel background */
+                root.style.setProperty('--front--', '#000');       /* Dark text */
+                root.style.setProperty('--release--', '#636363');     /* Dark gray release text */
+                root.style.setProperty('--body-color', '#f4f6f9');    /* Soft light gray outer background (removes black borders) */
+                root.style.setProperty('--text-color', '#636363');
+                root.style.setProperty('--text-color-dark', '#242738');
+                root.style.setProperty('--white-color', '#ffffff');
+                root.style.setProperty('--light-color', '#f8f9fa');
             }
         })();
     </script>
