@@ -1537,19 +1537,28 @@ body {
     display: block;
     width: 100%;
     height: 52px;
+    min-height: 52px;
+    max-height: 160px;
+    box-sizing: border-box;
     border: 1px solid var(--cw-primary-border);
     border-radius: 14px;
     outline: none;
     font-size: 14px;
+    line-height: 20px;
     font-family: inherit;
     color: var(--cw-text);
     background: #fff;
-    padding-right: 38px;
-    padding-left: 5px;
+    padding: 15px 38px 15px 5px;
     min-width: 0;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 .cw-composer.has-files .cw-composer-input {
-    padding: 0 18px;
+    padding: 15px 18px;
 }
 .cw-composer-input::placeholder {
     color: var(--cw-text-muted);
@@ -1750,9 +1759,10 @@ body {
 }
 .cw-widget.is-expanded .cw-composer-input {
     height: 45px;
+    min-height: 45px;
     border-radius: 10px;
     font-size: 14px;
-    padding: 0 14px;
+    padding: 12px 38px 12px 14px;
 }
 .cw-widget.is-expanded .cw-btn-send {
     width: 45px;
@@ -1790,7 +1800,6 @@ body {
     grid-template-columns: 34px minmax(0, 1fr) 52px;
     gap: 10px;
 }
-.cw-widget:not(.is-expanded) .cw-composer-input,
 .cw-widget:not(.is-expanded) .cw-composer-btn,
 .cw-widget:not(.is-expanded) .cw-btn-send {
     height: 52px;

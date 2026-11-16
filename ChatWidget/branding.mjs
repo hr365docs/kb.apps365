@@ -1,5 +1,6 @@
 // Branding saved by the SharePoint webpart (HR365CASettings.AllSettings) applied to the chat widget.
-// Pure helpers plus a controller that takes its SharePoint access by injection so it can be tested.
+// Pure helpers plus a controller that takes its API access by injection so it can be tested.
+// The browser never talks to SharePoint: settings and the logo file come from the Node API.
 
 export const DEFAULT_ASSISTANT_DISPLAY_NAME = "APPs 365 AI Assistant";
 export const BRANDING_SETTINGS_LIST_TITLE = "HR365CASettings";
@@ -67,14 +68,12 @@ export function resolveBrandLogoUrl(value, siteUrl) {
   return { serverRelativePath: decodedPath };
 }
 
-function serverRelativeFileRequestPath(serverRelativePath) {
-  const escaped = serverRelativePath.replace(/'/g, "''");
-  return `/_api/web/GetFileByServerRelativeUrl('${encodeURI(escaped)}')/$value`;
-}
+export const BRANDING_NO_SESSION = "BRANDING_NO_SESSION";
+export const BRANDING_SETTINGS_PATH = "/api/chat/branding";
+export const BRANDING_LOGO_PATH = "/api/chat/branding/logo";
 
 export function createBrandingController({
-  spRequest,
-  siteUrl,
+  apiRequest,
   defaultLogoUrl,
   onApply,
   createObjectURL = (blob) => URL.createObjectURL(blob),
@@ -94,14 +93,13 @@ export function createBrandingController({
   }
 
   async function readSettings() {
-    const path =
-      `/_api/web/lists/getbytitle('${BRANDING_SETTINGS_LIST_TITLE}')/items` +
-      "?$select=Id,AllSettings&$orderby=Id%20asc&$top=1";
-    const response = await spRequest(path, { method: "GET" });
+    const response = await apiRequest(BRANDING_SETTINGS_PATH, {
+      method: "GET",
+    });
     if (response.status === 401 || response.status === 403) {
       log.warn(
         `[branding] Access denied reading ${BRANDING_SETTINGS_LIST_TITLE} (${response.status}); ` +
-          "keeping existing branding. Check that the widget token can read the settings list.",
+          "keeping existing branding. Check that the chat API can read the settings list.",
       );
       return null;
     }
@@ -109,19 +107,23 @@ export function createBrandingController({
       throw new Error(`Settings request failed (${response.status})`);
     }
     const data = await response.json();
-    const items = Array.isArray(data?.value)
-      ? data.value
-      : Array.isArray(data?.d?.results)
-        ? data.d.results
-        : [];
-    return { item: items[0] || null };
+    // API shape: { AllSettings } (or { item: { AllSettings } }); no settings row => {}.
+    const item =
+      data?.item && typeof data.item === "object"
+        ? data.item
+        : data && Object.prototype.hasOwnProperty.call(data, "AllSettings")
+          ? data
+          : null;
+    return { item };
   }
 
-  async function fetchLogoBlob(serverRelativePath) {
-    const response = await spRequest(
-      serverRelativeFileRequestPath(serverRelativePath),
-      { method: "GET", headers: { Accept: "image/*" } },
-    );
+  // The API resolves and validates the configured logo itself (same-site files only),
+  // so the browser never sends a SharePoint path or token.
+  async function fetchLogoBlob() {
+    const response = await apiRequest(BRANDING_LOGO_PATH, {
+      method: "GET",
+      headers: { Accept: "image/*" },
+    });
     if (!response.ok) {
       throw new Error(`Logo request failed (${response.status})`);
     }
@@ -144,26 +146,22 @@ export function createBrandingController({
 
     const parsed = settings.item ? parseAllSettings(settings.item.AllSettings) : {};
     const assistantName = formatAssistantDisplayName(parsed.AssistantName);
-    const logo = resolveBrandLogoUrl(parsed.BrandLogoUrl, siteUrl);
     const rawLogo = String(parsed.BrandLogoUrl ?? "").trim();
+    const dataUrl = DATA_IMAGE_URL.test(rawLogo) ? rawLogo : "";
 
     let logoUrl = null; // null = leave the current logo untouched
     let nextObjectUrl = "";
     if (!rawLogo) {
       logoUrl = defaultLogoUrl;
-    } else if (logo?.dataUrl) {
-      logoUrl = logo.dataUrl;
-    } else if (logo?.serverRelativePath) {
+    } else if (dataUrl) {
+      logoUrl = dataUrl;
+    } else {
       try {
-        nextObjectUrl = createObjectURL(
-          await fetchLogoBlob(logo.serverRelativePath),
-        );
+        nextObjectUrl = createObjectURL(await fetchLogoBlob());
         logoUrl = nextObjectUrl;
       } catch (error) {
         log.warn("[branding] Unable to load the configured logo", error);
       }
-    } else {
-      log.warn("[branding] Ignoring unsafe BrandLogoUrl");
     }
 
     if (destroyed) {
@@ -183,6 +181,8 @@ export function createBrandingController({
     lastAttemptAt = now();
     inFlight = run()
       .catch((error) => {
+        // No customer session yet is expected; the caller retries once one exists.
+        if (error?.code === BRANDING_NO_SESSION) return;
         log.warn("[branding] Unable to load assistant branding", error);
       })
       .finally(() => {

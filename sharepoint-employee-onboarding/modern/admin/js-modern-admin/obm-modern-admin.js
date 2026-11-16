@@ -236,6 +236,9 @@ $(document).ready(function () {
                 "<li data-nav-id='../General' title='Create User in M365' class='sidelist'>" +
                     "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Create-User-in-M365'>Create User in M365</a>" +
                 "</li>" +
+                "<li data-nav-id='../General' title='Training Templates' class='sidelist'>" +
+                    "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#Training-Templates'>Training Templates</a>" +
+                "</li>" +
                 "<li data-nav-id='../General' title='Guest Users' class='sidelist'>" +
                     "<a href='/sharepoint-employee-onboarding/modern/admin/setting/Features/#GUsers'>Guest Users</a>" +
                 "</li>" +
