@@ -3,9 +3,9 @@
 let favicon = document.querySelector("link[rel='icon']");
 
 if (!favicon) {
-    favicon = document.createElement("link");
-    favicon.rel = "icon";
-    document.head.appendChild(favicon);
+  favicon = document.createElement("link");
+  favicon.rel = "icon";
+  document.head.appendChild(favicon);
 }
 
 favicon.href = "/apps.webp";
@@ -136,13 +136,13 @@ $(document).ready(function () {
     `<a class='dropdown-item stocklink' href='/Quiz-Board-365/'>Quiz Board 365</a>` +
     `<a class='dropdown-item stocklink' href='/Spotlight-365/'>Spotlight 365</a>` +
     `<a class='dropdown-item stocklink' href='/Alert-365/'>Alert 365</a>` +
-     `<a class='dropdown-item stocklink' href='/Praise-365/'>Praise 365</a>` +
-      `<a class='dropdown-item stocklink' href='/idea-box-365/'>Idea Box 365</a>` +
-       `<a class='dropdown-item stocklink' href='/Count-Down-Calendar-365/'>Countdown Calendar 365</a>` +
-         `<a class='dropdown-item stocklink' href='/ICP-365/'>ICP 365</a>` +
-         `<a class='dropdown-item stocklink' href='/MS-Forms-365/'>MS Forms 365</a>` +
-          `<a class='dropdown-item stocklink' href='/Poll-365/'>Poll 365</a>` +
-          `<a class='dropdown-item stocklink' href='/joining-card-365/'>Joining Card 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Praise-365/'>Praise 365</a>` +
+    `<a class='dropdown-item stocklink' href='/idea-box-365/'>Idea Box 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Count-Down-Calendar-365/'>Countdown Calendar 365</a>` +
+    `<a class='dropdown-item stocklink' href='/ICP-365/'>ICP 365</a>` +
+    `<a class='dropdown-item stocklink' href='/MS-Forms-365/'>MS Forms 365</a>` +
+    `<a class='dropdown-item stocklink' href='/Poll-365/'>Poll 365</a>` +
+    `<a class='dropdown-item stocklink' href='/joining-card-365/'>Joining Card 365</a>` +
     `</div>` +
     `</li>` +
 
@@ -279,6 +279,8 @@ color:#a5a5a5
 .release {
 background:var(--back--) !important ;
 margin-bottom:58px;
+    overflow: auto;
+    height: fit-content;
 }
 .side h5{
 color:#var(--front--)

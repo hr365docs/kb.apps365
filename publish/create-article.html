@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset=utf-8>
+    <title>Custom level Permission</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=generator content="Hugo 0.92.2">
+    <meta name=description content="Power Automate">
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=https://hr365docs.github.io/docs/plugins/themify-icons/themify-icons.css>
+    <link rel=icon href=# type=image/x-icon>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
+    <style>
+        :root {
+            --primary-color: #5637da;
+            --body-color: #f9f9f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato
+        }
+    </style>
+    <link href=https://hr365docs.github.io/docs/css/style.min.css rel=stylesheet media=screen>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-1.12.4.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/jquery/jquery-ui.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/bootstrap/bootstrap.min.js></script>
+    <script src=https://hr365docs.github.io/docs/plugins/match-height/jquery.matchHeight-min.js></script>
+               <!-- Google Tag Manager -->
+               <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TX9SKDMB');</script>
+        <!-- End Google Tag Manager -->
+
+    
+    
+    
+    <meta name=twitter:title content="Power Automate">
+    <meta name=twitter:description content="Power Automate">
+    <meta property="og:title" content="Power Automate">
+    <meta property="og:description" content="Power Automate">
+    
+    <meta property="og:url" content="https://hr365docs.github.io/docs/sharepoint-employee-directory/">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Power Automate">
+    <meta name=twitter:description content="Power Automate">
+    <link rel="stylesheet" href="assets/kb.css">
+<link rel="stylesheet" href="create-article.css">
+</head>
+<body>
+           <!-- Google Tag Manager (noscript) -->
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX9SKDMB" height="0" width="0"
+                            style="display:none;visibility:hidden">
+                        </iframe>
+                    </noscript>
+                    <!-- End Google Tag Manager (noscript) -->
+    <header class="shadow-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container px-2 px-md-0">
+                <a class="navbar-brand px-2" href="https://kb.hr365.us/">
+                    <img class=img-fluid src="../../../images/logo_.png" alt=HR365>
+                </a>
+                <button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation
+                    aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+                     <span class=navbar-toggler-icon></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+                </button>
+                <div class="collapse navbar-collapse text-center common-header" id=navigation>
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- <header class="kb-header">
+    <a href="index.html" class="kb-brand">
+        <span class="kb-brand-badge">365</span>
+        <span class="kb-brand-text">
+            <span class="kb-brand-name">Apps365</span>
+            <span class="kb-brand-sub">KNOWLEDGE BASE</span>
+        </span>
+    </a>
+    <nav class="kb-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#articles">Articles</a>
+        <a href="features/feature.html">Features</a>
+        <a href="create-article.html" class="active">Create Article</a>
+    </nav>
+    <div class="kb-header-actions">
+        <div class="kb-search">
+            <span>⌕</span>
+            <span>Search the knowledge base</span>
+            <kbd>⌘K</kbd>
+        </div>
+        <a class="kb-cta" href="#">Submit a ticket</a>
+    </div>
+</header> -->
+
+<div class="caf-wrap">
+
+    <span class="caf-eyebrow">Knowledge Base</span>
+    <h1 class="caf-title">Create KB Article</h1>
+    <p class="caf-sub">
+        Fill in the article details below using the standard KB format, or switch to
+        "Edit existing article" to load and update an article already in the repository.
+        Publishing generates an HTML file and commits it straight to the GitHub repository.
+    </p>
+
+    <form id="articleForm">
+
+        <!-- GitHub connection -->
+        <details class="caf-card" id="githubCard" open>
+            <summary>GitHub repository</summary>
+            <p class="caf-section-hint">
+                Connects directly from your browser using the GitHub REST API. Only the owner,
+                repo and branch are remembered (in this browser's local storage) — the token is
+                kept in memory for this page only, never persisted, and never sent anywhere
+                except api.github.com.
+            </p>
+
+            <div class="caf-row-3">
+                <div class="caf-field">
+                    <label for="ghOwner">Owner / organisation</label>
+                    <input type="text" id="ghOwner" placeholder="my-org">
+                </div>
+                <div class="caf-field">
+                    <label for="ghRepo">Repository</label>
+                    <input type="text" id="ghRepo" placeholder="kb-articles">
+                </div>
+                <div class="caf-field">
+                    <label for="ghBranch">Branch</label>
+                    <input type="text" id="ghBranch" placeholder="main" value="main">
+                </div>
+            </div>
+
+            <div class="caf-field">
+                <label for="ghToken">Personal access token <span class="caf-help">(needs "contents: write" / repo scope)</span></label>
+                <input type="password" id="ghToken" placeholder="ghp_...">
+            </div>
+
+            <div style="display:flex; gap:10px; align-items:center;">
+                <button type="button" class="caf-btn-secondary" id="connectBtn">Connect &amp; load repo</button>
+                <span class="caf-status" id="connectStatus"></span>
+            </div>
+        </details>
+
+        <!-- Mode: create vs edit -->
+        <section class="caf-card">
+            <p class="caf-section-title">Mode</p>
+            <div class="caf-mode-toggle">
+                <label class="caf-radio">
+                    <input type="radio" name="articleMode" value="create" id="modeCreate" checked>
+                    Create new article
+                </label>
+                <label class="caf-radio">
+                    <input type="radio" name="articleMode" value="edit" id="modeEdit">
+                    Edit existing article
+                </label>
+            </div>
+
+            <div id="editPicker" style="display:none; margin-top:14px;">
+                <div class="caf-field">
+                    <label for="articleSelect">Existing article <span class="caf-help">(connect to GitHub first to populate)</span></label>
+                    <select id="articleSelect">
+                        <option value="">— select an article —</option>
+                    </select>
+                </div>
+                <span class="caf-status" id="loadStatus"></span>
+            </div>
+        </section>
+
+        <!-- Destination -->
+        <section class="caf-card" id="destinationCard">
+            <p class="caf-section-title">Destination</p>
+            <p class="caf-section-hint" id="destinationHint">Choose where in the repository this article should be created.</p>
+
+            <div class="caf-row">
+                <div class="caf-field">
+                    <label for="folderSelect">Existing folder <span class="caf-help">(loaded from repo)</span></label>
+                    <select id="folderSelect">
+                        <option value="">— root —</option>
+                    </select>
+                </div>
+                <div class="caf-field">
+                    <label for="newFolder">Or type a new / nested folder path</label>
+                    <input type="text" id="newFolder" placeholder="e.g. helpdesk-365/automation">
+                </div>
+            </div>
+
+            <div class="caf-field">
+                <label for="fileSlug">File name <span class="caf-help">(auto-filled from title, editable)</span></label>
+                <input type="text" id="fileSlug" placeholder="configure-sla-policies">
+            </div>
+
+            <div class="caf-field">
+                <label>Resulting path</label>
+                <div class="caf-path-preview" id="pathPreview">articles/untitled.html</div>
+            </div>
+        </section>
+
+        <!-- Article meta -->
+        <section class="caf-card">
+            <p class="caf-section-title">Article details</p>
+
+            <div class="caf-row-3">
+                <div class="caf-field">
+                    <label for="crumbApp">Breadcrumb: App</label>
+                    <input type="text" id="crumbApp" placeholder="Helpdesk 365">
+                </div>
+                <div class="caf-field">
+                    <label for="crumbTopic">Breadcrumb: Topic</label>
+                    <input type="text" id="crumbTopic" placeholder="Automation & workflows">
+                </div>
+                <div class="caf-field">
+                    <label for="badgeType">Badge</label>
+                    <select id="badgeType">
+                        <option value="How-to">How-to</option>
+                        <option value="Troubleshooting">Troubleshooting</option>
+                        <option value="Reference">Reference</option>
+                        <option value="Announcement">Announcement</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="caf-row">
+                <div class="caf-field">
+                    <label for="readTime">Read time (minutes)</label>
+                    <input type="number" id="readTime" min="1" value="5">
+                </div>
+                <div class="caf-field">
+                    <label for="updatedDate">Updated date</label>
+                    <input type="text" id="updatedDate" placeholder="27 Aug 2026">
+                </div>
+            </div>
+
+            <div class="caf-field">
+                <label for="articleTitle">Title</label>
+                <input type="text" id="articleTitle" placeholder="Configure SLA policies and escalation rules">
+            </div>
+
+            <div class="caf-field">
+                <label for="articleLede">Subtitle / summary</label>
+                <textarea id="articleLede" placeholder="One or two sentences describing what this article covers."></textarea>
+            </div>
+
+            <div class="caf-field">
+                <label for="articleAssumes">Applies-to statement</label>
+                <textarea id="articleAssumes" placeholder="This article applies to Helpdesk 365 v4.2 and later on Teams + SharePoint..."></textarea>
+            </div>
+        </section>
+
+        <!-- Before you begin -->
+        <section class="caf-card">
+            <p class="caf-section-title">Before you begin</p>
+            <p class="caf-section-hint">Prerequisite bullet points.</p>
+            <div id="prereqList"></div>
+            <button type="button" class="caf-add-btn" data-add="prereq">+ Add prerequisite</button>
+        </section>
+
+        <!-- Steps -->
+        <section class="caf-card">
+            <p class="caf-section-title">Steps</p>
+            <div id="stepsList"></div>
+            <button type="button" class="caf-add-btn" data-add="step">+ Add step</button>
+        </section>
+
+        <!-- Note -->
+        <section class="caf-card">
+            <label class="caf-toggle-row">
+                <input type="checkbox" id="noteEnabled">
+                Include a note / warning callout
+            </label>
+            <div class="caf-field">
+                <textarea id="noteText" placeholder="Publishing does not retroactively change existing records..."></textarea>
+            </div>
+        </section>
+
+        <!-- Verify -->
+        <section class="caf-card">
+            <p class="caf-section-title">Verify the configuration</p>
+            <div class="caf-field">
+                <label for="verifyHeading">Section heading</label>
+                <input type="text" id="verifyHeading" value="Verify the configuration">
+            </div>
+            <div class="caf-field">
+                <label for="verifyText">Instructions</label>
+                <textarea id="verifyText" placeholder="Open Admin settings → Diagnostics and run the configuration check..."></textarea>
+            </div>
+            <div class="caf-field">
+                <label for="verifyCode">Command / code lines <span class="caf-help">(one per line, optional)</span></label>
+                <textarea id="verifyCode" placeholder="Get-Apps365Config -App &quot;Helpdesk 365&quot; -Scope Tenant"></textarea>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="caf-card">
+            <p class="caf-section-title">Troubleshooting</p>
+            <div id="troubleList"></div>
+            <button type="button" class="caf-add-btn" data-add="trouble">+ Add troubleshooting item</button>
+        </section>
+
+        <!-- Related articles -->
+        <section class="caf-card">
+            <p class="caf-section-title">Related articles</p>
+            <div id="relatedList"></div>
+            <button type="button" class="caf-add-btn" data-add="related">+ Add related article</button>
+        </section>
+
+        <!-- Sidebar / applies-to tags -->
+        <section class="caf-card">
+            <p class="caf-section-title">Applies to (sidebar)</p>
+            <div class="caf-row">
+                <div class="caf-field">
+                    <label for="sidebarApp">App name</label>
+                    <input type="text" id="sidebarApp" placeholder="Helpdesk 365">
+                </div>
+                <div class="caf-field">
+                    <label for="sidebarVersion">Version</label>
+                    <input type="text" id="sidebarVersion" placeholder="v4.2 and later">
+                </div>
+            </div>
+            <p class="caf-section-hint">Tags shown as pills in the sidebar.</p>
+            <div id="tagsList"></div>
+            <button type="button" class="caf-add-btn" data-add="tag">+ Add tag</button>
+        </section>
+
+        <div class="caf-actions">
+            <button type="button" class="caf-btn-secondary" id="previewBtn">Preview</button>
+            <button type="submit" class="caf-btn-primary" id="publishBtn">Publish to GitHub</button>
+            <span class="caf-help" id="modeIndicator"></span>
+            <button type="button" class="caf-btn-secondary" id="resetBtn">Reset form</button>
+            <span class="caf-status" id="publishStatus"></span>
+        </div>
+    </form>
+
+    <section class="caf-card" id="publishedCard" style="display:none;">
+        <p class="caf-section-title">Published this session</p>
+        <div class="caf-published-list" id="publishedList"></div>
+    </section>
+
+</div>
+
+<div class="caf-preview-overlay" id="previewOverlay">
+    <div class="caf-preview-panel">
+        <div class="caf-preview-bar">
+            <span>Preview</span>
+            <button type="button" class="caf-icon-btn" id="previewClose" title="Close">✕</button>
+        </div>
+        <iframe id="previewFrame" class="caf-preview-frame"></iframe>
+    </div>
+</div>
+ <footer class="section pb-4">
+        <div class=container>
+            <div class="row align-items-center">
+                <div class="col-md-8 text-md-left text-center">
+                    <p class="mb-md-0 mb-4">© 2026-<a href=https://www.hr365.us />HR365.</a><a href="https://www.hr365.us/sla/">SLA.</a>
+                        <a href=https://www.hr365.us/terms-and-conditions />T&C.</a> <a
+                            href=https://www.hr365.us/end-user-license-agreement-eula />EULA.</a> <a
+                            href=https://www.cubiclogics.com/privacy-policy/>Privacy
+                        Policy.</a> <a href=https://www.cubiclogics.com />Cubic Logics.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-right text-center">
+                    <ul class=list-inline>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2" href=https://www.facebook.com/hr365apps/
+                                aria-label=Facebook><i class=ti-facebook></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2" href=https://twitter.com/HR365_HRMS
+                                aria-label=Twitter><i class=ti-twitter-alt></i></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="text-color d-inline-block p-2"
+                                href=https://www.linkedin.com/company/cubic-logics-india-pvt-ltd aria-label=Linkedin><i
+                                    class=ti-linkedin></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="create-article.js"></script>
+  <script src="../js/script.min.js"></script>
+  <script src="./../js/header-footer.js"></script>
+
+ <script src="/js/plus-toggle.js"></script></body>
+</body>
+</html>

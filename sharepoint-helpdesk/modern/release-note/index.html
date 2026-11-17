@@ -20,17 +20,13 @@
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
-   <style>
-        /* DEFAULT: Full Dark Theme (when domain does NOT match) */
+    <style>
+        /* DEFAULT: Full Dark Theme (used when inside an iframe or on unknown domains) */
         :root {
             --back--: #000;
-            /* Dark panel background */
             --front--: #ffffff;
-            /* White text */
             --release--: #a5a5a5;
-            /* Muted gray release text */
             --body-color: #0a080a;
-            /* Dark outer page/gap background */
             --text-color: #d1d5db;
             --text-color-dark: #ffffff;
             --white-color: #0b1020;
@@ -48,21 +44,31 @@
                 'hr365.us',
                 'cubiclogics.com',
                 'kb.apps365.com',
-                '127.0.0.1', // Remove before production if you only want live domains white
+                '127.0.0.1',
                 'localhost'
             ];
 
-            var isMatched = targetDomains.some(function (domain) {
+            var isAllowedDomain = targetDomains.some(function (domain) {
                 return host.includes(domain);
             });
 
-            // OVERRIDE: Full White/Light Theme (when domain MATCHES)
-            if (isMatched) {
+            // Detect if the page is loaded inside an iframe
+            var isInIframe = false;
+            try {
+                isInIframe = window.self !== window.top;
+            } catch (e) {
+                // Cross-origin iframes throw a SecurityError when accessing window.top,
+                // which confirms the page is embedded inside an external iframe.
+                isInIframe = true;
+            }
+
+            // Apply White/Light Theme ONLY when opened directly (NOT in an iframe) on an allowed domain
+            if (isAllowedDomain && !isInIframe) {
                 var root = document.documentElement;
-                root.style.setProperty('--back--', '#ffffff');        /* White panel background */
-                root.style.setProperty('--front--', '#000');       /* Dark text */
-                root.style.setProperty('--release--', '#636363');     /* Dark gray release text */
-                root.style.setProperty('--body-color', '#f4f6f9');    /* Soft light gray outer background (removes black borders) */
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--front--', '#000');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--body-color', '#f4f6f9');
                 root.style.setProperty('--text-color', '#636363');
                 root.style.setProperty('--text-color-dark', '#242738');
                 root.style.setProperty('--white-color', '#ffffff');
