@@ -20,133 +20,133 @@
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
-  
-<style>
-    /* DEFAULT WHITE THEME */
-    :root {
-        --back--: #ffffff;
-        --front--: #000000;
-        --release--: #636363;
-        --body-color: #f4f6f9;
-        --text-color: #636363;
-        --text-color-dark: #242738;
-        --white-color: #ffffff;
-        --light-color: #f8f9fa;
-        --font-family: Lato;
-    }
 
-    /* DARK THEME FOR OTHER DOMAINS */
-    :root[data-apps-theme="dark"] {
-        --back--: #000000;
-        --front--: #ffffff;
-        --release--: #a5a5a5;
-        --body-color: #0a080a;
-        --text-color: #d1d5db;
-        --text-color-dark: #ffffff;
-        --white-color: #0b1020;
-        --light-color: #0a080a;
-    }
-
-    /* FIX THE BACKGROUND CLASS */
-    html body .backk {
-        background-color: var(--body-color) !important;
-        color: var(--text-color-dark) !important;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
-
-    /* WHITE THEME */
-    :root[data-apps-theme="light"] .backk {
-        background-color: #f4f6f9 !important;
-        color: #242738 !important;
-    }
-
-    /* DARK THEME */
-    :root[data-apps-theme="dark"] .backk {
-        background-color: #0a080a !important;
-        color: #ffffff !important;
-    }
-</style>
-
-<script>
-(function () {
-    "use strict";
-
-    var allowedDomains = [
-        "apps365.com",
-        "hr365.us",
-        "cubiclogics.com",
-        "kb.apps365.com",
-        // "127.0.0.1",
-        // "localhost"
-    ];
-
-    function checkAllowedDomain() {
-        var hostname = window.location.hostname
-            .toLowerCase()
-            .replace(/\.$/, "");
-
-        return allowedDomains.some(function (domain) {
-            return hostname === domain ||
-                   hostname.endsWith("." + domain);
-        });
-    }
-
-    function applyWebsiteTheme() {
-        var isWhiteTheme = checkAllowedDomain();
-
-        var theme = isWhiteTheme ? "light" : "dark";
-
-        var root = document.documentElement;
-
-        // Clear previous inline theme variables
-        [
-            "--back--",
-            "--front--",
-            "--release--",
-            "--body-color",
-            "--text-color",
-            "--text-color-dark",
-            "--white-color",
-            "--light-color"
-        ].forEach(function (property) {
-            root.style.removeProperty(property);
-        });
-
-        // Apply theme to HTML
-        root.setAttribute("data-apps-theme", theme);
-
-        // Apply theme class to body
-        if (document.body) {
-            document.body.classList.toggle(
-                "apps-light-theme",
-                isWhiteTheme
-            );
-
-            document.body.classList.toggle(
-                "apps-dark-theme",
-                !isWhiteTheme
-            );
+    <style>
+        /* DEFAULT WHITE THEME */
+        :root {
+            --back--: #ffffff;
+            --front--: #000000;
+            --release--: #636363;
+            --body-color: #f4f6f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
+            --font-family: Lato;
         }
 
-        console.log(
-            "Website:", window.location.hostname,
-            "| Theme:", theme
-        );
-    }
+        /* DARK THEME FOR OTHER DOMAINS */
+        :root[data-apps-theme="dark"] {
+            --back--: #000000;
+            --front--: #ffffff;
+            --release--: #a5a5a5;
+            --body-color: #0a080a;
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
+        }
 
-    // Apply immediately
-    applyWebsiteTheme();
+        /* FIX THE BACKGROUND CLASS */
+        html body .backk {
+            background-color: var(--body-color) !important;
+            color: var(--text-color-dark) !important;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
 
-    // Apply again when DOM loads
-    if (document.readyState === "loading") {
-        document.addEventListener(
-            "DOMContentLoaded",
-            applyWebsiteTheme
-        );
-    }
-})();
-</script>
+        /* WHITE THEME */
+        :root[data-apps-theme="light"] .backk {
+            background-color: #f4f6f9 !important;
+            color: #242738 !important;
+        }
+
+        /* DARK THEME */
+        :root[data-apps-theme="dark"] .backk {
+            background-color: #0a080a !important;
+            color: #ffffff !important;
+        }
+    </style>
+
+
+    <script>
+        (function () {
+            "use strict";
+
+            var allowedDomains = [
+                "apps365.com",
+                "hr365.us",
+                "cubiclogics.com",
+                "kb.apps365.com",
+                "127.0.0.1",
+                "localhost"
+            ];
+
+            function isAllowedDomain(hostname) {
+                hostname = hostname.toLowerCase().replace(/\.$/, "");
+
+                return allowedDomains.some(function (domain) {
+                    return hostname === domain ||
+                        hostname.endsWith("." + domain);
+                });
+            }
+
+            function getThemeDomain() {
+                // Direct page
+                if (window.self === window.top) {
+                    return window.location.hostname;
+                }
+
+                // Embedded in iframe
+                try {
+                    return window.top.location.hostname;
+                } catch (error) {
+                    // Cross-origin parent
+                    try {
+                        if (document.referrer) {
+                            return new URL(document.referrer).hostname;
+                        }
+                    } catch (e) {
+                        // Referrer unavailable or invalid
+                    }
+
+                    return null;
+                }
+            }
+
+            function applyTheme() {
+                var domain = getThemeDomain();
+                var isLight = domain && isAllowedDomain(domain);
+
+                var root = document.documentElement;
+
+                root.setAttribute(
+                    "data-apps-theme",
+                    isLight ? "light" : "dark"
+                );
+
+                // Remove old inline theme overrides
+                [
+                    "--back--",
+                    "--front--",
+                    "--release--",
+                    "--body-color",
+                    "--text-color",
+                    "--text-color-dark",
+                    "--white-color",
+                    "--light-color"
+                ].forEach(function (property) {
+                    root.style.removeProperty(property);
+                });
+
+                console.log("Theme domain:", domain);
+                console.log("Theme:", isLight ? "light" : "dark");
+            }
+
+            applyTheme();
+        })();
+    </script>
+
 
     <!-- Google Tag Manager -->
     <script>
