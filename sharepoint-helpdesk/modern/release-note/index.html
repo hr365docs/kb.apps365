@@ -20,9 +20,10 @@
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
+
     <style>
-        /* DEFAULT: Clean White/Light Theme (works immediately on kb.apps365.com, apps365.com, etc.) */
         :root {
+            /* Default White Theme */
             --back--: #ffffff;
             --front--: #000000;
             --release--: #636363;
@@ -33,46 +34,84 @@
             --light-color: #f8f9fa;
             --font-family: Lato;
         }
+
+        /* Black Theme */
+        :root[data-theme="dark"] {
+            --back--: #000000;
+            --front--: #ffffff;
+            --release--: #a5a5a5;
+            --body-color: #0a080a;
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
+        }
     </style>
 
-    <!-- Switch to Dark Theme ONLY when embedded in an iframe or on an external domain -->
     <script>
         (function () {
-            var host = window.location.host;
+            "use strict";
+
             var allowedDomains = [
-                'apps365.com',
-                'hr365.us',
-                'cubiclogics.com',
-                'kb.apps365.com',
-                '127.0.0.1',
-                'localhost'
+                "apps365.com",
+                "hr365.us",
+                "cubiclogics.com",
+                "kb.apps365.com",
+                "127.0.0.1",
+                "localhost"
             ];
 
-            var isAllowedDomain = allowedDomains.some(function (domain) {
-                return host.includes(domain);
-            });
+            function isAllowedDomain(hostname) {
+                hostname = hostname.toLowerCase().replace(/\.$/, "");
 
-            var isInIframe = false;
-            try {
-                isInIframe = window.self !== window.top;
-            } catch (e) {
-                isInIframe = true;
+                return allowedDomains.some(function (domain) {
+                    return hostname === domain ||
+                        hostname.endsWith("." + domain);
+                });
             }
 
-            // Apply Dark Theme ONLY if inside an iframe OR not on your domains
-            if (isInIframe || !isAllowedDomain) {
+            function getWebsiteHostname() {
+                var hostname = window.location.hostname;
+
+                // Check parent website when inside iframe
+                if (window.self !== window.top) {
+                    try {
+                        // Works for same-origin parent pages
+                        hostname = window.top.location.hostname;
+                    } catch (error) {
+                        // Cross-origin iframe: use referrer if available
+                        try {
+                            if (document.referrer) {
+                                hostname = new URL(
+                                    document.referrer
+                                ).hostname;
+                            } else {
+                                return null;
+                            }
+                        } catch (e) {
+                            return null;
+                        }
+                    }
+                }
+
+                return hostname;
+            }
+
+            function applyTheme() {
+                var hostname = getWebsiteHostname();
                 var root = document.documentElement;
-                root.style.setProperty('--back--', '#000000');
-                root.style.setProperty('--front--', '#ffffff');
-                root.style.setProperty('--release--', '#a5a5a5');
-                root.style.setProperty('--body-color', '#0a080a');
-                root.style.setProperty('--text-color', '#d1d5db');
-                root.style.setProperty('--text-color-dark', '#ffffff');
-                root.style.setProperty('--white-color', '#0b1020');
-                root.style.setProperty('--light-color', '#0a080a');
+
+                if (hostname && isAllowedDomain(hostname)) {
+                    root.setAttribute("data-theme", "light");
+                } else {
+                    root.setAttribute("data-theme", "dark");
+                }
             }
+
+            applyTheme();
         })();
     </script>
+
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
