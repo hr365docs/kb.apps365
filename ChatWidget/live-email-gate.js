@@ -44,13 +44,20 @@ function applyBotEmailIdentity(email, { verified, knownCustomer } = {}) {
   }
 }
 
+
 export function handleConversationEmailIdentity(value) {
   if (!value || typeof value !== "object") return;
   applyBotEmailIdentity(value.email, {
     verified: value.verified === true,
     knownCustomer: value.knownCustomer === true,
   });
+  // A verified known customer means the OTP succeeded; resume any pending
+  // live-agent escalation. No-op when no live-agent email gate is active.
+  if (value.verified === true && value.knownCustomer === true) {
+    handleBotEmailVerified(value.Email);
+  }
 }
+
 
 export function getActiveLiveAgentEmailGate() {
   const dlId = state.directLine?.conversationId;
