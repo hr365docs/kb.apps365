@@ -21,25 +21,25 @@
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
     <style>
-        /* DEFAULT: Full Dark Theme (used when inside an iframe or on unknown domains) */
+        /* DEFAULT: Clean White/Light Theme (works immediately on kb.apps365.com, apps365.com, etc.) */
         :root {
-            --back--: #000;
-            --front--: #ffffff;
-            --release--: #a5a5a5;
-            --body-color: #0a080a;
-            --text-color: #d1d5db;
-            --text-color-dark: #ffffff;
-            --white-color: #0b1020;
-            --light-color: #0a080a;
+            --back--: #ffffff;
+            --front--: #000000;
+            --release--: #636363;
+            --body-color: #f4f6f9;
+            --text-color: #636363;
+            --text-color-dark: #242738;
+            --white-color: #ffffff;
+            --light-color: #f8f9fa;
             --font-family: Lato;
         }
     </style>
 
-    <!-- Dynamic Theme Overrides -->
+    <!-- Switch to Dark Theme ONLY when embedded in an iframe or on an external domain -->
     <script>
         (function () {
             var host = window.location.host;
-            var targetDomains = [
+            var allowedDomains = [
                 'apps365.com',
                 'hr365.us',
                 'cubiclogics.com',
@@ -48,31 +48,28 @@
                 'localhost'
             ];
 
-            var isAllowedDomain = targetDomains.some(function (domain) {
+            var isAllowedDomain = allowedDomains.some(function (domain) {
                 return host.includes(domain);
             });
 
-            // Detect if the page is loaded inside an iframe
             var isInIframe = false;
             try {
                 isInIframe = window.self !== window.top;
             } catch (e) {
-                // Cross-origin iframes throw a SecurityError when accessing window.top,
-                // which confirms the page is embedded inside an external iframe.
                 isInIframe = true;
             }
 
-            // Apply White/Light Theme ONLY when opened directly (NOT in an iframe) on an allowed domain
-            if (isAllowedDomain && !isInIframe) {
+            // Apply Dark Theme ONLY if inside an iframe OR not on your domains
+            if (isInIframe || !isAllowedDomain) {
                 var root = document.documentElement;
-                root.style.setProperty('--back--', '#ffffff');
-                root.style.setProperty('--front--', '#000');
-                root.style.setProperty('--release--', '#636363');
-                root.style.setProperty('--body-color', '#f4f6f9');
-                root.style.setProperty('--text-color', '#636363');
-                root.style.setProperty('--text-color-dark', '#242738');
-                root.style.setProperty('--white-color', '#ffffff');
-                root.style.setProperty('--light-color', '#f8f9fa');
+                root.style.setProperty('--back--', '#000000');
+                root.style.setProperty('--front--', '#ffffff');
+                root.style.setProperty('--release--', '#a5a5a5');
+                root.style.setProperty('--body-color', '#0a080a');
+                root.style.setProperty('--text-color', '#d1d5db');
+                root.style.setProperty('--text-color-dark', '#ffffff');
+                root.style.setProperty('--white-color', '#0b1020');
+                root.style.setProperty('--light-color', '#0a080a');
             }
         })();
     </script>
