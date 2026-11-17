@@ -21,124 +21,56 @@
     <script src="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="https://kb.apps365.com/plugins/match-height/jquery.matchHeight-min.js"></script>
 
- 
-
-<style>
-    /* Default: White Theme */
-    :root {
-        --back--: #ffffff;
-        --front--: #000000;
-        --release--: #636363;
-        --body-color: #f4f6f9;
-        --text-color: #636363;
-        --text-color-dark: #242738;
-        --white-color: #ffffff;
-        --light-color: #f8f9fa;
-        --font-family: Lato;
-    }
-
-    /* Dark Theme */
-    :root[data-apps-theme="dark"] {
-        --back--: #000000;
-        --front--: #ffffff;
-        --release--: #a5a5a5;
-        --body-color: #0a080a;
-        --text-color: #d1d5db;
-        --text-color-dark: #ffffff;
-        --white-color: #0b1020;
-        --light-color: #0a080a;
-    }
-
-    /* Main Release Note Container */
-    html body .backk {
-        background-color: var(--body-color) !important;
-        color: var(--front--) !important;
-    }
-
-    /* Sidebar and Content */
-    html body .backk .sidebar,
-    html body .backk .side {
-        background-color: var(--back--) !important;
-        color: var(--front--) !important;
-    }
-</style>
-
-<script>
-(function () {
-    "use strict";
-
-    var allowedDomains = [
-        "apps365.com",
-        "hr365.us",
-        "cubiclogics.com",
-        "kb.apps365.com",
-        "127.0.0.1",
-        "localhost"
-    ];
-
-    function isAllowed(hostname) {
-        hostname = hostname.toLowerCase().replace(/\.$/, "");
-
-        return allowedDomains.some(function(domain) {
-            return hostname === domain ||
-                   hostname.endsWith("." + domain);
-        });
-    }
-
-    function getDomain() {
-        // Directly opened URL
-        if (window.self === window.top) {
-            return window.location.hostname;
+   <style>
+        /* DEFAULT: Full Dark Theme (when domain does NOT match) */
+        :root {
+            --back--: #000;
+            /* Dark panel background */
+            --front--: #ffffff;
+            /* White text */
+            --release--: #a5a5a5;
+            /* Muted gray release text */
+            --body-color: #0a080a;
+            /* Dark outer page/gap background */
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
+            --font-family: Lato;
         }
+    </style>
 
-        // Embedded URL
-        try {
-            return window.top.location.hostname;
-        } catch (error) {
-            try {
-                if (document.referrer) {
-                    return new URL(document.referrer).hostname;
-                }
-            } catch (e) {}
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com',
+                '127.0.0.1', // Remove before production if you only want live domains white
+                'localhost'
+            ];
 
-            return null;
-        }
-    }
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
 
-    function applyTheme() {
-        var domain = getDomain();
-        var theme = domain && isAllowed(domain)
-            ? "light"
-            : "dark";
-
-        var root = document.documentElement;
-
-        // Remove old inline variable overrides
-        [
-            "--back--",
-            "--front--",
-            "--release--",
-            "--body-color",
-            "--text-color",
-            "--text-color-dark",
-            "--white-color",
-            "--light-color"
-        ].forEach(function(variable) {
-            root.style.removeProperty(variable);
-        });
-
-        root.setAttribute("data-apps-theme", theme);
-
-        console.log("Current domain:", domain);
-        console.log("Applied theme:", theme);
-    }
-
-    applyTheme();
-})();
-</script>
-
-
-
+            // OVERRIDE: Full White/Light Theme (when domain MATCHES)
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');        /* White panel background */
+                root.style.setProperty('--front--', '#000');       /* Dark text */
+                root.style.setProperty('--release--', '#636363');     /* Dark gray release text */
+                root.style.setProperty('--body-color', '#f4f6f9');    /* Soft light gray outer background (removes black borders) */
+                root.style.setProperty('--text-color', '#636363');
+                root.style.setProperty('--text-color-dark', '#242738');
+                root.style.setProperty('--white-color', '#ffffff');
+                root.style.setProperty('--light-color', '#f8f9fa');
+            }
+        })();
+    </script>
 
     <!-- Google Tag Manager -->
     <script>
