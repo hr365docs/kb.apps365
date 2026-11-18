@@ -1,0 +1,427 @@
+
+/* ======================================
+   HOW TO GUIDES - APPS365
+   All layout measurements use vw
+====================================== */
+
+:root {
+    --primary: #4263eb;
+    --heading: #242738;
+    --text: #636b7b;
+    --border: #e5e9f0;
+    --background: #ffffff;
+    --card-background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Assistant", Arial, sans-serif;
+    background: var(--background);
+    color: var(--heading);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Main Section */
+
+.how-to-section {
+    width: 100%;
+    padding: 3vw 4vw;
+}
+
+/* Header */
+
+.how-to-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 2vw;
+}
+
+.how-to-heading h1 {
+    font-size: 2.4vw;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 0 0 0.6vw;
+}
+
+.how-to-heading p {
+    font-size: 1.1vw;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Search */
+
+.how-to-search {
+    width: 25vw;
+    flex-shrink: 0;
+}
+
+.how-to-search input {
+    width: 100%;
+    padding: 0.9vw 1.2vw;
+    border: 0.08vw solid var(--border);
+    border-radius: 0.7vw;
+    background: #fff;
+    color: var(--heading);
+    font-family: inherit;
+    font-size: 1vw;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.how-to-search input:focus {
+    border-color: var(--primary);
+}
+
+.how-to-search input::placeholder {
+    color: #98a2b3;
+}
+
+/* Article Count */
+
+.how-to-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5vw;
+    font-size: 0.95vw;
+    color: var(--text);
+}
+
+/* Article Grid */
+
+.how-to-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5vw;
+}
+
+/* Article Card */
+
+.how-to-card {
+    background: var(--card-background);
+    border: 0.08vw solid var(--border);
+    border-radius: 1vw;
+    padding: 1.7vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    min-height: 16vw;
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.how-to-card:hover {
+    transform: translateY(-0.25vw);
+    border-color: #c8d4ff;
+    box-shadow: 0 0.6vw 2vw rgba(30, 55, 120, 0.08);
+}
+
+/* Category */
+
+.how-to-category {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 0.4vw 0.8vw;
+    background: #eef2ff;
+    border-radius: 0.4vw;
+    color: var(--primary);
+    font-size: 0.85vw;
+    font-weight: 600;
+}
+
+/* Article Title */
+
+.how-to-card h3 {
+    margin: 0;
+    font-size: 1.35vw;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--heading);
+    overflow-wrap: anywhere;
+}
+
+/* Article Metadata */
+
+.how-to-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2vw;
+    margin-top: auto;
+    color: var(--text);
+    font-size: 0.9vw;
+}
+
+.how-to-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35vw;
+}
+
+/* Read More */
+
+.how-to-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    align-self: flex-start;
+    margin-top: 0.5vw;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 1vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.how-to-read:hover {
+    text-decoration: underline;
+}
+
+.how-to-read:focus-visible,
+#closeModal:focus-visible {
+    outline: 0.2vw solid var(--primary);
+    outline-offset: 0.2vw;
+}
+
+/* Empty State */
+
+.how-to-empty {
+    padding: 4vw;
+    text-align: center;
+}
+
+.how-to-empty h3 {
+    font-size: 1.5vw;
+    margin: 0 0 0.8vw;
+}
+
+.how-to-empty p {
+    font-size: 1vw;
+    color: var(--text);
+}
+
+/* Article Modal */
+
+.article-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 2vw;
+}
+
+.article-modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    background: #ffffff;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.article-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw 1.5vw;
+    border-bottom: 0.08vw solid var(--border);
+}
+
+.article-modal-header h2 {
+    margin: 0;
+    font-size: 1.4vw;
+    font-weight: 700;
+}
+
+#closeModal {
+    border: 0;
+    background: #f2f4f7;
+    color: #242738;
+    border-radius: 0.5vw;
+    padding: 0.3vw 0.9vw;
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+
+#articleFrame {
+    display: block;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    border: 0;
+    background: white;
+}
+
+/* ======================================
+   TABLET
+====================================== */
+
+@media (max-width: 900px) {
+
+    .how-to-section {
+        padding: 4vw;
+    }
+
+    .how-to-heading h1 {
+        font-size: 3.5vw;
+    }
+
+    .how-to-heading p {
+        font-size: 1.7vw;
+    }
+
+    .how-to-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2vw;
+    }
+
+    .how-to-card {
+        padding: 2.5vw;
+        min-height: 23vw;
+    }
+
+    .how-to-card h3 {
+        font-size: 2.1vw;
+    }
+
+    .how-to-category,
+    .how-to-meta,
+    .how-to-info {
+        font-size: 1.4vw;
+    }
+
+    .how-to-read,
+    .how-to-search input {
+        font-size: 1.6vw;
+    }
+
+    .how-to-search {
+        width: 34vw;
+    }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+
+    .how-to-section {
+        padding: 5vw 4vw;
+    }
+
+    .how-to-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4vw;
+        margin-bottom: 4vw;
+    }
+
+    .how-to-heading h1 {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+
+    .how-to-heading p {
+        font-size: 3.5vw;
+    }
+
+    .how-to-search {
+        width: 100%;
+    }
+
+    .how-to-search input {
+        font-size: 3.5vw;
+        padding: 3vw;
+        border-radius: 2vw;
+    }
+
+    .how-to-info {
+        font-size: 3vw;
+        margin-bottom: 4vw;
+    }
+
+    .how-to-grid {
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .how-to-card {
+        min-height: 48vw;
+        padding: 5vw;
+        border-radius: 3vw;
+        gap: 3vw;
+    }
+
+    .how-to-category {
+        font-size: 3vw;
+        padding: 1.5vw 2.5vw;
+        border-radius: 1.5vw;
+    }
+
+    .how-to-card h3 {
+        font-size: 4.5vw;
+    }
+
+    .how-to-meta {
+        font-size: 3vw;
+        gap: 4vw;
+    }
+
+    .how-to-read {
+        font-size: 3.5vw;
+        margin-top: 2vw;
+    }
+
+    .how-to-empty h3 {
+        font-size: 5vw;
+    }
+
+    .how-to-empty p {
+        font-size: 3.5vw;
+    }
+
+    .article-modal {
+        padding: 2vw;
+    }
+
+    .article-modal-content {
+        width: 96vw;
+        height: 92vh;
+        border-radius: 2vw;
+    }
+
+    .article-modal-header {
+        padding: 3vw;
+    }
+
+    .article-modal-header h2 {
+        font-size: 4vw;
+    }
+
+    #closeModal {
+        font-size: 6vw;
+        padding: 1vw 3vw;
+        border-radius: 2vw;
+    }
+}

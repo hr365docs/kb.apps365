@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>How to Guides | Apps365</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section class="how-to-section">
+
+        <!-- Header -->
+        <div class="how-to-header">
+            <div class="how-to-heading">
+                <h1>How to Guides</h1>
+                <p>
+                    Step-by-step tutorials and product guides
+                    to help you get things done.
+                </p>
+            </div>
+
+            <div class="how-to-search">
+                <input
+                    type="search"
+                    id="articleSearch"
+                    placeholder="Search how-to guides..."
+                    aria-label="Search guides"
+                >
+            </div>
+        </div>
+
+        <!-- Article Count and Status -->
+        <div class="how-to-info">
+            <span id="articleCount">Loading guides...</span>
+        </div>
+
+        <!-- Dynamic Article Cards -->
+        <div class="how-to-grid" id="articlesContainer">
+        </div>
+
+        <!-- Empty Message -->
+        <div class="how-to-empty" id="emptyMessage" hidden>
+            <h3>No Articles Found</h3>
+            <p>Try searching with a different keyword.</p>
+        </div>
+
+    </section>
+
+    <!-- Article Modal -->
+    <div class="article-modal" id="articleModal" hidden>
+
+        <div class="article-modal-content"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modalTitle">
+
+            <div class="article-modal-header">
+                <h2 id="modalTitle">Article</h2>
+
+                <button
+                    id="closeModal"
+                    type="button"
+                    aria-label="Close article">
+                    &times;
+                </button>
+            </div>
+
+            <iframe
+                id="articleFrame"
+                title="Knowledge Base Article"
+                sandbox=""
+                referrerpolicy="no-referrer">
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <script src="./script.js" defer></script>
+
+</body>
+</html>
