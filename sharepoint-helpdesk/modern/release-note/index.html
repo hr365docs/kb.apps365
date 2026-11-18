@@ -49,8 +49,8 @@
                 'hr365.us',
                 'cubiclogics.com',
                 'kb.apps365.com',
-                // '127.0.0.1', // Remove before production if you only want live domains white
-                // 'localhost'
+                '127.0.0.1', // Remove before production if you only want live domains white
+                'localhost'
             ];
 
             var isMatched = targetDomains.some(function (domain) {
@@ -87,7 +87,36 @@
     <!-- End Google Tag Manager -->
 
 </head>
+<script>
+    (function () {
+        const root = document.documentElement;
 
+        // Check if the current URL starts with kb.apps365.com
+        if (!window.location.hostname.startsWith("kb.apps365.com")) {
+            // IF condition (Default / Light Theme for kb.apps365.com)
+            root.style.setProperty("--back--", "white");       // or transparent / #ffffff
+            root.style.setProperty("--front--", "#242738");    // or #636363 / inherit
+            root.style.setProperty("--release--", "#636363");
+            root.style.setProperty("--body-color", "#f9f9f9");
+            root.style.setProperty("--text-color", "#636363");
+            root.style.setProperty("--text-color-dark", "#242738");
+            root.style.setProperty("--white-color", "#ffffff");
+            root.style.setProperty("--light-color", "#f8f9fa");
+            root.style.setProperty("--font-family", "Lato");
+        } else {
+            // ELSE condition (Dark / Release Theme for other domains)
+            root.style.setProperty("--back--", "black");
+            root.style.setProperty("--front--", "white");
+            root.style.setProperty("--release--", "#a5a5a5");
+            root.style.setProperty("--body-color", "#000000d1");
+            root.style.setProperty("--text-color", "#636363");
+            root.style.setProperty("--text-color-dark", "#242738");
+            root.style.setProperty("--white-color", "#ffffff");
+            root.style.setProperty("--light-color", "#f8f9fa");
+            root.style.setProperty("--font-family", "Lato");
+        }
+    })();
+</script>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
