@@ -16,40 +16,78 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
     <style>
         :root {
-            --back--: black;
-            --front--: white;
+            --back--: #000;
+            --front--: #ffffff;
             --release--: #a5a5a5;
-            --body-color: #f9f9f9;
-            --text-color: #636363;
-            --text-color-dark: #242738;
-            --white-color: #ffffff;
-            --light-color: #f8f9fa;
+            --body-color: #0a080a;
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
             --font-family: Lato;
         }
     </style>
 
-    <!-- Dynamic Theme Overrides -->
     <script>
         (function () {
-            var host = window.location.host;
+            var root = document.documentElement;
+            var hostname = window.location.hostname;
+
+            // Check whether the KB website is loaded inside an iframe
+            var isIframe = window.self !== window.top;
+
+            // Domains that should use the white theme
             var targetDomains = [
                 'apps365.com',
                 'hr365.us',
                 'cubiclogics.com',
-                'kb.apps365.com'
+                '127.0.0.1',
+                'localhost'
             ];
 
-            // Checks if current host matches or contains any of the domains
             var isMatched = targetDomains.some(function (domain) {
-                return host.includes(domain);
+                return hostname === domain ||
+                    hostname.endsWith('.' + domain);
             });
 
-            if (isMatched) {
-                var root = document.documentElement;
+            // Special condition for KB website
+            var isKB = hostname === 'kb.apps365.com';
+
+            // KB: White when opened directly, Black when loaded in iframe
+            // Other matched domains: White
+            // All other domains: Black
+            var useLightTheme = isKB
+                ? !isIframe
+                : isMatched;
+
+            if (useLightTheme) {
+
+                // WHITE THEME
                 root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--front--', '#000000');
                 root.style.setProperty('--release--', '#636363');
-                root.style.setProperty('--front--', '#0b1020', 'important');
+                root.style.setProperty('--body-color', '#f4f6f9');
+                root.style.setProperty('--text-color', '#636363');
+                root.style.setProperty('--text-color-dark', '#242738');
+                root.style.setProperty('--white-color', '#ffffff');
+                root.style.setProperty('--light-color', '#f8f9fa');
+                root.style.setProperty('--font-family', 'Lato');
+
+            } else {
+
+                // BLACK / DARK THEME
+                root.style.setProperty('--back--', '#000000');
+                root.style.setProperty('--front--', '#ffffff');
+                root.style.setProperty('--release--', '#a5a5a5');
+                root.style.setProperty('--body-color', '#000000d1');
+                root.style.setProperty('--text-color', '#d1d5db');
+                root.style.setProperty('--text-color-dark', '#ffffff');
+                root.style.setProperty('--white-color', '#0b1020');
+                root.style.setProperty('--light-color', '#0a080a');
+                root.style.setProperty('--font-family', 'Lato');
+
             }
+
         })();
     </script>
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">

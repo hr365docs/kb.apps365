@@ -10,48 +10,111 @@
         content="Release notes for Civic 365, detailing the latest updates, features, and improvements in the platform.">
     <link rel=stylesheet href=https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css>
     <link rel=stylesheet href=https://kb.apps365.com/plugins/themify-icons/themify-icons.css>
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel=stylesheet>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js></script>
-   <style>
-            :root {
-                --back--: black;
-                --front--: white;
-                --release--: #a5a5a5;
-                --body-color: #f9f9f9;
-                --text-color: #636363;
-                --text-color-dark: #242738;
-                --white-color: #ffffff;
-                --light-color: #f8f9fa;
-                --font-family: Lato;
+    <style>
+        :root {
+            --back--: #000;
+            --front--: #ffffff;
+            --release--: #a5a5a5;
+            --body-color: #0a080a;
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
+            --font-family: Lato;
+        }
+    </style>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var hostname = window.location.hostname;
+
+            // Check whether the KB website is loaded inside an iframe
+            var isIframe = window.self !== window.top;
+
+            // Domains that should use the white theme
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                '127.0.0.1',
+                'localhost'
+            ];
+
+            var isMatched = targetDomains.some(function (domain) {
+                return hostname === domain ||
+                    hostname.endsWith('.' + domain);
+            });
+
+            // Special condition for KB website
+            var isKB = hostname === 'kb.apps365.com';
+
+            // KB: White when opened directly, Black when loaded in iframe
+            // Other matched domains: White
+            // All other domains: Black
+            var useLightTheme = isKB
+                ? !isIframe
+                : isMatched;
+
+            if (useLightTheme) {
+
+                // WHITE THEME
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--front--', '#000000');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--body-color', '#f4f6f9');
+                root.style.setProperty('--text-color', '#636363');
+                root.style.setProperty('--text-color-dark', '#242738');
+                root.style.setProperty('--white-color', '#ffffff');
+                root.style.setProperty('--light-color', '#f8f9fa');
+                root.style.setProperty('--font-family', 'Lato');
+
+            } else {
+
+                // BLACK / DARK THEME
+                root.style.setProperty('--back--', '#000000');
+                root.style.setProperty('--front--', '#ffffff');
+                root.style.setProperty('--release--', '#a5a5a5');
+                root.style.setProperty('--body-color', '#000000d1');
+                root.style.setProperty('--text-color', '#d1d5db');
+                root.style.setProperty('--text-color-dark', '#ffffff');
+                root.style.setProperty('--white-color', '#0b1020');
+                root.style.setProperty('--light-color', '#0a080a');
+                root.style.setProperty('--font-family', 'Lato');
+
             }
-        </style>
 
-        <!-- Dynamic Theme Overrides -->
-        <script>
-            (function () {
-                var host = window.location.host;
-                var targetDomains = [
-                    'apps365.com',
-                    'hr365.us',
-                    'cubiclogics.com',
-                    'kb.apps365.com'
-                ];
+        })();
+    </script>
 
-                // Checks if current host matches or contains any of the domains
-                var isMatched = targetDomains.some(function (domain) {
-                    return host.includes(domain);
-                });
+    <!-- Dynamic Theme Overrides -->
+    <script>
+        (function () {
+            var host = window.location.host;
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                'kb.apps365.com'
+            ];
 
-                if (isMatched) {
-                    var root = document.documentElement;
-                    root.style.setProperty('--back--', '#ffffff');
-                    root.style.setProperty('--release--', '#636363');
-                    root.style.setProperty('--front--', '#0b1020', 'important');
-                }
-            })();
-        </script>
+            // Checks if current host matches or contains any of the domains
+            var isMatched = targetDomains.some(function (domain) {
+                return host.includes(domain);
+            });
+
+            if (isMatched) {
+                var root = document.documentElement;
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--front--', '#0b1020', 'important');
+            }
+        })();
+    </script>
     <link href=https://kb.apps365.com/css/style.min.css rel=stylesheet media=screen>
     <script src=https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js></script>
     <script src=https://kb.apps365.com/plugins/jquery/jquery-ui.js></script>
@@ -96,312 +159,87 @@
         </nav>
     </header>
     <div class="backk">
-    <section class="single section-sm pb-0">
-        <div class="container container-padding">
-            <div class=row>
-                <div class="col-lg-3 release">
-                    <div class="sidebar side">
-                        <h5 class="mb" style="color:SlateBlue"> <a href="../../../Civic365/">Civic
-                                365</a></h5>
-                        <a class=back-btn href="../../../Civic365/" aria-label=back></a>
+        <section class="single section-sm pb-0">
+            <div class="container container-padding">
+                <div class=row>
+                    <div class="col-lg-3 release">
+                        <div class="sidebar side">
+                            <h5 class="mb" style="color:SlateBlue"> <a href="../../../Civic365/">Civic
+                                    365</a></h5>
+                            <a class=back-btn href="../../../Civic365/" aria-label=back></a>
 
-                        <ul class=list-styled>
-                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title="Release Notes" class="side">
-                                <a href="../release-note/" style="margin-left:25px">
-                                    Release Notes
-                                </a>
-                                <ul>
+                            <ul class=list-styled>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title="Release Notes" class="side">
+                                    <a href="../release-note/" style="margin-left:25px">
+                                        Release Notes
+                                    </a>
+                                    <ul>
 
-                                     <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.1103.1321.0000 class="side versiononclick">
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.1103.1321.0000 class="side versiononclick">
 
-                                        <a href="#releasenote7">
-                                            Version 25.1103.1321.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.1007.1805.0000 class="side versiononclick">
+                                            <a href="#releasenote7">
+                                                Version 25.1103.1321.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.1007.1805.0000 class="side versiononclick">
 
-                                        <a href="#releasenote6">
-                                            Version 25.1007.1805.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.0805.1515.0000 class="side versiononclick">
+                                            <a href="#releasenote6">
+                                                Version 25.1007.1805.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.0805.1515.0000 class="side versiononclick">
 
-                                        <a href="#releasenote5">
-                                            Version 25.0805.1515.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=25.0720.1819.0000 class="side versiononclick">
+                                            <a href="#releasenote5">
+                                                Version 25.0805.1515.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=25.0720.1819.0000 class="side versiononclick">
 
-                                        <a href="#releasenote4">
-                                            Version 25.0720.1819.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.1122.1340.0000 class="side versiononclick">
+                                            <a href="#releasenote4">
+                                                Version 25.0720.1819.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.1122.1340.0000 class="side versiononclick">
 
-                                        <a href="#releasenote3">
-                                            Version 24.1122.1340.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0822.1740.0000 class="side versiononclick">
+                                            <a href="#releasenote3">
+                                                Version 24.1122.1340.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0822.1740.0000 class="side versiononclick">
 
-                                        <a href="#releasenote2">
-                                            Version 24.0822.1740.0000
-                                        </a>
-                                    </li>
-                                    <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
-                                        title=24.0408.1800.0000 class="side versiononclick">
+                                            <a href="#releasenote2">
+                                                Version 24.0822.1740.0000
+                                            </a>
+                                        </li>
+                                        <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                                            title=24.0408.1800.0000 class="side versiononclick">
 
-                                        <a href="#releasenote1">
-                                            Version 24.0408.1800.0000
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                                            <a href="#releasenote1">
+                                                Version 24.0408.1800.0000
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
+                    <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                        <div class="p-lg-4 p-4 remove-padding bg-black" id=content>
 
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote7">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.1103.1321.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Nov-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                          <li><strong>Approver Email Notification Templates:</strong> A new section consolidates all approver-related email templates for easier access and management.</li>
-  <li><strong>Advanced Settings Search:</strong> Enhanced search functionality with icons displayed alongside each setting for improved navigation.</li>
-  <li><strong>Scheduled Reply:</strong> Introduced the ability to schedule replies to be sent at a specific date and time.</li>
-  <li><strong>Customizable Sub-Service Names:</strong> Users can now rename sub-service levels (L1, L2, L3) to align with their preferred naming conventions.</li>
-  <li><strong>Indexing Column:</strong> Added to improve data organization and accessibility.</li>
-  <li><strong>Settings Audit Log:</strong> New log feature to track configuration changes, including operation performed, modified by, modified date, and setting name.</li>
-                                       
-                                    </ol>
-
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Resolved an issue with column arrangement in Custom Views.</li>
-  <li>Fixed a problem that prevented reports from loading when filters were applied.</li>
-  <li>Corrected an invalid date display issue in the <em>Resolved</em> tab.</li>
-                                
-
-
-                                    </ol>
-
-                                </div>
-
-                                <br>
-
-                                </ul>
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote6">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.1007.1805.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 10-Oct-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Enhanced <b> notification handling</b>  site members who are not part of the
-                                            application will no longer receive approval notifications.</li>
-                                       
-                                    </ol>
-
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Resolved an issue where <b> Custom Views </b> were not appearing in the dropdown menu on the <b> Home page </b>.</li>
-                                        <li>Fixed a problem causing <b> Surveys </b> to trigger incorrectly.
-                                        </li>
-                                
-
-
-                                    </ol>
-
-                                </div>
-
-                                <br>
-
-                                </ul>
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote5">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.0805.1515.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 06-Aug-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Added <strong>Hebrew</strong> and <strong>Arabic</strong> language support.
-                                        </li>
-                                        <li>Introduced a new user role: <strong>Lite User Observer</strong>.</li>
-                                        <li>Enhanced overall <strong>system performance</strong>.</li>
-                                        <li>Implemented an <strong>approval workflow</strong> for custom forms and
-                                            status changes.</li>
-                                    </ol>
-
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Resolved an issue where the <strong>agent name placeholder</strong> was not
-                                            appearing in "Assigned To" notifications sent to agents.</li>
-                                        <li>Fixed the <strong>duplication of sub-services</strong> on the dashboard.
-                                        </li>
-                                        <li>Corrected the <strong>list mapping functionality</strong> for custom columns
-                                            using choice fields.</li>
-                                        <li>Fixed an issue where the <strong>Created Date</strong> and <strong>Resolved
-                                                Date</strong> were incorrectly displaying the same value in resolved
-                                            tickets.</li>
-
-
-                                    </ol>
-
-                                </div>
-
-                                <br>
-
-                                </ul>
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote4">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p>Version 25.0720.1819.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 21-July-2025</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Introduced bulk delete functionality for services and sub-services.</li>
-                                        <li>Reports now display data based on the scopes assigned to supervisors.</li>
-
-                                    </ol>
-
-                                </div>
-                                <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                            data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                <div>
-                                    <ol>
-                                        <li>Enhanced the user interface to improve the experience on mobile devices.
-                                        </li>
-                                        <li>Fixed an issue where team names containing the '&' character prevented
-                                            tickets from being displayed in the Teams panel.</li>
-
-
-
-                                    </ol>
-
-                                </div>
-
-                                <br>
-
-                                </ul>
-                                </ul>
-                            </li>
-                            </ul>
-                        </div>
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote3">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p> Version 24.1122.1340.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 26-Nov-2024</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote7">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.1103.1321.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 03-Nov-2025</p>
                                     <div>
                                         <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
                                             <div class="sc-gkCoMD enpFfZ">
@@ -414,137 +252,396 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                        <ol>
-                                            <li>Ticket Closed Justification.</li>
-                                            <li>Azure DevOps integration.</li>
-                                            <li>Send calendar invites to the ticket requestor.</li>
-                                            <li>You can auto-assign email tickets based on the ticket requestor's
-                                                location.</li>
-                                        </ol>
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                        <ol>
-                                            <li>Enhanced application performance.</li>
-                                        </ol>
                                     </div>
-                                </div>
-
-                        </div>
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote2">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p> Version 24.0822.1740.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 23-Aug-2024</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
                                     <div>
-                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                            <div class="sc-gkCoMD enpFfZ">
-                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                            style="display: inline-flex;"><span
-                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
-
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
                                         <ol>
-                                            <li>Enhanced application performance.</li>
-                                        </ol>
-                                    </div>
-                                </div>
-
-                        </div>
-                        <div class="  p-4 remove-padding releasenotepadding" id="releasenote1">
-                            <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
-                                class="side">
-                                <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
-                                            class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a> </h3>
-                                <p> Version 24.0408.1800.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 08-April-2024</p>
-                                <div>
-                                    <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                        <div class="sc-gkCoMD enpFfZ">
-                                            <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                        class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                    class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                        style="display: inline-flex;"><span
-                                                            class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
-                                            <div class="sc-gkCoMD enpFfZ">
-                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
-                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
-                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
-                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
-                                                            style="display: inline-flex;"><span
-                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🚀 What's New </span></span></h3>
-                                        <ol>
-                                            <li> Teams name placeholder is available for all email templates.</li>
-                                            <li> Modern view </li>
-
-                                        </ol>
-                                        <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
-                                                    data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
-                                        <ol>
-                                            <li> Custom views based on filters were not working. now we have fixed that.
+                                            <li><strong>Approver Email Notification Templates:</strong> A new section
+                                                consolidates all approver-related email templates for easier access and
+                                                management.</li>
+                                            <li><strong>Advanced Settings Search:</strong> Enhanced search functionality
+                                                with icons displayed alongside each setting for improved navigation.
                                             </li>
+                                            <li><strong>Scheduled Reply:</strong> Introduced the ability to schedule
+                                                replies to be sent at a specific date and time.</li>
+                                            <li><strong>Customizable Sub-Service Names:</strong> Users can now rename
+                                                sub-service levels (L1, L2, L3) to align with their preferred naming
+                                                conventions.</li>
+                                            <li><strong>Indexing Column:</strong> Added to improve data organization and
+                                                accessibility.</li>
+                                            <li><strong>Settings Audit Log:</strong> New log feature to track
+                                                configuration changes, including operation performed, modified by,
+                                                modified date, and setting name.</li>
+
                                         </ol>
+
                                     </div>
-                                </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Resolved an issue with column arrangement in Custom Views.</li>
+                                            <li>Fixed a problem that prevented reports from loading when filters were
+                                                applied.</li>
+                                            <li>Corrected an invalid date display issue in the <em>Resolved</em> tab.
+                                            </li>
+
+
+
+                                        </ol>
+
+                                    </div>
+
+                                    <br>
+
+                                    </ul>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote6">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.1007.1805.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 10-Oct-2025</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Enhanced <b> notification handling</b> site members who are not part of
+                                                the
+                                                application will no longer receive approval notifications.</li>
+
+                                        </ol>
+
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Resolved an issue where <b> Custom Views </b> were not appearing in the
+                                                dropdown menu on the <b> Home page </b>.</li>
+                                            <li>Fixed a problem causing <b> Surveys </b> to trigger incorrectly.
+                                            </li>
+
+
+
+                                        </ol>
+
+                                    </div>
+
+                                    <br>
+
+                                    </ul>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote5">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.0805.1515.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 06-Aug-2025</p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Added <strong>Hebrew</strong> and <strong>Arabic</strong> language
+                                                support.
+                                            </li>
+                                            <li>Introduced a new user role: <strong>Lite User Observer</strong>.</li>
+                                            <li>Enhanced overall <strong>system performance</strong>.</li>
+                                            <li>Implemented an <strong>approval workflow</strong> for custom forms and
+                                                status changes.</li>
+                                        </ol>
+
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Resolved an issue where the <strong>agent name placeholder</strong> was
+                                                not
+                                                appearing in "Assigned To" notifications sent to agents.</li>
+                                            <li>Fixed the <strong>duplication of sub-services</strong> on the dashboard.
+                                            </li>
+                                            <li>Corrected the <strong>list mapping functionality</strong> for custom
+                                                columns
+                                                using choice fields.</li>
+                                            <li>Fixed an issue where the <strong>Created Date</strong> and
+                                                <strong>Resolved
+                                                    Date</strong> were incorrectly displaying the same value in resolved
+                                                tickets.</li>
+
+
+                                        </ol>
+
+                                    </div>
+
+                                    <br>
+
+                                    </ul>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote4">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Notes'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p>Version 25.0720.1819.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 21-July-2025
+                                    </p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Introduced bulk delete functionality for services and sub-services.</li>
+                                            <li>Reports now display data based on the scopes assigned to supervisors.
+                                            </li>
+
+                                        </ol>
+
+                                    </div>
+                                    <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                    <div>
+                                        <ol>
+                                            <li>Enhanced the user interface to improve the experience on mobile devices.
+                                            </li>
+                                            <li>Fixed an issue where team names containing the '&' character prevented
+                                                tickets from being displayed in the Teams panel.</li>
+
+
+
+                                        </ol>
+
+                                    </div>
+
+                                    <br>
+
+                                    </ul>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote3">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p> Version 24.1122.1340.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 26-Nov-2024
+                                    </p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                                <div class="sc-gkCoMD enpFfZ">
+                                                    <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                                class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                            class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                            <ol>
+                                                <li>Ticket Closed Justification.</li>
+                                                <li>Azure DevOps integration.</li>
+                                                <li>Send calendar invites to the ticket requestor.</li>
+                                                <li>You can auto-assign email tickets based on the ticket requestor's
+                                                    location.</li>
+                                            </ol>
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                            <ol>
+                                                <li>Enhanced application performance.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote2">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p> Version 24.0822.1740.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 23-Aug-2024
+                                    </p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                                <div class="sc-gkCoMD enpFfZ">
+                                                    <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                                class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                            class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🚀 What's New </span></span></h3>
+
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                            <ol>
+                                                <li>Enhanced application performance.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div class="  p-4 remove-padding releasenotepadding" id="releasenote1">
+                                <li data-nav-id=.../Getting-started/installation/using-app-file title='Release Note'
+                                    class="side">
+                                    <h3 id="_dashboards"><a class="header-icon-link high" href="#">Release Note<i
+                                                class="fas fa-link" style="font-size:12px; color:lightgray;"></i></a>
+                                    </h3>
+                                    <p> Version 24.0408.1800.0000 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Released 08-April-2024
+                                    </p>
+                                    <div>
+                                        <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                            <div class="sc-gkCoMD enpFfZ">
+                                                <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                            class="sc-cxNHIi fHUQtx" style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                        class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                            style="display: inline-flex;"><span
+                                                                class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div contenteditable="false" class="sc-gzcbmu bbnSRJ">
+                                                <div class="sc-gkCoMD enpFfZ">
+                                                    <div class="sc-flUlpA dOsSOW"><span class="sc-iwajpm kydRHc"><span
+                                                                class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--link--xiwyJfW7"></span></span></span><span
+                                                            class="sc-iwajpm kydRHc"><span class="sc-cxNHIi fHUQtx"
+                                                                style="display: inline-flex;"><span
+                                                                    class="sc-ksluID iQRQtT sc-fWWYYk MyLsF Icon--kipico--DOaJIfpG Icon--copy--s6HZTBER"></span></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🚀 What's New </span></span></h3>
+                                            <ol>
+                                                <li> Teams name placeholder is available for all email templates.</li>
+                                                <li> Modern view </li>
+
+                                            </ol>
+                                            <h3 id="49409fa4" class=" sc-jtiXyc YVppW bug"><span data-key="8"><span
+                                                        data-offset-key="8:0">🔧 Bug Fixes </span></span></h3>
+                                            <ol>
+                                                <li> Custom views based on filters were not working. now we have fixed
+                                                    that.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+                            </div>
+
+
+
+
+
 
                         </div>
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div id="myModal " class="modal">
+        </section>
+        <div id="myModal " class="modal">
 
-        <div class="modal-content">
-            <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
-            <div class="mySlides">
-                <img src=" " id="imageId " style="width:100%">
+            <div class="modal-content">
+                <span class="close_bt cursor_bt " onclick="closeModal()">&times;</span>
+                <div class="mySlides">
+                    <img src=" " id="imageId " style="width:100%">
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
-<div id="footer-container"></div>
- <script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
     <script src="../../../js/script.min.js"></script>
     <script>
         function openModal(src) {
@@ -561,7 +658,8 @@
         date = new Date().toLocaleDateString();
         document.getElementById("date ").innerHTML = date;
     </script>
- <script src="/js/plus-toggle.js"></script></body>
+    <script src="/js/plus-toggle.js"></script>
+</body>
 <script src="../../../js/header-footer.js"></script>
 <script src="../../../js/releasenote.js"></script>
 

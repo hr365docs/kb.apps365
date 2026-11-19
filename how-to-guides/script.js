@@ -1,13 +1,11 @@
 
-// ==========================================
-// APPS365 - HOW TO GUIDES
-// GITHUB AUTOMATIC ARTICLE LOADER
-// ==========================================
-
 (function () {
     "use strict";
 
-    // GitHub Configuration
+    // =====================================
+    // 1. GITHUB CONFIGURATION
+    // =====================================
+
     const CONFIG = {
         owner: "vikascubiclogics",
         repo: "KBPortal",
@@ -19,43 +17,267 @@
     const API = "https://api.github.com";
     const RAW = "https://raw.githubusercontent.com";
 
-    // HTML Elements
-    const container = document.getElementById(
-        "articlesContainer"
-    );
+    // =====================================
+    // 2. PRODUCT CONFIGURATION
+    // =====================================
 
-    const searchInput = document.getElementById(
-        "articleSearch"
-    );
+    const PRODUCTS = {
+        helpdesk: {
+            name: "Helpdesk 365",
+            routes: [
+                "sharepoint-helpdesk",
+                "helpdesk-365",
+                "helpdesk"
+            ],
+            articleNames: [
+                "helpdesk 365",
+                "helpdesk",
+                "help desk"
+            ],
+            folders: [
+                "main/helpdesk/",
+                "main/helpdesk-365/",
+                "main/HD/"
+            ]
+        },
 
-    const articleCount = document.getElementById(
-        "articleCount"
-    );
+        hrms: {
+            name: "HR365 HRMS",
+            routes: [
+                "HRMS365",
+                "HRMS-HR365",
+                "sharepoint-hr-management",
+                "hrms"
+            ],
+            articleNames: [
+                "hr365",
+                "hrms",
+                "human resource management"
+            ],
+            folders: [
+                "main/hrms/",
+                "main/HRMS/"
+            ]
+        },
 
-    const emptyMessage = document.getElementById(
-        "emptyMessage"
-    );
+        asset: {
+            name: "Asset 365",
+            routes: [
+                "asset-365",
+                "asset-management",
+                "sharepoint-asset-management"
+            ],
+            articleNames: [
+                "asset 365",
+                "asset365"
+            ],
+            folders: [
+                "main/asset/",
+                "main/Asset/"
+            ]
+        },
 
-    const modal = document.getElementById(
-        "articleModal"
-    );
+        expense: {
+            name: "Expense 365",
+            routes: [
+                "expense-365",
+                "expense-management"
+            ],
+            articleNames: [
+                "expense 365",
+                "expense365"
+            ],
+            folders: [
+                "main/expense/",
+                "main/Expense/"
+            ]
+        },
 
-    const modalTitle = document.getElementById(
-        "modalTitle"
-    );
+        recruitment: {
+            name: "Recruitment Management 365",
+            routes: [
+                "recruitment",
+                "recruitment-management"
+            ],
+            articleNames: [
+                "recruitment management 365",
+                "recruitment 365"
+            ],
+            folders: [
+                "main/recruitment/"
+            ]
+        },
 
-    const articleFrame = document.getElementById(
-        "articleFrame"
-    );
+        iapps: {
+            name: "Apps365",
+            routes: ["IApps-365"],
+            articleNames: ["iapps 365"],
+            folders: ["main/iapps/"]
+        },
+        onboarding: {
+            name: "Employee Onboarding 365",
+            routes: [
+                "sharepoint-employee-onboarding",
+                "employee-onboarding",
+                "onboarding",
+                "onboarding-365"
+            ],
+            articleNames: [
+                "employee onboarding 365",
+                "employee onboarding",
+                "onboarding 365",
+                "onboarding"
+            ],
+            folders: [
+                "main/onboarding/",
+                "main/employee-onboarding/",
+                "main/Onboarding/"
+            ]
+        },
+    };
 
-    const closeModalButton = document.getElementById(
-        "closeModal"
-    );
+    // =====================================
+    // 3. ELEMENTS
+    // =====================================
+
+    const container =
+        document.getElementById("articlesContainer");
+
+    const searchInput =
+        document.getElementById("articleSearch");
+
+    const articleCount =
+        document.getElementById("articleCount");
+
+    const emptyMessage =
+        document.getElementById("emptyMessage");
+
+    const emptyDescription =
+        document.getElementById("emptyDescription");
+
+    const pageTitle =
+        document.getElementById("pageTitle");
+
+    const pageDescription =
+        document.getElementById("pageDescription");
+
+    const modal =
+        document.getElementById("articleModal");
+
+    const modalTitle =
+        document.getElementById("modalTitle");
+
+    const articleFrame =
+        document.getElementById("articleFrame");
+
+    const closeButton =
+        document.getElementById("closeModal");
 
     let articles = [];
-    let lastFocusedElement = null;
+    let loading = false;
+    let failedCount = 0;
+    let lastFocus = null;
 
-    // Encode file paths safely
+    // =====================================
+    // 4. PRODUCT DETECTION
+    // =====================================
+
+    function normalize(value) {
+        return String(value || "").trim().toLowerCase();
+    }
+
+    function findProductByRoute(value) {
+        const text = normalize(value);
+
+        for (const [key, product] of
+            Object.entries(PRODUCTS)) {
+
+            if (key === text) return key;
+
+            const found = product.routes.some(route => {
+                const normalizedRoute = normalize(route);
+
+                return text === normalizedRoute ||
+                    text.includes(normalizedRoute);
+            });
+
+            if (found) return key;
+        }
+
+        return null;
+    }
+
+    function detectProduct() {
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+        // Priority 1: Explicit product parameter
+        const productParam = params.get("product");
+
+        if (productParam) {
+            return findProductByRoute(productParam);
+        }
+
+        // Priority 2: Source product folder
+        const source = params.get("source");
+
+        if (source) {
+            return findProductByRoute(source);
+        }
+
+        // Priority 3: Current page path
+        const path = decodeURIComponent(
+            window.location.pathname
+        );
+
+        const matchedPath = findProductByRoute(path);
+
+        if (matchedPath) return matchedPath;
+
+        // Priority 4: Referring page (when available)
+        if (document.referrer) {
+            try {
+                const referrer = new URL(document.referrer);
+
+                // Trust only pages on this website
+                if (referrer.origin === window.location.origin) {
+                    return findProductByRoute(
+                        referrer.pathname
+                    );
+                }
+            } catch (error) {
+                console.warn("Invalid referrer URL");
+            }
+        }
+
+        return null;
+    }
+
+    const CURRENT_PRODUCT = detectProduct();
+
+    function updatePageHeading() {
+        if (!CURRENT_PRODUCT) {
+            pageTitle.textContent = "How-to Guides";
+            pageDescription.textContent =
+                "Select a product to view its guides.";
+            return;
+        }
+
+        const product = PRODUCTS[CURRENT_PRODUCT];
+
+        pageTitle.textContent =
+            product.name + " How-to Guides";
+
+        pageDescription.textContent =
+            "Step-by-step tutorials, setup guides, " +
+            "and product documentation.";
+    }
+
+    // =====================================
+    // 5. GITHUB URL HELPERS
+    // =====================================
+
     function encodePath(path) {
         return path
             .split("/")
@@ -63,7 +285,6 @@
             .join("/");
     }
 
-    // GitHub RAW file URL
     function getRawURL(path) {
         return (
             RAW + "/" +
@@ -74,7 +295,6 @@
         );
     }
 
-    // Convert file name to readable title
     function getFallbackTitle(path) {
         return path
             .split("/")
@@ -84,29 +304,31 @@
             .trim();
     }
 
-    // Format Date
     function formatDate(value) {
         if (!value) return "Date unavailable";
 
         const date = new Date(value);
 
-        if (isNaN(date.getTime())) {
+        if (Number.isNaN(date.getTime())) {
             return "Date unavailable";
         }
 
         return date.toLocaleDateString("en-US", {
-            day: "numeric",
             month: "short",
+            day: "numeric",
             year: "numeric"
         });
     }
 
-    // Get Meta Tag Content
-    function getMetaContent(doc, names) {
-        const metaTags = doc.querySelectorAll("meta");
+    // =====================================
+    // 6. ARTICLE METADATA EXTRACTION
+    // =====================================
+
+    function getMeta(doc, names) {
+        const metas = doc.querySelectorAll("meta");
 
         for (const name of names) {
-            for (const meta of metaTags) {
+            for (const meta of metas) {
                 if (
                     meta.getAttribute("name") === name ||
                     meta.getAttribute("property") === name
@@ -121,144 +343,320 @@
         return "";
     }
 
-    // Extract Article Metadata
-    function parseArticle(path, html) {
-        const parser = new DOMParser();
+    // Extract a balanced JSON object or JSON string
+    // following an ArticleData assignment.
+    function readJSONValue(source, start) {
+        let i = start;
 
-        const doc = parser.parseFromString(
+        while (/\s/.test(source[i] || "")) i++;
+
+        const first = source[i];
+
+        if (first !== "{" && first !== '"') {
+            return null;
+        }
+
+        if (first === '"') {
+            let end = i + 1;
+            let escaped = false;
+
+            for (; end < source.length; end++) {
+                const c = source[end];
+
+                if (escaped) {
+                    escaped = false;
+                } else if (c === "\\") {
+                    escaped = true;
+                } else if (c === '"') {
+                    break;
+                }
+            }
+
+            if (end >= source.length) return null;
+
+            return source.slice(i, end + 1);
+        }
+
+        let depth = 0;
+        let inString = false;
+        let escaped = false;
+
+        for (let end = i; end < source.length; end++) {
+            const c = source[end];
+
+            if (inString) {
+                if (escaped) {
+                    escaped = false;
+                } else if (c === "\\") {
+                    escaped = true;
+                } else if (c === '"') {
+                    inString = false;
+                }
+                continue;
+            }
+
+            if (c === '"') {
+                inString = true;
+            } else if (c === "{") {
+                depth++;
+            } else if (c === "}") {
+                depth--;
+
+                if (depth === 0) {
+                    return source.slice(i, end + 1);
+                }
+            }
+        }
+
+        return null;
+    }
+
+    function extractArticleData(doc) {
+        // Preferred: dedicated application/json metadata
+        const jsonScript =
+            doc.getElementById("article-data");
+
+        if (jsonScript) {
+            try {
+                return JSON.parse(jsonScript.textContent);
+            } catch (error) {
+                console.warn("Invalid article-data JSON");
+            }
+        }
+
+        // Fallback: inline ArticleData = {...}
+        // or ArticleData = "{...}"
+        const scripts = doc.querySelectorAll("script");
+
+        for (const script of scripts) {
+            if (script.src) continue;
+
+            const text = script.textContent || "";
+
+            const assignment =
+                /\bArticleData\s*=\s*/g;
+
+            let match;
+
+            while ((match = assignment.exec(text))) {
+                const rawValue = readJSONValue(
+                    text,
+                    assignment.lastIndex
+                );
+
+                if (!rawValue) continue;
+
+                try {
+                    let data = JSON.parse(rawValue);
+
+                    // ArticleData may itself be a JSON string
+                    if (typeof data === "string") {
+                        data = JSON.parse(data);
+                    }
+
+                    if (data && typeof data === "object") {
+                        return data;
+                    }
+                } catch (error) {
+                    console.warn(
+                        "ArticleData is not strict JSON"
+                    );
+                }
+            }
+        }
+
+        return {};
+    }
+
+    function parseArticle(path, html) {
+        const doc = new DOMParser().parseFromString(
             html,
             "text/html"
         );
 
-        // Article Title
+        const data = extractArticleData(doc);
+
         const title =
+            data.title ||
+            data.metaTitle ||
             doc.querySelector("h1")?.textContent?.trim() ||
-            doc.querySelector("title")?.textContent?.trim() ||
+            doc.title ||
             getFallbackTitle(path);
 
-        // Published Date
         const date =
-            getMetaContent(doc, [
+            data.updatedDate ||
+            getMeta(doc, [
+                "article:modified_time",
                 "article:published_time",
-                "datePublished",
                 "date",
-                "pubdate",
-                "article:modified_time"
+                "datePublished"
             ]) ||
             doc.querySelector("time[datetime]")
                 ?.getAttribute("datetime") ||
             "";
 
-        // Article Main Content
-        const content =
-            doc.querySelector("article") ||
-            doc.querySelector("main") ||
-            doc.body;
+        const readTime =
+            parseInt(data.readTime, 10) || 5;
 
-        const copy = content.cloneNode(true);
-
-        // Remove non-article content
-        copy.querySelectorAll(
-            "script, style, nav, footer, header, noscript"
-        ).forEach(element => element.remove());
-
-        // Word Count
-        const text = copy.textContent || "";
-
-        const wordCount = text
-            .trim()
-            .split(/\s+/)
-            .filter(Boolean)
-            .length;
-
-        // Reading Time: 225 Words Per Minute
-        const readTime = Math.max(
-            1,
-            Math.ceil(wordCount / 225)
-        );
-
-        // Category from folder name
-        const relativePath = path.substring(
-            CONFIG.folder.length
-        );
-
-        const folders = relativePath.split("/");
-
-        const category = folders.length > 1
-            ? folders.slice(0, -1).join(" / ")
-            : "How to Guide";
+        const description =
+            data.lede ||
+            data.metaDescription ||
+            getMeta(doc, ["description"]) ||
+            "";
 
         return {
-            title,
+            path,
+            html,
+            title: String(title).trim(),
             date,
             readTime,
-            category,
-            path,
-            html
+            description,
+            category: data.badge || "How-to",
+            product: data.product || "",
+            sidebarApp: data.sidebarApp || "",
+            crumbApp: data.crumbApp || ""
         };
     }
 
-    // Create Individual Article Card
-    function createArticleCard(article) {
+    // =====================================
+    // 7. IDENTIFY ARTICLE PRODUCT
+    // =====================================
+
+    function identifyArticleProduct(article) {
+
+        // Highest priority: Explicit product metadata
+        if (article.product) {
+            const explicit = findProductByRoute(
+                article.product
+            );
+
+            if (explicit) return explicit;
+        }
+
+        // Next: sidebarApp / crumbApp metadata
+        const metadata = [
+            article.sidebarApp,
+            article.crumbApp
+        ].filter(Boolean).join(" ").toLowerCase();
+
+        for (const [key, product] of
+            Object.entries(PRODUCTS)) {
+
+            if (product.articleNames.some(name =>
+                metadata.includes(normalize(name))
+            )) {
+                return key;
+            }
+        }
+
+        // Next: GitHub article folder path
+        const path = normalize(article.path);
+
+        for (const [key, product] of
+            Object.entries(PRODUCTS)) {
+
+            if (product.folders.some(folder =>
+                path.startsWith(normalize(folder))
+            )) {
+                return key;
+            }
+        }
+
+        // Last fallback: Article title
+        const title = normalize(article.title);
+
+        for (const [key, product] of
+            Object.entries(PRODUCTS)) {
+
+            if (product.articleNames.some(name =>
+                title.includes(normalize(name))
+            )) {
+                return key;
+            }
+        }
+
+        return null;
+    }
+
+    // =====================================
+    // 8. CREATE ARTICLE CARDS
+    // =====================================
+
+    function createCard(article) {
 
         const card = document.createElement("article");
         card.className = "how-to-card";
 
-        // Category
         const category = document.createElement("span");
         category.className = "how-to-category";
         category.textContent = article.category;
 
-        // Title
-        const heading = document.createElement("h3");
-        heading.textContent = article.title;
+        const title = document.createElement("h3");
+        title.textContent = article.title;
 
-        // Meta Container
+        const description = document.createElement("p");
+        description.className = "how-to-description";
+        description.textContent = article.description;
+
+        if (!article.description) {
+            description.hidden = true;
+        }
+
+        const footer = document.createElement("div");
+        footer.className = "how-to-card-footer";
+
         const meta = document.createElement("div");
         meta.className = "how-to-meta";
 
-        const dateSpan = document.createElement("span");
-        dateSpan.textContent =
-            "📅 " + formatDate(article.date);
+        const date = document.createElement("span");
+        date.textContent = "📅 " + formatDate(article.date);
 
-        const timeSpan = document.createElement("span");
-        timeSpan.textContent =
+        const time = document.createElement("span");
+        time.textContent =
             "◷ " + article.readTime + " min read";
 
-        meta.append(dateSpan, timeSpan);
+        meta.append(date, time);
 
-        // Read Article Button
-        const readButton = document.createElement("button");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "how-to-read";
+        button.textContent = "Read Article →";
 
-        readButton.type = "button";
-        readButton.className = "how-to-read";
-        readButton.textContent = "Read Article →";
-
-        readButton.addEventListener("click", function () {
+        button.addEventListener("click", function () {
             openArticle(article);
         });
 
+        footer.append(meta, button);
+
         card.append(
             category,
-            heading,
-            meta,
-            readButton
+            title,
+            description,
+            footer
         );
 
         return card;
     }
 
-    // Render Article Cards
-    function renderArticles() {
+    // =====================================
+    // 9. RENDER PRODUCT ARTICLES
+    // =====================================
 
-        const keyword = searchInput.value
-            .trim()
-            .toLowerCase();
+    function renderArticles() {
+        const keyword = normalize(searchInput.value);
 
         const filtered = articles.filter(article => {
-            const searchable = (
-                article.title + " " + article.category
-            ).toLowerCase();
+            const product = identifyArticleProduct(article);
+
+            if (product !== CURRENT_PRODUCT) {
+                return false;
+            }
+
+            const searchable = normalize([
+                article.title,
+                article.description,
+                article.category
+            ].join(" "));
 
             return searchable.includes(keyword);
         });
@@ -268,23 +666,37 @@
         const fragment = document.createDocumentFragment();
 
         filtered.forEach(article => {
-            fragment.appendChild(
-                createArticleCard(article)
-            );
+            fragment.appendChild(createCard(article));
         });
 
         container.appendChild(fragment);
 
-        emptyMessage.hidden = filtered.length !== 0;
+        emptyMessage.hidden =
+            loading || filtered.length !== 0;
 
-        articleCount.textContent =
-            filtered.length + " How to Guide(s) Found";
+        if (loading) {
+            articleCount.textContent =
+                filtered.length + " guides loaded...";
+        } else {
+            articleCount.textContent =
+                filtered.length + " How-to Guides Found";
+        }
+
+        if (!loading && filtered.length === 0) {
+            emptyDescription.textContent =
+                keyword
+                    ? "Try another search keyword."
+                    : "No matching product articles found.";
+        }
     }
 
-    // Open Article Popup
-    function openArticle(article) {
+    // =====================================
+    // 10. ARTICLE POPUP
+    // =====================================
 
-        lastFocusedElement = document.activeElement;
+    function openArticle(article) {
+        lastFocus = document.activeElement;
+
         modalTitle.textContent = article.title;
 
         const doc = new DOMParser().parseFromString(
@@ -292,7 +704,7 @@
             "text/html"
         );
 
-        // Resolve relative image and CSS file URLs
+        // Resolve relative resources
         const directory = article.path.substring(
             0,
             article.path.lastIndexOf("/") + 1
@@ -301,12 +713,13 @@
         const base = doc.createElement("base");
         base.href = getRawURL(directory);
 
-        // Replace existing base
-        doc.querySelectorAll("base").forEach(el => el.remove());
+        doc.querySelectorAll("base").forEach(
+            element => element.remove()
+        );
+
         doc.head.prepend(base);
 
-        // Render HTML in isolated iframe
-        // Scripts remain disabled by sandbox=""
+        // Keep external HTML JavaScript disabled
         articleFrame.srcdoc =
             "<!DOCTYPE html>\n" +
             doc.documentElement.outerHTML;
@@ -314,22 +727,21 @@
         modal.hidden = false;
         document.body.style.overflow = "hidden";
 
-        closeModalButton.focus();
+        closeButton.focus();
     }
 
-    // Close Article Popup
     function closeArticle() {
         modal.hidden = true;
-
         articleFrame.removeAttribute("srcdoc");
+
         document.body.style.overflow = "";
 
-        if (lastFocusedElement) {
-            lastFocusedElement.focus();
+        if (lastFocus && lastFocus.isConnected) {
+            lastFocus.focus();
         }
     }
 
-    closeModalButton.addEventListener(
+    closeButton.addEventListener(
         "click",
         closeArticle
     );
@@ -341,57 +753,70 @@
     });
 
     document.addEventListener("keydown", function (event) {
-        if (
-            event.key === "Escape" &&
-            !modal.hidden
-        ) {
+        if (event.key === "Escape" && !modal.hidden) {
             closeArticle();
+        }
+
+        // Keep focus inside the modal
+        if (event.key === "Tab" && !modal.hidden) {
+            event.preventDefault();
+            closeButton.focus();
         }
     });
 
-    // Search Articles
     searchInput.addEventListener(
         "input",
         renderArticles
     );
 
-    // Fetch One Article
-    async function fetchArticle(file) {
+    // =====================================
+    // 11. GITHUB ARTICLE LOADER
+    // =====================================
 
+    async function fetchArticle(file) {
         const response = await fetch(
             getRawURL(file.path)
         );
 
         if (!response.ok) {
             throw new Error(
-                "Unable to fetch " + file.path
+                "Unable to fetch: " + file.path
             );
         }
 
         const html = await response.text();
 
-        return parseArticle(
-            file.path,
-            html
-        );
+        return parseArticle(file.path, html);
     }
 
-    // Main GitHub Loader
     async function loadArticles() {
 
+        if (!CURRENT_PRODUCT) {
+            articleCount.textContent =
+                "Product not identified.";
+
+            emptyMessage.hidden = false;
+            emptyDescription.textContent =
+                "Open this page using ?product=helpdesk " +
+                "or another configured product.";
+
+            return;
+        }
+
+        loading = true;
+        articles = [];
+        failedCount = 0;
+
         articleCount.textContent =
-            "Fetching articles from GitHub...";
+            "Fetching " +
+            PRODUCTS[CURRENT_PRODUCT].name +
+            " guides...";
 
         try {
-
-            // GitHub Repository File Tree
             const treeURL =
-                API + "/repos/" +
-                CONFIG.owner + "/" +
-                CONFIG.repo +
-                "/git/trees/" +
-                CONFIG.branch +
-                "?recursive=1";
+                `${API}/repos/${CONFIG.owner}/` +
+                `${CONFIG.repo}/git/trees/` +
+                `${CONFIG.branch}?recursive=1`;
 
             const response = await fetch(treeURL);
 
@@ -405,40 +830,26 @@
 
             if (data.truncated) {
                 throw new Error(
-                    "Repository file list is incomplete."
+                    "GitHub returned an incomplete file tree."
                 );
             }
 
-            // Select HTML files inside main folder
-            const htmlFiles = data.tree.filter(file =>
+            // All HTML files under GitHub main/
+            const files = data.tree.filter(file =>
                 file.type === "blob" &&
                 file.path.startsWith(CONFIG.folder) &&
                 /\.html?$/i.test(file.path)
             );
 
-            if (htmlFiles.length === 0) {
-                articles = [];
-                renderArticles();
-
-                articleCount.textContent =
-                    "No HTML files found in main folder.";
-
-                return;
-            }
-
-            articles = [];
-
-            // Fetch in Small Batches
             const batchSize = CONFIG.batchSize;
-            let failed = 0;
 
+            // Progressive article loading
             for (
                 let i = 0;
-                i < htmlFiles.length;
+                i < files.length;
                 i += batchSize
             ) {
-
-                const batch = htmlFiles.slice(
+                const batch = files.slice(
                     i,
                     i + batchSize
                 );
@@ -448,55 +859,62 @@
                 );
 
                 results.forEach(result => {
-
                     if (result.status === "fulfilled") {
                         articles.push(result.value);
                     } else {
-                        failed++;
-                        console.warn(
-                            "Article loading failed:",
-                            result.reason
-                        );
+                        failedCount++;
+                        console.warn(result.reason);
                     }
-
                 });
 
-                // Latest dated articles first
                 articles.sort((a, b) =>
                     (Date.parse(b.date) || 0) -
                     (Date.parse(a.date) || 0)
                 );
 
-                // Display cards progressively
                 renderArticles();
-
-                articleCount.textContent =
-                    articles.length +
-                    " of " +
-                    htmlFiles.length +
-                    " Guides Loaded";
             }
 
+            loading = false;
             renderArticles();
 
-            if (failed > 0) {
+            if (failedCount) {
                 articleCount.textContent +=
-                    " (" + failed + " failed to load)";
+                    ` (${failedCount} files failed to load)`;
             }
 
+            console.log(
+                "Current product:", CURRENT_PRODUCT,
+                "HTML files:", files.length,
+                "Matching articles:",
+                articles.filter(article =>
+                    identifyArticleProduct(article) ===
+                    CURRENT_PRODUCT
+                ).length
+            );
+
         } catch (error) {
+            loading = false;
 
             console.error(
-                "Knowledge Base Error:",
+                "How-to Guide loading error:",
                 error
             );
 
             articleCount.textContent =
                 "Unable to load guides: " + error.message;
+
+            emptyMessage.hidden = false;
+            emptyDescription.textContent =
+                "Check GitHub access and try again.";
         }
     }
 
-    // Initialize
+    // =====================================
+    // 12. INITIALIZE
+    // =====================================
+
+    updatePageHeading();
     loadArticles();
 
 })();

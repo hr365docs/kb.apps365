@@ -10,24 +10,87 @@
         content="Release notes for Idea Box 365, detailing the latest updates, new features, and enhancements in the platform.">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://kb.apps365.com/plugins/themify-icons/themify-icons.css">
-     
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
 
     <style>
         :root {
-             --back--:black;
-           --front--:white;
-           --release--:#a5a5a5;
-            --body-color: #f9f9f9;
-            --text-color: #636363;
-            --text-color-dark: #242738;
-            --white-color: #ffffff;
-            --light-color: #f8f9fa;
+            --back--: #000;
+            --front--: #ffffff;
+            --release--: #a5a5a5;
+            --body-color: #0a080a;
+            --text-color: #d1d5db;
+            --text-color-dark: #ffffff;
+            --white-color: #0b1020;
+            --light-color: #0a080a;
             --font-family: Lato;
         }
     </style>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var hostname = window.location.hostname;
+
+            // Check whether the KB website is loaded inside an iframe
+            var isIframe = window.self !== window.top;
+
+            // Domains that should use the white theme
+            var targetDomains = [
+                'apps365.com',
+                'hr365.us',
+                'cubiclogics.com',
+                '127.0.0.1',
+                'localhost'
+            ];
+
+            var isMatched = targetDomains.some(function (domain) {
+                return hostname === domain ||
+                    hostname.endsWith('.' + domain);
+            });
+
+            // Special condition for KB website
+            var isKB = hostname === 'kb.apps365.com';
+
+            // KB: White when opened directly, Black when loaded in iframe
+            // Other matched domains: White
+            // All other domains: Black
+            var useLightTheme = isKB
+                ? !isIframe
+                : isMatched;
+
+            if (useLightTheme) {
+
+                // WHITE THEME
+                root.style.setProperty('--back--', '#ffffff');
+                root.style.setProperty('--front--', '#000000');
+                root.style.setProperty('--release--', '#636363');
+                root.style.setProperty('--body-color', '#f4f6f9');
+                root.style.setProperty('--text-color', '#636363');
+                root.style.setProperty('--text-color-dark', '#242738');
+                root.style.setProperty('--white-color', '#ffffff');
+                root.style.setProperty('--light-color', '#f8f9fa');
+                root.style.setProperty('--font-family', 'Lato');
+
+            } else {
+
+                // BLACK / DARK THEME
+                root.style.setProperty('--back--', '#000000');
+                root.style.setProperty('--front--', '#ffffff');
+                root.style.setProperty('--release--', '#a5a5a5');
+                root.style.setProperty('--body-color', '#000000d1');
+                root.style.setProperty('--text-color', '#d1d5db');
+                root.style.setProperty('--text-color-dark', '#ffffff');
+                root.style.setProperty('--white-color', '#0b1020');
+                root.style.setProperty('--light-color', '#0a080a');
+                root.style.setProperty('--font-family', 'Lato');
+
+            }
+
+        })();
+    </script>
     <link href="https://kb.apps365.com/css/style.min.css" rel="stylesheet" media="screen">
     <script src="https://kb.apps365.com/plugins/jquery/jquery-1.12.4.js"></script>
     <script src="https://kb.apps365.com/plugins/jquery/jquery-ui.js"></script>
@@ -81,23 +144,24 @@
             </div>
         </nav>
     </header>
-<div class="backk">
-    <section class="single section-sm pb-0">
-        <div class="container container-padding">
-            <div class=row>
-                <div class="col-lg-3 release">
-                    <div class="sidebar side">
-                        <h5 class="mb" style="color:SlateBlue"> <a href="/idea-box-365/index.html">Idea Box 365</a></h5>
-                        <a class=back-btn href="/idea-box-365/index.html" aria-label=back></a>
+    <div class="backk">
+        <section class="single section-sm pb-0">
+            <div class="container container-padding">
+                <div class=row>
+                    <div class="col-lg-3 release">
+                        <div class="sidebar side">
+                            <h5 class="mb" style="color:SlateBlue"> <a href="/idea-box-365/index.html">Idea Box 365</a>
+                            </h5>
+                            <a class=back-btn href="/idea-box-365/index.html" aria-label=back></a>
 
-                        <ul class=list-styled>
-                            <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
-                                title=Release-Notes class="side">
-                                <a style="font-size:17px ;margin-left:25px" href="../release-note/">
-                                    Release Notes
-                                </a>
-                                <ul>
-                                    <!-- <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
+                            <ul class=list-styled>
+                                <li data-nav-id=https://github.com/hr365docs/My-project.git/installation/
+                                    title=Release-Notes class="side">
+                                    <a style="font-size:17px ;margin-left:25px" href="../release-note/">
+                                        Release Notes
+                                    </a>
+                                    <ul>
+                                        <!-- <li data-nav-id=../../../Getting-started/installation/using-app-file/app-file.html
                                         title=25.0627.1845.0000 class="sidelist versiononclick">
                                         <a href="#releasenote1">
                                             Version 25.0627.1845.0000
@@ -105,14 +169,14 @@
                                         </a>
                                     </li> -->
 
-                                </ul>
-                            </li>
-                        </ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
-                    <div class="p-lg-4 p-4 bg-black remove-padding" id=content>
-                        <!-- <div class="bg-light p-4 releasenotepadding remove-padding" id="releasenote1">
+                    <div class="mar-0px-auto col-lg-9 myReleaseNotes" style="margin: 0px auto">
+                        <div class="p-lg-4 p-4 bg-black remove-padding" id=content>
+                            <!-- <div class="bg-light p-4 releasenotepadding remove-padding" id="releasenote1">
                             <li data-nav-id=.../Getting-started/installation/using-app-file title=Release-Note
                                 class="sidelist">
                                 <h3 id="_dashboards"><a class="header-icon-link highlight">Release Note<i
@@ -169,26 +233,26 @@
 
 
 
-                        <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
+                            <p class="post-meta border-bottom pb-3 mb-0 mt-3" id="date">
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div id="myModal" class="modal">
+        </section>
+        <div id="myModal" class="modal">
 
-        <div class="modal-content">
-            <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
-            <div class="mySlides">
-                <img src="" id="imageId" style="width:100%">
+            <div class="modal-content">
+                <span class="close_bt cursor_bt" onclick="closeModal()">&times;</span>
+                <div class="mySlides">
+                    <img src="" id="imageId" style="width:100%">
+                </div>
+
             </div>
-
         </div>
     </div>
-</div>
-   <div id="footer-container"></div>
- <script src="/footer/index.js"></script>
+    <div id="footer-container"></div>
+    <script src="/footer/index.js"></script>
 
     <script src="../../../../../js/script.min.js"></script>
     <script src="../../../js/header-footer.js"></script>
@@ -209,6 +273,7 @@
         date = new Date().toLocaleDateString();
         document.getElementById("date").innerHTML = date;
     </script>
- <script src="/js/plus-toggle.js"></script></body>
+    <script src="/js/plus-toggle.js"></script>
+</body>
 
 </html>

@@ -1,16 +1,15 @@
 
-/* ======================================
-   HOW TO GUIDES - APPS365
-   All layout measurements use vw
-====================================== */
+/* =========================================
+   APPS365 - COMMON HOW-TO GUIDES
+========================================= */
 
 :root {
     --primary: #4263eb;
     --heading: #242738;
-    --text: #636b7b;
-    --border: #e5e9f0;
-    --background: #ffffff;
-    --card-background: #ffffff;
+    --text: #667085;
+    --border: #e4e8f0;
+    --background: #f8fafc;
+    --card: #ffffff;
 }
 
 * {
@@ -28,14 +27,14 @@ body {
     display: none !important;
 }
 
-/* Main Section */
+/* MAIN SECTION */
 
 .how-to-section {
     width: 100%;
     padding: 3vw 4vw;
 }
 
-/* Header */
+/* HEADER */
 
 .how-to-header {
     display: flex;
@@ -45,21 +44,34 @@ body {
     margin-bottom: 2vw;
 }
 
-.how-to-heading h1 {
-    font-size: 2.4vw;
-    line-height: 1.25;
+.how-to-heading {
+    flex: 1;
+}
+
+.how-to-label {
+    display: inline-block;
+    margin-bottom: 0.7vw;
+    font-size: 0.85vw;
     font-weight: 700;
-    margin: 0 0 0.6vw;
+    letter-spacing: 0.05vw;
+    color: var(--primary);
+}
+
+.how-to-heading h1 {
+    margin: 0 0 0.7vw;
+    font-size: 2.2vw;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .how-to-heading p {
-    font-size: 1.1vw;
-    color: var(--text);
-    line-height: 1.6;
     margin: 0;
+    font-size: 1.05vw;
+    line-height: 1.6;
+    color: var(--text);
 }
 
-/* Search */
+/* SEARCH */
 
 .how-to-search {
     width: 25vw;
@@ -71,33 +83,30 @@ body {
     padding: 0.9vw 1.2vw;
     border: 0.08vw solid var(--border);
     border-radius: 0.7vw;
-    background: #fff;
-    color: var(--heading);
+    background: white;
     font-family: inherit;
     font-size: 1vw;
+    color: var(--heading);
     outline: none;
-    transition: border-color 0.2s;
 }
 
 .how-to-search input:focus {
     border-color: var(--primary);
+    box-shadow: 0 0 0 0.2vw rgba(66,99,235,0.08);
 }
 
-.how-to-search input::placeholder {
-    color: #98a2b3;
-}
+/* TOOLBAR */
 
-/* Article Count */
-
-.how-to-info {
+.how-to-toolbar {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5vw;
+    justify-content: space-between;
+    margin-bottom: 1.4vw;
     font-size: 0.95vw;
     color: var(--text);
 }
 
-/* Article Grid */
+/* ARTICLE GRID */
 
 .how-to-grid {
     display: grid;
@@ -105,63 +114,83 @@ body {
     gap: 1.5vw;
 }
 
-/* Article Card */
+/* ARTICLE CARD */
 
 .how-to-card {
-    background: var(--card-background);
-    border: 0.08vw solid var(--border);
-    border-radius: 1vw;
-    padding: 1.7vw;
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    min-height: 16vw;
+    padding: 1.6vw;
+    min-height: 17vw;
+    border: 0.08vw solid var(--border);
+    border-radius: 0.9vw;
+    background: var(--card);
     transition:
-        transform 0.25s,
-        box-shadow 0.25s,
-        border-color 0.25s;
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .how-to-card:hover {
-    transform: translateY(-0.25vw);
-    border-color: #c8d4ff;
-    box-shadow: 0 0.6vw 2vw rgba(30, 55, 120, 0.08);
+    transform: translateY(-0.2vw);
+    border-color: #bfcfff;
+    box-shadow: 0 0.6vw 1.8vw rgba(30,50,90,0.07);
 }
 
-/* Category */
+/* CATEGORY BADGE */
 
 .how-to-category {
+    display: inline-flex;
     align-self: flex-start;
-    display: inline-block;
-    padding: 0.4vw 0.8vw;
-    background: #eef2ff;
+    padding: 0.4vw 0.75vw;
     border-radius: 0.4vw;
+    background: #eef2ff;
     color: var(--primary);
-    font-size: 0.85vw;
-    font-weight: 600;
+    font-size: 0.8vw;
+    font-weight: 700;
 }
 
-/* Article Title */
+/* TITLE */
 
 .how-to-card h3 {
     margin: 0;
-    font-size: 1.35vw;
+    font-size: 1.3vw;
     line-height: 1.4;
     font-weight: 700;
     color: var(--heading);
     overflow-wrap: anywhere;
 }
 
-/* Article Metadata */
+/* DESCRIPTION */
+
+.how-to-description {
+    margin: 0;
+    font-size: 0.95vw;
+    line-height: 1.6;
+    color: var(--text);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* FOOTER */
+
+.how-to-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vw;
+    margin-top: auto;
+    padding-top: 1vw;
+}
 
 .how-to-meta {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.2vw;
-    margin-top: auto;
+    font-size: 0.85vw;
     color: var(--text);
-    font-size: 0.9vw;
 }
 
 .how-to-meta span {
@@ -170,21 +199,18 @@ body {
     gap: 0.35vw;
 }
 
-/* Read More */
-
 .how-to-read {
     display: inline-flex;
+    align-self: flex-start;
     align-items: center;
     gap: 0.5vw;
-    align-self: flex-start;
-    margin-top: 0.5vw;
     padding: 0;
-    border: 0;
+    border: none;
     background: transparent;
-    color: var(--primary);
     font-family: inherit;
-    font-size: 1vw;
+    font-size: 0.95vw;
     font-weight: 700;
+    color: var(--primary);
     cursor: pointer;
 }
 
@@ -192,22 +218,22 @@ body {
     text-decoration: underline;
 }
 
-.how-to-read:focus-visible,
-#closeModal:focus-visible {
+button:focus-visible,
+input:focus-visible {
     outline: 0.2vw solid var(--primary);
-    outline-offset: 0.2vw;
+    outline-offset: 0.15vw;
 }
 
-/* Empty State */
+/* EMPTY MESSAGE */
 
 .how-to-empty {
-    padding: 4vw;
+    padding: 4vw 2vw;
     text-align: center;
 }
 
-.how-to-empty h3 {
+.how-to-empty h2 {
     font-size: 1.5vw;
-    margin: 0 0 0.8vw;
+    margin: 0 0 0.7vw;
 }
 
 .how-to-empty p {
@@ -215,17 +241,17 @@ body {
     color: var(--text);
 }
 
-/* Article Modal */
+/* MODAL */
 
 .article-modal {
     position: fixed;
     inset: 0;
     z-index: 99999;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.65);
+    align-items: center;
     padding: 2vw;
+    background: rgba(0,0,0,0.65);
 }
 
 .article-modal-content {
@@ -233,8 +259,8 @@ body {
     flex-direction: column;
     width: 90vw;
     height: 90vh;
-    background: #ffffff;
     border-radius: 1vw;
+    background: white;
     overflow: hidden;
 }
 
@@ -249,16 +275,16 @@ body {
 
 .article-modal-header h2 {
     margin: 0;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     font-weight: 700;
 }
 
 #closeModal {
-    border: 0;
+    padding: 0.3vw 0.9vw;
+    border: none;
+    border-radius: 0.4vw;
     background: #f2f4f7;
     color: #242738;
-    border-radius: 0.5vw;
-    padding: 0.3vw 0.9vw;
     font-size: 1.8vw;
     cursor: pointer;
 }
@@ -268,16 +294,13 @@ body {
     width: 100%;
     flex: 1;
     min-height: 0;
-    border: 0;
+    border: none;
     background: white;
 }
 
-/* ======================================
-   TABLET
-====================================== */
+/* TABLET */
 
 @media (max-width: 900px) {
-
     .how-to-section {
         padding: 4vw;
     }
@@ -290,6 +313,10 @@ body {
         font-size: 1.7vw;
     }
 
+    .how-to-label {
+        font-size: 1.3vw;
+    }
+
     .how-to-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2vw;
@@ -297,17 +324,22 @@ body {
 
     .how-to-card {
         padding: 2.5vw;
-        min-height: 23vw;
+        min-height: 25vw;
+        gap: 1.5vw;
     }
 
     .how-to-card h3 {
         font-size: 2.1vw;
     }
 
-    .how-to-category,
+    .how-to-description {
+        font-size: 1.5vw;
+    }
+
     .how-to-meta,
-    .how-to-info {
-        font-size: 1.4vw;
+    .how-to-category,
+    .how-to-toolbar {
+        font-size: 1.3vw;
     }
 
     .how-to-read,
@@ -316,16 +348,13 @@ body {
     }
 
     .how-to-search {
-        width: 34vw;
+        width: 32vw;
     }
 }
 
-/* ======================================
-   MOBILE
-====================================== */
+/* MOBILE */
 
 @media (max-width: 600px) {
-
     .how-to-section {
         padding: 5vw 4vw;
     }
@@ -339,11 +368,14 @@ body {
 
     .how-to-heading h1 {
         font-size: 6vw;
-        margin-bottom: 2vw;
     }
 
     .how-to-heading p {
         font-size: 3.5vw;
+    }
+
+    .how-to-label {
+        font-size: 2.8vw;
     }
 
     .how-to-search {
@@ -351,12 +383,12 @@ body {
     }
 
     .how-to-search input {
-        font-size: 3.5vw;
         padding: 3vw;
+        font-size: 3.5vw;
         border-radius: 2vw;
     }
 
-    .how-to-info {
+    .how-to-toolbar {
         font-size: 3vw;
         margin-bottom: 4vw;
     }
@@ -367,33 +399,40 @@ body {
     }
 
     .how-to-card {
-        min-height: 48vw;
         padding: 5vw;
-        border-radius: 3vw;
         gap: 3vw;
-    }
-
-    .how-to-category {
-        font-size: 3vw;
-        padding: 1.5vw 2.5vw;
-        border-radius: 1.5vw;
+        min-height: 48vw;
+        border-radius: 3vw;
     }
 
     .how-to-card h3 {
         font-size: 4.5vw;
     }
 
-    .how-to-meta {
+    .how-to-category {
+        padding: 1.5vw 2.5vw;
         font-size: 3vw;
+        border-radius: 1.5vw;
+    }
+
+    .how-to-description {
+        font-size: 3.4vw;
+    }
+
+    .how-to-meta {
         gap: 4vw;
+        font-size: 3vw;
+    }
+
+    .how-to-card-footer {
+        gap: 3vw;
     }
 
     .how-to-read {
         font-size: 3.5vw;
-        margin-top: 2vw;
     }
 
-    .how-to-empty h3 {
+    .how-to-empty h2 {
         font-size: 5vw;
     }
 
@@ -422,6 +461,5 @@ body {
     #closeModal {
         font-size: 6vw;
         padding: 1vw 3vw;
-        border-radius: 2vw;
     }
 }
