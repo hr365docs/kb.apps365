@@ -1,40 +1,55 @@
 
-/* =========================================
-   APPS365 - COMMON HOW-TO GUIDES
-========================================= */
-
 :root {
-    --primary: #4263eb;
-    --heading: #242738;
-    --text: #667085;
-    --border: #e4e8f0;
-    --background: #f8fafc;
-    --card: #ffffff;
+    --kb-primary: #4263eb;
+    --kb-heading: #242738;
+    --kb-text: #667085;
+    --kb-border: #e3e8f0;
+    --kb-background: #f7f9fc;
+    --kb-card: #ffffff;
 }
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: "Assistant", Arial, sans-serif;
-    background: var(--background);
-    color: var(--heading);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, Arial, sans-serif;
+    color: var(--kb-heading);
+    background: var(--kb-background);
 }
 
 [hidden] {
     display: none !important;
 }
 
-/* MAIN SECTION */
+/* Shared website sections */
 
-.how-to-section {
+#header-container,
+#footer-container {
     width: 100%;
-    padding: 3vw 4vw;
+    flex-shrink: 0;
 }
 
-/* HEADER */
+#header-container > header,
+#footer-container > footer {
+    width: 100%;
+}
+
+/* Main page */
+
+.how-to-section {
+    flex: 1;
+    width: 100%;
+    padding: 3.5vw 4vw;
+}
 
 .how-to-header {
     display: flex;
@@ -50,63 +65,63 @@ body {
 
 .how-to-label {
     display: inline-block;
-    margin-bottom: 0.7vw;
-    font-size: 0.85vw;
+    margin-bottom: 0.8vw;
+    font-size: 0.9vw;
     font-weight: 700;
     letter-spacing: 0.05vw;
-    color: var(--primary);
+    color: var(--kb-primary);
 }
 
 .how-to-heading h1 {
-    margin: 0 0 0.7vw;
-    font-size: 2.2vw;
-    line-height: 1.3;
+    margin: 0 0 0.8vw;
+    font-size: 2.3vw;
     font-weight: 700;
+    line-height: 1.3;
+    color: var(--kb-heading);
 }
 
 .how-to-heading p {
     margin: 0;
     font-size: 1.05vw;
-    line-height: 1.6;
-    color: var(--text);
+    line-height: 1.7;
+    color: var(--kb-text);
 }
 
-/* SEARCH */
+/* Search */
 
 .how-to-search {
-    width: 25vw;
+    width: 26vw;
     flex-shrink: 0;
 }
 
 .how-to-search input {
     width: 100%;
-    padding: 0.9vw 1.2vw;
-    border: 0.08vw solid var(--border);
-    border-radius: 0.7vw;
-    background: white;
+    padding: 1vw 1.2vw;
     font-family: inherit;
     font-size: 1vw;
-    color: var(--heading);
+    color: var(--kb-heading);
+    background: white;
+    border: 0.08vw solid var(--kb-border);
+    border-radius: 0.7vw;
     outline: none;
 }
 
 .how-to-search input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 0.2vw rgba(66,99,235,0.08);
+    border-color: var(--kb-primary);
+    box-shadow: 0 0 0 0.2vw rgba(66,99,235,.1);
 }
 
-/* TOOLBAR */
+/* Toolbar */
 
 .how-to-toolbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.4vw;
+    margin-bottom: 1.5vw;
     font-size: 0.95vw;
-    color: var(--text);
+    color: var(--kb-text);
 }
 
-/* ARTICLE GRID */
+/* Card Grid */
 
 .how-to-grid {
     display: grid;
@@ -114,103 +129,79 @@ body {
     gap: 1.5vw;
 }
 
-/* ARTICLE CARD */
-
 .how-to-card {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    padding: 1.6vw;
-    min-height: 17vw;
-    border: 0.08vw solid var(--border);
-    border-radius: 0.9vw;
-    background: var(--card);
-    transition:
-        box-shadow 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+    min-height: 18vw;
+    padding: 1.7vw;
+    background: var(--kb-card);
+    border: 0.08vw solid var(--kb-border);
+    border-radius: 1vw;
+    transition: box-shadow .2s, transform .2s;
 }
 
 .how-to-card:hover {
     transform: translateY(-0.2vw);
-    border-color: #bfcfff;
-    box-shadow: 0 0.6vw 1.8vw rgba(30,50,90,0.07);
+    box-shadow: 0 0.6vw 2vw rgba(30,55,100,.08);
 }
-
-/* CATEGORY BADGE */
 
 .how-to-category {
-    display: inline-flex;
+    display: inline-block;
     align-self: flex-start;
-    padding: 0.4vw 0.75vw;
-    border-radius: 0.4vw;
-    background: #eef2ff;
-    color: var(--primary);
-    font-size: 0.8vw;
+    padding: 0.4vw 0.8vw;
+    font-size: 0.85vw;
     font-weight: 700;
+    color: var(--kb-primary);
+    background: #eef2ff;
+    border-radius: 0.4vw;
 }
-
-/* TITLE */
 
 .how-to-card h3 {
     margin: 0;
-    font-size: 1.3vw;
-    line-height: 1.4;
+    font-size: 1.35vw;
+    line-height: 1.45;
     font-weight: 700;
-    color: var(--heading);
+    color: var(--kb-heading);
     overflow-wrap: anywhere;
 }
-
-/* DESCRIPTION */
 
 .how-to-description {
     margin: 0;
     font-size: 0.95vw;
-    line-height: 1.6;
-    color: var(--text);
-    overflow: hidden;
+    line-height: 1.65;
+    color: var(--kb-text);
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
-
-/* FOOTER */
 
 .how-to-card-footer {
     display: flex;
     flex-direction: column;
-    gap: 1.1vw;
+    gap: 1vw;
     margin-top: auto;
     padding-top: 1vw;
 }
 
 .how-to-meta {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 1.2vw;
-    font-size: 0.85vw;
-    color: var(--text);
-}
-
-.how-to-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35vw;
+    font-size: 0.9vw;
+    color: var(--kb-text);
 }
 
 .how-to-read {
-    display: inline-flex;
     align-self: flex-start;
-    align-items: center;
-    gap: 0.5vw;
     padding: 0;
-    border: none;
-    background: transparent;
     font-family: inherit;
-    font-size: 0.95vw;
+    font-size: 1vw;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--kb-primary);
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
@@ -218,40 +209,31 @@ body {
     text-decoration: underline;
 }
 
-button:focus-visible,
-input:focus-visible {
-    outline: 0.2vw solid var(--primary);
-    outline-offset: 0.15vw;
-}
-
-/* EMPTY MESSAGE */
-
 .how-to-empty {
     padding: 4vw 2vw;
     text-align: center;
 }
 
 .how-to-empty h2 {
-    font-size: 1.5vw;
-    margin: 0 0 0.7vw;
+    font-size: 1.6vw;
 }
 
 .how-to-empty p {
     font-size: 1vw;
-    color: var(--text);
+    color: var(--kb-text);
 }
 
-/* MODAL */
+/* Article Modal */
 
 .article-modal {
     position: fixed;
     inset: 0;
-    z-index: 99999;
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2vw;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,.65);
 }
 
 .article-modal-content {
@@ -259,46 +241,49 @@ input:focus-visible {
     flex-direction: column;
     width: 90vw;
     height: 90vh;
-    border-radius: 1vw;
-    background: white;
     overflow: hidden;
+    background: white;
+    border-radius: 1vw;
 }
 
 .article-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
-    padding: 1vw 1.5vw;
-    border-bottom: 0.08vw solid var(--border);
+    padding: 1.2vw 1.5vw;
+    border-bottom: 0.08vw solid var(--kb-border);
 }
 
 .article-modal-header h2 {
     margin: 0;
-    font-size: 1.3vw;
-    font-weight: 700;
+    font-size: 1.4vw;
 }
 
 #closeModal {
-    padding: 0.3vw 0.9vw;
-    border: none;
-    border-radius: 0.4vw;
+    padding: 0.4vw 1vw;
+    font-size: 1.7vw;
+    color: var(--kb-heading);
     background: #f2f4f7;
-    color: #242738;
-    font-size: 1.8vw;
+    border: none;
+    border-radius: 0.5vw;
     cursor: pointer;
 }
 
 #articleFrame {
-    display: block;
     width: 100%;
-    flex: 1;
     min-height: 0;
+    flex: 1;
     border: none;
     background: white;
 }
 
-/* TABLET */
+button:focus-visible,
+input:focus-visible {
+    outline: 0.2vw solid var(--kb-primary);
+    outline-offset: 0.2vw;
+}
+
+/* Tablet */
 
 @media (max-width: 900px) {
     .how-to-section {
@@ -310,11 +295,20 @@ input:focus-visible {
     }
 
     .how-to-heading p {
-        font-size: 1.7vw;
+        font-size: 1.8vw;
     }
 
-    .how-to-label {
-        font-size: 1.3vw;
+    .how-to-label,
+    .how-to-toolbar {
+        font-size: 1.5vw;
+    }
+
+    .how-to-search {
+        width: 35vw;
+    }
+
+    .how-to-search input {
+        font-size: 1.7vw;
     }
 
     .how-to-grid {
@@ -324,35 +318,26 @@ input:focus-visible {
 
     .how-to-card {
         padding: 2.5vw;
-        min-height: 25vw;
-        gap: 1.5vw;
+        gap: 1.8vw;
+        min-height: 26vw;
     }
 
     .how-to-card h3 {
-        font-size: 2.1vw;
+        font-size: 2.2vw;
     }
 
-    .how-to-description {
-        font-size: 1.5vw;
-    }
-
-    .how-to-meta,
-    .how-to-category,
-    .how-to-toolbar {
-        font-size: 1.3vw;
-    }
-
-    .how-to-read,
-    .how-to-search input {
+    .how-to-description,
+    .how-to-read {
         font-size: 1.6vw;
     }
 
-    .how-to-search {
-        width: 32vw;
+    .how-to-category,
+    .how-to-meta {
+        font-size: 1.4vw;
     }
 }
 
-/* MOBILE */
+/* Mobile */
 
 @media (max-width: 600px) {
     .how-to-section {
@@ -363,7 +348,10 @@ input:focus-visible {
         flex-direction: column;
         align-items: stretch;
         gap: 4vw;
-        margin-bottom: 4vw;
+    }
+
+    .how-to-label {
+        font-size: 3vw;
     }
 
     .how-to-heading h1 {
@@ -372,10 +360,6 @@ input:focus-visible {
 
     .how-to-heading p {
         font-size: 3.5vw;
-    }
-
-    .how-to-label {
-        font-size: 2.8vw;
     }
 
     .how-to-search {
@@ -390,7 +374,7 @@ input:focus-visible {
 
     .how-to-toolbar {
         font-size: 3vw;
-        margin-bottom: 4vw;
+        margin: 4vw 0;
     }
 
     .how-to-grid {
@@ -399,9 +383,9 @@ input:focus-visible {
     }
 
     .how-to-card {
+        min-height: 48vw;
         padding: 5vw;
         gap: 3vw;
-        min-height: 48vw;
         border-radius: 3vw;
     }
 
@@ -410,26 +394,19 @@ input:focus-visible {
     }
 
     .how-to-category {
-        padding: 1.5vw 2.5vw;
         font-size: 3vw;
+        padding: 1.5vw 2.5vw;
         border-radius: 1.5vw;
     }
 
-    .how-to-description {
-        font-size: 3.4vw;
+    .how-to-description,
+    .how-to-read {
+        font-size: 3.5vw;
     }
 
     .how-to-meta {
-        gap: 4vw;
         font-size: 3vw;
-    }
-
-    .how-to-card-footer {
-        gap: 3vw;
-    }
-
-    .how-to-read {
-        font-size: 3.5vw;
+        gap: 4vw;
     }
 
     .how-to-empty h2 {
