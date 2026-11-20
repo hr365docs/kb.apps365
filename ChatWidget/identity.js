@@ -5,6 +5,7 @@ import { searchInput } from "./dom.js";
 import { loadConversations } from "./conversation-store.js";
 import { bindCustomerSession } from "./customer-session.js";
 import { renderHistoryList } from "./shell.js";
+import { decodeBase64WithKey, encodeBase64WithKey } from "./utilities/encdec.js";
 
 export function normalizeEmail(value) {
   return String(value || "")
@@ -14,7 +15,8 @@ export function normalizeEmail(value) {
 
 function getStoredUserEmail() {
   try {
-    return normalizeEmail(localStorage.getItem(USER_EMAIL_STORAGE_KEY));
+    const localEmailVal=localStorage.getItem(USER_EMAIL_STORAGE_KEY);
+    return normalizeEmail(decodeBase64WithKey(localEmailVal));
   } catch {
     return "";
   }
@@ -24,7 +26,7 @@ export function setStoredUserEmail(email) {
   const normalized = normalizeEmail(email);
   try {
     if (normalized) {
-      localStorage.setItem(USER_EMAIL_STORAGE_KEY, normalized);
+      localStorage.setItem(USER_EMAIL_STORAGE_KEY, encodeBase64WithKey(normalized));
     } else {
       localStorage.removeItem(USER_EMAIL_STORAGE_KEY);
     }

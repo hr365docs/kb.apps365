@@ -7,6 +7,7 @@ import { normalizeEmail, userName } from "./identity.js";
 import { ensureCustomerSession } from "./customer-session.js";
 import { renderHistoryList } from "./shell.js";
 import { ensureWebChatInitialized, waitForDirectLineConversationId } from "./directline.js";
+import { decodeBase64WithKey, encodeBase64WithKey } from "./utilities/encdec.js";
 
 let conversationLoadStarted = false;
 let conversationLoadVersion = 0;
@@ -100,7 +101,7 @@ function loadConversationsFromLocalStorage() {
   try {
     const raw = localStorage.getItem(getLocalConversationStorageKey());
     if (!raw) return [];
-    const parsed = JSON.parse(raw);
+    const parsed = JSON.parse(decodeBase64WithKey(raw));
     if (!Array.isArray(parsed)) return [];
     return parsed.map(normalizeLocalConversationItem).filter(Boolean);
   } catch {
@@ -117,7 +118,7 @@ function saveConversationsToLocalStorage() {
       );
     localStorage.setItem(
       getLocalConversationStorageKey(),
-      JSON.stringify(snapshot),
+      encodeBase64WithKey(JSON.stringify(snapshot)),
     );
   } catch (error) {
     console.warn("Unable to save conversations locally", error);
